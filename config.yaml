@@ -1,0 +1,89 @@
+baseURL: "https://www.example.com/"
+theme: "up-business-theme"
+languageCode: "tr-tr"
+
+title: "Eres Biyoteknoloji Akademi"
+
+# googleAnalytics: ""
+
+summaryLength: 20
+
+params:
+  title: "Eres Biyoteknoloji Akademi "
+  description: "Eres Biyoteknoloji tarafindan ..."
+  images: 
+    - "images/hero-image.png"
+
+  logo: "arrow-up.png"
+
+  favicons:
+    themeColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF"
+    faviconColor: "#000000"
+
+  social:
+    instagram: "https://instagram.com/eresbiotech"
+    facebook: "https://facebook.com/eresbiotech"
+    twitter: "https://twitter.com/eresbiotech"
+
+  location:
+    - "Söğütözü Mahallesi Ssöğütözü Caddesi Ankara Koç İkiz Kuleleri, D:2/D No:34, 06000 Çankaya/Ankara"
+
+  contact:
+    - "info@eresbiotech.com"
+    - "54138011273"
+
+  copyright: "© 2023 Eres Biotech"
+
+menus:
+  main:
+    - name: "Anasayfa"
+      url: "/#hero"
+      weight: 1
+
+    - name: "Hakkimizda"
+      url: "/#"
+      weight: 2
+
+    - name: "Ekibimiz"
+      url: "/#"
+      weight: 3
+
+    - name: "Egitimler"
+      url: "/#"
+      weight: 4
+
+    - name: "Blog"
+      url: "/blog"
+      weight: 5
+
+  buttons:
+    - name: "Iletisim"
+      url: "/#"
+      weight: 5
+      pre: "btn btn-primary text-light"
+
+  footer:
+    - name: "Anasayfa"
+      url: "/#hero"
+      weight: 1
+
+    - name: "Hakkimizda"
+      url: "/#"
+      weight: 2
+
+    - name: "Ekibimiz"
+      url: "/#"
+      weight: 3
+
+    - name: "Egitimler"
+      url: "/#"
+      weight: 4
+
+    - name: "Blog"
+      url: "/blog"
+      weight: 5
+
+taxonomies:
+  series: "series"
+  tags: "tags"
