@@ -6,10 +6,10 @@ content:
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est faucibus tellus leo non pellentesque lorem vel. Arcu magna eros, potenti duis."
 
   buttonPrimary:
-    label: "How we work"
+    label: "Hakkimizda"
     url: "#"
 
   buttonSecondary:
-    label: "Let's talk"
+    label: "Iletisim"
     url: ""
 
