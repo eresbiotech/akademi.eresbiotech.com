@@ -1,26 +1,24 @@
 enabled: true
-id: "testimonials"
+id: "Eğitimlerimize katılanlar ne dediler"
 
 content:
   title: "Testimonials"
 
   featured:
     image: "images/testimonials-awards.png"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur et pretium nunc, quis euismod et. Volutpat suspendisse sed in blandit condimentum. Sagittis nullam nec mauris, feugiat hendrerit aliquam cras. Dolor tortor gravida lobortis in ultricies enim vulputate non. Neque nibh donec quam lectus."
-    client: "Anonymous Customer"
+    text: "Burdan Uygulamalı Biyoinformatiğe Giriş ve Yeni Nesil Dizi Analizi kursuna katılmıştım. Kurs gayet yararlı oldu. Eğitmenler ile kursiyerler arasındaki etkileşim gayet güzeldi ve uygulamaya yönelik pratik yaptırılması da konunun pekişmesini sağlıyor. Ayrıca Biyoinformatik analizlerinde zorlandığım kısımlar da yardım aldım. Zorlandığım her aşamada iletişime geçebildim uzmanlarla. Hiç tereddütsüz yardımcı oldular. Bundan sonraki eğitimleri takip edip almaya devam edeceğim. Bu alanda çalışmak isteyen öğrenci ve akademisyenlere tavsiye ediyorum özellikle."
+    client: "Doç.Dr ÖMER ACER
+Siirt Üniversitesi Tıp Fakültesi Temel Tıp Bilimleri Bölümü Tıbbi Mikrobiyoloji Anabilim Dalı"
 
   list:
-    - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur et pretium nunc, quis euismod et. Volutpat suspendisse sed in blandit condimentum. Sagittis nullam nec mauris, feugiat hendrerit aliquam cras. Dolor tortor gravida lobortis in ultricies enim vulputate non. Neque nibh donec quam lectus."
-      client: "Anonymous Customer"
+    - text: " Eğitimin en sevdiğim yönü konudaki her terminolojiyinin basit bir şekilde açıklanması, yazılan her komutların ayrıntılı açıklanmasıydı."
+      client: "Seda S. K."
 
-    - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur et pretium nunc, quis euismod et. Volutpat suspendisse sed in blandit condimentum. Sagittis nullam nec mauris, feugiat hendrerit aliquam cras. Dolor tortor gravida lobortis in ultricies enim vulputate non. Neque nibh donec quam lectus."
-      client: "Anonymous Customer"
+    - text: "Uygulamaların hoca ve öğrenci tarafından senkronize bir şekilde yapılması ve ödevlerle pekiştirilmesi bu eğitimde en sevdiğim noktaydı."
+      client: "Esra N. D."
 
-    - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur et pretium nunc, quis euismod et. Volutpat suspendisse sed in blandit condimentum. Sagittis nullam nec mauris, feugiat hendrerit aliquam cras. Dolor tortor gravida lobortis in ultricies enim vulputate non. Neque nibh donec quam lectus."
-      client: "Anonymous Customer"
+    - text: "Öncelikle eğitimde uygulamaya önem verilmesi çok güzeldi,interaktif bir şekilde ilerlemesi de çok önemliydi , eğitmenimiz kendi kaynaklarını paylaşması da çok güzeldi ve yararlıydı hem hocaya hem ekibe, Menar hanım ve Elçin hanıma teşekkürler."
+      client: "Hatice A."
 
-    - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur et pretium nunc, quis euismod et. Volutpat suspendisse sed in blandit condimentum. Sagittis nullam nec mauris, feugiat hendrerit aliquam cras. Dolor tortor gravida lobortis in ultricies enim vulputate non. Neque nibh donec quam lectus."
-      client: "Anonymous Customer"
-
-    - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur et pretium nunc, quis euismod et. Volutpat suspendisse sed in blandit condimentum. Sagittis nullam nec mauris, feugiat hendrerit aliquam cras. Dolor tortor gravida lobortis in ultricies enim vulputate non. Neque nibh donec quam lectus."
-      client: "Anonymous Customer"
+    - text: "Uygulamalı oluşu en sevdiğim özelliğiydi. Classroom’a yüklenen materyaller de oldukça faydalı oldu."
+      client: "Aslı S."

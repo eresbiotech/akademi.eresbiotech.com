@@ -2,38 +2,29 @@ enabled: true
 id: "portfolio"
 
 content:
-  - image: "images/portfolio-ecommerce.png"
-    pretitle: "Portfolio Service"
-    title: "We developed an eCommerce website"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc."
+  - image: "images/biyoinformatik-egitimi.png"
+    pretitle: "ERES Biyoinformatik Akademi"
+    title: "ERES Biyoinformatik Akademi: Biyoinformatik Yolculuğunuzda Yanınızdayız"
+    text: "Biyoinformatiğe başlamak ve uzmanlaşmak isteyen akademisyenler, akademisyen adayları, biyoloji, biyoteknoloji, biyomedikal, tıp ve sağlık bilimleri, veterinerlik, ziraat gibi alanlardaki profesyoneller için özel online eğitim platformumuz, deneyimli eğitmen kadromuz ve güncel içeriklerle hedeflerinize hızlı bir şekilde ulaşmanızı sağlar. Canlı dersler ve asenkron öğrenme seçenekleriyle esnek bir öğrenme ortamı sunarken, sertifikalar ve pratiğe dayalı projelerle kariyerinizi en üst düzeye çıkarmanız için yanınızdayız."
 
     buttons: 
-      - label: "See live"
-        url: "#"
+      - label: "Eğitimler için tıklayın."
+        url: "/post"
 
-      - label: "Read more"
-        url: "#"
-
-  - image: "images/portfolio-ecommerce.png"
-    pretitle: "Portfolio Service"
-    title: "We developed an eCommerce website"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc."
+  - image: "images/biyoinformatik-kursu.png"
+    pretitle: "Kazanımlar"
+    title: "Neden ERES Biyoinformatik Akademi?"
+    text: "Sektörde ve akademide deneyimli kadro ile dinamik olan biyoinformatik alanında en güncel bilgilerden oluşan eğitimler sunuyoruz. Canlı dersler ve asenkron öğrenme seçenekleriyle, kendi hızınıza göre öğrenme fırsatları sunuyoruz. Uygulamalara dayalı yöntemlerle desteklenen derslerle, kariyerinizi en üst düzeye çıkarırken, kalıcı öğrenme sağlamanız için çalışıyoruz."
 
     buttons: 
-      - label: "See live"
-        url: "#"
+      - label: "İşimiz nedir"
+        url: "/work"
 
-      - label: "Read more"
-        url: "#"
-
-  - image: "images/portfolio-ecommerce.png"
-    pretitle: "Portfolio Service"
-    title: "We developed an eCommerce website"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc."
-
+  - image: "images/Biyoinformatik-dersleri.png"
+    pretitle: "Eğitim patikası"
+    title: "Kendi yolunuzu çizebileceğiniz eğitimlerimiz"
+    text: "Kendi uzmanlaşma yolunuzu biçimlendirebileceğiniz biyoinformatik eğitimlerimizle, stressiz ve kişiselleştirilmiş bir öğrenme deneyimi yaşayabilirsiniz. Giriş seviyesinden ileri seviyeye kadar olan gelişim patikaları, ihtiyaçlarınıza uygun şekilde şekillenebilir tasarlanmıştır. Biyoinformatiğe Giriş, NCBI, Ensemble, Veri Tabanları, Yüksek Hacimli Veriler ve Biyoinformatik, Yapısal Biyoloji ve Protein Modelleme, Filogenetik Analizler, Tek Hücreli RNA Analizi, R ve Biyoinformatik konularında sunulan eğitimlerimiz, her biri teorik ve pratik bileşenleri içeren kapsamlı içeriklere sahiptir."
     buttons: 
-      - label: "See live"
-        url: "#"
+      - label: "Eğitimleri için tıklayın"
+        url: "/post"
 
-      - label: "Read more"
-        url: "#"

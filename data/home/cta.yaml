@@ -2,8 +2,8 @@ enabled: true
 id: "cta"
 
 content:
-  title: "Start your business now!"
+  title: "Biyoinformatik ve hesaplamalı biyolojiye başlayın"
   image: "images/services-web-development.png"
   button:
-    label: "Let's talk"
+    label: "Bize ulaşın."
     url: "#"
