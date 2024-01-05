@@ -1,6 +1,6 @@
-# ERES Biyoinformatik Akademi README
+# ERES Biyoinformatik Akademi
 
-## Hoş Geldiniz ERES Biyoinformatik Akademi'ye!
+## ERES Biyoinformatik Akademi'ye Hoş Geldiniz !
 
 Biz, **Biyoinformatik Akademisi** olarak; biyoinformatik ve hesaplamalı biyoloji alanında, kariyerinizi hızla geliştirip seçkin araştırmacılar arasına katılmanıza yardımcı olacak yenilikçi ve kapsamlı eğitimler sunuyoruz. GitHub Pages üzerinde yayınlanan bu Hugo tabanlı statik sitemizde, biyoinformatiğin dinamik dünyasına adım atmaya hazır olun! Sorularınız için bize e-posta yoluyla ulaşabilirsiniz: [info@eresbiotech.com](mailto:info@eresbiotech.com)
 
