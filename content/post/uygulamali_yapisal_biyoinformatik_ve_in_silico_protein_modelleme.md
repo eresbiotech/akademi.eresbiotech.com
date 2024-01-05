@@ -4,7 +4,7 @@ title = "Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi"
 date = "2023-12-24"
 description = "Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
 
-images =[ "images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Eğitimi.png" ]
+images =[ "images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Egitimi.png" ]
 
 categories = [
     "themes",
@@ -379,6 +379,6 @@ Pazar:
 
 <a href="https://iyzi.link/AJbHRQ" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
  
-<img src='/images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Eğitimi.png' width="100%"/> 
+<img src='/images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Egitimi.png' width="100%"/> 
 
 <br/>

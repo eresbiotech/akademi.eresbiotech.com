@@ -45,7 +45,7 @@ content:
       button:
         label: "Kaydol"
         url: "post/phyml-uygulamali-filogenetik-egitimi"
-    - image: "images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Eğitimi.png"
+    - image: "images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Egitimi.png"
       title: "Uygulamalı Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi"
       text: "Homoloji modelleme, ilaç keşfi ve protein fonksiyon tahmini, SWISS-MODEL ve AutoDock Vina araçlarının uygulamalı kullanımını öğrenirler. Bu eğitim 17 - 18 Ağustos 2024 tarihinde gerçekleşecektir.  "
       button:

@@ -2,7 +2,7 @@ enabled: true
 id: "Eğitimlerimize katılanlar ne dediler"
 
 content:
-  title: "Testimonials"
+  title: "Eğitimlerimize katılanlar ne dediler"
 
   featured:
     image: "images/testimonials-awards.png"

@@ -6,7 +6,7 @@ content:
   text: "Biyoinformatik ve hesaplamalı biyolojiyi tüm çalışmalarınızda etkin bir şekilde kullanın, kariyerinizi hızla geliştirin, seçkin araştırmacılardan olun. "
 
   buttonPrimary:
-    label: "Hakkimizda"
+    label: "Hakkımızda"
     url: "/about"
 
   buttonSecondary:
