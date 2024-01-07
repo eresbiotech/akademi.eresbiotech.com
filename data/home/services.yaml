@@ -5,8 +5,16 @@ content:
   title: "2024 Eğitim Programı"
   text: "2024 yılında başlangıçtan ileri seviyeye kadar eğitimlerimize kaydolun biyoinformatik kariyerinizi başlatın."
   cards:
+
+    - image: "images/biyoinformatik-kis-donemi.png"
+      title: "2024 Kış Dönemi Biyoinformatik Başlangıç Dersi (Ücretsiz)"
+      text: "Katılımcılar bu ilk derste biyoinformatiğin temellerini göstermek için çeşitli çalışmaları ve uygulamaları size sunacağız. Ayrıca diğer eğitimler için ödüller ve indirimler olacak. 22 Ocak 2024'te gerçekleşecek. "
+      button:
+        label: "Kaydol"
+        url: "post/kis-egitim"
+
     - image: "images/Uygulamali-R-Egitimi.png"
-      title: "Uygulamalı <br/> R'a Giriş Eğitimi"
+      title:  "Uygulamalı <br/> R'a Giriş Eğitimi"
       text: "R programlama dilini etkili bir şekilde kullanmayı öğrenerek temel istatistiksel analizler ve veri görselleştirmeleri konusunda pratik deneyim kazanmanıza olanak tanır. Eğitim 17 - 18 Şubat 2024'te gerçekleşecek. "
       button:
         label: "Kaydol"
