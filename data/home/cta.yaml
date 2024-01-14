@@ -6,4 +6,4 @@ content:
   image: "images/services-web-development.png"
   button:
     label: "Bize ulaşın."
-    url: "#"
+    url: "post/contact"
