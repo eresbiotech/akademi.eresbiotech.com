@@ -34,7 +34,6 @@ params:
 
   contact:
     - "info@eresbiotech.com"
-    - "54138011273"
 
   copyright: "© 2023 Eres Biotech"
 
@@ -58,7 +57,7 @@ menus:
 
   buttons:
     - name: "Iletisim"
-      url: "/#"
+      url: "/post/contact"
       weight: 5
       pre: "btn btn-primary text-light"
 
