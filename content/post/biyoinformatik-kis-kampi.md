@@ -53,7 +53,7 @@ Biyoinformatik Winter Bootcamp, 8-14 Aralık tarihleri arasında gerçekleşen s
 
 <br/>
 
-**İndirimli Ödeme Bağlantısı:** <https://iyzi.link/AJbHRg>
+**İndirimli Ödeme Bağlantısı:** <https://iyzi.link/AJbHTg>
 
 <br/>
 
