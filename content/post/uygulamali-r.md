@@ -120,11 +120,7 @@ Bu eğitimle veri analizinde kendinizi güçlendirmek ve kariyerinize bir basama
 
 <br/>
 
-**Ücret:** ~~1.850TL (%20 KDV Dahil)~~
-
-<br/>
-
-**İndirimli Ücret:** 1.450TL (**15 Ocak** Son gün) (%20 KDV Dahil)
+**Ücret:** 1.850TL (%20 KDV Dahil)
 
 <br/>
 
