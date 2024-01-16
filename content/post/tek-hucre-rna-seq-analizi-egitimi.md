@@ -198,15 +198,11 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 
 <br/>
 
-**Ücret (KDV dahil):** ~~2.950 TL (%20 KDV Dahil)~~
+**Ücret (KDV dahil):** 2.950 TL (%20 KDV Dahil)
 
 <br/>
 
 **Ödeme Bağlantısı:** <https://iyzi.link/AJbHSw>
-
-<br/>
-
-**İndirimli Ücret:** 2.200 TL (İndirim son gün **15 Ocak**) (%20 KDV Dahil)
 
 <br/>
 
@@ -218,7 +214,19 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 
 <br/>
 
-**Öncül Tavsiye Edilen Dersler:** Biyoinformtiğe Giriş, Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi
+**Öncül Tavsiye Edilen Dersler:** 
+
+<br/>
+
+**[Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi](https://akademi.eresbiotech.com/post/biyoinformatik-giris-egitim-buyuk-veri-kurs/)** 
+
+<br/>
+
+**[Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi](https://akademi.eresbiotech.com/post/biyoinformatik-dizi-hizalama-algoritmalari-egitimi/)** 
+
+<br/>
+
+**[Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi](https://akademi.eresbiotech.com/post/biyoinformatik-veritabanlari-araclar-egitimi/)** 
 
 <br/>
 
