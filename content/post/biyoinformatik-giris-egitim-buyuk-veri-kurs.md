@@ -107,11 +107,7 @@ Bu eğitim, yüksek işlem hacimli veri kavramını anlamanızı, biyoinformatik
 
 <br/>
 
-**Ücret:** ~~1750 TL (%20 KDV Dahil)~~
-
-<br/>
-
-**İndirimli Ücret:** 1.250 TL (İndirim son gün **15 Ocak**) (%20 KDV Dahil)
+**Ücret:** 1750 TL (%20 KDV Dahil)
 
 <br/>
 
