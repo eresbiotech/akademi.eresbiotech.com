@@ -236,11 +236,7 @@ Eğitim katılımcılara NCBI, ENSEMBL ve UCSC genom tarayıcılarıyla ilgili t
 
 <br/>
 
-**Ücret** ~~2.500 TL (%20 KDV Dahil)~~ 
-
-<br/>
-
-**İndirimli Ücret:** 1.750 TL (İndirim son gün **15 Ocak**) (%20 KDV Dahil)
+**Ücret** 2.500 TL (%20 KDV Dahil)
 
 <br/>
 
