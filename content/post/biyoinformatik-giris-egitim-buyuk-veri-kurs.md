@@ -111,7 +111,7 @@ Bu eğitim, yüksek işlem hacimli veri kavramını anlamanızı, biyoinformatik
 
 <br/>
 
-**İndirimli Ödeme Bağlantısı:** <https://iyzi.link/AJbHPg>
+**Ödeme Bağlantısı:** <https://iyzi.link/AJbHPg>
 
 <br/>
 
