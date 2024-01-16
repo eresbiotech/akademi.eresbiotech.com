@@ -170,23 +170,11 @@ Pazar:\
 
 <br/>
 
-**Ücret:** ~~2.800 TL (%20 KDV Dahil)~~
-
-<br/>
-
-**İndirimli Ücret:** 1.850 TL (İndirim son gün **15 Ocak**) (%20 KDV Dahil)
+**Ücret:** 2.800 TL (%20 KDV Dahil))
 
 <br/>
 
 **Ödeme Bağlantısı:** <https://iyzi.link/AJbHRA>
-
-<br/>
-
-**Eğitim Seviyesi:** Orta Seviye
-
-<br/>
-
-**Eğitim Zorluk Seviyesi:** 3/5
 
 <br/>
 
@@ -199,6 +187,18 @@ Bu ders temel biyoinformatik kavramları bilenler için tasarlanmıştır. Genom
 <br/>
 
 **Öncül Tavsiye Edilen Dersler:** 
+
+<br/>
+
+**[Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi](https://akademi.eresbiotech.com/post/biyoinformatik-giris-egitim-buyuk-veri-kurs/)** 
+
+<br/>
+
+**[Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi](https://akademi.eresbiotech.com/post/biyoinformatik-dizi-hizalama-algoritmalari-egitimi/)** 
+
+<br/>
+
+**[Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi](https://akademi.eresbiotech.com/post/biyoinformatik-veritabanlari-araclar-egitimi/)** 
 
 <br/>
 
