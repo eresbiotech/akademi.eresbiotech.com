@@ -147,11 +147,6 @@ Pazar:
 
 **Ücret:** ~~ 2500 TL (%20 KDV Dahil)~~
 
-
-<br/>
-
-**İndirimli Ücret:** 1.750(İndirim son gün **15 Ocak**) (%20 KDV Dahil)
-
 <br/>
 
 **Ödeme Bağlantısı:** <https://iyzi.link/AJbHQA>
