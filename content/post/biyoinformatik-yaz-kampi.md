@@ -45,15 +45,11 @@ Biyoinformatik Summer Bootcamp, 9 - 20 Eylül tarihleri arasında gerçekleşen 
 
 <br/>
 
-**Ücret :** ~~14.500 TL (%20 KDV Dahil)~~
+**Ücret :** 14.500 TL (%20 KDV Dahil)
 
 <br/>
 
-**İndirimli Ücret:** 9.000 TL (İndirim son gün **15 Ocak**, Taksit imkanı vardır.) (%20 KDV Dahil)
-
-<br/>
-
-**İndirimli Ödeme Bağlantısı:** <https://iyzi.link/AJbHRg>
+**Ödeme Bağlantısı:** <https://iyzi.link/AJbHRg>
 
 <br/>
 
