@@ -267,14 +267,6 @@ Biyoinformatik Kış Kampı, 8-14 Aralık tarihleri arasında düzenlenecek yoğ
 
 <br/>
 
-**İndirimli ücret:**
-
-<br/>
-
-9.000TL
-
-<br/>
-
 **Ödeme Bağlantısı:**
 
 <br/>
