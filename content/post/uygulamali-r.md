@@ -124,7 +124,7 @@ Bu eğitimle veri analizinde kendinizi güçlendirmek ve kariyerinize bir basama
 
 <br/>
 
-**İndirimli Ödeme Bağlantısı:** <https://iyzi.link/AJbCGA>
+**Ödeme Bağlantısı:** <https://iyzi.link/AJbCGA>
 
 <br/>
 
