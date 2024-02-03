@@ -45,7 +45,7 @@ Biyoinformatik Winter Bootcamp, 8-14 Aralık tarihleri arasında gerçekleşen s
 
 <br/>
 
-**Ücret :** ~~14.500 TL (%20 KDV Dahil)~~
+**Ücret :** 14.500 TL (%20 KDV Dahil)
 
 <br/>
 
