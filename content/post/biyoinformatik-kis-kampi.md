@@ -83,7 +83,7 @@ Eğitim öncesinde kamp katılımcılarına föyler, notlar, çeşitli materyall
 
 <br/>
 
-Biyoinformatik Yaz Kampı, biyoloji ve bilgisayar bilimi öğrencileri, araştırmacılar, yüksek lisans/doktora öğrencileri, endüstri profesyonelleri ve bilgisayar programcıları için uygundur.
+Biyoinformatik Kış Kampı, biyoloji ve bilgisayar bilimi öğrencileri, araştırmacılar, yüksek lisans/doktora öğrencileri, endüstri profesyonelleri ve bilgisayar programcıları için uygundur.
 
 <br/>
 
