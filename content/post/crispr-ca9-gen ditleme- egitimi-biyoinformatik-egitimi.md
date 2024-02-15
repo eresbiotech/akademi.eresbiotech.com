@@ -16,7 +16,7 @@ categories = [
 
 <br/>
 
-#### 04-08 Mart 2024 
+#### 18-22 Mart 2024 
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
 
@@ -130,7 +130,7 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 <br/>
 
-**Tarih:** 04 - 08 Mart 2024 (Akşam)
+**Tarih:** 18 - 22 Mart 2024 (Akşam)
 
 
 <br/>
