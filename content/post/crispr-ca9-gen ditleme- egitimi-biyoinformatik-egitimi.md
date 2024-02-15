@@ -16,7 +16,7 @@ categories = [
 
 <br/>
 
-#### 04-08 Mart 2024
+#### 04-08 Mart 2024 
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
 
