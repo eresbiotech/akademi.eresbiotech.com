@@ -1,7 +1,7 @@
 +++
 author = "Eres Biyoinformatik Akademi"
 title = "2024 Kış Dönemi Biyoinformatik Başlangıç Dersi"
-date = "2023-01-31"
+date = "2023-02-31"
 description = "2024 Kış Dönemi Biyoinformatik Başlangıç Dersi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
 
 images =[ "images/biyoinformatik-kis-donemi.png" ]
