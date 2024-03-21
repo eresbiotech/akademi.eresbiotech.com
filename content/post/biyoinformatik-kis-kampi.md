@@ -18,7 +18,7 @@ categories = [
 #### 8 - 14 Aralık 2024
 #### Canlı - Online
 #### Kısıtlı Kontenjan - Sadece ilk 15 Kayıt
-#### 8 Mart Özel Kampanyası 5000 TL İndirim Fırsatı. Son Gün 13 MART 
+
 <br/>
 
 **Eğitim İsmi:** Biyoinformatik Kış Kampı
@@ -45,8 +45,8 @@ Biyoinformatik Winter Bootcamp, 8-14 Aralık tarihleri arasında gerçekleşen s
 
 <br/>
 
-**Ücret :** ~~14.500 TL (%20 KDV Dahil)~~
-**İNDİRİMLİ Ücret :** 9.500 TL (%20 KDV Dahil) SON GÜN: 13 MART 
+**Ücret :** 14.500 TL (%20 KDV Dahil)
+
 
 <br/>
 
