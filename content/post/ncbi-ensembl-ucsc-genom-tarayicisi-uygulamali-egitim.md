@@ -241,7 +241,7 @@ Eğitim katılımcılara NCBI, ENSEMBL ve UCSC genom tarayıcılarıyla ilgili t
 ~~**Ücret** 2.500 TL (%20 KDV Dahil)~~
 <br/>
 
-** Ramazan Kampanyası İndirimli Ücreti:** 2000 TL 
+**Ramazan Kampanyası İndirimli Ücreti:** 2000 TL 
 <br/>
 
 **Ödeme Bağlantısı** <https://iyzi.link/AJbHQw>
