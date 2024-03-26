@@ -17,7 +17,9 @@ categories = [
 
 #### 8 - 14 Aralık 2024
 #### Canlı - Online
-#### Kısıtlı Kontenjan - Sadece ilk 15 Kayıt
+#### Kısıtlı Kontenjan - Sadece ilk 15 Kayıt - Çalışanlara uygun 
+####Ramazan Ayına Özel: %20 İndirim
+####FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
 
 <br/>
 
@@ -45,8 +47,11 @@ Biyoinformatik Winter Bootcamp, 8-14 Aralık tarihleri arasında gerçekleşen s
 
 <br/>
 
-**Ücret :** 14.500 TL (%20 KDV Dahil)
+~~**Ücret :** 14.500 TL (%20 KDV Dahil)~~
 
+<br/>
+
+** Ramazan indirimli ücret:** 11.600TL 
 
 <br/>
 
