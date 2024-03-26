@@ -19,6 +19,8 @@ categories = [
 #### 19 - 20 Ekim 2024
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
+#### Ramazan Ayına Özel: %20 İndirim
+#### FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
 
 <br/>
 
@@ -198,7 +200,7 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 
 <br/>
 
-**Ücret (KDV dahil):** 2.950 TL (%20 KDV Dahil)
+~~**Ücret (KDV dahil):** 2.950 TL (%20 KDV Dahil)~~
 
 <br/>
 
