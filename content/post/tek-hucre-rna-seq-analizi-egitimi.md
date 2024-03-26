@@ -203,6 +203,8 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 ~~**Ücret (KDV dahil):** 2.950 TL (%20 KDV Dahil)~~
 
 <br/>
+**Ramazan Kampanyası İndirimli Ücret:** 2.360TL 
+<br/>
 
 **Ödeme Bağlantısı:** <https://iyzi.link/AJbHSw>
 
