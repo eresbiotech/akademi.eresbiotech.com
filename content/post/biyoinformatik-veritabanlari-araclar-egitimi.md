@@ -19,7 +19,8 @@ categories = [
 #### 18 - 19 Mayıs 2024
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
-
+####Ramazan Ayına Özel: %20 İndirim
+####FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
 <br/>
 
 Bu eğitimle BLAST, ClustalW, GenBank, UniProt ve PDB gibi alanda kullanılan temel biyoinformatik araçlarını ve veritabanlarını etkili ve hızlı kullanın, biyoinformatikte kullanılan veritabanlarının temel özelliklerini, birbirlerinden farklılıklarını ve veritabanlarının genel yapısını kavrayın. Veritabanlarını hangi araçlarla nasıl daha etkili kullanacağınızı ve ayrıntılarını öğrenin.
@@ -165,7 +166,11 @@ Pazar:
 
 <br/>
 
-**Ücret:** 2500 TL (%20 KDV Dahil)
+~~**Ücret:** 2500 TL (%20 KDV Dahil)~~
+
+<br/>
+
+** Ramazan indirimli ücret:** 2000 TL 
 
 <br/>
 
