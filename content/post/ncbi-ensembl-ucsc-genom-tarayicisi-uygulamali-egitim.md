@@ -19,8 +19,8 @@ categories = [
 #### 29 - 30 Haziran 2024
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
-####Ramazan Ayına Özel: %20 İndirim
-####FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
+#### Ramazan Ayına Özel: %20 İndirim
+#### FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
 
 <br/>
 
