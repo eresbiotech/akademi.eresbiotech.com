@@ -170,13 +170,18 @@ Pazar:\
 
 <br/>
 
-**Ücret:** 2.800 TL (%20 KDV Dahil))
+~~**Ücret:** 2.800 TL (%20 KDV Dahil))~~
+
+<br/>
+
+**Ramazan Kampanyası İndirimli Ücreti:** 2.240TL
 
 <br/>
 
 **Ödeme Bağlantısı:** <https://iyzi.link/AJbHRA>
 
 <br/>
+
 
 **Eğitim Seviyesi Açıklaması:**
 
