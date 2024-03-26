@@ -145,7 +145,11 @@ Pazar:
 
 <br/>
 
-**Ücret:** ~~ 2500 TL (%20 KDV Dahil)~~
+~~**Ücret:** 2500 TL (%20 KDV Dahil)~~
+
+<br/>
+
+** Ramazan İndirimli Ücret:** 2.000TL
 
 <br/>
 
