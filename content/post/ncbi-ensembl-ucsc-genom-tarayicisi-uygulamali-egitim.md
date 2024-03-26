@@ -19,6 +19,8 @@ categories = [
 #### 29 - 30 Haziran 2024
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
+####Ramazan Ayına Özel: %20 İndirim
+####FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
 
 <br/>
 
@@ -236,8 +238,10 @@ Eğitim katılımcılara NCBI, ENSEMBL ve UCSC genom tarayıcılarıyla ilgili t
 
 <br/>
 
-**Ücret** 2.500 TL (%20 KDV Dahil)
+~~**Ücret** 2.500 TL (%20 KDV Dahil)~~
+<br/>
 
+** Ramazan Kampanyası İndirimli Ücreti:** 2000 TL 
 <br/>
 
 **Ödeme Bağlantısı** <https://iyzi.link/AJbHQw>
