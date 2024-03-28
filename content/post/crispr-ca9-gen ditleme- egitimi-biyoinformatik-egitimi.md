@@ -15,8 +15,8 @@ categories = [
 ## A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi
 
 <br/>
-
-#### 18-22 Mart 2024 
+## Yeni Grup Açılmıştır
+### 22 - 26 Nisan 2024 
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
 
@@ -130,7 +130,7 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 <br/>
 
-**Tarih:** 18 - 22 Mart 2024 (Akşam)
+**Tarih:** 22 - 26 Nisan 2024 (Akşam)
 
 
 <br/>
@@ -152,7 +152,9 @@ Eğitim 1 hafta boyunca, hafta içi akşam saatlerinde gerçekleşecektir. ( 19:
 
 <br/>
 
-**Ücret:** 3265 TL (%20 KDV Dahil)
+~~**Ücret:** 3480 TL (%20 KDV Dahil)~~
+
+**Ramazan Kampanyası İndirimli Ücreti:** 2784 TL 
 
 <br/>
 
