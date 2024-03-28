@@ -16,10 +16,15 @@ categories = [
 
 <br/>
 ## Yeni Grup Açılmıştır
+
 ### 22 - 26 Nisan 2024 
+
 #### Hafta içi akşam 20:00 - 22:00 
+
 #### Canlı - Online 
+
 #### Kısıtlı Kontenjan
+
 
 <br/>
 
