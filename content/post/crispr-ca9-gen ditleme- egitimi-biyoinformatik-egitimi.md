@@ -17,6 +17,7 @@ categories = [
 <br/>
 ## Yeni Grup Açılmıştır
 ### 22 - 26 Nisan 2024 
+#### Hafta içi akşam 20:00 - 22:00 
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
 
@@ -139,7 +140,7 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 <br/>
 
-Eğitim 1 hafta boyunca, hafta içi akşam saatlerinde gerçekleşecektir. ( 19:30-21:30 )
+Eğitim 1 hafta boyunca, hafta içi akşam saatlerinde gerçekleşecektir. ( 20:00-22:00 )
 
 
 <br/>
@@ -166,7 +167,7 @@ Eğitim 1 hafta boyunca, hafta içi akşam saatlerinde gerçekleşecektir. ( 19:
 
 <br/>
 
-**Eğitmen:** Dr. Özlem Gönül Kırmaz 
+**Eğitmen:** Dr. Özlem Gönülkırmaz 
 
 
 
@@ -257,3 +258,6 @@ Soru Cevap otururumu
 <img src='/images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png' width="100%"/> 
 
 <br/>
+
+### Dr. Özlem Gönülkırmaz 
+
