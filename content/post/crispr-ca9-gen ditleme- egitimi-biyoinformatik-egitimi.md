@@ -23,6 +23,7 @@ categories = [
 
 <br/>
 
+
 Gen düzenleme teknolojileri, biyolojik araştırmalarda devrim niteliğinde bir ilerleme sağlamıştır. Özellikle CRISPR-Cas9 sistemi, genetik materyalin belirli bölgelerinde hassas değişiklikler yapma yeteneğiyle araştırmacıların geniş bir yelpazede çalışmalarını kolaylaştırmıştır. Bu bağlamda, "A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi" adlı programımız, gen düzenleme alanında çalışan ve bu teknolojiyi daha derinlemesine öğrenmek isteyen yaşam bilimleri araştırmacıları için tasarlanmıştır.
 
 <br/>
