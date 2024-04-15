@@ -19,8 +19,7 @@ categories = [
 #### 17 - 18 Ağustos 2024
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
-#### Ramazan Ayına Özel: %20 İndirim
-#### FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
+
 
 <br/>
 
@@ -225,11 +224,8 @@ Pazar:
 
 <br/>
 
-~~**Ücret:** 2800TL (%20 KDV Dahil)~~
+**Ücret:** 2800TL (%20 KDV Dahil)
 
-<br/>
-**Ramazan Kampanyası İndirimli Ücret:** 2240 TL 
-<br/>
 
 **Ödeme Bağlantısı:** <https://iyzi.link/AJbHRQ>
 
