@@ -1,7 +1,7 @@
 +++
 author = "Eres Biyoinformatik Akademi"
 title = "Uygulamalı R'a Giriş Eğitimi"
-date = "2024-04-15"
+date = "2023-12-29"
 description = "Uygulamalı R'a Giriş Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
 
 images =[ "images/Uygulamali-R-Egitimi.png" ]
