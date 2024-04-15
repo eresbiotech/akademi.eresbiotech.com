@@ -44,7 +44,7 @@ Uygulamalarla CRISPR CAS9 tasarımı ve değerlendirmesini baştan sona öğrene
 
 Bu eğitim, katılımcılara CRISPR tekniklerine genel bir bakış sunmayı, doğru gRNA ve Cas9 seçimi konularında yetkinlik kazandırmayı, mikroenjeksiyon ve mutant yetiştirme tekniklerini öğretmeyi, model olmayan organizmalarda CRISPR tasarlamayı, mutasyon belirleme ve analiz etmeyi hedefler.
 
-###Eğitimin Kazanımları:
+### Eğitimin Kazanımları:
 <br/>
 - CRISPR tekniklerini anlama ve uygulama yetkinliği: CRISPR teknolojisinin temel prensiplerini anlama, CRISPR teknolojisini kullanmak için gereekli biyoinformatik hazırlıkları öğrenme, primerlerin tasarlanması, verilerin analizi, değerlendirme ve tüm CRISPR sürecine hakim olma. Bu, CRISPR-Cas9 sisteminin nasıl çalıştığını anlama, gerekli bileşenlerin hazırlanması ve deneylerin planlanması gibi konuları içerir.
 
