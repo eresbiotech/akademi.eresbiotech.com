@@ -15,8 +15,10 @@ categories = [
 ## A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi
 
 <br/>
-## Yeni Grup Açılmıştır
 
+## Son Kontenjanlar. Kayıt olun kaçırmayın. 
+
+<br/>
 ### 22 - 26 Nisan 2024 
 
 #### Hafta içi akşam 20:00 - 22:00 
@@ -44,7 +46,7 @@ Bu eğitim, katılımcılara CRISPR tekniklerine genel bir bakış sunmayı, do�
 
 ###Eğitimin Kazanımları:
 <br/>
-- CRISPR tekniklerini anlama ve uygulama yetkinliği: CRISPR teknolojisinin temel prensiplerini anlama, laboratuvar ortamında uygulama becerisi. Bu, CRISPR-Cas9 sisteminin nasıl çalıştığını anlama, gerekli bileşenlerin hazırlanması ve deneylerin planlanması gibi konuları içerir.
+- CRISPR tekniklerini anlama ve uygulama yetkinliği: CRISPR teknolojisinin temel prensiplerini anlama, CRISPR teknolojisini kullanmak için gereekli biyoinformatik hazırlıkları öğrenme, primerlerin tasarlanması, verilerin analizi, değerlendirme ve tüm CRISPR sürecine hakim olma. Bu, CRISPR-Cas9 sisteminin nasıl çalıştığını anlama, gerekli bileşenlerin hazırlanması ve deneylerin planlanması gibi konuları içerir.
 
 - Doğru gRNA ve Cas9 seçimi yapabilme becerisi: İstenen geni hedefleyen uygun gRNA ve Cas9 seçme yetkinliği. Bu, genomik dizilerin analizi, hedeflenen bölge üzerinde etkili kesim yapacak gRNA ve Cas9 kombinasyonunu belirleme yeteneği gerektirir.
 
