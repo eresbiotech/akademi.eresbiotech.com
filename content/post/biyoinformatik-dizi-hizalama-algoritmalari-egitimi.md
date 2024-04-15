@@ -19,8 +19,7 @@ categories = [
 #### 20-21 Nisan 2024 
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
-####Ramazan Ayına Özel: %20 İndirim
-####FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
+
 
 <br/>
 
@@ -147,11 +146,8 @@ Pazar:
 
 <br/>
 
-~~**Ücret:** 2500 TL (%20 KDV Dahil)~~
+**Ücret:** 2500 TL (%20 KDV Dahil)
 
-<br/>
-
-** Ramazan İndirimli Ücret:** 2.000TL
 
 <br/>
 
