@@ -19,6 +19,7 @@ categories = [
 ## Son Kontenjanlar. Kayıt olun kaçırmayın. 
 
 <br/>
+
 ### 22 - 26 Nisan 2024 
 
 #### Hafta içi akşam 20:00 - 22:00 
