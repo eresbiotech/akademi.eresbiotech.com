@@ -161,9 +161,8 @@ Eğitim 1 hafta boyunca, hafta içi akşam saatlerinde gerçekleşecektir. ( 20:
 
 <br/>
 
-~~**Ücret:** 3480 TL (%20 KDV Dahil)~~
+**Ücret:** 3480 TL (%20 KDV Dahil)
 
-**Ramazan Kampanyası İndirimli Ücreti:** 2784 TL 
 
 <br/>
 
