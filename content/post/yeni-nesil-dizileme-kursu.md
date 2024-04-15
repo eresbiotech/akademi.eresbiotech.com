@@ -19,8 +19,7 @@ categories = [
 #### 16 - 17 Kasım 2024
 #### Canlı - Online 
 #### Kısıtlı Kontenjan
-#### Ramazan Ayına Özel: %20 İndirim
-#### FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
+
 
 <br/>
 
@@ -164,11 +163,8 @@ Temel biyoinformatik kavramlarına aşina olmak.
 
 <br/>
 
-~~**Ücret (KDV dahil):** 2800TL (%20 KDV Dahil)~~
+**Ücret (KDV dahil):** 2800TL (%20 KDV Dahil)
 
-<br/>
-
-**Ramazan İndirimli Ücret (KDV DAHİL):** 2.240TL 
 
 <br/>
 
