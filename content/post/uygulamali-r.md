@@ -15,7 +15,7 @@ categories = [
 
 <br/>
 
-#### 17 - 18 Şubat 2024
+#### 27 - 28 Nisan 2024
 #### Canlı - Online
 #### Kısıtlı Kontenjan
 
@@ -75,11 +75,11 @@ Bu eğitimle veri analizinde kendinizi güçlendirmek ve kariyerinize bir basama
 
 <br/>
 
-**Eğitim İsmi:** Uygulamalı R\'a Giriş Eğitimi
+**Eğitim İsmi:** Uygulamalı R'a Giriş Eğitimi
 
 <br/>
 
-**Tarih:** 17 - 18 Şubat 2024
+**Tarih:** 27 - 28 Nisan 2024
 
 <br/>
 
@@ -120,7 +120,7 @@ Bu eğitimle veri analizinde kendinizi güçlendirmek ve kariyerinize bir basama
 
 <br/>
 
-**Ücret:** 1.850TL (%20 KDV Dahil)
+**Ücret:** 2.200TL (%20 KDV Dahil)
 
 <br/>
 
@@ -140,7 +140,7 @@ Bu eğitimle veri analizinde kendinizi güçlendirmek ve kariyerinize bir basama
 
 <br/>
 
-**Kimler İçin Uygundur:** Hesaplamalı çalışmalar yapan tüm araştırmacılar için R\'a **hızlı ve uygulamalı** başlangıç yapmayı sağlar. Özellikle yaşam bilimleri alanında çalışan araştırmacılara ve öğrencilere tavsiye edilir.
+**Kimler İçin Uygundur:** Hesaplamalı çalışmalar yapan tüm araştırmacılar için R'a **hızlı ve uygulamalı** başlangıç yapmayı sağlar. Özellikle yaşam bilimleri alanında çalışan araştırmacılara ve öğrencilere tavsiye edilir.
 
 <br/>
 
