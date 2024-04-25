@@ -19,7 +19,7 @@ categories = [
 #### Canlı - Online
 #### Kısıtlı Kontenjan - Sadece ilk 15 Kayıt - Çalışanlara uygun 
 #### DNA GÜNÜ Kampanyası ile 5 bin TL indirimli kayıt fırsatı.
-#### FAYDALANMAK İÇİN SON GÜN: 2 Mayıs
+#### FAYDALANMAK İÇİN SON GÜN: 2 Mayıs 2024
 
 <br/>
 
