@@ -17,7 +17,7 @@ categories = [
 
 #### 8 - 14 Aralık 2024
 #### Canlı - Online
-#### **Kısıtlı Kontenjan - Sadece ilk 15 Kayıt - Çalışanlara uygun**
+#### **Kısıtlı Kontenjan - Sadece ilk 15 Kayıt - Çalışanlara uygun program**
 
 <br/>
 
