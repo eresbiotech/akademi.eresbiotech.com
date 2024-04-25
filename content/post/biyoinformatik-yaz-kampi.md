@@ -243,6 +243,5 @@ Biyoloji, Moleküler Biyoloji ve Genetik, Genetik ve Biyomühendislik, Tıp, Vet
 
 <a href="https://iyzi.link/AJbHRg" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
  
-<img src='/images/Biyoinformatik-Yaz-Kampi-Kurs.png' width="100%"/> 
 
 <br/>
