@@ -18,8 +18,12 @@ categories = [
 #### 9 - 20 Eylül 2024
 #### Canlı - Online
 #### Kısıtlı Kontenjan - Sadece ilk 15 Kayıt
-####Ramazan Ayına Özel: %20 İndirim
-####FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
+<br/>
+
+#### **DNA GÜNÜ Kampanyası ile 5 bin TL indirimli kayıt fırsatı.**
+#### **FAYDALANMAK İÇİN SON GÜN: 2 Mayıs 2024**
+
+<br/>
 
 <br/>
 
@@ -50,7 +54,9 @@ Biyoinformatik Summer Bootcamp, 9 - 20 Eylül tarihleri arasında gerçekleşen 
 ~~**Ücret :** 14.500 TL (%20 KDV Dahil)~~
 
 <br/>
-** Ramazan Kampanyası indirimli ücreti:** 11 600 TL 
+
+**DNA GÜNÜ indirimli ücret:** 9.500TL 
+
 <br/>
 
 **Ödeme Bağlantısı:** <https://iyzi.link/AJbHRg>
