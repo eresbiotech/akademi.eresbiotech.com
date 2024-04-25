@@ -18,8 +18,8 @@ categories = [
 #### 8 - 14 Aralık 2024
 #### Canlı - Online
 #### Kısıtlı Kontenjan - Sadece ilk 15 Kayıt - Çalışanlara uygun 
-####Ramazan Ayına Özel: %20 İndirim
-####FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
+#### DNA GÜNÜ Kampanyası ile 5 bin TL indirimli kayıt fırsatı.
+#### FAYDALANMAK İÇİN SON GÜN: 2 Mayıs
 
 <br/>
 
@@ -51,7 +51,7 @@ Biyoinformatik Winter Bootcamp, 8-14 Aralık tarihleri arasında gerçekleşen s
 
 <br/>
 
-** Ramazan indirimli ücret:** 11.600TL 
+**DNA GÜNÜ indirimli ücret:** 9.500TL 
 
 <br/>
 
@@ -71,7 +71,7 @@ Eğitim öncesinde kamp katılımcılarına föyler, notlar, çeşitli materyall
 
 <br/>
 
-**Eğitim Seviyesi Açıklaması:** Hiç bilmeyen ve yeni başlayan herkese uygundur.
+**Eğitim Seviyesi Açıklaması:** Hiç bilmeyen ve yeni başlayanlar ile biyoinformatik bilgisini güncellemek isteyen herkese uygundur.
 
 <br/>
 
@@ -125,7 +125,7 @@ Biyoloji, Moleküler Biyoloji ve Genetik, Genetik ve Biyomühendislik, Tıp, Vet
 
 <br/>
 
-**Yaz Kampında yıl içinde işlenen her konu uygulamalarla eksiksiz işlenecektir. Burada konular listesinin özeti sunulmuştur.**
+**Kış Kampında yıl içinde işlenen her konu uygulamalarla eksiksiz işlenecektir. Burada konular listesinin özeti sunulmuştur.**
 
 <br/>
 
@@ -237,216 +237,7 @@ Biyoloji, Moleküler Biyoloji ve Genetik, Genetik ve Biyomühendislik, Tıp, Vet
 
 <br/>
 
-**Eğitim İsmi:** Biyoinformatik Kış Kampı
 
-<br/>
-
-**Tarih:** 8 - 14 Aralık 2024
-
-<br/>
-
-**Kısa Açıklama:**
-
-<br/>
-
-Biyoinformatik Kış Kampı, 8-14 Aralık tarihleri arasında düzenlenecek yoğun bir etkinliktir. Bu kamp, biyoinformatiğin geniş bir yelpazesini kapsayarak, katılımcılara kapsamlı bir bilgi ve beceri seti kazandırmayı hedeflemektedir.
-
-<br/>
-
-**Eğitim Özelliği:** Canlı, Çevrim içi
-
-<br/>
-
-**Kontenjan:** 15 kişi ile sınırlıdır.
-
-<br/>
-
-**Ücret (KDV dahil):**
-
-<br/>
-
-14.500TL
-
-<br/>
-
-**Ödeme Bağlantısı:**
-
-<br/>
-
-<https://iyzi.link/AJbHTg>
-
-<br/>
-
-**Eğitim Materyali:**
-
-<br/>
-
-Eğitim öncesinde kamp katılımcılarına föyler, notlar, çeşitli materyalleri içeren bir kamp paketi gönderilecektir.
-
-<br/>
-
-**Eğitim Seviyesi:**
-
-<br/>
-
-Girişten ileri seviyeye
-
-<br/>
-
-**Eğitim Seviyesi Açıklaması:**
-
-<br/>
-
-Sıfırdan başlayan herkese uygundur.
-
-<br/>
-
-**Öncül Tavsiye Edilen Dersler:** -
-
-<br/>
-
-**Eğitmen:**
-
-<br/>
-
-Selda Akdal ve Bioinformay Komisyonu
-
-<br/>
-
-**Kimler İçin Uygundur:**
-
-<br/>
-
-Biyoloji ve bilgisayar bilimi öğrencileri, araştırmacılar, yüksek lisans/doktora öğrencileri, endüstri profesyonelleri ve bilgisayar programcıları.
-
-<br/>
-
-**Kazanımlar:**
-
-<br/>
-
--   R programlama dilinde temel yetkinlikler kazanarak veri analizi ve görselleştirme becerilerini geliştireceksiniz.
-
--   Biyoinformatik temel kavramlarını öğrenerek büyük veri uygulamaları üzerinde bilgi sahibi olacaksınız.
-
--   Dizi hizalama prensipleri ve çeşitli algoritmalar hakkında detaylı bilgi edineceksiniz.
-
--   Biyoinformatik araçları etkili bir şekilde kullanma ve veritabanlarına hakim olma yetenekleri kazanacaksınız.
-
--   Genom tarayıcıları (NCBI, ENSEMBL, UCSC) üzerinde uygulamalı deneyim elde edeceksiniz.
-
--   Filogenetik analiz ve dizi hizalama konularında yetkinlik kazanarak phyML kullanımı öğreneceksiniz.
-
--   Yapısal biyoinformatik prensiplerini anlayarak in silico protein modelleme stratejilerini öğrenme şansına sahip olacaksınız.
-
--   Tek hücre RNA sekans analizi prensipleri üzerinde çalışarak veri analizi yöntemleri hakkında bilgi sahibi olacaksınız.
-
--   Yeni nesil dizileme teknolojilerini öğrenerek genomik çalışmaların temel adımlarını uygulamalı olarak deneyimleyeceksiniz.
-
--   Biyoinformatik projelerinde kullanılan araçları ve teknikleri öğrenerek gerçek dünya uygulamalarında yetenek geliştireceksiniz.
-
-<br/>
-
-**Konular:**
-
-<br/>
-
-**Kış Kampında yıl içinde işlenen her konu uygulamalarla eksiksiz işlenecektir. Burada konular listesinin özeti sunulmuştur.**
-
-<br/>
-
--   Uygulamalı R'a Giriş ve Biyoinformatiğe Genel Bakış
-
--   R programlama dilinin temel prensipleri
-
-    -   Veri yapıları ve temel komutlar
-
-    -   R ile istatistiksel analiz ve görselleştirme
-
-- Biyoinformatiğin temel kavramları
--   Büyük veri ve biyoinformatik uygulamaları
--   Dizi Hizalama ve Algoritmalar Eğitimi
-    -   Dizi hizalama temelleri
-    -   Algoritmaların karşılaştırılması
-    -   Dizi hizalama uygulamaları
-
--   Temel Biyoinformatik Araçlar ve Veritabanları Eğitimi
-    -   Biyoinformatik araçların kullanımı
-    -   Veritabanları ve veritabanları uygulamaları
-
--   Genom Tarayıcıları ve Filogenetik Analiz
-    -   Genom tarayıcılarının kullanımı (NCBI, ENSEMBL, UCSC)
-    -   Genom tarayıcı uygulamaları
-
--   Filogenetik temelleri
-    -   Dizi hizalama ve filogenetik analiz
-    -   phyML uygulamaları
-    -   Filogenetik ağaçalrı yorumlama
-
--   Yapısal Biyoinformatik
-
-    -   Yapısal biyoinformatiğin temel prensipleri
-
-    -   Protein modelleme stratejileri
-
-    -   in silico protein modelleme uygulamaları
-
--   Tek Hücre RNA-Seq Analizi
-
-    -   Tek hücre RNA sekans analizi prensipleri
-
-    -   Veri analizi yöntemleri ve araçları
-
-    -   Tek hücre RNA-Seq verileri üzerinde uygulamalı çalışmalar
-
--   Yeni Nesil Dizileme ve Genomik Çalışmalar
-
-    -   Yeni nesil dizileme teknolojileri
-
-    -   Genomik çalışmaların temel adımları
-
-    -   Uygulamalı Galaxy çalışmaları
-
-- Tekrar ve Öğrenci sunumları
-
-<br/>
-
-**Eğitim platformu ve erişim şekli:**
-
-<br/>
-
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
-
--   Eğitimden bir ay önce adresinize eğitim kiti içeren kamp paketi ulaştırılacaktır.
-
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
-<br/>
-
-**ÖNEMLİ NOTLAR:**
-
-<br/>
-
--   Taksit imkanı bulunmaktadır.
-
--   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
-
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
--   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
-
--   Ayrıca sertifikalar baskı olarak ve ıslak imzalı olarak adresinize kargolanacaktır.
-
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
-
-<br/>
-
-<a href="https://iyzi.link/AJbHTg" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
- 
 <img src='/images/Biyoinformatik-Kis-Kampi.png' width="100%"/> 
 
 <br/>
