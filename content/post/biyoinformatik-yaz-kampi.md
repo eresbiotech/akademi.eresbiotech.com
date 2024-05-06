@@ -20,11 +20,6 @@ categories = [
 #### Kısıtlı Kontenjan - Sadece ilk 15 Kayıt
 <br/>
 
-#### **DNA GÜNÜ Kampanyası ile 5 bin TL indirimli kayıt fırsatı.**
-#### **FAYDALANMAK İÇİN SON GÜN: 2 Mayıs 2024**
-
-<br/>
-
 <br/>
 
 **Eğitim İsmi:** Biyoinformatik Yaz Kampı
@@ -51,15 +46,12 @@ Biyoinformatik Summer Bootcamp, 9 - 20 Eylül tarihleri arasında gerçekleşen 
 
 <br/>
 
-~~**Ücret :** 14.500 TL (%20 KDV Dahil)~~
+**Ücret :** 14.500 TL (%20 KDV Dahil)
+
 
 <br/>
 
-**DNA GÜNÜ indirimli ücret:** 9.500TL 
-
-<br/>
-
-**Ödeme Bağlantısı:** <https://iyzi.link/AJbHRg>
+**Taksitli Ödeme Bağlantısı:** <https://iyzi.link/AJbHRg>
 
 <br/>
 
