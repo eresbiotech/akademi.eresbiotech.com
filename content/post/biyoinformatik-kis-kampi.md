@@ -21,10 +21,6 @@ categories = [
 
 <br/>
 
-#### **DNA GÜNÜ Kampanyası ile 5 bin TL indirimli kayıt fırsatı.**
-#### **FAYDALANMAK İÇİN SON GÜN: 2 Mayıs 2024**
-
-<br/>
 
 **Eğitim İsmi:** Biyoinformatik Kış Kampı
 
@@ -50,15 +46,11 @@ Biyoinformatik Winter Bootcamp, 8-14 Aralık tarihleri arasında gerçekleşen s
 
 <br/>
 
-~~**Ücret :** 14.500 TL (%20 KDV Dahil)~~
+**Ücret :** 14.500 TL (%20 KDV Dahil)
 
 <br/>
 
-**DNA GÜNÜ indirimli ücret:** 9.500TL 
-
-<br/>
-
-**İndirimli Ödeme Bağlantısı:** <https://iyzi.link/AJbHTg>
+**Taksitli Ödeme Bağlantısı:** <https://iyzi.link/AJbHTg>
 
 <br/>
 
