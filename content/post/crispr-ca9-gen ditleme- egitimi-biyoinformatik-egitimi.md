@@ -1,7 +1,7 @@
 +++
 author = "Eres Biyoinformatik Akademi"
 title = "A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi"
-date = "2023-12-29"
+date = "2023-02-25"
 description = "A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
 
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
