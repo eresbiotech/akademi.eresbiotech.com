@@ -1,7 +1,7 @@
 +++
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi"
-date = "2023-12-29"
+date = "2023-02-27"
 description = "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
 
 images =[ "images/Biyoinformatik-Genomik-Proteomik-Büyük-Veri-Egitimi.png" ]
