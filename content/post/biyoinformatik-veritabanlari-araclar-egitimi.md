@@ -1,7 +1,7 @@
 +++
 author = "Eres Biyoinformatik Akademi"
 title = "Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi"
-date = "2023-12-27"
+date = "2023-02-27"
 description = "Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
 
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
