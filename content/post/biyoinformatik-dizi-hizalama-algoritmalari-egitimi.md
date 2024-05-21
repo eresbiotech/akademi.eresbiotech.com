@@ -1,7 +1,7 @@
 +++
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi"
-date = "2023-12-28"
+date = "2023-02-26"
 description = "Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
 
 images =[ "images/Biyoinformatikte-Dizi-Hizalama-Algoritmalar-Egitimi.png" ]
