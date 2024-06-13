@@ -224,7 +224,8 @@ Pazar:
 
 <br/>
 
-**Ücret:** 2800TL (%20 KDV Dahil)
+~**Ücret:** 2800TL (%20 KDV Dahil)~
+**Yaz İndirimli Ücret:** 2100TL (%20 KDV Dahil)
 
 
 **Ödeme Bağlantısı:** <https://iyzi.link/AJbHRQ>
