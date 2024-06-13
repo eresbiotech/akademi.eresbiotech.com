@@ -18,6 +18,10 @@ categories = [
 #### 9 - 20 Eylül 2024
 #### Canlı - Online
 #### Kısıtlı Kontenjan - Sadece ilk 15 Kayıt
+
+#### %35 Yaz İndirimleri Fırsatı Başladı! (Son gün: 19 Haziran) 
+
+#### **Yaz İndirimli Ücret :** 9425 TL (%20 KDV Dahil)
 <br/>
 
 <br/>
@@ -46,8 +50,9 @@ Biyoinformatik Summer Bootcamp, 9 - 20 Eylül tarihleri arasında gerçekleşen 
 
 <br/>
 
-**Ücret :** 14.500 TL (%20 KDV Dahil)
+**Ücret :** ~14.500 TL (%20 KDV Dahil)~
 
+**Yaz İndirimli Ücret :** 9425 TL (%20 KDV Dahil)
 
 <br/>
 
