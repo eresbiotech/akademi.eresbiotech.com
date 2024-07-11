@@ -163,8 +163,7 @@ Temel biyoinformatik kavramlarına aşina olmak.
 
 <br/>
 
-~**Ücret (KDV dahil):** 2800TL (%20 KDV Dahil)~
-**Yaz İndirimli Ücret (KDV dahil):** 2100TL (%20 KDV Dahil)
+**Ücret (KDV dahil):** 2800TL (%20 KDV Dahil)
 
 
 <br/>
