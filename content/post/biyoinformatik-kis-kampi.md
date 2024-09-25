@@ -50,7 +50,7 @@ Biyoinformatik Winter Bootcamp, 8-14 Aralık tarihleri arasında gerçekleşen s
 
 <br/>
 
-**Taksitli Ödeme Bağlantısı:** <https://iyzi.link/AJbHTg>
+**Taksitli Ödeme Bağlantısı:** <https://iyzi.link/AJwAsw>
 
 <br/>
 
@@ -218,7 +218,7 @@ Biyoloji, Moleküler Biyoloji ve Genetik, Genetik ve Biyomühendislik, Tıp, Vet
 
 <br/>
 
--   Taksit imkanı bulunmaktadır.
+-   Taksit imkanı bulunmaktadır. Taksitli ödeme için: <https://iyzi.link/AJwAsw>
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
