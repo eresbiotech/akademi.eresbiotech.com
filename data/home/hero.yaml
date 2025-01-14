@@ -10,10 +10,10 @@ content:
     url: "/about"
 
   buttonSecondary:
-    label: "Dersler hakkında daha fazla bilgi istiyorum."
+    label: "Eğitimler hakkında daha fazla bilgi istiyorum."
     url: "post/contact"
 
 
   buttonThird:
-    label: "2024 Plannerınızı ücretsiz indirmek için tıklayın."
+    label: "2025 Plannerınızı ücretsiz indirmek için tıklayın."
     url: "https://docs.google.com/forms/d/1ISpYE2iHfAPRoDw9GAU67TG8R7dOjrc2nME83LtiFuk/viewform?edit_requested=true"
