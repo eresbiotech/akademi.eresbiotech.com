@@ -1,5 +1,5 @@
-baseURL: "http://akademi.eresbiotech.com/"
-theme: "up-business-theme"
+baseURL: "https://akademi.eresbiotech.com/"
+theme: ""
 languageCode: "tr-tr"
 markup:
   goldmark:
