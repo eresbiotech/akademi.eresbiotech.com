@@ -1,0 +1,120 @@
+{{ define "main" }}
+{{- $courses := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
+<section class="home-hero">
+  <div class="container home-hero-grid">
+    <div class="home-hero-copy">
+      <p class="eyebrow">ERES Biyoinformatik Akademi</p>
+      <h1>Biyoinformatik, Veri Analizi ve Hesaplamalı Biyoloji Eğitimleri</h1>
+      <p class="lead">ERES Biyoinformatik Akademi’de, yaşam bilimleri alanındaki araştırmacılar için kendi hızında ilerlenebilen, videolu ve uygulama odaklı eğitimler sunuyoruz. Kodlama, veri analizi, genomik araçlar ve biyoinformatik yaklaşımları adım adım öğrenin.</p>
+      <div class="hero-actions">
+        <a class="hero-action" href="{{ "/post/" | relURL }}">Eğitimleri İnceleyin</a>
+        <a class="hero-action hero-action-secondary" href="{{ "/post/contact/" | relURL }}">Bize Ulaşın</a>
+      </div>
+    </div>
+    <aside class="home-hero-panel" aria-label="Akademi özeti">
+      <div>
+        <span class="hero-count">{{ len $courses }}</span>
+        <span>uygulama odaklı eğitim</span>
+      </div>
+      <div class="hero-panel-row">
+        <strong>Videolu</strong>
+        <span>Tekrar edilebilir ders yapısı</span>
+      </div>
+      <div class="hero-panel-row">
+        <strong>Esnek</strong>
+        <span>Yoğun akademik programlara uyumlu</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="container home-section">
+  <div class="section-heading">
+    <p class="eyebrow">Neden ERES Akademi?</p>
+    <h2>Yaşam bilimleri için anlaşılır, uygulanabilir ve güvenilir öğrenme</h2>
+  </div>
+  <div class="value-grid">
+    <article class="value-card">
+      <span class="value-icon" aria-hidden="true">01</span>
+      <h3>Kendi hızınızda öğrenme</h3>
+      <p>Dersleri akademik ya da profesyonel takviminize göre takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.</p>
+    </article>
+    <article class="value-card">
+      <span class="value-icon" aria-hidden="true">02</span>
+      <h3>Uygulama odaklı dersler</h3>
+      <p>Temel kavramlar gerçek analiz örnekleri, araç kullanımı ve adım adım uygulamalarla desteklenir.</p>
+    </article>
+    <article class="value-card">
+      <span class="value-icon" aria-hidden="true">03</span>
+      <h3>Biyoloji kökenli öğrenenlere uygun</h3>
+      <p>Kodlama ve veri analizi konuları, yaşam bilimleri altyapısına sahip öğrenenlerin takip edebileceği şekilde yapılandırılır.</p>
+    </article>
+    <article class="value-card">
+      <span class="value-icon" aria-hidden="true">04</span>
+      <h3>ERES deneyimi ve akademik güven</h3>
+      <p>İçerikler ERES Biyoteknoloji’nin Ar-Ge ve eğitim deneyiminden beslenen ölçülü, güncel ve uygulanabilir bir yaklaşımla hazırlanır.</p>
+    </article>
+  </div>
+</section>
+
+<section class="container home-section">
+  <div class="section-heading section-heading-row">
+    <div>
+      <p class="eyebrow">Eğitimler</p>
+      <h2>Kendi hızınızda ilerleyebileceğiniz eğitimleri keşfedin</h2>
+    </div>
+    <a class="text-link" href="{{ "/post/" | relURL }}">Tüm eğitimler</a>
+  </div>
+  <div class="card-grid">
+    {{ range $courses.ByDate.Reverse }}
+      {{- $page := . -}}
+      {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
+      <article class="post-card">
+        {{ with .Params.images }}
+          {{- $src := index . 0 -}}
+          {{- with resources.Get $src -}}
+            <img class="post-image" src="{{ .RelPermalink }}" alt="{{ $displayTitle }}">
+          {{- end -}}
+        {{ end }}
+        <div class="post-card-body">
+          <h3><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h3>
+          {{ with .Description }}
+            <p>{{ . }}</p>
+          {{ else }}
+            <p>{{ .Summary | plainify }}</p>
+          {{ end }}
+        </div>
+        <a class="card-link" href="{{ .RelPermalink }}">Eğitimi İncele</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="container home-section audience-band">
+  <div>
+    <p class="eyebrow">Bireysel ve Kurumsal</p>
+    <h2>Öğrenme hedefinize uygun eğitim yapısı</h2>
+  </div>
+  <div class="audience-grid">
+    <article>
+      <h3>Bireysel öğrenme için eğitimler</h3>
+      <p>Öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için temel düzeyden ileri uygulamalara uzanan eğitimler.</p>
+      <a class="text-link" href="{{ "/post/" | relURL }}">Eğitimleri inceleyin</a>
+    </article>
+    <article>
+      <h3>Kurumlar ve araştırma grupları</h3>
+      <p>Araştırma ekipleri, laboratuvarlar ve kurumlar için ihtiyaçlara göre yapılandırılabilecek biyoinformatik ve veri analizi eğitim talepleri.</p>
+      <a class="text-link" href="{{ "/work/" | relURL }}">Hizmetleri inceleyin</a>
+    </article>
+  </div>
+</section>
+
+<section class="container home-final-cta">
+  <p class="eyebrow">Başlayın</p>
+  <h2>Biyoinformatik öğrenme yolculuğunuza bugün başlayın.</h2>
+  <div class="hero-actions">
+    <a class="hero-action" href="{{ "/post/" | relURL }}">Eğitimleri İnceleyin</a>
+    <a class="hero-action hero-action-secondary" href="{{ "/post/contact/" | relURL }}">İletişime Geçin</a>
+  </div>
+</section>
+{{ end }}

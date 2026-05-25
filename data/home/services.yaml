@@ -2,87 +2,87 @@ enabled: true
 id: "services"
 
 content:
-  title: "2024 Eğitim Programı"
-  text: "2024 yılında başlangıçtan ileri seviyeye kadar eğitimlerimize kaydolun biyoinformatik kariyerinizi başlatın."
+  title: "Biyoinformatik Eğitimleri"
+  text: "Biyoinformatik, veri analizi ve hesaplamalı biyoloji alanlarında kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı eğitimleri keşfedin."
   cards:
 
     - image: "images/biyoinformatik-kis-donemi.png"
-      title: "2024 Kış Dönemi Biyoinformatik Başlangıç Dersi (Ücretsiz)"
-      text: "Katılımcılar bu ilk derste biyoinformatiğin temellerini göstermek için çeşitli çalışmaları ve uygulamaları size sunacağız. Ayrıca diğer eğitimler için ödüller ve indirimler olacak. 22 Ocak 2024'te gerçekleşecek. "
+      title: "Biyoinformatik Başlangıç Dersi"
+      text: "Biyoinformatiğin temel kavramlarını, örnek çalışmalarını ve uygulama alanlarını kendi hızınızda öğrenmeye başlayabileceğiniz giriş düzeyi bir derstir."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/kis-egitim"
 
     - image: "images/Uygulamali-R-Egitimi.png"
       title:  "Uygulamalı <br/> R'a Giriş Eğitimi"
-      text: "R programlama dilini etkili bir şekilde kullanmayı öğrenerek temel istatistiksel analizler ve veri görselleştirmeleri konusunda pratik deneyim kazanmanıza olanak tanır. Eğitim 17 - 18 Şubat 2024'te gerçekleşecek. "
+      text: "R programlama dilini kullanarak temel istatistiksel analiz, veri düzenleme ve görselleştirme becerilerinizi uygulamalı örneklerle geliştirin."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/uygulamali-r"
 
     - image: "images/Biyoinformatik-Genomik-Proteomik-Büyük-Veri-Egitimi.png"
       title: "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi"
-      text: "Yüksek işlem hacimli veri ve biyoinformatik, biyoinformatikte temel kavramlar, yöntemler, veriler, büyük veri, proteomik, genomik ve transkriptomik konularını öğrenirsiniz. Eğitim 16 - 17 Mart 2024'te gerçekleşecek. "
+      text: "Biyoinformatik temel kavramlarını, omik veri türlerini, büyük veri yaklaşımını ve hesaplamalı analiz mantığını adım adım öğrenin."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/biyoinformatik-giris-egitim-buyuk-veri-kurs"
 
     - image: "images/Biyoinformatikte-Dizi-Hizalama-Algoritmalar-Egitimi.png"
       title: "Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi"
-      text: "Biyoinformatiğin temelini oluşturan dizi hizalama teknikleri ve hizalama algoritmalarını uygulamalarla öğrenin ve sağlam temeller üzerine biyoinformatik kariyerinizi kurun. Bu eğitim 20-21 Nisan 2024'te gerçekleşecek.  "
+      text: "Dizi hizalama tekniklerini, algoritmik düşünmeyi ve biyolojik dizilerin karşılaştırılmasına yönelik temel yaklaşımları uygulamalarla öğrenin."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/biyoinformatik-dizi-hizalama-algoritmalari-egitimi"
     - image: "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png"
       title: "Temel Biyoinformatik Araçlar ve Veritabanları Eğitimi "
-      text: "Biyoinformatikte kullanılan temel araçları ve kavramları öğrenin. DNA, RNA ve protein dizileri, temel veri türleri, BLAST, ClustalW, GenBank, UniProt ve PDB veritabanları ve kullanımını uygulamalı öğrenin. Eğitim 18-19 Mayıs 2024'te gerçekleşecek. "
+      text: "DNA, RNA ve protein dizileriyle çalışırken kullanılan temel araçları, veri türlerini, BLAST, ClustalW, GenBank, UniProt ve PDB gibi kaynakları tanıyın."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/biyoinformatik-veritabanlari-araclar-egitimi"
 
     - image: "images/NCBI-ENSEMBL-UCSC-Genom-Tarayicileri-Kursu.png"
       title: "NCBI, ENSEMBL ve UCSC Genom Tarayıcıları Uygulamalı Eğitimi"
-      text: "Uygulamalı ve karşılaştırmalı incelemelerle NCBI Gen, NCBI Nükleotid veritabanları ile ENSEMBL ve UCSC Genome Browser'larının etkili kullanımı, özellikleri, fonksiyonları ve veri erişimini öğrenin. 29 - 30 Hazirtan 2024'te gerçekleşecek.  "
+      text: "NCBI, Ensembl ve UCSC Genome Browser araçlarını karşılaştırmalı örneklerle tanıyın; genomik veri erişimi ve yorumlama becerilerinizi geliştirin."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim"
 
     - image: "images/Filogenetik-dizi-hizalama-Egitimi.png"
       title: "phyML uygulamalı Filogenetik ve dizi hizalama Eğitimi"
-      text: "Dizi hizalama ve filogenetik ilişkisi, PhyML uygulamalarıyla filogenetik ağaç oluşturma, evrimsel modeller, ağaç oluşturma yöntemleri ve filogenetik ağaçların yorumlanmasını öğrenin. Eğitim 27-28 Temmuz 2024 tarihinde gerçekleşecek.  "
+      text: "Dizi hizalama ve filogenetik ilişkiyi, phyML uygulamalarını, evrimsel modelleri ve filogenetik ağaç yorumlamayı uygulamalı olarak öğrenin."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/phyml-uygulamali-filogenetik-egitimi"
     - image: "images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Egitimi.png"
       title: "Uygulamalı Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi"
-      text: "Homoloji modelleme, ilaç keşfi ve protein fonksiyon tahmini, SWISS-MODEL ve AutoDock Vina araçlarının uygulamalı kullanımını öğrenirler. Bu eğitim 17 - 18 Ağustos 2024 tarihinde gerçekleşecektir.  "
+      text: "Homoloji modelleme, protein fonksiyon tahmini, ilaç keşfi yaklaşımı, SWISS-MODEL ve AutoDock Vina gibi araçların kullanımını adım adım öğrenin."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme"
 
     - image: "images/Tek-Hucre-RNA-Seq-dizi-Analizi-Egitimi.png"
       title: "Tek Hücre RNA-Seq Analizi Eğitimi"
-      text: "Hücresel heterojenite, scRNA-seq, boyut azaltma, kümeleme, diferansiyel ekspresyon analizi ve gen düzenleyici ağ çıkarsama, uygulamalarla R programlama dili ve Seurat Paketini öğrenin. 19-20 ekim 2024'te gerçekleşecek."
+      text: "Hücresel heterojenite, scRNA-seq, boyut azaltma, kümeleme, diferansiyel ekspresyon analizi ve Seurat tabanlı uygulamaları öğrenin."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/tek-hucre-rna-seq-analizi-egitimi"
 
     - image: "images/Yeni-Nesil-Dizileme-DNA-Verileri-NGS-Kursu.png"
       title: "Yeni Nesil Dizileme Verileri ve NGS ile Çalışma Eğitimi"
-      text: "Yeni Nesil Dizileme (NGS) teknolojilerinin temel prensipleri, Galaxy platformunu kullanarak NGS verilerinin üretilmesi, kalite kontrolü, analizi ve yorumlanmasını öğrenin. 16-17 Kasım 2024 tarihinde gerçekleşecek."
+      text: "Yeni nesil dizileme teknolojilerinin temel prensiplerini, kalite kontrol yaklaşımını, Galaxy platformunu ve NGS veri yorumlamayı uygulamalarla öğrenin."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/yeni-nesil-dizileme-kursu"
     - image: "images/Biyoinformatik-Yaz-Kampi-Kurs.png"
-      title: "Biyoinformatik Yaz Kampı 9-20 Eylül"
-      text: "Biyoinformatik Yaz Kampı, 9-20 Eylül tarihleri arasında gerçekleşecek. Tüm eğitimlerin yoğun ve interaktif bir programla işlendiği Biyoinformatik Yaz Kampı için eğitimden önce basılı materyal ve diğer malzemelerin olduğu bir Kamp Kiti ve eğitimden sonra da basılı ve ıslak imzalı sertifika gönderilecek. Kamp kontenjanları 15 kişiyle sınırlıdır. Kamp katılımcılarır R programlama dilini öğrenerek istatistiksel analiz ve görselleştirme becerilerini geliştirir. Biyoinformatiğin temel kavramlarıyla başlayan kamp, dizi hizalama, yapısal biyoinformatik, filogenetik analiz ve tek hücre RNA sekans analizi gibi alanlarda derinlemesine eğitim sunar. NCBI, ENSEMBL ve UCSC gibi genom tarayıcılarını kullanma pratiği kazanılırken, yeni nesil dizileme teknolojileri ve genomik çalışma uygulamalarına yönelik temel bilgiler verilir. Katılımcılar, biyoinformatik araçları etkili bir şekilde kullanma ve gerçek dünya projelerinde uygulama yeteneklerini geliştirme fırsatı bulurlar. "
+      title: "Biyoinformatik Yaz Kampı"
+      text: "Biyoinformatik Yaz Kampı, R programlama, veri analizi, dizi hizalama, yapısal biyoinformatik, filogenetik analiz, tek hücre RNA-seq ve NGS konularını bütüncül bir öğrenme patikasında bir araya getirir."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/biyoinformatik-yaz-kampi"
 
     - image: "images/Biyoinformatik-Kis-Kampi.png"
-      title: " Biyoinformatik Kış  Kampı  8 - 14 Aralık "
-      text: "Biyoinformatik Kış Kampı, 8 - 14 Aralık tarihleri arasında gerçekleşecek. Tüm eğitimlerin yoğun ve interaktif bir programla işlendiği Biyoinformatik Kış Kampı için eğitimden önce basılı materyal ve diğer malzemelerin olduğu bir Kamp Kiti ve eğitimden sonra da basılı ve ıslak imzalı sertifika gönderilecek. Kamp kontenjanları 15 kişiyle sınırlıdır. Kamp katılımcılarır R programlama dilini öğrenerek istatistiksel analiz ve görselleştirme becerilerini geliştirir. Biyoinformatiğin temel kavramlarıyla başlayan kamp, dizi hizalama, yapısal biyoinformatik, filogenetik analiz ve tek hücre RNA sekans analizi gibi alanlarda derinlemesine eğitim sunar. NCBI, ENSEMBL ve UCSC gibi genom tarayıcılarını kullanma pratiği kazanılırken, yeni nesil dizileme teknolojileri ve genomik çalışma uygulamalarına yönelik temel bilgiler verilir. Katılımcılar, biyoinformatik araçları etkili bir şekilde kullanma ve gerçek dünya projelerinde uygulama yeteneklerini geliştirme fırsatı bulurlar."
+      title: "Biyoinformatik Kış Kampı"
+      text: "Biyoinformatik Kış Kampı, temel kavramlardan uygulamalı analiz süreçlerine uzanan kapsamlı bir öğrenme deneyimi sunar; katılımcıların biyoinformatik araçları ve veri analizi yaklaşımını sistematik biçimde geliştirmesine yardımcı olur."
       button:
-        label: "Kaydol"
+        label: "İncele"
         url: "post/biyoinformatik-kis-kampi"
