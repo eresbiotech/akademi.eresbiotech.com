@@ -1,6 +1,6 @@
 baseURL: "https://akademi.eresbiotech.com/"
-theme: ""
 languageCode: "tr-tr"
+enableRobotsTXT: true
 markup:
   goldmark:
     renderer:
