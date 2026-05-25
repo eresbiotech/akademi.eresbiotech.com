@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Yeni Nesil Dizileme Verileri ve NGS ile Çalışma Uygulamalı Eğitimi"
 date = "2023-12-23"
-description = "Yeni Nesil Dizileme Verileri ve NGS ile Çalışma Uygulamalı Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
+description = "Bu eğitim, yeni nesil dizileme verileri, kalite kontrol ve NGS analiz yaklaşımlarını kendi hızınızda öğrenmeniz için hazırlanmış uygulamalı bir derstir."
 
 images =[ "images/Yeni-Nesil-Dizileme-DNA-Verileri-NGS-Kursu.png" ]
 
@@ -14,12 +14,15 @@ categories = [
 
 ## Yeni Nesil Dizileme Verileri ve NGS ile Çalışma Uygulamalı Eğitimi 
 
+> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
+
+## Eğitim Formatı
+
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
+
+Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
+
 <br/>
-
-#### 16 - 17 Kasım 2024
-#### Canlı - Online 
-#### Kısıtlı Kontenjan
-
 
 <br/>
 
@@ -89,15 +92,11 @@ Temel biyoinformatik kavramlarına aşina olmak.
 
 <br/>
 
-<a href="https://iyzi.link/AJbHTA" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
-
 <br/>
 
 **Eğitim İsmi:** Yeni Nesil Dizileme Verileri ve NGS ile Çalışma
 
 <br/>
-
-**Tarih:** 16 - 17 Kasım 2024
 
 <br/>
 
@@ -105,70 +104,19 @@ Temel biyoinformatik kavramlarına aşina olmak.
 
 <br/>
 
-**Saat:**
-
 <br/>
 
 -   Cumartesi:
 
-    -   10:00 - 11:00: 1. Oturum
-
-    -   11:00 - 11:15: Ara
-
-    -   11:15 - 12:15: 2. Oturum
-
-    -   12:15 - 12:30: Ara
-
-    -   12:30 - 13:15: 3. Oturum
-
-    -   13:15 - 13:30: Ara
-
-    -   13:30 - 14:30: 4. Oturum
-
-    -   14:30 - 14:45: Ara
-
-    -   14:45 - 15:45: 5. Oturum
-
 -   Pazar:
-
-    -   10:00 - 11:00: 1. Oturum
-
-    -   11:00 - 11:15: Ara
-
-    -   11:15 - 12:15: 2. Oturum
-
-    -   12:15 - 12:30: Ara
-
-    -   12:30 - 13:30: 3. Oturum
-
-    -   13:30 - 13:45: Ara
-
-    -   13:45 - 14:30: 4. Oturum: Genel tekrar
-
-    -   14:30 - 14:45: Ara
-
-    -   14:45 - 15:30: 5. Oturum
-
-    -   15:30 - 15:45: Ara
-
-    -   15:45 - 16:45: Soru & Cevap ve Kapanış
 
     <br/>
 
-**Eğitim Özelliği:** Canlı, Çevrim içi
+<br/>
 
 <br/>
 
-**Kontenjan:** 25 kişi ile sınırlıdır.
-
 <br/>
-
-**Ücret (KDV dahil):** 2800TL (%20 KDV Dahil)
-
-
-<br/>
-
-**Ödeme Bağlantısı:** <https://iyzi.link/AJbHTA>
 
 <br/>
 
@@ -183,7 +131,6 @@ Temel biyoinformatik kavramlarına aşina olmak.
 **Öncül Tavsiye Edilen Dersler:** 
 
 <br/>
-
 
 <br/>
 
@@ -265,36 +212,20 @@ Temel biyoinformatik kavramlarına aşina olmak.
 
 <br/>
 
-**Eğitim platformu ve erişim şekli:**
-
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
-
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
 <br/>
 
-**ÖNEMLİ NOTLAR:**
-
 <br/>
-
--   Taksit imkanı bulunmaktadır.
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
-
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
 
 <br/>
 
-<a href="https://iyzi.link/AJbHTA" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
- 
 <img src='/images/Yeni-Nesil-Dizileme-DNA-Verileri-NGS-Kursu.png' width="100%"/> 
 
 <br/>
+
+---
+
+Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.

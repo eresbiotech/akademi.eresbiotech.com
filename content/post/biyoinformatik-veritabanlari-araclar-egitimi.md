@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi"
 date = "2023-02-27"
-description = "Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
+description = "Bu eğitim, temel biyoinformatik araçları, veri tabanlarını ve uygulamalı analiz adımlarını kendi hızınızda öğrenmeniz için hazırlanmıştır."
 
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
 
@@ -14,13 +14,16 @@ categories = [
 
 ## Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi
 
+> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
+
+## Eğitim Formatı
+
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
+
+Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
+
 <br/>
 
-#### 18 - 19 Mayıs 2024
-#### Canlı - Online 
-#### Kısıtlı Kontenjan
-####Ramazan Ayına Özel: %20 İndirim
-####FAYDALANMAK İÇİN SON GÜN: 6 Nisan 
 <br/>
 
 Bu eğitimle BLAST, ClustalW, GenBank, UniProt ve PDB gibi alanda kullanılan temel biyoinformatik araçlarını ve veritabanlarını etkili ve hızlı kullanın, biyoinformatikte kullanılan veritabanlarının temel özelliklerini, birbirlerinden farklılıklarını ve veritabanlarının genel yapısını kavrayın. Veritabanlarını hangi araçlarla nasıl daha etkili kullanacağınızı ve ayrıntılarını öğrenin.
@@ -71,7 +74,6 @@ Temel bir ders olduğu için biyoinformatik ve yaşaam bilimlerinde uzmanlaşmak
 
 <br/>
 
-
 Bu ders temel seviyede olup biyoinformatiğe hem yeni başlayacak olanlar hem de ilerlemek ve hızlanmak isteyenler için önerilir.
 
 Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eğitimi alınması tavsiye edilir. Böylece daha detaylı bir biyoinformatiğe başlangıç sağlayabilirsiniz.
@@ -88,15 +90,9 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 -   **Uygulamalı Dersler:** Dersteki uygulamaları, teorik bilgiyi pratikte nasıl uygulayacağınızı öğrenmenize olanak tanır ve öğrendiklerinizin kalıcı olmasını ve çalışmalarınızda kullanmanızı sağlar.
 
--   **Sektördeki Ağ Olanakları:** Eğitim yaşam bilimleri alanındaki diğer uzmanlarla tanışma ve etkileşim kurma fırsatı sunar. Sınıf içi forumlar ve etkileşimli oturumlar, BSS topluluğu etkinlliklerine katılım gibi faaliyetlerle sektördeki güncel gelişmeleri paylaşmanıza ve öğrenmenize yardımcı olur.
-
 -   **Kişisel ve Profesyonel Gelişim:** Eğitim kariyerinizi ileri taşımanıza yardımcı olacak pratik beceriler ve bilgiler sunar. Bu kursta öğrendiğiniz teknikleri aaraştırma projeleriniz ve yayınlarınızda kullanabilirsiniz. Yeni teknikleri öğrenmek ve uygulamak, hem kişisel hem de profesyonel gelişiminiz için önemli bir adımdır.
 
-Bu eğitim yaşam bilimleri alanında kariyerinizi ileri taşımak ve sektördeki gelişmeleri yakından takip etmek isteyen her profesyonel için bir fırsat sunmaktadır. Hemen kaydolun ve kariyerinizdeki yeni kapıları aralamaya başlayın!
-
 <br/>
-
-<a href="https://iyzi.link/AJbHQQ" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
 
 <br/>
 
@@ -104,85 +100,29 @@ Bu eğitim yaşam bilimleri alanında kariyerinizi ileri taşımak ve sektördek
 
 <br/>
 
-**Tarih:** 18 - 19 Mayıs 2024
-
 <br/>
 
 **Kısa Açıklama:** Temel Biyoinformatik Araçlar ve Veritabanları Eğitimi, biyolojik verilerin analizi ve yorumlanması için gerekli temel bilgi ve becerileri katılımcılara kazandırmayı amaçlar. Eğitim, biyoinformatik alanındaki temel veritabanları ve araçların özellikleri, yapıları ve kullanımını içerir, genetik verilerin analiz edebilme yeteneğini geliştirir ve biyolojik araştırmalara katkı sağlar.
 
 <br/>
 
-**Saat:**
+<br/>
 
 <br/>
 
-Cumartesi
-
-10:00 - 11:00 1. Oturum
-
-11:00 - 11:15 Ara
-
-11:15 - 12:15 2. Oturum
-
-12:15 - 12:30 Ara
-
-12:30 - 13:15 3. Oturum
-
-13:15 - 13:30 Ara
-
-13:30 - 14:30 4. Oturum
-
-14:30 - 14:45 Ara
-
-14:45 - 15:45 5. Oturum
-
-Pazar:
-
-10:00 - 11:00 1. Oturum
-
-11:00 - 11:15 Ara
-
-11:15 - 12:15 2. Oturum
-
-12:15 - 12:30 Ara
-
-12:30 - 13:30 3. Oturum
-
-13:30 - 13:45 Ara
-
-13:45 - 14:30 4. Oturum: Genel tekrar
-
-14:30 - 14:45 ARA
-
-14:45 - 15:30 Soru & Cevap ve Kapanış
+<br/>
 
 <br/>
 
-**Eğitim Özelliği:** Canlı, Çevrim içi
-
 <br/>
 
-**Kontenjan:** 25 kişi ile sınırlıdır.
-
 <br/>
-
-~~**Ücret:** 2500 TL (%20 KDV Dahil)~~
-
-<br/>
-
-** Ramazan indirimli ücret:** 2000 TL 
-
-<br/>
-
-**Ödeme Bağlantısı:** <https://iyzi.link/AJbHQQ>
 
 <br/>
 
 **Eğitim Seviyesi:** Temel Seviye
 
 <br/>
-
-**Eğitmen:** Selda Akdal ve Bioinformy Komisyonu
 
 <br/>
 
@@ -244,37 +184,22 @@ Pazar:
 
 <br/>
 
-### Eğitim platformu ve erişim şekli:
+<br/>
 
 <br/>
 
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
-
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
 <br/>
-
-### ÖNEMLİ NOTLAR:
-
-<br/>
-
--   Taksit imkanı bulunmaktadır.
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
-
 <br/>
-<a href="https://iyzi.link/AJbHQQ" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
  
 <img src='/images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png' width="100%"/> 
 
 <br/>
+
+---
+
+Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.

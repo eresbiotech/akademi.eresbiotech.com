@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Tek Hücre RNA-Seq Analizi Eğitimi"
 date = "2023-12-23"
-description = "Tek Hücre RNA-Seq Analizi Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
+description = "Bu eğitim, tek hücre RNA-seq analizinin temel kavramlarını ve Seurat tabanlı uygulama adımlarını kendi hızınızda öğrenmeniz için hazırlanmıştır."
 
 images =[ "images/Tek-Hucre-RNA-Seq-dizi-Analizi-Egitimi.png" ]
 
@@ -14,11 +14,15 @@ categories = [
 
 ## Tek Hücre RNA-Seq Analizi Eğitimi  
 
-<br/>
+> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
 
-#### 19 - 20 Ekim 2024
-#### Canlı - Online 
-#### Kısıtlı Kontenjan 
+## Eğitim Formatı
+
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
+
+Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
+
+<br/>
 
 <br/>
 
@@ -98,15 +102,9 @@ Biyoinformtiğe Giriş, Temel Biyoinformatik Araçlar ve Veritabanları Uygulama
 
 -   **Uygulamalı Dersler:** Dersteki analiz uygulamaları, R ve Seruat paketi uygulamaları, teorik bilgiyi pratikte nasıl uygulayacağınızı öğrenmenize olanak tanır ve öğrendiklerinizin kalıcı olmasını ve çalışmalarınızda kullanmanızı sağlar.
 
--   **Sektördeki Ağ Olanakları:** Bu eğitim yaşam bilimleri alanındaki diğer uzmanlarla tanışma ve etkileşim kurma fırsatı sunar. Sınıf içi forumlar ve etkileşimli oturumlar, Global BSS topluluğu etkinlliklerine katılım gibi faaliyetlerle sektördeki güncel gelişmeleri paylaşmanıza ve öğrenmenize yardımcı olur.
-
 -   **Kişisel ve Profesyonel Gelişim:** Bu eğitim kariyerinizi ileri taşımanıza yardımcı olacak pratik beceriler ve bilgiler sunar. Eğitimde öğrendiğiniz teknikleri araştırma projeleriniz ve yayınlarınızda kullanabilirsiniz. Yeni teknikleri öğrenmek ve uygulamak hem kişisel hem de profesyonel gelişiminiz için önemli bir adımdır.
 
-Bu eğitim yaşam bilimleri alanında kariyerinizi ileri taşımak ve sektördeki gelişmeleri yakından takip etmek isteyen her profesyonel için bir fırsat sunmaktadır. Hemen kaydolun ve kariyerinizdeki yeni kapıları aralamaya başlayın!
-
 <br/>
-
-<a href="https://iyzi.link/AJbHSw" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
 
 <br/>
 
@@ -133,74 +131,21 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 
 <br/>
 
-**Tarih:** 19 - 20 Ekim 2024
-
 <br/>
 
 **Kısa Açıklama:** Bu kapsamlı kurs, katılımcılara tek hücre RNA sekanslamasının temelini anlama fırsatı sunar. Hücresel heterojeniteyi keşfetme amacıyla veri analizi iş akışını içerir; bu, scRNA-seq, toplu RNA sekanslama, boyut azaltma teknikleri, kümeleme algoritmaları, diferansiyel ekspresyon analizi ve gen düzenleyici ağ çıkarsama konularını kapsar. Katılımcılar, R programlama dili, Seurat Paketi ve derinlemesine veri analizi için temel araçları etkili bir şekilde kullanma pratiği kazanarak, detaylı bir işaretçi analiziyle dersi tamamlarlar.
 
 <br/>
 
-**Saat:**
-
 -   Cumartesi:
-
-    -   10:00 - 11:00 1. Oturum
-
-    -   11:00 - 11:15 Ara
-
-    -   11:15 - 12:15 2. Oturum
-
-    -   12:15 - 12:30 Ara
-
-    -   12:30 - 13:15 3. Oturum
-
-    -   13:15 - 13:30 Ara
-
-    -   13:30 - 14:30 4. Oturum
-
-    -   14:30 - 14:45 Ara
-
-    -   14:45 - 15:45 5. Oturum
 
 -   Pazar:
 
-    -   10:00 - 11:00 1. Oturum
-
-    -   11:00 - 11:15 Ara
-
-    -   11:15 - 12:15 2. Oturum
-
-    -   12:15 - 12:30 Ara
-
-    -   12:30 - 13:30 3. Oturum
-
-    -   13:30 - 13:45 Ara
-
-    -   13:45 - 14:30 4. Oturum: Genel tekrar
-
-    -   14:30 - 14:45 Ara
-
-    -   14:45 - 15:30 5. Oturum
-
-    -   15:30 - 15:45 Ara
-
-    -   15:45 - 16:45 Soru & Cevap ve Kapanış
-
+<br/>
 
 <br/>
 
-**Eğitim Özelliği:** Canlı, Çevrim içi
-
 <br/>
-
-**Kontenjan:** 25 kişi ile sınırlıdır.
-
-<br/>
-
-**Ücret (KDV dahil):** 2.950 TL (%20 KDV Dahil)
-
-**Ödeme Bağlantısı:** <https://iyzi.link/AJbHSw>
 
 <br/>
 
@@ -298,38 +243,22 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 
 <br/>
 
-**Eğitim platformu ve erişim şekli:**
+<br/>
 
 <br/>
 
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
-
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
 <br/>
-
-**ÖNEMLİ NOTLAR:**
-
-<br/>
-
--   Taksit imkanı bulunmaktadır.
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
-
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
 
 <br/>
 
-<a href="https://iyzi.link/AJbHSw" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
- 
 <img src='/images/Tek-Hucre-RNA-Seq-dizi-Analizi-Egitimi.png' width="100%"/> 
 
 <br/>
+
+---
+
+Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.

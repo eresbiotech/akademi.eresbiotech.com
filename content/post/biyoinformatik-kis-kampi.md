@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatik Kış Kampı"
 date = "2023-12-22"
-description = "Biyoinformatik Kış Kampı sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
+description = "Biyoinformatik Kış Kampı, temel kavramlardan uygulamalı analizlere uzanan kapsamlı ve kendi hızınızda ilerleyebileceğiniz bir öğrenme deneyimidir."
 
 images =[ "images/Biyoinformatik-Kis-Kampi.png" ]
 
@@ -11,22 +11,24 @@ categories = [
     "syntax",
 ]
 +++
+
 ## Biyoinformatik Kış Kampı
 
+> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
+
+## Eğitim Formatı
+
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
+
+Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
+
 <br/>
 
-#### 8 - 14 Aralık 2024
-#### Canlı - Online
-#### **Kısıtlı Kontenjan - Sadece ilk 15 Kayıt - Çalışanlara uygun program**
-
 <br/>
-
 
 **Eğitim İsmi:** Biyoinformatik Kış Kampı
 
 <br/>
-
-**Tarih:** 8 - 14 Aralık 2024
 
 <br/>
 
@@ -34,33 +36,23 @@ categories = [
 
 <br/>
 
-Biyoinformatik Winter Bootcamp, 8-14 Aralık tarihleri arasında gerçekleşen sıfırdan ileri seviyeye biyoinfrmatik kampıdır. Katılımcılar R programlama dilini öğrenerek istatistiksel analiz ve görselleştirme becerilerini geliştirerek kampa başlar. Biyoinformatiğin temel kavramlarıyla devam eden kamp, dizi hizalama ve algoritmalar, veritabanalrı ve araçlar, genomik, yapısal biyoinformatik, filogenetik analiz ve tek hücre RNA sekans analizi gibi alanlarda derinlemesine eğitim sunar.
+Biyoinformatik Kış Kampı, sıfırdan ileri seviyeye ilerleyen kapsamlı ve uygulama odaklı bir öğrenme deneyimidir. Katılımcılar R programlama dilini öğrenerek istatistiksel analiz ve görselleştirme becerilerini geliştirerek kampa başlar. Biyoinformatiğin temel kavramlarıyla devam eden kamp, dizi hizalama ve algoritmalar, veritabanalrı ve araçlar, genomik, yapısal biyoinformatik, filogenetik analiz ve tek hücre RNA sekans analizi gibi alanlarda derinlemesine eğitim sunar.
 
 <br/>
 
-**Saat:** Canlı, Çevrim içi
+<br/>
 
 <br/>
 
-**Kontenjan:** 15 kişi ile sınırlıdır.
-
 <br/>
 
-**Ücret :** ~~14.500 TL (%20 KDV Dahil)~~
 <br/>
-**İndirimli Ücret:** 12.000 TL (%20 KDV Dahil) 
-
-<br/>
-
-**Taksitli Ödeme Bağlantısı:** <https://iyzi.link/AJwAsw>
 
 <br/>
 
 **Eğitim Materyali:**
 
 <br/>
-
-Eğitim öncesinde kamp katılımcılarına föyler, notlar, çeşitli materyalleri içeren bir **kamp paketi kargo ile gönderilecektir**. Eğitimden sonra **ıslak imzalı basılı sertifika** gönderilecektir.
 
 <br/>
 
@@ -75,8 +67,6 @@ Eğitim öncesinde kamp katılımcılarına föyler, notlar, çeşitli materyall
 **Öncül Tavsiye Edilen Dersler:** -
 
 <br/>
-
-**Eğitmen:** Selda Akdal ve Bioinformy Komisyonu
 
 <br/>
 
@@ -146,20 +136,17 @@ Biyoloji, Moleküler Biyoloji ve Genetik, Genetik ve Biyomühendislik, Tıp, Vet
 
     -   Dizi hizalama uygulamaları
 
-
 -   Temel Biyoinformatik Araçlar ve Veritabanları Eğitimi
 
     -   Biyoinformatik araçların kullanımı
 
     -   Veritabanları ve veritabanları uygulamaları
 
-
 -   Genom Tarayıcıları ve Filogenetik Analiz
 
     -   Genom tarayıcılarının kullanımı (NCBI, ENSEMBL, UCSC)
 
     -   Genom tarayıcı uygulamaları
-
 
 -   Filogenetik temelleri
 
@@ -168,7 +155,6 @@ Biyoloji, Moleküler Biyoloji ve Genetik, Genetik ve Biyomühendislik, Tıp, Vet
     -   phyML uygulamaları
 
     -   Filogenetik ağaçalrı yorumlama
-
 
 -   Yapısal Biyoinformatik
 
@@ -186,7 +172,6 @@ Biyoloji, Moleküler Biyoloji ve Genetik, Genetik ve Biyomühendislik, Tıp, Vet
 
     -   Tek hücre RNA-Seq verileri üzerinde uygulamalı çalışmalar
 
-
 -   Yeni Nesil Dizileme ve Genomik Çalışmalar
 
     -   Yeni nesil dizileme teknolojileri
@@ -197,44 +182,26 @@ Biyoloji, Moleküler Biyoloji ve Genetik, Genetik ve Biyomühendislik, Tıp, Vet
  
     -  Tekrar ve Öğrenci sunumları
 
-
 <br/>    
 
-**Eğitim platformu ve erişim şekli:**
-
 <br/>
-
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
 
 -   Eğitimden bir ay önce adresinize eğitim kiti içeren kamp paketi ulaştırılacaktır.
 
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
 <br/>
 
-**ÖNEMLİ NOTLAR:**
-
 <br/>
-
--   Taksit imkanı bulunmaktadır. Taksitli ödeme için: <https://iyzi.link/AJwAsw>
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 
--   Ayrıca sertifikalar baskı olarak ve ıslak imzalı olarak adresinize kargolanacaktır.
-
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
-
 <br/>
-
 
 <img src='/images/Biyoinformatik-Kis-Kampi.png' width="100%"/> 
 
 <br/>
+
+---
+
+Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.

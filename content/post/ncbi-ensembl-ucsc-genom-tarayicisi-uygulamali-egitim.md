@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "NCBI, Ensembl ve UCSC Genom Tarayıcısı Uygulamalı Eğitimi"
 date = "2023-12-26"
-description = "NCBI, Ensembl ve UCSC Genom Tarayıcısı Uygulamalı Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
+description = "Bu eğitim, NCBI, Ensembl ve UCSC genom tarayıcılarını uygulamalı örneklerle kendi hızınızda öğrenmeniz için hazırlanmış videolu bir derstir."
 
 images =[ "images/NCBI-ENSEMBL-UCSC-Genom-Tarayicileri-Kursu.png" ]
 
@@ -14,12 +14,15 @@ categories = [
 
 ## NCBI, Ensembl ve UCSC Genom Tarayıcısı Uygulamalı Eğitimi
 
+> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
+
+## Eğitim Formatı
+
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
+
+Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
+
 <br/>
-
-#### 29 - 30 Haziran 2024
-#### Canlı - Online 
-#### Kısıtlı Kontenjan
-
 
 <br/>
 
@@ -35,7 +38,7 @@ Ensembl ve UCSC Genome Browser, genomik veri analizi süreçlerini optimize etme
 
 <br/>
 
-Araştırmacılar, genomik analizlerini planlamak, genomik bölgeleri keşfetmek ve genetik varyasyonları anlamak için bu araçları kullanarak bilimsel çalışmalarına hız katarlar. Bu eğitime katılarak NCBI, Ensembl ve UCSC Genome Browser\'ların akademik önemini kavrayarak, genetik veri analizi konusundaki bilgi ve becerilerinizi geliştirme fırsatı sunar.
+Araştırmacılar, genomik analizlerini planlamak, genomik bölgeleri keşfetmek ve genetik varyasyonları anlamak için bu araçları kullanarak bilimsel çalışmalarına hız katarlar. Bu eğitimle NCBI, Ensembl ve UCSC Genome Browser\'ların akademik önemini kavrayarak, genetik veri analizi konusundaki bilgi ve becerilerinizi geliştirme fırsatı sunar.
 
 <br/>
 
@@ -93,13 +96,7 @@ Bu ders temel seviyededir. Biyoinformatikte ilerlemek isteyenelre de tavsiye edi
 
 -   **Güncel ve Pratik Bilgi:** Bu eğitim, alandaki son gelişmeleri içerir. Güncel ve pratik bilgi, işinize daha fazla değer katmanızı sağlayacak ve sizi diğer profesyonellerden ayıracaktır.
 
--   **Sektördeki Ağ Olanakları:** Kurs, yaşam bilimleri alanındaki diğer uzmanlarla tanışma ve etkileşim kurma fırsatı sunar. Sınıf içi forumlar ve etkileşimli oturumlar, BSS topluluğu etkinlliklerine katılım gibi faaliyetlerle sektördeki güncel gelişmeleri paylaşmanıza ve öğrenmenize yardımcı olur.
-
-Bu eğitim yaşam bilimleri alanında kariyerinizi ileri taşımak ve sektördeki gelişmeleri yakından takip etmek isteyen her profesyonel için bir fırsat sunmaktadır. Hemen kaydolun ve kariyerinizdeki yeni kapıları aralamaya başlayın!
-
 <br/>
-
-<a href="https://iyzi.link/AJbHQw" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
 
 <br/>
 
@@ -167,8 +164,6 @@ Bu eğitim katılımcılara genetik veri analizi konusunda güçlü bir temel sa
 
 <br/>
 
-29 - 30 Haziran 2024
-
 <br/>
 
 ### **Kısa Açıklama**
@@ -179,70 +174,23 @@ Eğitim katılımcılara NCBI, ENSEMBL ve UCSC genom tarayıcılarıyla ilgili t
 
 <br/>
 
-### **Saat**
-
 <br/>
 
 **Cumartesi:**
 
 <br/>
 
--   10:00 - 11:00 1. Oturum
-
--   11:00 - 11:15 Ara
-
--   11:15 - 12:15 2. Oturum
-
--   12:15 - 12:30 Ara
-
--   12:30 - 13:15 3. Oturum
-
--   13:15 - 13:30 Ara
-
--   13:30 - 14:30 4. Oturum
-
--   14:30 - 14:45 Ara
-
--   14:45 - 15:45 5. Oturum
-
 **Pazar:**
 
 <br/>
 
--   10:00 - 11:00 1. Oturum
-
--   11:00 - 11:15 Ara
-
--   11:15 - 12:15 2. Oturum
-
--   12:15 - 12:30 Ara
-
--   12:30 - 13:30 3. Oturum
-
--   13:30 - 13:45 Ara
-
--   13:45 - 14:30 4. Oturum: Genel tekrar
-
--   14:30 - 14:45 Ara
-
--   14:45 - 15:30 Soru & Cevap ve Kapanış
+<br/>
 
 <br/>
 
-**Eğitim Özelliği:** Canlı, Çevrim içi
-
 <br/>
 
-**Kontenjan:** 25 kişi ile sınırlıdır.
-
 <br/>
-
-**Ücret** ~2.500 TL (%20 KDV Dahil)~
-**Yaz İndirimli Ücret** 2.000 TL (%20 KDV Dahil)
-
-<br/>
-
-**Ödeme Bağlantısı** <https://iyzi.link/AJbHQw>
 
 <br/>
 
@@ -273,8 +221,6 @@ Bu ders temel biyoinformatik kavramlara aşina olanlar için tasarlanmıştır. 
 **Eğitmen**
 
 <br/>
-
-Selda Akdal ve Bioinformy Komisyonu
 
 <br/>
 
@@ -318,39 +264,22 @@ Katılımcılar, NCBI gen ve nükleotid veritabanları ile ENSEMBL ve UCSC genom
 
 <br/>
 
-### **Eğitim platformu ve erişim şekli:**
+<br/>
 
 <br/>
 
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
-
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
 <br/>
-
-### **ÖNEMLİ NOTLAR:**
-
-<br/>
-
--   Taksit imkanı bulunmaktadır.
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
-
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
-
 
 <br/>
 
-<a href="https://iyzi.link/AJbHQw" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
- 
 <img src='/images/NCBI-ENSEMBL-UCSC-Genom-Tarayicileri-Kursu.png' width="100%"/> 
 
 <br/>
+
+---
+
+Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.

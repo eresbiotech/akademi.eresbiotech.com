@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi"
 date = "2023-02-27"
-description = "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
+description = "Bu eğitim, biyoinformatik temel kavramlarını, omik veri türlerini ve büyük veri yaklaşımını kendi hızınızda öğrenmeniz için hazırlanmış uygulama odaklı bir derstir."
 
 images =[ "images/Biyoinformatik-Genomik-Proteomik-Büyük-Veri-Egitimi.png" ]
 
@@ -11,13 +11,18 @@ categories = [
     "syntax",
 ]
 +++
+
 ## Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi
 
-<br/>
+> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
 
-#### 16 - 17 Mart 2024
-#### Canlı - Online
-#### Kısıtlı Kontenjan
+## Eğitim Formatı
+
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
+
+Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
+
+<br/>
 
 <br/>
 <br/>
@@ -49,15 +54,11 @@ Bu eğitim, yeni biyoinformatik ve hesaplamalı biyoloji alanına yeni başlayan
 Bu eğitim, yüksek işlem hacimli veri kavramını anlamanızı, biyoinformatik ve büyük veri bağlamında bilgi edinmenizi, yüksek işlem hacimli veri analizi zorluklarını anlamanızı, biyoinformatikte kullanılan ana yöntemleri ve araçları keşfetmenizi, mevcut araştırmalar ve gelecek yönelimler hakkında bilgi edinmenizi, kariyer gelişimine katkı sağlamanızı, güncel ve pratik bilgi elde etmenizi, ağ olanaklarından faydalanmanızı ve kişisel/profesyonel gelişiminizi desteklemenizi hedefler.
 <br/>
 
-<a href="https://iyzi.link/AJbHPg" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
-  
 <br/>
 
 **Eğitim İsmi:** Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri
 
 <br/>
-
-**Tarih:** 16 - 17 Mart 2024
 
 <br/>
 
@@ -65,53 +66,19 @@ Bu eğitim, yüksek işlem hacimli veri kavramını anlamanızı, biyoinformatik
 
 <br/>
 
-**Saat:**
-
 <br/>
 
 -   Cumartesi:
 
-    -   10:00 - 11:00: 1. oturum
-
-    -   11:00 - 11:15: Ara
-
-    -   11:15 - 12:15: 2. oturum
-
-    -   12:15 - 12:30: Ara
-
-    -   12:30 - 13:15: 3. oturum
-
 -   Pazar:
-
-    -   10:00 - 11:00: 1. oturum
-
-    -   11:00 - 11:15: Ara
-
-    -   11:15 - 12:15: 2. oturum
-
-    -   12:15 - 12:30: Ara
-
-    -   12:30 - 13:30: 3. oturum
-
-    -   13:30 - 13:45: Ara
-
-    -   13:45 - 14:30: Soru & Cevap ve Kapanış
 
     <br/>
 
-**Eğitim Özelliği:** Canlı, Çevrim içi
+<br/>
 
 <br/>
 
-**Kontenjan:** 25 kişi ile sınırlıdır.
-
 <br/>
-
-**Ücret:** 1750 TL (%20 KDV Dahil)
-
-<br/>
-
-**Ödeme Bağlantısı:** <https://iyzi.link/AJbHPg>
 
 <br/>
 
@@ -126,8 +93,6 @@ Bu eğitim, yüksek işlem hacimli veri kavramını anlamanızı, biyoinformatik
 **Öncül Tavsiye Edilen Dersler:** [Uygulamalı R'a Giriş Eğitimi](post/uygulamali-r.md) 
 
 <br/>
-
-**Eğitmen:** Selda Akdal ve Bioinformy Komisyonu
 
 <br/>
 
@@ -187,35 +152,20 @@ Bu eğitim, yüksek işlem hacimli veri kavramını anlamanızı, biyoinformatik
 
 <br/>
 
-**Eğitim platformu ve erişim şekli:**
+<br/>
 
 <br/>
 
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
-
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
 <br/>
-
-**ÖNEMLİ NOTLAR:**
-
-<br/>
-
--   Taksit imkanı bulunmaktadır.
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
-
 <br/>
-<a href="https://iyzi.link/AJbHPg" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
  
 <img src='/images/Biyoinformatik-Genomik-Proteomik-Büyük-Veri-Egitimi.png' width="100%"/> 
+
+---
+
+Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.

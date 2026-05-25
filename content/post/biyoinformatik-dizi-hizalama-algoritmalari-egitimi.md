@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi"
 date = "2023-02-26"
-description = "Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
+description = "Bu eğitim, biyoinformatikte dizi hizalama yaklaşımlarını ve temel algoritmaları kendi hızınızda öğrenmenize yardımcı olan videolu ve uygulama odaklı bir derstir."
 
 images =[ "images/Biyoinformatikte-Dizi-Hizalama-Algoritmalar-Egitimi.png" ]
 
@@ -14,12 +14,15 @@ categories = [
 
 ## Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi
 
+> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
+
+## Eğitim Formatı
+
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
+
+Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
+
 <br/>
-
-#### 20-21 Nisan 2024 
-#### Canlı - Online 
-#### Kısıtlı Kontenjan
-
 
 <br/>
 
@@ -70,21 +73,15 @@ Bu eğitimde elde edeceğiniz kazanımlar arasında protein ve nükleotid dizile
 
 -   **İleri Dizi Analizi Becerileri:** Farklı dizi hizalama algoritmalarını kullanarak ileri düzeyde veri analizi yetenekleri kazanma.
 
-
 -   **Uzman Programla Öğrenme:** Dizi hizalama algoritmalarının önemlerini ve farklarını anlayın.
-
 
 -   **Güncel ve Pratik Bilgi:** Eğitim alanındaki son gelişmeleri içerecek şekilde güncel ve pratik bilgi sunar.
 
-
 -   **Uygulamalı Dersler:** Teorik bilgiyi pratikte uygulayarak dizi hizalama becerilerini güçlendirme.
-
 
 -   **Sektördeki Ağ Olanakları:** Yaşam bilimleri alanındaki diğer uzmanlarla tanışma ve etkileşim kurma fırsatı sunar.
 
 <br/>
-
-<a href="https://iyzi.link/AJbHQA" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
 
 <br/>
 
@@ -92,66 +89,23 @@ Bu eğitimde elde edeceğiniz kazanımlar arasında protein ve nükleotid dizile
 
 <br/>
 
-**Tarih:** 20 - 21 Nisan 2024
-
 <br/>
 
 **Kısa Açıklama:** Bu eğitim, biyoinformatikte temel yapı taşı olan dizi hizalamasını ele alacak ve öğrencilere global ve lokal hizalama kavramlarını öğretecek. Ayrıca, Needleman-Wunsch ve Smith-Waterman gibi algoritmaların teorik temelleri ve pratik uygulamaları incelenecek. Genetik dizilerin karşılaştırılması ve benzerlik analizlerinde kullanılan yöntemler üzerinde çalışarak, öğrencilerin anlama ve uygulama becerilerini geliştirmelerini sağlayacak.
 
 <br/>
 
-**Saat:**
-
 <br/>
 
 \"Cumartesi
 
-10:00 - 11:00 1. Oturum
-
-11:00 - 11:15 Ara
-
-11:15 - 12:15 2. Oturum
-
-12:15 - 12:30 Ara
-
-12:30 - 13:15 3. Oturum
-
-Pazar:
-
-10:00 - 11:00 1. Oturum
-
-11:00 - 11:15 Ara
-
-11:15 - 12:15 2. Oturum
-
-12:15 - 12:30 Ara
-
-12:30 - 13:30 3. Oturum
-
-13:30 - 13:45 Ara
-
-13:45 - 14:30 4. Oturum: Genel tekrar
-
-14:30 - 14:45 ARA
-
-14:45 - 15:30 Soru & Cevap ve Kapanış
+<br/>
 
 <br/>
 
-**Eğitim Özelliği:** Canlı, Çevrim içi
-
 <br/>
 
-**Kontenjan:** 25 kişi ile sınırlıdır.
-
 <br/>
-
-**Ücret:** 2500 TL (%20 KDV Dahil)
-
-
-<br/>
-
-**Ödeme Bağlantısı:** <https://iyzi.link/AJbHQA>
 
 <br/>
 
@@ -166,8 +120,6 @@ Pazar:
 **Öncül Tavsiye Edilen Dersler:** Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri
 
 <br/>
-
-**Eğitmen:** Selda Akdal ve Bioinformy Komisyonu
 
 <br/>
 
@@ -219,36 +171,20 @@ Pazar:
 
 <br/>
 
-**Eğitim platformu ve erişim şekli:**
+<br/>
 
 <br/>
 
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
-
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
 <br/>
-
-**ÖNEMLİ NOTLAR:**
-
-<br/>
-
--   Taksit imkanı bulunmaktadır.
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
-
-<a href="https://iyzi.link/AJbHQA" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
- 
 <img src='/images/Biyoinformatikte-Dizi-Hizalama-Algoritmalar-Egitimi.png' width="100%"/> 
 
 <br/>
+
+---
+
+Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.

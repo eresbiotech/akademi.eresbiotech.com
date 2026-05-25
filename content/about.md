@@ -6,9 +6,13 @@ aliases = ["about-us", "about-hugo", "contact"]
 author = "Eres Akademi"
 +++
 
- # ERES Biyoinformatik Akademi
+# ERES Biyoinformatik Akademi
 
-Biyoteknoloji R&D araştırmalarıyla öne çıkan ERES Biyoteknoloji, biyoinformatik ve hesaplamalı biyoloji eğitiminde 10 yıllık tecrübeyle Türkiye'de lider eğitim kurumu olarak Biyoinformatik Akademisini kurmuştur. Biyoinformatik alanında uzmanlaşmak isteyen akademisyenler, araştırmacılar ve profesyoneller için özel online eğitim platformu sunmaktadır. Deneyimli eğitmen kadromuz ve güncel içeriklerimizle, biyoinformatik yolculuğunuzda yanınızda olmayı taahhüt ediyoruz.
+ERES Biyoinformatik Akademi, biyoinformatik, veri analizi ve hesaplamalı biyoloji alanlarında uygulama odaklı eğitimler sunar. Eğitim yaklaşımımız, öğrencilerin, lisansüstü araştırmacıların, akademisyenlerin ve laboratuvar çalışanlarının yoğun programlarına uyum sağlayacak şekilde kendi hızında öğrenmeye uygundur.
+
+Derslerimiz videolu, adım adım ilerleyen ve tekrar edilebilir bir yapıda hazırlanır. Katılımcılar temel kavramları öğrenirken gerçek analiz senaryoları üzerinden uygulama yapabilir, ihtiyaç duydukları bölümlere tekrar dönebilir ve öğrenme süreçlerini akademik ya da profesyonel takvimlerine göre planlayabilir.
+
+Akademi, ERES Biyoteknoloji'nin Ar-Ge ve eğitim deneyiminden beslenen güvenilir bir öğrenme ortamı oluşturmayı hedefler. Amacımız, biyolojik verileri anlamlandırmak isteyen herkes için güncel, anlaşılır ve uygulanabilir bir biyoinformatik öğrenme yolu sunmaktır.
 
 <div style="display:block; width:100%; height: 50px;"></div>
 
@@ -20,41 +24,35 @@ ERES Biyoinformatik Akademi, sektördeki öncü startuplar ve markalarla yakın 
 
 ## Esnek Öğrenme Ortamı ve Çeşitli Eğitim Seçenekleri
 
-ERES Biyoinformatik Akademi, canlı dersler ve asenkron öğrenme seçenekleri sunarak öğrencilere esnek bir öğrenme ortamı sağlar. Böylece, kendi hızlarına göre öğrenme şansı bulan öğrenciler, biyoinformatik alanındaki uzmanlıklarını hızla geliştirebilirler. Ayrıca, sertifikalar ve pratiğe dayalı projelerle kariyerlerini en üst düzeye çıkarmalarına destek oluyoruz.
+ERES Biyoinformatik Akademi, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerle esnek bir öğrenme ortamı sağlar. Tekrar izlenebilir ders yapısı, yoğun akademik ve profesyonel programlara sahip katılımcıların öğrenme sürecini sürdürülebilir hale getirir. Pratiğe dayalı örnekler ve proje odaklı anlatım, bilgiyi yalnızca izlemekle kalmayıp uygulayarak pekiştirmenize yardımcı olur.
 
 <div style="display:block; width:100%; height: 50px;"></div>
 
 ## ERES Biyoinformatik Akademi'yi Seçmeniz İçin Nedenler:
 
 - Deneyimli ve Dinamik Kadro: Sektörde ve akademide deneyimli kadromuz, biyoinformatik alanındaki en güncel bilgileri içeren eğitimleri sunmaktadır.
-- Esnek Öğrenme Seçenekleri: Canlı dersler ve asenkron öğrenme ile kendi hızınıza göre öğrenme imkanı.
+- Esnek Öğrenme Seçenekleri: Videolu, tekrar edilebilir ve kendi hızınıza göre ilerleyebileceğiniz ders yapısı.
 - Uygulamalı Yaklaşım: Uygulamalara dayalı yöntemlerle desteklenen dersler, kalıcı öğrenme ve kariyerinizde başarı için önemli bir avantaj sağlar.
 
 <div style="display:block; width:100%; height: 50px;"></div>
 
-## Eğitim Patikası ve Programlarımız:
+## Eğitim Patikası ve Programlarımız
 
 ERES Biyoinformatik Akademi olarak, kendi uzmanlaşma yolunuzu çizebileceğiniz çeşitli eğitimler sunuyoruz. Giriş seviyesinden ileri seviyeye kadar olan gelişim patikalarımız, ihtiyaçlarınıza uygun şekilde tasarlanmıştır. Biyoinformatiğe Giriş, NCBI, Ensemble, Veri Tabanları, Yüksek Hacimli Veriler ve Biyoinformatik, Yapısal Biyoloji ve Protein Modelleme, Filogenetik Analizler, Tek Hücreli RNA Analizi, R ve Biyoinformatik konularında sunduğumuz kapsamlı eğitimlerimizle sizleri bekliyoruz.
 
 <div style="display:block; width:100%; height: 50px;"></div>
 
-## 2024 Eğitim Programımız:
+## Güncel Eğitim Yaklaşımımız
 
-    - Uygulamalı R'a Giriş Eğitimi: 17 - 18 Şubat 2024
-    - Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi: 16 - 17 Mart 2024
-    - Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi: 20 - 21 Nisan 2024
-    - Temel Biyoinformatik Araçlar ve Veritabanları Eğitimi: 18 - 19 Mayıs 2024
-    - NCBI, ENSEMBL ve UCSC Genom Tarayıcıları Uygulamalı Eğitimi: 29 - 30 Haziran 2024
-    - phyML Uygulamalı Filogenetik ve Dizi Hizalama Eğitimi: 27 - 28 Temmuz 2024
-    - Uygulamalı Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi: 17 - 18 Ağustos 2024
-    - Tek Hücre RNA-Seq Analizi Eğitimi: 19 - 20 Ekim 2024
-    - Yeni Nesil Dizileme Verileri ve NGS ile Çalışma Eğitimi: 16 - 17 Kasım 2024
+Eğitimlerimiz, biyoinformatik öğrenme sürecini daha erişilebilir, ölçülebilir ve tekrar edilebilir hale getirmek için modüler bir yapıda kurgulanır. Katılımcılar temel kavramlardan başlayarak analiz araçlarını, veri tabanlarını, programlama yaklaşımlarını ve güncel hesaplamalı biyoloji uygulamalarını adım adım takip edebilir.
+
+Bu yapı özellikle moleküler biyoloji, genetik, biyoteknoloji, tıp, eczacılık, veterinerlik, ziraat ve ilgili yaşam bilimleri alanlarında çalışan ya da eğitim gören katılımcılar için uygundur. Her eğitim, kendi hızında ilerlemek isteyen kişiler için açık, uygulamalı ve sürdürülebilir bir öğrenme deneyimi sunmayı amaçlar.
 
 <div style="display:block; width:100%; height: 50px;"></div>
 
 ## Biyoinformatik Yaz Kampı ve Biyoinformatik Kış Kampı:
 
-Biyoinformatik Yaz Kampı ve Kış Kampı, yoğun ve interaktif bir programla 9-20 Eylül ve 8-14 Aralık tarihleri arasında gerçekleşecektir. Katılımcılar, R programlama dilini öğrenerek istatistiksel analiz ve görselleştirme becerilerini geliştirirken, biyoinformatik alanındaki temel kavramları ve sunduğumuz tüm eğitimleri kamp boyunca derinlemesine öğrenme fırsatı bulacaklardır.
+Biyoinformatik Yaz Kampı ve Kış Kampı, temel biyoinformatik kavramlardan uygulamalı analiz süreçlerine uzanan kapsamlı öğrenme patikalarıdır. Katılımcılar R programlama, istatistiksel analiz, veri görselleştirme, dizi hizalama, yapısal biyoinformatik, filogenetik analiz, tek hücre RNA-seq ve yeni nesil dizileme gibi konuları bütüncül bir akış içinde takip edebilir.
 
 ERES Biyoinformatik Akademi olarak, biyoinformatik alanındaki uzmanlık yolculuğunuzda size rehberlik etmekten ve kariyerinizi en üst düzeye çıkarmaktan memnuniyet duyarız. Bizimle birlikte biyoinformatikteki geleceğinizi inşa edin!
 

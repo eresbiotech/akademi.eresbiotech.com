@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi"
 date = "2023-02-25"
-description = "A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi sayfasıdır. Eğitim, içeriği, kimler için tasarlandığı, yeri, zamanı ve kayıt detaylarını içerir."
+description = "Bu eğitim, CRISPR Cas9 gen düzenleme yaklaşımını temel kavramlardan uygulamalı analiz adımlarına kadar kendi hızınızda öğrenmeniz için hazırlanmıştır."
 
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
 
@@ -14,23 +14,19 @@ categories = [
 
 ## A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi
 
-<br/>
+> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
 
-## Son Kontenjanlar. Kayıt olun kaçırmayın. 
+## Eğitim Formatı
 
-<br/>
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
 
-### 22 - 26 Nisan 2024 
-
-#### Hafta içi akşam 20:00 - 22:00 
-
-#### Canlı - Online 
-
-#### Kısıtlı Kontenjan
-
+Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
 
 <br/>
 
+<br/>
+
+<br/>
 
 Gen düzenleme teknolojileri, biyolojik araştırmalarda devrim niteliğinde bir ilerleme sağlamıştır. Özellikle CRISPR-Cas9 sistemi, genetik materyalin belirli bölgelerinde hassas değişiklikler yapma yeteneğiyle araştırmacıların geniş bir yelpazede çalışmalarını kolaylaştırmıştır. Bu bağlamda, "A’dan Z’ye CRISPR Cas9 Gen Düzenleme Eğitimi" adlı programımız, gen düzenleme alanında çalışan ve bu teknolojiyi daha derinlemesine öğrenmek isteyen yaşam bilimleri araştırmacıları için tasarlanmıştır.
 
@@ -38,10 +34,7 @@ Gen düzenleme teknolojileri, biyolojik araştırmalarda devrim niteliğinde bir
 
 Eğitim boyunca katılımcılar, temel düzeyden ileri seviyeye kadar uzanan bir programla, CRISPR tekniklerinin her yönünü öğrenme fırsatı bulacaklardır. Gen düzenleme konusunda yeni başlayanlar kadar belirli bir yol kat edenler için de uygun olan bu eğitim, model ve model olmayan organizmalarda CRISPR tasarlama, mutasyon belirleme ve analiz etme gibi kritik becerilerin kazanılmasına odaklanmaktadır. Ayrıca, mikroenjeksiyon ve mutant yetiştirme gibi pratik tekniklerin anlatımının yanı sıra, uygulamalı olarak bioinformatik araçlarla veri analizi yapma becerisini de katılımcılara sağlayacaktır. Bu eğitim araştırmacıların gen düzenleme alanında kendilerini güçlendirmesine ve çalışmalarını daha etkili hale getirmesine olanak tanıyacak kapsamlı bir içeriğe sahiptir.
 
-
 <br/>
-
-Uygulamalarla CRISPR CAS9 tasarımı ve değerlendirmesini baştan sona öğreneceğini bu eğitimi kaçırmayın. 
 
 Bu eğitim, katılımcılara CRISPR tekniklerine genel bir bakış sunmayı, doğru gRNA ve Cas9 seçimi konularında yetkinlik kazandırmayı, mikroenjeksiyon ve mutant yetiştirme tekniklerini öğretmeyi, model olmayan organizmalarda CRISPR tasarlamayı, mutasyon belirleme ve analiz etmeyi hedefler.
 
@@ -99,7 +92,6 @@ Temel bir konu olduğu için biyoinformatik ve yaşaam bilimlerinde uzmanlaşmak
 
 <br/>
 
-
 Bu ders ileri seviyede olup  ilerlemek ve hızlanmak isteyenler için önerilir. Biyoinformatiğe hem yeni başlayacak olanlar temel olarak NCBI gibi konuları öğrenerek bu eğitime katılırlarsa verimleri artar. 
 
 Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eğitimi alınması tavsiye edilir. Böylece daha detaylı bir biyoinformatiğe başlangıç sağlayabilirsiniz.
@@ -110,7 +102,7 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 <br/>
 
-- **Kariyerinizi Geliştirin:** Gen düzenleme alanında uzmanlaşmak, bilim dünyasında kariyerinizi önemli ölçüde ilerletebilir. Bu eğitime katılarak, en güncel CRISPR tekniklerini öğrenerek, araştırma projelerinizde liderlik pozisyonlarını hedefleyebilirsiniz.
+- **Kariyerinizi Geliştirin:** Gen düzenleme alanında uzmanlaşmak, bilim dünyasında kariyerinizi önemli ölçüde ilerletebilir. Bu eğitimle, en güncel CRISPR tekniklerini öğrenerek, araştırma projelerinizde liderlik pozisyonlarını hedefleyebilirsiniz.
 
 - **Rekabet Avantajı Sağlayın:** Gen düzenleme teknolojileri giderek daha önemli hale gelirken, bu alanda sağlam bir bilgi birikimi ve uygulamalı deneyim, sizi diğer adaylardan ayıracak ve iş piyasasında öne çıkaracaktır.
 
@@ -124,15 +116,11 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 -   **Uygulamalı Dersler:** Dersteki uygulamaları, teorik bilgiyi pratikte nasıl uygulayacağınızı öğrenmenize olanak tanır ve öğrendiklerinizin kalıcı olmasını ve çalışmalarınızda kullanmanızı sağlar.
 
--   **Sektördeki Ağ Olanakları:** Eğitim yaşam bilimleri alanındaki diğer uzmanlarla tanışma ve etkileşim kurma fırsatı sunar. Sınıf içi forumlar ve etkileşimli oturumlar, BSS topluluğu etkinlliklerine katılım gibi faaliyetlerle sektördeki güncel gelişmeleri paylaşmanıza ve öğrenmenize yardımcı olur.
-
 -   **Kişisel ve Profesyonel Gelişim:** Eğitim kariyerinizi ileri taşımanıza yardımcı olacak pratik beceriler ve bilgiler sunar. Bu kursta öğrendiğiniz teknikleri aaraştırma projeleriniz ve yayınlarınızda kullanabilirsiniz. Yeni teknikleri öğrenmek ve uygulamak, hem kişisel hem de profesyonel gelişiminiz için önemli bir adımdır.
 
-**Bu eğitime katılarak, gen düzenleme alanındaki bilgi ve becerilerinizi güçlendirin, kariyerinizi ilerletin ve rekabet avantajı sağlayın!**
+**Bu eğitimle, gen düzenleme alanındaki bilgi ve becerilerinizi güçlendirin, kariyerinizi ilerletin ve rekabet avantajı sağlayın!**
 
 <br/>
-
-<a href="https://iyzi.link/AJe1hQ" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
 
 <br/>
 
@@ -140,34 +128,17 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 <br/>
 
-**Tarih:** 22 - 26 Nisan 2024 (Akşam)
-
+<br/>
 
 <br/>
 
-**Saat:**
+<br/>
 
 <br/>
 
-Eğitim 1 hafta boyunca, hafta içi akşam saatlerinde gerçekleşecektir. ( 20:00-22:00 )
-
-
 <br/>
 
-**Eğitim Özelliği:** Canlı, Çevrim içi
-
 <br/>
-
-**Kontenjan:** 25 kişi ile sınırlıdır.
-
-<br/>
-
-**Ücret:** 3480 TL (%20 KDV Dahil)
-
-
-<br/>
-
-**Ödeme Bağlantısı:** <https://iyzi.link/AJe1hQ>
 
 <br/>
 
@@ -176,8 +147,6 @@ Eğitim 1 hafta boyunca, hafta içi akşam saatlerinde gerçekleşecektir. ( 20:
 <br/>
 
 **Eğitmen:** Dr. Özlem Gönülkırmaz 
-
-
 
 <br/>
 
@@ -188,7 +157,7 @@ Eğitim 1 hafta boyunca, hafta içi akşam saatlerinde gerçekleşecektir. ( 20:
 ### Eğitim Konuları: 
 
 <br/>
-**1. Gün**
+### Modül 1
 CRISPR Cas9 sistemine genel bakış
 Diğer gen düzenleme teknikleri ile CRISPR karşılaştırması
 Model ve model olmayan organizmalarda CRISPR tasarlama
@@ -198,7 +167,7 @@ IGV (Integrated Genome Viewer) kullanarak SNV (Single Nucleotide Variation) aram
 NCBI üzerinde hedeflenen gen için primer tasarlama (Primer Blast kullanımı)
 Ödev 
 <br/>
-**2. Gün**
+### Modül 2
 Kullanılacak CRISPR tekniğinin seçimi
 Doğru gRNA tasarımı için genel kurallar ve internet tabanlı gRNA tasarlama programlarına genel bakış
 Hedef gen bölgesi için gRNA tasarlama 
@@ -208,21 +177,21 @@ gRNA test etme yöntemleri
 Mutant transcript inceleme (Geneious Prime üzerinde)fd
 Ödev 
 <br/>
-**3. Gün**
+### Modül 3
 Tasarlanan gRNA ve Cas9’ın organizmaya transferi: Mikroenjeksiyon stratejileri
 Off-target eleme stratejileri
 Galaxy web server tanıtımı ve tüm genomda off-target tarama
 Tüm genomda off-target tarama devam
 Ödev
 <br/>
-**4. Gün**
+### Modül 4
 CRISPR analizi için moleküler yöntemler
 Örneklemeli HRMA (High Resolution Melt Analysis) analizi ve mutant belirleme
 Geneious Prime’da Sanger sekans verilerinin analizi
 Genotip değerlendirmesi, Indel (Insertion-Deletion) ve mozaik ayrımı
 Ödev 
 <br/>
-**5. Gün - Genel tekrar ve Soru Cevap Günü**
+### Modül 5: Genel tekrar ve Soru Cevap
 CRISPR Cas9 ve diğer gen düzenleme teknikleri tekrarı ve karşılaştırması ve seçilecek CRISPR yöntemi seçilirken dikkat edilecekler
 IGV kullanarak SNV arama uygulama tekrarı
 Hedef için gRNA tasarlama ve dikkat edilecek noktalar tekrarı 
@@ -232,36 +201,17 @@ Soru Cevap otururumu
 
 <br/>
 
-### Eğitim platformu ve erişim şekli:
+<br/>
 
 <br/>
 
--   Eğitim online olarak Bioinformy platformu ve Google üzerinde gerçekleşecektir.
-
--   Kaydınızı tamamladığınızda yetkilimiz sizi Bioinformy platformuna kaydedecek ve bilgilendirme epostası size ulaşacaktır.
-
--   Eğitim canlı ve online olarak ilerleyecektir.
-
--   Dersle ilgili tüm duyurular Bioinformy platformundan sağlanacaktır. Ders duyuruları *bioinformy.com* uzantıllı epostalar ile size iletilecektir.
-
 <br/>
-
-### ÖNEMLİ NOTLAR:
-
-<br/>
-
--   Taksit imkanı bulunmaktadır.
 
 -   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
 
--   Eğitim programı canlı, senkron ve online gerçekleşecektir.
-
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 
--   Eğitim materyalleri ve videoları eğitimden sonra 1 ay boyunca erişilebilir olacaktır.
-
 <br/>
-<a href="https://iyzi.link/AJe1hQ" target='_blank' class="btn btn-danger btn-lg btn-block" style='display:block'>HEMEN KAYDOL</a>
  
 <img src='/images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png' width="100%"/> 
 
@@ -269,3 +219,6 @@ Soru Cevap otururumu
 
 ### Dr. Özlem Gönülkırmaz 
 
+---
+
+Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.
