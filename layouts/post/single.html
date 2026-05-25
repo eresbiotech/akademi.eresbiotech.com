@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="container page-shell page-narrow">
+  <header class="page-header training-hero">
+    <p class="eyebrow">Eğitim</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    <div class="meta-row">
+      {{ if gt .Date.Year 1 }}<span>{{ .Date.Format "02 Jan 2006" }}</span>{{ end }}
+      <span>{{ .RelPermalink }}</span>
+    </div>
+  </header>
+  {{ with .Params.images }}
+    {{- $src := index . 0 -}}
+    {{- with resources.Get $src -}}
+      <img class="feature-image" src="{{ .RelPermalink }}" alt="{{ $.Title }}">
+    {{- end -}}
+  {{ end }}
+  <div class="content-card prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

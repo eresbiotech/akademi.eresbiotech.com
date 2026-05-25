@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="container page-shell">
+  <header class="page-header soft-hero">
+    <p class="eyebrow">ERES Akademi</p>
+    <h1>{{ .Title | default site.Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  </header>
+  {{ with .Content }}
+    <div class="content-card prose">{{ . }}</div>
+  {{ end }}
+  <div class="card-grid">
+    {{ range .Pages }}
+      <article class="post-card">
+        <div class="post-card-body">
+          {{ if gt .Date.Year 1 }}<p class="post-date">{{ .Date.Format "02 Jan 2006" }}</p>{{ end }}
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Description }}
+            <p>{{ . }}</p>
+          {{ else }}
+            <p>{{ .Summary | plainify }}</p>
+          {{ end }}
+        </div>
+        <a class="card-link" href="{{ .RelPermalink }}">Detayları Gör</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

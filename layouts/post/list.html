@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{- $posts := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
+<section class="container page-shell">
+  <header class="page-header split-header post-index-hero">
+    <div>
+      <p class="eyebrow">ERES Akademi</p>
+      <h1>Eğitimler</h1>
+      <p class="lead">Biyoinformatik, veri analizi ve hesaplamalı biyoloji alanlarında kendi hızınızda ilerleyebileceğiniz uygulama odaklı eğitimleri keşfedin.</p>
+    </div>
+    <div class="hero-side">
+      <span class="hero-count">{{ len $posts }}</span>
+      <span>güncel eğitim ve içerik</span>
+      <a class="hero-action" href="{{ "/post/contact/" | relURL }}">İletişime Geç</a>
+    </div>
+  </header>
+  <div class="card-grid">
+    {{ range $posts.ByDate.Reverse }}
+      {{- $page := . -}}
+      <article class="post-card">
+        {{ with .Params.images }}
+          {{- $src := index . 0 -}}
+          {{- with resources.Get $src -}}
+            <img class="post-image" src="{{ .RelPermalink }}" alt="{{ $page.Title }}">
+          {{- end -}}
+        {{ end }}
+        <div class="post-card-body">
+          {{ if gt .Date.Year 1 }}<p class="post-date">{{ .Date.Format "02 Jan 2006" }}</p>{{ end }}
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Description }}
+            <p>{{ . }}</p>
+          {{ else }}
+            <p>{{ .Summary | plainify }}</p>
+          {{ end }}
+        </div>
+        <a class="card-link" href="{{ .RelPermalink }}">Eğitimi İncele</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

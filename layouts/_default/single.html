@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="container page-shell page-narrow">
+  <header class="page-header soft-hero">
+    <p class="eyebrow">ERES Akademi</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  </header>
+  <div class="content-card prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
