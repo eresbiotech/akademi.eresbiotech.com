@@ -1,0 +1,20 @@
+<svg width="240" height="260" viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&amp;display=swap');
+            .txt-eres-v { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 32px; fill: #475569; letter-spacing: 6px; }
+            .txt-biotech-v { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; fill: #020617; letter-spacing: 1px; }
+        </style>
+    </defs>
+    <g transform="translate(70, 20) scale(1)">
+        
+                <path d="M25 0L50 25L25 50L0 25L25 0Z" fill="#673ab7" fill-opacity="1"/>
+                <path d="M25 50L50 75L25 100L0 75L25 50Z" fill="#1e3a8a" fill-opacity="1"/>
+                <path d="M75 0L100 25L75 50L50 25L75 0Z" fill="#2dd4bf" fill-opacity="1"/>
+                <path d="M75 50L100 75L75 100L50 75L75 50Z" fill="#38bdf8" fill-opacity="1"/>
+                <path d="M50 25L75 50L50 75L25 50L50 25Z" fill="#0f172a" fill-opacity="0.9"/>
+            
+    </g>
+    <text x="120" y="170" text-anchor="middle" class="txt-eres-v">ERES</text>
+    <text x="120" y="215" text-anchor="middle" class="txt-biotech-v">BIOTECH</text>
+</svg>
