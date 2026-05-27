@@ -5,6 +5,13 @@ date = "2023-02-27"
 description = "Bu eğitim, biyoinformatik temel kavramlarını, omik veri türlerini ve büyük veri yaklaşımını kendi hızınızda öğrenmeniz için hazırlanmış uygulama odaklı bir derstir."
 
 images =[ "images/Biyoinformatik-Genomik-Proteomik-Büyük-Veri-Egitimi.png" ]
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=SB3Oz&pricing_plan=rdWQ8PYXGj"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=SB3Oz&pricing_plan=nLWRarVkGa"
+student_price = "1.350 TL"
+employee_price = "2.350 TL"
+student_plan_label = "Öğrenci"
+employee_plan_label = "Çalışan"
+course_status = "active"
 
 categories = [
     "themes",

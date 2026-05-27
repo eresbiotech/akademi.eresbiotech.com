@@ -5,6 +5,13 @@ date = "2023-12-23"
 description = "Bu eğitim, tek hücre RNA-seq analizinin temel kavramlarını ve Seurat tabanlı uygulama adımlarını kendi hızınızda öğrenmeniz için hazırlanmıştır."
 
 images =[ "images/Tek-Hucre-RNA-Seq-dizi-Analizi-Egitimi.png" ]
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=M1DB8&pricing_plan=QyBbwpvLGD"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=M1DB8&pricing_plan=2VGJjY9vGD"
+student_price = "2.350 TL"
+employee_price = "3.350 TL"
+student_plan_label = "Öğrenci"
+employee_plan_label = "Çalışan"
+course_status = "active"
 
 categories = [
     "themes",

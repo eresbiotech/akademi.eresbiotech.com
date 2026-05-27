@@ -5,6 +5,13 @@ date = "2023-12-26"
 description = "Bu eğitim, NCBI, Ensembl ve UCSC genom tarayıcılarını uygulamalı örneklerle kendi hızınızda öğrenmeniz için hazırlanmış videolu bir derstir."
 
 images =[ "images/NCBI-ENSEMBL-UCSC-Genom-Tarayicileri-Kursu.png" ]
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=18B15yjlBZ"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=rKBPQ39KGN"
+student_price = "1.650 TL"
+employee_price = "2.650 TL"
+student_plan_label = "Öğrenci"
+employee_plan_label = "Çalışan"
+course_status = "active"
 
 categories = [
     "themes",

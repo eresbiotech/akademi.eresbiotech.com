@@ -5,6 +5,13 @@ date = "2023-12-24"
 description = "Bu eğitim, yapısal biyoinformatik, in silico protein modelleme ve ilgili analiz araçlarını kendi hızınızda öğrenmeniz için hazırlanmıştır."
 
 images =[ "images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Egitimi.png" ]
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=YOeiS&pricing_plan=lKzy6LggBX"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=YOeiS&pricing_plan=18B15yjMBZ"
+student_price = "2.100 TL"
+employee_price = "3.100 TL"
+student_plan_label = "Öğrenci"
+employee_plan_label = "Çalışan"
+course_status = "active"
 
 categories = [
     "themes",

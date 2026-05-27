@@ -5,6 +5,13 @@ date = "2024-07-08"
 description = "Bu eğitim, R programlama diliyle biyolojik veri analizi, görselleştirme ve temel biyoinformatik uygulamaları kendi hızınızda öğrenmeniz için hazırlanmıştır."
 
 images =[ "images/Biyoinformatik-icin-R-Programlama.png" ]
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=rjznKvJxB7"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=ZjBLYvqAGm"
+student_price = "1.750 TL"
+employee_price = "2.750 TL"
+student_plan_label = "Öğrenci"
+employee_plan_label = "Çalışan"
+course_status = "active"
 
 categories = [
     "Eğitim",

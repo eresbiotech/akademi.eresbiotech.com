@@ -1,40 +1,107 @@
 {{ define "main" }}
 {{- $posts := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
+{{- $prioritySlugs := slice "biyoinformatik-icin-r-programlama" "biyoinformatik-giris-egitim-buyuk-veri-kurs" "biyoinformatik-veritabanlari-araclar-egitimi" "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "tek-hucre-rna-seq-analizi-egitimi" "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "phyml-uygulamali-filogenetik-egitimi" -}}
+{{- $priorityPosts := slice -}}
+{{- range $prioritySlugs -}}
+  {{- with site.GetPage (printf "/post/%s" .) -}}
+    {{- $priorityPosts = $priorityPosts | append . -}}
+  {{- end -}}
+{{- end -}}
 <section class="container page-shell">
   <header class="page-header split-header post-index-hero">
     <div>
-      <p class="eyebrow">ERES Akademi</p>
-      <h1>Eğitimler</h1>
-      <p class="lead">Biyoinformatik, veri analizi ve hesaplamalı biyoloji alanlarında kendi hızınızda ilerleyebileceğiniz uygulama odaklı eğitimleri keşfedin.</p>
+      <p class="eyebrow">Eğitim kataloğu</p>
+      <h1>Biyoinformatik eğitimleri</h1>
+      <p class="lead">Öncelikli eğitimleri üstte, hazırlık ve arşiv içeriklerini daha aşağıda bulabilirsiniz. Böylece bugün inceleyebileceğiniz ana eğitimler daha hızlı seçilir.</p>
+      <div class="trust-row" aria-label="Katalog özellikleri">
+        <span>Videolu eğitimler</span>
+        <span>Tekrar izlenebilir</span>
+        <span>Akademik kullanıma uygun</span>
+      </div>
     </div>
     <div class="hero-side">
-      <span class="hero-count">{{ len $posts }}</span>
-      <span>güncel eğitim ve içerik</span>
-      <a class="hero-action" href="{{ "/post/contact/" | relURL }}">İletişime Geç</a>
+      <strong class="hero-panel-title">Öncelikli eğitim vitrini</strong>
+      <span>R, temel biyoinformatik, genom tarayıcıları, tek hücre analizi ve ileri analizler</span>
+      <a class="hero-action" href="#egitimler">Eğitimleri İncele</a>
     </div>
   </header>
-  <div class="card-grid">
-    {{ range $posts.ByDate.Reverse }}
-      {{- $page := . -}}
-      <article class="post-card">
-        {{ with .Params.images }}
-          {{- $src := index . 0 -}}
-          {{- with resources.Get $src -}}
-            <img class="post-image" src="{{ .RelPermalink }}" alt="{{ $page.Title }}">
-          {{- end -}}
-        {{ end }}
-        <div class="post-card-body">
-          {{ if gt .Date.Year 1 }}<p class="post-date">{{ .Date.Format "02 Jan 2006" }}</p>{{ end }}
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          {{ with .Description }}
-            <p>{{ . }}</p>
-          {{ else }}
-            <p>{{ .Summary | plainify }}</p>
+
+  <section id="egitimler" class="catalog-section">
+    <div class="section-heading">
+      <p class="eyebrow">Öne çıkan eğitimler</p>
+      <h2>Satış ve kayıt akışı için öncelikli eğitimler</h2>
+    </div>
+    <div class="card-grid catalog-grid">
+      {{ range $priorityPosts }}
+        {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
+        <article class="post-card course-card featured-card">
+          {{ with .Params.images }}
+            {{- $src := index . 0 -}}
+            {{- with resources.Get $src -}}
+              <img class="post-image" src="{{ .RelPermalink }}" alt="{{ $displayTitle }}">
+            {{- end -}}
           {{ end }}
-        </div>
-        <a class="card-link" href="{{ .RelPermalink }}">Eğitimi İncele</a>
-      </article>
-    {{ end }}
-  </div>
+          <div class="post-card-body">
+            <div class="badge-row">
+              <span class="badge">Kendi hızınızda</span>
+              <span class="badge">Videolu eğitim</span>
+              <span class="badge">Uygulama odaklı</span>
+            </div>
+            <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
+            {{ with .Description }}
+              <p>{{ . }}</p>
+            {{ else }}
+              <p>{{ .Summary | plainify }}</p>
+            {{ end }}
+            {{ if and (eq .Params.course_status "active") .Params.student_checkout_url .Params.employee_checkout_url }}
+              <p class="course-availability-note">Öğrenci ve çalışan fiyat seçenekleri mevcut</p>
+            {{ end }}
+          </div>
+          <div class="catalog-card-actions">
+            <a class="card-link" href="{{ .RelPermalink }}">Eğitimi İncele</a>
+            {{ with .Params.payhip_url }}
+              <a class="card-link card-link-secondary" href="{{ . }}">Başla</a>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="catalog-section archive-section">
+    <div class="section-heading">
+      <p class="eyebrow">Arşiv ve hazırlık</p>
+      <h2>Hazırlık ve arşiv içerikleri</h2>
+      <p>Bu içerikler korunur; ancak ana satış vitrini dışında, daha sakin bir bölümde gösterilir.</p>
+    </div>
+    <div class="card-grid archive-grid">
+      {{ range $posts.ByDate.Reverse }}
+        {{- if not (in $prioritySlugs .File.BaseFileName) -}}
+          {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
+          <article class="post-card course-card archive-card">
+            {{ with .Params.images }}
+              {{- $src := index . 0 -}}
+              {{- with resources.Get $src -}}
+                <img class="post-image" src="{{ .RelPermalink }}" alt="{{ $displayTitle }}">
+              {{- end -}}
+            {{ end }}
+            <div class="post-card-body">
+              <div class="badge-row">
+                <span class="badge">Arşiv</span>
+                <span class="badge">Hazırlık içeriği</span>
+              </div>
+              <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
+              {{ with .Description }}
+                <p>{{ . }}</p>
+              {{ else }}
+                <p>{{ .Summary | plainify }}</p>
+              {{ end }}
+            </div>
+            <a class="card-link card-link-muted" href="{{ .RelPermalink }}">Eğitimi İncele</a>
+          </article>
+        {{- end -}}
+      {{ end }}
+    </div>
+  </section>
 </section>
 {{ end }}

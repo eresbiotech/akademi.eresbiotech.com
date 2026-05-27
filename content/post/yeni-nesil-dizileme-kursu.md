@@ -5,6 +5,7 @@ date = "2023-12-23"
 description = "Bu eğitim, yeni nesil dizileme verileri, kalite kontrol ve NGS analiz yaklaşımlarını kendi hızınızda öğrenmeniz için hazırlanmış uygulamalı bir derstir."
 
 images =[ "images/Yeni-Nesil-Dizileme-DNA-Verileri-NGS-Kursu.png" ]
+course_status = "coming_soon"
 
 categories = [
     "themes",

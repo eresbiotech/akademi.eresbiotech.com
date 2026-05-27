@@ -1,58 +1,94 @@
 {{ define "main" }}
 {{- $courses := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
+{{- $prioritySlugs := slice "biyoinformatik-icin-r-programlama" "biyoinformatik-giris-egitim-buyuk-veri-kurs" "biyoinformatik-veritabanlari-araclar-egitimi" "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "tek-hucre-rna-seq-analizi-egitimi" "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "phyml-uygulamali-filogenetik-egitimi" -}}
+{{- $priorityCourses := slice -}}
+{{- range $prioritySlugs -}}
+  {{- with site.GetPage (printf "/post/%s" .) -}}
+    {{- $priorityCourses = $priorityCourses | append . -}}
+  {{- end -}}
+{{- end -}}
 <section class="home-hero">
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
       <p class="eyebrow">ERES Biyoinformatik Akademi</p>
-      <h1>Biyoinformatik, Veri Analizi ve Hesaplamalı Biyoloji Eğitimleri</h1>
-      <p class="lead">ERES Biyoinformatik Akademi’de, yaşam bilimleri alanındaki araştırmacılar için kendi hızında ilerlenebilen, videolu ve uygulama odaklı eğitimler sunuyoruz. Kodlama, veri analizi, genomik araçlar ve biyoinformatik yaklaşımları adım adım öğrenin.</p>
+      <h1>Biyoinformatik analiz becerilerinizi kendi hızınızda geliştirin</h1>
+      <p class="lead">R programlama, genomik veri analizi, tek hücre RNA-seq, filogenetik ve yapısal biyoinformatik eğitimleriyle teoriyi uygulamaya dönüştürün.</p>
+      <div class="trust-row" aria-label="Eğitim özellikleri">
+        <span>Kendi hızınızda</span>
+        <span>Videolu eğitim</span>
+        <span>Uygulama odaklı</span>
+      </div>
       <div class="hero-actions">
-        <a class="hero-action" href="{{ "/post/" | relURL }}">Eğitimleri İnceleyin</a>
-        <a class="hero-action hero-action-secondary" href="{{ "/post/contact/" | relURL }}">Bize Ulaşın</a>
+        <a class="hero-action" href="#ogrenme-yollari">Size Uygun Eğitimi Seçin</a>
+        <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm Eğitimleri İnceleyin</a>
       </div>
     </div>
     <aside class="home-hero-panel" aria-label="Akademi özeti">
       <div>
-        <span class="hero-count">{{ len $courses }}</span>
-        <span>uygulama odaklı eğitim</span>
+        <strong class="hero-panel-title">Temelden ileri seviyeye biyoinformatik eğitimleri</strong>
+        <span>Satışa açık ve hazırlanmakta olan eğitimleri net bir öğrenme sırasıyla keşfedin.</span>
       </div>
       <div class="hero-panel-row">
-        <strong>Videolu</strong>
-        <span>Tekrar edilebilir ders yapısı</span>
+        <strong>Doğru başlangıç sırası</strong>
+        <span>R, temel biyoinformatik, genom tarayıcıları, tek hücre analizi ve ileri analiz başlıkları</span>
       </div>
       <div class="hero-panel-row">
-        <strong>Esnek</strong>
-        <span>Yoğun akademik programlara uyumlu</span>
+        <strong>Akademik kullanım için uygun</strong>
+        <span>Öğrenci, araştırmacı ve profesyonel çalışma akışlarına yakın içerik</span>
       </div>
     </aside>
   </div>
 </section>
 
-<section class="container home-section">
+<section id="ogrenme-yollari" class="container home-section">
   <div class="section-heading">
-    <p class="eyebrow">Neden ERES Akademi?</p>
-    <h2>Yaşam bilimleri için anlaşılır, uygulanabilir ve güvenilir öğrenme</h2>
+    <p class="eyebrow">Karar rehberi</p>
+    <h2>Nereden başlamalısınız?</h2>
+    <p>Hedefinize en yakın yolu seçin; sonra ilgili eğitim detaylarını inceleyip ilk adımı netleştirin.</p>
   </div>
-  <div class="value-grid">
-    <article class="value-card">
-      <span class="value-icon" aria-hidden="true">01</span>
-      <h3>Kendi hızınızda öğrenme</h3>
-      <p>Dersleri akademik ya da profesyonel takviminize göre takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.</p>
+  <div class="start-grid">
+    <article class="path-card start-card">
+      <div>
+        <p class="path-label">Kodlama ve veri analizi</p>
+        <h3>Kodlama ve veri analizine başlamak için</h3>
+      </div>
+      <ul>
+        <li>Biyoinformatik için R Programlama</li>
+      </ul>
+      <a class="card-link" href="{{ "/post/biyoinformatik-icin-r-programlama/" | relURL }}">Bu yoldan başla</a>
     </article>
-    <article class="value-card">
-      <span class="value-icon" aria-hidden="true">02</span>
-      <h3>Uygulama odaklı dersler</h3>
-      <p>Temel kavramlar gerçek analiz örnekleri, araç kullanımı ve adım adım uygulamalarla desteklenir.</p>
+    <article class="path-card start-card">
+      <div>
+        <p class="path-label">Temel çerçeve</p>
+        <h3>Biyoinformatiğe genel çerçeveden başlamak için</h3>
+      </div>
+      <ul>
+        <li>Biyoinformatiğe Giriş ve Büyük Veri</li>
+        <li>Temel Biyoinformatik Araçlar ve Veritabanları</li>
+      </ul>
+      <a class="card-link" href="{{ "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs/" | relURL }}">Bu yoldan başla</a>
     </article>
-    <article class="value-card">
-      <span class="value-icon" aria-hidden="true">03</span>
-      <h3>Biyoloji kökenli öğrenenlere uygun</h3>
-      <p>Kodlama ve veri analizi konuları, yaşam bilimleri altyapısına sahip öğrenenlerin takip edebileceği şekilde yapılandırılır.</p>
+    <article class="path-card start-card">
+      <div>
+        <p class="path-label">Genomik ve tek hücre</p>
+        <h3>Genomik ve tek hücre analizlerine ilerlemek için</h3>
+      </div>
+      <ul>
+        <li>NCBI, Ensembl ve UCSC</li>
+        <li>Tek Hücre RNA-Seq</li>
+      </ul>
+      <a class="card-link" href="{{ "/post/ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim/" | relURL }}">Bu yoldan başla</a>
     </article>
-    <article class="value-card">
-      <span class="value-icon" aria-hidden="true">04</span>
-      <h3>ERES deneyimi ve akademik güven</h3>
-      <p>İçerikler ERES Biyoteknoloji’nin Ar-Ge ve eğitim deneyiminden beslenen ölçülü, güncel ve uygulanabilir bir yaklaşımla hazırlanır.</p>
+    <article class="path-card start-card">
+      <div>
+        <p class="path-label">İleri analizler</p>
+        <h3>İleri analizlere geçmek için</h3>
+      </div>
+      <ul>
+        <li>Yapısal Biyoinformatik</li>
+        <li>phyML Filogenetik</li>
+      </ul>
+      <a class="card-link" href="{{ "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme/" | relURL }}">Bu yoldan başla</a>
     </article>
   </div>
 </section>
@@ -60,16 +96,16 @@
 <section class="container home-section">
   <div class="section-heading section-heading-row">
     <div>
-      <p class="eyebrow">Eğitimler</p>
-      <h2>Kendi hızınızda ilerleyebileceğiniz eğitimleri keşfedin</h2>
+      <p class="eyebrow">Öncelikli eğitimler</p>
+      <h2>Bugün inceleyebileceğiniz ana eğitim vitrini</h2>
+      <p>Satış ve kayıt akışı için öne çıkarılan eğitimler burada tutulur. Kamp, arşiv ve hazırlık içerikleri ana vitrini kalabalıklaştırmaz.</p>
     </div>
-    <a class="text-link" href="{{ "/post/" | relURL }}">Tüm eğitimler</a>
+    <a class="text-link" href="{{ "/post/" | relURL }}">Tüm Eğitimleri İncele</a>
   </div>
-  <div class="card-grid">
-    {{ range $courses.ByDate.Reverse }}
-      {{- $page := . -}}
+  <div class="card-grid featured-grid">
+    {{ range $priorityCourses }}
       {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
-      <article class="post-card">
+      <article class="post-card course-card featured-card">
         {{ with .Params.images }}
           {{- $src := index . 0 -}}
           {{- with resources.Get $src -}}
@@ -77,6 +113,11 @@
           {{- end -}}
         {{ end }}
         <div class="post-card-body">
+          <div class="badge-row">
+            <span class="badge">Kendi hızınızda</span>
+            <span class="badge">Videolu eğitim</span>
+            <span class="badge">Uygulama odaklı</span>
+          </div>
           <h3><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h3>
           {{ with .Description }}
             <p>{{ . }}</p>
@@ -90,31 +131,42 @@
   </div>
 </section>
 
-<section class="container home-section audience-band">
-  <div>
-    <p class="eyebrow">Bireysel ve Kurumsal</p>
-    <h2>Öğrenme hedefinize uygun eğitim yapısı</h2>
+<section class="container home-section">
+  <div class="section-heading">
+    <p class="eyebrow">Neden ERES Biyoinformatik Akademi?</p>
+    <h2>Öğrenmeyi erteletmeyen netlik, güven ve uygulanabilirlik</h2>
   </div>
-  <div class="audience-grid">
-    <article>
-      <h3>Bireysel öğrenme için eğitimler</h3>
-      <p>Öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için temel düzeyden ileri uygulamalara uzanan eğitimler.</p>
-      <a class="text-link" href="{{ "/post/" | relURL }}">Eğitimleri inceleyin</a>
+  <div class="value-grid">
+    <article class="value-card">
+      <span class="value-icon" aria-hidden="true">01</span>
+      <h3>Uygulama odaklı öğrenme</h3>
+      <p>Kavramlar, araç kullanımı ve analiz mantığı gerçek çalışma akışlarına yakın örneklerle desteklenir.</p>
     </article>
-    <article>
-      <h3>Kurumlar ve araştırma grupları</h3>
-      <p>Araştırma ekipleri, laboratuvarlar ve kurumlar için ihtiyaçlara göre yapılandırılabilecek biyoinformatik ve veri analizi eğitim talepleri.</p>
-      <a class="text-link" href="{{ "/work/" | relURL }}">Hizmetleri inceleyin</a>
+    <article class="value-card">
+      <span class="value-icon" aria-hidden="true">02</span>
+      <h3>Kendi hızınızda ilerleme</h3>
+      <p>Yoğun akademik ve profesyonel programlara uyum sağlayan esnek bir öğrenme yapısı sunulur.</p>
+    </article>
+    <article class="value-card">
+      <span class="value-icon" aria-hidden="true">03</span>
+      <h3>Tekrar izlenebilir yapı</h3>
+      <p>Zorlandığınız bölümlere geri dönebilir, kritik adımları kendi temponuzda pekiştirebilirsiniz.</p>
+    </article>
+    <article class="value-card">
+      <span class="value-icon" aria-hidden="true">04</span>
+      <h3>Akademik ve profesyonel kullanım</h3>
+      <p>İçerikler öğrenciler, araştırmacılar, laboratuvar ekipleri ve sektör profesyonelleri için anlaşılır şekilde kurgulanır.</p>
     </article>
   </div>
 </section>
 
 <section class="container home-final-cta">
-  <p class="eyebrow">Başlayın</p>
-  <h2>Biyoinformatik öğrenme yolculuğunuza bugün başlayın.</h2>
+  <p class="eyebrow">Bugün başlayın</p>
+  <h2>Size en yakın eğitim yolunu seçin.</h2>
+  <p>Eğitim detaylarını inceleyin, uygun başlangıç noktasını belirleyin ve öğrenme planınızı netleştirin.</p>
   <div class="hero-actions">
-    <a class="hero-action" href="{{ "/post/" | relURL }}">Eğitimleri İnceleyin</a>
-    <a class="hero-action hero-action-secondary" href="{{ "/post/contact/" | relURL }}">İletişime Geçin</a>
+    <a class="hero-action" href="#ogrenme-yollari">Size Uygun Eğitimi Seçin</a>
+    <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm Eğitimleri İnceleyin</a>
   </div>
 </section>
 {{ end }}

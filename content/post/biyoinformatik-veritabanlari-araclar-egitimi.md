@@ -5,6 +5,13 @@ date = "2023-02-27"
 description = "Bu eğitim, temel biyoinformatik araçları, veri tabanlarını ve uygulamalı analiz adımlarını kendi hızınızda öğrenmeniz için hazırlanmıştır."
 
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=G8fph&pricing_plan=MrW6dvk5BN"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=G8fph&pricing_plan=bZz2MvA0Wr"
+student_price = "1.400 TL"
+employee_price = "2.400 TL"
+student_plan_label = "Öğrenci"
+employee_plan_label = "Çalışan"
+course_status = "active"
 
 categories = [
     "themes",

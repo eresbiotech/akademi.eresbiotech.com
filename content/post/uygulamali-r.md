@@ -5,6 +5,7 @@ date = "2023-02-24"
 description = "Bu eğitim, R programlama diliyle veri analizi, istatistiksel düşünme ve görselleştirme becerilerini kendi hızınızda geliştirmeniz için hazırlanmıştır."
 
 images =[ "images/Uygulamali-R-Egitimi.png" ]
+course_status = "coming_soon"
 
 categories = [
     "themes",

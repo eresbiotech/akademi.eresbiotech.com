@@ -5,6 +5,13 @@ date = "2023-12-25"
 description = "Bu eğitim, dizi hizalama, filogenetik analiz ve phyML uygulamalarını kendi hızınızda öğrenmeniz için hazırlanmış uygulama odaklı bir derstir."
 
 images =[ "images/filogenetik-dizi-hizalama-Egitimi.png" ]
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=8y1M3&pricing_plan=rKBPQ397GN"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=8y1M3&pricing_plan=V6B73v9wBr"
+student_price = "2.100 TL"
+employee_price = "3.100 TL"
+student_plan_label = "Öğrenci"
+employee_plan_label = "Çalışan"
+course_status = "active"
 
 categories = [
     "themes",
