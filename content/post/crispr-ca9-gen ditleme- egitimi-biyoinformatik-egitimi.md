@@ -102,23 +102,23 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 <br/>
 
-- **Kariyerinizi Geliştirin:** Gen düzenleme alanında uzmanlaşmak, bilim dünyasında kariyerinizi önemli ölçüde ilerletebilir. Bu eğitimle, en güncel CRISPR tekniklerini öğrenerek, araştırma projelerinizde liderlik pozisyonlarını hedefleyebilirsiniz.
+- **Araştırma becerilerinizi güçlendirin:** Gen düzenleme alanındaki temel CRISPR yaklaşımlarını araştırma pratiğine yakın bir çerçevede değerlendirebilirsiniz.
 
-- **Rekabet Avantajı Sağlayın:** Gen düzenleme teknolojileri giderek daha önemli hale gelirken, bu alanda sağlam bir bilgi birikimi ve uygulamalı deneyim, sizi diğer adaylardan ayıracak ve iş piyasasında öne çıkaracaktır.
+- **Uygulama yaklaşımını kavrayın:** CRISPR tasarımı, mutasyon belirleme ve analiz adımlarının araştırma sorularıyla ilişkisini daha bilinçli takip edebilirsiniz.
 
 - **Etkili Veri Analizi Yetenekleri Kazanın:** Eğitim boyunca bioinformatik araçlarla veri analizi yapma yeteneği kazanacaksınız. Bu yetenek, elde ettiğiniz sonuçları derinlemesine analiz etmenizi ve değerli bilgiler çıkartmanızı sağlayarak, araştırma projelerinizin başarısını artırır.
 
 **Uygulamalı Deneyim Kazanın:** Model ve model olmayan organizmalarda CRISPR tasarlama, mutasyon belirleme ve analiz etme gibi kritik becerileri uygulamalı olarak öğreneceksiniz. Bu sayede, teorik bilginizi pratikte uygulama fırsatı bulacak ve gerçek dünya problemlerine çözüm üretebileceksiniz.
 
-- **Önde Gelen Bir Eğitmenden Eğitim Alın:** Eğitim, gen düzenleme alanında uzmanlaşmış deneyimli bir eğitmen tarafından verilecektir. Dr. Özlem Gönülkırmaz Çançalar'ın rehberliğinde, sektördeki en güncel bilgileri öğrenme ve pratik deneyim kazanma şansına sahip olacaksınız.
+- **Kendi hızınızda ilerleyin:** İçerik yayına hazırlandığında asenkron ve videolu öğrenme yapısıyla sunulacaktır.
 
 -   **Uzman Programla Öğrenme:** İhtiyaçlara yönelik uzman bir program çerçevesinde hazırlanmıştır.
 
 -   **Uygulamalı Dersler:** Dersteki uygulamaları, teorik bilgiyi pratikte nasıl uygulayacağınızı öğrenmenize olanak tanır ve öğrendiklerinizin kalıcı olmasını ve çalışmalarınızda kullanmanızı sağlar.
 
--   **Kişisel ve Profesyonel Gelişim:** Eğitim kariyerinizi ileri taşımanıza yardımcı olacak pratik beceriler ve bilgiler sunar. Bu kursta öğrendiğiniz teknikleri aaraştırma projeleriniz ve yayınlarınızda kullanabilirsiniz. Yeni teknikleri öğrenmek ve uygulamak, hem kişisel hem de profesyonel gelişiminiz için önemli bir adımdır.
+-   **Araştırma Pratiği:** Eğitimde ele alınan teknikleri araştırma projelerinizde ve veri yorumlama süreçlerinizde daha bilinçli değerlendirebilirsiniz.
 
-**Bu eğitimle, gen düzenleme alanındaki bilgi ve becerilerinizi güçlendirin, kariyerinizi ilerletin ve rekabet avantajı sağlayın!**
+**Bu eğitimle, gen düzenleme alanındaki analiz ve yorumlama becerilerinizi yapılandırılmış biçimde güçlendirebilirsiniz.**
 
 <br/>
 
@@ -143,10 +143,6 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 <br/>
 
 **Eğitim Seviyesi:** İleri Seviye
-
-<br/>
-
-**Eğitmen:** Dr. Özlem Gönülkırmaz 
 
 <br/>
 
@@ -216,9 +212,5 @@ Soru Cevap otururumu
 <img src='/images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png' width="100%"/> 
 
 <br/>
-
-### Dr. Özlem Gönülkırmaz 
-
----
 
 Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.

@@ -140,13 +140,11 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 
 <br/>
 
-**Kısa Açıklama:** Bu kapsamlı kurs, katılımcılara tek hücre RNA sekanslamasının temelini anlama fırsatı sunar. Hücresel heterojeniteyi keşfetme amacıyla veri analizi iş akışını içerir; bu, scRNA-seq, toplu RNA sekanslama, boyut azaltma teknikleri, kümeleme algoritmaları, diferansiyel ekspresyon analizi ve gen düzenleyici ağ çıkarsama konularını kapsar. Katılımcılar, R programlama dili, Seurat Paketi ve derinlemesine veri analizi için temel araçları etkili bir şekilde kullanma pratiği kazanarak, detaylı bir işaretçi analiziyle dersi tamamlarlar.
+**Kısa Açıklama:** Bu kapsamlı eğitim, tek hücre RNA sekanslamasının temelini ve scRNA-seq veri analizi iş akışını adım adım ele alır. Hücresel heterojenite, boyut azaltma, kümeleme, diferansiyel ekspresyon analizi ve gen düzenleyici ağ çıkarsama gibi başlıklarda R ve Seurat Paketi üzerinden uygulama odaklı bir öğrenme akışı izlersiniz.
 
 <br/>
 
--   Cumartesi:
-
--   Pazar:
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 <br/>
 
@@ -177,10 +175,6 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 <br/>
 
 **[Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi](https://akademi.eresbiotech.com/post/biyoinformatik-veritabanlari-araclar-egitimi/)** 
-
-<br/>
-
-**Eğitmen:** Selda Akdal ve Bioinformay Komisyonu
 
 <br/>
 

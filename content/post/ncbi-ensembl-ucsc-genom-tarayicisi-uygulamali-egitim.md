@@ -117,7 +117,7 @@ Bu eğitimde katılımcılar Ensembl ve UCSC Genome Browser\'ları etkin bir şe
 
     -   Genomik veri analizi araçlarına genel bir bakış.
 
-    -   Kursun kapsamı ve içeriğinin anlatımı.
+    -   Eğitimin kapsamı ve içeriğinin anlatımı.
 
 -   **Genomik Veri Analizinin Önemi:**
 
@@ -167,35 +167,15 @@ Bu eğitim katılımcılara genetik veri analizi konusunda güçlü bir temel sa
 
 <br/>
 
-### **Tarih**
+### **Asenkron Eğitim Yapısı**
 
-<br/>
-
-<br/>
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 ### **Kısa Açıklama**
 
 <br/>
 
 Eğitim katılımcılara NCBI, ENSEMBL ve UCSC genom tarayıcılarıyla ilgili temel ve gelişmiş beceriler kazandırmayı hedefler. Nükleotid ve gen veritabanlarına erişim, genom veri analizi araçlarını kullanma pratiği, ENSEMBL ve UCSC Genome Browser\'ları üzerinde uygulamalı çalışmalar gibi konuları içerir. Katılımcılar, genetik verilere erişme, analiz etme ve genom araştırmalarında daha etkili rol oynama yeteneklerini geliştirirken, bu eğitim aynı zamanda genetik ve genom analizi alanındaki gelecek trendlerini de değerlendirmelerini sağlar.
-
-<br/>
-
-<br/>
-
-**Cumartesi:**
-
-<br/>
-
-**Pazar:**
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
 
 <br/>
 
@@ -222,12 +202,6 @@ Bu ders temel biyoinformatik kavramlara aşina olanlar için tasarlanmıştır. 
 -   Biyoinformatikte Büyük Veri Eğitimi
 
 -   Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi
-
-<br/>
-
-**Eğitmen**
-
-<br/>
 
 <br/>
 

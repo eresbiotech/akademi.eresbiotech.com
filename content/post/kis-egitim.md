@@ -22,7 +22,7 @@ Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı 
 
 Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
 
-İlk dersimizde katılımcılara biyoinformatik yolculuklarında sağlam bir temel oluşturmayı hedefliyoruz. Daha sonraki derslere katılın ya da katılmayın biyoinformatik öğrenme süreçlerinizi geliştirecek bu ilk dersi kaçırmamanızı tavsiye ederiz.
+İlk derste katılımcılara biyoinformatik öğrenme sürecinde sağlam bir temel oluşturacak kavramsal bir çerçeve sunulur. Bu içerik, sonraki eğitimlere geçmeden önce alanı daha bilinçli tanımak isteyenler için hazırlanmıştır.
 
 Katılımcılar, gerçek dünya örnekleri ve uygulamalı çalışmalarla desteklenen interaktif bir ortamda, biyoinformatik dünyasında yolculuğa çıkacaklar. Bu ilk ders, biyoinformatiğin temellerini göstermek için çeşitli çalışmaları ve uygulamaları size sunacağız.
 
@@ -42,7 +42,7 @@ Katılımcılar, gerçek dünya örnekleri ve uygulamalı çalışmalarla destek
 
 -   Akademi Biyoinformatik Konuları: Güncel biyoinformatik araştırma konuları ve trendler.
 
--   Dersler Hakkında Detaylı Bilgi: Kurs içeriği, beklentiler ve sonuçlar hakkında bilgilendirme.
+-   Dersler Hakkında Detaylı Bilgi: Eğitim içeriği, beklentiler ve sonuçlar hakkında bilgilendirme.
 
 ---
 

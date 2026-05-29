@@ -41,6 +41,34 @@
 {{- $legacyContent = replaceRE "Bu eğitim katılımcılara biyomedikal dünyasında önemli bir oyuncu olma fırsatı sunar\\." "Bu eğitim, biyomedikal araştırmalarda kullanılan yapısal biyoinformatik yaklaşımlarını daha bilinçli değerlendirmenize yardımcı olur." $legacyContent -}}
 {{- $legacyContent = replaceRE "in silico Biyolojinin Gücünü Keşfedin" "in silico Biyolojiyi Anlama" $legacyContent -}}
 {{- $legacyContent = replaceRE "biyolojik sistemlerin sanal dünyasını keşfetme şansı elde edersiniz" "biyolojik sistemleri hesaplamalı yaklaşımlarla değerlendirme pratiği kazanırsınız" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<h3 id=eğitmen[^>]*>.*?</h3>\\s*<p>.*?</p>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<h3[^>]*>Eğitmen.*?</h3>\\s*<p>.*?</p>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<h3[^>]*>Eğitim Detayları</h3>\\s*<ul>\\s*<li><strong>Eğitmen.*?</ul>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<h3[^>]*>Eğitim Programı</h3>\\s*<ul>.*?</ul>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<p><strong>Eğitmen:?\\s*</strong>.*?</p>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<p><strong>Önde Gelen Bir Eğitmenden Eğitim Alın:?\\s*</strong>.*?</p>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<li><p><strong>Önde Gelen Bir Eğitmenden Eğitim Alın:?\\s*</strong>.*?</p></li>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<h3 id=eğitim-programı[^>]*>.*?</h3>\\s*<ul>.*?</ul>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<li><p>\\s*(Cumartesi|Pazar)\\s*:?\\s*</p>\\s*</li>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<p>\\s*(Cumartesi|Pazar)\\s*:?\\s*</p>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<p><strong>\\s*(Cumartesi|Pazar)\\s*:?\\s*</strong></p>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<li>\\s*(Cumartesi|Pazar)\\s*:?\\s*</li>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<p>.*?(canlı ders|canlı oturum|hafta sonu|hafta içi).*?</p>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<li>.*?(canlı ders|canlı oturum|hafta sonu|hafta içi).*?</li>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "(?is)<p>.*?(10:|11:|12:|13:|14:|15:|16:|17:).*?</p>" "" $legacyContent -}}
+{{- $legacyContent = replaceRE "2024\\s+" "" $legacyContent -}}
+{{- if eq .File.BaseFileName "contact" -}}
+<article class="container page-shell page-narrow">
+  <header class="page-header soft-hero">
+    <p class="eyebrow">ERES Akademi</p>
+    <h1>{{ $displayTitle }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  </header>
+  <div class="content-card prose">
+    {{ .Content }}
+  </div>
+</article>
+{{- else -}}
 <article class="container page-shell training-page">
   <header class="page-header training-hero training-hero-grid">
     <div>
@@ -49,7 +77,7 @@
       {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
       <div class="meta-row">
         <span>Kendi hızınızda</span>
-        <span>Videolu eğitim</span>
+        <span>Asenkron erişim</span>
         <span>Uygulama odaklı</span>
       </div>
       <div class="hero-actions">
@@ -68,11 +96,11 @@
   <div class="training-layout">
     <aside class="training-sidebar" aria-label="Eğitim özeti">
       <div class="sidebar-card decision-card">
-        <p class="eyebrow">Hızlı karar</p>
+        <p class="eyebrow">Eğitim özeti</p>
         <h2>Bu eğitim size uygunsa bugün başlayabilirsiniz.</h2>
         <ul>
           <li>Kendi hızınızda</li>
-          <li>Videolu eğitim</li>
+          <li>Asenkron ve videolu eğitim</li>
           <li>Uygulama odaklı</li>
           <li>Öğrenci, araştırmacı ve profesyoneller için uygun</li>
         </ul>
@@ -148,7 +176,7 @@
         <p class="eyebrow">Eğitim formatı</p>
         <h2>Eğitim formatı</h2>
         <div class="format-panel">
-          <p>Bu eğitim kendi hızınızda ilerleyebileceğiniz, videolu ve tekrar izlenebilir bir yapı ile sunulur. Amaç, yoğun akademik veya profesyonel takviminize uyum sağlayan, araştırma pratiğine yakın ve net bir öğrenme akışı oluşturmaktır.</p>
+          <p>Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.</p>
           <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
         </div>
       </section>
@@ -157,6 +185,7 @@
         <p class="eyebrow">Kayıt seçenekleri</p>
         <h2>Kayıt Seçenekleri</h2>
         <p class="pricing-intro">Size uygun erişim türünü seçerek Payhip üzerinden güvenli ödeme adımına geçebilirsiniz.</p>
+        <p class="course-trust-note">Bu eğitim asenkron yapıdadır. Kaydınızı tamamladıktan sonra ders içeriklerine çevrimiçi olarak erişebilirsiniz.</p>
         {{ if $hasPricingPlans }}
           <div class="course-pricing-grid">
             <article class="pricing-card pricing-card-featured">
@@ -173,6 +202,7 @@
               <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">Çalışan Olarak Başla</a>
             </article>
           </div>
+          <p class="payment-note">Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranındaki taksit seçeneklerini inceleyebilirsiniz. Havale/EFT için bizimle iletişime geçebilirsiniz.</p>
         {{ else }}
           <div class="format-panel">
             <p>Kayıt ve erişim süreci için hazır olduğunuzda eğitime başlayabilir; sorularınız varsa iletişim sayfasından bize ulaşabilirsiniz.</p>
@@ -186,16 +216,28 @@
         <h2>Sık sorulan sorular</h2>
         <div class="faq-grid">
           <article>
-            <h3>Eğitimi kendi hızımda takip edebilir miyim?</h3>
-            <p>Evet. Eğitim yapısı, dersleri kendi programınıza göre takip etmenizi ve gerektiğinde analiz adımlarına tekrar dönmenizi destekler.</p>
+            <h3>Bu eğitim canlı mı, asenkron mu?</h3>
+            <p>Bu eğitim asenkron yapıdadır. Ders içeriklerine kendi programınıza göre erişebilir, ihtiyaç duyduğunuz bölümleri tekrar izleyerek ilerleyebilirsiniz.</p>
           </article>
           <article>
-            <h3>Ön bilgi gerekiyor mu?</h3>
-            <p>Gereken seviye eğitime göre değişebilir. Emin değilseniz eğitim detayını inceleyebilir veya iletişime geçebilirsiniz.</p>
+            <h3>Kayıt olduktan sonra derslere nasıl erişeceğim?</h3>
+            <p>Ödeme sürecini tamamladığınızda kaydınız otomatik olarak oluşturulur. Ardından eğitim içeriklerine çevrimiçi olarak erişebilirsiniz.</p>
           </article>
           <article>
-            <h3>Kurumsal veya grup talepleri için ne yapmalıyım?</h3>
-            <p>Araştırma grupları, laboratuvarlar ve kurumlar için ihtiyaçlarınızı iletişim sayfasından paylaşabilirsiniz.</p>
+            <h3>Kredi kartı ile ödeme ve taksit imkânı var mı?</h3>
+            <p>Evet. Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranında kartınızın sunduğu taksit seçeneklerinden yararlanabilirsiniz. Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
+          </article>
+          <article>
+            <h3>Öğrenci erişiminden kimler yararlanabilir?</h3>
+            <p>Lisans, yüksek lisans ve doktora öğrencileri öğrencilere özel avantajlı erişim seçeneğinden yararlanabilir.</p>
+          </article>
+          <article>
+            <h3>Hangi eğitimden başlamam gerektiğinden emin değilsem ne yapmalıyım?</h3>
+            <p>Anasayfadaki “Doğru başlangıç sırası” bölümünden size en yakın öğrenme yolunu inceleyebilir veya kararsız kaldığınız durumda bizimle iletişime geçebilirsiniz.</p>
+          </article>
+          <article>
+            <h3>Bu eğitim için kodlama bilmem gerekiyor mu?</h3>
+            <p>Gereken ön bilgi eğitimden eğitime değişebilir. Giriş ve temel seviye eğitimlerde adım adım ilerleyen bir yapı sunulur; ileri analiz eğitimlerinde ise ilgili konuya temel aşinalık öğrenme sürecini kolaylaştırır.</p>
           </article>
         </div>
       </section>
@@ -219,4 +261,5 @@
     </div>
   </div>
 </article>
+{{- end -}}
 {{ end }}

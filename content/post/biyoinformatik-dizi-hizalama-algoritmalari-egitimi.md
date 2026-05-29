@@ -97,7 +97,7 @@ Bu eğitimde elde edeceğiniz kazanımlar arasında protein ve nükleotid dizile
 
 <br/>
 
-\"Cumartesi
+Bu eğitim bu turda aktif satışa açılmamıştır. İçerik yayına hazırlandığında asenkron ve videolu öğrenme yapısıyla sunulacaktır.
 
 <br/>
 

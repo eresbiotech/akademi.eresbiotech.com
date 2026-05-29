@@ -69,15 +69,13 @@ Bu eğitim, yüksek işlem hacimli veri kavramını anlamanızı, biyoinformatik
 
 <br/>
 
-**Kısa Açıklama:** Bu eğitim, biyoinformatiğin tarihsel gelişiminden başlayarak, öğrencilere bu alanın temel kavramlarını ve konularını anlamalarını sağlamaktadır. Ayrıca, proteomik, genomik ve transkriptomik gibi büyük veri odaklı konulara teorik bir perspektif sunarak, biyoloji veya yaşam bilimleri dışından gelen öğrencilere uygun bir giriş niteliği taşımaktadır.
+**Kısa Açıklama:** Bu eğitim, biyoinformatiğin tarihsel gelişiminden başlayarak alanın temel kavramlarını ve veri odaklı araştırma yaklaşımını anlaşılır bir çerçevede ele alır. Proteomik, genomik ve transkriptomik gibi high-throughput data başlıklarına giriş yapmak isteyen yaşam bilimleri öğrencileri ve araştırmacıları için yapılandırılmış bir öğrenme akışı sunar.
 
 <br/>
 
 <br/>
 
--   Cumartesi:
-
--   Pazar:
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
     <br/>
 

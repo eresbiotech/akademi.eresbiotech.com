@@ -1,63 +1,29 @@
 ---
-title: 'Kurumsal ve Bireysel Hizmetler'
-button: 'Our Work'
+title: "Hizmetler"
+button: "Hizmetler"
 weight: 1
+description: "Bireysel ve kurumsal biyoinformatik eğitim talepleri için uygulama odaklı, asenkron ve araştırma pratiğine yakın öğrenme çözümleri."
 ---
 
-## Biz Kimiz?
+## Bireysel eğitimler
 
-ERES Biyoinformatik Akademi, biyoinformatik ve hesaplamalı biyoloji alanında öncü eğitimler sağlayan ERES Biyoteknolojinin yeni platformudur. Amacımız, biyoloji, biyoteknoloji, biyomedikal, tıp, sağlık bilimleri, veterinerlik, ziraat gibi yaşam bilimlerinde geniş bir yelpazedeki profesyonellerin ve kurumların biyoinformatik alanındaki uzmanlıklarını geliştirmelerine yardımcı olmaktır.
+ERES Biyoinformatik Akademi, biyoinformatik ve hesaplamalı biyoloji alanlarında kendi hızınızda ilerleyebileceğiniz asenkron eğitimler sunar. Eğitimler; temel kavramları, analiz araçlarını ve veri yorumlama yaklaşımını adım adım yapılandırılmış bir öğrenme akışı içinde ele alır.
 
-<div style="display:block; width:100%; height: 50px;"></div>
+Biyoinformatiğe nereden başlayacağınızdan emin değilseniz anasayfadaki **Doğru başlangıç sırası** bölümünden size en yakın öğrenme yolunu inceleyebilirsiniz. Her eğitim sayfasında öğrenci ve çalışan erişim seçenekleri, eğitim formatı ve sık sorulan sorular açık biçimde yer alır.
 
-## İşimiz Nedir?
+## Kurumsal ve grup talepleri
 
-Biyoinformatik ve hesaplamalı biyoloji eğitimleri sunarak bireylere ve kurumlara sektördeki en güncel bilgileri kazandırmayı amaçlıyoruz. Araştırmacıların ihtiyaç duyduğu yeni ve güncel çalışma alanlarında hızlı ve etkili eğitimler sağlıyoruz. Eğitimlerimiz geniş kapsamlı konu yelpazemizle biyoinformatik alanında uzmanlaşmalarını hızla sağlamalarına olanak tanır. Bu güne kadar pek çok akademisyen ve özel sektör profesyöneline uygulamalı derslerle ihtiyaçları doğrultusunda alanlarında hızlanmalarına yardım ettik, ülkemizde bu alanın hızlanmasında rol oynadık. 
+Araştırma grupları, laboratuvarlar, akademik birimler ve kurumlar için biyoinformatik öğrenme ihtiyaçlarını birlikte değerlendirebiliriz. Kurumsal taleplerde amaç, ekibin mevcut deneyimine ve araştırma hedeflerine uygun bir öğrenme akışı oluşturmaktır.
 
-<div style="display:block; width:100%; height: 50px;"></div>
+Kurumsal eğitim, grup erişimi veya araştırma ekibinize uygun öğrenme planı için [İletişim](/post/contact/) sayfasından bize ulaşabilirsiniz.
 
-## Neler Sunuyoruz?
+## Öğrenme yaklaşımı
 
-<div style="display:block; width:100%; height: 50px;"></div>
+- **Uygulama odaklı eğitim:** Kavramlar, araç kullanımı ve analiz mantığı araştırma pratiğine yakın örneklerle desteklenir.
+- **Asenkron erişim:** Ders içeriklerine çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+- **Tekrarlanabilir analiz yaklaşımı:** Eğitimler, analiz adımlarını daha bilinçli takip etmenizi ve çıktıların nasıl yorumlanacağını anlamanızı hedefler.
+- **Yaşam bilimleri araştırmacıları için:** İçerikler öğrenciler, akademisyenler, laboratuvar ekipleri ve sektör profesyonelleri için anlaşılır bir dilde kurgulanır.
 
-### Bireysel Eğitimler: 
-Kendi uzmanlık yolunuzu çizebileceğiniz birçok eğitim patikası ile biyoinformatikte gelişim sağlamanıza yardımcı oluyoruz. Canlı dersler ve asenkron öğrenme seçenekleri ile esnek bir öğrenme ortamı sunuyor, teorik ve pratik bilgileri bir araya getiren kapsamlı içeriklerle donatılmış eğitimler sunuyoruz.
+## Ödeme ve erişim
 
-<div style="display:block; width:100%; height: 50px;"></div>
-
-### Kurumsal Eğitimler: 
-
-Kurumsal müşterilerimize özel grup eğitimleri ya da asenkron online sınıflar hazırlayarak, çalışanlarınızın ve kurumunuzun biyoinformatik alanındaki bilgi ve becerilerini geliştirmelerine destek oluyoruz. Eğitim kurumlarından sağlık kurumlarına kadar geniş bir yelpazedeki kurumlarla işbirliği yaparak, özel eğitim programları tasarlıyoruz. Kendi kurumunuz ya da sponsor olmak sitediğiniz kurumlar için eğitim düzenleme taleplerinizi info@eresbiotech.com adresine iletebilirsiniz. 
-
-<div style="display:block; width:100%; height: 50px;"></div>
-
-## Faydalarımız:
-
-<div style="display:block; width:100%; height: 50px;"></div>
-
- **- Sektörde Deneyimli Kadro:** Biyoinformatik alanında deneyimli ve dinamik bir eğitim kadrosu ile en güncel bilgileri sizlere sunuyoruz.
- 
- **- Esnek Öğrenme Ortamı:** Canlı dersler ve asenkron öğrenme seçenekleri ile kendi hızınıza göre öğrenme imkanı sağlıyoruz.
-
-**- Uygulamalı Yaklaşım:** Teorik bilgilerinizi pratik uygulamalarla destekleyerek, kalıcı öğrenmeyi hedefliyoruz.
-
-**- Kurumsal İşbirlikleri:** Kurumların ihtiyaçlarına özel eğitim programları tasarlayarak, biyoinformatik alanında kurumsal gelişimlerine katkıda bulunuyoruz.
-
-<div style="display:block; width:100%; height: 50px;"></div>
-
-## Neden Bizi Seçmelisiniz?
-
-Biyoinformatik alanındaki uzmanlığınızı geliştirmeniz ve kariyerinizi zirveye taşımanız için yoğun programınızın içinde size en uygun ortamı sağlıyoruz. Sektördeki öncü konumumuz, esnek öğrenme seçeneklerimiz ve uygulamalı yaklaşımımız ile fark yaratıyoruz. Bize katılın, biyoinformatikteki geleceğinizi birlikte inşa edelim!
-
-
-<div style="display:block; width:100%; height: 50px;"></div>
-<div style="display:block; width:100%; height: 50px;"></div>
-
-"LET YOUR IMAGINATION RUN FREE: WHAT PROBLEMS DO YOU WANT TO SOLVE FIRST?"<br>
-— <cite>Jennifer Doudna[^1]</cite>
-<div style="display:block; width:100%; height: 50px;"></div>
-<div style="display:block; width:100%; height: 50px;"></div>
-<div style="display:block; width:100%; height: 50px;"></div>
-<div style="display:block; width:100%; height: 50px;"></div>
-<div style="display:block; width:100%; height: 50px;"></div>
-[^1]: Innovative Genomics Institute Founder, Developer of CRISPR, and 2020 Nobel Prize Winner, [IGI](https://innovativegenomics.org/crispr-classroom-kit/)
+Aktif eğitimlerde kayıt işlemleri Payhip üzerinden güvenli ödeme adımıyla tamamlanır. Kredi kartı ile ödeme yapabilir, ödeme ekranındaki taksit seçeneklerini inceleyebilirsiniz. Havale/EFT veya kurumsal kayıt talepleriniz için bizimle iletişime geçebilirsiniz.

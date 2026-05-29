@@ -52,20 +52,17 @@ Omik teknolojilere ilgi duyan, bu alanda çalışan veya çalışmayı planlayan
 - Kişisel bilgisayar ve internet erişimi.
 
 ### Neden Bu Eğitime Katılmalısınız?
-- **Kariyerinizi Geliştirin:** Biyoinformatik alanında gerekli bilgi ve becerileri edineceksiniz.
-- **Rekabet Avantajı Sağlayın:** Projelerinizde ve yayınlarınızda R araçlarını kullanarak fark yaratacaksınız.
-- **Uygulamalı Deneyim:** Gerçek dünya uygulamaları ve uzman eğitmenlerle interaktif bir öğrenme süreci sizi bekliyor.
-- **Sektör Ağı:** Yaşam bilimleri alanındaki uzmanlarla tanışma ve güncel gelişmeleri takip etme fırsatı.
+- **Araştırma becerilerinizi güçlendirin:** Biyoinformatik alanında R tabanlı analiz yaklaşımını adım adım takip edebilirsiniz.
+- **Tekrarlanabilir analiz pratiği kazanın:** Projelerinizde ve yayın hazırlıklarınızda R araçlarını daha bilinçli kullanabilirsiniz.
+- **Uygulama odaklı ilerleyin:** Gerçek veriyle çalışma pratiğine yakın örneklerle temel analiz adımlarını kavrarsınız.
+- **Kendi hızınızda öğrenin:** Ders içeriklerine çevrimiçi erişerek ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
-### Eğitim Detayları
-- **Eğitmen:** MSc. Tarık KIRLIOĞLU
+### Asenkron Eğitim Yapısı
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
-### Eğitim Programı
+### Eğitim Akışı
 * **1. Hafta:** R Programlama Dili ile Biyolojik Verilerin Analizi: Temel R ve Temel Paketler (Değişkenler, Veri tipleri, Operatörler, Döngüler, Fonksiyonlar, dplyr, tidyverse, ggplot)
 * **2. Hafta:** Bioconductor ile İleri Analiz (Seurat, DESeq2, SingleR, GEOquery)
-
-### Eğitmen: MSc. Tarık KIRLIOĞLU
-Tarık Kırlıoğlu, Bursa Uludağ Üniversitesi Moleküler Biyoloji ve Genetik Bölümü mezunudur. Yüksek lisansını Ankara Üniversitesi Biyoteknoloji Anabilim Dalı'nda tamamlamıştır. Genomik ve transkriptomik verilerin (WGS, WES, RNA-seq, qRT-PCR) analizi üzerine uzmanlaşmıştır. Akademik kariyeri boyunca birçok araştırma projesinde yer almış ve biyoinformatik alanında geniş kapsamlı eğitimler vermektedir.
 
 ---
 

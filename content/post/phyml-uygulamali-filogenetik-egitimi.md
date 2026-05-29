@@ -85,17 +85,17 @@ Temel biyoinformatik kavramları bilenlere tavsiye edilir. Daha önce biyoinform
 
 <br/>
 
--   **İleri Veri Analizi Becerileri:** Kurs, DNA dizi hizalama teknikleri, filogenetik ağaçlar ve fillogenetik ağaç oluşturma gibi konularda ileri veri analizi becerilerini geliştirmeyi hedefler.
+-   **İleri Veri Analizi Becerileri:** Eğitim, DNA dizi hizalama teknikleri, filogenetik ağaçlar ve filogenetik ağaç oluşturma gibi konularda analiz becerilerinizi güçlendirmeyi hedefler.
 
 -   **Uzman Programla Öğrenme:** Eğitim, DNA dizilerinden filogenetik ağaçlar oluşturmak için gereken yetkinliklerin kazanılması için uzman bir program çerçevesinde hazırlanmıştır.
 
--   **Güncel ve Pratik Bilgi:** Eğitim, alandaki son gelişmeleri içerir. Güncel ve pratik bilgi, işinize daha fazla değer katmanızı sağlayacak ve sizi diğer profesyonellerden ayıracaktır.
+-   **Güncel ve Pratik Bilgi:** Eğitim, alandaki güncel yaklaşımları araştırma pratiğine yakın örneklerle ele alır.
 
 -   **Uygulamalı Dersler:** Dersteki dizi hizalama ve filogenetik ağaç uygulamaları, teorik bilgiyi pratikte nasıl uygulayacağınızı öğrenmenize olanak tanır ve öğrendiklerinizin kalıcı olmasını ve çalışmalarınızda kullanmanızı sağlar.
 
--   **Kişisel ve Profesyonel Gelişim:** Bu eğitim, kariyerinizi ileri taşımanıza yardımcı olacak pratik beceriler ve bilgiler sunar. Bu kursta öğrendiğiniz teknikleri aaraştırma projeleriniz ve yayınlarınızda kullanabilirsiniz. Yeni teknikleri öğrenmek ve uygulamak, hem kişisel hem de profesyonel gelişiminiz için önemli bir adımdır.
+-   **Araştırma Pratiği:** Bu eğitimde ele alınan teknikleri araştırma projelerinizde, veri yorumlama süreçlerinizde ve yayın hazırlıklarınızda daha bilinçli değerlendirebilirsiniz.
 
--   **İngilizce eğitimle globali takip imkanı:** Dersler İngilizce eğitim materyalleri ile sürmektedir. Çalışma çıktılarınızı İngillizce olarak yazmanızı ve yayınlamanızı destekleyecektir. Böylece global terimleri ve treendleri takip etmeniz kolaylaşacaktır.
+-   **Alan Terminolojisi:** İngilizce eğitim materyalleriyle çalışarak filogenetik analiz terminolojisini ve güncel literatür dilini daha rahat takip edebilirsiniz.
 
 <br/>
 
@@ -139,7 +139,7 @@ Bu eğitim, dizi hizalama ve filogenetik analiz konularında temel ve ileri düz
 
 <br/>
 
-Pazar:\
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 <br/>
 

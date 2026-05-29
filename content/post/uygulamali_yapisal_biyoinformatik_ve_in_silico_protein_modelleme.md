@@ -33,15 +33,15 @@ Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığı
 
 <br/>
 
-Yapısal biyoinformatik eğitimi yaşam bilimlerinde in silico biyolojinin önemli bir bileşeni olan in silico protein modelleme ve ilgili kavramları uygulamalı öğrenmeniz için tasarlanmıştır. Bu eğitimde katılımcılara biyolojik makromoleküllerin kompleks yapısını anlama ve analiz etme yetenekleri kazandırılır. Homoloji modelleme, protein-protein etkileşim analizi ve ilaç keşfi gibi konuları içeren kurs içeriği modern biyoteknoloji ve ilaç geliştirme süreçlerinde kilit bir rol oynayan in silico metodolojileri öğretir.
+Yapısal biyoinformatik eğitimi, yaşam bilimlerinde in silico protein modelleme ve ilgili kavramları uygulama odaklı biçimde öğrenmeniz için tasarlanmıştır. Bu eğitimde biyolojik makromoleküllerin yapısını yorumlama, homoloji modelleme, protein-protein etkileşim analizi ve ilaç keşfi süreçlerinde kullanılan temel yaklaşımları adım adım takip edersiniz.
 
 <br/>
 
-Yapısal biyoinformatiğin temel prensiplerini kavramak biyolojik sistemlerin anlaşılmasında önemlidir ve yeni keşiflere katkı sağlamanın bir yoludur. Katılımcılar bu eğitimden elde edecekleri donanımla biyoteknoloji ve ilaç endüstrisindeki zorlu sorunları çözebilecekleri ve gelecekteki sağlık inovasyonlarına liderlik edebilecekleri güçlü bir temel oluştururlar.
+Yapısal biyoinformatiğin temel prensiplerini kavramak, biyolojik sistemleri moleküler düzeyde daha bilinçli yorumlamayı sağlar. Eğitim sonunda in silico yaklaşımların araştırma ve uygulama süreçlerinde nasıl konumlandığını daha net değerlendirebilirsiniz.
 
 <br/>
 
-Eğer biyolojik bilimlere ilgi duyuyor ve bu alanda kariyer yapmak istiyorsanız, yapısal biyoinformatik eğitimi sizin için vazgeçilmez bir bilgi kaynağı olacaktır. Bu derse katılarak, biyomedikal dünyasında önemli bir oyuncu olma yolunda adım atabilir ve bilgi birikiminizi zenginleştirerek geleceğin biyolojik keşiflerine katkıda bulunabilirsiniz.
+Biyolojik bilimlerde çalışıyor veya bu alana yöneliyorsanız, yapısal biyoinformatik eğitimi araştırma sorularınızı in silico yaklaşımlarla desteklemeniz için yapılandırılmış bir temel sunar.
 
 <br/>
 
@@ -93,7 +93,7 @@ Temel biyoinformatik kavramları bilenlere tavsiye edilir. Daha önce biyoinform
 
 <br/>
 
--   **İleri Veri Analizi Becerileri:** Kurs, DNA dizi hizalama teknikleri, filogenetik ağaçlar ve fillogenetik ağaç oluşturma gibi konularda ileri veri analizi becerilerini geliştirmeyi hedefler.
+-   **İleri Veri Analizi Becerileri:** Eğitim, protein yapısı, modelleme ve in silico analiz başlıklarında araştırma becerilerinizi güçlendirmeyi hedefler.
 
 -   **in silico Biyolojinin Gücünü Keşfedin:** Bu eğitim biyoinformatik alanında in silico biyolojiye odaklanarak, bilgisayar tabanlı araştırmaların biyolojik bilimlere nasıl güç kattığını öğretir. in silico metodolojilerle çalışarak biyolojik sistemlerin sanal dünyasını keşfetme şansı elde edersiniz.
 
@@ -159,13 +159,13 @@ Bu eğitim katılımcılara biyoloji ve bilgisayar bilimleri arasındaki kesişi
 
 <br/>
 
-**Kısa Açıklama:** Bu kapsamlı kurs, katılımcılara yapısal biyoinformatiğin temel kavramlarını anlama fırsatı sunar. Homoloji modelleme, ilaç keşfi ve protein fonksiyon tahmini gibi önemli konuları içererek protein yapılarının analizi konusunda derin bir bilgi sağlar. SWISS-MODEL ve AutoDock Vina gibi uygulamalı araçları kullanarak katılımcılar, teorik bilgilerini pratikte nasıl uygulayacaklarını öğrenirler.
+**Kısa Açıklama:** Bu kapsamlı eğitim, yapısal biyoinformatiğin temel kavramlarını ve in silico protein modelleme yaklaşımını uygulama odaklı biçimde ele alır. Homoloji modelleme, ilaç keşfi ve protein fonksiyon tahmini gibi başlıklarda SWISS-MODEL ve AutoDock Vina gibi araçlarla çalışma pratiği kazanırsınız.
 
 <br/>
 
 <br/>
 
- Cumartesi:
+Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 <br/> 
  

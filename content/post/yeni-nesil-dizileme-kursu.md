@@ -107,9 +107,7 @@ Temel biyoinformatik kavramlarına aşina olmak.
 
 <br/>
 
--   Cumartesi:
-
--   Pazar:
+Bu eğitim presale/hazırlık aşamasındadır ve bu turda aktif satışa açılmamıştır. İçerik yayına hazırlandığında asenkron ve videolu öğrenme yapısıyla sunulacaktır.
 
     <br/>
 
@@ -144,10 +142,6 @@ Temel biyoinformatik kavramlarına aşina olmak.
 <br/>
 
 **[Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi](https://akademi.eresbiotech.com/post/biyoinformatik-veritabanlari-araclar-egitimi/)** 
-
-<br/>
-
-**Eğitmen:** Selda Akdal ve Bioinformay Komisyonu
 
 <br/>
 

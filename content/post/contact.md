@@ -2,89 +2,37 @@
 author = "Eres Biyoinformatik Akademi"
 title = "İletişim"
 date = "2023-12-20"
-description = "İletişim formu aşağıda yer almaktadır. Forma istediğiniz eğitimi ya da sormak istediğiniz konuları yazabilirsiniz. En kısa sürede geri dönüş sağlayacağız. Eğer e-postanızın ulaşmadığını düşünüyorsanız info@eresbiotech.com adresinden bize ulaşabilirsiniz."
-
+description = "Eğitim seçimi, ödeme, Havale/EFT, kurumsal talepler ve öğrenme yolu konusunda bize ulaşabilirsiniz."
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
-
-categories = [
-    "themes",
-    "syntax",
-]
+categories = ["iletisim"]
 +++
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Örneği</title>
-  <!-- İhtiyaca göre CSS ve diğer başlık etiketlerini ekleyebilirsiniz -->
-</head>
-<body>
+## Bize ulaşın
 
-<form onsubmit="submitForm(event)" action="https://public.herotofu.com/v1/a80f8270-abf5-11ee-8fa9-872d80d8eac1" method="post" accept-charset="UTF-8">
-  <div class="row m-3">
-    <div class="col-4">
-      <label for="name">İsminiz</label>
-    </div>
-    <div class="col-8">
-      <input
-        type="text"
-        placeholder="İsminiz"
-        name="name"
-        class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-        required
-      />
-    </div>
-  </div>
+Hangi eğitimden başlamanız gerektiğinden emin değilseniz, öğrenci/çalışan erişim seçenekleri hakkında bilgi almak istiyorsanız veya kurumsal bir talebiniz varsa bize yazabilirsiniz.
 
-  <div class="row m-3">
-    <div class="col-4">
-      <label for="email">E-posta adresiniz</label>
-    </div>
-    <div class="col-8">
-      <input
-        type="email"
-        placeholder="E-posta"
-        name="email"
-        class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-        required
-      />
-    </div>
-  </div>
+Kredi kartı ile güvenli ödeme ve ödeme ekranındaki taksit seçenekleri Payhip üzerinden sunulur. Havale/EFT ile kayıt olmak veya kurumsal kayıt sürecini görüşmek isterseniz mesajınızda kısaca belirtmeniz yeterlidir.
 
-  <div class="row m-3">
-    <div class="col-4"> 
-      <label for="message">Bize iletmek istediğiniz mesaj</label>
-    </div>
-    <div class="col-8">
-      <textarea
-        placeholder="Hangi ders hakkında bilgi almak istersiniz?"
-        name="message"
-        class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-        required
-      ></textarea>
-    </div>
-  </div>
+E-postanızın ulaşmadığını düşünürseniz bize doğrudan [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden de ulaşabilirsiniz.
 
-  <div class="row m-5">
-    <div class="col-8 offset-md-4">
-      <input type="submit" class="btn btn-danger" value="Mesajı Gönder" />
-    </div>
-    <div style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;" aria-hidden="true">
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
-    </div>
+<form class="contact-form" action="https://public.herotofu.com/v1/a80f8270-abf5-11ee-8fa9-872d80d8eac1" method="post" accept-charset="UTF-8">
+  <label>
+    <span>İsminiz</span>
+    <input type="text" placeholder="Adınız ve soyadınız" name="name" required>
+  </label>
+
+  <label>
+    <span>E-posta adresiniz</span>
+    <input type="email" placeholder="ornek@eposta.com" name="email" required>
+  </label>
+
+  <label>
+    <span>Mesajınız</span>
+    <textarea placeholder="Eğitim seçimi, ödeme, kurumsal kayıt veya Havale/EFT talebinizi yazabilirsiniz." name="message" required></textarea>
+  </label>
+
+  <button type="submit">Mesajı Gönder</button>
+  <div style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;" aria-hidden="true">
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
   </div>
 </form>
-
-<script>
-  function submitForm(event) {
-    // Formun otomatik olarak gönderilmesine izin ver
-    // Bu durumda, formun action URL'sine yönlendirme gerçekleşir.
-    // Not: Bu durumda fetch kullanmanıza gerek yok.
-  }
-</script>
-
-</body>
-</html>
-
