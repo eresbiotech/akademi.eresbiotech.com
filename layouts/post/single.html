@@ -13,6 +13,34 @@
 {{- end -}}
 {{- $studentLabel := .Params.student_plan_label | default "Öğrenci" -}}
 {{- $employeeLabel := .Params.employee_plan_label | default "Çalışan" -}}
+{{- $legacyContent := .Content -}}
+{{- $legacyContent = replaceRE "Havale ya da EFT yapmak isteyenler[^<]*(<a[^>]*>[^<]*</a>|info@eresbiotech.com)[^<]*\\." "Sorularınız için info@eresbiotech.com adresinden bizimle iletişime geçebilirsiniz." $legacyContent -}}
+{{- $legacyContent = replaceRE "Bu eğitimle kariyerinize yeni bir boyut ekleyin!?" "Bu eğitimle veri analizi pratiğinizi daha yapılandırılmış biçimde geliştirebilirsiniz." $legacyContent -}}
+{{- $legacyContent = replaceRE "kariyerinizi ileri taşımanıza yardımcı olacak" "araştırma ve analiz becerilerinizi geliştirmenize yardımcı olacak" $legacyContent -}}
+{{- $legacyContent = replaceRE "Kurs, " "Eğitim, " $legacyContent -}}
+{{- $legacyContent = replaceRE "kurs içeriği" "eğitim içeriği" $legacyContent -}}
+{{- $legacyContent = replaceRE "Bu kursta" "Bu eğitimde" $legacyContent -}}
+{{- $legacyContent = replaceRE "Bu kapsamlı kurs" "Bu kapsamlı eğitim" $legacyContent -}}
+{{- $legacyContent = replaceRE "İngilizce eğitimle globali takip imkanı" "İngilizce kaynaklarla alan terminolojisini takip etme" $legacyContent -}}
+{{- $legacyContent = replaceRE "global terimleri ve treendleri" "alan terminolojisini ve güncel yaklaşımları" $legacyContent -}}
+{{- $legacyContent = replaceRE "Kariyerinizi Geliştirin" "Araştırma Becerilerinizi Güçlendirin" $legacyContent -}}
+{{- $legacyContent = replaceRE "Rekabet Avantajı Sağlayın" "Analiz Pratiğinizi Güçlendirin" $legacyContent -}}
+{{- $legacyContent = replaceRE "Sektör Ağı" "Alan Bağlamı" $legacyContent -}}
+{{- $legacyContent = replaceRE "kariyer yapmayı hedefleyenlere yönelik önemli bir fırsat sunuyor" "yaşam bilimleri araştırmacıları için yapılandırılmış bir öğrenme akışı sunar" $legacyContent -}}
+{{- $legacyContent = replaceRE "rekabetçi bir ortamda öne çıkmak için gereken yetenekleri edinebilirsiniz" "analiz süreçlerini daha bilinçli takip etme becerinizi geliştirebilirsiniz" $legacyContent -}}
+{{- $legacyContent = replaceRE "biyomedikal dünyasında önemli bir oyuncu olma yolunda adım atabilir" "biyomedikal araştırmalarda daha bilinçli bir uygulama pratiği geliştirebilir" $legacyContent -}}
+{{- $legacyContent = replaceRE "vazgeçilmez bir bilgi kaynağı" "yapılandırılmış bir öğrenme kaynağı" $legacyContent -}}
+{{- $legacyContent = replaceRE "kariyer yapmak istiyorsanız" "bu alanda çalışıyorsanız" $legacyContent -}}
+{{- $legacyContent = replaceRE "sektördeki rekabet avantajınızı artırarak, geleceğin biyomedikal profesyoneli olma yolunda size önemli bir destek sağlar" "araştırma ve uygulama süreçlerini daha bilinçli takip etmenize yardımcı olur" $legacyContent -}}
+{{- $legacyContent = replaceRE "geleceğin biyomedikal keşiflerine liderlik edebilme yeteneğini kazanırsınız" "biyomedikal araştırma süreçlerini daha bilinçli yorumlama becerinizi geliştirirsiniz" $legacyContent -}}
+{{- $legacyContent = replaceRE "işinize daha fazla değer katmanızı sağlayacak ve sizi diğer profesyonellerden ayıracaktır" "araştırma ve uygulama süreçlerini daha bilinçli yorumlamanıza yardımcı olur" $legacyContent -}}
+{{- $legacyContent = replaceRE "dikakt çeken çalışmalarla öne çıkmanızı sağlar" "analiz çıktılarınızı daha bilinçli değerlendirmenize yardımcı olur" $legacyContent -}}
+{{- $legacyContent = replaceRE "Eğer biyolojik bilimlere ilgi duyuyor ve bu alanda bu alanda çalışıyorsanız" "Biyolojik bilimlerde çalışıyor veya bu alana yöneliyorsanız" $legacyContent -}}
+{{- $legacyContent = replaceRE "Kariyerinizi ileri taşıyın" "Uygulama Pratiğinizi Geliştirin" $legacyContent -}}
+{{- $legacyContent = replaceRE "kariyer yapma hedefinde olanlar" "bu alanda çalışan veya çalışmayı planlayanlar" $legacyContent -}}
+{{- $legacyContent = replaceRE "Bu eğitim katılımcılara biyomedikal dünyasında önemli bir oyuncu olma fırsatı sunar\\." "Bu eğitim, biyomedikal araştırmalarda kullanılan yapısal biyoinformatik yaklaşımlarını daha bilinçli değerlendirmenize yardımcı olur." $legacyContent -}}
+{{- $legacyContent = replaceRE "in silico Biyolojinin Gücünü Keşfedin" "in silico Biyolojiyi Anlama" $legacyContent -}}
+{{- $legacyContent = replaceRE "biyolojik sistemlerin sanal dünyasını keşfetme şansı elde edersiniz" "biyolojik sistemleri hesaplamalı yaklaşımlarla değerlendirme pratiği kazanırsınız" $legacyContent -}}
 <article class="container page-shell training-page">
   <header class="page-header training-hero training-hero-grid">
     <div>
@@ -59,11 +87,11 @@
       <section class="quick-decision">
         <article>
           <h2>Bu eğitim size uygun mu?</h2>
-          <p>Bu eğitim; teoriyi uygulamaya çevirmek, araçları daha bilinçli kullanmak ve biyoinformatik analiz becerilerini adım adım geliştirmek isteyenler için sade bir başlangıç noktası sunar.</p>
+          <p>Bu eğitim; biyoinformatik araçları daha bilinçli kullanmak, araştırma sorularına uygun analiz adımlarını seçmek ve uygulama pratiğini adım adım güçlendirmek isteyenler için yapılandırılmıştır.</p>
         </article>
         <article>
           <h2>Nasıl ilerleyeceksiniz?</h2>
-          <p>Kavramları tek başına bırakmadan, pratik analiz mantığı ve tekrar izlenebilir ders yapısıyla ilerlersiniz.</p>
+          <p>Kavramları araştırma pratiğine yakın örneklerle ele alır; tekrar izlenebilir ders yapısı sayesinde kendi hızınızda, tekrarlanabilir analiz yaklaşımıyla ilerlersiniz.</p>
         </article>
       </section>
 
@@ -73,15 +101,15 @@
         <div class="sales-card-grid">
           <article>
             <h3>Öğrenciler</h3>
-            <p>Biyoinformatik, genomik veya veri analizi alanına daha düzenli bir başlangıç yapmak isteyenler.</p>
+            <p>Biyoinformatik, genomik veya veri analizi alanında akademik temelini güçlendirmek isteyen lisans ve lisansüstü öğrencileri.</p>
           </article>
           <article>
             <h3>Araştırmacılar</h3>
-            <p>Akademik çalışmalarda kullanılan araç ve analiz yaklaşımlarını daha güvenli takip etmek isteyenler.</p>
+            <p>Akademik çalışmalarda kullanılan araçları, veri türlerini ve analiz yaklaşımlarını daha bilinçli takip etmek isteyenler.</p>
           </article>
           <article>
             <h3>Profesyoneller</h3>
-            <p>Yaşam bilimleri ve biyoteknoloji projelerinde veri odaklı becerilerini güçlendirmek isteyenler.</p>
+            <p>Yaşam bilimleri, biyoteknoloji ve klinik araştırma projelerinde veri odaklı becerilerini güçlendirmek isteyenler.</p>
           </article>
         </div>
       </section>
@@ -92,15 +120,15 @@
         <div class="sales-card-grid">
           <article>
             <h3>Kavramsal temel</h3>
-            <p>Konunun temel kavramlarını ve analiz sürecindeki yerini daha net yorumlamayı öğrenirsiniz.</p>
+            <p>Konunun temel kavramlarını ve analiz sürecindeki yerini daha net yorumlayabileceğiniz bir öğrenme akışı izlersiniz.</p>
           </article>
           <article>
             <h3>Uygulama mantığı</h3>
-            <p>İlgili araçları ve analiz adımlarını yalnızca izlemek yerine, hangi amaçla kullanıldıklarını kavrarsınız.</p>
+            <p>İlgili araçları ve analiz adımlarını yalnızca takip etmekle kalmaz, hangi araştırma sorusu için kullanıldıklarını kavrarsınız.</p>
           </article>
           <article>
             <h3>Sonraki adım netliği</h3>
-            <p>Hangi ileri eğitim veya analiz başlığına geçmeniz gerektiğini daha kolay seçersiniz.</p>
+            <p>Eğitim sonunda hangi ileri analiz başlığına veya öğrenme yoluna geçmeniz gerektiğini daha bilinçli seçebilirsiniz.</p>
           </article>
         </div>
       </section>
@@ -111,7 +139,7 @@
         <ol class="lesson-flow">
           <li>Temel kavramlar ve analiz bağlamı</li>
           <li>Kullanılan araçlar, veri tipleri ve çalışma mantığı</li>
-          <li>Uygulama adımları ve örnek analiz yaklaşımı</li>
+          <li>Gerçek veriyle çalışma pratiğine yakın örnek analiz yaklaşımı</li>
           <li>Sonuçları yorumlama ve sonraki öğrenme adımları</li>
         </ol>
       </section>
@@ -120,7 +148,7 @@
         <p class="eyebrow">Eğitim formatı</p>
         <h2>Eğitim formatı</h2>
         <div class="format-panel">
-          <p>Bu eğitim kendi hızınızda ilerleyebileceğiniz, videolu ve tekrar izlenebilir bir yapı ile sunulur. Amaç, yoğun akademik veya profesyonel takviminize uyum sağlayan net bir öğrenme akışı oluşturmaktır.</p>
+          <p>Bu eğitim kendi hızınızda ilerleyebileceğiniz, videolu ve tekrar izlenebilir bir yapı ile sunulur. Amaç, yoğun akademik veya profesyonel takviminize uyum sağlayan, araştırma pratiğine yakın ve net bir öğrenme akışı oluşturmaktır.</p>
           <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
         </div>
       </section>
@@ -135,7 +163,7 @@
               <span class="pricing-badge">Öğrencilere özel avantajlı erişim</span>
               <h3>{{ $studentLabel }}</h3>
               {{ with .Params.student_price }}<p class="pricing-price">{{ . }}</p>{{ end }}
-              <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için indirimli eğitim erişimi.</p>
+              <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
               <a class="pricing-button" href="{{ .Params.student_checkout_url }}">Öğrenci Olarak Başla</a>
             </article>
             <article class="pricing-card">
@@ -159,7 +187,7 @@
         <div class="faq-grid">
           <article>
             <h3>Eğitimi kendi hızımda takip edebilir miyim?</h3>
-            <p>Evet. Eğitim yapısı, dersleri kendi programınıza göre takip etmenizi ve gerektiğinde tekrar izlemenizi destekler.</p>
+            <p>Evet. Eğitim yapısı, dersleri kendi programınıza göre takip etmenizi ve gerektiğinde analiz adımlarına tekrar dönmenizi destekler.</p>
           </article>
           <article>
             <h3>Ön bilgi gerekiyor mu?</h3>
@@ -167,7 +195,7 @@
           </article>
           <article>
             <h3>Kurumsal veya grup talepleri için ne yapmalıyım?</h3>
-            <p>Araştırma grupları ve kurumlar için ihtiyaçlarınızı iletişim sayfasından paylaşabilirsiniz.</p>
+            <p>Araştırma grupları, laboratuvarlar ve kurumlar için ihtiyaçlarınızı iletişim sayfasından paylaşabilirsiniz.</p>
           </article>
         </div>
       </section>
@@ -185,7 +213,7 @@
           <small>Ders başlıklarını ve kapsamlı açıklamayı incelemek isteyenler için.</small>
         </summary>
         <div class="content-card prose training-content">
-          {{ .Content }}
+          {{ $legacyContent | safeHTML }}
         </div>
       </details>
     </div>

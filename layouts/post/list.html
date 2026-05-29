@@ -12,7 +12,7 @@
     <div>
       <p class="eyebrow">Eğitim kataloğu</p>
       <h1>Biyoinformatik eğitimleri</h1>
-      <p class="lead">Öncelikli eğitimleri üstte, hazırlık ve arşiv içeriklerini daha aşağıda bulabilirsiniz. Böylece bugün inceleyebileceğiniz ana eğitimler daha hızlı seçilir.</p>
+      <p class="lead">Araştırma becerilerinizi güçlendirecek uygulama odaklı eğitimleri üstte; hazırlık ve arşiv içeriklerini daha aşağıda bulabilirsiniz.</p>
       <div class="trust-row" aria-label="Katalog özellikleri">
         <span>Videolu eğitimler</span>
         <span>Tekrar izlenebilir</span>
@@ -21,7 +21,7 @@
     </div>
     <div class="hero-side">
       <strong class="hero-panel-title">Öncelikli eğitim vitrini</strong>
-      <span>R, temel biyoinformatik, genom tarayıcıları, tek hücre analizi ve ileri analizler</span>
+      <span>R, temel biyoinformatik, NCBI, ENSEMBL, UCSC, scRNA-seq ve ileri analizler</span>
       <a class="hero-action" href="#egitimler">Eğitimleri İncele</a>
     </div>
   </header>
@@ -29,7 +29,7 @@
   <section id="egitimler" class="catalog-section">
     <div class="section-heading">
       <p class="eyebrow">Öne çıkan eğitimler</p>
-      <h2>Satış ve kayıt akışı için öncelikli eğitimler</h2>
+      <h2>Kayıt akışı hazır öncelikli eğitimler</h2>
     </div>
     <div class="card-grid catalog-grid">
       {{ range $priorityPosts }}
@@ -72,7 +72,7 @@
     <div class="section-heading">
       <p class="eyebrow">Arşiv ve hazırlık</p>
       <h2>Hazırlık ve arşiv içerikleri</h2>
-      <p>Bu içerikler korunur; ancak ana satış vitrini dışında, daha sakin bir bölümde gösterilir.</p>
+      <p>Bu içerikler korunur; ancak ana eğitim vitrini dışında, daha sakin bir bölümde gösterilir.</p>
     </div>
     <div class="card-grid archive-grid">
       {{ range $posts.ByDate.Reverse }}
