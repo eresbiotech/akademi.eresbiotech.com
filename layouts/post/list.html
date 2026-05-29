@@ -7,6 +7,15 @@
     {{- $priorityPosts = $priorityPosts | append . -}}
   {{- end -}}
 {{- end -}}
+{{- $cardDescriptions := dict
+  "biyoinformatik-icin-r-programlama" "Biyolojik veriyi R ile düzenlemek, analiz etmek ve görselleştirmek isteyenler için ödev ve quizlerle desteklenen uygulama odaklı eğitim."
+  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "Omik veri dünyasını, temel biyoinformatik kavramlarını ve büyük veri mantığını araştırma sorularıyla ilişkilendirerek anlamak isteyenler için."
+  "biyoinformatik-veritabanlari-araclar-egitimi" "NCBI, UniProt, PDB ve BLAST gibi araçları doğru okumak, sonuçları anlamlandırmak ve raporlamak isteyenler için."
+  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "Gen, transkript, varyant ve genom bölgelerini NCBI, Ensembl ve UCSC üzerinden daha güvenli yorumlamak isteyenler için."
+  "tek-hucre-rna-seq-analizi-egitimi" "scRNA-seq verilerinde kalite kontrol, kümeleme, marker gen yorumu ve Seurat iş akışını anlamak isteyen araştırmacılar için."
+  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Protein yapısı, PDB kayıtları, AlphaFold çıktıları ve in silico modelleme yaklaşımını uygulama odaklı öğrenmek isteyenler için."
+  "phyml-uygulamali-filogenetik-egitimi" "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
+-}}
 <section class="container page-shell">
   <header class="page-header split-header post-index-hero">
     <div>
@@ -15,8 +24,12 @@
       <p class="lead">Araştırma becerilerinizi güçlendirecek uygulama odaklı eğitimleri üstte; hazırlık ve arşiv içeriklerini daha aşağıda bulabilirsiniz.</p>
       <div class="trust-row" aria-label="Katalog özellikleri">
         <span>Videolu eğitimler</span>
-        <span>Tekrar izlenebilir</span>
-        <span>Akademik kullanıma uygun</span>
+        <span>Ödev & quiz destekli</span>
+        <span>Dijital sertifika</span>
+      </div>
+      <div class="catalog-support-note">
+        <strong>Doğa+Pozitif destekli erişilebilir ücret yapısı</strong>
+        <span>Doğa+Pozitif desteğiyle hazırlanan erişilebilir ücret yapısı sayesinde, biyoinformatik eğitimlerine daha uygun koşullarla katılabilirsiniz.</span>
       </div>
     </div>
     <div class="hero-side">
@@ -44,15 +57,11 @@
           <div class="post-card-body">
             <div class="badge-row">
               <span class="badge">Kendi hızınızda</span>
-              <span class="badge">Videolu eğitim</span>
-              <span class="badge">Uygulama odaklı</span>
+              <span class="badge">Ödev & quiz destekli</span>
+              <span class="badge">Dijital sertifika</span>
             </div>
             <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
-            {{ with .Description }}
-              <p>{{ . }}</p>
-            {{ else }}
-              <p>{{ .Summary | plainify }}</p>
-            {{ end }}
+            <p>{{ index $cardDescriptions .File.BaseFileName | default .Description }}</p>
             {{ if and (eq .Params.course_status "active") .Params.student_checkout_url .Params.employee_checkout_url }}
               <p class="course-availability-note">Öğrenci ve çalışan fiyat seçenekleri mevcut</p>
             {{ end }}
@@ -87,8 +96,13 @@
             {{ end }}
             <div class="post-card-body">
               <div class="badge-row">
-                <span class="badge">Arşiv</span>
-                <span class="badge">Hazırlık içeriği</span>
+                {{ if eq .Params.course_status "coming_soon" }}
+                  <span class="badge">Yakında açılacak</span>
+                  <span class="badge">Hazırlıkta</span>
+                {{ else }}
+                  <span class="badge">Arşiv</span>
+                  <span class="badge">Hazırlık içeriği</span>
+                {{ end }}
               </div>
               <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
               {{ with .Description }}

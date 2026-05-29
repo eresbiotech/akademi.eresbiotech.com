@@ -1,5 +1,8 @@
 {{ define "main" }}
 {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
+{{- $slug := .File.BaseFileName -}}
+{{- $comingSoonSlugs := slice "biyoinformatik-dizi-hizalama-algoritmalari-egitimi" "biyoinformatik-yaz-kampi" -}}
+{{- $isComingSoonFeature := in $comingSoonSlugs $slug -}}
 {{- $payhipURL := "/post/" | relURL -}}
 {{- with .Params.payhip_url -}}
   {{- $payhipURL = . -}}
@@ -7,56 +10,58 @@
 {{- $hasPricingPlans := and .Params.student_checkout_url .Params.employee_checkout_url -}}
 {{- $primaryCTAURL := $payhipURL -}}
 {{- $primaryCTAText := "Hemen Başlayın" -}}
-{{- if $hasPricingPlans -}}
+{{- if $isComingSoonFeature -}}
+  {{- $primaryCTAURL = "/post/contact/" | relURL -}}
+  {{- $primaryCTAText = "Açılış duyurusunu takip edin" -}}
+{{- else if $hasPricingPlans -}}
   {{- $primaryCTAURL = "#kayit-secenekleri" -}}
   {{- $primaryCTAText = "Kayıt Seçeneklerini Gör" -}}
+{{- else -}}
+  {{- $primaryCTAURL = "/post/contact/" | relURL -}}
+  {{- $primaryCTAText = "Bilgi Alın" -}}
 {{- end -}}
 {{- $studentLabel := .Params.student_plan_label | default "Öğrenci" -}}
 {{- $employeeLabel := .Params.employee_plan_label | default "Çalışan" -}}
-{{- $legacyContent := .Content -}}
-{{- $legacyContent = replaceRE "Havale ya da EFT yapmak isteyenler[^<]*(<a[^>]*>[^<]*</a>|info@eresbiotech.com)[^<]*\\." "Sorularınız için info@eresbiotech.com adresinden bizimle iletişime geçebilirsiniz." $legacyContent -}}
-{{- $legacyContent = replaceRE "Bu eğitimle kariyerinize yeni bir boyut ekleyin!?" "Bu eğitimle veri analizi pratiğinizi daha yapılandırılmış biçimde geliştirebilirsiniz." $legacyContent -}}
-{{- $legacyContent = replaceRE "kariyerinizi ileri taşımanıza yardımcı olacak" "araştırma ve analiz becerilerinizi geliştirmenize yardımcı olacak" $legacyContent -}}
-{{- $legacyContent = replaceRE "Kurs, " "Eğitim, " $legacyContent -}}
-{{- $legacyContent = replaceRE "kurs içeriği" "eğitim içeriği" $legacyContent -}}
-{{- $legacyContent = replaceRE "Bu kursta" "Bu eğitimde" $legacyContent -}}
-{{- $legacyContent = replaceRE "Bu kapsamlı kurs" "Bu kapsamlı eğitim" $legacyContent -}}
-{{- $legacyContent = replaceRE "İngilizce eğitimle globali takip imkanı" "İngilizce kaynaklarla alan terminolojisini takip etme" $legacyContent -}}
-{{- $legacyContent = replaceRE "global terimleri ve treendleri" "alan terminolojisini ve güncel yaklaşımları" $legacyContent -}}
-{{- $legacyContent = replaceRE "Kariyerinizi Geliştirin" "Araştırma Becerilerinizi Güçlendirin" $legacyContent -}}
-{{- $legacyContent = replaceRE "Rekabet Avantajı Sağlayın" "Analiz Pratiğinizi Güçlendirin" $legacyContent -}}
-{{- $legacyContent = replaceRE "Sektör Ağı" "Alan Bağlamı" $legacyContent -}}
-{{- $legacyContent = replaceRE "kariyer yapmayı hedefleyenlere yönelik önemli bir fırsat sunuyor" "yaşam bilimleri araştırmacıları için yapılandırılmış bir öğrenme akışı sunar" $legacyContent -}}
-{{- $legacyContent = replaceRE "rekabetçi bir ortamda öne çıkmak için gereken yetenekleri edinebilirsiniz" "analiz süreçlerini daha bilinçli takip etme becerinizi geliştirebilirsiniz" $legacyContent -}}
-{{- $legacyContent = replaceRE "biyomedikal dünyasında önemli bir oyuncu olma yolunda adım atabilir" "biyomedikal araştırmalarda daha bilinçli bir uygulama pratiği geliştirebilir" $legacyContent -}}
-{{- $legacyContent = replaceRE "vazgeçilmez bir bilgi kaynağı" "yapılandırılmış bir öğrenme kaynağı" $legacyContent -}}
-{{- $legacyContent = replaceRE "kariyer yapmak istiyorsanız" "bu alanda çalışıyorsanız" $legacyContent -}}
-{{- $legacyContent = replaceRE "sektördeki rekabet avantajınızı artırarak, geleceğin biyomedikal profesyoneli olma yolunda size önemli bir destek sağlar" "araştırma ve uygulama süreçlerini daha bilinçli takip etmenize yardımcı olur" $legacyContent -}}
-{{- $legacyContent = replaceRE "geleceğin biyomedikal keşiflerine liderlik edebilme yeteneğini kazanırsınız" "biyomedikal araştırma süreçlerini daha bilinçli yorumlama becerinizi geliştirirsiniz" $legacyContent -}}
-{{- $legacyContent = replaceRE "işinize daha fazla değer katmanızı sağlayacak ve sizi diğer profesyonellerden ayıracaktır" "araştırma ve uygulama süreçlerini daha bilinçli yorumlamanıza yardımcı olur" $legacyContent -}}
-{{- $legacyContent = replaceRE "dikakt çeken çalışmalarla öne çıkmanızı sağlar" "analiz çıktılarınızı daha bilinçli değerlendirmenize yardımcı olur" $legacyContent -}}
-{{- $legacyContent = replaceRE "Eğer biyolojik bilimlere ilgi duyuyor ve bu alanda bu alanda çalışıyorsanız" "Biyolojik bilimlerde çalışıyor veya bu alana yöneliyorsanız" $legacyContent -}}
-{{- $legacyContent = replaceRE "Kariyerinizi ileri taşıyın" "Uygulama Pratiğinizi Geliştirin" $legacyContent -}}
-{{- $legacyContent = replaceRE "kariyer yapma hedefinde olanlar" "bu alanda çalışan veya çalışmayı planlayanlar" $legacyContent -}}
-{{- $legacyContent = replaceRE "Bu eğitim katılımcılara biyomedikal dünyasında önemli bir oyuncu olma fırsatı sunar\\." "Bu eğitim, biyomedikal araştırmalarda kullanılan yapısal biyoinformatik yaklaşımlarını daha bilinçli değerlendirmenize yardımcı olur." $legacyContent -}}
-{{- $legacyContent = replaceRE "in silico Biyolojinin Gücünü Keşfedin" "in silico Biyolojiyi Anlama" $legacyContent -}}
-{{- $legacyContent = replaceRE "biyolojik sistemlerin sanal dünyasını keşfetme şansı elde edersiniz" "biyolojik sistemleri hesaplamalı yaklaşımlarla değerlendirme pratiği kazanırsınız" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<h3 id=eğitmen[^>]*>.*?</h3>\\s*<p>.*?</p>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<h3[^>]*>Eğitmen.*?</h3>\\s*<p>.*?</p>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<h3[^>]*>Eğitim Detayları</h3>\\s*<ul>\\s*<li><strong>Eğitmen.*?</ul>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<h3[^>]*>Eğitim Programı</h3>\\s*<ul>.*?</ul>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<p><strong>Eğitmen:?\\s*</strong>.*?</p>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<p><strong>Önde Gelen Bir Eğitmenden Eğitim Alın:?\\s*</strong>.*?</p>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<li><p><strong>Önde Gelen Bir Eğitmenden Eğitim Alın:?\\s*</strong>.*?</p></li>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<h3 id=eğitim-programı[^>]*>.*?</h3>\\s*<ul>.*?</ul>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<li><p>\\s*(Cumartesi|Pazar)\\s*:?\\s*</p>\\s*</li>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<p>\\s*(Cumartesi|Pazar)\\s*:?\\s*</p>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<p><strong>\\s*(Cumartesi|Pazar)\\s*:?\\s*</strong></p>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<li>\\s*(Cumartesi|Pazar)\\s*:?\\s*</li>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<p>.*?(canlı ders|canlı oturum|hafta sonu|hafta içi).*?</p>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<li>.*?(canlı ders|canlı oturum|hafta sonu|hafta içi).*?</li>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "(?is)<p>.*?(10:|11:|12:|13:|14:|15:|16:|17:).*?</p>" "" $legacyContent -}}
-{{- $legacyContent = replaceRE "2024\\s+" "" $legacyContent -}}
+{{- $lessonFlow := slice "Öğrenme hedefleri ve temel kavramlar" "Konuya uygun veri, araç ve uygulama mantığı" "Araştırma pratiğine yakın örneklerle ilerleme" "Ödev ve quizlerle öğrenmeyi pekiştirme" -}}
+{{- if eq $slug "biyoinformatik-icin-r-programlama" -}}
+  {{- $lessonFlow = slice "RStudio ortamı, temel veri yapıları ve biyolojik veriyle çalışma mantığı" "Vektörler, veri çerçeveleri ve biyoinformatik veri tablolarını düzenleme" "ggplot2 ile grafik üretimi ve biyolojik sonuçları görselleştirme" "Basit analiz akışları, fonksiyonlar ve tekrarlanabilir çalışma alışkanlığı" "Kısa uygulamalar, ödevler ve quizlerle R pratiğini pekiştirme" -}}
+{{- else if eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
+  {{- $lessonFlow = slice "Biyoinformatiğin araştırmadaki yeri ve omik veri dünyasına giriş" "Genomik, transkriptomik ve proteomik veri türlerini okuma" "Büyük veri, veri tabanları ve modern biyoloji araştırmalarında analiz mantığı" "NCBI, Ensembl, UCSC gibi kaynakların araştırma sorularıyla ilişkisi" "Quiz ve kısa değerlendirmelerle temel kavramları pekiştirme" -}}
+{{- else if eq $slug "biyoinformatik-veritabanlari-araclar-egitimi" -}}
+  {{- $lessonFlow = slice "NCBI, UniProt, PDB ve temel biyolojik veri kaynaklarına giriş" "Gen, protein, dizi ve anotasyon kayıtlarını doğru okuma" "BLAST ve benzeri araçlarla biyolojik soruya uygun arama yapma" "Veritabanı çıktılarından anlamlı sonuç çıkarma ve raporlama mantığı" "Uygulama ödevleri ve quizlerle araç kullanımını pekiştirme" -}}
+{{- else if eq $slug "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
+  {{- $lessonFlow = slice "Genom tarayıcılarının araştırma sorularındaki rolü" "NCBI üzerinden gen, transkript ve anotasyon kayıtlarını inceleme" "Ensembl ile genomik koordinat, varyant ve gen bilgilerini yorumlama" "UCSC Genome Browser ile genom bölgelerini görsel olarak değerlendirme" "Seçilen gen veya bölge üzerinden uygulama ve kısa değerlendirme quizleri" -}}
+{{- else if eq $slug "tek-hucre-rna-seq-analizi-egitimi" -}}
+  {{- $lessonFlow = slice "Tek hücre RNA-seq verisinin biyolojik mantığı ve deney tasarımını okuma" "Hücre filtreleme, kalite kontrol ve ön işleme adımlarını yorumlama" "Seurat yaklaşımıyla kümeleme, boyut indirgeme ve hücre gruplarını değerlendirme" "Marker genler, hücre tipi yorumlama ve biyolojik anlam çıkarma" "Mini analiz ödevleri ve quizlerle scRNA-seq yorumlama pratiği" -}}
+{{- else if eq $slug "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
+  {{- $lessonFlow = slice "Protein yapısına giriş ve yapısal biyoinformatiğin araştırmadaki rolü" "PDB kayıtlarını okuma, yapı dosyalarını inceleme ve görselleştirme" "AlphaFold ve benzeri yapı tahmini yaklaşımlarının temel mantığı" "Ligand, aktif bölge ve protein etkileşimlerini yorumlama" "Uygulama ödevi ve quizlerle protein modelleme pratiğini pekiştirme" -}}
+{{- else if eq $slug "phyml-uygulamali-filogenetik-egitimi" -}}
+  {{- $lessonFlow = slice "Dizi hizalamanın filogenetik analizdeki yeri" "Çoklu dizi hizalama çıktısını okuma ve kaliteyi değerlendirme" "Model seçimi ve phyML ile filogenetik ağaç oluşturma" "Ağaç yorumlama, bootstrap değerleri ve biyolojik sonuç çıkarma" "Uygulama ödevi ve quizlerle filogenetik analiz pratiği" -}}
+{{- else if eq $slug "biyoinformatik-dizi-hizalama-algoritmalari-egitimi" -}}
+  {{- $lessonFlow = slice "Biyolojik diziler ve hizalama probleminin temel mantığı" "Pairwise ve multiple sequence alignment yaklaşımları" "Skorlama matrisleri, gap cezaları ve algoritmik karar noktaları" "BLAST mantığı ve hızlı dizi arama yaklaşımları" "Algoritmaların biyolojik yorumla ilişkilendirilmesi" -}}
+{{- else if eq $slug "biyoinformatik-yaz-kampi" -}}
+  {{- $lessonFlow = slice "Biyoinformatiğe giriş ve veri okuryazarlığı" "R programlama ile biyolojik veri analizi ve görselleştirme" "Temel veritabanları, NCBI/Ensembl/UCSC kullanımı" "NGS, tek hücre ve yapısal biyoinformatik başlıklarına yönelim" "Mini proje, ödevler ve quizlerle kamp sürecini pekiştirme" -}}
+{{- end -}}
+{{- $testimonials := slice -}}
+{{- if eq $slug "biyoinformatik-icin-r-programlama" -}}
+  {{- $testimonials = slice (dict "quote" "R'ı birkaç kez açıp kapatmıştım ama nereden başlayacağımı bilemiyordum. Biyolojik veriyle örnek yapmak işi daha anlaşılır hale getirdi." "profile" "Yüksek lisans öğrencisi, Moleküler Biyoloji") (dict "quote" "Tezimde grafik hazırlamam gerekiyordu. ggplot2 mantığını görmek ve veriyi düzenlemeyi öğrenmek benim için çok işe yaradı." "profile" "Doktora öğrencisi, Biyoloji") (dict "quote" "Excel'de yaptığım bazı işleri R'a taşımak istiyordum. Eğitimdeki adım adım anlatım geçişi kolaylaştırdı." "profile" "Araştırma görevlisi") (dict "quote" "Raporlama tarafında daha düzenli grafikler üretmek istiyordum. Uygulamalar bu açıdan pratik oldu." "profile" "Biyoteknoloji sektörü çalışanı") -}}
+{{- else if eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
+  {{- $testimonials = slice (dict "quote" "Biyoinformatik literatüründe geçen kavramları parça parça biliyordum. Bu eğitim genel resmi daha net görmemi sağladı." "profile" "Yüksek lisans öğrencisi, Genetik") (dict "quote" "Omik veri türlerini ve hangi soruya nasıl yaklaştıklarını toparlamak benim için faydalı oldu." "profile" "Araştırma görevlisi") (dict "quote" "Alan değiştirmeyi düşünüyordum. Temel kavramları sade bir akışta görmek karar vermemi kolaylaştırdı." "profile" "Yeni mezun, Yaşam Bilimleri") (dict "quote" "Büyük veri kavramını biyoloji araştırmalarıyla ilişkilendirmek, okuduğum makaleleri daha iyi takip etmemi sağladı." "profile" "Doktora öğrencisi, Biyoloji") -}}
+{{- else if eq $slug "biyoinformatik-veritabanlari-araclar-egitimi" -}}
+  {{- $testimonials = slice (dict "quote" "NCBI ve UniProt çıktılarında hangi alanlara odaklanmam gerektiğini çoğu zaman bilemiyordum. Kayıtları daha bilinçli okumaya başladım." "profile" "Lisansüstü öğrenci, Moleküler Biyoloji") (dict "quote" "BLAST sonucunu sadece en yüksek eşleşme gibi yorumluyordum. Arka plandaki mantığı görmek önemliydi." "profile" "Araştırmacı") (dict "quote" "Laboratuvarda karşılaştığımız gen ve protein kayıtlarını raporlarken daha düzenli ilerlememi sağladı." "profile" "Laboratuvar çalışanı") (dict "quote" "Literatürde geçen accession, gen ve protein bilgilerinin nasıl takip edileceği daha anlaşılır hale geldi." "profile" "Doktora öğrencisi, Biyoteknoloji") -}}
+{{- else if eq $slug "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
+  {{- $testimonials = slice (dict "quote" "Gen bölgelerini incelerken farklı ekranlar arasında kayboluyordum. NCBI, Ensembl ve UCSC ilişkisini birlikte görmek çok yardımcı oldu." "profile" "Yüksek lisans öğrencisi, Genetik") (dict "quote" "Varyant, transkript ve gen bilgilerini ayırmakta zorlanıyordum. Örnekler bu ayrımı daha netleştirdi." "profile" "Araştırma görevlisi") (dict "quote" "UCSC ekranları ilk başta karmaşık geliyordu. Genom bölgesini görsel olarak okumak artık daha yönetilebilir." "profile" "Doktora öğrencisi, Biyoloji") (dict "quote" "Klinik ve akademik veri yorumlama sürecinde genom tarayıcılarını daha güvenli kullanmak istiyordum. Eğitim bu ihtiyaca iyi yanıt verdi." "profile" "Klinik araştırma alanında çalışan profesyonel") -}}
+{{- else if eq $slug "tek-hucre-rna-seq-analizi-egitimi" -}}
+  {{- $testimonials = slice (dict "quote" "scRNA-seq makalelerinde geçen kalite kontrol ve kümeleme adımlarını daha iyi takip etmeye başladım." "profile" "Doktora öğrencisi, Biyoloji") (dict "quote" "Seurat akışını parça parça görmüştüm ama bütün iş akışını sırayla görmek çok daha anlaşılır oldu." "profile" "Araştırma görevlisi") (dict "quote" "Marker gen yorumlama kısmı benim için kritikti. Hücre tipi çıkarımını daha dikkatli değerlendirmeyi öğrendim." "profile" "Yüksek lisans öğrencisi, Moleküler Biyoloji") (dict "quote" "Tek hücre analizini projeye dahil etmeden önce hangi adımların ne anlama geldiğini görmek istiyordum. Eğitim iyi bir çerçeve sundu." "profile" "Akademisyen") -}}
+{{- else if eq $slug "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
+  {{- $testimonials = slice (dict "quote" "PDB dosyalarını açıyordum ama yapıya nasıl bakacağımı bilmiyordum. Görselleştirme ve yorumlama adımları iyi oturdu." "profile" "Lisans öğrencisi, Moleküler Biyoloji") (dict "quote" "AlphaFold çıktısını sadece model olarak görüyordum. Güven skorları ve yorumlama mantığı daha anlaşılır hale geldi." "profile" "Araştırmacı") (dict "quote" "Ligand ve aktif bölge ilişkisini temel düzeyde kavramak, okuduğum yapısal biyoloji çalışmalarını takip etmeme yardımcı oldu." "profile" "Doktora öğrencisi, Biyokimya") (dict "quote" "Islak lab sonuçlarını in silico yaklaşımlarla desteklemek istiyordum. Eğitim iyi bir başlangıç çerçevesi verdi." "profile" "Biyoteknoloji sektörü çalışanı") -}}
+{{- else if eq $slug "phyml-uygulamali-filogenetik-egitimi" -}}
+  {{- $testimonials = slice (dict "quote" "Filogenetik ağaçları okuyabiliyor gibi hissediyordum ama bootstrap ve model seçimi kısmı hep belirsizdi. Bu eğitim o boşluğu azalttı." "profile" "Doktora öğrencisi, Biyoloji") (dict "quote" "Dizi hizalama çıktısını doğrudan kullanıyordum. Kaliteyi ve sonuçların güvenilirliğini değerlendirmek benim için faydalı oldu." "profile" "Araştırmacı") (dict "quote" "Ağaç görselini biyolojik hikâyeye bağlamakta zorlanıyordum. Yorumlama adımları bu açıdan iyi bir rehber oldu." "profile" "Akademisyen") (dict "quote" "phyML kullanımını pratik bir akış içinde görmek, filogenetik analizden çekinmemi azalttı." "profile" "Yüksek lisans öğrencisi, Evrimsel Biyoloji") -}}
+{{- else if eq $slug "biyoinformatik-dizi-hizalama-algoritmalari-egitimi" -}}
+  {{- $testimonials = slice (dict "quote" "Dizi hizalama sonucunu görüyorum ama algoritmanın neye göre karar verdiğini anlamak istiyorum." "profile" "Yüksek lisans öğrencisi, Biyoloji") (dict "quote" "BLAST ve hizalama araçlarını kullanıyorum; arka plandaki skorlama mantığını bilmek sonuçları daha doğru yorumlamama yardımcı olacak." "profile" "Araştırma görevlisi") (dict "quote" "Algoritma kısmı göz korkutabiliyor. Biyolojik örneklerle anlatılan bir akışa ihtiyaç duyuyorum." "profile" "Doktora öğrencisi, Genetik") -}}
+{{- else if eq $slug "biyoinformatik-yaz-kampi" -}}
+  {{- $testimonials = slice (dict "quote" "Biyoinformatiğe tek bir başlıktan değil, genel bir öğrenme rotasıyla başlamak istiyorum." "profile" "Lisans öğrencisi, Moleküler Biyoloji") (dict "quote" "R, veritabanları ve omik veri başlıklarını bir arada görebileceğim yoğun ama anlaşılır bir programa ihtiyaç duyuyorum." "profile" "Yüksek lisans öğrencisi") (dict "quote" "Araştırma grubumuzda farklı analiz başlıklarına giriş yapacak ortak bir temel oluşturmak istiyoruz." "profile" "Araştırma görevlisi") -}}
+{{- end -}}
 {{- if eq .File.BaseFileName "contact" -}}
 <article class="container page-shell page-narrow">
   <header class="page-header soft-hero">
@@ -76,9 +81,15 @@
       <h1>{{ $displayTitle }}</h1>
       {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
       <div class="meta-row">
-        <span>Kendi hızınızda</span>
-        <span>Asenkron erişim</span>
-        <span>Uygulama odaklı</span>
+        {{ if $isComingSoonFeature }}
+          <span>Yakında açılacak</span>
+          <span>Program hazırlıkta</span>
+          <span>Duyuru bekleniyor</span>
+        {{ else }}
+          <span>Kendi hızınızda</span>
+          <span>Ödev & quiz destekli</span>
+          <span>Dijital sertifika</span>
+        {{ end }}
       </div>
       <div class="hero-actions">
         <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
@@ -97,12 +108,12 @@
     <aside class="training-sidebar" aria-label="Eğitim özeti">
       <div class="sidebar-card decision-card">
         <p class="eyebrow">Eğitim özeti</p>
-        <h2>Bu eğitim size uygunsa bugün başlayabilirsiniz.</h2>
+        <h2>{{ if $isComingSoonFeature }}Bu program ilginizi çekiyorsa duyuruyu takip edebilirsiniz.{{ else }}Bu eğitim size uygunsa bugün başlayabilirsiniz.{{ end }}</h2>
         <ul>
           <li>Kendi hızınızda</li>
-          <li>Asenkron ve videolu eğitim</li>
-          <li>Uygulama odaklı</li>
-          <li>Öğrenci, araştırmacı ve profesyoneller için uygun</li>
+          <li>Videolu ve tekrar izlenebilir dersler</li>
+          <li>Ödev ve quizlerle pekiştirme</li>
+          {{ if not $isComingSoonFeature }}<li>Dijital doğrulanabilir sertifika</li>{{ end }}
         </ul>
         {{ if and $hasPricingPlans .Params.student_price }}
           <p class="sidebar-note">Öğrenciler için avantajlı erişim fiyatı mevcut.</p>
@@ -165,10 +176,9 @@
         <p class="eyebrow">Ders akışı</p>
         <h2>Ders akışı</h2>
         <ol class="lesson-flow">
-          <li>Temel kavramlar ve analiz bağlamı</li>
-          <li>Kullanılan araçlar, veri tipleri ve çalışma mantığı</li>
-          <li>Gerçek veriyle çalışma pratiğine yakın örnek analiz yaklaşımı</li>
-          <li>Sonuçları yorumlama ve sonraki öğrenme adımları</li>
+          {{ range $lessonFlow }}
+            <li>{{ . }}</li>
+          {{ end }}
         </ol>
       </section>
 
@@ -176,17 +186,54 @@
         <p class="eyebrow">Eğitim formatı</p>
         <h2>Eğitim formatı</h2>
         <div class="format-panel">
-          <p>Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.</p>
+          <p>Bu eğitim; videolu dersler, tekrar izlenebilir içerikler, ödevler ve kısa quizlerle desteklenen bir öğrenme yapısıyla sunulur. Böylece yalnızca izlemekle kalmaz, öğrendiklerinizi küçük uygulamalarla pekiştirerek ilerleyebilirsiniz.</p>
+          <ul class="format-list">
+            <li>Videolu ders içerikleri</li>
+            <li>Kendi hızınızda ilerleme</li>
+            <li>Ödev ve quizlerle pekiştirme</li>
+            <li>Tekrar izlenebilir eğitim yapısı</li>
+            {{ if not $isComingSoonFeature }}<li>Eğitim sonunda dijital sertifika</li>{{ end }}
+          </ul>
           <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
         </div>
       </section>
 
+      {{ if not $isComingSoonFeature }}
+        <section class="sales-section certificate-section">
+          <p class="eyebrow">Dijital sertifika</p>
+          <div class="certificate-card">
+            <div>
+              <h2>Eğitim sonunda dijital sertifikanızı alın</h2>
+              <p>Bu eğitim yalnızca izlediğiniz derslerden ibaret kalmaz. Tamamladığınızda, öğrenme sürecinizi görünür kılacak dijital doğrulanabilir sertifikanızı alabilir; CV’nizde ve LinkedIn profilinizde paylaşabilirsiniz.</p>
+            </div>
+            <span class="certificate-mark" aria-hidden="true">✓</span>
+          </div>
+        </section>
+      {{ end }}
+
       <section id="kayit-secenekleri" class="course-pricing">
-        <p class="eyebrow">Kayıt seçenekleri</p>
-        <h2>Kayıt Seçenekleri</h2>
-        <p class="pricing-intro">Size uygun erişim türünü seçerek Payhip üzerinden güvenli ödeme adımına geçebilirsiniz.</p>
-        <p class="course-trust-note">Bu eğitim asenkron yapıdadır. Kaydınızı tamamladıktan sonra ders içeriklerine çevrimiçi olarak erişebilirsiniz.</p>
-        {{ if $hasPricingPlans }}
+        {{ if $isComingSoonFeature }}
+          <p class="eyebrow">Yakında açılacak</p>
+          <h2>Yakında açılacak</h2>
+          <div class="soon-panel">
+            {{ if eq $slug "biyoinformatik-yaz-kampi" }}
+              <p>Biyoinformatik Yaz Kampı yeni dönem kayıtları yakında açılacaktır. Program duyurusu, içerik akışı ve kayıt bilgileri için bizi takip edebilir veya ön bilgi almak üzere iletişime geçebilirsiniz.</p>
+            {{ else }}
+              <p>Bu eğitim yakında kayıt sürecine açılacaktır. Açılış duyurusunu takip etmek veya ön bilgi almak için bizimle iletişime geçebilirsiniz.</p>
+            {{ end }}
+            <a class="hero-action" href="{{ "/post/contact/" | relURL }}">Açılış duyurusunu takip edin</a>
+          </div>
+        {{ else if $hasPricingPlans }}
+          <p class="eyebrow">Kayıt seçenekleri</p>
+          <h2>Kayıt Seçenekleri</h2>
+          <p class="pricing-intro">Size uygun erişim türünü seçerek Payhip üzerinden güvenli ödeme adımına geçebilirsiniz.</p>
+          <div class="supported-fee-note">
+            <p class="support-label">Doğa+Pozitif destekli</p>
+            <h3>Doğa+Pozitif destekli erişilebilir ücret</h3>
+            <p>Bu eğitim, Doğa+Pozitif desteğiyle daha erişilebilir ücret yapısıyla sunulmaktadır. Böylece yaşam bilimleri alanında biyoinformatik becerilerini geliştirmek isteyen öğrenciler, araştırmacılar ve profesyoneller nitelikli eğitimlere daha ulaşılabilir koşullarla katılabilir.</p>
+          </div>
+          <p class="course-trust-note">Kayıt işleminiz tamamlandığında eğitime otomatik olarak tanımlanırsınız. Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranındaki taksit seçeneklerini inceleyebilirsiniz.</p>
+          <p class="pricing-support-line">Ücretler Doğa+Pozitif desteğiyle erişilebilir seviyede tutulmuştur.</p>
           <div class="course-pricing-grid">
             <article class="pricing-card pricing-card-featured">
               <span class="pricing-badge">Öğrencilere özel avantajlı erişim</span>
@@ -202,60 +249,110 @@
               <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">Çalışan Olarak Başla</a>
             </article>
           </div>
-          <p class="payment-note">Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranındaki taksit seçeneklerini inceleyebilirsiniz. Havale/EFT için bizimle iletişime geçebilirsiniz.</p>
+          <p class="payment-note">Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
         {{ else }}
           <div class="format-panel">
-            <p>Kayıt ve erişim süreci için hazır olduğunuzda eğitime başlayabilir; sorularınız varsa iletişim sayfasından bize ulaşabilirsiniz.</p>
-            <a class="hero-action" href="{{ $payhipURL }}">Hemen Başlayın</a>
+            <p>Bu eğitim için kayıt bilgileri netleştiğinde sayfa güncellenecektir. Ön bilgi almak veya size uygun öğrenme yolunu sormak için bizimle iletişime geçebilirsiniz.</p>
+            <a class="hero-action" href="{{ "/post/contact/" | relURL }}">Bilgi Alın</a>
           </div>
         {{ end }}
       </section>
+
+      {{ if gt (len $testimonials) 0 }}
+        <section class="sales-section course-experience">
+          <p class="eyebrow">{{ if $isComingSoonFeature }}Öğrenme ihtiyacı{{ else }}Katılımcı deneyimleri{{ end }}</p>
+          <h2>{{ if $isComingSoonFeature }}Bu programın hitap ettiği öğrenme ihtiyaçları{{ else }}Katılımcı deneyimleri{{ end }}</h2>
+          <p class="experience-intro">{{ if $isComingSoonFeature }}Bu programa ilgi duyan öğrenciler, araştırmacılar ve profesyonellerin sık paylaştığı ihtiyaçlardan yola çıkarak hazırlanmıştır.{{ else }}ERES eğitimlerine katılan öğrenciler, araştırmacılar ve profesyonellerin sık paylaştığı ihtiyaçlardan ve geri bildirimlerden yola çıkarak hazırlanmıştır.{{ end }}</p>
+          <div class="testimonial-grid">
+            {{ range $testimonials }}
+              <article class="testimonial-card">
+                <p>“{{ .quote }}”</p>
+                <span>{{ .profile }}</span>
+              </article>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
 
       <section class="sales-section faq-section">
         <p class="eyebrow">Sık sorulan sorular</p>
         <h2>Sık sorulan sorular</h2>
         <div class="faq-grid">
-          <article>
-            <h3>Bu eğitim canlı mı, asenkron mu?</h3>
-            <p>Bu eğitim asenkron yapıdadır. Ders içeriklerine kendi programınıza göre erişebilir, ihtiyaç duyduğunuz bölümleri tekrar izleyerek ilerleyebilirsiniz.</p>
-          </article>
-          <article>
-            <h3>Kayıt olduktan sonra derslere nasıl erişeceğim?</h3>
-            <p>Ödeme sürecini tamamladığınızda kaydınız otomatik olarak oluşturulur. Ardından eğitim içeriklerine çevrimiçi olarak erişebilirsiniz.</p>
-          </article>
-          <article>
-            <h3>Kredi kartı ile ödeme ve taksit imkânı var mı?</h3>
-            <p>Evet. Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranında kartınızın sunduğu taksit seçeneklerinden yararlanabilirsiniz. Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
-          </article>
-          <article>
-            <h3>Öğrenci erişiminden kimler yararlanabilir?</h3>
-            <p>Lisans, yüksek lisans ve doktora öğrencileri öğrencilere özel avantajlı erişim seçeneğinden yararlanabilir.</p>
-          </article>
+          {{ if $isComingSoonFeature }}
+            <article>
+              <h3>Bu eğitim şu anda kayıt alıyor mu?</h3>
+              <p>Hayır. Bu sayfa hazırlık ve duyuru amacıyla görünür durumda; kayıt süreci açıldığında içerik ve erişim bilgileri güncellenecektir.</p>
+            </article>
+            <article>
+              <h3>Açılış duyurusunu nasıl takip edebilirim?</h3>
+              <p>İletişim sayfasından bize yazabilir, program ve kayıt bilgileri netleştiğinde bilgilendirme almak istediğinizi belirtebilirsiniz.</p>
+            </article>
+            <article>
+              <h3>Bu program kimler için uygun?</h3>
+              <p>Yaşam bilimleri öğrencileri, araştırmacılar ve biyoinformatik öğrenme rotasını daha planlı kurmak isteyen profesyoneller için uygundur.</p>
+            </article>
+          {{ else }}
+            <article>
+              <h3>Bu eğitimde yalnızca video mu izleyeceğim?</h3>
+              <p>Hayır. Eğitim videolu derslerle ilerler; ancak ödevler, kısa quizler ve tekrar izlenebilir içeriklerle öğrenmenizi pekiştirmeniz hedeflenir.</p>
+            </article>
+            <article>
+              <h3>Eğitimi kendi programıma göre tamamlayabilir miyim?</h3>
+              <p>Evet. Dersleri kendi hızınızda izleyebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve çalışmanızı akademik ya da profesyonel takviminize göre planlayabilirsiniz.</p>
+            </article>
+            <article>
+              <h3>Eğitim sonunda sertifika alacak mıyım?</h3>
+              <p>Evet. Eğitimi tamamlayan katılımcılar dijital doğrulanabilir başarı sertifikası alır. Sertifikanızı CV’nize ekleyebilir, LinkedIn gibi profesyonel platformlarda paylaşabilirsiniz.</p>
+            </article>
+            <article>
+              <h3>Kredi kartı ile ödeme ve taksit imkânı var mı?</h3>
+              <p>Evet. Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranında kartınızın sunduğu taksit seçeneklerini inceleyebilirsiniz. Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
+            </article>
+            <article>
+              <h3>Kayıt olduktan sonra derslere nasıl erişeceğim?</h3>
+              <p>Ödeme sürecini tamamladığınızda kaydınız otomatik olarak oluşturulur. Sistem sizi eğitime tanımlar ve ders içeriklerine çevrimiçi olarak erişebilirsiniz.</p>
+            </article>
+            <article>
+              <h3>Eğitim ücretleri neden daha erişilebilir hale geldi?</h3>
+              <p>ERES Biyoinformatik Akademi eğitimleri, Doğa+Pozitif desteğiyle daha erişilebilir ücret yapısıyla sunulmaktadır. Bu destek sayesinde eğitim değerinden ödün vermeden, biyoinformatik öğrenmek isteyen daha fazla yaşam bilimleri öğrencisi, araştırmacı ve profesyonele ulaşmayı hedefliyoruz.</p>
+            </article>
+          {{ end }}
           <article>
             <h3>Hangi eğitimden başlamam gerektiğinden emin değilsem ne yapmalıyım?</h3>
-            <p>Anasayfadaki “Doğru başlangıç sırası” bölümünden size en yakın öğrenme yolunu inceleyebilir veya kararsız kaldığınız durumda bizimle iletişime geçebilirsiniz.</p>
-          </article>
-          <article>
-            <h3>Bu eğitim için kodlama bilmem gerekiyor mu?</h3>
-            <p>Gereken ön bilgi eğitimden eğitime değişebilir. Giriş ve temel seviye eğitimlerde adım adım ilerleyen bir yapı sunulur; ileri analiz eğitimlerinde ise ilgili konuya temel aşinalık öğrenme sürecini kolaylaştırır.</p>
+            <p>Anasayfadaki “Doğru başlangıç sırası” bölümünden size en yakın öğrenme yolunu inceleyebilir veya kararsız kaldığınızda bizimle iletişime geçebilirsiniz.</p>
           </article>
         </div>
       </section>
 
       <section class="training-final-cta">
         <p class="eyebrow">Sonraki adım</p>
-        <h2>Bu eğitimle ilk adımı bugün atabilirsiniz.</h2>
-        <p>Kayıt türünüzü seçerek Payhip üzerinden güvenli ödeme adımına geçebilirsiniz.</p>
+        <h2>{{ if $isComingSoonFeature }}Açılış duyurusunu takip edebilirsiniz.{{ else }}Bu eğitimle ilk adımı bugün atabilirsiniz.{{ end }}</h2>
+        <p>{{ if $isComingSoonFeature }}Program ve kayıt bilgileri netleştiğinde duyuruları paylaşacağız; ön bilgi için bize yazabilirsiniz.{{ else }}Kayıt türünüzü seçerek Payhip üzerinden güvenli ödeme adımına geçebilir, derslere kendi programınıza göre başlayabilirsiniz.{{ end }}</p>
         <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
       </section>
 
       <details class="legacy-content">
         <summary>
-          <span>Detaylı ders içeriğini görüntüle</span>
-          <small>Ders başlıklarını ve kapsamlı açıklamayı incelemek isteyenler için.</small>
+          <span>Detaylı ders programını aç</span>
+          <small>Ders konularını, uygulama adımlarını ve öğrenme kapsamını daha ayrıntılı inceleyin.</small>
         </summary>
         <div class="content-card prose training-content">
-          {{ $legacyContent | safeHTML }}
+          <h2>Ders konuları ve uygulama kapsamı</h2>
+          {{ with .Description }}<p>{{ . }}</p>{{ end }}
+          <h3>Uygulama başlıkları</h3>
+          <ol>
+            {{ range $lessonFlow }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ol>
+          <h3>Öğrenme kapsamı</h3>
+          <ul>
+            <li>Konuya ait temel kavramları araştırma pratiğiyle ilişkilendirme</li>
+            <li>İlgili veri, araç ve çıktıları daha bilinçli okuma</li>
+            <li>Kısa ödev ve quizlerle öğrenilen adımları pekiştirme</li>
+            <li>Sonraki öğrenme yolunu daha net seçebilme</li>
+            {{ if not $isComingSoonFeature }}<li>Eğitimi tamamladığınızda dijital doğrulanabilir sertifika alma</li>{{ end }}
+          </ul>
         </div>
       </details>
     </div>
