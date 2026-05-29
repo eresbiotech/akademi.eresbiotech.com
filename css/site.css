@@ -1,20 +1,20 @@
 :root {
-  --bg: #f8fafc;
+  --bg: #f8f9fa;
   --surface: #ffffff;
-  --surface-soft: #ecfdf5;
-  --text: #0f172a;
-  --body: #334155;
+  --surface-soft: #f0fdfa;
+  --text: #002147;
+  --body: #333333;
   --muted: #64748b;
   --line: #e2e8f0;
   --indigo: #2563eb;
   --indigo-dark: #1d4ed8;
-  --teal: #0f766e;
+  --teal: #0d9488;
   --teal-soft: #ccfbf1;
   --amber: #b45309;
   --amber-soft: #fef3c7;
   --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 18px 45px rgba(15, 23, 42, 0.09);
-  --radius: 8px;
+  --radius: 6px;
 }
 
 * {
@@ -119,7 +119,7 @@ img {
 
 .site-nav a,
 .footer-nav a {
-  border-radius: 999px;
+  border-radius: 6px;
   color: #334155;
   font-size: 0.94rem;
   font-weight: 800;
@@ -137,7 +137,7 @@ img {
 .card-link {
   align-items: center;
   background: var(--teal);
-  border-radius: 8px;
+  border-radius: 6px;
   color: #fff;
   display: inline-flex;
   font-weight: 900;
@@ -307,7 +307,7 @@ img {
 .value-icon {
   align-items: center;
   background: var(--teal-soft);
-  border-radius: 8px;
+  border-radius: 6px;
   color: var(--teal);
   display: inline-flex;
   font-size: 0.78rem;
@@ -435,7 +435,7 @@ h1 {
   align-items: center;
   background: #ecfdf5;
   border: 1px solid #99f6e4;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #115e59;
   display: inline-flex;
   font-size: 0.82rem;
@@ -466,7 +466,7 @@ h1 {
 }
 
 .training-hero .hero-action:first-child {
-  background: #0f766e;
+  background: #0d9488;
   box-shadow: 0 18px 34px rgba(15, 118, 110, 0.28);
   padding-inline: 24px;
 }
@@ -486,7 +486,7 @@ h1 {
 .meta-row span {
   background: #ecfdf5;
   border: 1px solid #99f6e4;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #115e59;
   font-size: 0.9rem;
   font-weight: 800;
@@ -634,7 +634,7 @@ h1 {
   align-items: center;
   background: #f8f9fa;
   border: 1px solid rgba(0, 33, 71, 0.08);
-  border-radius: 8px;
+  border-radius: 6px;
   display: flex;
   gap: 12px;
   justify-content: space-between;
@@ -943,7 +943,7 @@ h1 {
 .lesson-flow li::before {
   align-items: center;
   background: var(--teal-soft);
-  border-radius: 8px;
+  border-radius: 6px;
   color: var(--teal);
   content: counter(lesson, decimal-leading-zero);
   counter-increment: lesson;
@@ -988,8 +988,25 @@ h1 {
 
 .pricing-intro {
   color: var(--muted);
-  margin: 12px 0 24px;
+  margin: 12px 0 12px;
   max-width: 68ch;
+}
+
+.course-trust-note,
+.payment-note {
+  background: #f8f9fa;
+  border: 1px solid rgba(0, 33, 71, 0.08);
+  border-radius: 6px;
+  color: #333;
+  font-size: 0.94rem;
+  font-weight: 750;
+  line-height: 1.55;
+  margin: 0 0 24px;
+  padding: 12px 14px;
+}
+
+.payment-note {
+  margin: 18px 0 0;
 }
 
 .course-pricing-grid {
@@ -1029,7 +1046,7 @@ h1 {
   align-self: flex-start;
   background: #e0f2fe;
   border: 1px solid #7dd3fc;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #075985;
   font-size: 0.76rem;
   font-weight: 950;
@@ -1054,7 +1071,7 @@ h1 {
 .pricing-button {
   align-items: center;
   background: var(--teal);
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 14px 28px rgba(15, 118, 110, 0.2);
   color: #fff;
   display: inline-flex;
@@ -1262,13 +1279,62 @@ h1 {
 
 .prose .btn {
   background: var(--teal);
-  border-radius: 999px;
+  border-radius: 6px;
   color: #fff;
   display: inline-block;
   font-weight: 900;
   margin: 8px 0;
   padding: 11px 18px;
   text-decoration: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form span {
+  color: #002147;
+  font-weight: 850;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #f8f9fa;
+  border: 1px solid rgba(0, 33, 71, 0.14);
+  border-radius: 6px;
+  color: #333;
+  font: inherit;
+  padding: 13px 14px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #0d9488;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  justify-self: start;
+  min-height: 46px;
+  padding: 12px 18px;
+}
+
+.contact-form button:hover {
+  background: #0f766e;
 }
 
 .audience-band {
