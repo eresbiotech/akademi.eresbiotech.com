@@ -2,7 +2,8 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi"
 date = "2023-02-26"
-description = "Bu eğitim, biyoinformatikte dizi hizalama yaklaşımlarını ve temel algoritmaları kendi hızınızda öğrenmenize yardımcı olan videolu ve uygulama odaklı bir derstir."
+description = "Yakında açılacak bu eğitim, dizi hizalama algoritmalarının mantığını biyolojik yorumla ilişkilendirerek öğrenmek isteyenler için hazırlanıyor."
+course_status = "coming_soon"
 
 images =[ "images/Biyoinformatikte-Dizi-Hizalama-Algoritmalar-Egitimi.png" ]
 
@@ -26,7 +27,7 @@ Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığı
 
 <br/>
 
-Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi, DNA dizi hizalamanın temel konularını öğrenmek ve bu alanda ilerlemek isteyen herkes için eşsiz bir eğitim fırsatı.  Bu eğitim özellikle biyoloji, moleküler biyoloji, genetik, biyokimya gibi disiplinlerde çalışan akademisyenler, sektör profesyonelleri, araştırmacılar, mezunlar ve öğrencilere yönelik olarak özel olarak tasarlanmıştır.
+Biyoinformatikte Dizi Hizalama ve Algoritmalar Eğitimi, DNA ve protein dizilerinin karşılaştırılmasında kullanılan temel yaklaşımları biyolojik yorumla birlikte ele almak isteyenler için hazırlanır. Eğitim özellikle biyoloji, moleküler biyoloji, genetik, biyokimya ve ilgili alanlarda çalışan öğrenciler, araştırmacılar ve profesyoneller için uygundur.
 
 <br/>
 
@@ -97,7 +98,7 @@ Bu eğitimde elde edeceğiniz kazanımlar arasında protein ve nükleotid dizile
 
 <br/>
 
-Bu eğitim bu turda aktif satışa açılmamıştır. İçerik yayına hazırlandığında asenkron ve videolu öğrenme yapısıyla sunulacaktır.
+Bu eğitim bu turda aktif satışa açılmamıştır. İçerik yayına hazırlandığında videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulacaktır.
 
 <br/>
 

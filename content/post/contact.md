@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "İletişim"
 date = "2023-12-20"
-description = "Eğitim seçimi, ödeme, Havale/EFT, kurumsal talepler ve öğrenme yolu konusunda bize ulaşabilirsiniz."
+description = "Eğitim seçimi, öğrenci/çalışan erişimi, ödeme, Havale/EFT, kurumsal talepler ve öğrenme yolu konusunda bize ulaşabilirsiniz."
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
 categories = ["iletisim"]
 +++
@@ -10,6 +10,17 @@ categories = ["iletisim"]
 ## Bize ulaşın
 
 Hangi eğitimden başlamanız gerektiğinden emin değilseniz, öğrenci/çalışan erişim seçenekleri hakkında bilgi almak istiyorsanız veya kurumsal bir talebiniz varsa bize yazabilirsiniz.
+
+Size şu konularda yardımcı olabiliriz:
+
+- Hangi eğitimden başlamalıyım?
+- Öğrenci ve çalışan erişim seçenekleri
+- Kredi kartı ile ödeme ve ödeme ekranındaki taksit seçenekleri
+- Havale/EFT ile kayıt
+- Kurumsal kayıt ve grup erişimi
+- Sertifika ve eğitim tamamlama süreci
+
+Kurumsal eğitim veya araştırma grubu talebi için yazıyorsanız, mesajınızda ekip büyüklüğünü, ilgilendiğiniz eğitim başlığını ve varsa çalıştığınız veri tipini kısaca belirtmeniz yeterlidir. Üniversite laboratuvarları, araştırma grupları, biyoteknoloji şirketleri, hastane ekipleri ve kurum içi Ar-Ge ekipleri için ihtiyaca göre şekillenen eğitim akışları değerlendirilebilir.
 
 Kredi kartı ile güvenli ödeme ve ödeme ekranındaki taksit seçenekleri Payhip üzerinden sunulur. Havale/EFT ile kayıt olmak veya kurumsal kayıt sürecini görüşmek isterseniz mesajınızda kısaca belirtmeniz yeterlidir.
 

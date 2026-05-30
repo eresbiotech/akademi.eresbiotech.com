@@ -2,7 +2,8 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatik Yaz Kampı"
 date = "2023-12-24"
-description = "Biyoinformatik Yaz Kampı, R programlama, veri analizi ve hesaplamalı biyoloji uygulamalarını bütüncül bir akışla öğrenmek isteyenler için hazırlanmıştır."
+description = "Yakında açılacak Biyoinformatik Yaz Kampı, R programlama, veri analizi ve temel biyoinformatik başlıklarını bütüncül bir öğrenme rotasında birleştirir."
+course_status = "coming_soon"
 
 images =[ "images/Biyoinformatik-Yaz-Kampi-Kurs.png" ]
 
@@ -38,7 +39,7 @@ Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığı
 
 <br/>
 
-Biyoinformatik Yaz Kampı, sıfırdan ileri seviyeye ilerleyen kapsamlı ve uygulama odaklı bir öğrenme deneyimidir. Katılımcılar R programlama dilini öğrenerek istatistiksel analiz ve görselleştirme becerilerini geliştirerek kampa başlar. Biyoinformatiğin temel kavramlarıyla devam eden kamp, dizi hizalama ve algoritmalar, veritabanalrı ve araçlar, genomik, yapısal biyoinformatik, filogenetik analiz ve tek hücre RNA sekans analizi gibi alanlarda derinlemesine eğitim sunar.
+Biyoinformatik Yaz Kampı, giriş seviyesinden uygulamalı analiz başlıklarına uzanan bütüncül bir öğrenme deneyimi olarak hazırlanır. R programlama, veri analizi, temel veritabanları, genomik, yapısal biyoinformatik ve tek hücre gibi başlıklara yönelmek isteyen katılımcılar için geniş bir başlangıç rotası sunar.
 
 <br/>
 

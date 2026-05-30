@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi"
 date = "2023-02-27"
-description = "Bu eğitim, temel biyoinformatik araçları, veri tabanlarını ve uygulamalı analiz adımlarını kendi hızınızda öğrenmeniz için hazırlanmıştır."
+description = "NCBI, UniProt, PDB ve BLAST gibi araçları doğru okumak, sonuçları anlamlandırmak ve raporlamak isteyenler için."
 
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=G8fph&pricing_plan=MrW6dvk5BN"

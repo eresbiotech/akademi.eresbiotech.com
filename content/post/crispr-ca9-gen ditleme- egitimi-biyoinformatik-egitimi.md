@@ -110,7 +110,7 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 **Uygulamalı Deneyim Kazanın:** Model ve model olmayan organizmalarda CRISPR tasarlama, mutasyon belirleme ve analiz etme gibi kritik becerileri uygulamalı olarak öğreneceksiniz. Bu sayede, teorik bilginizi pratikte uygulama fırsatı bulacak ve gerçek dünya problemlerine çözüm üretebileceksiniz.
 
-- **Kendi hızınızda ilerleyin:** İçerik yayına hazırlandığında asenkron ve videolu öğrenme yapısıyla sunulacaktır.
+- **Kendi hızınızda ilerleyin:** İçerik yayına hazırlandığında videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulacaktır.
 
 -   **Uzman Programla Öğrenme:** İhtiyaçlara yönelik uzman bir program çerçevesinde hazırlanmıştır.
 

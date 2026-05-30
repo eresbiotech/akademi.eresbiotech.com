@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi"
 date = "2023-02-27"
-description = "Bu eğitim, biyoinformatik temel kavramlarını, omik veri türlerini ve büyük veri yaklaşımını kendi hızınızda öğrenmeniz için hazırlanmış uygulama odaklı bir derstir."
+description = "Omik veri dünyasını, temel biyoinformatik kavramlarını ve büyük veri mantığını araştırma sorularıyla ilişkilendirerek anlamak isteyenler için."
 
 images =[ "images/Biyoinformatik-Genomik-Proteomik-Büyük-Veri-Egitimi.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=SB3Oz&pricing_plan=rdWQ8PYXGj"
@@ -75,7 +75,7 @@ Bu eğitim, yüksek işlem hacimli veri kavramını anlamanızı, biyoinformatik
 
 <br/>
 
-Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
     <br/>
 

@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatik için R Programlama"
 date = "2024-07-08"
-description = "Bu eğitim, R programlama diliyle biyolojik veri analizi, görselleştirme ve temel biyoinformatik uygulamaları kendi hızınızda öğrenmeniz için hazırlanmıştır."
+description = "Biyolojik veriyi R ile düzenlemek, analiz etmek ve görselleştirmek isteyenler için ödev ve quizlerle desteklenen uygulama odaklı eğitim."
 
 images =[ "images/Biyoinformatik-icin-R-Programlama.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=rjznKvJxB7"
@@ -57,8 +57,8 @@ Omik teknolojilere ilgi duyan, bu alanda çalışan veya çalışmayı planlayan
 - **Uygulama odaklı ilerleyin:** Gerçek veriyle çalışma pratiğine yakın örneklerle temel analiz adımlarını kavrarsınız.
 - **Kendi hızınızda öğrenin:** Ders içeriklerine çevrimiçi erişerek ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
-### Asenkron Eğitim Yapısı
-Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+### Kendi Hızınızda Eğitim Yapısı
+Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 ### Eğitim Akışı
 * **1. Hafta:** R Programlama Dili ile Biyolojik Verilerin Analizi: Temel R ve Temel Paketler (Değişkenler, Veri tipleri, Operatörler, Döngüler, Fonksiyonlar, dplyr, tidyverse, ggplot)

@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "NCBI, Ensembl ve UCSC Genom Tarayıcısı Uygulamalı Eğitimi"
 date = "2023-12-26"
-description = "Bu eğitim, NCBI, Ensembl ve UCSC genom tarayıcılarını uygulamalı örneklerle kendi hızınızda öğrenmeniz için hazırlanmış videolu bir derstir."
+description = "Gen, transkript, varyant ve genom bölgelerini NCBI, Ensembl ve UCSC üzerinden daha güvenli yorumlamak isteyenler için."
 
 images =[ "images/NCBI-ENSEMBL-UCSC-Genom-Tarayicileri-Kursu.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=18B15yjlBZ"
@@ -167,9 +167,9 @@ Bu eğitim katılımcılara genetik veri analizi konusunda güçlü bir temel sa
 
 <br/>
 
-### **Asenkron Eğitim Yapısı**
+### **Kendi Hızınızda Eğitim Yapısı**
 
-Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 ### **Kısa Açıklama**
 

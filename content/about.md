@@ -35,6 +35,6 @@ Bu yaklaşım, eğitim değerinden ödün vermeden daha fazla katılımcının u
 
 ## ERES çizgisi
 
-ERES Biyoinformatik Akademi, sıradan bir online eğitim vitrini olmaktan çok, Ar-Ge deneyimiyle beslenen uygulama odaklı bir öğrenme alanı olarak konumlanır. Buradaki amaç hızlı vaatler vermek değil; doğru başlangıç sırası, anlaşılır teknik dil, ödev/quiz desteği ve gerçek veriyle çalışma pratiğine yakın bir öğrenme akışı sunmaktır.
+ERES Biyoinformatik Akademi, sıradan bir online eğitim vitrini olmaktan çok, Ar-Ge deneyimiyle beslenen uygulama odaklı bir öğrenme alanı olarak konumlanır. Buradaki amaç hızlı vaatler vermek değil; doğru öğrenme yolunu seçmeyi kolaylaştıran bir karar rehberi, anlaşılır teknik dil, ödev/quiz desteği ve gerçek veriyle çalışma pratiğine yakın bir öğrenme akışı sunmaktır.
 
 Eğitimleri incelemek için [Eğitim kataloğuna](/post/) gidebilir, hangi eğitimden başlamanız gerektiğinden emin değilseniz [İletişim](/post/contact/) sayfasından bize ulaşabilirsiniz.

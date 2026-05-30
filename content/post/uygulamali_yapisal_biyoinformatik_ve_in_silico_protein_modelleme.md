@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi"
 date = "2023-12-24"
-description = "Bu eğitim, yapısal biyoinformatik, in silico protein modelleme ve ilgili analiz araçlarını kendi hızınızda öğrenmeniz için hazırlanmıştır."
+description = "Protein yapısı, PDB kayıtları, AlphaFold çıktıları ve in silico modelleme yaklaşımını uygulama odaklı öğrenmek isteyenler için."
 
 images =[ "images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Egitimi.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=YOeiS&pricing_plan=lKzy6LggBX"
@@ -165,7 +165,7 @@ Bu eğitim katılımcılara biyoloji ve bilgisayar bilimleri arasındaki kesişi
 
 <br/>
 
-Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 <br/> 
  

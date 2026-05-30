@@ -87,7 +87,7 @@ Bu eğitim, hesaplamalı çalışmalar yapan tüm araştırmacılar için uygund
 
 <br/>
 
-Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
     <br/>
 

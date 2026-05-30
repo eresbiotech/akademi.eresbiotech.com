@@ -107,7 +107,7 @@ Temel biyoinformatik kavramlarına aşina olmak.
 
 <br/>
 
-Bu eğitim presale/hazırlık aşamasındadır ve bu turda aktif satışa açılmamıştır. İçerik yayına hazırlandığında asenkron ve videolu öğrenme yapısıyla sunulacaktır.
+Bu eğitim presale/hazırlık aşamasındadır ve bu turda aktif satışa açılmamıştır. İçerik yayına hazırlandığında videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulacaktır.
 
     <br/>
 

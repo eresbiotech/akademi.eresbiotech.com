@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "phyML Uygulamalı Filogenetik ve Dizi Hizalama Eğitimi"
 date = "2023-12-25"
-description = "Bu eğitim, dizi hizalama, filogenetik analiz ve phyML uygulamalarını kendi hızınızda öğrenmeniz için hazırlanmış uygulama odaklı bir derstir."
+description = "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
 
 images =[ "images/filogenetik-dizi-hizalama-Egitimi.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=8y1M3&pricing_plan=rKBPQ397GN"
@@ -139,7 +139,7 @@ Bu eğitim, dizi hizalama ve filogenetik analiz konularında temel ve ileri düz
 
 <br/>
 
-Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 <br/>
 

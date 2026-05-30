@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Tek Hücre RNA-Seq Analizi Eğitimi"
 date = "2023-12-23"
-description = "Bu eğitim, tek hücre RNA-seq analizinin temel kavramlarını ve Seurat tabanlı uygulama adımlarını kendi hızınızda öğrenmeniz için hazırlanmıştır."
+description = "scRNA-seq verilerinde kalite kontrol, kümeleme, marker gen yorumu ve Seurat iş akışını anlamak isteyen araştırmacılar için."
 
 images =[ "images/Tek-Hucre-RNA-Seq-dizi-Analizi-Egitimi.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=M1DB8&pricing_plan=QyBbwpvLGD"
@@ -144,7 +144,7 @@ Bu eğitimi alanlar, biyoinformatik alanında önemli kazanımlar elde edecekler
 
 <br/>
 
-Bu eğitim, kendi hızınızda ilerleyebileceğiniz asenkron ve videolu bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
 
 <br/>
 
