@@ -28,8 +28,8 @@
         <span>Dijital sertifika</span>
       </div>
       <div class="catalog-support-note">
-        <strong>Doğa+Pozitif destekli erişilebilir ücret yapısı</strong>
-        <span>Doğa+Pozitif desteğiyle hazırlanan erişilebilir ücret yapısı sayesinde, biyoinformatik eğitimlerine daha uygun koşullarla katılabilirsiniz.</span>
+        <strong>NaturaLogic destekli erişilebilir kayıt dönemi</strong>
+        <span>Bu sayfadaki aktif eğitimler, yenilenme dönemine özel olarak öğrenci ve çalışan kategorilerinde %50 NaturaLogic desteğiyle sunulmaktadır. Destekli ücretler 16 Haziran Pazartesi 23:59’a kadar geçerlidir.</span>
       </div>
     </div>
     <div class="hero-side">
@@ -64,6 +64,23 @@
             <p>{{ index $cardDescriptions .File.BaseFileName | default .Description }}</p>
             {{ if and (eq .Params.course_status "active") .Params.student_checkout_url .Params.employee_checkout_url }}
               <p class="course-availability-note">Öğrenci ve çalışan fiyat seçenekleri mevcut</p>
+              <div class="catalog-price-summary" aria-label="NaturaLogic destekli ücret özeti">
+                {{ if .Params.student_price }}
+                  <p>
+                    <span>Öğrenci</span>
+                    {{ with .Params.student_regular_price }}<del>{{ . }}</del>{{ end }}
+                    <strong>{{ .Params.student_price }}</strong>
+                  </p>
+                {{ end }}
+                {{ if .Params.employee_price }}
+                  <p>
+                    <span>Çalışan</span>
+                    {{ with .Params.employee_regular_price }}<del>{{ . }}</del>{{ end }}
+                    <strong>{{ .Params.employee_price }}</strong>
+                  </p>
+                {{ end }}
+                <small>%50 NaturaLogic destekli ücretler mevcut.</small>
+              </div>
             {{ end }}
           </div>
           <div class="catalog-card-actions">

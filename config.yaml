@@ -52,7 +52,7 @@ menus:
       weight: 3
 
     - name: "Eğitimler"
-      url: "/blog"
+      url: "/post/"
       weight: 5
 
   buttons:
@@ -76,7 +76,7 @@ menus:
 
 
     - name: "Eğitimler"
-      url: "/blog"
+      url: "/post/"
       weight: 5
 
 taxonomies:

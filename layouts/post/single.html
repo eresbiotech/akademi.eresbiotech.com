@@ -267,23 +267,28 @@
           <h2>Kayıt Seçenekleri</h2>
           <p class="pricing-intro">Size uygun erişim türünü seçerek Payhip üzerinden güvenli ödeme adımına geçebilirsiniz.</p>
           <div class="supported-fee-note">
-            <p class="support-label">Doğa+Pozitif destekli</p>
-            <h3>Doğa+Pozitif destekli erişilebilir ücret</h3>
-            <p>Bu eğitim, Doğa+Pozitif desteğiyle daha erişilebilir ücret yapısıyla sunulmaktadır. Böylece yaşam bilimleri alanında biyoinformatik becerilerini geliştirmek isteyen öğrenciler, araştırmacılar ve profesyoneller nitelikli eğitimlere daha ulaşılabilir koşullarla katılabilir.</p>
+            <p class="support-label">NaturaLogic destekli</p>
+            <h3>NaturaLogic destekli %50 erişim desteği</h3>
+            <p>Bu eğitim, ERES Biyoinformatik Akademi’nin yenilenme döneminde NaturaLogic desteğiyle sınırlı süreyle %50 destekli ücretlerle sunulmaktadır. Eğitim içeriği, erişim yapısı, ödev/quiz ve dijital sertifika hakları aynı şekilde geçerlidir.</p>
+            <p class="campaign-deadline">Destekli ücretler 16 Haziran Pazartesi 23:59’a kadar geçerlidir.</p>
           </div>
           <p class="course-trust-note">Kayıt işleminiz tamamlandığında eğitime otomatik olarak tanımlanırsınız. Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranındaki taksit seçeneklerini inceleyebilirsiniz. Kayıt sonrası derslere nasıl erişeceğinizi açıklayan yönlendirmeleri ödeme sürecinin ardından takip edebilirsiniz.</p>
-          <p class="pricing-support-line">Ücretler Doğa+Pozitif desteğiyle erişilebilir seviyede tutulmuştur.</p>
+          <p class="pricing-support-line">Ücretler NaturaLogic desteğiyle erişilebilir seviyede tutulmuştur.</p>
           <div class="course-pricing-grid">
-            <article class="pricing-card pricing-card-featured">
-              <span class="pricing-badge">Öğrencilere özel avantajlı erişim</span>
+            <article class="pricing-card pricing-card-featured price-card">
+              <span class="support-badge">Öğrencilere özel avantajlı erişim</span>
+              <span class="pricing-badge">%50 erişim desteği</span>
               <h3>{{ $studentLabel }}</h3>
-              {{ with .Params.student_price }}<p class="pricing-price">{{ . }}</p>{{ end }}
+              {{ with .Params.student_regular_price }}<p class="regular-price">Normal ücret <del>{{ . }}</del></p>{{ end }}
+              {{ with .Params.student_price }}<p class="supported-price"><span>NaturaLogic destekli ücret</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
               <a class="pricing-button" href="{{ .Params.student_checkout_url }}">Öğrenci Olarak Başla</a>
             </article>
-            <article class="pricing-card">
+            <article class="pricing-card price-card">
+              <span class="pricing-badge">%50 erişim desteği</span>
               <h3>{{ $employeeLabel }}</h3>
-              {{ with .Params.employee_price }}<p class="pricing-price">{{ . }}</p>{{ end }}
+              {{ with .Params.employee_regular_price }}<p class="regular-price">Normal ücret <del>{{ . }}</del></p>{{ end }}
+              {{ with .Params.employee_price }}<p class="supported-price"><span>NaturaLogic destekli ücret</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar veya kurumsal yapılarda çalışan profesyoneller için eğitim erişimi.</p>
               <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">Çalışan Olarak Başla</a>
             </article>
@@ -355,8 +360,12 @@
               <p>Ödeme sürecini tamamladığınızda kaydınız otomatik olarak oluşturulur. Sistem sizi eğitime tanımlar; ödeme sonrasında derslere nasıl erişeceğinizi açıklayan yönlendirmeleri takip edebilirsiniz.</p>
             </article>
             <article>
-              <h3>Eğitim ücretleri neden daha erişilebilir hale geldi?</h3>
-              <p>ERES Biyoinformatik Akademi eğitimleri, Doğa+Pozitif desteğiyle daha erişilebilir ücret yapısıyla sunulmaktadır. Bu destek sayesinde eğitim değerinden ödün vermeden, biyoinformatik öğrenmek isteyen daha fazla yaşam bilimleri öğrencisi, araştırmacı ve profesyonele ulaşmayı hedefliyoruz.</p>
+              <h3>NaturaLogic destekli ücret ne anlama geliyor?</h3>
+              <p>NaturaLogic destekli ücret, ERES Biyoinformatik Akademi’nin yenilenme döneminde seçili eğitimlerde öğrenci ve çalışan kategorileri için %50 erişim desteği uygulanması anlamına gelir. Eğitim içeriği, erişim yapısı, ödev/quiz ve dijital sertifika hakları aynı şekilde geçerlidir.</p>
+            </article>
+            <article>
+              <h3>Bu ücretler kalıcı mı?</h3>
+              <p>Hayır. NaturaLogic destekli ücretler yalnızca kampanya dönemi boyunca geçerlidir. Destekli kayıt dönemi 16 Haziran Pazartesi 23:59’da sona erer.</p>
             </article>
           {{ end }}
           <article>

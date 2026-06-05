@@ -9,6 +9,8 @@ student_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_
 employee_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=ZjBLYvqAGm"
 student_price = "1.750 TL"
 employee_price = "2.750 TL"
+student_regular_price = "3.500 TL"
+employee_regular_price = "5.500 TL"
 student_plan_label = "Öğrenci"
 employee_plan_label = "Çalışan"
 course_status = "active"
