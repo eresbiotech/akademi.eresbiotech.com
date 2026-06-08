@@ -3,12 +3,12 @@
 {{- $slug := .File.BaseFileName -}}
 {{- $comingSoonSlugs := slice "biyoinformatik-dizi-hizalama-algoritmalari-egitimi" "biyoinformatik-yaz-kampi" -}}
 {{- $isComingSoonFeature := in $comingSoonSlugs $slug -}}
-{{- $payhipURL := "/post/" | relURL -}}
-{{- with .Params.payhip_url -}}
-  {{- $payhipURL = . -}}
+{{- $fallbackCTAURL := "/post/" | relURL -}}
+{{- with .Params.checkout_url -}}
+  {{- $fallbackCTAURL = . -}}
 {{- end -}}
 {{- $hasPricingPlans := and .Params.student_checkout_url .Params.employee_checkout_url -}}
-{{- $primaryCTAURL := $payhipURL -}}
+{{- $primaryCTAURL := $fallbackCTAURL -}}
 {{- $primaryCTAText := "Hemen Başlayın" -}}
 {{- if $isComingSoonFeature -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
@@ -265,7 +265,7 @@
         {{ else if $hasPricingPlans }}
           <p class="eyebrow">Kayıt seçenekleri</p>
           <h2>Kayıt Seçenekleri</h2>
-          <p class="pricing-intro">Size uygun erişim türünü seçerek Payhip üzerinden güvenli ödeme adımına geçebilirsiniz.</p>
+          <p class="pricing-intro">Size uygun erişim türünü seçerek güvenli ödeme adımına geçebilirsiniz.</p>
           <div class="supported-fee-note">
             <p class="support-label">NaturaLogic destekli</p>
             <h3>NaturaLogic destekli %50 erişim desteği</h3>
@@ -378,7 +378,7 @@
       <section class="training-final-cta">
         <p class="eyebrow">Sonraki adım</p>
         <h2>{{ if $isComingSoonFeature }}Açılış duyurusunu takip edebilirsiniz.{{ else }}Bu eğitimle ilk adımı bugün atabilirsiniz.{{ end }}</h2>
-        <p>{{ if $isComingSoonFeature }}Bu program yeni dönem kayıtlarına hazırlanıyor. Açılış duyurusunu almak veya program hakkında ön bilgi istemek için bize yazabilirsiniz.{{ else }}Kayıt türünüzü seçerek Payhip üzerinden güvenli ödeme adımına geçebilir, derslere kendi programınıza göre başlayabilirsiniz.{{ end }}</p>
+        <p>{{ if $isComingSoonFeature }}Bu program yeni dönem kayıtlarına hazırlanıyor. Açılış duyurusunu almak veya program hakkında ön bilgi istemek için bize yazabilirsiniz.{{ else }}Kayıt türünüzü seçerek güvenli ödeme adımına geçebilir, derslere kendi programınıza göre başlayabilirsiniz.{{ end }}</p>
         <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
       </section>
 

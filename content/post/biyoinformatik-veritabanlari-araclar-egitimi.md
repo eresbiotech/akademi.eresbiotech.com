@@ -5,8 +5,8 @@ date = "2023-02-27"
 description = "NCBI, UniProt, PDB ve BLAST gibi araçları doğru okumak, sonuçları anlamlandırmak ve raporlamak isteyenler için."
 
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
-student_checkout_url = "https://kampus.eresbiotech.com/order?link=G8fph&pricing_plan=MrW6dvk5BN"
-employee_checkout_url = "https://kampus.eresbiotech.com/order?link=G8fph&pricing_plan=bZz2MvA0Wr"
+student_checkout_url = "https://iyzi.link/AKnR3A"
+employee_checkout_url = "https://iyzi.link/AKnR3Q"
 student_price = "1.400 TL"
 employee_price = "2.400 TL"
 student_regular_price = "2.800 TL"

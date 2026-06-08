@@ -5,8 +5,8 @@ date = "2023-12-25"
 description = "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
 
 images =[ "images/filogenetik-dizi-hizalama-Egitimi.png" ]
-student_checkout_url = "https://kampus.eresbiotech.com/order?link=8y1M3&pricing_plan=rKBPQ397GN"
-employee_checkout_url = "https://kampus.eresbiotech.com/order?link=8y1M3&pricing_plan=V6B73v9wBr"
+student_checkout_url = "https://iyzi.link/AKnR5A"
+employee_checkout_url = "https://iyzi.link/AKnR5g"
 student_price = "2.100 TL"
 employee_price = "3.100 TL"
 student_regular_price = "4.200 TL"

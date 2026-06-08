@@ -22,7 +22,7 @@ Size şu konularda yardımcı olabiliriz:
 
 Kurumsal eğitim veya araştırma grubu talebi için yazıyorsanız, mesajınızda ekip büyüklüğünü, ilgilendiğiniz eğitim başlığını ve varsa çalıştığınız veri tipini kısaca belirtmeniz yeterlidir. Üniversite laboratuvarları, araştırma grupları, biyoteknoloji şirketleri, hastane ekipleri ve kurum içi Ar-Ge ekipleri için ihtiyaca göre şekillenen eğitim akışları değerlendirilebilir.
 
-Kredi kartı ile güvenli ödeme ve ödeme ekranındaki taksit seçenekleri Payhip üzerinden sunulur. Havale/EFT ile kayıt olmak veya kurumsal kayıt sürecini görüşmek isterseniz mesajınızda kısaca belirtmeniz yeterlidir.
+Kredi kartı ile güvenli ödeme ve ödeme ekranındaki taksit seçenekleri ödeme adımında sunulur. Havale/EFT ile kayıt olmak veya kurumsal kayıt sürecini görüşmek isterseniz mesajınızda kısaca belirtmeniz yeterlidir.
 
 E-postanızın ulaşmadığını düşünürseniz bize doğrudan [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden de ulaşabilirsiniz.
 
