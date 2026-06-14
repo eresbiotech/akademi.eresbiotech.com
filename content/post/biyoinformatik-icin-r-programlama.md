@@ -5,8 +5,8 @@ date = "2024-07-08"
 description = "Biyolojik veriyi R ile düzenlemek, analiz etmek ve görselleştirmek isteyenler için ödev ve quizlerle desteklenen uygulama odaklı eğitim."
 
 images =[ "images/Biyoinformatik-icin-R-Programlama.png" ]
-student_checkout_url = "https://iyzi.link/AKnR1g"
-employee_checkout_url = "https://iyzi.link/AKnR2A"
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=rjznKvJxB7"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=ZjBLYvqAGm"
 student_price = "1.750 TL"
 employee_price = "2.750 TL"
 student_regular_price = "3.500 TL"

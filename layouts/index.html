@@ -16,6 +16,15 @@
   "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Protein yapısı, PDB kayıtları, AlphaFold çıktıları ve in silico modelleme yaklaşımını uygulama odaklı öğrenmek isteyenler için."
   "phyml-uygulamali-filogenetik-egitimi" "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
 -}}
+{{- $supportedQuotaStatus := dict
+  "biyoinformatik-icin-r-programlama" "24/25"
+  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "23/25"
+  "biyoinformatik-veritabanlari-araclar-egitimi" "22/25"
+  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "23/25"
+  "tek-hucre-rna-seq-analizi-egitimi" "24/25"
+  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "22/25"
+  "phyml-uygulamali-filogenetik-egitimi" "23/25"
+-}}
 <section class="home-hero">
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
@@ -54,10 +63,11 @@
   <div class="support-band-card">
     <p class="support-label">NaturaLogic destekli</p>
     <div>
-      <h2>NaturaLogic destekli %50 erişim desteği başladı</h2>
-      <p>ERES Biyoinformatik Akademi’nin yenilenme döneminde, seçili biyoinformatik eğitimleri öğrenci ve çalışan kategorilerinde sınırlı süreyle %50 destekli ücretlerle sunulmaktadır.</p>
-      <p class="campaign-deadline">Destekli ücretler 16 Haziran Pazartesi 23:59’a kadar geçerlidir.</p>
-      <a class="support-cta" href="{{ "/post/" | relURL }}">Destekli Eğitimleri İncele</a>
+      <h2>Son 48 saat: NaturaLogic destekli %50 erişim desteği</h2>
+      <p>Seçili biyoinformatik eğitimlerinde NaturaLogic destekli %50 erişim desteği 16 Haziran Pazartesi 23:59’a kadar devam ediyor. Destekli kontenjanlar eğitim bazında sınırlıdır.</p>
+      <p class="campaign-deadline">Her eğitim için 25 kişilik NaturaLogic destekli kontenjan ayrılmıştır. Destekli kayıt dönemi 16 Haziran Pazartesi 23:59’da sona eriyor.</p>
+      <p class="campaign-deadline">Final haftasındaysanız şimdi kayıt olun; eğitime finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
+      <a class="support-cta" href="{{ "/post/" | relURL }}">16 Haziran’a kadar destekli kayıt</a>
     </div>
   </div>
 </section>
@@ -167,8 +177,11 @@
           </div>
           <h3><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h3>
           <p>{{ index $cardDescriptions .File.BaseFileName | default .Description }}</p>
+          {{ with index $supportedQuotaStatus .File.BaseFileName }}
+            <p class="course-availability-note">Destekli kontenjan durumu: {{ . }}</p>
+          {{ end }}
         </div>
-        <a class="card-link" href="{{ .RelPermalink }}">Eğitimi İncele</a>
+        <a class="card-link" href="{{ .RelPermalink }}">Eğitimi incele ve kayıt ol</a>
       </article>
     {{ end }}
   </div>

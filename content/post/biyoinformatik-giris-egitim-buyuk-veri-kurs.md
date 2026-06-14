@@ -5,8 +5,8 @@ date = "2023-02-27"
 description = "Omik veri dünyasını, temel biyoinformatik kavramlarını ve büyük veri mantığını araştırma sorularıyla ilişkilendirerek anlamak isteyenler için."
 
 images =[ "images/Biyoinformatik-Genomik-Proteomik-Büyük-Veri-Egitimi.png" ]
-student_checkout_url = "https://iyzi.link/AKnR2Q"
-employee_checkout_url = "https://iyzi.link/AKnR2g"
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=SB3Oz&pricing_plan=rdWQ8PYXGj"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=SB3Oz&pricing_plan=nLWRarVkGa"
 student_price = "1.350 TL"
 employee_price = "2.350 TL"
 student_regular_price = "2.700 TL"

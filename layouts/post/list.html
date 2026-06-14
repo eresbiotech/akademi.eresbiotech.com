@@ -16,6 +16,15 @@
   "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Protein yapısı, PDB kayıtları, AlphaFold çıktıları ve in silico modelleme yaklaşımını uygulama odaklı öğrenmek isteyenler için."
   "phyml-uygulamali-filogenetik-egitimi" "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
 -}}
+{{- $supportedQuotaStatus := dict
+  "biyoinformatik-icin-r-programlama" "24/25"
+  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "23/25"
+  "biyoinformatik-veritabanlari-araclar-egitimi" "22/25"
+  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "23/25"
+  "tek-hucre-rna-seq-analizi-egitimi" "24/25"
+  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "22/25"
+  "phyml-uygulamali-filogenetik-egitimi" "23/25"
+-}}
 <section class="container page-shell">
   <header class="page-header split-header post-index-hero">
     <div>
@@ -28,8 +37,9 @@
         <span>Dijital sertifika</span>
       </div>
       <div class="catalog-support-note">
-        <strong>NaturaLogic destekli erişilebilir kayıt dönemi</strong>
-        <span>Bu sayfadaki aktif eğitimler, yenilenme dönemine özel olarak öğrenci ve çalışan kategorilerinde %50 NaturaLogic desteğiyle sunulmaktadır. Destekli ücretler 16 Haziran Pazartesi 23:59’a kadar geçerlidir.</span>
+        <strong>Son 48 saat: NaturaLogic destekli %50 erişim desteği</strong>
+        <span>Seçili biyoinformatik eğitimlerinde destekli kayıt dönemi 16 Haziran Pazartesi 23:59’da sona eriyor. Her eğitim için 25 kişilik NaturaLogic destekli kontenjan ayrılmıştır.</span>
+        <span>Final haftasındaysanız şimdi kayıt olun; eğitime finallerden sonra kendi hızınızda başlayabilirsiniz.</span>
       </div>
     </div>
     <div class="hero-side">
@@ -79,12 +89,16 @@
                     <strong>{{ .Params.employee_price }}</strong>
                   </p>
                 {{ end }}
-                <small>%50 NaturaLogic destekli ücretler mevcut.</small>
+                {{ with index $supportedQuotaStatus .File.BaseFileName }}
+                  <small>Destekli kontenjan durumu: {{ . }}</small>
+                {{ else }}
+                  <small>%50 NaturaLogic destekli ücretler mevcut.</small>
+                {{ end }}
               </div>
             {{ end }}
           </div>
           <div class="catalog-card-actions">
-            <a class="card-link" href="{{ .RelPermalink }}">Eğitimi İncele</a>
+            <a class="card-link" href="{{ .RelPermalink }}">Eğitimi incele ve kayıt ol</a>
           </div>
         </article>
       {{ end }}

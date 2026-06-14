@@ -5,8 +5,8 @@ date = "2023-12-26"
 description = "Gen, transkript, varyant ve genom bölgelerini NCBI, Ensembl ve UCSC üzerinden daha güvenli yorumlamak isteyenler için."
 
 images =[ "images/NCBI-ENSEMBL-UCSC-Genom-Tarayicileri-Kursu.png" ]
-student_checkout_url = "https://iyzi.link/AKnR3g"
-employee_checkout_url = "https://iyzi.link/AKnR3w"
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=18B15yjlBZ"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=rKBPQ39KGN"
 student_price = "1.650 TL"
 employee_price = "2.650 TL"
 student_regular_price = "3.300 TL"
