@@ -28,6 +28,7 @@ html {
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,6 +36,7 @@ body {
   background:
     linear-gradient(180deg, rgba(240, 253, 250, 0.78), rgba(248, 249, 250, 0) 360px),
     var(--bg);
+  overflow-x: hidden;
 }
 
 a {
@@ -191,6 +193,7 @@ img {
   border: 1px solid rgba(226, 232, 240, 0.92);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
+  min-width: 0;
 }
 
 .home-hero-copy {
@@ -338,6 +341,115 @@ img {
 .support-cta:hover {
   background: #115e59;
   color: #fff;
+}
+
+.campaign-urgency-banner {
+  background:
+    linear-gradient(135deg, rgba(0, 33, 71, 0.98), rgba(15, 118, 110, 0.94)),
+    var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 46px rgba(0, 33, 71, 0.18);
+  color: #fff;
+  margin-top: 24px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: clamp(18px, 3vw, 26px);
+}
+
+.campaign-urgency-banner h2 {
+  color: #fff;
+  font-size: clamp(1.2rem, 2.6vw, 1.8rem);
+  line-height: 1.22;
+  margin: 0 0 10px;
+}
+
+.campaign-urgency-banner p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.campaign-urgency-banner .support-cta {
+  background: #fff;
+  color: #0f766e;
+  margin-top: 18px;
+}
+
+.campaign-urgency-banner .support-cta:hover {
+  background: var(--gold-soft);
+  color: #725117;
+}
+
+.urgency-kicker {
+  align-items: center;
+  background: rgba(255, 247, 223, 0.16);
+  border: 1px solid rgba(255, 247, 223, 0.34);
+  border-radius: 999px;
+  color: #fff !important;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 950;
+  margin: 0 0 12px !important;
+  padding: 7px 11px;
+  text-transform: uppercase;
+}
+
+.catalog-urgency-banner,
+.training-urgency-banner {
+  margin-top: 18px;
+}
+
+.quota-callout {
+  background:
+    linear-gradient(135deg, rgba(255, 247, 223, 0.96), rgba(236, 253, 245, 0.96)),
+    #fff;
+  border: 1px solid rgba(197, 160, 89, 0.44);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  display: grid;
+  gap: 3px;
+  margin-top: 14px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 11px 12px;
+}
+
+.quota-callout strong {
+  color: #725117;
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.quota-callout span {
+  color: #334155;
+  font-size: 0.84rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.quota-callout-compact {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 247, 223, 0.7);
+}
+
+.sidebar-quota,
+.price-quota {
+  margin: 12px 0 16px;
+}
+
+.price-validity-note,
+.card-urgency-line {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 850;
+  line-height: 1.45;
+  margin: 12px 0 16px;
+}
+
+.card-urgency-line {
+  color: #0f766e;
+  margin-bottom: 0;
 }
 
 .section-heading {
@@ -1826,12 +1938,21 @@ h1 {
   }
 
   .site-nav {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: flex-start;
+    min-width: 0;
     width: 100%;
   }
 
-  .site-nav a {
+  .site-nav a,
+  .site-nav .nav-button {
+    justify-content: center;
     padding: 7px 8px;
+    text-align: center;
+    white-space: normal;
+    width: 100%;
   }
 
   .hero-side {
@@ -1854,6 +1975,18 @@ h1 {
   .audience-band,
   .audience-grid {
     grid-template-columns: 1fr;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .home-hero-grid > *,
+  .post-index-hero > *,
+  .training-hero > *,
+  .training-hero-grid > *,
+  .course-pricing-grid > *,
+  .catalog-grid > * {
+    min-width: 0;
   }
 
   .certificate-card {
@@ -1891,21 +2024,55 @@ h1 {
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .campaign-urgency-banner .support-cta,
+  .pricing-button {
+    width: 100%;
+  }
+
+  .home-hero-copy,
+  .post-index-hero,
+  .training-hero,
+  .hero-side,
+  .post-card,
+  .pricing-card,
+  .supported-fee-note {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    overflow-wrap: anywhere;
+  }
 }
 
 @media (max-width: 520px) {
   .container,
   .page-narrow {
-    width: min(100% - 24px, 1120px);
+    margin-left: 12px;
+    margin-right: 12px;
+    width: auto;
   }
 
   .header-inner {
+    align-items: stretch;
     min-height: 0;
     padding: 16px 0;
   }
 
+  .brand {
+    align-self: flex-start;
+  }
+
   .brand-logo {
     height: 40px;
+  }
+
+  .site-nav {
+    grid-template-columns: 1fr;
   }
 
   .page-shell {
@@ -1922,15 +2089,43 @@ h1 {
   .soft-hero,
   .training-hero,
   .post-index-hero {
-    padding: 24px;
+    padding: 22px;
+  }
+
+  .home-hero-copy {
+    padding: 26px 22px;
+  }
+
+  .home-hero-copy h1,
+  .post-index-hero h1,
+  .training-hero h1 {
+    font-size: 1.45rem;
+    line-height: 1.15;
+    max-width: calc(100vw - 68px);
+  }
+
+  .home-hero-copy p,
+  .post-index-hero p,
+  .training-hero p,
+  .campaign-urgency-banner h2,
+  .campaign-urgency-banner p {
+    max-width: calc(100vw - 68px);
   }
 
   h1 {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
+    overflow-wrap: anywhere;
+  }
+
+  h2,
+  h3,
+  p,
+  a {
+    overflow-wrap: anywhere;
   }
 
   .lead {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .card-grid {
@@ -1947,6 +2142,32 @@ h1 {
 
   .catalog-card-actions .card-link {
     flex-basis: auto;
+    width: 100%;
+  }
+
+  .campaign-urgency-banner {
+    margin-top: 18px;
+    padding: 18px;
+  }
+
+  .campaign-urgency-banner h2 {
+    font-size: 0.96rem;
+  }
+
+  .quota-callout {
+    padding: 10px;
+  }
+
+  .hero-actions,
+  .trust-row,
+  .badge-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions > *,
+  .trust-row span,
+  .badge-row .badge {
     width: 100%;
   }
 

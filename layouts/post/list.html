@@ -41,6 +41,12 @@
         <span>Seçili biyoinformatik eğitimlerinde destekli kayıt dönemi 16 Haziran Pazartesi 23:59’da sona eriyor. Her eğitim için 25 kişilik NaturaLogic destekli kontenjan ayrılmıştır.</span>
         <span>Final haftasındaysanız şimdi kayıt olun; eğitime finallerden sonra kendi hızınızda başlayabilirsiniz.</span>
       </div>
+      <div class="campaign-urgency-banner catalog-urgency-banner">
+        <p class="urgency-kicker">Destekli kayıt dönemi kapanıyor</p>
+        <h2>16 Haziran Pazartesi 23:59’a kadar NaturaLogic destekli fiyat hakkınızı kullanabilirsiniz.</h2>
+        <p>Destekli fiyat seçeneği kampanya sonunda kapanacaktır. Kayıt olduktan sonra eğitime finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
+        <a class="support-cta" href="#egitimler">Destekli eğitimleri incele</a>
+      </div>
     </div>
     <div class="hero-side">
       <strong class="hero-panel-title">Öncelikli eğitim vitrini</strong>
@@ -74,6 +80,12 @@
             <p>{{ index $cardDescriptions .File.BaseFileName | default .Description }}</p>
             {{ if and (eq .Params.course_status "active") .Params.student_checkout_url .Params.employee_checkout_url }}
               <p class="course-availability-note">Öğrenci ve çalışan fiyat seçenekleri mevcut</p>
+              {{ with index $supportedQuotaStatus .File.BaseFileName }}
+                <div class="quota-callout">
+                  <strong>Destekli kontenjan durumu: {{ . }}</strong>
+                  <span>Destekli fiyat hakkı kapanmadan kaydınızı tamamlayın.</span>
+                </div>
+              {{ end }}
               <div class="catalog-price-summary" aria-label="NaturaLogic destekli ücret özeti">
                 {{ if .Params.student_price }}
                   <p>
@@ -89,12 +101,9 @@
                     <strong>{{ .Params.employee_price }}</strong>
                   </p>
                 {{ end }}
-                {{ with index $supportedQuotaStatus .File.BaseFileName }}
-                  <small>Destekli kontenjan durumu: {{ . }}</small>
-                {{ else }}
-                  <small>%50 NaturaLogic destekli ücretler mevcut.</small>
-                {{ end }}
+                <small>Destekli kayıt dönemi kapanıyor: 16 Haziran 23:59.</small>
               </div>
+              <p class="card-urgency-line">Kayıt sonrası finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
             {{ end }}
           </div>
           <div class="catalog-card-actions">

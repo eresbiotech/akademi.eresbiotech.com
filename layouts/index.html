@@ -37,6 +37,12 @@
         <span>Dijital sertifika</span>
         <span>NaturaLogic destekli %50 erişim</span>
       </div>
+      <div class="campaign-urgency-banner">
+        <p class="urgency-kicker">Son 48 saat</p>
+        <h2>NaturaLogic destekli %50 erişim desteği 16 Haziran Pazartesi 23:59’da kapanıyor.</h2>
+        <p>Şimdi kayıt olun; eğitime finallerden sonra kendi hızınızda başlayabilirsiniz. Destekli fiyat hakkı kampanya sonunda kapanacaktır.</p>
+        <a class="support-cta" href="{{ "/post/" | relURL }}">Destekli eğitimleri incele</a>
+      </div>
       <div class="hero-actions">
         <a class="hero-action" href="#ogrenme-yollari">Size Uygun Eğitimi Seçin</a>
         <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm Eğitimleri İnceleyin</a>
@@ -178,8 +184,12 @@
           <h3><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h3>
           <p>{{ index $cardDescriptions .File.BaseFileName | default .Description }}</p>
           {{ with index $supportedQuotaStatus .File.BaseFileName }}
-            <p class="course-availability-note">Destekli kontenjan durumu: {{ . }}</p>
+            <div class="quota-callout">
+              <strong>Destekli kontenjan durumu: {{ . }}</strong>
+              <span>Destekli fiyat hakkı kapanmadan kaydınızı tamamlayın.</span>
+            </div>
           {{ end }}
+          <p class="card-urgency-line">Destekli kayıt dönemi kapanıyor: 16 Haziran 23:59. Kayıt sonrası finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
         </div>
         <a class="card-link" href="{{ .RelPermalink }}">Eğitimi incele ve kayıt ol</a>
       </article>
