@@ -34,6 +34,7 @@
 {{- $quotaStatus := index $supportedQuotaStatus $slug -}}
 {{- $closedSupportedQuotaSlugs := slice "biyoinformatik-icin-r-programlama" "tek-hucre-rna-seq-analizi-egitimi" -}}
 {{- $isSupportedQuotaClosed := in $closedSupportedQuotaSlugs $slug -}}
+{{- $usesNormalEnrollmentPricing := eq $slug "biyoinformatik-icin-r-programlama" -}}
 {{- if and $hasPricingPlans $isSupportedQuotaClosed -}}
   {{- $primaryCTAText = "Kayıt seçeneklerini incele" -}}
 {{- end -}}
@@ -299,52 +300,78 @@
         {{ else if $hasPricingPlans }}
           <p class="eyebrow">Kayıt seçenekleri</p>
           <h2>Kayıt Seçenekleri</h2>
-          <p class="pricing-intro">Son gün: NaturaLogic destekli %50 erişim desteği bugün 23:59’da sona eriyor. Kayıt işleminizi bugün tamamlayabilir, eğitimlere finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
+          <p class="pricing-intro">{{ if $usesNormalEnrollmentPricing }}Bu eğitimde NaturaLogic destekli kontenjan kapandı. Kayıt işleminizi normal kayıt seçeneğiyle tamamlayabilir, eğitimlere finallerden sonra kendi hızınızda başlayabilirsiniz.{{ else }}Son gün: NaturaLogic destekli %50 erişim desteği bugün 23:59’da sona eriyor. Kayıt işleminizi bugün tamamlayabilir, eğitimlere finallerden sonra kendi hızınızda başlayabilirsiniz.{{ end }}</p>
           <div class="supported-fee-note">
-            <p class="support-label">NaturaLogic destekli</p>
-            <h3>NaturaLogic destekli %50 erişim desteği</h3>
-            <p>Bugün kayıt ol, eğitimlere finallerden sonra kendi hızında başla.</p>
-            <p class="campaign-deadline">{{ if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı. Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Bu eğitim için son 1 NaturaLogic destekli kontenjan ayrılmıştır.{{ end }}</p>
-            {{ with $quotaStatus }}
+            <p class="support-label">{{ if $usesNormalEnrollmentPricing }}Normal kayıt{{ else }}NaturaLogic destekli{{ end }}</p>
+            <h3>{{ if $usesNormalEnrollmentPricing }}R Programlama için normal kayıt seçenekleri{{ else }}NaturaLogic destekli %50 erişim desteği{{ end }}</h3>
+            <p>{{ if $usesNormalEnrollmentPricing }}R Programlama eğitimine normal kayıt seçeneğiyle devam edebilirsiniz.{{ else }}Bugün kayıt ol, eğitimlere finallerden sonra kendi hızında başla.{{ end }}</p>
+            <p class="campaign-deadline">{{ if $usesNormalEnrollmentPricing }}NaturaLogic destekli kontenjan bu eğitim için kapandı.{{ else if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı. Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Bu eğitim için son 1 NaturaLogic destekli kontenjan ayrılmıştır.{{ end }}</p>
+            {{ if not $usesNormalEnrollmentPricing }}{{ with $quotaStatus }}
               <div class="quota-callout">
                 <strong>Destekli kontenjan durumu: {{ . }}</strong>
                 <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
               </div>
-            {{ end }}
+            {{ end }}{{ end }}
           </div>
           <p class="course-trust-note">Kayıt işleminiz tamamlandığında eğitime otomatik olarak tanımlanırsınız. Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranındaki taksit seçeneklerini inceleyebilirsiniz. Kayıt sonrası derslere nasıl erişeceğinizi açıklayan yönlendirmeleri ödeme sürecinin ardından takip edebilirsiniz.</p>
-          <p class="pricing-support-line">NaturaLogic destekli fiyat seçeneği bugün 23:59’da kapanacaktır.</p>
+          <p class="pricing-support-line">{{ if $usesNormalEnrollmentPricing }}Normal kayıt seçeneği öğrenci ve çalışan kategorileri için açıktır.{{ else }}NaturaLogic destekli fiyat seçeneği bugün 23:59’da kapanacaktır.{{ end }}</p>
           <div class="course-pricing-grid">
             <article class="pricing-card pricing-card-featured price-card">
-              <span class="support-badge">Öğrencilere özel avantajlı erişim</span>
-              <span class="pricing-badge">%50 erişim desteği</span>
-              <h3>{{ $studentLabel }}</h3>
-              {{ with .Params.student_regular_price }}<p class="regular-price">Normal ücret <del>{{ . }}</del></p>{{ end }}
-              {{ with .Params.student_price }}<p class="supported-price"><span>NaturaLogic destekli ücret</span>{{ . }}</p>{{ end }}
-              <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
-              {{ with $quotaStatus }}
-                <div class="quota-callout price-quota">
-                  <strong>Destekli kontenjan durumu: {{ . }}</strong>
-                  <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
-                </div>
+              {{ if $usesNormalEnrollmentPricing }}
+                <span class="pricing-badge">Normal kayıt</span>
+              {{ else }}
+                <span class="support-badge">Öğrencilere özel avantajlı erişim</span>
+                <span class="pricing-badge">%50 erişim desteği</span>
               {{ end }}
-              <p class="price-validity-note">{{ if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı.{{ else }}Bu destekli fiyat bugün 23:59’a kadar geçerlidir.{{ end }}</p>
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}">{{ if $isSupportedQuotaClosed }}Kayıt seçeneklerini incele{{ else }}Destekli kayıt ol{{ end }}</a>
+              <h3>{{ $studentLabel }}</h3>
+              {{ if $usesNormalEnrollmentPricing }}
+                {{ with .Params.student_regular_price }}<p class="supported-price"><span>Kayıt ücreti</span>{{ . }}</p>{{ end }}
+              {{ else }}
+                {{ with .Params.student_regular_price }}<p class="regular-price">Normal ücret <del>{{ . }}</del></p>{{ end }}
+                {{ with .Params.student_price }}<p class="supported-price"><span>NaturaLogic destekli ücret</span>{{ . }}</p>{{ end }}
+              {{ end }}
+              <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
+              {{ if $usesNormalEnrollmentPricing }}
+                <div class="quota-callout price-quota">
+                  <strong>NaturaLogic destekli kontenjan bu eğitim için kapandı.</strong>
+                  <span>R Programlama eğitimine normal kayıt seçeneğiyle devam edebilirsiniz.</span>
+                </div>
+              {{ else }}
+                {{ with $quotaStatus }}
+                  <div class="quota-callout price-quota">
+                    <strong>Destekli kontenjan durumu: {{ . }}</strong>
+                    <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
+                  </div>
+                {{ end }}
+                <p class="price-validity-note">{{ if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı.{{ else }}Bu destekli fiyat bugün 23:59’a kadar geçerlidir.{{ end }}</p>
+              {{ end }}
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}">{{ if $usesNormalEnrollmentPricing }}Öğrenci kaydı oluştur{{ else if $isSupportedQuotaClosed }}Kayıt seçeneklerini incele{{ else }}Destekli kayıt ol{{ end }}</a>
             </article>
             <article class="pricing-card price-card">
-              <span class="pricing-badge">%50 erişim desteği</span>
+              <span class="pricing-badge">{{ if $usesNormalEnrollmentPricing }}Normal kayıt{{ else }}%50 erişim desteği{{ end }}</span>
               <h3>{{ $employeeLabel }}</h3>
-              {{ with .Params.employee_regular_price }}<p class="regular-price">Normal ücret <del>{{ . }}</del></p>{{ end }}
-              {{ with .Params.employee_price }}<p class="supported-price"><span>NaturaLogic destekli ücret</span>{{ . }}</p>{{ end }}
-              <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar veya kurumsal yapılarda çalışan profesyoneller için eğitim erişimi.</p>
-              {{ with $quotaStatus }}
-                <div class="quota-callout price-quota">
-                  <strong>Destekli kontenjan durumu: {{ . }}</strong>
-                  <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
-                </div>
+              {{ if $usesNormalEnrollmentPricing }}
+                {{ with .Params.employee_regular_price }}<p class="supported-price"><span>Kayıt ücreti</span>{{ . }}</p>{{ end }}
+              {{ else }}
+                {{ with .Params.employee_regular_price }}<p class="regular-price">Normal ücret <del>{{ . }}</del></p>{{ end }}
+                {{ with .Params.employee_price }}<p class="supported-price"><span>NaturaLogic destekli ücret</span>{{ . }}</p>{{ end }}
               {{ end }}
-              <p class="price-validity-note">{{ if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</p>
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">{{ if $isSupportedQuotaClosed }}Kayıt seçeneklerini incele{{ else }}Destekli kayıt ol{{ end }}</a>
+              <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar veya kurumsal yapılarda çalışan profesyoneller için eğitim erişimi.</p>
+              {{ if $usesNormalEnrollmentPricing }}
+                <div class="quota-callout price-quota">
+                  <strong>NaturaLogic destekli kontenjan bu eğitim için kapandı.</strong>
+                  <span>R Programlama eğitimine normal kayıt seçeneğiyle devam edebilirsiniz.</span>
+                </div>
+              {{ else }}
+                {{ with $quotaStatus }}
+                  <div class="quota-callout price-quota">
+                    <strong>Destekli kontenjan durumu: {{ . }}</strong>
+                    <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
+                  </div>
+                {{ end }}
+                <p class="price-validity-note">{{ if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</p>
+              {{ end }}
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">{{ if $usesNormalEnrollmentPricing }}Çalışan kaydı oluştur{{ else if $isSupportedQuotaClosed }}Kayıt seçeneklerini incele{{ else }}Destekli kayıt ol{{ end }}</a>
             </article>
           </div>
           <p class="payment-note">Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
