@@ -15,7 +15,7 @@
   {{- $primaryCTAText = "Açılış duyurusunu almak istiyorum" -}}
 {{- else if $hasPricingPlans -}}
   {{- $primaryCTAURL = "#kayit-secenekleri" -}}
-  {{- $primaryCTAText = "16 Haziran’a kadar destekli kayıt" -}}
+  {{- $primaryCTAText = "Destekli kayıt ol" -}}
 {{- else -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
   {{- $primaryCTAText = "Bilgi Alın" -}}
@@ -23,15 +23,20 @@
 {{- $studentLabel := .Params.student_plan_label | default "Öğrenci" -}}
 {{- $employeeLabel := .Params.employee_plan_label | default "Çalışan" -}}
 {{- $supportedQuotaStatus := dict
-  "biyoinformatik-icin-r-programlama" "24/25"
-  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "23/25"
-  "biyoinformatik-veritabanlari-araclar-egitimi" "22/25"
-  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "23/25"
-  "tek-hucre-rna-seq-analizi-egitimi" "24/25"
-  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "22/25"
-  "phyml-uygulamali-filogenetik-egitimi" "23/25"
+  "biyoinformatik-icin-r-programlama" "Destekli kontenjan kapandı"
+  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "Son 1 destekli kontenjan"
+  "biyoinformatik-veritabanlari-araclar-egitimi" "Son 1 destekli kontenjan"
+  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "Son 1 destekli kontenjan"
+  "tek-hucre-rna-seq-analizi-egitimi" "Destekli kontenjan kapandı"
+  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Son 1 destekli kontenjan"
+  "phyml-uygulamali-filogenetik-egitimi" "Son 1 destekli kontenjan"
 -}}
 {{- $quotaStatus := index $supportedQuotaStatus $slug -}}
+{{- $closedSupportedQuotaSlugs := slice "biyoinformatik-icin-r-programlama" "tek-hucre-rna-seq-analizi-egitimi" -}}
+{{- $isSupportedQuotaClosed := in $closedSupportedQuotaSlugs $slug -}}
+{{- if and $hasPricingPlans $isSupportedQuotaClosed -}}
+  {{- $primaryCTAText = "Kayıt seçeneklerini incele" -}}
+{{- end -}}
 {{- $lessonFlow := slice "Öğrenme hedefleri ve temel kavramlar" "Konuya uygun veri, araç ve uygulama mantığı" "Araştırma pratiğine yakın örneklerle ilerleme" "Ödev ve quizlerle öğrenmeyi pekiştirme" -}}
 {{- $outcomes := slice "Konuya ait temel kavramları araştırma pratiğiyle ilişkilendirebileceksiniz." "İlgili veri kaynaklarını, araçları ve çıktıları daha bilinçli okuyabileceksiniz." "Sonraki öğrenme yolunuzu daha net seçebileceksiniz." -}}
 {{- $codingNote := "Bu eğitimler, kodlama geçmişi sınırlı olan yaşam bilimleri öğrencileri ve araştırmacılarının biyolojik veriyle adım adım çalışabilmesi için yapılandırılmıştır." -}}
@@ -116,13 +121,13 @@
       </div>
       {{ if $hasPricingPlans }}
         <div class="campaign-urgency-banner training-urgency-banner">
-          <p class="urgency-kicker">Son 48 saat</p>
-          <h2>NaturaLogic destekli %50 erişim desteği 16 Haziran Pazartesi 23:59’da kapanıyor.</h2>
-          <p>Kayıt olduktan sonra eğitime finallerden sonra kendi hızınızda başlayabilirsiniz. Destekli fiyat seçeneği kampanya sonunda kapanacaktır.</p>
+          <p class="urgency-kicker">Son gün</p>
+          <h2>Destekli kayıt bugün sona eriyor</h2>
+          <p>Son gün: NaturaLogic destekli %50 erişim desteği bugün 23:59’da sona eriyor. Kayıt işleminizi bugün tamamlayabilir, eğitimlere finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
           {{ with $quotaStatus }}
             <div class="quota-callout quota-callout-compact">
-              <strong>Destekli kontenjan durumu: {{ . }}</strong>
-              <span>Destekli fiyat hakkı kapanmadan kaydınızı tamamlayın.</span>
+              <strong>{{ . }}</strong>
+              <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
             </div>
           {{ end }}
         </div>
@@ -152,11 +157,11 @@
           {{ if not $isComingSoonFeature }}<li>Dijital doğrulanabilir sertifika</li>{{ end }}
         </ul>
         {{ if and $hasPricingPlans .Params.student_price }}
-          <p class="sidebar-note">NaturaLogic destekli öğrenci ve çalışan fiyatları 16 Haziran Pazartesi 23:59’a kadar geçerlidir.</p>
+          <p class="sidebar-note">NaturaLogic destekli kayıt bugün 23:59’da sona eriyor.</p>
           {{ with $quotaStatus }}
             <div class="quota-callout sidebar-quota">
-              <strong>Destekli kontenjan durumu: {{ . }}</strong>
-              <span>Destekli fiyat hakkı kapanmadan kaydınızı tamamlayın.</span>
+              <strong>{{ . }}</strong>
+              <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
             </div>
           {{ end }}
         {{ end }}
@@ -294,21 +299,21 @@
         {{ else if $hasPricingPlans }}
           <p class="eyebrow">Kayıt seçenekleri</p>
           <h2>Kayıt Seçenekleri</h2>
-          <p class="pricing-intro">Şimdi kayıt olun, finallerden sonra kendi hızınızda başlayın. Size uygun erişim türünü seçerek güvenli kayıt oluşturabilirsiniz.</p>
+          <p class="pricing-intro">Son gün: NaturaLogic destekli %50 erişim desteği bugün 23:59’da sona eriyor. Kayıt işleminizi bugün tamamlayabilir, eğitimlere finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
           <div class="supported-fee-note">
             <p class="support-label">NaturaLogic destekli</p>
             <h3>NaturaLogic destekli %50 erişim desteği</h3>
-            <p>Bu eğitim için NaturaLogic destekli öğrenci ve çalışan fiyatları 16 Haziran Pazartesi 23:59’a kadar geçerlidir. Kayıt olduktan sonra eğitime kendi hızınızda başlayabilirsiniz.</p>
-            <p class="campaign-deadline">Her eğitim için 25 kişilik NaturaLogic destekli kontenjan ayrılmıştır. Destekli kayıt dönemi 16 Haziran Pazartesi 23:59’da sona eriyor.</p>
+            <p>Bugün kayıt ol, eğitimlere finallerden sonra kendi hızında başla.</p>
+            <p class="campaign-deadline">{{ if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı. Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Bu eğitim için son 1 NaturaLogic destekli kontenjan ayrılmıştır.{{ end }}</p>
             {{ with $quotaStatus }}
               <div class="quota-callout">
                 <strong>Destekli kontenjan durumu: {{ . }}</strong>
-                <span>Destekli fiyat hakkı kapanmadan kaydınızı tamamlayın.</span>
+                <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
               </div>
             {{ end }}
           </div>
           <p class="course-trust-note">Kayıt işleminiz tamamlandığında eğitime otomatik olarak tanımlanırsınız. Kredi kartı ile güvenli ödeme yapabilir, ödeme ekranındaki taksit seçeneklerini inceleyebilirsiniz. Kayıt sonrası derslere nasıl erişeceğinizi açıklayan yönlendirmeleri ödeme sürecinin ardından takip edebilirsiniz.</p>
-          <p class="pricing-support-line">NaturaLogic destekli fiyat seçeneği sınırlı destekli kontenjan kapsamında 16 Haziran Pazartesi 23:59’a kadar açıktır.</p>
+          <p class="pricing-support-line">NaturaLogic destekli fiyat seçeneği bugün 23:59’da kapanacaktır.</p>
           <div class="course-pricing-grid">
             <article class="pricing-card pricing-card-featured price-card">
               <span class="support-badge">Öğrencilere özel avantajlı erişim</span>
@@ -320,11 +325,11 @@
               {{ with $quotaStatus }}
                 <div class="quota-callout price-quota">
                   <strong>Destekli kontenjan durumu: {{ . }}</strong>
-                  <span>Destekli fiyat hakkı kapanmadan kaydınızı tamamlayın.</span>
+                  <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
                 </div>
               {{ end }}
-              <p class="price-validity-note">Bu destekli fiyat 16 Haziran Pazartesi 23:59’a kadar geçerlidir.</p>
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}">Destekli fiyatla kayıt olun</a>
+              <p class="price-validity-note">{{ if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı.{{ else }}Bu destekli fiyat bugün 23:59’a kadar geçerlidir.{{ end }}</p>
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}">{{ if $isSupportedQuotaClosed }}Kayıt seçeneklerini incele{{ else }}Destekli kayıt ol{{ end }}</a>
             </article>
             <article class="pricing-card price-card">
               <span class="pricing-badge">%50 erişim desteği</span>
@@ -335,11 +340,11 @@
               {{ with $quotaStatus }}
                 <div class="quota-callout price-quota">
                   <strong>Destekli kontenjan durumu: {{ . }}</strong>
-                  <span>Destekli fiyat hakkı kapanmadan kaydınızı tamamlayın.</span>
+                  <span>{{ if $isSupportedQuotaClosed }}Diğer kayıt seçeneklerini inceleyebilirsiniz.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</span>
                 </div>
               {{ end }}
-              <p class="price-validity-note">Destekli fiyat hakkı kampanya sonunda kapanacaktır.</p>
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">Destekli kaydı tamamla</a>
+              <p class="price-validity-note">{{ if $isSupportedQuotaClosed }}Bu eğitimde NaturaLogic destekli kontenjan kapandı.{{ else }}Destekli fiyat hakkı bugün 23:59’da kapanacaktır.{{ end }}</p>
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">{{ if $isSupportedQuotaClosed }}Kayıt seçeneklerini incele{{ else }}Destekli kayıt ol{{ end }}</a>
             </article>
           </div>
           <p class="payment-note">Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
@@ -427,7 +432,7 @@
       <section class="training-final-cta">
         <p class="eyebrow">Sonraki adım</p>
         <h2>{{ if $isComingSoonFeature }}Açılış duyurusunu takip edebilirsiniz.{{ else }}Bu eğitimle ilk adımı bugün atabilirsiniz.{{ end }}</h2>
-        <p>{{ if $isComingSoonFeature }}Bu program yeni dönem kayıtlarına hazırlanıyor. Açılış duyurusunu almak veya program hakkında ön bilgi istemek için bize yazabilirsiniz.{{ else }}Şimdi kayıt olun, finallerden sonra kendi hızınızda başlayın. Destekli kayıt dönemi 16 Haziran Pazartesi 23:59’da sona eriyor.{{ end }}</p>
+        <p>{{ if $isComingSoonFeature }}Bu program yeni dönem kayıtlarına hazırlanıyor. Açılış duyurusunu almak veya program hakkında ön bilgi istemek için bize yazabilirsiniz.{{ else }}Bugün kayıt olun, eğitimlere finallerden sonra kendi hızınızda başlayın. NaturaLogic destekli kayıt bugün 23:59’da sona eriyor.{{ end }}</p>
         <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
       </section>
 

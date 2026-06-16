@@ -17,13 +17,31 @@
   "phyml-uygulamali-filogenetik-egitimi" "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
 -}}
 {{- $supportedQuotaStatus := dict
-  "biyoinformatik-icin-r-programlama" "24/25"
-  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "23/25"
-  "biyoinformatik-veritabanlari-araclar-egitimi" "22/25"
-  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "23/25"
-  "tek-hucre-rna-seq-analizi-egitimi" "24/25"
-  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "22/25"
-  "phyml-uygulamali-filogenetik-egitimi" "23/25"
+  "biyoinformatik-icin-r-programlama" "Destekli kontenjan kapandı"
+  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "Son 1 destekli kontenjan"
+  "biyoinformatik-veritabanlari-araclar-egitimi" "Son 1 destekli kontenjan"
+  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "Son 1 destekli kontenjan"
+  "tek-hucre-rna-seq-analizi-egitimi" "Destekli kontenjan kapandı"
+  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Son 1 destekli kontenjan"
+  "phyml-uygulamali-filogenetik-egitimi" "Son 1 destekli kontenjan"
+-}}
+{{- $supportedQuotaBadges := dict
+  "biyoinformatik-icin-r-programlama" "Kontenjan kapandı"
+  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "Son 1 yer"
+  "biyoinformatik-veritabanlari-araclar-egitimi" "Son 1 yer"
+  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "Son 1 yer"
+  "tek-hucre-rna-seq-analizi-egitimi" "Kontenjan kapandı"
+  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Son 1 yer"
+  "phyml-uygulamali-filogenetik-egitimi" "Son 1 yer"
+-}}
+{{- $supportedQuotaCTAs := dict
+  "biyoinformatik-icin-r-programlama" "Kayıt seçeneklerini incele"
+  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "Destekli kayıt ol"
+  "biyoinformatik-veritabanlari-araclar-egitimi" "Destekli kayıt ol"
+  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "Destekli kayıt ol"
+  "tek-hucre-rna-seq-analizi-egitimi" "Kayıt seçeneklerini incele"
+  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Destekli kayıt ol"
+  "phyml-uygulamali-filogenetik-egitimi" "Destekli kayıt ol"
 -}}
 <section class="home-hero">
   <div class="container home-hero-grid">
@@ -38,10 +56,11 @@
         <span>NaturaLogic destekli %50 erişim</span>
       </div>
       <div class="campaign-urgency-banner">
-        <p class="urgency-kicker">Son 48 saat</p>
-        <h2>NaturaLogic destekli %50 erişim desteği 16 Haziran Pazartesi 23:59’da kapanıyor.</h2>
-        <p>Şimdi kayıt olun; eğitime finallerden sonra kendi hızınızda başlayabilirsiniz. Destekli fiyat hakkı kampanya sonunda kapanacaktır.</p>
-        <a class="support-cta" href="{{ "/post/" | relURL }}">Destekli eğitimleri incele</a>
+        <p class="urgency-kicker">Son gün</p>
+        <h2>Destekli kayıt bugün sona eriyor</h2>
+        <p>ERES Biyoinformatik Akademi’de NaturaLogic destekli %50 erişim desteği bugün 23:59’da kapanıyor. Bazı eğitimlerde destekli kontenjan kapandı; kalan eğitimlerde son destekli kontenjanlar için kayıt alınabiliyor.</p>
+        <p class="campaign-deadline">Bugün kayıt olun, eğitimlere finallerden sonra kendi hızınızda başlayın.</p>
+        <a class="support-cta" href="{{ "/post/" | relURL }}">Son destekli kontenjanları incele</a>
       </div>
       <div class="hero-actions">
         <a class="hero-action" href="#ogrenme-yollari">Size Uygun Eğitimi Seçin</a>
@@ -69,11 +88,10 @@
   <div class="support-band-card">
     <p class="support-label">NaturaLogic destekli</p>
     <div>
-      <h2>Son 48 saat: NaturaLogic destekli %50 erişim desteği</h2>
-      <p>Seçili biyoinformatik eğitimlerinde NaturaLogic destekli %50 erişim desteği 16 Haziran Pazartesi 23:59’a kadar devam ediyor. Destekli kontenjanlar eğitim bazında sınırlıdır.</p>
-      <p class="campaign-deadline">Her eğitim için 25 kişilik NaturaLogic destekli kontenjan ayrılmıştır. Destekli kayıt dönemi 16 Haziran Pazartesi 23:59’da sona eriyor.</p>
-      <p class="campaign-deadline">Final haftasındaysanız şimdi kayıt olun; eğitime finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
-      <a class="support-cta" href="{{ "/post/" | relURL }}">16 Haziran’a kadar destekli kayıt</a>
+      <h2>Son gün: NaturaLogic destekli %50 erişim desteği</h2>
+      <p>NaturaLogic destekli kayıt bugün 23:59’da sona eriyor. Destekli kontenjanlarda son yerler.</p>
+      <p class="campaign-deadline">Bugün kayıt olun, eğitimlere finallerden sonra kendi hızınızda başlayın.</p>
+      <a class="support-cta" href="{{ "/post/" | relURL }}">Son destekli kontenjanları incele</a>
     </div>
   </div>
 </section>
@@ -180,18 +198,19 @@
             <span class="badge">Kendi hızınızda</span>
             <span class="badge">Ödev & quiz destekli</span>
             <span class="badge">Dijital sertifika</span>
+            {{ with index $supportedQuotaBadges .File.BaseFileName }}<span class="badge campaign-status-badge">{{ . }}</span>{{ end }}
           </div>
           <h3><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h3>
           <p>{{ index $cardDescriptions .File.BaseFileName | default .Description }}</p>
           {{ with index $supportedQuotaStatus .File.BaseFileName }}
             <div class="quota-callout">
-              <strong>Destekli kontenjan durumu: {{ . }}</strong>
-              <span>Destekli fiyat hakkı kapanmadan kaydınızı tamamlayın.</span>
+              <strong>{{ . }}</strong>
+              <span>Bugün kayıt olun, eğitimlere finallerden sonra kendi hızınızda başlayın.</span>
             </div>
           {{ end }}
-          <p class="card-urgency-line">Destekli kayıt dönemi kapanıyor: 16 Haziran 23:59. Kayıt sonrası finallerden sonra kendi hızınızda başlayabilirsiniz.</p>
+          <p class="card-urgency-line">NaturaLogic destekli kayıt bugün 23:59’da sona eriyor.</p>
         </div>
-        <a class="card-link" href="{{ .RelPermalink }}">Eğitimi incele ve kayıt ol</a>
+        <a class="card-link" href="{{ .RelPermalink }}">{{ index $supportedQuotaCTAs .File.BaseFileName | default "Eğitimi incele ve kayıt ol" }}</a>
       </article>
     {{ end }}
   </div>
