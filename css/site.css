@@ -87,6 +87,39 @@ img {
   z-index: 5;
 }
 
+.site-announcement {
+  background:
+    linear-gradient(135deg, rgba(0, 33, 71, 0.98), rgba(15, 118, 110, 0.94)),
+    var(--text);
+  border-bottom: 1px solid rgba(153, 246, 228, 0.24);
+  color: #fff;
+}
+
+.site-announcement-inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 42px;
+  padding-block: 8px;
+}
+
+.site-announcement strong {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 950;
+  padding: 4px 9px;
+  text-transform: uppercase;
+}
+
+.site-announcement span {
+  color: rgba(255, 255, 255, 0.94);
+  font-weight: 850;
+}
+
 .header-inner,
 .footer-inner,
 .site-nav,
@@ -645,6 +678,12 @@ h1 {
   border-color: #dbe4e9;
   color: #475569;
   font-size: 0.76rem;
+}
+
+.campaign-status-badge {
+  background: var(--gold-soft);
+  border-color: rgba(197, 160, 89, 0.42);
+  color: #725117;
 }
 
 .hero-action,
