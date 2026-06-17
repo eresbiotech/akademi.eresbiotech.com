@@ -1,19 +1,19 @@
-baseURL: "https://www.eresbiotech.com/"
+baseURL: "https://akademi.eresbiotech.com/"
 languageCode: "tr-tr"
 enableRobotsTXT: true
 markup:
   goldmark:
     renderer:
       unsafe: true
-title: "ERES Biyoteknoloji | Doğadan İlham Alan Strateji ve Çözüm Stüdyosu"
+title: "Eres Biyoinformatik Akademi"
 
 # googleAnalytics: ""
 paginate: 20
 summaryLength: 20
 
 params:
-  title: "ERES Biyoteknoloji"
-  description: "ERES Biyoteknoloji; doğadan, yaşam bilimlerinden ve ekolojik sistemlerden ilham alan strateji, eğitim, sürdürülebilirlik ve çözüm geliştirme modelleri tasarlayan bilim temelli bir stüdyodur."
+  title: "Eres Biyoinformatik Akademi "
+  description: "Eres Biyoteknoloji tarafindan ..."
   images: 
     - "images/hero-image.png"
 
@@ -40,47 +40,43 @@ params:
 menus:
   main:
     - name: "Anasayfa"
-      url: "/"
+      url: "/#hero"
       weight: 1
 
-    - name: "Çözümler"
-      url: "/#cozumler"
+    - name: "Hakkımızda"
+      url: "/about"
       weight: 2
 
-    - name: "Strateji Stüdyosu"
-      url: "/#strateji-studyosu"
+    - name: "Hizmetlerimiz"
+      url: "/work"
       weight: 3
 
-    - name: "NaturaLogic"
-      url: "https://naturalogiclabs.com"
-      weight: 4
-
-    - name: "ERES Akademi"
-      url: "https://akademi.eresbiotech.com"
+    - name: "Eğitimler"
+      url: "/post/"
       weight: 5
 
   buttons:
-    - name: "İletişim"
-      url: "/#iletisim"
+    - name: "Iletisim"
+      url: "/post/contact"
       weight: 5
       pre: "btn btn-primary text-light"
 
   footer:
     - name: "Anasayfa"
-      url: "/"
+      url: "/#hero"
       weight: 1
 
-    - name: "Çözümler"
-      url: "/#cozumler"
+    - name: "Hakkimizda"
+      url: "/about"
       weight: 2
 
-    - name: "NaturaLogic"
-      url: "https://naturalogiclabs.com"
+    - name: "Hizmetlerimiz"
+      url: "/work"
       weight: 3
 
 
-    - name: "ERES Akademi"
-      url: "https://akademi.eresbiotech.com"
+    - name: "Eğitimler"
+      url: "/post/"
       weight: 5
 
 taxonomies:
