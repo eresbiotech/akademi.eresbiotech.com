@@ -7,8 +7,8 @@ description = "Biyolojik veriyi R ile düzenlemek, analiz etmek ve görselleşti
 images =[ "images/Biyoinformatik-icin-R-Programlama.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=a6zY3gmEGq"
 employee_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=PjWlKdY4Gv"
-student_price = "1.750 TL"
-employee_price = "2.750 TL"
+student_price = "3.500 TL"
+employee_price = "5.500 TL"
 student_regular_price = "3.500 TL"
 employee_regular_price = "5.500 TL"
 student_plan_label = "Öğrenci"

@@ -120,6 +120,22 @@ img {
   font-weight: 850;
 }
 
+.announcement-cta {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 900;
+  margin-left: auto;
+  padding: 6px 12px;
+}
+
+.announcement-cta:hover {
+  background: rgba(255, 255, 255, 0.24);
+  color: #fff;
+}
+
 .header-inner,
 .footer-inner,
 .site-nav,

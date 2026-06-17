@@ -1,5 +1,5 @@
 +++
 title = "Eres Biyoinformatik Akademi"
-description = "Biyoinformatik, veri analizi ve hesaplamalı biyoloji alanlarında kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı eğitimler."
+description = "ERES Biyoinformatik Akademi ile yaz döneminde kendi hızınızda biyoinformatik öğrenin. R programlama, genom tarayıcıları, RNA-Seq, protein modelleme ve filogenetik eğitimleriyle yeni döneme daha donanımlı başlayın."
 author = "Eres Biyoinformatik Akademi"
 +++
