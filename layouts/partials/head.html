@@ -1,4 +1,5 @@
 {{- $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Title) -}}
+{{- $ogTitle := cond .IsHome "Doğanın bilgisini stratejiye dönüştürüyoruz | ERES Biyoteknoloji" $title -}}
 {{- $description := .Description | default .Summary | default site.Params.description | plainify | htmlUnescape -}}
 {{- $image := "" -}}
 {{- with .Params.images -}}
@@ -13,7 +14,7 @@
 <title>{{ $title }}</title>
 {{ with $description }}<meta name="description" content="{{ . }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
-<meta property="og:title" content="{{ $title }}">
+<meta property="og:title" content="{{ $ogTitle }}">
 {{ with $description }}<meta property="og:description" content="{{ . }}">{{ end }}
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
