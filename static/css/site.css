@@ -127,8 +127,14 @@ img {
   color: #fff;
   font-size: 0.82rem;
   font-weight: 900;
+  line-height: 1.2;
   margin-left: auto;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 6px 12px;
+  text-align: center;
+  white-space: normal;
 }
 
 .announcement-cta:hover {
@@ -195,6 +201,13 @@ img {
   display: inline-flex;
   font-weight: 900;
   justify-content: center;
+  line-height: 1.2;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: center;
+  white-space: normal;
+  word-break: normal;
 }
 
 .hero-action {
@@ -258,6 +271,12 @@ img {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 28px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.hero-actions > * {
+  min-width: 0;
 }
 
 .hero-action-secondary {
@@ -382,8 +401,14 @@ img {
   display: inline-flex;
   font-weight: 950;
   justify-content: center;
+  line-height: 1.2;
   margin-top: 16px;
+  max-width: 100%;
   min-height: 44px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: center;
+  white-space: normal;
   padding: 10px 16px;
 }
 
@@ -1011,11 +1036,13 @@ h1 {
   flex-wrap: wrap;
   gap: 10px;
   margin: 0 24px 24px;
+  min-width: 0;
 }
 
 .catalog-card-actions .card-link {
-  flex: 1 1 150px;
+  flex: 1 1 0;
   margin: 0;
+  min-width: 0;
   width: auto;
 }
 
@@ -1587,9 +1614,15 @@ h1 {
   display: inline-flex;
   font-weight: 950;
   justify-content: center;
+  line-height: 1.2;
   margin-top: auto;
+  max-width: 100%;
   min-height: 48px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 12px 18px;
+  text-align: center;
+  white-space: normal;
 }
 
 .pricing-button:hover {

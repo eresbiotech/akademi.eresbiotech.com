@@ -15,7 +15,7 @@
   {{- $primaryCTAText = "Açılış duyurusunu almak istiyorum" -}}
 {{- else if $hasPricingPlans -}}
   {{- $primaryCTAURL = "#kayit-secenekleri" -}}
-  {{- $primaryCTAText = "Taksitleri gör, kaydını tamamla" -}}
+  {{- $primaryCTAText = "Kaydını tamamla" -}}
 {{- else -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
   {{- $primaryCTAText = "Bilgi Alın" -}}
@@ -289,7 +289,7 @@
               {{ with .Params.student_price }}<p class="supported-price"><span>Kayıt ücreti</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
               <div class="quota-callout price-quota">
-                <strong>Taksitleri gör, kaydını tamamla.</strong>
+                <strong>Kayıt adımında taksitleri görebilirsiniz.</strong>
                 <span>Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</span>
               </div>
               <a class="pricing-button" href="{{ .Params.student_checkout_url }}">Öğrenci kaydı oluştur</a>
@@ -300,7 +300,7 @@
               {{ with .Params.employee_price }}<p class="supported-price"><span>Kayıt ücreti</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar veya kurumsal yapılarda çalışan profesyoneller için eğitim erişimi.</p>
               <div class="quota-callout price-quota">
-                <strong>Taksitleri gör, kaydını tamamla.</strong>
+                <strong>Kayıt adımında taksitleri görebilirsiniz.</strong>
                 <span>Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</span>
               </div>
               <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">Çalışan kaydı oluştur</a>
@@ -388,7 +388,7 @@
         <p class="eyebrow">Sonraki adım</p>
         <h2>{{ if $isComingSoonFeature }}Açılış duyurusunu takip edebilirsiniz.{{ else }}Bu eğitimle ilk adımı bugün atabilirsiniz.{{ end }}</h2>
         <p>{{ if $isComingSoonFeature }}Bu program yeni dönem kayıtlarına hazırlanıyor. Açılış duyurusunu almak veya program hakkında ön bilgi istemek için bize yazabilirsiniz.{{ else }}Destekli fırsatı kaçırdıysanız yaz dönemini kaçırmayın. Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür.{{ end }}</p>
-        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ if $isComingSoonFeature }}{{ $primaryCTAText }}{{ else }}Taksitleri gör, kaydını tamamla{{ end }}</a>
       </section>
 
       <details class="legacy-content">
