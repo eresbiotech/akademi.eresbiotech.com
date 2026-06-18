@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatik için R Programlama"
 date = "2024-07-08"
-description = "Biyolojik veriyi R ile düzenlemek, analiz etmek ve görselleştirmek isteyenler için ödev ve quizlerle desteklenen uygulama odaklı eğitim."
+description = "Yaşam bilimleri öğrencileri ve araştırmacıları için RStudio, veri yapıları, ggplot2, GEOquery, metadata ve expression verisini biyoinformatik bağlamında adım adım öğreten uygulamalı R başlangıç eğitimi."
 
 images =[ "images/Biyoinformatik-icin-R-Programlama.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=a6zY3gmEGq"
@@ -14,6 +14,17 @@ employee_regular_price = "5.500 TL"
 student_plan_label = "Öğrenci"
 employee_plan_label = "Çalışan"
 course_status = "active"
+course_hero_headline = "R öğrenmeyi biyoinformatik veriye bağlayarak başlayın."
+course_hero_subheadline = "Bu eğitim, RStudio’dan veri yapılarına, ggplot2 görselleştirmeden GEO metadata ve expression verisine kadar R programlamayı yaşam bilimleri öğrencileri için adım adım ve uygulamalı şekilde anlatır."
+course_hero_note = "Video dersler; kod kartları, mini pratikler, hızlı başvuru PDF’leri, örnek veri dosyaları, ana R script ve kapsamlı hata çözüm rehberiyle desteklenir."
+course_card_highlights = [
+    "Ana R Script",
+    "Hata Çözüm Rehberi",
+    "Örnek Veri",
+    "Mini Ödevler",
+    "GEO + Metadata",
+    "ggplot2",
+]
 
 categories = [
     "Eğitim",
@@ -23,49 +34,80 @@ categories = [
 
 ## Biyoinformatik için R Programlama Eğitimi
 
-> **Kendi hızınızda, uygulama odaklı öğrenme:** Bu eğitim, yoğun akademik ve profesyonel programlara uyum sağlayacak şekilde videolu, etkileşimli ve tekrar edilebilir bir öğrenme deneyimi olarak tasarlanmıştır. Konuları adım adım takip edebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve uygulamaları kendi çalışma temponuza göre tamamlayabilirsiniz.
+**Biyoinformatik için R Programlama**, yaşam bilimleri öğrencileri ve araştırmacıları için R programlamayı gerçek biyoinformatik veri akışına bağlayan uygulamalı bir başlangıç eğitimidir.
 
-## Eğitim Formatı
+Bu eğitimde yalnızca R komutlarını ezberlemezsiniz. Veri tiplerini, veri yapılarını, dosya okuma-yazma mantığını, ggplot2 ile görselleştirmeyi, metadata ve expression matrisi ilişkisini, dizi verisini ve hata çözüm yaklaşımını adım adım öğrenirsiniz.
 
-Bu eğitim, kendi hızınızda ilerleyebileceğiniz videolu ve uygulama odaklı derslerden oluşur. Her konu, temel kavramlardan başlayarak adım adım yapılandırılmıştır; böylece yalnızca izlemekle kalmaz, öğrendiklerinizi uygulamalarla pekiştirirsiniz.
+## Bu kurs hangi problemi çözer?
 
-Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, zorlandığınız bölümlere tekrar dönebilir ve öğrenme sürecinizi kendi akademik ya da profesyonel takviminize göre planlayabilirsiniz. Bu yapı özellikle yoğun programı olan öğrenciler, lisansüstü araştırmacılar, akademisyenler ve laboratuvar çalışanları için esnek ve verimli bir öğrenme deneyimi sunar.
+R öğrenmeye çalışırken en zor kısım çoğu zaman komutlar değildir. Nereden başlayacağınızı, hata alınca ne yapacağınızı ve yazdığınız kodun biyolojik veriyle nasıl ilişkileneceğini bilmemek daha büyük bir engel oluşturur.
 
-Bu eğitim, hem R programlama dili ve araçlarını kullanmayı hem de bu araçlarla biyoinformatik analizler yapma becerisi kazanmanızı sağlayacak. Temel R programlama becerilerinden ileri düzey biyoinformatik analiz paketlerine kadar geniş bir yelpazede konuları içerir. 
+Bu kurs size güvenli bir başlangıç yolu sunar: RStudio arayüzünden temel nesnelere, veri tiplerinden dosya yollarına, ggplot2 grafiklerinden GEO metadata ve expression verisine kadar R karmaşasını adım adım düzenlemenize yardımcı olur.
 
-### Neden R ve Biyoinformatik?
-Sanger dizilemeden günümüze, yeni nesil dizileme teknolojilerinin gelişmesiyle biyolojik veri kümeleri katlanarak artmaktadır. Bu verilerin hızlı, etkin ve uygun maliyetlerle analiz edilmesi için R gibi hem etkili hem de açık kaynaklı araçlar kritik öneme sahiptir. R, biyolojik verilerin manipülasyonu, görselleştirilmesi ve raporlanması için esnek ve güçlü bir yapı sunar.
+## Bu eğitim yalnızca video derslerden oluşmaz
 
-### Eğitim Hedefleri
-Bu eğitimi tamamladığınızda aşağıdaki kazanımları elde edeceksiniz:
-- R programlama dili ile temel kodlama becerisi.
-- Veri analizinde sıkça kullanılan *dplyr*, *tidyverse* ve *ggplot* gibi paketlerin kullanımı.
-- Biyoinformatikte yaygın olarak kullanılan *DESeq2*, *GEOquery*, *Seurat* ve *SingleR* gibi paketlerin öğrenilmesi.
-- Biyoinformatikte kullanılan dosya türlerinin tanınması ve kullanımı.
-- Çeşitli biyolojik verilerin manipülasyonu ve görselleştirilmesi.
+Bu kurs yalnızca video izleyip bırakacağınız bir içerik değildir. Her ders, uygulama ve tekrar için destek materyalleriyle birlikte tasarlanmıştır.
 
-## Eğitim Hakkında Genel Bilgiler
+- Kod kartları ve mini pratikler
+- Hızlı başvuru PDF’leri
+- Örnek CSV, FASTA, expression ve metadata dosyaları
+- Ders bazlı mini ödevler
+- Tüm dersleri kapsayan ana R script
+- Kapsamlı R hata çözüm rehberi
+- Kursu en verimli kullanma notu
+- FAQ ve sonraki adım önerileri
 
-### Kimler Katılabilir?
-Omik teknolojilere ilgi duyan, bu alanda çalışan veya çalışmayı planlayan araştırmacılar, profesyoneller ve öğrenciler (lisans, yüksek lisans, doktora) katılabilir. Kodlama bilgisi gerekmemektedir.
+## Kurs boyunca ne öğreneceksiniz?
 
-### Eğitim Gereklilikleri
-- Temel moleküler biyoloji bilgisi.
-- Kişisel bilgisayar ve internet erişimi.
+1. **Başlamadan Önce:** Kursu nasıl kullanacağınızı, ana scriptle nasıl çalışacağınızı ve öğrenme yolunu görürsünüz.
+2. **R ve RStudio’ya Giriş:** RStudio arayüzü, temel hesaplamalar, nesne oluşturma, `class()`, `print()`, vektör ve basit fonksiyon mantığı.
+3. **Veri Türleri ve Veri Yapıları:** Numeric, character, logical veri tipleri; vektör, matriks, data frame ve liste yapıları.
+4. **Veri Import / Export:** CSV, TXT ve Excel mantığı; çalışma klasörü, dosya yolu, veri okuma-yazma ve temel filtreleme.
+5. **ggplot2 ile Görselleştirme:** Bar plot, histogram, boxplot, violin plot, scatter plot ve line plot ile biyolojik veriyi görselleştirme.
+6. **Koşullar, Döngüler ve Veri Filtreleme:** `if`, `else`, `for` döngüsü, filtreleme ve tekrar eden analiz mantığı.
+7. **Çoklu Dizi Hizalaması ve Filogenetik Ağaç:** Bioconductor, Biostrings, msa, ape, FASTA, AAStringSet / DNAStringSet ve temel ağaç mantığı.
+8. **GEOquery, Metadata ve Expression Verisi:** GEO verisi, metadata okuma, expression matrisi, sample ID eşleşmesi ve grup ortalaması hesaplama.
+9. **Hata Çözüm Laboratuvarı:** Paket kurulumu, fonksiyon bulunamaması, dosya yolu, sütun adı, metadata-expression eşleşmesi ve object not found gibi problemler için sistemli yaklaşım.
+10. **Kapanış ve Sonraki Adımlar:** Kurs kazanımları, mini proje önerisi, FAQ ve ileri biyoinformatik öğrenme yolu.
 
-### Neden Bu Eğitime Katılmalısınız?
-- **Araştırma becerilerinizi güçlendirin:** Biyoinformatik alanında R tabanlı analiz yaklaşımını adım adım takip edebilirsiniz.
-- **Tekrarlanabilir analiz pratiği kazanın:** Projelerinizde ve yayın hazırlıklarınızda R araçlarını daha bilinçli kullanabilirsiniz.
-- **Uygulama odaklı ilerleyin:** Gerçek veriyle çalışma pratiğine yakın örneklerle temel analiz adımlarını kavrarsınız.
-- **Kendi hızınızda öğrenin:** Ders içeriklerine çevrimiçi erişerek ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+## Hata alınca yalnız kalmayın
 
-### Kendi Hızınızda Eğitim Yapısı
-Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir öğrenme yapısıyla sunulur. Ders içeriklerine kayıt sonrası çevrimiçi olarak erişebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilirsiniz.
+R öğrenirken hata almak normaldir. Önemli olan hatayı nasıl okuyacağınızı öğrenmektir.
 
-### Eğitim Akışı
-* **1. Hafta:** R Programlama Dili ile Biyolojik Verilerin Analizi: Temel R ve Temel Paketler (Değişkenler, Veri tipleri, Operatörler, Döngüler, Fonksiyonlar, dplyr, tidyverse, ggplot)
-* **2. Hafta:** Bioconductor ile İleri Analiz (Seurat, DESeq2, SingleR, GEOquery)
+Bu eğitimde yalnızca kod çalıştırmayı değil; hata mesajlarını okumayı, veri yapısını kontrol etmeyi, sütun adlarını incelemeyi, dosya yolunu doğrulamayı ve çözüm yolunu adım adım kurmayı da öğrenirsiniz.
 
----
+## Kimler için?
 
-Bu eğitime erişmek ve kendi hızınızda öğrenmeye başlamak için güncel kayıt bilgilerini inceleyebilir veya sorularınız için [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden bize ulaşabilirsiniz.
+- Biyoloji, moleküler biyoloji ve genetik, biyoteknoloji, tıp, veterinerlik, ziraat ve yaşam bilimleri öğrencileri
+- Biyoinformatiğe R ile başlamak isteyenler
+- RStudio’yu daha önce açmış ama sistemli ilerleyememiş olanlar
+- Gen expression, metadata, dizi verisi veya biyolojik veri analizi konularına hazırlanmak isteyenler
+- Kod yazarken hata aldığında ne yapacağını öğrenmek isteyenler
+- Asenkron ama yapılandırılmış bir öğrenme deneyimi arayanlar
+
+## Kimler için uygun değil?
+
+Bu eğitim ileri düzey RNA-seq pipeline eğitimi, ileri istatistik eğitimi, makine öğrenmesi eğitimi veya baştan sona yazılım mühendisliği eğitimi değildir. R’ı biyoinformatik veriye hazırlık ve uygulamalı başlangıç düzeyinde öğrenmek isteyenler için tasarlanmıştır.
+
+## Eğitim sonunda ne yapabileceksiniz?
+
+- RStudio’da temel kodları çalıştırabilirsiniz.
+- R nesnelerini, veri tiplerini ve veri yapılarını ayırt edebilirsiniz.
+- CSV/TXT dosyalarını okuyup yazabilirsiniz.
+- Basit biyolojik veri tabloları üzerinde seçme, filtreleme ve düzenleme yapabilirsiniz.
+- ggplot2 ile temel grafikler oluşturabilirsiniz.
+- Koşul ve döngü mantığını basit analiz örneklerinde kullanabilirsiniz.
+- FASTA, dizi nesneleri ve çoklu hizalama mantığına giriş yapabilirsiniz.
+- GEO metadata ve expression verisi arasındaki ilişkiyi anlayabilirsiniz.
+- Hata mesajlarını daha sistemli okuyup çözüm için kontrol komutlarını kullanabilirsiniz.
+- Kursun ana scriptini kendi çalışma defteriniz gibi kullanabilirsiniz.
+
+## İndirilebilir materyaller
+
+Eğitimle birlikte tüm dersleri kapsayan ana R script, ders bazlı R script dosyaları, hızlı başvuru PDF’leri, mini ödev PDF’leri, örnek veri dosyaları, FASTA örneği, metadata ve expression örnek dosyaları, hata çözüm rehberi ve kurs kullanım notları sunulur.
+
+## Kayıt ve çalışma akışı
+
+R öğrenmeyi ertelemeyin; biyoinformatik veriyle çalışmaya düzenli bir başlangıç yapın.
+
+Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik olarak görüntülenir. Eğitime kendi hızınızda başlayabilir ve yaz döneminde düzenli bir çalışma planı oluşturabilirsiniz.

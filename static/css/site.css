@@ -685,6 +685,17 @@ h1 {
   max-width: 760px;
 }
 
+.course-hero-note {
+  background: rgba(240, 253, 250, 0.72);
+  border: 1px solid rgba(13, 148, 136, 0.2);
+  border-radius: var(--radius);
+  color: #0f4a5c;
+  font-weight: 850;
+  margin: 16px 0 0;
+  max-width: 760px;
+  padding: 12px 14px;
+}
+
 .trust-row,
 .badge-row {
   display: flex;
@@ -719,6 +730,12 @@ h1 {
   border-color: #dbe4e9;
   color: #475569;
   font-size: 0.76rem;
+}
+
+.badge-highlight {
+  background: #ecfdf5;
+  border-color: rgba(13, 148, 136, 0.22);
+  color: #0f766e;
 }
 
 .campaign-status-badge {
@@ -1396,6 +1413,15 @@ h1 {
   display: flex;
   gap: 8px;
   font-weight: 800;
+}
+
+.format-list code {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 0.9em;
+  padding: 1px 4px;
 }
 
 .format-list li::before {

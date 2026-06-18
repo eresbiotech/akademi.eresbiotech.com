@@ -8,7 +8,7 @@
   {{- end -}}
 {{- end -}}
 {{- $cardDescriptions := dict
-  "biyoinformatik-icin-r-programlama" "Biyolojik veriyi R ile düzenlemek, analiz etmek ve görselleştirmek isteyenler için ödev ve quizlerle desteklenen uygulama odaklı eğitim."
+  "biyoinformatik-icin-r-programlama" "RStudio’dan veri yapıları ve ggplot2 görselleştirmeye; çoklu dizi hizalaması, GEOquery, metadata ve expression verisine uzanan biyoinformatik odaklı R başlangıç eğitimi. Kod kartları, ana R script, mini ödevler ve hata çözüm rehberiyle desteklenir."
   "biyoinformatik-giris-egitim-buyuk-veri-kurs" "Omik veri dünyasını, temel biyoinformatik kavramlarını ve büyük veri mantığını araştırma sorularıyla ilişkilendirerek anlamak isteyenler için."
   "biyoinformatik-veritabanlari-araclar-egitimi" "NCBI, UniProt, PDB ve BLAST gibi araçları doğru okumak, sonuçları anlamlandırmak ve raporlamak isteyenler için."
   "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "Gen, transkript, varyant ve genom bölgelerini NCBI, Ensembl ve UCSC üzerinden daha güvenli yorumlamak isteyenler için."
@@ -197,6 +197,11 @@
             <span class="badge">Kendi hızınızda</span>
             <span class="badge">Asenkron eğitim</span>
             <span class="badge">Video ders + ödev + quiz + dijital doğrulanabilir sertifika</span>
+            {{ with .Params.course_card_highlights }}
+              {{ range first 4 . }}
+                <span class="badge badge-highlight">{{ . }}</span>
+              {{ end }}
+            {{ end }}
           </div>
           <h3><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h3>
           <p>{{ index $cardDescriptions .File.BaseFileName | default .Description }}</p>
