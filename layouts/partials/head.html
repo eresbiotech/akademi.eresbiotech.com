@@ -1,4 +1,4 @@
-{{- $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Title) -}}
+{{- $title := .Params.seo_title | default (cond .IsHome site.Title (printf "%s | %s" .Title site.Title)) -}}
 {{- $description := .Description | default .Summary | default site.Params.description | plainify | htmlUnescape -}}
 {{- $image := "" -}}
 {{- with .Params.images -}}

@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{- $statusLabels := dict "yakinda" "Kayıt bilgisi yakında" "kayit-acik" "Kayıt açık" "doldu" "Kontenjan doldu" "tamamlandi" "Tamamlandı" -}}
+<div class="container live-section live-list-page">
+  <header class="live-hero live-list-hero">
+    <p class="live-kicker">ERES Akademi</p>
+    <h1>{{ .Title }}</h1>
+    <div class="live-list-intro">{{ .Content }}</div>
+  </header>
+  <div class="live-list-grid">
+    {{ range .Pages.ByDate.Reverse }}
+      {{- $status := .Params.status | default "yakinda" -}}
+      {{- $statusLabel := index $statusLabels $status | default "Kayıt bilgisi yakında" -}}
+      <article class="live-card live-course-card">
+        <div>
+          <span class="live-status {{ printf "live-status-%s" $status }}">{{ $statusLabel }}</span>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p>{{ .Description }}</p>
+          <dl class="live-meta live-meta-grid">
+            <div><dt>Format</dt><dd>{{ .Params.format | default "Yakında açıklanacak" }}</dd></div>
+            <div><dt>Tarih</dt><dd>{{ .Params.event_date | default "Yakında açıklanacak" }}</dd></div>
+            <div><dt>Saat</dt><dd>{{ .Params.event_time | default "Yakında açıklanacak" }}</dd></div>
+            <div><dt>Süre</dt><dd>{{ .Params.duration | default "Yakında açıklanacak" }}</dd></div>
+            <div><dt>Eğitmen</dt><dd>{{ .Params.instructor | default "Yakında açıklanacak" }}</dd></div>
+            <div><dt>Seviye</dt><dd>{{ .Params.level | default "Yakında açıklanacak" }}</dd></div>
+            <div><dt>Kontenjan</dt><dd>{{ .Params.capacity | default "Yakında açıklanacak" }}</dd></div>
+            <div><dt>Kayıt durumu</dt><dd>{{ $statusLabel }}</dd></div>
+          </dl>
+        </div>
+        <div class="live-cta">
+          {{ if and .Params.registration_url (eq $status "kayit-acik") }}<a class="live-button" href="{{ .Params.registration_url }}">Kayıt ol</a>{{ else }}<a class="live-button" href="{{ .RelPermalink }}">Eğitimi incele</a>{{ end }}
+        </div>
+      </article>
+    {{ else }}
+      <div class="live-card"><p>Yeni canlı eğitimler hazırlanıyor. Duyurular için bu sayfayı takip edebilirsiniz.</p></div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
