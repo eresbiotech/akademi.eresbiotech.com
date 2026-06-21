@@ -9,8 +9,6 @@ student_checkout_url = "https://kampus.eresbiotech.com/order?link=YOeiS&pricing_
 employee_checkout_url = "https://kampus.eresbiotech.com/order?link=YOeiS&pricing_plan=PjWlK3k3Gv"
 student_price = "4.200 TL"
 employee_price = "6.200 TL"
-student_regular_price = "4.200 TL"
-employee_regular_price = "6.200 TL"
 student_plan_label = "Öğrenci"
 employee_plan_label = "Çalışan"
 course_status = "active"
