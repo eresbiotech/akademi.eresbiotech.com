@@ -293,6 +293,10 @@ img {
   padding: 9px 15px;
 }
 
+.site-nav .nav-button-support {
+  background: #1e293b;
+}
+
 .site-nav .nav-button:hover,
 .hero-action:hover,
 .card-link:hover {
@@ -455,6 +459,13 @@ img {
 .supported-fee-note p {
   color: var(--body);
   margin: 0;
+}
+
+.support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .campaign-deadline {
@@ -1605,6 +1616,28 @@ h1 {
   margin: 18px 0 0;
 }
 
+.written-support-box {
+  background: #f0fdfa;
+  border: 1px solid rgba(13, 148, 136, 0.24);
+  border-left: 4px solid var(--teal);
+  border-radius: 6px;
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 14px;
+}
+
+.written-support-box p {
+  color: var(--body);
+  font-weight: 750;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.written-support-box .support-cta {
+  justify-self: start;
+}
+
 .course-pricing-grid {
   align-items: stretch;
   display: grid;
@@ -2093,6 +2126,36 @@ h1 {
   margin: 7px 0 0;
 }
 
+.footer-trust-block {
+  border-top: 1px solid rgba(226, 232, 240, 0.14);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.footer-trust-block h2 {
+  color: #fff;
+  font-size: 1.02rem;
+  margin: 0 0 8px;
+}
+
+.footer-trust-block ul {
+  display: grid;
+  gap: 6px;
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.footer-trust-block li {
+  color: rgba(226, 232, 240, 0.82);
+  line-height: 1.45;
+}
+
+.footer-trust-block span {
+  color: #fff;
+  font-weight: 850;
+}
+
 .site-footer a {
   color: #ccfbf1;
 }
@@ -2323,6 +2386,18 @@ h1 {
     padding: 7px 8px;
     text-align: center;
     white-space: normal;
+    width: 100%;
+  }
+
+  .support-actions,
+  .written-support-box .support-cta {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .support-actions .support-cta,
+  .written-support-box .support-cta {
+    justify-content: center;
     width: 100%;
   }
 
