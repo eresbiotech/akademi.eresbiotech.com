@@ -4,15 +4,15 @@
       <img class="footer-logo" src="{{ "images/logos/Eres_Yatay_KoyuZemin.svg" | relURL }}" alt="ERES Akademi">
       <p>ERES Biyoinformatik Akademi — Uygulama odaklı biyoinformatik eğitimleri.</p>
       {{ if site.Data.bioexpo_campaign.campaign.active }}
-        <p class="footer-campaign-line">BioExpo 2026 destekli kayıt dönemi: Her eğitimde 10 kişilik %50 destekli kontenjan.</p>
-        <p><a data-campaign="bioexpo2026" data-cta="footer-sponsor" data-destination="mailto" data-event="bioexpo_sponsor_inquiry_click" href="mailto:info@eresbiotech.com?subject=Egitim%20sponsorlugu%20hakkinda">Eğitim sponsorluğu hakkında görüşelim</a></p>
+        <p class="footer-campaign-line">Destekli eğitim kontenjanları ve kurum iş birlikleri için ERES Akademi ile iletişime geçebilirsiniz.</p>
+        <p><a data-campaign="bioexpo2026" data-cta="footer-sponsor" data-destination="mailto" data-event="bioexpo_sponsor_inquiry_click" href="mailto:info@eresbiotech.com?subject=Egitim%20sponsorlugu%20hakkinda">Kurum iş birlikleri için iletişime geçin</a></p>
       {{ end }}
       <p><a href="mailto:info@eresbiotech.com">info@eresbiotech.com</a></p>
     </div>
     <nav class="footer-nav" aria-label="Alt menu">
       <a href="{{ "/" | relURL }}">Anasayfa</a>
       <a href="{{ "/post/" | relURL }}">Eğitimler</a>
-      {{ if site.Data.bioexpo_campaign.campaign.active }}<a href="{{ "/bioexpo-2026-destekli-kayit/" | relURL }}">BioExpo Destekli Kayıt</a>{{ end }}
+      {{ if site.Data.bioexpo_campaign.campaign.active }}<a href="{{ "/bioexpo-2026-destekli-kayit/" | relURL }}">Destekli Kayıt</a>{{ end }}
       <a href="{{ "/canli-egitimler/" | relURL }}">Canlı Eğitimler</a>
       <a href="{{ "/about/" | relURL }}">Hakkımızda</a>
       <a href="{{ "/work/" | relURL }}">Hizmetler</a>

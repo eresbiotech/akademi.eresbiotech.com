@@ -12,7 +12,7 @@
   {{ end }}
   <div class="post-card-body">
     <div class="badge-row">
-      <span class="badge bioexpo-badge">BioExpo 2026 destekli</span>
+      <span class="badge bioexpo-badge">%50 destekli kayıt</span>
       <span class="badge campaign-status-badge">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $course) }}</span>
       <span class="badge">Asenkron ve tekrar izlenebilir</span>
       <span class="badge">Ödev & quiz destekli</span>
@@ -33,13 +33,13 @@
         </ul>
       </div>
     {{ end }}
-    <div class="catalog-price-summary bioexpo-price-summary" aria-label="BioExpo destekli ücret özeti">
+    <div class="catalog-price-summary bioexpo-price-summary" aria-label="Destekli ücret özeti">
       <p><span>Öğrenci</span><del>{{ $course.normal_student_price }}</del><strong>{{ $course.sale_student_price }}</strong></p>
       <p><span>Çalışan</span><del>{{ $course.normal_employee_price }}</del><strong>{{ $course.sale_employee_price }}</strong></p>
       <small>Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik görünür.</small>
     </div>
     <p class="card-urgency-line">Kontenjan dolduğunda ilgili eğitim normal kayıt fiyatına döner.</p>
-    <p class="payment-flow-note">Destekli fiyat Payhip ödeme adımında BioExpo 2026 Run Sales kampanyası üzerinden görünür.</p>
+    <p class="payment-flow-note">Destekli fiyat ödeme adımında aktif kampanya kapsamında görünür.</p>
   </div>
   <div class="catalog-card-actions bioexpo-card-actions">
     {{ with $page.Params.student_checkout_url }}
