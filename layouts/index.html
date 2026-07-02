@@ -9,208 +9,188 @@
 {{- end -}}
 
 {{ if $campaign.active }}
-<section class="home-hero bioexpo-hero">
+<section class="home-hero bioexpo-hero conversion-hero">
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
       <p class="eyebrow bioexpo-eyebrow">Destekli kayıt dönemi</p>
-      <h1>Biyoinformatik eğitimlerinde %50 destekli kayıt dönemi başladı.</h1>
-      <p class="lead">ERES Biyoinformatik Akademi'de R programlama, genom tarayıcıları, tek hücre RNA-seq, protein modelleme ve filogenetik gibi uygulama odaklı eğitimlerde her eğitim için yalnızca 10 kişilik destekli kontenjan açıldı.</p>
+      <h1>BioExpo 2026 destekli %50 biyoinformatik eğitim kontenjanları açıldı.</h1>
+      <p class="lead">R, temel biyoinformatik, genom tarayıcıları, scRNA-seq, protein modelleme ve filogenetik eğitimlerinde destekli kayıt dönemi başladı. Her eğitimde kontenjan sınırlıdır.</p>
       <div class="trust-row" aria-label="Destekli kayıt özellikleri">
-        <span>Her eğitimde 10 destekli kontenjan</span>
         <span>%50 destekli kayıt</span>
+        <span>Sınırlı kontenjan</span>
         <span>Asenkron ve tekrar izlenebilir</span>
-        <span>Ödev & quiz destekli</span>
         <span>Dijital doğrulanabilir sertifika</span>
-        <span>Taksit seçenekleri ödeme adımında görünür</span>
       </div>
-      <p class="bioexpo-context-note">Bu destekli kayıt dönemi, BioExpo 2026 hazırlıkları kapsamında ERES Akademi ile yürütülen eğitim iş birliğiyle sağlanmaktadır.</p>
       <div class="hero-actions">
-        <a class="hero-action" href="#bioexpo-destekli-kontenjanlar" data-campaign="bioexpo2026" data-cta="hero-primary" data-destination="course-cards" data-event="bioexpo_hero_cta_click">Destekli kontenjanı seç</a>
-        <a class="hero-action hero-action-secondary" href="#ogrenme-yollari" data-campaign="bioexpo2026" data-cta="hero-secondary" data-destination="decision-guide" data-event="bioexpo_hero_cta_click">Eğitimleri karşılaştır</a>
-      </div>
-      <p class="fomo-line">Kontenjan dolduğunda ilgili eğitim normal kayıt fiyatına döner.</p>
-    </div>
-    <aside class="home-hero-panel bioexpo-hero-panel" aria-label="Destek özeti">
-      <div>
-        <span class="bioexpo-text-badge">Destekli kontenjan</span>
-        <strong class="hero-panel-title">Her eğitimde yalnızca 10 kişilik %50 destekli kayıt kontenjanı</strong>
-        <span>Destekli kayıt dönemi 16 Temmuz 2026'ya kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.</span>
-      </div>
-      <div class="hero-panel-row">
-        <strong>70 destekli kontenjan</strong>
-        <span>7 aktif eğitimde her biri 10 kontenjanla sınırlı kampanya modeli.</span>
-      </div>
-      <div class="hero-panel-row">
-        <strong>Resmi kayıt ve güvenli ödeme</strong>
-        <span>Kayıt ve ödeme adımı ERES Kampüs / Payhip güvenli ödeme altyapısı üzerinden tamamlanır.</span>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<section class="container bioexpo-summary-strip" aria-label="Kontenjan ve fiyat özeti">
-  <div>
-    <strong>7 aktif eğitim</strong>
-    <span>Başlangıçtan ileri analizlere uzanan seçili eğitimler.</span>
-  </div>
-  <div>
-    <strong>10 kontenjan</strong>
-    <span>Her eğitim için ayrı destekli kontenjan.</span>
-  </div>
-  <div>
-    <strong>%50 destek</strong>
-    <span>Öğrenci ve çalışan kayıt seçeneklerinde uygulanır.</span>
-  </div>
-  <div>
-    <strong>16 Temmuz 2026</strong>
-    <span>Kontenjan dolmazsa destekli dönem bu tarihe kadar sürer.</span>
-  </div>
-</section>
-
-<section class="container home-section trust-support-section">
-  <div class="support-band-card">
-    <p class="support-label">Yazılı destek</p>
-    <div>
-      <h2>Kayıt öncesi aklınızda soru kalmasın</h2>
-      <p>Eğitim detaylarını resmi akademi sitemizden inceleyebilir, kayıt adımlarına yalnızca ilgili eğitim sayfalarımız üzerinden ulaşabilirsiniz. Bağlantı veya ödeme yönlendirmesi konusunda tereddütünüz varsa ödeme yapmadan önce WhatsApp üzerinden yazılı destek alabilirsiniz.</p>
-      <div class="support-actions">
-        <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">WhatsApp'tan yazılı destek alın</a>
-        <a class="support-cta support-cta-secondary" href="{{ "/post/" | relURL }}">Eğitimleri incele</a>
+        <a class="hero-action" href="#hangi-egitim" data-campaign="bioexpo2026" data-cta="hero-primary" data-destination="decision-guide" data-event="bioexpo_hero_cta_click">Bana uygun eğitimi seç</a>
+        <a class="hero-action hero-action-secondary" href="#destekli-egitimler" data-campaign="bioexpo2026" data-cta="hero-secondary" data-destination="course-cards" data-event="bioexpo_hero_cta_click">Tüm eğitimleri gör</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="container home-section bioexpo-about-section">
+<section id="hangi-egitim" class="container home-section decision-section">
   <div class="section-heading">
-    <p class="eyebrow">İş birliği ve öğrenci desteği</p>
-    <h2>BioExpo 2026 nedir ve bu destek nasıl sağlanıyor?</h2>
-    <p>Yaşam bilimleri ekosisteminden öğrenciler ve genç araştırmacılar için eğitim desteği.</p>
+    <p class="eyebrow">Hızlı karar rehberi</p>
+    <h2>Hangi eğitimle başlamalısınız?</h2>
+    <p>Seviyenize ve hedefinize göre en uygun eğitimi seçin.</p>
   </div>
-  <div class="support-band-card bioexpo-support-card">
-    <p class="support-label">Eğitim iş birliği</p>
-    <div>
-      <h2>Yaşam bilimlerinde eğitim erişimini güçlendiren sınırlı kontenjan.</h2>
-      <p>BioExpo, biyoteknoloji, laboratuvar ve analiz teknolojileri, farmasötik/nutrasötik alanlar ve temizoda endüstrilerini bir araya getiren bir yaşam bilimleri platformudur. Fuarlar, çalıştaylar, eğitim programları, seminerler, paneller ve endüstriyel sunumlarla yaşam bilimleri alanında geniş bir profesyonel ağ oluşturur.</p>
-      <p>BioExpo 2026 hazırlıkları sürerken, ERES Biyoinformatik Akademi ile yapılan bu iş birliği kapsamında yaşam bilimleri öğrencilerinin, genç araştırmacıların ve alana yeni adım atan profesyonellerin biyoinformatik becerilerine erişimini kolaylaştırmak amacıyla sınırlı sayıda destekli eğitim kontenjanı açılmıştır.</p>
-      <p>Bu kapsamda ERES Akademi'nin 7 aktif biyoinformatik eğitiminde, her eğitim için 10 kişilik %50 destekli kayıt kontenjanı sağlanmaktadır. Katılımcılar kendi hızlarında ilerleyebilecekleri asenkron eğitimlere erişir; ödev, quiz ve uygulama materyalleriyle öğrenimlerini pekiştirir.</p>
-      <a class="support-cta" href="https://www.bioexpo.com.tr/" target="_blank" rel="noopener noreferrer" data-campaign="bioexpo2026" data-cta="support-section" data-destination="bioexpo-site" data-event="bioexpo_external_info_click">BioExpo 2026 hakkında bilgi al</a>
-    </div>
+  <div class="decision-grid">
+    <article class="decision-card">
+      <h3>Sıfırdan başlıyorum</h3>
+      <p>Biyoinformatik mantığını, veri tabanlarını ve temel analiz akışını uygulamalı öğrenmek isteyenler için.</p>
+      <a class="text-link" href="{{ "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs/" | relURL }}">Eğitimi incele</a>
+    </article>
+    <article class="decision-card">
+      <h3>R ile analiz yapmak istiyorum</h3>
+      <p>RStudio, veri yapıları, grafikler ve biyolojik veri örnekleriyle R öğrenmek isteyenler için.</p>
+      <a class="text-link" href="{{ "/post/biyoinformatik-icin-r-programlama/" | relURL }}">Eğitimi incele</a>
+    </article>
+    <article class="decision-card">
+      <h3>BLAST ve veri tabanlarını öğrenmek istiyorum</h3>
+      <p>NCBI, BLAST ve temel biyoinformatik kaynaklarını sistemli kullanmak isteyenler için.</p>
+      <a class="text-link" href="{{ "/post/biyoinformatik-veritabanlari-araclar-egitimi/" | relURL }}">Eğitimi incele</a>
+    </article>
+    <article class="decision-card">
+      <h3>Genom tarayıcılarını öğrenmek istiyorum</h3>
+      <p>Genom verisini taramak, gen bölgelerini incelemek ve karşılaştırmalı bakmak isteyenler için.</p>
+      <a class="text-link" href="{{ "/post/ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim/" | relURL }}">Eğitimi incele</a>
+    </article>
+    <article class="decision-card">
+      <h3>Tek hücre verisine girmek istiyorum</h3>
+      <p>scRNA-seq analiz mantığını ve temel iş akışını öğrenmek isteyenler için.</p>
+      <a class="text-link" href="{{ "/post/tek-hucre-rna-seq-analizi-egitimi/" | relURL }}">Eğitimi incele</a>
+    </article>
+    <article class="decision-card">
+      <h3>Protein modelleme öğrenmek istiyorum</h3>
+      <p>Protein yapısı, modelleme ve moleküler düzeyde yorumlama becerisi kazanmak isteyenler için.</p>
+      <a class="text-link" href="{{ "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme/" | relURL }}">Eğitimi incele</a>
+    </article>
+    <article class="decision-card">
+      <h3>Filogenetik analiz yapmak istiyorum</h3>
+      <p>Dizi hizalama, ağaç oluşturma ve filogenetik sonuç yorumlama öğrenmek isteyenler için.</p>
+      <a class="text-link" href="{{ "/post/phyml-uygulamali-filogenetik-egitimi/" | relURL }}">Eğitimi incele</a>
+    </article>
   </div>
 </section>
 
-<section id="bioexpo-destekli-kontenjanlar" class="container home-section">
-  <div class="section-heading section-heading-row">
-    <div>
-      <p class="eyebrow">Destekli kontenjanlar</p>
-      <h2>Destekli eğitim kontenjanları</h2>
-      <p>Her eğitimde yalnızca 10 kişilik %50 destekli kayıt kontenjanı açıldı. Kayıt ve ödeme adımı ERES Kampüs / Payhip güvenli ödeme altyapısı üzerinden tamamlanır. Lütfen yalnızca akademi.eresbiotech.com üzerindeki resmi eğitim sayfalarındaki kayıt butonlarını kullanarak ilerleyin.</p>
-    </div>
-    <a class="text-link" href="{{ "/post/" | relURL }}">Tüm eğitimleri karşılaştır</a>
+<section id="destekli-egitimler" class="container home-section">
+  <div class="section-heading">
+    <p class="eyebrow">Önerilen başlangıç eğitimleri</p>
+    <h2>Başlamak için en güçlü iki seçenek</h2>
+    <p>Destekli fiyat, kayıt adımında BioExpo 2026 destekli kayıt seçeneği olarak görünür.</p>
   </div>
-  <div class="card-grid featured-grid">
-    {{ range $priorityCourses }}
-      {{- $course := index $courses .File.BaseFileName -}}
-      {{- if $course -}}
-        {{ partial "bioexpo/course-card.html" (dict "page" . "course" $course "campaign" $campaign) }}
+  <div class="featured-course-grid">
+    {{ range slice "biyoinformatik-giris-egitim-buyuk-veri-kurs" "biyoinformatik-icin-r-programlama" }}
+      {{- with site.GetPage (printf "/post/%s" .) -}}
+        {{- $course := index $courses .File.BaseFileName -}}
+        {{- if $course -}}
+          {{- $courseKey := $course.key | default .File.BaseFileName -}}
+          <article class="conversion-course-card featured-conversion-card">
+            <div class="conversion-card-body">
+              <span class="bioexpo-text-badge">%50 destekli kayıt</span>
+              <h3><a href="{{ .RelPermalink }}">{{ $course.title }}</a></h3>
+              <p>{{ $course.card_description }}</p>
+              <p class="course-fit compact-fit"><strong>Kimler için:</strong> {{ $course.fit }}</p>
+              <div class="price-pair" aria-label="Destekli ücret özeti">
+                <p><span>Öğrenci</span><strong>{{ $course.sale_student_price }}</strong></p>
+                <p><span>Çalışan</span><strong>{{ $course.sale_employee_price }}</strong></p>
+              </div>
+              <p class="quota-chip">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $course) }}</p>
+            </div>
+            <div class="conversion-card-actions">
+              {{ with .Params.student_checkout_url }}
+                <a class="card-link" href="{{ . }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="student-featured-home" data-destination="payhip" data-event="bioexpo_payhip_click">Öğrenci kaydı</a>
+              {{ end }}
+              {{ with .Params.employee_checkout_url }}
+                <a class="card-link card-link-secondary" href="{{ . }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="employee-featured-home" data-destination="payhip" data-event="bioexpo_payhip_click">Çalışan kaydı</a>
+              {{ end }}
+              <a class="text-link" href="{{ .RelPermalink }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="featured-detail-home" data-destination="course" data-event="bioexpo_course_card_click">Ders içeriğini incele</a>
+            </div>
+          </article>
+        {{- end -}}
       {{- end -}}
     {{ end }}
   </div>
 </section>
 
-<section id="ogrenme-yollari" class="container home-section">
+<section class="container home-section compact-course-section">
   <div class="section-heading">
-    <p class="eyebrow">Karar rehberi</p>
-    <h2>Destekli kontenjanda hangi eğitim size daha uygun?</h2>
-    <p>Kodlama deneyiminize, araştırma hedefinize ve çalıştığınız veri tipine göre doğru eğitimle başlayın. Her eğitimde yalnızca 10 destekli kontenjan bulunur.</p>
+    <p class="eyebrow">Diğer destekli eğitimler</p>
+    <h2>İleri başlıklar ve uygulama odaklı seçenekler</h2>
   </div>
-  <div class="start-grid">
-    <article class="path-card start-card">
-      <div>
-        <p class="path-label">Kodlama ve veri analizi</p>
-        <h3>R ile başlamak istiyorum</h3>
-        <p>Biyolojik veriyi düzenlemek, RStudio'yu tanımak ve temel grafikler üretmek isteyenler için.</p>
-        <div class="tech-tag-row"><span>R</span><span>RStudio</span><span>ggplot2</span></div>
-      </div>
-      <a class="path-course-link" href="{{ "/post/biyoinformatik-icin-r-programlama/" | relURL }}">R Programlama</a>
-    </article>
-    <article class="path-card start-card">
-      <div>
-        <p class="path-label">Temel biyoinformatik çerçeve</p>
-        <h3>Biyoinformatiğin temelini anlamak istiyorum</h3>
-        <p>Omik veri türleri, büyük veri mantığı ve sonraki öğrenme rotası için.</p>
-        <div class="tech-tag-row"><span>Omik veri</span><span>Büyük veri</span><span>Temel kavramlar</span></div>
-      </div>
-      <a class="path-course-link" href="{{ "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs/" | relURL }}">Biyoinformatiğe Giriş</a>
-    </article>
-    <article class="path-card start-card">
-      <div>
-        <p class="path-label">Araç ve veritabanları</p>
-        <h3>Araç ve veritabanlarını doğru kullanmak istiyorum</h3>
-        <p>NCBI, UniProt, PDB, BLAST ve temel veri tabanı çıktılarıyla güvenli başlangıç için.</p>
-        <div class="tech-tag-row"><span>NCBI</span><span>UniProt</span><span>BLAST</span></div>
-      </div>
-      <a class="path-course-link" href="{{ "/post/biyoinformatik-veritabanlari-araclar-egitimi/" | relURL }}">Araçlar ve Veritabanları</a>
-    </article>
-    <article class="path-card start-card">
-      <div>
-        <p class="path-label">Genom tarayıcıları</p>
-        <h3>Genom tarayıcılarını öğrenmek istiyorum</h3>
-        <p>Gen, transkript, varyant ve koordinat bilgisini NCBI, Ensembl ve UCSC üzerinde okumak için.</p>
-        <div class="tech-tag-row"><span>NCBI</span><span>Ensembl</span><span>UCSC</span></div>
-      </div>
-      <a class="path-course-link" href="{{ "/post/ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim/" | relURL }}">NCBI/Ensembl/UCSC</a>
-    </article>
-    <article class="path-card start-card">
-      <div>
-        <p class="path-label">Tek hücre</p>
-        <h3>Tek hücre analizlerini okumak istiyorum</h3>
-        <p>scRNA-seq kalite kontrol, kümeleme ve marker gen yorumlarını daha bilinçli takip etmek için.</p>
-        <div class="tech-tag-row"><span>scRNA-seq</span><span>Seurat</span><span>Marker gen</span></div>
-      </div>
-      <a class="path-course-link" href="{{ "/post/tek-hucre-rna-seq-analizi-egitimi/" | relURL }}">scRNA-seq</a>
-    </article>
-    <article class="path-card start-card">
-      <div>
-        <p class="path-label">Protein modelleme</p>
-        <h3>Protein yapısı ve modelleme öğrenmek istiyorum</h3>
-        <p>PDB kayıtları, AlphaFold çıktıları ve in silico modelleme yaklaşımına uygulamalı giriş için.</p>
-        <div class="tech-tag-row"><span>PDB</span><span>AlphaFold</span><span>Modelleme</span></div>
-      </div>
-      <a class="path-course-link" href="{{ "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme/" | relURL }}">Yapısal Biyoinformatik</a>
-    </article>
-    <article class="path-card start-card">
-      <div>
-        <p class="path-label">Filogenetik</p>
-        <h3>Filogenetik analiz yapmak istiyorum</h3>
-        <p>Dizi hizalama, model seçimi, phyML ve bootstrap yorumlama pratiği için.</p>
-        <div class="tech-tag-row"><span>phyML</span><span>Dizi hizalama</span><span>Bootstrap</span></div>
-      </div>
-      <a class="path-course-link" href="{{ "/post/phyml-uygulamali-filogenetik-egitimi/" | relURL }}">phyML</a>
-    </article>
+  <div class="compact-course-grid">
+    {{ range slice "biyoinformatik-veritabanlari-araclar-egitimi" "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "tek-hucre-rna-seq-analizi-egitimi" "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "phyml-uygulamali-filogenetik-egitimi" }}
+      {{- with site.GetPage (printf "/post/%s" .) -}}
+      {{- $course := index $courses .File.BaseFileName -}}
+      {{- if $course -}}
+          {{- $courseKey := $course.key | default .File.BaseFileName -}}
+          <article class="conversion-course-card compact-course-card">
+            <div class="conversion-card-body">
+              <h3><a href="{{ .RelPermalink }}">{{ $course.title }}</a></h3>
+              <p>{{ $course.card_description }}</p>
+              <div class="price-pair compact-price-pair" aria-label="Destekli ücret özeti">
+                <p><span>Öğrenci</span><strong>{{ $course.sale_student_price }}</strong></p>
+                <p><span>Çalışan</span><strong>{{ $course.sale_employee_price }}</strong></p>
+              </div>
+              <p class="quota-chip">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $course) }}</p>
+            </div>
+            <div class="compact-card-actions">
+              {{ with .Params.student_checkout_url }}
+                <a class="card-link" href="{{ . }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="student-compact-home" data-destination="payhip" data-event="bioexpo_payhip_click">Öğrenci kaydı</a>
+              {{ end }}
+              {{ with .Params.employee_checkout_url }}
+                <a class="card-link card-link-secondary" href="{{ . }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="employee-compact-home" data-destination="payhip" data-event="bioexpo_payhip_click">Çalışan kaydı</a>
+              {{ end }}
+              <a class="text-link" href="{{ .RelPermalink }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="compact-detail-home" data-destination="course" data-event="bioexpo_course_card_click">İçeriği incele</a>
+            </div>
+          </article>
+      {{- end -}}
+      {{- end -}}
+    {{ end }}
+  </div>
+</section>
+
+<section class="container home-section trust-support-section">
+  <div class="support-band-card conversion-trust-card">
+    <p class="support-label">Resmi kayıt</p>
+    <div>
+      <h2>Resmi kayıt ve yazılı destek</h2>
+      <p>Kayıtlar yalnızca akademi.eresbiotech.com üzerindeki eğitim sayfalarından başlar ve ERES Kampüs / Payhip güvenli ödeme altyapısıyla tamamlanır. Tereddüt yaşarsanız ödeme yapmadan önce WhatsApp üzerinden yazılı destek alabilirsiniz.</p>
+      <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">WhatsApp'tan yazılı destek alın</a>
+    </div>
+  </div>
+</section>
+
+<section class="container home-section bioexpo-about-section compact-info-section">
+  <div class="section-heading">
+    <p class="eyebrow">İş birliği ve öğrenci desteği</p>
+    <h2>BioExpo 2026 destekli kayıt dönemi</h2>
+    <p>Bu destekli kayıt dönemi, BioExpo 2026 hazırlıkları kapsamında ERES Biyoinformatik Akademi ile yürütülen eğitim iş birliğiyle sağlanmaktadır. Amaç, yaşam bilimleri öğrencileri ve genç araştırmacıların biyoinformatik becerilerine daha erişilebilir koşullarda ulaşmasını desteklemektir.</p>
+    <a class="text-link" href="{{ "/bioexpo-2026-destekli-kayit/" | relURL }}" data-campaign="bioexpo2026" data-cta="bioexpo-info-home" data-destination="bioexpo-landing" data-event="bioexpo_course_card_click">BioExpo 2026 destekli kayıt sayfasını incele</a>
   </div>
 </section>
 
 <section class="container home-section">
   <div class="section-heading">
-    <p class="eyebrow">Neden ERES Biyoinformatik Akademi?</p>
-    <h2>Akademik güven, gerçek veri pratiği ve adım adım ilerleme</h2>
+    <p class="eyebrow">Neden ERES?</p>
+    <h2>Neden ERES Biyoinformatik Akademi?</h2>
   </div>
   <div class="value-grid">
     <article class="value-card">
       <span class="value-icon" aria-hidden="true">01</span>
       <h3>Uygulama odaklı öğrenme</h3>
-      <p>Kavramlar, araç kullanımı ve analiz mantığı araştırma pratiğine yakın örneklerle desteklenir.</p>
+      <p>Kavramlar ve araç kullanımı araştırma pratiğine yakın örneklerle desteklenir.</p>
     </article>
     <article class="value-card">
       <span class="value-icon" aria-hidden="true">02</span>
       <h3>Kendi hızınızda ilerleme</h3>
-      <p>Yoğun akademik ve profesyonel programlara uyum sağlayan asenkron ve tekrar izlenebilir yapı sunulur.</p>
+      <p>Asenkron ve tekrar izlenebilir yapı yoğun programlara uyum sağlar.</p>
     </article>
     <article class="value-card">
       <span class="value-icon" aria-hidden="true">03</span>
-      <h3>Ödev ve quizlerle pekiştirme</h3>
-      <p>Yalnızca izlemekle kalmaz, kısa uygulamalar ve quizlerle öğrendiklerinizi daha kalıcı hale getirirsiniz.</p>
+      <h3>Quiz ve ödevlerle pekiştirme</h3>
+      <p>Kısa uygulamalar ve quizlerle öğrendiklerinizi daha kalıcı hale getirirsiniz.</p>
     </article>
     <article class="value-card">
       <span class="value-icon" aria-hidden="true">04</span>
@@ -220,48 +200,32 @@
   </div>
 </section>
 
-<section class="container home-section b2b-sponsor-section">
-  <div class="support-band-card">
-    <p class="support-label">Sektör destekli model</p>
-    <div>
-      <h2>Kurumunuz yaşam bilimlerinde dijital beceri gelişimini desteklemek ister mi?</h2>
-      <p>ERES Biyoinformatik Akademi, sektör paydaşlarıyla birlikte sınırlı kontenjanlı destekli eğitim programları geliştirmektedir. Kurumunuzun görünürlüğünü bilimsel eğitim etkisiyle birleştiren sponsorluk modelleri için bizimle iletişime geçebilirsiniz.</p>
-      <a class="support-cta support-cta-secondary" href="{{ "/post/contact/" | relURL }}" data-campaign="bioexpo2026" data-cta="sponsor-home" data-destination="contact" data-event="bioexpo_sponsor_inquiry_click">Kurum iş birlikleri için yazılı bilgi alın</a>
-    </div>
-  </div>
-</section>
-
-<section class="container home-section faq-section">
+<section class="container home-section faq-section compact-faq-section">
   <div class="section-heading">
     <p class="eyebrow">Sık sorulan sorular</p>
     <h2>Destekli kayıt dönemi hakkında</h2>
   </div>
-  <div class="faq-grid">
-    <article>
-      <h3>Destekli kontenjan nedir?</h3>
+  <div class="compact-faq-list">
+    <details>
+      <summary>Destekli kontenjan nedir?</summary>
       <p>ERES Biyoinformatik Akademi'nin seçili eğitimlerinde sınırlı sayıda %50 destekli kayıt kontenjanı açılmıştır. Her eğitimde 10 destekli kontenjan bulunur.</p>
-    </article>
-    <article>
-      <h3>Destekli fiyat ne zamana kadar geçerli?</h3>
+    </details>
+    <details>
+      <summary>Destekli fiyat ne zamana kadar geçerli?</summary>
       <p>Destekli kayıt dönemi 16 Temmuz 2026'ya kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.</p>
-    </article>
-    <article>
-      <h3>Kontenjan dolarsa ne olur?</h3>
-      <p>İlgili eğitim için destekli fiyat kapanır; kayıtlar normal fiyat üzerinden devam eder.</p>
-    </article>
-    <article>
-      <h3>Taksit imkanı var mı?</h3>
-      <p>Kredi kartı ile güvenli ödeme yapabilirsiniz. Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik görünür.</p>
-    </article>
-    <article>
-      <h3>Eğitimler canlı mı asenkron mu?</h3>
+    </details>
+    <details>
+      <summary>Eğitimler canlı mı asenkron mu?</summary>
       <p>Bu kampanyadaki eğitimler asenkron ve tekrar izlenebilir yapıdadır. Kendi programınıza göre ilerleyebilirsiniz.</p>
-    </article>
-    <article>
-      <h3>Sertifika var mı?</h3>
+    </details>
+    <details>
+      <summary>Sertifika var mı?</summary>
       <p>Evet. Eğitimi tamamlayan katılımcılar dijital doğrulanabilir sertifika alır.</p>
-    </article>
-    {{ partial "support/faq-trust.html" . }}
+    </details>
+    <details>
+      <summary>Kayıt linklerinin güvenli olduğundan nasıl emin olabilirim?</summary>
+      <p>Kayıt linklerine yalnızca akademi.eresbiotech.com üzerindeki resmi eğitim sayfalarından ilerleyin. Bağlantı veya ödeme yönlendirmesi konusunda tereddüt yaşarsanız ödeme yapmadan önce WhatsApp üzerinden yazılı destek alın.</p>
+    </details>
   </div>
 </section>
 {{ else }}
