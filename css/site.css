@@ -2363,6 +2363,241 @@ h1 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.conversion-hero {
+  padding-bottom: 22px;
+}
+
+.conversion-hero .home-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.conversion-hero .home-hero-copy {
+  max-width: 980px;
+  padding: clamp(30px, 5vw, 56px);
+}
+
+.conversion-hero .lead {
+  max-width: 760px;
+}
+
+.decision-section {
+  padding-top: 26px;
+}
+
+.decision-grid,
+.featured-course-grid,
+.compact-course-grid,
+.compact-faq-list {
+  display: grid;
+  gap: 18px;
+}
+
+.decision-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.decision-card,
+.conversion-course-card,
+.compact-faq-list details {
+  background: #fff;
+  border: 1px solid rgba(0, 33, 71, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+}
+
+.decision-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.decision-card h3,
+.conversion-course-card h3 {
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.22;
+  margin: 0;
+}
+
+.decision-card p,
+.conversion-course-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.decision-card .text-link,
+.conversion-course-card .text-link {
+  margin-top: auto;
+}
+
+.featured-course-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.compact-course-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.conversion-course-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.featured-conversion-card {
+  border-top: 4px solid var(--teal);
+}
+
+.conversion-card-body {
+  display: grid;
+  flex: 1;
+  gap: 14px;
+  padding: 24px;
+}
+
+.compact-course-card .conversion-card-body {
+  gap: 12px;
+  padding: 20px;
+}
+
+.compact-course-card h3 {
+  font-size: 1rem;
+}
+
+.compact-course-card p {
+  font-size: 0.92rem;
+}
+
+.compact-fit {
+  margin-top: 0;
+}
+
+.price-pair {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.price-pair p {
+  background: rgba(240, 253, 250, 0.72);
+  border: 1px solid rgba(13, 148, 136, 0.18);
+  border-radius: 8px;
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+}
+
+.price-pair span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.price-pair strong {
+  color: #0f766e;
+  font-size: 1.14rem;
+}
+
+.compact-price-pair {
+  grid-template-columns: 1fr;
+}
+
+.compact-price-pair p {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 10px;
+}
+
+.quota-chip {
+  background: var(--gold-soft);
+  border: 1px solid rgba(197, 160, 89, 0.24);
+  border-radius: 8px;
+  color: #725117 !important;
+  display: inline-flex;
+  font-size: 0.86rem;
+  font-weight: 900;
+  justify-self: start;
+  padding: 8px 10px;
+}
+
+.conversion-card-actions,
+.compact-card-actions {
+  align-items: center;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 12px;
+  padding: 18px 24px 22px;
+}
+
+.conversion-card-actions {
+  flex-wrap: wrap;
+}
+
+.conversion-card-actions .card-link,
+.compact-card-actions .card-link {
+  margin: 0;
+}
+
+.compact-card-actions {
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 20px 20px;
+}
+
+.compact-card-actions .card-link {
+  justify-content: center;
+  width: 100%;
+}
+
+.compact-card-actions .text-link {
+  align-self: center;
+}
+
+.conversion-trust-card,
+.compact-info-section .section-heading {
+  max-width: 900px;
+}
+
+.compact-info-section .section-heading {
+  background: #fff;
+  border: 1px solid rgba(0, 33, 71, 0.1);
+  border-left: 4px solid var(--teal);
+  border-radius: 8px;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+  padding: 26px;
+}
+
+.compact-info-section .section-heading p {
+  max-width: 760px;
+}
+
+.compact-faq-list {
+  max-width: 920px;
+}
+
+.compact-faq-list details {
+  box-shadow: none;
+  padding: 0 20px;
+}
+
+.compact-faq-list summary {
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 900;
+  list-style-position: outside;
+  padding: 18px 0;
+}
+
+.compact-faq-list details p {
+  border-top: 1px solid var(--line);
+  padding: 0 0 18px;
+}
+
 @media (max-width: 820px) {
   .header-inner,
   .footer-inner,
@@ -2407,13 +2642,16 @@ h1 {
 
   .home-hero-grid,
   .support-band-card,
-  .bioexpo-summary-strip,
-  .value-grid,
-  .path-grid,
-  .start-grid,
-  .training-hero-grid,
-  .training-layout,
-  .course-roadmap,
+    .bioexpo-summary-strip,
+    .value-grid,
+    .path-grid,
+    .start-grid,
+    .decision-grid,
+    .featured-course-grid,
+    .compact-course-grid,
+    .training-hero-grid,
+    .training-layout,
+    .course-roadmap,
   .quick-decision,
   .sales-card-grid,
   .outcome-grid,
@@ -2479,6 +2717,20 @@ h1 {
 
   .bioexpo-card-actions {
     grid-template-columns: 1fr;
+  }
+
+  .conversion-card-actions,
+  .compact-card-actions,
+  .price-pair {
+    align-items: stretch;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .conversion-card-actions .card-link,
+  .compact-card-actions .card-link {
+    justify-content: center;
+    width: 100%;
   }
 
   .home-hero-copy,
