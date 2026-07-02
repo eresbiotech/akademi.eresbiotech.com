@@ -1,0 +1,141 @@
+{{ define "main" }}
+{{- $campaign := site.Data.bioexpo_campaign.campaign -}}
+{{- $courses := site.Data.bioexpo_campaign.courses -}}
+{{- $priorityCourses := slice -}}
+{{- range $campaign.priority_slugs -}}
+  {{- with site.GetPage (printf "/post/%s" .) -}}
+    {{- $priorityCourses = $priorityCourses | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{ if $campaign.active }}
+<section class="home-hero bioexpo-landing-hero">
+  <div class="container home-hero-grid">
+    <div class="home-hero-copy">
+      <p class="eyebrow bioexpo-eyebrow">BioExpo 2026 destekli kayıt dönemi</p>
+      <h1>BioExpo 2026 destekli biyoinformatik eğitim kontenjanları açıldı.</h1>
+      <p class="lead">Her eğitimde 10 kişilik %50 destekli kayıt kontenjanı. R programlama, biyoinformatiğe giriş, genom tarayıcıları, scRNA-seq, protein modelleme ve filogenetik eğitimlerini kendi hızınızda tamamlayın.</p>
+      <div class="trust-row">
+        <span>Her eğitimde 10 destekli kontenjan</span>
+        <span>%50 BioExpo 2026 desteği</span>
+        <span>Asenkron ve tekrar izlenebilir</span>
+        <span>Ödev & quiz destekli</span>
+        <span>Dijital doğrulanabilir sertifika</span>
+      </div>
+      <div class="hero-actions">
+        <a class="hero-action" href="#bioexpo-destekli-kontenjanlar" data-campaign="bioexpo2026" data-cta="landing-hero" data-destination="course-cards" data-event="bioexpo_hero_cta_click">Eğitimleri seç</a>
+        <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}" data-campaign="bioexpo2026" data-cta="landing-catalog" data-destination="catalog" data-event="bioexpo_course_card_click">Katalogda karşılaştır</a>
+      </div>
+    </div>
+    <aside class="home-hero-panel bioexpo-hero-panel">
+      <span class="bioexpo-text-badge">BioExpo 2026 destekli</span>
+      <strong class="hero-panel-title">BioExpo 2026 desteğiyle her eğitimde yalnızca 10 kişilik %50 destekli kayıt kontenjanı açıldı.</strong>
+      <span>Destekli kayıt dönemi 16 Temmuz 2026'ya kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.</span>
+      <div class="quota-callout">
+        <strong>Etik sayaç notu</strong>
+        <span>Doluluk sayısı yalnızca doğrulanmış satış veya rezervasyon verisiyle güncellenir.</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="container home-section">
+  <div class="section-heading">
+    <p class="eyebrow">Kimler için?</p>
+    <h2>Yaşam bilimlerinde dijital araştırma becerilerini güçlendirmek isteyenler için</h2>
+  </div>
+  <div class="value-grid landing-audience-grid">
+    <article class="value-card"><h3>Yaşam bilimleri öğrencileri</h3><p>Biyoloji, moleküler biyoloji ve genetik, biyoteknoloji, tıp, veterinerlik, ziraat ve ilgili alanlarda okuyanlar.</p></article>
+    <article class="value-card"><h3>Yüksek lisans/doktora öğrencileri</h3><p>Tez, proje ve makale okuma süreçlerinde biyoinformatik araçları daha bilinçli kullanmak isteyenler.</p></article>
+    <article class="value-card"><h3>Araştırmacılar</h3><p>Omik veri, genom tarayıcıları, tek hücre, protein yapısı veya filogenetik başlıklarında çerçeve kazanmak isteyenler.</p></article>
+    <article class="value-card"><h3>Laboratuvar ve Ar-Ge çalışanları</h3><p>Klinik araştırma, biyoteknoloji, laboratuvar veya Ar-Ge süreçlerinde veri odaklı becerilerini geliştiren profesyoneller.</p></article>
+  </div>
+</section>
+
+<section id="bioexpo-destekli-kontenjanlar" class="container home-section">
+  <div class="section-heading">
+    <p class="eyebrow">Destekli eğitim kartları</p>
+    <h2>BioExpo destekli kontenjanı olan eğitimler</h2>
+    <p>Destekli fiyat Payhip ödeme adımında BioExpo 2026 Run Sales kampanyası üzerinden görünür. Taksit seçenekleri kartınıza/bankanıza göre ödeme adımında listelenir.</p>
+  </div>
+  <div class="card-grid featured-grid">
+    {{ range $priorityCourses }}
+      {{- $course := index $courses .File.BaseFileName -}}
+      {{- if $course -}}
+        {{ partial "bioexpo/course-card.html" (dict "page" . "course" $course "campaign" $campaign) }}
+      {{- end -}}
+    {{ end }}
+  </div>
+</section>
+
+<section class="container home-section bioexpo-about-section">
+  <div class="support-band-card bioexpo-support-card">
+    <p class="support-label">BioExpo 2026 desteği</p>
+    <div>
+      <h2>BioExpo 2026 desteği nedir?</h2>
+      <p>BioExpo 2026, yaşam bilimleri ekosisteminde fuarları, etkinlikleri, eğitim programlarını ve profesyonel ağları bir araya getiren bir platformdur. Bu destekli kayıt dönemi, yaşam bilimlerinde dijital araştırma ve biyoinformatik becerilerini daha erişilebilir hale getirmek amacıyla ERES Biyoinformatik Akademi eğitimlerinde sınırlı sayıda kontenjan açılmasını sağlar.</p>
+      <p class="campaign-deadline">Bu destek her eğitimde 10 kontenjanla sınırlıdır. Kontenjan dolduğunda ilgili eğitim normal kayıt fiyatı üzerinden devam eder.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container home-section">
+  <div class="section-heading">
+    <p class="eyebrow">Ortak kazanımlar</p>
+    <h2>Eğitimlerin ortak öğrenme çıktıları</h2>
+  </div>
+  <div class="outcome-grid">
+    <article><span aria-hidden="true">✓</span><p>Biyolojik veri, araç çıktısı ve araştırma sorusu arasındaki ilişkiyi daha bilinçli kurarsınız.</p></article>
+    <article><span aria-hidden="true">✓</span><p>Kendi hızınızda ilerleyebileceğiniz tekrar izlenebilir ders yapısıyla çalışırsınız.</p></article>
+    <article><span aria-hidden="true">✓</span><p>Ödev ve quizlerle öğrenilen adımları pekiştirirsiniz.</p></article>
+    <article><span aria-hidden="true">✓</span><p>Eğitimi tamamladığınızda dijital doğrulanabilir sertifika alırsınız.</p></article>
+  </div>
+</section>
+
+<section class="container home-section faq-section">
+  <div class="section-heading">
+    <p class="eyebrow">Sık sorulan sorular</p>
+    <h2>BioExpo destekli kayıt dönemi</h2>
+  </div>
+  <div class="faq-grid">
+    <article><h3>BioExpo 2026 destekli kontenjan nedir?</h3><p>BioExpo 2026 desteğiyle ERES Biyoinformatik Akademi'nin seçili eğitimlerinde sınırlı sayıda %50 destekli kayıt kontenjanı açılmıştır. Her eğitimde 10 destekli kontenjan bulunur.</p></article>
+    <article><h3>Destekli fiyat ne zamana kadar geçerli?</h3><p>Destekli kayıt dönemi 16 Temmuz 2026'ya kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.</p></article>
+    <article><h3>Kontenjan dolarsa ne olur?</h3><p>İlgili eğitim için destekli fiyat kapanır; kayıtlar normal fiyat üzerinden devam eder.</p></article>
+    <article><h3>Taksit imkanı var mı?</h3><p>Kredi kartı ile güvenli ödeme yapabilirsiniz. Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik görünür.</p></article>
+    <article><h3>Kayıt olduktan sonra derse nasıl erişeceğim?</h3><p>Ödeme sürecini tamamladığınızda kaydınız otomatik olarak oluşturulur. Sistem sizi eğitime tanımlar; ödeme sonrasında derslere nasıl erişeceğinizi açıklayan yönlendirmeleri takip edebilirsiniz.</p></article>
+    <article><h3>Hangi eğitimden başlamalıyım?</h3><p>R programlama ve biyoinformatiğe giriş eğitimleri başlangıç için uygundur. Belirli bir veri tipi veya araştırma hedefiniz varsa NCBI/Ensembl/UCSC, scRNA-seq, yapısal biyoinformatik veya phyML eğitimlerini seçebilirsiniz.</p></article>
+  </div>
+</section>
+
+<section class="container home-section b2b-sponsor-section">
+  <div class="support-band-card">
+    <p class="support-label">Kurumlar için</p>
+    <div>
+      <h2>Kurumunuz yaşam bilimlerinde dijital beceri gelişimini desteklemek ister mi?</h2>
+      <p>ERES Biyoinformatik Akademi, sektör paydaşlarıyla birlikte sınırlı kontenjanlı destekli eğitim programları geliştirmektedir. Kurumunuzun görünürlüğünü bilimsel eğitim etkisiyle birleştiren sponsorluk modelleri için bizimle iletişime geçebilirsiniz.</p>
+      <a class="support-cta support-cta-secondary" href="mailto:info@eresbiotech.com?subject=Egitim%20sponsorlugu%20hakkinda" data-campaign="bioexpo2026" data-cta="sponsor-landing" data-destination="mailto" data-event="bioexpo_sponsor_inquiry_click">Eğitim sponsorluğu hakkında görüşelim</a>
+    </div>
+  </div>
+</section>
+
+<section class="container home-final-cta bioexpo-final-cta">
+  <p class="eyebrow">Son adım</p>
+  <h2>Size uygun BioExpo destekli eğitimi seçin.</h2>
+  <p>Her eğitimde 10 destekli kontenjan açıldı. Kontenjan dolduğunda ilgili eğitim normal kayıt fiyatına döner.</p>
+  <div class="hero-actions">
+    <a class="hero-action" href="#bioexpo-destekli-kontenjanlar" data-campaign="bioexpo2026" data-cta="landing-final" data-destination="course-cards" data-event="bioexpo_course_card_click">Eğitimleri seç</a>
+  </div>
+</section>
+{{ else }}
+<section class="container page-shell">
+  <header class="page-header soft-hero">
+    <p class="eyebrow">BioExpo 2026 destekli kayıt dönemi</p>
+    <h1>Kampanya tamamlandı.</h1>
+    <p class="lead">BioExpo 2026 destekli kayıt dönemi tamamlandı. Güncel eğitimleri incelemek için katalog sayfasına geçebilirsiniz.</p>
+    <div class="hero-actions">
+      <a class="hero-action" href="{{ "/post/" | relURL }}">Eğitimleri incele</a>
+    </div>
+  </header>
+</section>
+{{ end }}
+{{ end }}

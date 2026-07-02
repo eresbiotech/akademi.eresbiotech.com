@@ -1,112 +1,63 @@
 {{ define "main" }}
+{{- $campaign := site.Data.bioexpo_campaign.campaign -}}
+{{- $courses := site.Data.bioexpo_campaign.courses -}}
 {{- $posts := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
-{{- $prioritySlugs := slice "biyoinformatik-icin-r-programlama" "biyoinformatik-giris-egitim-buyuk-veri-kurs" "biyoinformatik-veritabanlari-araclar-egitimi" "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "tek-hucre-rna-seq-analizi-egitimi" "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "phyml-uygulamali-filogenetik-egitimi" -}}
+{{- $prioritySlugs := $campaign.priority_slugs -}}
 {{- $priorityPosts := slice -}}
 {{- range $prioritySlugs -}}
   {{- with site.GetPage (printf "/post/%s" .) -}}
     {{- $priorityPosts = $priorityPosts | append . -}}
   {{- end -}}
 {{- end -}}
-{{- $cardDescriptions := dict
-  "biyoinformatik-icin-r-programlama" "RStudio’dan veri yapıları ve ggplot2 görselleştirmeye; çoklu dizi hizalaması, GEOquery, metadata ve expression verisine uzanan biyoinformatik odaklı R başlangıç eğitimi. Kod kartları, ana R script, mini ödevler ve hata çözüm rehberiyle desteklenir."
-  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "Omik veri dünyasını, temel biyoinformatik kavramlarını ve büyük veri mantığını araştırma sorularıyla ilişkilendirerek anlamak isteyenler için."
-  "biyoinformatik-veritabanlari-araclar-egitimi" "NCBI, UniProt, PDB ve BLAST gibi araçları doğru okumak, sonuçları anlamlandırmak ve raporlamak isteyenler için."
-  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "Gen, transkript, varyant ve genom bölgelerini NCBI, Ensembl ve UCSC üzerinden daha güvenli yorumlamak isteyenler için."
-  "tek-hucre-rna-seq-analizi-egitimi" "scRNA-seq verilerinde kalite kontrol, kümeleme, marker gen yorumu ve Seurat iş akışını anlamak isteyen araştırmacılar için."
-  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Protein yapısı, PDB kayıtları, AlphaFold çıktıları ve in silico modelleme yaklaşımını uygulama odaklı öğrenmek isteyenler için."
-  "phyml-uygulamali-filogenetik-egitimi" "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
--}}
+
 <section class="container page-shell">
   <header class="page-header split-header post-index-hero">
     <div>
-      <p class="eyebrow">Eğitim kataloğu</p>
-      <h1>Biyoinformatik eğitimleri</h1>
-      <p class="lead">Destekli kayıt dönemi tamamlandı. Yaz dönemi normal kayıtlarıyla biyoinformatik öğrenmeye başlayabilir, öğrendiklerinizi pratiğe dökerek yeni döneme daha donanımlı girebilirsiniz.</p>
+      <p class="eyebrow">BioExpo 2026 destekli eğitim kataloğu</p>
+      <h1>BioExpo 2026 destekli biyoinformatik eğitimleri</h1>
+      <p class="lead">ERES Biyoinformatik Akademi'de BioExpo 2026 desteğiyle her aktif eğitim için 10 kişilik %50 destekli kayıt kontenjanı açıldı. Kendi hızınızda ilerleyebileceğiniz, ödev ve quizlerle desteklenen, dijital sertifikalı eğitimleri karşılaştırarak size en uygun öğrenme yolunu seçebilirsiniz.</p>
       <div class="trust-row" aria-label="Katalog özellikleri">
-        <span>Videolu eğitimler</span>
+        <span>Her eğitimde 10 destekli kontenjan</span>
+        <span>%50 BioExpo 2026 desteği</span>
+        <span>Asenkron ve tekrar izlenebilir</span>
         <span>Ödev & quiz destekli</span>
-        <span>Dijital sertifika</span>
+        <span>Dijital doğrulanabilir sertifika</span>
       </div>
       <div class="catalog-support-note">
-        <strong>Normal kayıt dönemi başladı</strong>
-        <span>Yoğun ilginiz için teşekkür ederiz. Yaz aylarında kendi hızınızda ilerleyebilir, öğrendiklerinizi projelerinize aktarabilirsiniz.</span>
-        <span>Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür.</span>
-      </div>
-      <div class="campaign-urgency-banner catalog-urgency-banner">
-        <p class="urgency-kicker">Yaz dönemi kayıtları</p>
-        <h2>Destekli fırsatı kaçırdıysanız yaz dönemini kaçırmayın.</h2>
-        <p>Yaz ayları, biyoinformatik öğrenmek ve öğrendiklerinizi pratiğe dökmek için en esnek dönemlerden biri.</p>
-        <a class="support-cta" href="#egitimler">Yaz döneminde başla</a>
+        <strong>BioExpo 2026 destekli kayıt dönemi</strong>
+        <span>Destekli kayıt dönemi 16 Temmuz 2026'ya kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.</span>
+        <span>Doluluk bilgisi yalnızca doğrulanmış satış veya rezervasyon verisiyle güncellenir.</span>
       </div>
     </div>
     <div class="hero-side">
+      <span class="bioexpo-text-badge">BioExpo 2026 destekli</span>
       <strong class="hero-panel-title">Öncelikli eğitim vitrini</strong>
-      <span>R, temel biyoinformatik, NCBI, ENSEMBL, UCSC, scRNA-seq ve ileri analizler</span>
-      <a class="hero-action" href="#egitimler">Kaydını tamamla</a>
+      <span>R, temel biyoinformatik, NCBI, Ensembl, UCSC, scRNA-seq ve ileri analizler</span>
+      <a class="hero-action" href="#bioexpo-destekli-kontenjanlar" data-campaign="bioexpo2026" data-cta="catalog-hero" data-destination="course-cards" data-event="bioexpo_course_card_click">Destekli kontenjanları incele</a>
     </div>
   </header>
 
-  <section id="egitimler" class="catalog-section">
+  <section id="bioexpo-destekli-kontenjanlar" class="catalog-section">
     <div class="section-heading">
       <p class="eyebrow">Öne çıkan eğitimler</p>
-      <h2>Yaz dönemi normal kayıtları açık eğitimler</h2>
+      <h2>BioExpo destekli kontenjanı olan aktif eğitimler</h2>
+      <p>Bu bölümde yalnızca BioExpo 2026 destekli kayıt kontenjanı açılan 7 aktif eğitim gösterilir.</p>
     </div>
     <div class="card-grid catalog-grid">
       {{ range $priorityPosts }}
-        {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
-        <article class="post-card course-card featured-card">
-          {{ with .Params.images }}
-            {{- $src := index . 0 -}}
-            {{- with resources.Get $src -}}
-              <img class="post-image" src="{{ .RelPermalink }}" alt="{{ $displayTitle }}">
-            {{- end -}}
-          {{ end }}
-          <div class="post-card-body">
-            <div class="badge-row">
-              <span class="badge">Kendi hızınızda</span>
-              <span class="badge">Asenkron eğitim</span>
-              <span class="badge">Video ders + ödev + quiz + dijital doğrulanabilir sertifika</span>
-              {{ with .Params.course_card_highlights }}
-                {{ range first 4 . }}
-                  <span class="badge badge-highlight">{{ . }}</span>
-                {{ end }}
-              {{ end }}
-            </div>
-            <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
-            <p>{{ index $cardDescriptions .File.BaseFileName | default .Description }}</p>
-            {{ if and (eq .Params.course_status "active") .Params.student_checkout_url .Params.employee_checkout_url }}
-              <p class="course-availability-note">Öğrenci ve çalışan fiyat seçenekleri mevcut</p>
-              <div class="catalog-price-summary" aria-label="Normal kayıt ücret özeti">
-                {{ if .Params.student_price }}
-                  <p>
-                    <span>Öğrenci normal kayıt</span>
-                    <strong>{{ .Params.student_price }}</strong>
-                  </p>
-                {{ end }}
-                {{ if .Params.employee_price }}
-                  <p>
-                    <span>Çalışan normal kayıt</span>
-                    <strong>{{ .Params.employee_price }}</strong>
-                  </p>
-                {{ end }}
-                <small>Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</small>
-              </div>
-              <p class="card-urgency-line">Yaz aylarında kendi hızınızda ilerleyin, öğrendiklerinizi pratiğe dökün.</p>
-            {{ end }}
-          </div>
-          <div class="catalog-card-actions">
-            <a class="card-link" href="{{ .RelPermalink }}">Kaydını tamamla</a>
-          </div>
-        </article>
+        {{- $course := index $courses .File.BaseFileName -}}
+        {{- if $course -}}
+          {{ partial "bioexpo/course-card.html" (dict "page" . "course" $course "campaign" $campaign) }}
+        {{- end -}}
       {{ end }}
     </div>
   </section>
 
   <section class="catalog-section archive-section">
     <div class="section-heading">
-      <p class="eyebrow">Arşiv ve hazırlık</p>
-      <h2>Hazırlık ve arşiv içerikleri</h2>
-      <p>Bu içerikler korunur; ancak ana eğitim vitrini dışında, daha sakin bir bölümde gösterilir.</p>
+      <p class="eyebrow">Hazırlık ve arşiv içerikleri</p>
+      <h2>Kampanya vitrini dışındaki içerikler</h2>
+      <p>Bu içerikler katalogda korunur; ancak BioExpo destekli kontenjan rozeti verilmez.</p>
     </div>
     <div class="card-grid archive-grid">
       {{ range $posts.ByDate.Reverse }}
@@ -136,7 +87,7 @@
                 <p>{{ .Summary | plainify }}</p>
               {{ end }}
             </div>
-            <a class="card-link card-link-muted" href="{{ .RelPermalink }}">Eğitimi İncele</a>
+            <a class="card-link card-link-muted" href="{{ .RelPermalink }}">Eğitimi incele</a>
           </article>
         {{- end -}}
       {{ end }}

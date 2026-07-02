@@ -1,0 +1,16 @@
+<script>
+  (function () {
+    document.addEventListener("click", function (event) {
+      var target = event.target.closest('[data-campaign="bioexpo2026"][data-event]');
+      if (!target || typeof window.gtag !== "function") {
+        return;
+      }
+      window.gtag("event", target.getAttribute("data-event"), {
+        campaign: target.getAttribute("data-campaign"),
+        course: target.getAttribute("data-course") || undefined,
+        cta: target.getAttribute("data-cta") || undefined,
+        destination: target.getAttribute("data-destination") || undefined
+      });
+    });
+  })();
+</script>

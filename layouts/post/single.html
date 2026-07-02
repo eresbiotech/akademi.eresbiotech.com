@@ -1,6 +1,9 @@
 {{ define "main" }}
 {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
 {{- $slug := .File.BaseFileName -}}
+{{- $campaign := site.Data.bioexpo_campaign.campaign -}}
+{{- $courseCampaign := index site.Data.bioexpo_campaign.courses $slug -}}
+{{- $isBioexpoCourse := and $campaign.active $courseCampaign -}}
 {{- $isRCourse := eq $slug "biyoinformatik-icin-r-programlama" -}}
 {{- $comingSoonSlugs := slice "biyoinformatik-dizi-hizalama-algoritmalari-egitimi" "biyoinformatik-yaz-kampi" -}}
 {{- $isComingSoonFeature := in $comingSoonSlugs $slug -}}
@@ -14,6 +17,9 @@
 {{- if $isComingSoonFeature -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
   {{- $primaryCTAText = "Açılış duyurusunu almak istiyorum" -}}
+{{- else if $isBioexpoCourse -}}
+  {{- $primaryCTAURL = "#kayit-secenekleri" -}}
+  {{- $primaryCTAText = "BioExpo destekli kayıt al" -}}
 {{- else if $hasPricingPlans -}}
   {{- $primaryCTAURL = "#kayit-secenekleri" -}}
   {{- $primaryCTAText = "Kaydını tamamla" -}}
@@ -24,6 +30,9 @@
 {{- $heroTitle := $displayTitle -}}
 {{- with .Params.course_hero_headline -}}
   {{- $heroTitle = . -}}
+{{- end -}}
+{{- if and $isBioexpoCourse $courseCampaign.hero_headline -}}
+  {{- $heroTitle = $courseCampaign.hero_headline -}}
 {{- end -}}
 {{- $heroLead := .Description -}}
 {{- with .Params.course_hero_subheadline -}}
@@ -99,7 +108,7 @@
 <article class="container page-shell training-page">
   <header class="page-header training-hero training-hero-grid">
     <div>
-      <p class="eyebrow">{{ if $isRCourse }}Biyoinformatik için R Programlama{{ else }}Eğitim{{ end }}</p>
+      <p class="eyebrow">{{ if $isBioexpoCourse }}BioExpo 2026 destekli kontenjan{{ else if $isRCourse }}Biyoinformatik için R Programlama{{ else }}Eğitim{{ end }}</p>
       <h1>{{ $heroTitle }}</h1>
       {{ with $heroLead }}<p class="lead">{{ . }}</p>{{ end }}
       {{ with .Params.course_hero_note }}<p class="course-hero-note">{{ . }}</p>{{ end }}
@@ -108,6 +117,12 @@
           <span>Yakında açılacak</span>
           <span>Program hazırlıkta</span>
           <span>Duyuru bekleniyor</span>
+        {{ else if $isBioexpoCourse }}
+          <span>Kendi hızınızda</span>
+          <span>Ödev & quiz destekli</span>
+          <span>Dijital doğrulanabilir sertifika</span>
+          <span>10 destekli kontenjan</span>
+          <span>%50 BioExpo desteği</span>
         {{ else }}
           <span>Kendi hızınızda</span>
           <span>Ödev & quiz destekli</span>
@@ -116,19 +131,28 @@
       </div>
       {{ if $hasPricingPlans }}
         <div class="campaign-urgency-banner training-urgency-banner">
-          <p class="urgency-kicker">Normal kayıt dönemi</p>
-          {{ if $isRCourse }}
-            <h2>Yaz döneminde R karmaşasını adım adım düzenleyin.</h2>
-            <p>RStudio’dan biyolojik veri tablolarına uzanan yapılandırılmış akışla, kendi hızınızda düzenli bir çalışma planı oluşturabilirsiniz.</p>
+          {{ if $isBioexpoCourse }}
+            <p class="urgency-kicker">BioExpo 2026 destekli kontenjan</p>
+            <h2>Bu eğitimde 10 kişilik BioExpo 2026 destekli kontenjan açıldı.</h2>
+            <p>Kontenjan dolduğunda kayıtlar normal fiyat üzerinden devam eder.</p>
+            <div class="quota-callout quota-callout-compact">
+              <strong>{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) }}</strong>
+              <span>Doluluk sayısı yalnızca doğrulanmış satış veya rezervasyon verisiyle güncellenir.</span>
+            </div>
+          {{ else if $isRCourse }}
+            <p class="urgency-kicker">Kayıt seçenekleri</p>
+            <h2>R karmaşasını adım adım düzenleyin.</h2>
+            <p>RStudio'dan biyolojik veri tablolarına uzanan yapılandırılmış akışla, kendi hızınızda düzenli bir çalışma planı oluşturabilirsiniz.</p>
           {{ else }}
-            <h2>Normal kayıt seçenekleriyle kendi hızınızda başlayın.</h2>
-            <p>Yaz aylarında kendi hızınızda ilerleyebilir, öğrendiklerinizi pratiğe dökerek yeni döneme daha donanımlı başlayabilirsiniz.</p>
+            <p class="urgency-kicker">Kayıt seçenekleri</p>
+            <h2>Kendi hızınızda başlayın.</h2>
+            <p>Eğitim içeriklerini tekrar izlenebilir yapı, ödev ve quizlerle kendi programınıza göre tamamlayabilirsiniz.</p>
           {{ end }}
-          <p class="campaign-deadline">Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür.</p>
+          <p class="campaign-deadline">{{ if $isBioexpoCourse }}Destekli fiyat Payhip ödeme adımında aktif kampanya kapsamında görünür.{{ else }}Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür.{{ end }}</p>
         </div>
       {{ end }}
       <div class="hero-actions">
-        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+        <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="detail-hero" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ $primaryCTAText }}</a>
         <a class="hero-action hero-action-secondary" href="{{ "/post/contact/" | relURL }}">Sorularınız mı var?</a>
       </div>
     </div>
@@ -144,17 +168,18 @@
     <aside class="training-sidebar" aria-label="Eğitim özeti">
       <div class="sidebar-card decision-card">
         <p class="eyebrow">Eğitim özeti</p>
-        <h2>{{ if $isComingSoonFeature }}Bu program ilginizi çekiyorsa duyuruyu takip edebilirsiniz.{{ else }}Bu eğitim size uygunsa bugün başlayabilirsiniz.{{ end }}</h2>
+        <h2>{{ if $isComingSoonFeature }}Bu program ilginizi çekiyorsa duyuruyu takip edebilirsiniz.{{ else if $isBioexpoCourse }}Bu eğitimde BioExpo 2026 destekli kontenjan var.{{ else }}Bu eğitim size uygunsa bugün başlayabilirsiniz.{{ end }}</h2>
         <ul>
           <li>Kendi hızınızda</li>
           <li>Videolu ve tekrar izlenebilir dersler</li>
           <li>Ödev ve quizlerle pekiştirme</li>
           {{ if not $isComingSoonFeature }}<li>Dijital doğrulanabilir sertifika</li>{{ end }}
+          {{ if $isBioexpoCourse }}<li>10 destekli kontenjan</li>{{ end }}
         </ul>
         {{ if and $hasPricingPlans .Params.student_price }}
-          <p class="sidebar-note">{{ if $isRCourse }}R eğitimine kendi hızınızda başlayabilirsiniz.{{ else }}Normal kayıt dönemi başladı.{{ end }} Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</p>
+          <p class="sidebar-note">{{ if $isBioexpoCourse }}{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) }}. Kontenjan dolduğunda normal kayıt fiyatı geçerli olur.{{ else if $isRCourse }}R eğitimine kendi hızınızda başlayabilirsiniz.{{ else }}Eğitime kendi hızınızda başlayabilirsiniz.{{ end }} Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</p>
         {{ end }}
-        <a class="card-link" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+        <a class="card-link" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="detail-sidebar" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ $primaryCTAText }}</a>
       </div>
     </aside>
 
@@ -222,7 +247,7 @@
               <li>CRAN, Bioconductor ve paket kurulumu ayrımı</li>
               <li>Metadata-expression eşleşmesi ve sample ID problemleri</li>
             </ul>
-            <a class="hero-action" href="{{ $primaryCTAURL }}">Taksit seçenekleriyle kayıt ol</a>
+            <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="r-error" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ if $isBioexpoCourse }}BioExpo destekli kayıt al{{ else }}Taksit seçenekleriyle kayıt ol{{ end }}</a>
           </div>
         </section>
 
@@ -337,8 +362,8 @@
         <section class="training-final-cta r-mid-cta">
           <p class="eyebrow">Düzenli başlangıç</p>
           <h2>R öğrenmeyi ertelemeyin; biyoinformatik veriyle çalışmaya düzenli bir başlangıç yapın.</h2>
-          <p>Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik olarak görüntülenir. Eğitime kendi hızınızda başlayabilir ve yaz döneminde düzenli bir çalışma planı oluşturabilirsiniz.</p>
-          <a class="hero-action" href="{{ $primaryCTAURL }}">Yaz döneminde R öğrenmeye başlayın</a>
+          <p>{{ if $isBioexpoCourse }}BioExpo 2026 desteğiyle sınırlı sayıda destekli kayıt kontenjanı açıldı.{{ else }}Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik olarak görüntülenir.{{ end }} Eğitime kendi hızınızda başlayabilir ve düzenli bir çalışma planı oluşturabilirsiniz.</p>
+          <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="r-mid" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ if $isBioexpoCourse }}BioExpo destekli R kontenjanını seç{{ else }}R öğrenmeye başlayın{{ end }}</a>
         </section>
       {{ end }}
 
@@ -354,7 +379,7 @@
             <li>Tekrar izlenebilir eğitim yapısı</li>
             {{ if not $isComingSoonFeature }}<li>Eğitim sonunda dijital sertifika</li>{{ end }}
           </ul>
-          <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+          <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="format" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ $primaryCTAText }}</a>
         </div>
       </section>
 
@@ -392,39 +417,49 @@
             <a class="hero-action" href="{{ "/post/contact/" | relURL }}">Ön bilgi almak istiyorum</a>
           </div>
         {{ else if $hasPricingPlans }}
-          <p class="eyebrow">Kayıt seçenekleri</p>
-          <h2>Kayıt Seçenekleri</h2>
-          <p class="pricing-intro">{{ if $isRCourse }}Biyoinformatik için R Programlama eğitimine normal kayıt seçenekleriyle başlayabilirsiniz.{{ else }}Bu eğitim için normal kayıt seçenekleriyle başlayabilirsiniz.{{ end }}</p>
+          <p class="eyebrow">{{ if $isBioexpoCourse }}BioExpo 2026 destekli kayıt seçenekleri{{ else }}Kayıt seçenekleri{{ end }}</p>
+          <h2>{{ if $isBioexpoCourse }}BioExpo 2026 destekli kayıt seçenekleri{{ else }}Kayıt Seçenekleri{{ end }}</h2>
+          <p class="pricing-intro">{{ if $isBioexpoCourse }}BioExpo 2026 desteğiyle bu eğitim için sınırlı sayıda %50 destekli kayıt kontenjanı açıldı. Kontenjan dolduğunda kayıtlar normal fiyat üzerinden devam eder.{{ else if $isRCourse }}Biyoinformatik için R Programlama eğitimine kayıt seçenekleriyle başlayabilirsiniz.{{ else }}Bu eğitim için kayıt seçenekleriyle başlayabilirsiniz.{{ end }}</p>
           <div class="supported-fee-note">
-            <p class="support-label">Normal kayıt dönemi</p>
-            <h3>{{ if $isRCourse }}R pratiğinizi yaz döneminde düzenli bir akışa alın{{ else }}Yaz aylarında kendi hızınızda ilerleyin{{ end }}</h3>
-            <p>{{ if $isRCourse }}RStudio’dan biyoinformatik veri örneklerine uzanan bu eğitimle, kendi hızınızda ilerleyebilir ve öğrendiklerinizi düzenli pratiklerle pekiştirebilirsiniz.{{ else }}Yaz aylarında kendi hızınızda ilerleyebilir, öğrendiklerinizi pratiğe dökerek yeni döneme daha donanımlı başlayabilirsiniz.{{ end }}</p>
-            <p class="campaign-deadline">Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür.</p>
+            <p class="support-label">{{ if $isBioexpoCourse }}BioExpo 2026 destekli{{ else }}Kayıt seçenekleri{{ end }}</p>
+            <h3>{{ if $isBioexpoCourse }}Bu eğitimde 10 kişilik BioExpo 2026 destekli kontenjan var.{{ else if $isRCourse }}R pratiğinizi düzenli bir akışa alın{{ else }}Kendi hızınızda ilerleyin{{ end }}</h3>
+            <p>{{ if $isBioexpoCourse }}{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) }}. Destekli fiyat Payhip ödeme adımında aktif kampanya kapsamında görünür.{{ else if $isRCourse }}RStudio'dan biyoinformatik veri örneklerine uzanan bu eğitimle, kendi hızınızda ilerleyebilir ve öğrendiklerinizi düzenli pratiklerle pekiştirebilirsiniz.{{ else }}Eğitim içeriklerini kendi hızınızda izleyebilir, ödev ve quizlerle öğrendiklerinizi pekiştirebilirsiniz.{{ end }}</p>
+            <p class="campaign-deadline">{{ if $isBioexpoCourse }}Kontenjan dolduğunda veya kampanya sona erdiğinde normal kayıt fiyatı geçerli olur.{{ else }}Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür.{{ end }}</p>
           </div>
           <p class="course-trust-note">Kayıt işleminiz tamamlandığında eğitime otomatik olarak tanımlanırsınız. Kredi kartı ile güvenli ödeme yapabilir, kayıt adımında kartınıza/bankanıza uygun taksit seçeneklerini otomatik olarak görebilirsiniz.</p>
-          <p class="pricing-support-line">Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</p>
+          <p class="pricing-support-line">{{ if $isBioexpoCourse }}Destekli fiyat Payhip ödeme adımında BioExpo 2026 Run Sales kampanyası üzerinden görünür.{{ end }} Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</p>
           <div class="course-pricing-grid">
             <article class="pricing-card pricing-card-featured price-card">
-              <span class="pricing-badge">Normal kayıt</span>
+              <span class="pricing-badge">{{ if $isBioexpoCourse }}BioExpo destekli{{ else }}Kayıt{{ end }}</span>
               <h3>{{ $studentLabel }}</h3>
-              {{ with .Params.student_price }}<p class="supported-price"><span>Kayıt ücreti</span>{{ . }}</p>{{ end }}
+              {{ if $isBioexpoCourse }}
+                <p class="regular-price">Normal öğrenci fiyatı <del>{{ $courseCampaign.normal_student_price }}</del></p>
+                <p class="supported-price"><span>BioExpo destekli öğrenci fiyatı</span>{{ $courseCampaign.sale_student_price }}</p>
+              {{ else }}
+                {{ with .Params.student_price }}<p class="supported-price"><span>Kayıt ücreti</span>{{ . }}</p>{{ end }}
+              {{ end }}
               <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
               <div class="quota-callout price-quota">
-                <strong>Kayıt adımında taksitleri görebilirsiniz.</strong>
+                <strong>{{ if $isBioexpoCourse }}{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) }}{{ else }}Kayıt adımında taksitleri görebilirsiniz.{{ end }}</strong>
                 <span>Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</span>
               </div>
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}">Eğitime kaydol</a>
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="student-detail" data-destination="payhip" data-event="bioexpo_payhip_click"{{ end }}>{{ if $isBioexpoCourse }}Öğrenci destekli kayıt al{{ else }}Eğitime kaydol{{ end }}</a>
             </article>
             <article class="pricing-card price-card">
-              <span class="pricing-badge">Normal kayıt</span>
+              <span class="pricing-badge">{{ if $isBioexpoCourse }}BioExpo destekli{{ else }}Kayıt{{ end }}</span>
               <h3>{{ $employeeLabel }}</h3>
-              {{ with .Params.employee_price }}<p class="supported-price"><span>Kayıt ücreti</span>{{ . }}</p>{{ end }}
+              {{ if $isBioexpoCourse }}
+                <p class="regular-price">Normal çalışan fiyatı <del>{{ $courseCampaign.normal_employee_price }}</del></p>
+                <p class="supported-price"><span>BioExpo destekli çalışan fiyatı</span>{{ $courseCampaign.sale_employee_price }}</p>
+              {{ else }}
+                {{ with .Params.employee_price }}<p class="supported-price"><span>Kayıt ücreti</span>{{ . }}</p>{{ end }}
+              {{ end }}
               <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar veya kurumsal yapılarda çalışan profesyoneller için eğitim erişimi.</p>
               <div class="quota-callout price-quota">
-                <strong>Kayıt adımında taksitleri görebilirsiniz.</strong>
+                <strong>{{ if $isBioexpoCourse }}{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) }}{{ else }}Kayıt adımında taksitleri görebilirsiniz.{{ end }}</strong>
                 <span>Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik listelenir.</span>
               </div>
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}">Eğitime kaydol</a>
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="employee-detail" data-destination="payhip" data-event="bioexpo_payhip_click"{{ end }}>{{ if $isBioexpoCourse }}Çalışan destekli kayıt al{{ else }}Eğitime kaydol{{ end }}</a>
             </article>
           </div>
           <p class="payment-note">Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
@@ -474,28 +509,36 @@
             </article>
           {{ else }}
             <article>
-              <h3>Bu eğitimde yalnızca video mu izleyeceğim?</h3>
-              <p>Hayır. Eğitim videolu derslerle ilerler; ancak ödevler, kısa quizler ve tekrar izlenebilir içeriklerle öğrenmenizi pekiştirmeniz hedeflenir.</p>
+              <h3>{{ if $isBioexpoCourse }}BioExpo 2026 destekli kontenjan nedir?{{ else }}Bu eğitimde yalnızca video mu izleyeceğim?{{ end }}</h3>
+              <p>{{ if $isBioexpoCourse }}BioExpo 2026 desteğiyle ERES Biyoinformatik Akademi'nin seçili eğitimlerinde sınırlı sayıda %50 destekli kayıt kontenjanı açılmıştır. Her eğitimde 10 destekli kontenjan bulunur.{{ else }}Hayır. Eğitim videolu derslerle ilerler; ancak ödevler, kısa quizler ve tekrar izlenebilir içeriklerle öğrenmenizi pekiştirmeniz hedeflenir.{{ end }}</p>
             </article>
             <article>
-              <h3>Eğitimi kendi programıma göre tamamlayabilir miyim?</h3>
-              <p>Evet. Dersleri kendi hızınızda izleyebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve çalışmanızı akademik ya da profesyonel takviminize göre planlayabilirsiniz.</p>
+              <h3>{{ if $isBioexpoCourse }}Destekli fiyat ne zamana kadar geçerli?{{ else }}Eğitimi kendi programıma göre tamamlayabilir miyim?{{ end }}</h3>
+              <p>{{ if $isBioexpoCourse }}Destekli kayıt dönemi 16 Temmuz 2026'ya kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.{{ else }}Evet. Dersleri kendi hızınızda izleyebilir, ihtiyaç duyduğunuz bölümlere tekrar dönebilir ve çalışmanızı akademik ya da profesyonel takviminize göre planlayabilirsiniz.{{ end }}</p>
             </article>
             <article>
-              <h3>Eğitim sonunda sertifika alacak mıyım?</h3>
-              <p>Evet. Eğitimi tamamlayan katılımcılar dijital doğrulanabilir başarı sertifikası alır. Sertifikanızı CV’nize ekleyebilir, LinkedIn gibi profesyonel platformlarda paylaşabilirsiniz.</p>
+              <h3>{{ if $isBioexpoCourse }}Kontenjan dolarsa ne olur?{{ else }}Eğitim sonunda sertifika alacak mıyım?{{ end }}</h3>
+              <p>{{ if $isBioexpoCourse }}İlgili eğitim için destekli fiyat kapanır; kayıtlar normal fiyat üzerinden devam eder.{{ else }}Evet. Eğitimi tamamlayan katılımcılar dijital doğrulanabilir başarı sertifikası alır. Sertifikanızı CV'nize ekleyebilir, LinkedIn gibi profesyonel platformlarda paylaşabilirsiniz.{{ end }}</p>
             </article>
             <article>
-              <h3>Kredi kartı ile ödeme ve taksit imkânı var mı?</h3>
-              <p>Kredi kartı ile güvenli ödeme yapabilirsiniz. Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür. Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
+              <h3>Taksit imkanı var mı?</h3>
+              <p>Kredi kartı ile güvenli ödeme yapabilirsiniz. Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik görünür. Havale/EFT ile kayıt olmak isterseniz bizimle iletişime geçebilirsiniz.</p>
             </article>
             <article>
               <h3>Kayıt olduktan sonra derslere nasıl erişeceğim?</h3>
               <p>Ödeme sürecini tamamladığınızda kaydınız otomatik olarak oluşturulur. Sistem sizi eğitime tanımlar; ödeme sonrasında derslere nasıl erişeceğinizi açıklayan yönlendirmeleri takip edebilirsiniz.</p>
             </article>
             <article>
-              <h3>Yaz döneminde eğitime başlayabilir miyim?</h3>
-              <p>Evet. Normal kayıt dönemi başladı. Yaz aylarında kendi hızınızda ilerleyebilir, öğrendiklerinizi pratiğe dökebilir ve yeni döneme daha donanımlı başlayabilirsiniz.</p>
+              <h3>Eğitimler canlı mı asenkron mu?</h3>
+              <p>Bu kampanyadaki eğitimler asenkron ve tekrar izlenebilir yapıdadır. Kendi programınıza göre ilerleyebilirsiniz.</p>
+            </article>
+            <article>
+              <h3>Sertifika var mı?</h3>
+              <p>Evet. Eğitimi tamamlayan katılımcılar dijital doğrulanabilir sertifika alır.</p>
+            </article>
+            <article>
+              <h3>Hangi eğitimden başlamalıyım?</h3>
+              <p>R programlama ve biyoinformatiğe giriş eğitimleri başlangıç için uygundur. Belirli bir veri tipi veya araştırma hedefiniz varsa NCBI/Ensembl/UCSC, scRNA-seq, yapısal biyoinformatik veya phyML eğitimlerini seçebilirsiniz.</p>
             </article>
           {{ end }}
           <article>
@@ -507,9 +550,9 @@
 
       <section class="training-final-cta">
         <p class="eyebrow">Sonraki adım</p>
-        <h2>{{ if $isComingSoonFeature }}Açılış duyurusunu takip edebilirsiniz.{{ else if $isRCourse }}R karmaşasını adım adım düzenleyerek başlayın.{{ else }}Bu eğitimle ilk adımı bugün atabilirsiniz.{{ end }}</h2>
-        <p>{{ if $isComingSoonFeature }}Bu program yeni dönem kayıtlarına hazırlanıyor. Açılış duyurusunu almak veya program hakkında ön bilgi istemek için bize yazabilirsiniz.{{ else if $isRCourse }}Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür. Eğitime kendi hızınızda başlayabilir, ana R script ve destek materyalleriyle düzenli bir çalışma planı oluşturabilirsiniz.{{ else }}Normal kayıt seçeneklerinden size uygun olanı seçebilir, eğitime kendi hızınızda başlayabilirsiniz. Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür.{{ end }}</p>
-        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ if $isComingSoonFeature }}{{ $primaryCTAText }}{{ else if $isRCourse }}Kendi hızınızda öğrenmeye başlayın{{ else }}Kaydını tamamla{{ end }}</a>
+        <h2>{{ if $isComingSoonFeature }}Açılış duyurusunu takip edebilirsiniz.{{ else if $isBioexpoCourse }}BioExpo destekli kontenjan dolmadan kayıt seçeneğinizi belirleyin.{{ else if $isRCourse }}R karmaşasını adım adım düzenleyerek başlayın.{{ else }}Bu eğitimle ilk adımı bugün atabilirsiniz.{{ end }}</h2>
+        <p>{{ if $isComingSoonFeature }}Bu program yeni dönem kayıtlarına hazırlanıyor. Açılış duyurusunu almak veya program hakkında ön bilgi istemek için bize yazabilirsiniz.{{ else if $isBioexpoCourse }}BioExpo 2026 desteğiyle bu eğitim için 10 kişilik %50 destekli kayıt kontenjanı açıldı. Destekli fiyat Payhip ödeme adımında aktif kampanya kapsamında görünür.{{ else if $isRCourse }}Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür. Eğitime kendi hızınızda başlayabilir, ana R script ve destek materyalleriyle düzenli bir çalışma planı oluşturabilirsiniz.{{ else }}Size uygun kayıt seçeneğini seçebilir, eğitime kendi hızınızda başlayabilirsiniz. Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik görünür.{{ end }}</p>
+        <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="detail-final" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ if $isComingSoonFeature }}{{ $primaryCTAText }}{{ else if $isBioexpoCourse }}BioExpo destekli kayıt al{{ else if $isRCourse }}Kendi hızınızda öğrenmeye başlayın{{ else }}Kaydını tamamla{{ end }}</a>
       </section>
 
       <details class="legacy-content">

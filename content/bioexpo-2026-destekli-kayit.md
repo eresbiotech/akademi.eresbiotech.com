@@ -1,6 +1,7 @@
 +++
-title = "Eres Biyoinformatik Akademi"
-seo_title = "ERES Biyoinformatik Akademi | BioExpo 2026 Destekli Eğitim Kontenjanları"
+title = "BioExpo 2026 Destekli Biyoinformatik Eğitimleri"
+seo_title = "BioExpo 2026 Destekli Biyoinformatik Eğitimleri | ERES Akademi"
 description = "BioExpo 2026 desteğiyle ERES Biyoinformatik Akademi eğitimlerinde her eğitim için 10 kişilik %50 destekli kayıt kontenjanı açıldı. R programlama, biyoinformatiğe giriş, genom tarayıcıları, scRNA-seq, protein modelleme ve filogenetik eğitimlerini inceleyin."
-author = "Eres Biyoinformatik Akademi"
+layout = "bioexpo"
+campaign_landing = true
 +++

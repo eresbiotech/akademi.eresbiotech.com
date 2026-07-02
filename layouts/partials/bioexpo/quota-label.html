@@ -1,0 +1,17 @@
+{{- $campaign := .campaign -}}
+{{- $course := .course -}}
+{{- $quota := int ($course.quota | default $campaign.default_quota | default 10) -}}
+{{- $filledRaw := int ($course.filled | default 0) -}}
+{{- $filled := $filledRaw -}}
+{{- if lt $filledRaw 0 -}}
+  {{- $filled = 0 -}}
+{{- else if gt $filledRaw $quota -}}
+  {{- $filled = $quota -}}
+{{- end -}}
+{{- if ge $filled $quota -}}
+Destekli kontenjan doldu — normal kayıt devam ediyor
+{{- else if gt $filled 0 -}}
+{{ $filled }}/{{ $quota }} destekli kontenjan doldu
+{{- else -}}
+{{ $quota }} destekli kontenjan açıldı
+{{- end -}}

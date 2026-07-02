@@ -1,0 +1,143 @@
+campaign:
+  active: true
+  name: "BioExpo 2026 Destekli Kayıt Dönemi"
+  product_name: "ERES Akademi Sektör Destekli Eğitim Kontenjanı Programı"
+  case_file_name: "BioExpo 2026 Destekli Biyoinformatik Eğitim Kontenjanı — Vaka Dosyası"
+  sponsor: "BioExpo 2026"
+  discount_percent: 50
+  starts_at: "2026-07-02T00:00:00+03:00"
+  ends_at: "2026-07-16T23:59:00+03:00"
+  timezone: "Europe/Istanbul"
+  default_quota: 10
+  show_countdown: true
+  show_quota: true
+  ethical_counter_mode: true
+  counter_note: "Doluluk sayısı yalnızca doğrulanmış satış/rezervasyon verisiyle güncellenmelidir."
+  priority_slugs:
+    - "biyoinformatik-icin-r-programlama"
+    - "biyoinformatik-giris-egitim-buyuk-veri-kurs"
+    - "biyoinformatik-veritabanlari-araclar-egitimi"
+    - "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim"
+    - "tek-hucre-rna-seq-analizi-egitimi"
+    - "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme"
+    - "phyml-uygulamali-filogenetik-egitimi"
+courses:
+  biyoinformatik-icin-r-programlama:
+    key: "r-programlama"
+    title: "Biyoinformatik için R Programlama"
+    quota: 10
+    filled: 0
+    normal_student_price: "3.500 TL"
+    sale_student_price: "1.750 TL"
+    normal_employee_price: "5.500 TL"
+    sale_employee_price: "2.750 TL"
+    card_description: "RStudio'dan veri yapıları ve ggplot2 görselleştirmeye; FASTA, GEO metadata ve expression verisine uzanan biyoinformatik odaklı R başlangıç eğitimi."
+    fit: "R'ı biyolojik veriyle bağlantı kurarak öğrenmek isteyen yaşam bilimleri öğrencileri, araştırmacılar ve profesyoneller."
+    hero_headline: "BioExpo desteğiyle R öğrenmeyi biyoinformatik veriye bağlayarak başlayın."
+    gains:
+      - "RStudio'da temel kodları ve veri yapılarını daha güvenli kullanırsınız."
+      - "CSV/TXT dosyaları, FASTA verisi, metadata ve expression matrisi mantığını öğrenirsiniz."
+      - "ggplot2 ile temel grafikler üretir; hata mesajlarını daha sistemli okumaya başlarsınız."
+      - "Ana R script, örnek veri dosyaları, kod kartları, mini ödevler ve hata çözüm rehberiyle çalışırsınız."
+  biyoinformatik-giris-egitim-buyuk-veri-kurs:
+    key: "giris-buyuk-veri"
+    title: "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi"
+    quota: 10
+    filled: 0
+    normal_student_price: "2.700 TL"
+    sale_student_price: "1.350 TL"
+    normal_employee_price: "4.700 TL"
+    sale_employee_price: "2.350 TL"
+    card_description: "Omik veri dünyasını, temel biyoinformatik kavramlarını ve büyük veri mantığını araştırma sorularıyla ilişkilendirerek anlamak isteyenler için."
+    fit: "Biyoinformatiğin genel resmini görmek, omik veri türlerini ayırt etmek ve hangi aracın hangi araştırma sorusunda kullanıldığını anlamak isteyenler."
+    hero_headline: "BioExpo desteğiyle biyoinformatiğin temel mantığını ve büyük veri dünyasını öğrenin."
+    gains:
+      - "Genomik, transkriptomik ve proteomik veri türlerini temel düzeyde ayırt edersiniz."
+      - "Büyük veri kavramını yaşam bilimleri araştırmaları bağlamında yorumlarsınız."
+      - "NCBI, Ensembl, UCSC gibi kaynakların araştırma sorularıyla ilişkisini daha net görürsünüz."
+      - "Sonraki biyoinformatik öğrenme yolunuzu daha bilinçli seçersiniz."
+  biyoinformatik-veritabanlari-araclar-egitimi:
+    key: "araclar-veritabanlari"
+    title: "Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi"
+    quota: 10
+    filled: 0
+    normal_student_price: "2.800 TL"
+    sale_student_price: "1.400 TL"
+    normal_employee_price: "4.800 TL"
+    sale_employee_price: "2.400 TL"
+    card_description: "NCBI, UniProt, PDB ve BLAST gibi araçları doğru okumak, sonuçları anlamlandırmak ve raporlamak isteyenler için."
+    fit: "Biyoinformatik araçları ezbere değil, araştırma sorusuyla ilişkili kullanmak isteyen öğrenciler, araştırmacılar ve laboratuvar çalışanları."
+    hero_headline: "BioExpo desteğiyle temel biyoinformatik araçları daha bilinçli kullanmayı öğrenin."
+    gains:
+      - "NCBI, UniProt ve PDB kayıtlarını temel düzeyde okursunuz."
+      - "BLAST çıktılarındaki temel metrikleri daha bilinçli yorumlarsınız."
+      - "Gen, protein ve dizi bilgilerinin veri tabanlarında nasıl temsil edildiğini anlarsınız."
+      - "Araç çıktılarından anlamlı sonuç çıkarma ve raporlama mantığını geliştirirsiniz."
+  ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim:
+    key: "ncbi-ensembl-ucsc"
+    title: "NCBI, Ensembl ve UCSC Genom Tarayıcısı Uygulamalı Eğitimi"
+    quota: 10
+    filled: 0
+    normal_student_price: "3.300 TL"
+    sale_student_price: "1.650 TL"
+    normal_employee_price: "5.300 TL"
+    sale_employee_price: "2.650 TL"
+    card_description: "Gen, transkript, varyant ve genom bölgelerini NCBI, Ensembl ve UCSC üzerinden daha güvenli yorumlamak isteyenler için."
+    fit: "Genom tarayıcıları arasında kaybolmadan gen, transkript, varyant ve koordinat bilgilerini karşılaştırmak isteyenler."
+    hero_headline: "BioExpo desteğiyle NCBI, Ensembl ve UCSC genom tarayıcılarını daha güvenli okuyun."
+    gains:
+      - "Gen, transkript, varyant ve genom koordinatı bilgilerini farklı kaynaklarda karşılaştırırsınız."
+      - "UCSC Genome Browser üzerinde genom bölgelerini daha rahat incelersiniz."
+      - "MANE, RefSeq ve Ensembl gibi anotasyon farklarını araştırma pratiğinde daha bilinçli ele alırsınız."
+      - "Seçilen gen veya bölge üzerinden uygulama yaparak ekran okuma pratiği kazanırsınız."
+  tek-hucre-rna-seq-analizi-egitimi:
+    key: "tek-hucre-rna-seq"
+    title: "Tek Hücre RNA-Seq Analizi Eğitimi"
+    quota: 10
+    filled: 0
+    normal_student_price: "4.700 TL"
+    sale_student_price: "2.350 TL"
+    normal_employee_price: "6.700 TL"
+    sale_employee_price: "3.350 TL"
+    card_description: "scRNA-seq verilerinde kalite kontrol, kümeleme, marker gen yorumu ve Seurat iş akışını anlamak isteyen araştırmacılar için."
+    fit: "Tek hücre RNA-seq makalelerini, analiz akışlarını ve proje çıktılarındaki temel adımları daha iyi anlamak isteyen araştırmacılar."
+    hero_headline: "BioExpo desteğiyle tek hücre RNA-seq analiz akışını daha bilinçli okuyun."
+    gains:
+      - "scRNA-seq analiz akışının temel aşamalarını takip edersiniz."
+      - "Kalite kontrol, hücre filtreleme, kümeleme ve marker gen yorumlama adımlarını daha net değerlendirirsiniz."
+      - "Seurat tabanlı çıktıları makale okuma ve proje planlama bağlamında yorumlarsınız."
+      - "Hücre tipi yorumlama ve biyolojik anlam çıkarma yaklaşımını güçlendirirsiniz."
+  uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme:
+    key: "yapisal-biyoinformatik"
+    title: "Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi"
+    quota: 10
+    filled: 0
+    normal_student_price: "4.200 TL"
+    sale_student_price: "2.100 TL"
+    normal_employee_price: "6.200 TL"
+    sale_employee_price: "3.100 TL"
+    card_description: "Protein yapısı, PDB kayıtları, AlphaFold çıktıları ve in silico modelleme yaklaşımını uygulama odaklı öğrenmek isteyenler için."
+    fit: "Protein yapısı, modelleme, PDB, AlphaFold, ligand ve aktif bölge yorumlarını temel düzeyde öğrenmek isteyen yaşam bilimleri öğrencileri ve araştırmacılar."
+    hero_headline: "BioExpo desteğiyle protein yapısı ve in silico modelleme dünyasına uygulamalı bir başlangıç yapın."
+    gains:
+      - "PDB ve protein yapı dosyalarını temel düzeyde okursunuz."
+      - "AlphaFold benzeri yapı tahmin çıktılarının ne söylediğini ve ne söylemediğini ayırt edersiniz."
+      - "Protein-ligand, aktif bölge ve etkileşim yorumlarında daha bilinçli bir başlangıç yaparsınız."
+      - "Islak laboratuvar sonuçlarını in silico yaklaşımlarla destekleme mantığını anlarsınız."
+  phyml-uygulamali-filogenetik-egitimi:
+    key: "phyml-filogenetik"
+    title: "phyML Uygulamalı Filogenetik ve Dizi Hizalama Eğitimi"
+    quota: 10
+    filled: 0
+    normal_student_price: "4.200 TL"
+    sale_student_price: "2.100 TL"
+    normal_employee_price: "6.200 TL"
+    sale_employee_price: "3.100 TL"
+    card_description: "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
+    fit: "Filogenetik ağaçları yalnızca görsel olarak değil; hizalama kalitesi, model seçimi, bootstrap ve biyolojik yorum ilişkisiyle anlamak isteyenler."
+    hero_headline: "BioExpo desteğiyle filogenetik analiz ve dizi hizalama pratiğinizi güçlendirin."
+    gains:
+      - "Çoklu dizi hizalama çıktısını filogenetik analiz öncesi değerlendirirsiniz."
+      - "phyML ile filogenetik ağaç oluşturma mantığını takip edersiniz."
+      - "Bootstrap, model seçimi ve ağaç yorumlama adımlarını biyolojik soruyla ilişkilendirirsiniz."
+      - "Ağaç görselini biyolojik hikayeye bağlama pratiği kazanırsınız."

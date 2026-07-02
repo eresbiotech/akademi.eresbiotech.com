@@ -12,6 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ $title }}</title>
 {{ with $description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ if and .Params.campaign_landing (not site.Data.bioexpo_campaign.campaign.active) }}<meta name="robots" content="noindex,follow">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:title" content="{{ $title }}">
 {{ with $description }}<meta property="og:description" content="{{ . }}">{{ end }}
