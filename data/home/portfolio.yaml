@@ -5,7 +5,7 @@ content:
   - image: "images/biyoinformatik-egitimi.png"
     pretitle: "ERES Biyoinformatik Akademi"
     title: "ERES Biyoinformatik Akademi: Biyoinformatik Yolculuğunuzda Yanınızdayız"
-    text: "Biyoinformatiğe başlamak ve uzmanlaşmak isteyen akademisyenler, akademisyen adayları, biyoloji, biyoteknoloji, biyomedikal, tıp ve sağlık bilimleri, veterinerlik, ziraat gibi alanlardaki profesyoneller için özel online eğitim platformumuz, deneyimli eğitmen kadromuz ve güncel içeriklerle hedeflerinize hızlı bir şekilde ulaşmanızı sağlar. Canlı dersler ve asenkron öğrenme seçenekleriyle esnek bir öğrenme ortamı sunarken, sertifikalar ve pratiğe dayalı projelerle kariyerinizi en üst düzeye çıkarmanız için yanınızdayız."
+    text: "Biyoinformatiğe başlamak ve uzmanlaşmak isteyen akademisyenler, akademisyen adayları, biyoloji, biyoteknoloji, biyomedikal, tıp ve sağlık bilimleri, veterinerlik, ziraat gibi alanlardaki profesyoneller için uygulama odaklı online eğitimler sunuyoruz. Canlı dersler ve asenkron öğrenme seçenekleriyle esnek bir öğrenme ortamı sağlarken, sertifikalar ve pratiğe dayalı projelerle öğrenme çıktılarınızı görünür kılmayı hedefliyoruz."
 
     buttons: 
       - label: "Eğitimler için tıklayın."
@@ -14,7 +14,7 @@ content:
   - image: "images/biyoinformatik-kursu.png"
     pretitle: "Kazanımlar"
     title: "Neden ERES Biyoinformatik Akademi?"
-    text: "Sektörde ve akademide deneyimli kadro ile dinamik olan biyoinformatik alanında en güncel bilgilerden oluşan eğitimler sunuyoruz. Canlı dersler ve asenkron öğrenme seçenekleriyle, kendi hızınıza göre öğrenme fırsatları sunuyoruz. Uygulamalara dayalı yöntemlerle desteklenen derslerle, kariyerinizi en üst düzeye çıkarırken, kalıcı öğrenme sağlamanız için çalışıyoruz."
+    text: "Sektör ve akademi deneyimiyle dinamik olan biyoinformatik alanında güncel ve uygulama odaklı eğitimler sunuyoruz. Canlı dersler ve asenkron öğrenme seçenekleriyle, kendi hızınıza göre öğrenme fırsatları sağlıyoruz. Uygulamalara dayalı yöntemlerle desteklenen derslerle kalıcı öğrenmeyi güçlendirmeyi amaçlıyoruz."
 
     buttons: 
       - label: "İşimiz nedir"
@@ -27,4 +27,3 @@ content:
     buttons: 
       - label: "Eğitimleri için tıklayın"
         url: "/post"
-

@@ -2,13 +2,13 @@
 
 ## ERES Biyoinformatik Akademi'ye Hoş Geldiniz !
 
-Biz, **Biyoinformatik Akademisi** olarak; biyoinformatik ve hesaplamalı biyoloji alanında, kariyerinizi hızla geliştirip seçkin araştırmacılar arasına katılmanıza yardımcı olacak yenilikçi ve kapsamlı eğitimler sunuyoruz. GitHub Pages üzerinde yayınlanan bu Hugo tabanlı statik sitemizde, biyoinformatiğin dinamik dünyasına adım atmaya hazır olun! Sorularınız için bize e-posta yoluyla ulaşabilirsiniz: [info@eresbiotech.com](mailto:info@eresbiotech.com)
+Biz, **Biyoinformatik Akademisi** olarak; biyoinformatik ve hesaplamalı biyoloji alanında uygulama odaklı, sertifika destekli ve araştırma pratiğine yakın eğitimler sunuyoruz. Hugo tabanlı statik sitemizde eğitim detayları, kayıt yönlendirmeleri ve destek bilgileri resmi akademi sayfaları üzerinden paylaşılır. Sorularınız için bize e-posta yoluyla ulaşabilirsiniz: [info@eresbiotech.com](mailto:info@eresbiotech.com)
 
 ### Neden ERES Biyoinformatik Akademi?
 
 - **Öncü Eğitmenler**: Sektör ve akademi deneyimli kadromuz ile en güncel bilgileri sizlere sunuyoruz.
 - **Esnek Öğrenme Seçenekleri**: Canlı derslerimiz ve asenkron öğrenme modülleri ile kendi hızınızda ilerleyin.
-- **Kariyerinizi İvmeleyin**: Sertifikalar ve pratiğe dayalı projelerle kariyerinizi zirveye taşıyın.
+- **Uygulama ve sertifika desteği**: Sertifikalar ve pratiğe dayalı çalışmalarla öğrenme çıktılarınızı görünür kılın.
 
 ### Eğitim Programlarımız
 
@@ -30,13 +30,13 @@ Eğitimler hakkında daha fazla bilgi almak için bizimle iletişime geçin: [in
 
 ### Katılımcı Görüşleri
 
-> "Burdan Uygulamalı Biyoinformatiğe Giriş ve Yeni Nesil Dizi Analizi kursuna katılmıştım. Kurs gayet yararlı oldu. Eğitmenler ile kursiyerler arasındaki etkileşim gayet güzeldi ve uygulamaya yönelik pratik yaptırılması da konunun pekişmesini sağlıyor. Ayrıca Biyoinformatik analizlerinde zorlandığım kısımlar da yardım aldım. Zorlandığım her aşamada iletişime geçebildim uzmanlarla. Hiç tereddütsüz yardımcı oldular. Bundan sonraki eğitimleri takip edip almaya devam edeceğim. Bu alanda çalışmak isteyen öğrenci ve akademisyenlere tavsiye ediyorum özellikle." - **Doç.Dr ÖMER ACER Siirt Üniversitesi**
+> "Uygulamalı biyoinformatik eğitimlerinde kavramların ve analiz adımlarının örneklerle işlenmesi öğrenme sürecini kolaylaştırdı. Zorlanılan noktalarda yazılı destek alınabilmesi de güven verdi." - **Katılımcı geri bildirimi**
 
 ### İletişim ve Daha Fazla Bilgi
 
-Daha fazla bilgi ve eğitimlerimize kaydolmak için [Eğitimler İçin Tıklayın](#) linkine tıklayınız. Herhangi bir sorunuz olursa, bizimle e-posta yoluyla iletişime geçmekten çekinmeyin: [info@eresbiotech.com](mailto:info@eresbiotech.com)
+Daha fazla bilgi ve eğitimlerimize kayıt adımları için resmi akademi sitesindeki eğitim sayfalarını kullanın. Herhangi bir sorunuz olursa, bizimle e-posta yoluyla iletişime geçebilirsiniz: [info@eresbiotech.com](mailto:info@eresbiotech.com)
 
-Bizimle biyoinformatik ve hesaplamalı biyolojiye adım atın ve kariyerinizi bir sonraki seviyeye taşıyın!
+Resmi eğitim sayfaları üzerinden biyoinformatik ve hesaplamalı biyoloji eğitimlerini inceleyebilirsiniz.
 
 ---
 

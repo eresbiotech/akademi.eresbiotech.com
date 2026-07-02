@@ -109,7 +109,7 @@ Biyoinformtiğe Giriş, Temel Biyoinformatik Araçlar ve Veritabanları Uygulama
 
 -   **Uygulamalı Dersler:** Dersteki analiz uygulamaları, R ve Seruat paketi uygulamaları, teorik bilgiyi pratikte nasıl uygulayacağınızı öğrenmenize olanak tanır ve öğrendiklerinizin kalıcı olmasını ve çalışmalarınızda kullanmanızı sağlar.
 
--   **Kişisel ve Profesyonel Gelişim:** Bu eğitim kariyerinizi ileri taşımanıza yardımcı olacak pratik beceriler ve bilgiler sunar. Eğitimde öğrendiğiniz teknikleri araştırma projeleriniz ve yayınlarınızda kullanabilirsiniz. Yeni teknikleri öğrenmek ve uygulamak hem kişisel hem de profesyonel gelişiminiz için önemli bir adımdır.
+-   **Araştırma pratiğiyle bağlantı:** Bu eğitim, scRNA-seq analiz akışı ve Seurat çıktılarının araştırma projeleriyle nasıl ilişkilendirilebileceğine dair pratik bir çerçeve sunar.
 
 <br/>
 
@@ -250,7 +250,7 @@ Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğin
 
 <br/>
 
--   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
+-   Havale/EFT veya kurumsal kayıt seçenekleri için ödeme yapmadan önce WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.
 
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 

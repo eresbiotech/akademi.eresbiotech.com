@@ -99,7 +99,7 @@ Temel biyoinformatik kavramları bilenlere tavsiye edilir. Daha önce biyoinform
 
 -   **Biyoteknoloji ve İlaç Geliştirmenin Temelini Öğrenin:** Ders içeriği, homolog modelleme, protein-protein etkileşim analizi ve ilaç keşfi gibi konuları kapsayarak, modern biyoteknoloji ve ilaç geliştirme süreçlerindeki temel prensipleri öğretir. Yapısal biyoinformatiğin sağladığı becerilerle, geleceğin biyomedikal keşiflerine liderlik edebilme yeteneğini kazanırsınız.
 
--   **Kariyerinizi ileri taşıyın:** Yapısal Biyoinformatik ve Protein Modelleme Eğitimi biyoinformatik, biyoteknoloji ve ilaç endüstrisinde kariyer yapma hedefinde olanlar için vazgeçilmez bir bilgi kaynağıdır. in silico biyoloji alanındaki uzmanlık, sektördeki rekabet avantajınızı artırarak, geleceğin biyomedikal profesyoneli olma yolunda size önemli bir destek sağlar.
+-   **Araştırma pratiğiyle ilişkilendirin:** Yapısal Biyoinformatik ve Protein Modelleme Eğitimi, biyoinformatik, biyoteknoloji ve ilaç araştırmalarında protein yapısı ve in silico modelleme yaklaşımını daha bilinçli okumak isteyenler için yapılandırılmıştır.
 
 -   **Biyomedikal Keşiflere Katkıda Bulunun:** Bu eğitim katılımcılara biyomedikal dünyasında önemli bir oyuncu olma fırsatı sunar. Yapısal biyoinformatik sayesinde, gelecekteki sağlık inovasyonlarına aktif bir şekilde katkıda bulunma potansiyelinizi artırırsınız.
 
@@ -107,7 +107,7 @@ Temel biyoinformatik kavramları bilenlere tavsiye edilir. Daha önce biyoinform
 
 -   **Uygulamalı Dersler:** Dersteki dizi hizalama ve filogenetik ağaç uygulamaları, teorik bilgiyi pratikte nasıl uygulayacağınızı öğrenmenize olanak tanır ve öğrendiklerinizin kalıcı olmasını ve çalışmalarınızda kullanmanızı sağlar.
 
--   **Kişisel ve Profesyonel Gelişim:** Bu eğitim, kariyerinizi ileri taşımanıza yardımcı olacak pratik beceriler ve bilgiler sunar. Bu kursta öğrendiğiniz teknikleri aaraştırma projeleriniz ve yayınlarınızda kullanabilirsiniz. Yeni teknikleri öğrenmek ve uygulamak, hem kişisel hem de profesyonel gelişiminiz için önemli bir adımdır.
+-   **Araştırma çıktılarıyla bağlantı:** Bu eğitim, protein yapısı ve modelleme çıktılarının araştırma projeleri ve yayınlarla nasıl ilişkilendirilebileceğine dair pratik bir çerçeve sunar.
 
 <br/>
 
@@ -299,7 +299,7 @@ Bu eğitim; videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğin
 
 <br/>
 
--   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
+-   Havale/EFT veya kurumsal kayıt seçenekleri için ödeme yapmadan önce WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.
 
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 

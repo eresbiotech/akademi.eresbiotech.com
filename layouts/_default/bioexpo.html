@@ -30,12 +30,24 @@
     <aside class="home-hero-panel bioexpo-hero-panel">
       <span class="bioexpo-text-badge">Destekli kayıt</span>
       <strong class="hero-panel-title">Her eğitimde yalnızca 10 kişilik %50 destekli kayıt kontenjanı açıldı.</strong>
-      <span>Destekli kayıt dönemi 16 Temmuz 2026'ya kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.</span>
+      <span>Destekli kayıt dönemi 16 Temmuz 2026, 23:59'a kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.</span>
       <div class="quota-callout">
         <strong>Etik sayaç notu</strong>
         <span>Doluluk sayısı yalnızca doğrulanmış satış veya rezervasyon verisiyle güncellenir.</span>
       </div>
     </aside>
+  </div>
+</section>
+
+<section class="container home-section trust-support-section">
+  <div class="support-band-card">
+    <p class="support-label">Resmi kayıt</p>
+    <div>
+      <h2>Bu kampanya resmi akademi sitemiz üzerinden yürütülür</h2>
+      <p>BioExpo 2026 destekli kayıt dönemi, ERES Biyoinformatik Akademi'nin resmi web sitesi üzerinden duyurulmaktadır. Eğitim detayları, kontenjan bilgileri ve kayıt yönlendirmeleri ilgili eğitim sayfalarında yer alır. Bağlantılar konusunda tereddütünüz varsa ödeme yapmadan önce WhatsApp üzerinden bize yazabilirsiniz.</p>
+      <p class="campaign-deadline">Kayıt ve ödeme adımı ERES Kampüs / Payhip güvenli ödeme altyapısı üzerinden tamamlanır. Lütfen yalnızca akademi.eresbiotech.com üzerindeki resmi eğitim sayfalarındaki kayıt butonlarını kullanarak ilerleyin.</p>
+      <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">WhatsApp'tan yazılı destek alın</a>
+    </div>
   </div>
 </section>
 
@@ -56,7 +68,7 @@
   <div class="section-heading">
     <p class="eyebrow">Destekli eğitim kartları</p>
     <h2>Destekli kontenjanı olan eğitimler</h2>
-    <p>Destekli fiyat ödeme adımında aktif kampanya kapsamında görünür. Taksit seçenekleri kartınıza/bankanıza göre ödeme adımında listelenir.</p>
+    <p>Destekli fiyat, kayıt adımında BioExpo 2026 destekli kayıt seçeneği olarak görünür. Kayıt ve ödeme adımı ERES Kampüs / Payhip güvenli ödeme altyapısı üzerinden tamamlanır. Lütfen yalnızca akademi.eresbiotech.com üzerindeki resmi eğitim sayfalarındaki kayıt butonlarını kullanarak ilerleyin.</p>
   </div>
   <div class="card-grid featured-grid">
     {{ range $priorityCourses }}
@@ -107,6 +119,7 @@
     <article><h3>Taksit imkanı var mı?</h3><p>Kredi kartı ile güvenli ödeme yapabilirsiniz. Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik görünür.</p></article>
     <article><h3>Kayıt olduktan sonra derse nasıl erişeceğim?</h3><p>Ödeme sürecini tamamladığınızda kaydınız otomatik olarak oluşturulur. Sistem sizi eğitime tanımlar; ödeme sonrasında derslere nasıl erişeceğinizi açıklayan yönlendirmeleri takip edebilirsiniz.</p></article>
     <article><h3>Hangi eğitimden başlamalıyım?</h3><p>R programlama ve biyoinformatiğe giriş eğitimleri başlangıç için uygundur. Belirli bir veri tipi veya araştırma hedefiniz varsa NCBI/Ensembl/UCSC, scRNA-seq, yapısal biyoinformatik veya phyML eğitimlerini seçebilirsiniz.</p></article>
+    {{ partial "support/faq-trust.html" . }}
   </div>
 </section>
 
@@ -116,7 +129,7 @@
     <div>
       <h2>Kurumunuz yaşam bilimlerinde dijital beceri gelişimini desteklemek ister mi?</h2>
       <p>ERES Biyoinformatik Akademi, sektör paydaşlarıyla birlikte sınırlı kontenjanlı destekli eğitim programları geliştirmektedir. Kurumunuzun görünürlüğünü bilimsel eğitim etkisiyle birleştiren sponsorluk modelleri için bizimle iletişime geçebilirsiniz.</p>
-      <a class="support-cta support-cta-secondary" href="mailto:info@eresbiotech.com?subject=Egitim%20sponsorlugu%20hakkinda" data-campaign="bioexpo2026" data-cta="sponsor-landing" data-destination="mailto" data-event="bioexpo_sponsor_inquiry_click">Eğitim sponsorluğu hakkında görüşelim</a>
+      <a class="support-cta support-cta-secondary" href="{{ "/post/contact/" | relURL }}" data-campaign="bioexpo2026" data-cta="sponsor-landing" data-destination="contact" data-event="bioexpo_sponsor_inquiry_click">Kurum iş birlikleri için yazılı bilgi alın</a>
     </div>
   </div>
 </section>

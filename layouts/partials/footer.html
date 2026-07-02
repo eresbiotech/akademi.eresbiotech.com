@@ -3,11 +3,8 @@
     <div class="footer-brand">
       <img class="footer-logo" src="{{ "images/logos/Eres_Yatay_KoyuZemin.svg" | relURL }}" alt="ERES Akademi">
       <p>ERES Biyoinformatik Akademi — Uygulama odaklı biyoinformatik eğitimleri.</p>
-      {{ if site.Data.bioexpo_campaign.campaign.active }}
-        <p class="footer-campaign-line">Destekli eğitim kontenjanları ve kurum iş birlikleri için ERES Akademi ile iletişime geçebilirsiniz.</p>
-        <p><a data-campaign="bioexpo2026" data-cta="footer-sponsor" data-destination="mailto" data-event="bioexpo_sponsor_inquiry_click" href="mailto:info@eresbiotech.com?subject=Egitim%20sponsorlugu%20hakkinda">Kurum iş birlikleri için iletişime geçin</a></p>
-      {{ end }}
-      <p><a href="mailto:info@eresbiotech.com">info@eresbiotech.com</a></p>
+      <p>Destekli eğitim kontenjanları ve kurum iş birlikleri için ERES Akademi ile iletişime geçebilirsiniz.</p>
+      {{ partial "support/footer-trust.html" . }}
     </div>
     <nav class="footer-nav" aria-label="Alt menu">
       <a href="{{ "/" | relURL }}">Anasayfa</a>

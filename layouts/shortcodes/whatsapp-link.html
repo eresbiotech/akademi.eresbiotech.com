@@ -1,0 +1,4 @@
+{{- $message := .Get "message" | default site.Data.support.whatsapp_message -}}
+{{- $text := .Get "text" | default "WhatsApp Yazılı Destek" -}}
+{{- $class := .Get "class" | default "support-cta" -}}
+<a class="{{ $class }}" href="{{ partial "support/whatsapp-url.html" (dict "message" $message) }}" target="_blank" rel="noopener noreferrer">{{ $text }}</a>

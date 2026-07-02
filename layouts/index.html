@@ -41,8 +41,8 @@
         <span>7 aktif eğitimde her biri 10 kontenjanla sınırlı kampanya modeli.</span>
       </div>
       <div class="hero-panel-row">
-        <strong>Payhip / Kampüs üzerinden güvenli ödeme</strong>
-        <span>Destekli fiyat ödeme adımında aktif kampanya kapsamında görünür.</span>
+        <strong>Resmi kayıt ve güvenli ödeme</strong>
+        <span>Kayıt ve ödeme adımı ERES Kampüs / Payhip güvenli ödeme altyapısı üzerinden tamamlanır.</span>
       </div>
     </aside>
   </div>
@@ -64,6 +64,20 @@
   <div>
     <strong>16 Temmuz 2026</strong>
     <span>Kontenjan dolmazsa destekli dönem bu tarihe kadar sürer.</span>
+  </div>
+</section>
+
+<section class="container home-section trust-support-section">
+  <div class="support-band-card">
+    <p class="support-label">Yazılı destek</p>
+    <div>
+      <h2>Kayıt öncesi aklınızda soru kalmasın</h2>
+      <p>Eğitim detaylarını resmi akademi sitemizden inceleyebilir, kayıt adımlarına yalnızca ilgili eğitim sayfalarımız üzerinden ulaşabilirsiniz. Bağlantı veya ödeme yönlendirmesi konusunda tereddütünüz varsa ödeme yapmadan önce WhatsApp üzerinden yazılı destek alabilirsiniz.</p>
+      <div class="support-actions">
+        <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">WhatsApp'tan yazılı destek alın</a>
+        <a class="support-cta support-cta-secondary" href="{{ "/post/" | relURL }}">Eğitimleri incele</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -90,7 +104,7 @@
     <div>
       <p class="eyebrow">Destekli kontenjanlar</p>
       <h2>Destekli eğitim kontenjanları</h2>
-      <p>Her eğitimde yalnızca 10 kişilik %50 destekli kayıt kontenjanı açıldı. Size uygun eğitimi seçip öğrenci veya çalışan kayıt bağlantısıyla ödeme adımına geçebilirsiniz.</p>
+      <p>Her eğitimde yalnızca 10 kişilik %50 destekli kayıt kontenjanı açıldı. Kayıt ve ödeme adımı ERES Kampüs / Payhip güvenli ödeme altyapısı üzerinden tamamlanır. Lütfen yalnızca akademi.eresbiotech.com üzerindeki resmi eğitim sayfalarındaki kayıt butonlarını kullanarak ilerleyin.</p>
     </div>
     <a class="text-link" href="{{ "/post/" | relURL }}">Tüm eğitimleri karşılaştır</a>
   </div>
@@ -212,7 +226,7 @@
     <div>
       <h2>Kurumunuz yaşam bilimlerinde dijital beceri gelişimini desteklemek ister mi?</h2>
       <p>ERES Biyoinformatik Akademi, sektör paydaşlarıyla birlikte sınırlı kontenjanlı destekli eğitim programları geliştirmektedir. Kurumunuzun görünürlüğünü bilimsel eğitim etkisiyle birleştiren sponsorluk modelleri için bizimle iletişime geçebilirsiniz.</p>
-      <a class="support-cta support-cta-secondary" href="mailto:info@eresbiotech.com?subject=Egitim%20sponsorlugu%20hakkinda" data-campaign="bioexpo2026" data-cta="sponsor-home" data-destination="mailto" data-event="bioexpo_sponsor_inquiry_click">Eğitim sponsorluğu hakkında görüşelim</a>
+      <a class="support-cta support-cta-secondary" href="{{ "/post/contact/" | relURL }}" data-campaign="bioexpo2026" data-cta="sponsor-home" data-destination="contact" data-event="bioexpo_sponsor_inquiry_click">Kurum iş birlikleri için yazılı bilgi alın</a>
     </div>
   </div>
 </section>
@@ -247,6 +261,7 @@
       <h3>Sertifika var mı?</h3>
       <p>Evet. Eğitimi tamamlayan katılımcılar dijital doğrulanabilir sertifika alır.</p>
     </article>
+    {{ partial "support/faq-trust.html" . }}
   </div>
 </section>
 {{ else }}

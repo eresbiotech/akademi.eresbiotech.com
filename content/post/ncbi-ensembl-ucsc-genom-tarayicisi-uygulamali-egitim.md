@@ -251,7 +251,7 @@ Katılımcılar, NCBI gen ve nükleotid veritabanları ile ENSEMBL ve UCSC genom
 
 <br/>
 
--   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
+-   Havale/EFT veya kurumsal kayıt seçenekleri için ödeme yapmadan önce WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.
 
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 

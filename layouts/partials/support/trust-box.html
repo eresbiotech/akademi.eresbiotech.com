@@ -1,0 +1,12 @@
+{{- $message := site.Data.support.whatsapp_message -}}
+{{- with .message -}}
+  {{- $message = . -}}
+{{- end -}}
+{{- $cta := "WhatsApp'tan sorun" -}}
+{{- with .cta -}}
+  {{- $cta = . -}}
+{{- end -}}
+<div class="written-support-box">
+  <p>Bu eğitim için kayıt adımlarına yalnızca bu resmi eğitim sayfasındaki kayıt butonundan ilerlemenizi öneririz. Bağlantı veya ödeme yönlendirmesi konusunda tereddütünüz varsa ödeme yapmadan önce WhatsApp üzerinden yazılı destek alabilirsiniz. Telefon görüşmesi yerine yazılı destek sağlıyoruz.</p>
+  <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" $message) }}" target="_blank" rel="noopener noreferrer">{{ $cta }}</a>
+</div>

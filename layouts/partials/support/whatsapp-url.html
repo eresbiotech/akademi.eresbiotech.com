@@ -1,0 +1,6 @@
+{{- $message := site.Data.support.whatsapp_message -}}
+{{- with .message -}}
+  {{- $message = . -}}
+{{- end -}}
+{{- $encodedMessage := replace ($message | urlquery) "+" "%20" -}}
+{{- printf "https://wa.me/%s?text=%s" site.Data.support.whatsapp_number $encodedMessage -}}

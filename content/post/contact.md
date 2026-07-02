@@ -1,30 +1,41 @@
 +++
 author = "Eres Biyoinformatik Akademi"
-title = "İletişim"
+title = "İletişim ve Yazılı Destek"
 date = "2023-12-20"
-description = "Eğitim seçimi, öğrenci/çalışan erişimi, ödeme, Havale/EFT, kurumsal talepler ve öğrenme yolu konusunda bize ulaşabilirsiniz."
+description = "ERES Biyoinformatik Akademi eğitim seçimi, kayıt, ödeme, erişim ve sertifika soruları için WhatsApp ve e-posta üzerinden yazılı destek sağlar."
 images =[ "images/Biyoinformatik-Araclar-Veritabanlari-Egitimi.png" ]
 categories = ["iletisim"]
 +++
 
-## Bize ulaşın
+ERES Biyoinformatik Akademi’de iletişim süreçleri öncelikli olarak yazılı yürütülür. Eğitim seçimi, kayıt, ödeme, erişim ve sertifika sorularınız için WhatsApp veya e-posta üzerinden bize ulaşabilirsiniz. Telefon görüşmesi yerine yazılı destek sağlıyoruz.
 
-Hangi eğitimden başlamanız gerektiğinden emin değilseniz, öğrenci/çalışan erişim seçenekleri hakkında bilgi almak istiyorsanız veya kurumsal bir talebiniz varsa bize yazabilirsiniz.
+Bağlantı veya ödeme yönlendirmesi konusunda tereddütünüz varsa ödeme yapmadan önce bize yazabilirsiniz.
 
-Size şu konularda yardımcı olabiliriz:
+## Eğitimler hakkında bilgi almak istiyorum
 
-- Hangi eğitimden başlamalıyım?
-- Öğrenci ve çalışan erişim seçenekleri
-- Kredi kartı ile ödeme ve ödeme ekranındaki taksit seçenekleri
-- Havale/EFT ile kayıt
-- Kurumsal kayıt ve grup erişimi
-- Sertifika ve eğitim tamamlama süreci
+Hangi eğitimle başlamanız gerektiğinden emin değilseniz, alanınızı, seviyenizi ve öğrenme hedefinizi kısaca yazarak destek alabilirsiniz.
 
-Kurumsal eğitim veya araştırma grubu talebi için yazıyorsanız, mesajınızda ekip büyüklüğünü, ilgilendiğiniz eğitim başlığını ve varsa çalıştığınız veri tipini kısaca belirtmeniz yeterlidir. Üniversite laboratuvarları, araştırma grupları, biyoteknoloji şirketleri, hastane ekipleri ve kurum içi Ar-Ge ekipleri için ihtiyaca göre şekillenen eğitim akışları değerlendirilebilir.
+{{< whatsapp-link text="WhatsApp'tan eğitim seçimi için yazın" message="Merhaba, hangi ERES Biyoinformatik Akademi eğitimiyle başlamam gerektiği konusunda destek almak istiyorum." >}}
 
-Kredi kartı ile güvenli ödeme ve ödeme ekranındaki taksit seçenekleri ödeme adımında sunulur. Havale/EFT ile kayıt olmak veya kurumsal kayıt sürecini görüşmek isterseniz mesajınızda kısaca belirtmeniz yeterlidir.
+## Kayıt veya ödeme hakkında sorum var
 
-E-postanızın ulaşmadığını düşünürseniz bize doğrudan [info@eresbiotech.com](mailto:info@eresbiotech.com) adresinden de ulaşabilirsiniz.
+Kayıt bağlantısı, ödeme adımı, taksit seçenekleri, Havale/EFT veya kurumsal kayıt konularında ödeme yapmadan önce yazılı destek alabilirsiniz.
+
+{{< whatsapp-link text="WhatsApp'tan kayıt desteği alın" message="Merhaba, ERES Biyoinformatik Akademi kayıt ve ödeme adımı hakkında destek almak istiyorum." >}}
+
+## Kurumsal eğitim talebi iletmek istiyorum
+
+Üniversite laboratuvarı, araştırma grubu, biyoteknoloji şirketi, hastane ekibi veya Ar-Ge ekibi için eğitim talebinizi iletebilirsiniz. Mesajınızda ekip büyüklüğünü, ilgilendiğiniz eğitim başlığını ve varsa çalıştığınız veri tipini belirtmeniz yeterlidir.
+
+{{< whatsapp-link text="Kurumsal eğitim için yazın" message="Merhaba, kurumumuz veya araştırma grubumuz için ERES Biyoinformatik Akademi eğitimleri hakkında bilgi almak istiyorum." >}}
+
+## Sertifika veya erişim sorunu yaşıyorum
+
+Eğitime erişim, sertifika veya tamamlanma süreciyle ilgili destek almak için kayıt olduğunuz eğitim adını ve kullandığınız e-posta adresini yazarak bize ulaşabilirsiniz.
+
+{{< whatsapp-link text="Erişim / sertifika desteği alın" message="Merhaba, ERES Biyoinformatik Akademi eğitim erişimi veya sertifika süreci hakkında destek almak istiyorum." >}}
+
+E-posta: [info@eresbiotech.com](mailto:info@eresbiotech.com)
 
 <form class="contact-form" action="https://public.herotofu.com/v1/a80f8270-abf5-11ee-8fa9-872d80d8eac1" method="post" accept-charset="UTF-8">
   <label>

@@ -38,3 +38,9 @@ Her eğitimde yalnızca 10 kişilik %50 destekli kayıt kontenjanı açıldı. D
 ERES Biyoinformatik Akademi, sıradan bir online eğitim vitrini olmaktan çok, Ar-Ge deneyimiyle beslenen uygulama odaklı bir öğrenme alanı olarak konumlanır. Buradaki amaç hızlı vaatler vermek değil; doğru öğrenme yolunu seçmeyi kolaylaştıran bir karar rehberi, anlaşılır teknik dil, ödev/quiz desteği ve gerçek veriyle çalışma pratiğine yakın bir öğrenme akışı sunmaktır.
 
 Eğitimleri incelemek için [Eğitim kataloğuna](/post/) gidebilir, hangi eğitimden başlamanız gerektiğinden emin değilseniz [İletişim](/post/contact/) sayfasından bize ulaşabilirsiniz.
+
+## Resmi kanal ve yazılı destek
+
+ERES Biyoinformatik Akademi eğitimleriyle ilgili güncel içerik, kontenjan ve kayıt yönlendirmeleri resmi akademi sitemiz üzerinden paylaşılır. Kayıt veya ödeme bağlantıları konusunda tereddütünüz varsa ödeme yapmadan önce WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.
+
+[İletişim ve yazılı destek](/post/contact/)

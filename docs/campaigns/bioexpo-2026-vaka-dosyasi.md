@@ -60,7 +60,7 @@ Buraya kampanya yayına alındıktan sonra şu ekran görüntüleri eklenecek:
 - BioExpo açıklama bölümü
 - Kampanya landing page
 - Bir eğitim detay sayfası kayıt alanı
-- Payhip Run Sales ekranı
+- Payhip destekli kayıt ekranı
 - Sosyal medya gönderileri
 - E-posta kampanyası
 

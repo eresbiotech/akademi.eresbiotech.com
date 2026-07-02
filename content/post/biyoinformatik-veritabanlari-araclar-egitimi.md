@@ -97,7 +97,7 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 -   **Uygulamalı Dersler:** Dersteki uygulamaları, teorik bilgiyi pratikte nasıl uygulayacağınızı öğrenmenize olanak tanır ve öğrendiklerinizin kalıcı olmasını ve çalışmalarınızda kullanmanızı sağlar.
 
--   **Kişisel ve Profesyonel Gelişim:** Eğitim kariyerinizi ileri taşımanıza yardımcı olacak pratik beceriler ve bilgiler sunar. Bu kursta öğrendiğiniz teknikleri aaraştırma projeleriniz ve yayınlarınızda kullanabilirsiniz. Yeni teknikleri öğrenmek ve uygulamak, hem kişisel hem de profesyonel gelişiminiz için önemli bir adımdır.
+-   **Araştırma pratiğiyle bağlantı:** Eğitim, araç ve veritabanı çıktılarının araştırma projeleriyle nasıl ilişkilendirilebileceğine dair pratik bir çerçeve sunar.
 
 <br/>
 
@@ -197,7 +197,7 @@ Biyoinformatiğe yeni başlayanlar için öncesinde Biyoinformatiğe Giriş Eği
 
 <br/>
 
--   Havale ya da EFT yapmak isteyenler info@eresbiotech.com adresinden iletişime geçebilirler.
+-   Havale/EFT veya kurumsal kayıt seçenekleri için ödeme yapmadan önce WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.
 
 -   Eğitime katılan ve eğitimdeki çalışmaları tamamlayanlara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgeleri verilecektir.
 

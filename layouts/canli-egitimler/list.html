@@ -5,6 +5,9 @@
     <p class="live-kicker">ERES Akademi</p>
     <h1>{{ .Title }}</h1>
     <div class="live-list-intro">{{ .Content }}</div>
+    <div class="live-cta">
+      <a class="live-button" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, ERES Akademi canlı online eğitimleri hakkında bilgi almak istiyorum.") }}" target="_blank" rel="noopener noreferrer">Canlı eğitimler için yazılı bilgi alın</a>
+    </div>
   </header>
   <div class="live-list-grid">
     {{ range .Pages.ByDate.Reverse }}
