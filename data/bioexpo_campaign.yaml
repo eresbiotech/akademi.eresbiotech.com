@@ -26,7 +26,7 @@ courses:
     key: "r-programlama"
     title: "Biyoinformatik için R Programlama"
     quota: 10
-    filled: 0
+    filled: 3
     normal_student_price: "3.500 TL"
     sale_student_price: "1.750 TL"
     normal_employee_price: "5.500 TL"
@@ -43,7 +43,7 @@ courses:
     key: "giris-buyuk-veri"
     title: "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi"
     quota: 10
-    filled: 0
+    filled: 3
     normal_student_price: "2.700 TL"
     sale_student_price: "1.350 TL"
     normal_employee_price: "4.700 TL"
@@ -60,7 +60,7 @@ courses:
     key: "araclar-veritabanlari"
     title: "Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi"
     quota: 10
-    filled: 0
+    filled: 3
     normal_student_price: "2.800 TL"
     sale_student_price: "1.400 TL"
     normal_employee_price: "4.800 TL"
@@ -77,7 +77,7 @@ courses:
     key: "ncbi-ensembl-ucsc"
     title: "NCBI, Ensembl ve UCSC Genom Tarayıcısı Uygulamalı Eğitimi"
     quota: 10
-    filled: 0
+    filled: 3
     normal_student_price: "3.300 TL"
     sale_student_price: "1.650 TL"
     normal_employee_price: "5.300 TL"
@@ -94,7 +94,7 @@ courses:
     key: "tek-hucre-rna-seq"
     title: "Tek Hücre RNA-Seq Analizi Eğitimi"
     quota: 10
-    filled: 0
+    filled: 3
     normal_student_price: "4.700 TL"
     sale_student_price: "2.350 TL"
     normal_employee_price: "6.700 TL"
@@ -111,7 +111,7 @@ courses:
     key: "yapisal-biyoinformatik"
     title: "Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi"
     quota: 10
-    filled: 0
+    filled: 3
     normal_student_price: "4.200 TL"
     sale_student_price: "2.100 TL"
     normal_employee_price: "6.200 TL"
@@ -128,7 +128,7 @@ courses:
     key: "phyml-filogenetik"
     title: "phyML Uygulamalı Filogenetik ve Dizi Hizalama Eğitimi"
     quota: 10
-    filled: 0
+    filled: 3
     normal_student_price: "4.200 TL"
     sale_student_price: "2.100 TL"
     normal_employee_price: "6.200 TL"

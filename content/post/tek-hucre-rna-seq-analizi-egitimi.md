@@ -5,8 +5,8 @@ date = "2023-12-23"
 description = "scRNA-seq verilerinde kalite kontrol, kümeleme, marker gen yorumu ve Seurat iş akışını anlamak isteyen araştırmacılar için."
 
 images =[ "images/Tek-Hucre-RNA-Seq-dizi-Analizi-Egitimi.png" ]
-student_checkout_url = "https://kampus.eresbiotech.com/order?link=M1DB8&pricing_plan=ANzp0DpLzX"
-employee_checkout_url = "https://kampus.eresbiotech.com/order?link=M1DB8&pricing_plan=ZjBLY4pwGm"
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=Zk1nE"
+employee_checkout_url = "https://kampus.eresbiotech.com/order?link=Zk1nE"
 student_price = "4.700 TL"
 employee_price = "6.700 TL"
 student_plan_label = "Öğrenci"
