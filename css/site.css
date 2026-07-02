@@ -184,7 +184,10 @@ img {
 
 .site-announcement span {
   color: rgba(255, 255, 255, 0.94);
+  flex: 1 1 auto;
   font-weight: 850;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .announcement-cta {
@@ -509,6 +512,10 @@ img {
 .campaign-urgency-banner p {
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
+}
+
+.campaign-urgency-banner .campaign-deadline {
+  color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .campaign-urgency-banner .support-cta {
@@ -2110,6 +2117,189 @@ h1 {
   padding-top: 18px;
 }
 
+.bioexpo-hero .home-hero-copy,
+.bioexpo-landing-hero .home-hero-copy {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(240, 253, 250, 0.84)),
+    #fff;
+  border-top: 4px solid var(--teal);
+}
+
+.bioexpo-eyebrow,
+.bioexpo-badge {
+  color: #0f766e;
+}
+
+.bioexpo-text-badge {
+  align-self: flex-start;
+  background: rgba(13, 148, 136, 0.1);
+  border: 1px solid rgba(13, 148, 136, 0.28);
+  border-radius: 6px;
+  color: #0f766e;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 950;
+  margin-bottom: 14px;
+  padding: 7px 10px;
+  text-transform: uppercase;
+}
+
+.bioexpo-context-note,
+.fomo-line,
+.payment-flow-note,
+.course-fit,
+.course-gains {
+  border-radius: 6px;
+  margin-top: 14px;
+}
+
+.bioexpo-context-note {
+  background: rgba(240, 253, 250, 0.72);
+  border: 1px solid rgba(13, 148, 136, 0.18);
+  color: #0f4a5c;
+  font-weight: 850;
+  padding: 12px 14px;
+}
+
+.fomo-line {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.bioexpo-summary-strip {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 16px 0 10px;
+}
+
+.bioexpo-summary-strip div {
+  background: #fff;
+  border: 1px solid rgba(13, 148, 136, 0.18);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+}
+
+.bioexpo-summary-strip strong {
+  color: var(--text);
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.bioexpo-summary-strip span {
+  color: var(--muted);
+  display: block;
+  font-size: 0.92rem;
+}
+
+.bioexpo-support-card {
+  grid-template-columns: minmax(170px, 0.24fr) minmax(0, 1fr);
+}
+
+.bioexpo-course-card {
+  border-top-color: var(--teal);
+}
+
+.course-fit {
+  background: rgba(248, 250, 252, 0.92);
+  border: 1px solid rgba(0, 33, 71, 0.08);
+  color: var(--body) !important;
+  font-size: 0.94rem;
+  padding: 11px 12px;
+}
+
+.course-fit strong,
+.course-gains strong {
+  color: var(--text);
+}
+
+.course-gains {
+  background: rgba(240, 253, 250, 0.64);
+  border: 1px solid rgba(13, 148, 136, 0.16);
+  padding: 12px;
+}
+
+.course-gains ul {
+  color: var(--body);
+  display: grid;
+  gap: 7px;
+  margin: 8px 0 0;
+  padding-left: 1.1rem;
+}
+
+.course-gains li {
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.bioexpo-price-summary {
+  border-color: rgba(197, 160, 89, 0.34);
+}
+
+.bioexpo-price-summary p {
+  justify-content: space-between;
+}
+
+.bioexpo-price-summary del {
+  flex: 1 1 auto;
+}
+
+.bioexpo-price-summary strong {
+  color: #0f766e;
+  font-size: 1.2rem;
+}
+
+.payment-flow-note {
+  background: var(--gold-soft);
+  border: 1px solid rgba(197, 160, 89, 0.26);
+  color: #725117 !important;
+  font-size: 0.86rem;
+  font-weight: 850;
+  padding: 10px 12px;
+}
+
+.bioexpo-card-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.bioexpo-card-actions .card-link {
+  margin: 0;
+  width: auto;
+}
+
+.bioexpo-card-actions .card-link-muted {
+  grid-column: 1 / -1;
+}
+
+.support-cta-secondary {
+  background: #334155;
+}
+
+.support-cta-secondary:hover {
+  background: #1e293b;
+}
+
+.b2b-sponsor-section .support-band-card {
+  border-left-color: var(--teal);
+}
+
+.footer-campaign-line {
+  color: #fff;
+  font-weight: 850;
+}
+
+.bioexpo-final-cta {
+  border-top: 4px solid var(--teal);
+}
+
+.landing-audience-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 @media (max-width: 820px) {
   .header-inner,
   .footer-inner,
@@ -2142,6 +2332,7 @@ h1 {
 
   .home-hero-grid,
   .support-band-card,
+  .bioexpo-summary-strip,
   .value-grid,
   .path-grid,
   .start-grid,
@@ -2211,6 +2402,10 @@ h1 {
     width: 100%;
   }
 
+  .bioexpo-card-actions {
+    grid-template-columns: 1fr;
+  }
+
   .home-hero-copy,
   .post-index-hero,
   .training-hero,
@@ -2235,13 +2430,39 @@ h1 {
   .page-narrow {
     margin-left: 12px;
     margin-right: 12px;
-    width: auto;
+    max-width: min(366px, calc(100vw - 24px));
+    width: min(366px, calc(100vw - 24px));
   }
 
   .header-inner {
     align-items: stretch;
     min-height: 0;
     padding: 16px 0;
+  }
+
+  .site-announcement-inner {
+    align-items: stretch;
+    display: grid;
+    gap: 7px;
+    grid-template-columns: 1fr;
+    max-width: min(366px, calc(100vw - 24px));
+    width: min(366px, calc(100vw - 24px));
+  }
+
+  .site-announcement strong {
+    justify-self: start;
+  }
+
+  .site-announcement span {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    word-break: break-word;
+  }
+
+  .announcement-cta {
+    margin-left: 0;
+    width: 100%;
   }
 
   .brand {
@@ -2273,6 +2494,22 @@ h1 {
     padding: 22px;
   }
 
+  .home-hero-grid,
+  .home-hero-copy,
+  .home-hero-panel,
+  .post-index-hero,
+  .training-hero {
+    max-width: min(366px, calc(100vw - 24px));
+    width: 100%;
+  }
+
+  .home-hero-copy > *,
+  .home-hero-panel > *,
+  .post-index-hero > *,
+  .training-hero > * {
+    max-width: 100%;
+  }
+
   .home-hero-copy {
     padding: 26px 22px;
   }
@@ -2282,7 +2519,8 @@ h1 {
   .training-hero h1 {
     font-size: 1.45rem;
     line-height: 1.15;
-    max-width: calc(100vw - 68px);
+    max-width: 100%;
+    word-break: break-word;
   }
 
   .home-hero-copy p,
@@ -2290,7 +2528,7 @@ h1 {
   .training-hero p,
   .campaign-urgency-banner h2,
   .campaign-urgency-banner p {
-    max-width: calc(100vw - 68px);
+    max-width: 100%;
   }
 
   h1 {
