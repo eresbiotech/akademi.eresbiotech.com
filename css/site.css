@@ -309,6 +309,13 @@ img {
   color: #115e59;
 }
 
+.site-nav .nav-student-login.is-active,
+.site-nav .nav-student-login.is-active:hover {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #fff;
+}
+
 .site-nav .nav-button:hover,
 .hero-action:hover,
 .card-link:hover {
@@ -757,161 +764,234 @@ img {
   padding: clamp(28px, 5vw, 56px);
 }
 
+.student-login-shell {
+  background:
+    linear-gradient(180deg, rgba(255, 247, 223, 0.78), rgba(248, 250, 252, 0.96) 42%, rgba(240, 253, 250, 0.55)),
+    #f8fafc;
+  border-top: 1px solid rgba(226, 232, 240, 0.85);
+  padding: clamp(28px, 5vw, 56px) 0 clamp(56px, 8vw, 84px);
+}
+
 .student-login-page {
   max-width: 100%;
   overflow-x: clip;
   width: min(1040px, calc(100% - 32px));
 }
 
-.student-login-hero {
-  align-items: stretch;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(240, 253, 250, 0.92)),
-    var(--surface);
-  border: 1px solid rgba(13, 148, 136, 0.2);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  display: grid;
-  gap: 24px;
-  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
-  padding: clamp(30px, 5vw, 58px);
+.student-login-breadcrumb {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.84rem;
+  font-weight: 850;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 
-.student-login-hero-copy {
+.student-login-breadcrumb a {
+  color: #0f766e;
+}
+
+.student-login-breadcrumb span[aria-current="page"] {
+  color: #334155;
+}
+
+.student-login-hero {
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-top: 4px solid var(--teal);
+  border-radius: var(--radius);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  display: grid;
+  gap: clamp(20px, 4vw, 34px);
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.6fr);
+  padding: clamp(24px, 4.5vw, 46px);
+}
+
+.student-login-hero-copy,
+.student-login-summary,
+.student-login-step-card,
+.student-help-card {
   min-width: 0;
 }
 
+.student-login-hero .eyebrow,
+.student-login-section-heading .eyebrow {
+  color: #0f766e;
+}
+
+.student-login-hero h1 {
+  color: #0f172a;
+  font-size: clamp(2rem, 4.2vw, 3.7rem);
+  line-height: 1.05;
+  margin-bottom: 16px;
+  max-width: 780px;
+}
+
+.student-login-hero .lead {
+  color: #334155;
+  max-width: 720px;
+}
+
+.student-login-cta-panel {
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 14px;
+}
+
+.student-login-primary-cta {
+  align-items: center;
+  background: var(--text);
+  border: 1px solid var(--text);
+  border-radius: 6px;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 950;
+  justify-content: center;
+  min-height: 52px;
+  padding: 13px 18px;
+  text-align: center;
+}
+
+.student-login-primary-cta:hover {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+
+.student-login-cta-panel p {
+  color: var(--muted);
+  flex: 1 1 220px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin: 0;
+}
+
 .student-login-summary {
-  background: #fff;
-  border: 1px solid rgba(13, 148, 136, 0.18);
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.1);
   border-left: 4px solid var(--teal);
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 10px;
   justify-content: center;
-  min-width: 0;
   padding: clamp(18px, 3vw, 24px);
 }
 
+.student-service-label {
+  align-self: flex-start;
+  background: #ecfdf5;
+  border: 1px solid #99f6e4;
+  border-radius: 6px;
+  color: #0f766e;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  padding: 6px 8px;
+}
+
 .student-login-summary strong {
-  color: var(--text);
-  font-size: 1.2rem;
+  color: #0f172a;
+  font-size: 1.18rem;
   line-height: 1.25;
 }
 
-.student-login-summary span {
-  color: var(--muted);
+.student-login-summary p {
+  color: #475569;
   font-weight: 750;
+  margin: 0;
 }
 
-.student-login-section,
-.student-warning-box,
-.student-support-box {
+.student-login-step-cards,
+.student-help-center {
   background: #fff;
-  border: 1px solid rgba(0, 33, 71, 0.1);
+  border: 1px solid rgba(15, 23, 42, 0.1);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-}
-
-.student-login-section {
   margin-top: 24px;
   padding: clamp(22px, 4vw, 34px);
 }
 
-.student-login-section h2,
-.student-warning-box h2,
-.student-support-box h2 {
-  color: var(--text);
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
-  margin: 0 0 12px;
+.student-login-section-heading {
+  margin-bottom: 18px;
 }
 
-.student-login-section p,
-.student-warning-box p,
-.student-support-box p {
-  color: var(--body);
+.student-login-section-heading h2,
+.student-help-card h2 {
+  color: #0f172a;
   margin: 0;
 }
 
-.access-assurance {
-  background:
-    linear-gradient(135deg, rgba(240, 253, 250, 0.78), rgba(255, 255, 255, 0.98)),
-    #fff;
-  border-top: 3px solid rgba(13, 148, 136, 0.3);
+.student-login-section-heading h2 {
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
 }
 
-.student-login-grid {
-  align-items: start;
-  display: grid;
-  gap: 24px;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
-}
-
-.student-login-grid .student-login-section {
-  margin-top: 0;
-}
-
-.login-steps {
-  counter-reset: login-step;
-  display: grid;
-  gap: 12px;
-  list-style: none;
-  margin: 18px 0 0;
-  padding: 0;
-}
-
-.login-steps li {
-  align-items: flex-start;
-  background: #f8f9fa;
-  border: 1px solid rgba(0, 33, 71, 0.09);
-  border-radius: var(--radius);
-  color: var(--body);
-  display: flex;
-  gap: 12px;
-  padding: 14px 16px;
-}
-
-.login-steps li::before {
-  align-items: center;
-  background: var(--teal-soft);
-  border-radius: 6px;
-  color: var(--teal);
-  content: counter(login-step, decimal-leading-zero);
-  counter-increment: login-step;
-  display: inline-flex;
-  flex: 0 0 auto;
-  font-size: 0.78rem;
-  font-weight: 950;
-  height: 32px;
-  justify-content: center;
-  width: 42px;
-}
-
-.student-login-aside {
+.student-login-card-grid,
+.student-help-grid {
   display: grid;
   gap: 16px;
 }
 
-.student-warning-box,
-.student-support-box {
+.student-login-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.student-login-step-card {
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.09);
+  border-top: 3px solid rgba(13, 148, 136, 0.45);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.student-login-step-card h3 {
+  color: #0f172a;
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+}
+
+.student-login-step-card p,
+.student-help-card p {
+  color: #475569;
+  margin: 0;
+}
+
+.student-help-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.student-help-card {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 20px;
 }
 
 .student-warning-box {
-  background:
-    linear-gradient(135deg, rgba(255, 247, 223, 0.86), rgba(255, 255, 255, 0.96)),
-    #fff;
+  background: #fffdf7;
   border-left: 4px solid var(--gold);
 }
 
-.student-warning-box h2,
-.student-support-box h2 {
-  font-size: 1.14rem;
+.student-support-box {
+  background: #f8fafc;
+  border-left: 4px solid var(--teal);
 }
 
-.student-support-box {
-  border-left: 4px solid var(--teal);
+.student-help-card h2 {
+  font-size: 1.14rem;
 }
 
 .training-hero {
@@ -2911,6 +2991,8 @@ h1 {
   .student-access-card,
   .student-login-hero,
   .student-login-grid,
+  .student-login-card-grid,
+  .student-help-grid,
   .value-grid,
   .path-grid,
   .start-grid,
@@ -2936,6 +3018,8 @@ h1 {
   .home-hero-grid > *,
   .student-login-hero > *,
   .student-login-grid > *,
+  .student-login-card-grid > *,
+  .student-help-grid > *,
   .student-access-card > *,
   .post-index-hero > *,
   .training-hero > *,
@@ -2947,6 +3031,10 @@ h1 {
 
   .student-login-hero,
   .student-login-section,
+  .student-login-step-cards,
+  .student-help-center,
+  .student-login-step-card,
+  .student-help-card,
   .student-warning-box,
   .student-support-box,
   .student-access-card {
@@ -2955,6 +3043,10 @@ h1 {
 
   .student-login-hero *,
   .student-login-section *,
+  .student-login-step-cards *,
+  .student-help-center *,
+  .student-login-step-card *,
+  .student-help-card *,
   .student-warning-box *,
   .student-support-box *,
   .student-access-card * {
@@ -3025,6 +3117,10 @@ h1 {
   .home-hero-copy,
   .student-login-hero,
   .student-login-section,
+  .student-login-step-cards,
+  .student-help-center,
+  .student-login-step-card,
+  .student-help-card,
   .student-warning-box,
   .student-support-box,
   .student-access-card,
@@ -3060,6 +3156,25 @@ h1 {
     align-items: stretch;
     min-height: 0;
     padding: 16px 0;
+  }
+
+  .student-login-site-header .header-inner {
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .student-login-site-header .brand-logo {
+    height: 34px;
+  }
+
+  .student-login-site-header .site-nav {
+    gap: 6px;
+  }
+
+  .student-login-site-header .site-nav a,
+  .student-login-site-header .site-nav .nav-button {
+    font-size: 0.8rem;
+    padding: 6px;
   }
 
   .site-announcement-inner {
@@ -3099,6 +3214,14 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .student-login-site-header .site-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .student-login-site-header .site-nav .nav-button-support {
+    grid-column: 1 / -1;
+  }
+
   .site-announcement-inner {
     align-items: stretch;
     flex-direction: column;
@@ -3113,9 +3236,21 @@ h1 {
     padding: 32px 0 56px;
   }
 
+  .student-login-shell {
+    padding: 18px 0 48px;
+  }
+
+  .student-login-breadcrumb {
+    margin-bottom: 12px;
+  }
+
   .soft-hero,
   .student-login-hero,
   .student-login-section,
+  .student-login-step-cards,
+  .student-help-center,
+  .student-login-step-card,
+  .student-help-card,
   .student-warning-box,
   .student-support-box,
   .training-hero,
@@ -3127,9 +3262,11 @@ h1 {
   .soft-hero,
   .student-login-hero,
   .student-login-section,
+  .student-login-step-cards,
+  .student-help-center,
   .training-hero,
   .post-index-hero {
-    padding: 22px;
+    padding: 20px;
   }
 
   .home-hero-grid,
@@ -3165,6 +3302,8 @@ h1 {
   .home-hero-copy p,
   .student-login-hero p,
   .student-login-section p,
+  .student-login-step-card p,
+  .student-help-card p,
   .post-index-hero p,
   .training-hero p,
   .campaign-urgency-banner h2,
@@ -3209,8 +3348,18 @@ h1 {
     flex-direction: column;
   }
 
+  .student-login-cta-panel {
+    align-items: stretch;
+    padding: 12px;
+  }
+
+  .student-login-primary-cta {
+    width: 100%;
+  }
+
   .student-login-hero .hero-action,
-  .student-login-hero .hero-action-secondary {
+  .student-login-hero .hero-action-secondary,
+  .student-support-box .support-cta {
     width: 100%;
   }
 
