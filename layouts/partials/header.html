@@ -1,5 +1,6 @@
 {{- $campaign := site.Data.bioexpo_campaign.campaign -}}
-{{- if $campaign.active -}}
+{{- $isStudentLogin := eq .RelPermalink "/ders-giris/" -}}
+{{- if and $campaign.active (not $isStudentLogin) -}}
 <div class="site-announcement" role="status">
   <div class="container site-announcement-inner">
     <strong>Destekli kayıt</strong>
@@ -8,7 +9,7 @@
   </div>
 </div>
 {{- end -}}
-<header class="site-header">
+<header class="site-header{{ if $isStudentLogin }} student-login-site-header{{ end }}">
   <div class="container header-inner">
     <a class="brand" href="{{ "/" | relURL }}" aria-label="ERES Akademi">
       <img class="brand-logo" src="{{ "images/logos/Eres_Yatay_AcikZemin.svg" | relURL }}" alt="ERES Akademi">
@@ -20,7 +21,7 @@
       <a href="{{ "/canli-egitimler/" | relURL }}">Canlı Eğitimler</a>
       <a href="{{ "/about/" | relURL }}">Hakkımızda</a>
       <a href="{{ "/#ogrenme-yollari" | relURL }}">Öğrenme Yolları</a>
-      <a class="nav-student-login" href="{{ "/ders-giris/" | relURL }}">Derse Giriş</a>
+      <a class="nav-student-login{{ if $isStudentLogin }} is-active{{ end }}" href="{{ "/ders-giris/" | relURL }}"{{ if $isStudentLogin }} aria-current="page"{{ end }}>Derse Giriş</a>
       <a class="nav-button" href="{{ "/post/contact/" | relURL }}">İletişim</a>
       <a class="nav-button nav-button-support" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">WhatsApp Yazılı Destek</a>
     </nav>
