@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{- $campusLoginURL := "https://kampus.eresbiotech.com/b-account" -}}
+{{- $whatsappURL := site.Params.whatsapp_support_url | default "https://wa.me/905313780485?text=Merhaba%2C+ERES+Biyoinformatik+Akademi+e%C4%9Fitimleri+hakk%C4%B1nda+bilgi+almak+istiyorum." -}}
+<article class="container page-shell student-login-page">
+  <header class="page-header student-login-hero">
+    <div class="student-login-hero-copy">
+      <p class="eyebrow">Derse Giriş</p>
+      <h1>{{ .Title }}</h1>
+      <p class="lead">Eğitiminizi satın aldıysanız, ERES Kampüs / Payhip öğrenci hesabınız üzerinden derslerinize tekrar ulaşabilirsiniz.</p>
+      <div class="hero-actions">
+        <a class="hero-action" href="{{ $campusLoginURL }}" target="_blank" rel="noopener noreferrer">Öğrenci Paneline Giriş Yap</a>
+        <a class="hero-action hero-action-secondary" href="{{ $whatsappURL }}" target="_blank" rel="noopener noreferrer">WhatsApp Yazılı Destek Al</a>
+      </div>
+    </div>
+    <aside class="student-login-summary" aria-label="Öğrenci erişim özeti">
+      <strong>Satın aldığınız eğitime tekrar dönün</strong>
+      <span>Ders erişimi, kayıt sırasında kullandığınız e-posta adresiyle oluşturulan öğrenci hesabınız üzerinden yönetilir.</span>
+    </aside>
+  </header>
+
+  <section class="student-login-section access-assurance">
+    <p class="eyebrow">Kayıt sonrası erişim</p>
+    <h2>Satın aldığınız eğitimlere öğrenci hesabınızdan ulaşabilirsiniz</h2>
+    <p>ERES Biyoinformatik Akademi’de satın aldığınız eğitimler, ERES Kampüs / Payhip öğrenci hesabınız üzerinden erişilebilir şekilde düzenlenir. Böylece kayıt sonrası derslerinize, eğitim içeriklerinize ve materyallerinize tekrar ulaşabilirsiniz.</p>
+  </section>
+
+  <div class="student-login-grid">
+    <section class="student-login-section">
+      <p class="eyebrow">Adım adım</p>
+      <h2>Nasıl giriş yapacağım?</h2>
+      <ol class="login-steps">
+        <li>“Öğrenci Paneline Giriş Yap” butonuna tıklayın.</li>
+        <li>Açılan ERES Kampüs / Payhip hesap giriş ekranında oturum açın.</li>
+        <li>Satın alma sırasında kullandığınız e-posta adresi ve şifreyle giriş yapın.</li>
+        <li>Giriş yaptıktan sonra satın aldığınız eğitimleri hesabınızda görebilirsiniz.</li>
+        <li>Şifrenizi hatırlamıyorsanız giriş ekranındaki “Forgot your password?” bağlantısını kullanarak yeni şifre oluşturabilirsiniz.</li>
+      </ol>
+    </section>
+
+    <aside class="student-login-aside">
+      <section class="student-warning-box">
+        <h2>Hangi e-posta ile giriş yapmalıyım?</h2>
+        <p>Derse erişim, ödeme/kayıt sırasında kullandığınız e-posta adresine tanımlanır. Farklı bir e-posta ile giriş yaparsanız eğitiminiz görünmeyebilir.</p>
+      </section>
+      <section class="student-support-box">
+        <h2>Dersiniz görünmüyor mu?</h2>
+        <p>Ödeme yaptığınız e-posta adresini ve hangi eğitimi satın aldığınızı yazarak WhatsApp üzerinden bize ulaşabilirsiniz. Yazılı destek ekibimiz erişim sürecinizi kontrol eder.</p>
+        <a class="support-cta" href="{{ $whatsappURL }}" target="_blank" rel="noopener noreferrer">WhatsApp’tan destek alın</a>
+      </section>
+    </aside>
+  </div>
+</article>
+{{ end }}

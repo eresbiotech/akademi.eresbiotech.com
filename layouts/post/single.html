@@ -180,6 +180,9 @@
         <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="detail-hero" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ $primaryCTAText }}</a>
         <a class="hero-action hero-action-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Kayıt öncesi bize yazabilirsiniz</a>
       </div>
+      {{ if $hasPricingPlans }}
+        <p class="existing-student-link">Zaten kayıt oldunuz mu? Dersinize buradan giriş yapabilirsiniz: <a href="{{ "/ders-giris/" | relURL }}">Derse giriş yap</a></p>
+      {{ end }}
     </div>
     {{ with .Params.images }}
       {{- $src := index . 0 -}}
@@ -449,6 +452,10 @@
           </div>
           <p class="course-trust-note">Kayıt işleminiz tamamlandığında eğitime erişim süreciniz başlatılır. Kredi kartı ile güvenli ödeme yapabilir, ödeme adımında kartınıza/bankanıza uygun taksit seçeneklerini görebilirsiniz. Bağlantı konusunda tereddütünüz varsa ödeme yapmadan önce WhatsApp üzerinden yazılı destek alabilirsiniz.</p>
           <p class="pricing-support-line">{{ if $isBioexpoCourse }}Destekli fiyat, kayıt adımında BioExpo 2026 destekli kayıt seçeneği olarak görünür.{{ end }} Kayıt ve ödeme adımı ERES Kampüs / Payhip güvenli ödeme altyapısı üzerinden tamamlanır. Lütfen yalnızca akademi.eresbiotech.com üzerindeki resmi eğitim sayfalarındaki kayıt butonlarını kullanarak ilerleyin.</p>
+          <div class="course-access-reassurance">
+            <p>Kayıt sonrası eğitiminize ERES Kampüs öğrenci panelinizden tekrar ulaşabilirsiniz.</p>
+            <span>Zaten kayıt oldunuz mu? Dersinize buradan giriş yapabilirsiniz: <a href="{{ "/ders-giris/" | relURL }}">Derse giriş yap</a></span>
+          </div>
           <div class="course-pricing-grid">
             <article class="pricing-card pricing-card-featured price-card">
               <span class="pricing-badge">{{ if $isBioexpoCourse }}%50 destekli{{ else }}Kayıt{{ end }}</span>
@@ -547,8 +554,8 @@
               <p>Kredi kartı ile güvenli ödeme yapabilirsiniz. Taksit seçenekleri ödeme adımında kartınıza/bankanıza göre otomatik görünür. Havale/EFT veya kurumsal kayıt seçenekleri için ödeme yapmadan önce WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
             </article>
             <article>
-              <h3>Kayıt olduktan sonra derslere nasıl erişeceğim?</h3>
-              <p>Ödeme sürecini tamamladığınızda kaydınız otomatik olarak oluşturulur. Sistem sizi eğitime tanımlar; ödeme sonrasında derslere nasıl erişeceğinizi açıklayan yönlendirmeleri takip edebilirsiniz.</p>
+              <h3>Dersi satın aldıktan sonra tekrar nasıl giriş yaparım?</h3>
+              <p>Eğitimi satın aldıktan sonra ERES Kampüs / Payhip öğrenci hesabınıza giriş yaparak derslerinize ulaşabilirsiniz. Giriş için satın alma sırasında kullandığınız e-posta ve şifreyi kullanmanız gerekir. Şifrenizi hatırlamıyorsanız giriş ekranındaki “Forgot your password?” bağlantısını kullanabilirsiniz.</p>
             </article>
             <article>
               <h3>Eğitimler canlı mı asenkron mu?</h3>
