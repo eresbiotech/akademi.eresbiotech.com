@@ -1,0 +1,19 @@
+<svg width="380" height="110" viewBox="0 0 380 110" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .txt-eres { font-family: 'Poppins', Arial, sans-serif; font-weight: 500; font-size: 32px; fill: #DCEBFA; letter-spacing: 5px; }
+            .txt-biotech { font-family: 'Poppins', Arial, sans-serif; font-weight: 900; font-size: 34px; fill: #FFFFFF; letter-spacing: 1px; }
+        </style>
+    </defs>
+    <g transform="translate(0, 10) scale(0.9)">
+        
+                <path d="M25 0L50 25L25 50L0 25L25 0Z" fill="#A58CC5" fill-opacity="1"/>
+                <path d="M25 50L50 75L25 100L0 75L25 50Z" fill="#1F77B4" fill-opacity="1"/>
+                <path d="M75 0L100 25L75 50L50 25L75 0Z" fill="#30A6B3" fill-opacity="1"/>
+                <path d="M75 50L100 75L75 100L50 75L75 50Z" fill="#60B7D8" fill-opacity="1"/>
+                <path d="M50 25L75 50L50 75L25 50L50 25Z" fill="#F7F8FA" fill-opacity="0.95"/>
+            
+    </g>
+    <text x="105" y="48" class="txt-eres">ERES</text>
+    <text x="105" y="88" class="txt-biotech">BIOTECH</text>
+</svg>

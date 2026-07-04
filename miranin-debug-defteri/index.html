@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mira'nın Debug Defteri | ERES Biyoinformatik Akademi</title>
+  <meta name="description" content="Biyoinformatiğe başlamak isteyenler için Mira'nın gizli debug defteri: hikâyeli kod kartları, başlangıç biyoinformatik notları ve her Çarşamba Instagram'da devam eden Debug Çarşambası evreni.">
+  <meta property="og:title" content="Mira'nın Debug Defteri">
+  <meta property="og:description" content="Kod çalışmadı. Hikâye devam ediyor.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/mira-debug-defteri/og-miranin-debug-defteri.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/mira-debug-defteri.css">
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="https://akademi.eresbiotech.com/" aria-label="ERES Biyoinformatik Akademi">
+      <img src="../assets/logo-light.svg" alt="ERES Biotech">
+    </a>
+    <nav class="header-actions" aria-label="Hızlı bağlantılar">
+      <a href="#defter">Defter</a>
+      <a href="#form">İndir</a>
+      <a href="https://www.instagram.com/eres_biotech/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-copy">
+        <p class="series-label">~/mira/gizli-debug-defteri/</p>
+        <h1>Ben Mira. Doktoraya başlayacağım. Sanırım.</h1>
+        <p class="lead">Biyoinformatiğe girmek istiyorum ama kafamda çok fazla bilinmeyen değişken var: Python, R, Linux, veri setleri, hata mesajları... Bir de hayatın kendi debug edilmemiş tarafları.</p>
+        <p>Instagram'da her Çarşamba hatalarımı debug edeceğim. Ama anlatmadıklarım var. Onları gizli debug defterimde tutuyorum.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#form">Defteri almak için formu doldur</a>
+          <a class="button button-secondary" href="https://www.instagram.com/eres_biotech/" target="_blank" rel="noopener">Instagram'da hikâyeyi takip et</a>
+        </div>
+      </div>
+
+      <div class="debug-stage" aria-label="Mira'nın debug çalışma alanı">
+        <div class="editor-window hero-editor">
+          <div class="window-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-amber"></span>
+            <span class="dot dot-green"></span>
+            <strong>~/mira/gizli-debug-defteri/init.py</strong>
+          </div>
+          <pre><code><span class="line">01</span><span class="token-key">mira</span> = {
+<span class="line">02</span>    <span class="token-string">"hedef"</span>: <span class="token-string">"biyoinformatik öğrenmek"</span>,
+<span class="line">03</span>    <span class="token-string">"durum"</span>: <span class="token-string">"biraz panik, biraz merak"</span>,
+<span class="line">04</span>    <span class="token-string">"eski_güvenli_alan"</span>: <span class="token-string">"laboratuvar"</span>,
+<span class="line">05</span>    <span class="token-string">"yeni_yol"</span>: <span class="token-string">"veri"</span>,
+<span class="line">06</span>    <span class="token-string">"hata_mesaji"</span>: <span class="token-warning">"NeredenBaslayacagimHatasi"</span>
+<span class="line">07</span>}
+<span class="line">08</span>
+<span class="line">09</span><span class="token-fn">print</span>(<span class="token-string">"Kod çalışmadı. Hikâye devam ediyor."</span>)</code></pre>
+        </div>
+        <div class="lab-note floating-card">
+          <span>lab notebook</span>
+          <strong>sample_id: MIRA_001</strong>
+          <small>unresolved variables detected</small>
+        </div>
+        <div class="terminal-card floating-card">
+          <span>debug log</span>
+          <code>warning: path_changed</code>
+          <code>old_path: lab</code>
+          <code>new_path: data</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section split-section" id="defter">
+      <div>
+        <p class="eyebrow">Mira'nın alanı</p>
+        <h2>Burası klasik bir PDF indirme sayfası değil.</h2>
+        <p>Burası benim küçük debug alanım. Kodlarım, kaygılarım, eski laboratuvar notlarım ve biyoinformatiğe başlarken kendime yazdığım küçük hatırlatmalar burada duruyor.</p>
+        <div class="note-grid">
+          <article>Laboratuvar eski güvenli alanım.</article>
+          <article>Veri yeni dilim.</article>
+          <article>Hata mesajları bazen düşündüğüm kadar korkutucu değil.</article>
+          <article>Her Çarşamba Instagram'da yeni bir hata geliyor.</article>
+        </div>
+      </div>
+      <div class="editor-window compact-editor">
+        <div class="window-bar">
+          <span class="dot dot-green"></span>
+          <strong>old_path_vs_new_path.py</strong>
+        </div>
+        <pre><code><span class="line">01</span><span class="token-key">ex</span> = <span class="token-string">"laboratuvar"</span>
+<span class="line">02</span><span class="token-key">new_path</span> = <span class="token-string">"biyoinformatik"</span>
+<span class="line">03</span>
+<span class="line">04</span><span class="token-flow">if</span> ex == <span class="token-string">"laboratuvar"</span>:
+<span class="line">05</span>    <span class="token-fn">print</span>(<span class="token-string">"Tanıdık. Güvenli. Biraz da nostaljik."</span>)
+<span class="line">06</span>
+<span class="line">07</span><span class="token-flow">if</span> new_path == <span class="token-string">"biyoinformatik"</span>:
+<span class="line">08</span>    <span class="token-fn">print</span>(<span class="token-string">"Ama veriyi okumayı öğrenmem gerekiyor."</span>)</code></pre>
+      </div>
+    </section>
+
+    <section class="content-section notebook-section">
+      <div class="section-heading">
+        <p class="eyebrow">İçerik</p>
+        <h2>Gizli Debug Defteri'nde ne var?</h2>
+        <p>Instagram'da hikâyemin görünen tarafını anlatacağım. Bu defterde ise biraz daha iç ses var.</p>
+      </div>
+      <div class="feature-grid">
+        <ul class="debug-list">
+          <li>Laboratuvarla eski bağım</li>
+          <li>Biyoinformatiğe başlama kaygım</li>
+          <li>Python / R / Linux korkusu</li>
+          <li>ObjectNotFound: özgüven</li>
+          <li>GEO ve ilk veri seti paniği</li>
+        </ul>
+        <ul class="debug-list">
+          <li>Metadata, script düzeni ve grafik yorumlama notları</li>
+          <li>Küçük kod kartları</li>
+          <li>Debug notları</li>
+          <li>Instagram'da anlatmadığım birkaç iç değişken</li>
+        </ul>
+        <div class="editor-window mini-editor">
+          <div class="window-bar">
+            <span class="dot dot-amber"></span>
+            <strong>hidden_notes.py</strong>
+          </div>
+          <pre><code>hidden_notes = [
+  "ExLabDetected",
+  "NeredenBaslayacagimHatasi",
+  "ObjectNotFound: özgüven",
+  "AssumptionOverflow",
+  "FirstDatasetAnxiety",
+  "PlotGuzelAma"
+]</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section timeline-section">
+      <div>
+        <p class="eyebrow">Debug Çarşambası</p>
+        <h2>Her Çarşamba yeni bir hata mesajı geliyor.</h2>
+        <p>Bu defter benim başlangıç notlarım. Ama asıl hikâye Instagram'da akacak. Doktora yolculuğum, ilk teknik hatalarım, beklenmeyen değişkenlerim ve bazen çalışınca daha da karışan kodlarım orada.</p>
+        <p>Yeni bölümleri kaçırmamak için Instagram'da Debug Çarşambası bildirimlerini açabilirsiniz.</p>
+        <a class="button button-secondary" href="https://www.instagram.com/eres_biotech/" target="_blank" rel="noopener">Instagram'da takip et</a>
+      </div>
+      <div class="teaser-stack">
+        <article>Yakında: İlk hata daha kod yazmadan geliyor.</article>
+        <article>Yakında: Tanımsız bir değişken sisteme girecek.</article>
+        <article>Yakında: ObjectNotFound sadece veriyle ilgili olmayacak.</article>
+        <article>Yeni bölüm her Çarşamba.</article>
+      </div>
+    </section>
+
+    <section class="content-section form-section" id="form">
+      <div class="form-intro">
+        <p class="eyebrow">PDF indir</p>
+        <h2>Gizli Debug Defteri'ni indirmek ister misin?</h2>
+        <p>E-postanı bırak, defteri göndereyim. İstersen bana kendi hata mesajını da yaz. Teknik olabilir. Kişisel olabilir. "Nereden başlayacağımı bilmiyorum" da gayet geçerli.</p>
+        <div class="editor-window tiny-editor">
+          <div class="window-bar">
+            <span class="dot dot-green"></span>
+            <strong>download.py</strong>
+          </div>
+          <pre><code><span class="token-flow">if</span> merak_ediyorsan:
+    <span class="token-fn">download</span>(<span class="token-string">"miranin-debug-defteri.pdf"</span>)</code></pre>
+        </div>
+      </div>
+
+      <div class="google-form-shell" aria-label="Mira'nın Debug Defteri Google Formu">
+        <div class="window-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-amber"></span>
+          <span class="dot dot-green"></span>
+          <strong>~/mira/gizli-debug-defteri/form_embed.html</strong>
+        </div>
+        <div class="google-form-inner">
+          <iframe class="google-form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeZti9meZhBmc3YA8oQNeYsScj8tsJWkFDT-GKXXmxVJVRjow/viewform?embedded=true" width="640" height="2270" frameborder="0" marginheight="0" marginwidth="0" title="Mira'nın Debug Defteri başvuru formu">Yükleniyor...</iframe>
+        </div>
+        <p class="form-footnote">PDF e-posta adresine gönderilecek. Formdaki bazı alanlar opsiyonel. Mira da her değişkeni ilk günden tanımlayamadı.</p>
+        <p class="form-fallback">Form açılmazsa <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZti9meZhBmc3YA8oQNeYsScj8tsJWkFDT-GKXXmxVJVRjow/viewform?usp=dialog" target="_blank" rel="noopener">buradan yeni sekmede açabilirsiniz</a>.</p>
+      </div>
+    </section>
+
+    <section class="content-section academy-section">
+      <div>
+        <p class="eyebrow">ERES Akademi</p>
+        <h2>Biyoinformatik öğrenmek tek başına debug etmek zorunda değil.</h2>
+        <p>Mira'nın defterindeki başlıklar size tanıdık geldiyse, ERES Biyoinformatik Akademi'de biyoinformatiği uygulama odaklı eğitimlerle adım adım çalışabilirsiniz.</p>
+        <a class="button button-primary" href="https://akademi.eresbiotech.com/" target="_blank" rel="noopener">Biyoinformatik eğitimlerini incele</a>
+      </div>
+      <div class="support-grid">
+        <article>Kod kartları</article>
+        <article>Script dosyaları</article>
+        <article>Püf noktalar</article>
+        <article>Mini quizler</article>
+        <article>Hata çözüm notları</article>
+        <article>Tekrar izlenebilir asenkron dersler</article>
+        <article>Dijital doğrulanabilir sertifika</article>
+      </div>
+    </section>
+
+    <section class="content-section closing-section">
+      <div class="editor-window closing-editor">
+        <div class="window-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-amber"></span>
+          <span class="dot dot-green"></span>
+          <strong>closing_debug.py</strong>
+        </div>
+        <pre><code><span class="token-flow">while</span> hata_mesaji:
+    mira.debug()
+    mira.learn()
+
+<span class="token-fn">print</span>(<span class="token-string">"Kod çalışmadı. Hikâye devam ediyor."</span>)</code></pre>
+      </div>
+      <div>
+        <p class="eyebrow">Kapanış</p>
+        <h2>Kod çalışmadıysa panik yok.</h2>
+        <p>Ben de buradan başlıyorum. Laboratuvarı özleyerek, veriden biraz çekinerek, hata mesajlarını bazen fazla kişisel algılayarak... Ama her Çarşamba bir hata mesajını debug edeceğim.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#form">Defteri almak için formu doldur</a>
+          <a class="button button-secondary" href="https://www.instagram.com/eres_biotech/" target="_blank" rel="noopener">Instagram'da bildirimleri aç</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>ERES Biyoinformatik Akademi</span>
+    <span>Kod çalışmadı. Hikâye devam ediyor.</span>
+  </footer>
+</body>
+</html>
