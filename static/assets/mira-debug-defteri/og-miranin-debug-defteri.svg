@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#061525"/>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.22">
+    <path d="M0 96H1200M0 192H1200M0 288H1200M0 384H1200M0 480H1200M0 576H1200M96 0V630M192 0V630M288 0V630M384 0V630M480 0V630M576 0V630M672 0V630M768 0V630M864 0V630M960 0V630M1056 0V630" stroke="#8AF7FF" stroke-width="1"/>
+  </g>
+  <rect x="84" y="72" width="650" height="440" rx="24" fill="#07192B" stroke="#30D6C3" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="84" y="72" width="650" height="58" rx="24" fill="#03101D"/>
+  <circle cx="123" cy="101" r="9" fill="#FF6B65"/>
+  <circle cx="151" cy="101" r="9" fill="#FFB35C"/>
+  <circle cx="179" cy="101" r="9" fill="#30D6C3"/>
+  <text x="214" y="107" fill="#A8BCC9" font-family="SF Mono, Menlo, monospace" font-size="18" font-weight="700">~/mira/gizli-debug-defteri/init.py</text>
+  <text x="124" y="184" fill="#8AF7FF" font-family="SF Mono, Menlo, monospace" font-size="24" font-weight="700">mira.current_error =</text>
+  <text x="124" y="229" fill="#FFB35C" font-family="SF Mono, Menlo, monospace" font-size="24" font-weight="700">"NeredenBaslayacagimHatasi"</text>
+  <text x="124" y="306" fill="#D4F6AD" font-family="SF Mono, Menlo, monospace" font-size="24" font-weight="700">print("Kod çalışmadı.")</text>
+  <text x="124" y="354" fill="#D4F6AD" font-family="SF Mono, Menlo, monospace" font-size="24" font-weight="700">print("Hikâye devam ediyor.")</text>
+  <rect x="786" y="98" width="300" height="176" rx="20" fill="#0A2838" stroke="#8AF7FF" stroke-opacity="0.25"/>
+  <text x="820" y="150" fill="#A8BCC9" font-family="SF Mono, Menlo, monospace" font-size="17" font-weight="700">lab notebook</text>
+  <text x="820" y="198" fill="#FFB35C" font-family="Poppins, Arial, sans-serif" font-size="28" font-weight="800">sample_id:</text>
+  <text x="820" y="235" fill="#FFFFFF" font-family="Poppins, Arial, sans-serif" font-size="32" font-weight="900">MIRA_001</text>
+  <text x="84" y="575" fill="#FFFFFF" font-family="Poppins, Arial, sans-serif" font-size="70" font-weight="900">Mira'nın Debug Defteri</text>
+  <text x="790" y="374" fill="#FFFFFF" font-family="Poppins, Arial, sans-serif" font-size="46" font-weight="900">Kod çalışmadı.</text>
+  <text x="790" y="428" fill="#30D6C3" font-family="Poppins, Arial, sans-serif" font-size="46" font-weight="900">Hikâye devam ediyor.</text>
+  <text x="790" y="492" fill="#A8BCC9" font-family="Lato, Arial, sans-serif" font-size="24" font-weight="700">ERES Biyoinformatik Akademi</text>
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(970 90) rotate(139.585) scale(838 725)">
+      <stop stop-color="#0B5A61"/>
+      <stop offset="0.45" stop-color="#08233C"/>
+      <stop offset="1" stop-color="#061525"/>
+    </radialGradient>
+  </defs>
+</svg>
