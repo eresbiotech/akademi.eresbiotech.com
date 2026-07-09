@@ -1,0 +1,39 @@
+<section class="cookie-banner" data-cookie-banner hidden aria-label="Çerez tercihleri">
+  <div class="cookie-banner-copy">
+    <strong>Çerez tercihleri</strong>
+    <p>Zorunlu çerezler siteyi çalıştırmak için kullanılır. Analitik ve pazarlama çerezleri için açık rızanızı soruyoruz.</p>
+  </div>
+  <div class="cookie-banner-actions">
+    <button type="button" class="cookie-button cookie-button-secondary" data-cookie-preferences data-event="cookie_preferences">Tercihlerimi Yönet</button>
+    <button type="button" class="cookie-button cookie-button-secondary" data-cookie-reject data-event="cookie_reject">Reddet</button>
+    <button type="button" class="cookie-button" data-cookie-accept data-event="cookie_accept">Kabul Et</button>
+  </div>
+</section>
+
+<dialog class="cookie-preferences" data-cookie-dialog aria-labelledby="cookie-preferences-title">
+  <form method="dialog" data-cookie-form>
+    <div class="cookie-dialog-header">
+      <div>
+        <p class="eyebrow">KVKK ve çerez tercihi</p>
+        <h2 id="cookie-preferences-title">Çerez tercihlerinizi yönetin</h2>
+      </div>
+      <button type="button" class="cookie-close" data-cookie-close aria-label="Tercih penceresini kapat">×</button>
+    </div>
+    <label class="cookie-option cookie-option-disabled">
+      <input type="checkbox" checked disabled>
+      <span><strong>Zorunlu çerezler</strong> Site güvenliği, tercihlerin saklanması ve temel işlevler için gereklidir.</span>
+    </label>
+    <label class="cookie-option">
+      <input type="checkbox" name="analytics">
+      <span><strong>Analitik çerezler</strong> Sayfa performansını ve kampanya trafiğini ölçmemize yardımcı olur.</span>
+    </label>
+    <label class="cookie-option">
+      <input type="checkbox" name="marketing">
+      <span><strong>Pazarlama çerezleri</strong> Reklam ve yeniden pazarlama ölçümü için kullanılabilir.</span>
+    </label>
+    <div class="cookie-dialog-actions">
+      <button type="button" class="cookie-button cookie-button-secondary" data-cookie-reject data-event="cookie_reject">Tümünü Reddet</button>
+      <button type="submit" class="cookie-button">Tercihleri Kaydet</button>
+    </div>
+  </form>
+</dialog>

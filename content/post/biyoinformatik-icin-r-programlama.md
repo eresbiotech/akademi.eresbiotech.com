@@ -108,4 +108,4 @@ Eğitimle birlikte tüm dersleri kapsayan ana R script, ders bazlı R script dos
 
 R öğrenmeyi ertelemeyin; biyoinformatik veriyle çalışmaya düzenli bir başlangıç yapın.
 
-Kayıt adımında kartınıza/bankanıza uygun taksit seçenekleri otomatik olarak görüntülenir. Eğitime kendi hızınızda başlayabilir ve yaz döneminde düzenli bir çalışma planı oluşturabilirsiniz.
+Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir. Eğitime kendi hızınızda başlayabilir ve yaz döneminde düzenli bir çalışma planı oluşturabilirsiniz.

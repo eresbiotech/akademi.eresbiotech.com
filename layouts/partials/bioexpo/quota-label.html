@@ -9,9 +9,10 @@
   {{- $filled = $quota -}}
 {{- end -}}
 {{- if ge $filled $quota -}}
-Destekli kontenjan doldu — normal kayıt devam ediyor
+Destekli kontenjan doldu
 {{- else if gt $filled 0 -}}
-{{ $filled }}/{{ $quota }} destekli kontenjan doldu
+{{- $remaining := sub $quota $filled -}}
+Son {{ $remaining }} kontenjan · {{ $filled }}/{{ $quota }} doldu
 {{- else -}}
 {{ $quota }} destekli kontenjan açıldı
 {{- end -}}

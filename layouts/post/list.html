@@ -13,46 +13,88 @@
 <section class="container page-shell">
   <header class="page-header split-header post-index-hero">
     <div>
-      <p class="eyebrow">Destekli eğitim kataloğu</p>
-      <h1>Destekli biyoinformatik eğitimleri</h1>
-      <p class="lead">ERES Biyoinformatik Akademi'de her aktif eğitim için 10 kişilik %50 destekli kayıt kontenjanı açıldı. Kendi hızınızda ilerleyebileceğiniz, ödev ve quizlerle desteklenen, dijital sertifikalı eğitimleri karşılaştırarak size en uygun öğrenme yolunu seçebilirsiniz.</p>
+      <p class="eyebrow">Eğitim kataloğu</p>
+      <h1>Biyoinformatik eğitimleri</h1>
+      <p class="lead">BioExpo 2026 desteğiyle seçili ERES Biyoinformatik Akademi eğitimlerinde sınırlı sayıda %50 destekli kayıt fırsatı açık.</p>
       <div class="trust-row" aria-label="Katalog özellikleri">
-        <span>Her eğitimde 10 destekli kontenjan</span>
         <span>%50 destekli kayıt</span>
         <span>Asenkron ve tekrar izlenebilir</span>
         <span>Ödev & quiz destekli</span>
         <span>Dijital doğrulanabilir sertifika</span>
       </div>
       <div class="catalog-support-note">
-        <strong>Destekli kayıt dönemi</strong>
-        <span>Destekli kayıt dönemi 16 Temmuz 2026'ya kadar veya ilgili eğitimdeki 10 destekli kontenjan dolana kadar geçerlidir.</span>
-        <span>Doluluk bilgisi yalnızca doğrulanmış satış veya rezervasyon verisiyle güncellenir.</span>
+        <strong>Son destekli kontenjanlar açık</strong>
+        <span>Giriş: Son 3 kontenjan · R: Son 4 kontenjan · Protein: Son 5 kontenjan.</span>
+        <span>Payhip ve iyzico güvenli ödeme altyapısı kullanılır. Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir.</span>
       </div>
-      <div class="catalog-student-login-note">
-        <span>Daha önce kayıt olduysanız derslerinize öğrenci panelinizden ulaşabilirsiniz.</span>
-        <a href="{{ "/ders-giris/" | relURL }}">Derse Giriş</a>
+      <div class="campaign-urgency-banner catalog-urgency-banner">
+        <p class="urgency-kicker">BioExpo 2026 destekli kayıt</p>
+        <h2>%50 destekli son kontenjanlar açık.</h2>
+        <p>Önce size uygun başlangıcı seçin, sonra eğitim içeriğini ve ödeme seçeneklerini inceleyin.</p>
+        <a class="support-cta" href="{{ "/" | relURL }}#karar-yollari" data-event="hero_primary_cta_click">Bana uygun eğitimi seç</a>
       </div>
     </div>
     <div class="hero-side">
       <span class="bioexpo-text-badge">Destekli kontenjan</span>
       <strong class="hero-panel-title">Öncelikli eğitim vitrini</strong>
       <span>R, temel biyoinformatik, NCBI, Ensembl, UCSC, scRNA-seq ve ileri analizler</span>
-      <a class="hero-action" href="#bioexpo-destekli-kontenjanlar" data-campaign="bioexpo2026" data-cta="catalog-hero" data-destination="course-cards" data-event="bioexpo_course_card_click">Destekli kontenjanları incele</a>
+      <a class="hero-action" href="#egitimler" data-event="other_courses_click">Kontenjanları gör</a>
     </div>
   </header>
 
-  <section id="bioexpo-destekli-kontenjanlar" class="catalog-section">
+  <section id="egitimler" class="catalog-section">
     <div class="section-heading">
       <p class="eyebrow">Öne çıkan eğitimler</p>
-      <h2>Destekli kontenjanı olan aktif eğitimler</h2>
-      <p>Bu bölümde yalnızca destekli kayıt kontenjanı açılan 7 aktif eğitim gösterilir.</p>
+      <h2>BioExpo 2026 destekli kayıtları açık eğitimler</h2>
     </div>
     <div class="card-grid catalog-grid">
       {{ range $priorityPosts }}
+        {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
         {{- $course := index $courses .File.BaseFileName -}}
-        {{- if $course -}}
-          {{ partial "bioexpo/course-card.html" (dict "page" . "course" $course "campaign" $campaign) }}
-        {{- end -}}
+        <article class="post-card course-card featured-card">
+          {{ with .Params.images }}
+            {{- $src := index . 0 -}}
+            {{- with resources.Get $src -}}
+              <img class="post-image" src="{{ .RelPermalink }}" alt="{{ $displayTitle }}">
+            {{- end -}}
+          {{ end }}
+          <div class="post-card-body">
+            <div class="badge-row">
+              <span class="badge">Kendi hızınızda</span>
+              <span class="badge">Asenkron eğitim</span>
+              <span class="badge">Video ders + ödev + quiz + dijital doğrulanabilir sertifika</span>
+              {{ partial "micro-credential-badges.html" . }}
+            </div>
+            <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
+            <p>{{ with $course }}{{ .card_description }}{{ else }}{{ .Description }}{{ end }}</p>
+            {{ if and (eq .Params.course_status "active") .Params.student_checkout_url .Params.employee_checkout_url }}
+              <p class="course-availability-note">Öğrenci ve çalışan destekli kayıt seçenekleri mevcut</p>
+              <div class="catalog-price-summary" aria-label="Destekli ücret özeti">
+                {{ if .Params.student_price }}
+                  <p>
+                    <span>Öğrenci destekli kayıt</span>
+                    <strong>{{ .Params.student_price }}</strong>
+                  </p>
+                {{ end }}
+                {{ if .Params.employee_price }}
+                  <p>
+                    <span>Çalışan destekli kayıt</span>
+                    <strong>{{ .Params.employee_price }}</strong>
+                  </p>
+                {{ end }}
+                <small>Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir.</small>
+              </div>
+              {{ with $course }}
+                <p class="card-urgency-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" .) }}.</p>
+              {{ else }}
+                <p class="card-urgency-line">Son 4–5 destekli kontenjan.</p>
+              {{ end }}
+            {{ end }}
+          </div>
+          <div class="catalog-card-actions">
+            <a class="card-link" href="{{ .RelPermalink }}" data-event="other_courses_click" data-course="{{ .File.BaseFileName }}">İçeriği incele</a>
+          </div>
+        </article>
       {{ end }}
     </div>
   </section>
@@ -83,6 +125,7 @@
                   <span class="badge">Arşiv</span>
                   <span class="badge">Hazırlık içeriği</span>
                 {{ end }}
+                {{ partial "micro-credential-badges.html" . }}
               </div>
               <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
               {{ with .Description }}
