@@ -1,0 +1,36 @@
+{{- with site.Params.metaPixelId -}}
+  {{- $pixelID := . | printf "%s" -}}
+  {{- if $pixelID -}}
+<script>
+(function (window, document) {
+  var pixelId = "{{ $pixelID }}";
+  if (!pixelId) return;
+
+  window.ERESMetaPixel = window.ERESMetaPixel || {};
+  window.ERESMetaPixel.pixelId = pixelId;
+  window.ERESMetaPixel.initialized = false;
+
+  window.ERESMetaPixel.init = function () {
+    if (window.ERESMetaPixel.initialized || !pixelId) return false;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq("init", pixelId);
+    window.ERESMetaPixel.initialized = true;
+    return true;
+  };
+
+  window.ERESMetaPixel.track = function (eventType, eventName, payload) {
+    if (!window.ERESMetaPixel.initialized || typeof window.fbq !== "function") return;
+    if (eventType === "custom") {
+      window.fbq("trackCustom", eventName, payload || {});
+      return;
+    }
+    window.fbq("track", eventName, payload || {});
+  };
+})(window, document);
+</script>
+  {{- end -}}
+{{- end -}}
