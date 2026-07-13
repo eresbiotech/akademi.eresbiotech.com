@@ -22,7 +22,7 @@ duration = "8 saat"
 session_count = "4 canlı oturum × 2 saat"
 platform = "Google Meet"
 capacity = "20 kişi"
-date_note = "Tarih ve saatler 14 Temmuz 2026 Salı günü açıklanacaktır."
+date_note = "Canlı oturumlar 8–9 Ağustos 2026 tarihlerinde gerçekleştirilecektir."
 
 categories = [
   "Dijital Araştırma Varlıkları",
