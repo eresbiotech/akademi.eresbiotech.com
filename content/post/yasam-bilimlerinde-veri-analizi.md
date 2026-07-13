@@ -2,7 +2,7 @@
 author = "ERES Biyoteknoloji"
 title = "Yaşam Bilimlerinde Veri Analizi"
 date = "2026-07-13"
-description = "Python ve Pandas ile yaşam bilimleri verisini okuma, temizleme, görselleştirme ve yorumlama için dijital araştırma varlıkları ve 6 saatlik Canlı Veri Vaka Laboratuvarı."
+description = "Python ve Pandas ile yaşam bilimleri verisini okuma, temizleme, görselleştirme ve yorumlama için dijital araştırma varlıkları ve 8 saatlik Canlı Veri Vaka Laboratuvarı."
 
 layout = "live-lab"
 slug = "yasam-bilimlerinde-veri-analizi"
@@ -18,8 +18,8 @@ student_plan_label = "Öğrenci"
 employee_plan_label = "Profesyonel"
 
 scientific_lead = "Dr. Nida Tokaç Er"
-duration = "6 saat"
-session_count = "3 canlı oturum × 2 saat"
+duration = "8 saat"
+session_count = "4 canlı oturum × 2 saat"
 platform = "Google Meet"
 capacity = "20 kişi"
 date_note = "Tarih ve saatler 14 Temmuz 2026 Salı günü açıklanacaktır."
@@ -56,9 +56,13 @@ Google Colab çalışma ortamı, CSV dosyaları, değişken türleri, veri yapı
 
 Eksik değerler, veri tipleri, filtreleme, gruplama, özet istatistikler ve düzenli veri yapısı bir yaşam bilimleri veri vakası üzerinden incelenir.
 
-### 3. Oturum — Görselleştirmek ve yorumlamak
+### 3. Oturum — Görselleştirmek
 
-Grafik seçimi, temel görselleştirmeler, araştırma sorusuyla ilişki ve uçtan uca kısa bir yaşam bilimleri veri vakası üzerinde çalışılır.
+Grafik seçimi, temel görselleştirmeler ve uygun görsel anlatım yaklaşımı yaşam bilimleri verisi üzerinden ele alınır.
+
+### 4. Oturum — Yorumlamak ve uçtan uca mini vaka uygulaması
+
+Araştırma sorusuyla ilişki kurma, çıktıların yorumlanması ve uçtan uca kısa bir yaşam bilimleri veri vakası üzerinde çalışma gerçekleştirilir.
 
 ## Teknik gereksinimler
 
