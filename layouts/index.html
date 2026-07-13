@@ -3,6 +3,7 @@
 {{- $introCourse := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $rCourse := site.GetPage "/post/biyoinformatik-icin-r-programlama" -}}
 {{- $proteinCourse := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
+{{- $nidaLiveLab := site.GetPage "/post/yasam-bilimlerinde-veri-analizi" -}}
 {{- $otherCourses := slice
   (dict "slug" "biyoinformatik-veritabanlari-araclar-egitimi" "title" "Temel Biyoinformatik Araçlar ve Veritabanları" "description" "NCBI, UniProt, PDB ve BLAST gibi kaynakları daha bilinçli okumak için." "quota" "Son 5 destekli kontenjan")
   (dict "slug" "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "title" "NCBI, Ensembl ve UCSC Genom Tarayıcısı" "description" "Gen, transkript, varyant ve genom bölgelerini karşılaştırmalı incelemek için." "quota" "Son 4 destekli kontenjan")
@@ -63,6 +64,42 @@
       <small>Şifrenizi hatırlamıyorsanız giriş ekranındaki "Forgot your password?" bağlantısını kullanabilirsiniz.</small>
     </div>
     <a class="support-cta" href="{{ "/ders-giris/" | relURL }}">İçeriklere Erişim</a>
+  </div>
+</section>
+
+<section class="container home-section research-system-launch" aria-labelledby="research-system-title">
+  <div class="research-system-launch-grid">
+    <div class="research-system-copy">
+      <p class="eyebrow">ERES’in yeni dijital ürün sistemi</p>
+      <h2 id="research-system-title">Bilgi gürültüsünden araştırma sistemine.</h2>
+      <p>Manual, makale, video, kod ve yöntem notları arasında dağılmış bilimsel bilgiyi; belirli araştırma problemleri etrafında kullanılabilir çalışma sistemlerine dönüştürüyoruz.</p>
+      <p>Mevcut açıklamalı içeriklerimizi; vaka bağlamları, dijital çalışma dosyaları, bilimsel karar araçları ve kendi araştırmanıza aktarım kaynaklarıyla kademeli olarak genişletiyoruz.</p>
+      <div class="research-system-steps" aria-label="Araştırma sistemi adımları">
+        <span>Vaka</span>
+        <span>Bilimsel çerçeve</span>
+        <span>Uygulama</span>
+        <span>Araç</span>
+        <span>Güvence</span>
+        <span>Aktarım</span>
+      </div>
+    </div>
+
+    <article class="live-lab-home-card">
+      <p class="live-lab-card-kicker">Yeni canlı araştırma çalışması</p>
+      <h3>Yaşam Bilimlerinde Veri Analizi</h3>
+      <p>Dijital araştırma varlıkları ve 6 saatlik Canlı Veri Vaka Laboratuvarı ile yaşam bilimleri verisini Python ve Pandas üzerinden sistemli bir çalışma akışına dönüştürün.</p>
+      <p><strong>Bilimsel Yürütücü: Dr. Nida Tokaç Er</strong></p>
+      <ul class="live-lab-home-features">
+        <li>3 oturum × 2 saat</li>
+        <li>Google Meet</li>
+        <li>20 kişi</li>
+        <li>Kodlama önkoşulu yok</li>
+      </ul>
+      <p class="live-lab-home-price">Öğrenci 2.850 TL · Profesyonel 3.850 TL</p>
+      <p>Tarih ve saatler 14 Temmuz 2026 Salı günü açıklanacaktır.</p>
+      <p class="live-lab-campaign-note">BioExpo 2026 destekli kayıt kampanyasına dahil değildir.</p>
+      <a class="card-link" href="{{ with $nidaLiveLab }}{{ .RelPermalink }}{{ else }}{{ "/post/yasam-bilimlerinde-veri-analizi/" | relURL }}{{ end }}" data-event="other_courses_click" data-course="yasam-bilimlerinde-veri-analizi">Çalışmayı inceleyin</a>
+    </article>
   </div>
 </section>
 

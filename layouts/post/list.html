@@ -2,6 +2,7 @@
 {{- $campaign := site.Data.bioexpo_campaign.campaign -}}
 {{- $courses := site.Data.bioexpo_campaign.courses -}}
 {{- $posts := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
+{{- $liveLabPosts := where $posts "Params.product_type" "live_lab" -}}
 {{- $prioritySlugs := $campaign.priority_slugs -}}
 {{- $priorityPosts := slice -}}
 {{- range $prioritySlugs -}}
@@ -40,6 +41,34 @@
       <a class="hero-action" href="#egitimler" data-event="other_courses_click">Kontenjanları gör</a>
     </div>
   </header>
+
+  <section class="catalog-section live-lab-catalog-section" aria-labelledby="live-lab-catalog-title">
+    <div class="section-heading">
+      <p class="eyebrow">Canlı araştırma çalışmaları</p>
+      <h2 id="live-lab-catalog-title">Canlı Veri Vaka Laboratuvarları</h2>
+      <p>Dijital çalışma dosyalarını ve canlı vaka uygulamalarını aynı sistemde bir araya getiren sınırlı katılımlı araştırma çalışmaları.</p>
+    </div>
+    <div class="live-lab-catalog-grid">
+      {{ range $liveLabPosts }}
+        <article class="live-lab-catalog-card">
+          <div class="badge-row">
+            <span class="badge">Canlı vaka laboratuvarı</span>
+            <span class="badge">3 oturum × 2 saat</span>
+            <span class="badge">Google Meet</span>
+          </div>
+          <h3>Yaşam Bilimlerinde Veri Analizi</h3>
+          <p>Python ve Pandas ile yaşam bilimleri verisini okuma, temizleme, görselleştirme ve yorumlama için dijital araştırma varlıkları ve canlı vaka uygulamaları.</p>
+          <div class="live-lab-catalog-prices" aria-label="Erişim ücretleri">
+            <strong>Öğrenci 2.850 TL</strong>
+            <strong>Profesyonel 3.850 TL</strong>
+          </div>
+          <p>Tarih ve saatler 14 Temmuz 2026 Salı günü açıklanacaktır.</p>
+          <p class="live-lab-campaign-note">BioExpo destekli kayıt kampanyasına dahil değildir.</p>
+          <a class="card-link" href="{{ .RelPermalink }}" data-event="other_courses_click" data-course="yasam-bilimlerinde-veri-analizi">Çalışmayı inceleyin</a>
+        </article>
+      {{ end }}
+    </div>
+  </section>
 
   <section id="egitimler" class="catalog-section">
     <div class="section-heading">
@@ -103,7 +132,7 @@
     </div>
     <div class="card-grid archive-grid">
       {{ range $posts.ByDate.Reverse }}
-        {{- if not (in $prioritySlugs .File.BaseFileName) -}}
+        {{- if and (not (in $prioritySlugs .File.BaseFileName)) (ne .Params.product_type "live_lab") -}}
           {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
           <article class="post-card course-card archive-card">
             {{ with .Params.images }}

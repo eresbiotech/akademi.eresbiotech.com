@@ -1,0 +1,69 @@
+{{ define "main" }}
+{{- $checkoutURL := .Params.checkout_url -}}
+<article
+  class="container page-shell live-lab-page"
+  data-meta-content-name="Yaşam Bilimlerinde Veri Analizi"
+  data-meta-content-category="Dijital Araştırma Varlığı"
+>
+  <header class="page-header live-lab-hero">
+    <p class="eyebrow">Dijital Araştırma Varlıkları ve Canlı Veri Vaka Laboratuvarı</p>
+    <h1>Yaşam Bilimlerinde Veri Analizi</h1>
+    <p class="live-lab-lead">Yaşam bilimleri verisini Python ve Pandas ile okumak, düzenlemek, kontrol etmek, görselleştirmek ve araştırma sorusuyla ilişkilendirmek için hazırlanmış bütünleşik bir çalışma sistemi.</p>
+    <p class="live-lab-scientific-lead"><strong>Bilimsel Yürütücü:</strong> {{ .Params.scientific_lead }}</p>
+    <p class="live-lab-campaign-note">Bu çalışma BioExpo 2026 destekli kayıt kampanyasına dahil değildir.</p>
+  </header>
+
+  <section class="live-lab-meta-grid" aria-label="Çalışma bilgileri">
+    <article class="live-lab-meta-card">
+      <strong>6 saat</strong>
+      <span>3 canlı oturum × 2 saat</span>
+    </article>
+    <article class="live-lab-meta-card">
+      <strong>Google Meet</strong>
+      <span>Canlı vaka laboratuvarı</span>
+    </article>
+    <article class="live-lab-meta-card">
+      <strong>20 kişi</strong>
+      <span>Operasyonel katılım sınırı</span>
+    </article>
+    <article class="live-lab-meta-card">
+      <strong>Kurulum gerekmez</strong>
+      <span>Kodlama önkoşulu yok</span>
+    </article>
+  </section>
+
+  <section class="live-lab-date-note" aria-labelledby="live-lab-date-title">
+    <h2 id="live-lab-date-title">Tarih ve saatler 14 Temmuz 2026 Salı günü açıklanacaktır.</h2>
+    <p>Canlı oturum bağlantıları ve hazırlık bilgileri, satın alma sırasında kullanılan e-posta adresi üzerinden paylaşılacaktır.</p>
+  </section>
+
+  <section class="live-lab-checkout" aria-labelledby="live-lab-checkout-title">
+    <div class="section-heading">
+      <p class="eyebrow">Erişim seçenekleri</p>
+      <h2 id="live-lab-checkout-title">Dijital araştırma varlıklarına ve canlı vaka oturumlarına erişin.</h2>
+    </div>
+    <div class="live-lab-price-grid">
+      <article class="live-lab-price-card">
+        <h3>Öğrenci erişimi</h3>
+        <strong>2.850 TL</strong>
+      </article>
+      <article class="live-lab-price-card">
+        <h3>Profesyonel erişim</h3>
+        <strong>3.850 TL</strong>
+      </article>
+    </div>
+    <a class="hero-action" href="{{ $checkoutURL }}" target="_blank" rel="noopener noreferrer" data-event="payhip_checkout_click" data-course="yasam-bilimlerinde-veri-analizi" data-plan="student_professional" data-payment-provider="payhip">Erişim Seçeneğinizi Belirleyin</a>
+    <p class="live-lab-checkout-note">Öğrenci veya profesyonel erişim seçeneğinizi güvenli ödeme sayfasında belirleyebilirsiniz.</p>
+  </section>
+
+  <section class="content-card prose live-lab-content">
+    {{ .Content }}
+  </section>
+
+  <section class="live-lab-closing">
+    <h2>Yaşam bilimleri verisiyle sistemli bir çalışma akışı kurun.</h2>
+    <p>Dijital araştırma varlıklarına ve üç oturumluk Canlı Veri Vaka Laboratuvarına tek ürün üzerinden erişin.</p>
+    <a class="hero-action" href="{{ $checkoutURL }}" target="_blank" rel="noopener noreferrer" data-event="payhip_checkout_click" data-course="yasam-bilimlerinde-veri-analizi" data-plan="student_professional" data-payment-provider="payhip">Canlı Veri Vaka Laboratuvarına Erişin</a>
+  </section>
+</article>
+{{ end }}
