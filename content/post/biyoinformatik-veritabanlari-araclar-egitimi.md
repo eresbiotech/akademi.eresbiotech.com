@@ -12,7 +12,6 @@ employee_price = "4.800 TL"
 student_plan_label = "Öğrenci"
 employee_plan_label = "Çalışan"
 course_status = "active"
-micro_credential_series = "Biyoinformatik Araçlar ve Veritabanları Mikro Yetkinlik Serisi"
 
 categories = [
     "themes",

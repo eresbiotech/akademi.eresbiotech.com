@@ -18,9 +18,8 @@
       <p class="lead">BioExpo 2026 desteğiyle seçili ERES Biyoinformatik Akademi eğitimlerinde sınırlı sayıda %50 destekli kayıt fırsatı açık.</p>
       <div class="trust-row" aria-label="Katalog özellikleri">
         <span>%50 destekli kayıt</span>
-        <span>Asenkron ve tekrar izlenebilir</span>
-        <span>Ödev & quiz destekli</span>
-        <span>Dijital doğrulanabilir sertifika</span>
+        <span>Açıklamalı uygulamalar</span>
+        <span>Tekrar erişilebilir içerik</span>
       </div>
       <div class="catalog-support-note">
         <strong>Son destekli kontenjanlar açık</strong>
@@ -60,9 +59,8 @@
           {{ end }}
           <div class="post-card-body">
             <div class="badge-row">
-              <span class="badge">Asenkron</span>
-              <span class="badge">Ödev / quiz</span>
-              <span class="badge">Sertifikalı</span>
+              <span class="badge">Açıklamalı uygulamalar</span>
+              <span class="badge">Tekrar erişilebilir içerik</span>
             </div>
             <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
             <p>{{ with $course }}{{ .card_description }}{{ else }}{{ .Description }}{{ end }}</p>
@@ -121,8 +119,8 @@
                 {{ else }}
                   <span class="badge">Arşiv</span>
                 {{ end }}
-                <span class="badge">Asenkron</span>
-                <span class="badge">Sertifikalı</span>
+                <span class="badge">Açıklamalı uygulamalar</span>
+                <span class="badge">Tekrar erişilebilir içerik</span>
               </div>
               <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
               {{ with .Description }}
