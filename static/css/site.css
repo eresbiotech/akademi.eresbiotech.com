@@ -423,6 +423,223 @@
   }
 }
 
+.bioexpo-final-days-banner {
+  background: #0f172a;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+}
+
+.bioexpo-final-days-inner {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  min-height: 52px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.bioexpo-final-days-inner strong {
+  font-size: 0.98rem;
+}
+
+.bioexpo-final-days-inner span {
+  color: rgba(255, 255, 255, 0.78);
+  flex: 1;
+  min-width: 180px;
+}
+
+.bioexpo-final-days-inner a {
+  background: #f8fafc;
+  border-radius: 6px;
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 900;
+  padding: 9px 12px;
+  white-space: nowrap;
+}
+
+.bioexpo-final-kicker,
+.bioexpo-final-quota {
+  background: #fef3c7;
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  border-radius: 6px;
+  color: #92400e;
+  display: inline-flex;
+  font-size: 0.76rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1.2;
+  padding: 6px 8px;
+  text-transform: uppercase;
+}
+
+.bioexpo-final-hero .lead {
+  max-width: 760px;
+}
+
+.bioexpo-quick-choice {
+  margin-top: clamp(28px, 5vw, 52px);
+}
+
+.bioexpo-quick-choice-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.bioexpo-final-campaign-card {
+  border-color: rgba(245, 158, 11, 0.34);
+}
+
+.bioexpo-final-price {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.bioexpo-final-price p {
+  align-items: baseline;
+  background: rgba(240, 253, 250, 0.65);
+  border: 1px solid rgba(13, 148, 136, 0.14);
+  border-radius: 6px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.bioexpo-final-price span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.bioexpo-final-price del {
+  color: #64748b;
+}
+
+.bioexpo-final-price strong {
+  color: #0f766e;
+  font-size: 1.2rem;
+}
+
+.bioexpo-course-card[data-remaining-slots="0"] {
+  opacity: 0.82;
+}
+
+.bioexpo-expired-state {
+  background: rgba(241, 245, 249, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 6px;
+  color: #475569;
+  font-weight: 850;
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.bioexpo-final-mobile-cta {
+  align-items: center;
+  background: rgba(15, 23, 42, 0.96);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  bottom: var(--bioexpo-cookie-offset, 0px);
+  box-shadow: 0 -12px 30px rgba(15, 23, 42, 0.18);
+  color: #fff;
+  display: none;
+  gap: 10px;
+  justify-content: space-between;
+  left: 0;
+  padding: 10px max(14px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+  position: fixed;
+  right: 0;
+  z-index: 20;
+}
+
+.bioexpo-final-mobile-cta span {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.bioexpo-final-mobile-cta a {
+  background: #f8fafc;
+  border-radius: 6px;
+  color: #0f172a;
+  font-size: 0.88rem;
+  font-weight: 950;
+  padding: 9px 11px;
+  text-align: center;
+}
+
+html[data-bioexpo-state="expired"] [data-bioexpo-active] {
+  display: none !important;
+}
+
+html[data-bioexpo-state="expired"] [data-bioexpo-expired] {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .bioexpo-final-days-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bioexpo-final-days-inner span {
+    min-width: 0;
+  }
+
+  .bioexpo-final-days-inner a {
+    width: 100%;
+  }
+
+  .bioexpo-quick-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bioexpo-final-price p {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .training-page {
+    padding-bottom: 82px;
+  }
+
+  .bioexpo-final-mobile-cta {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bioexpo-final-mobile-cta a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .quota-list a {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .quota-list strong {
+    font-size: 0.82rem;
+    line-height: 1.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bioexpo-final-days-banner *,
+  .bioexpo-final-mobile-cta * {
+    scroll-behavior: auto;
+  }
+}
+
 /* Live data lab and streamlined standard product flow. */
 .live-lab-page {
   display: grid;

@@ -23,14 +23,14 @@
         <span>Tekrar erişilebilir içerik</span>
       </div>
       <div class="catalog-support-note">
-        <strong>Son destekli kontenjanlar açık</strong>
-        <span>Giriş: Son 3 kontenjan · R: Son 4 kontenjan · Protein: Son 5 kontenjan.</span>
+        <strong data-bioexpo-state-label>SON 2 GÜN</strong>
+        <span>BioExpo %50 destekli kayıt dönemi 16 Temmuz saat 23.59’da kapanıyor.</span>
         <span>Payhip ve iyzico güvenli ödeme altyapısı kullanılır. Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir.</span>
       </div>
       <div class="campaign-urgency-banner catalog-urgency-banner">
-        <p class="urgency-kicker">BioExpo 2026 destekli kayıt</p>
-        <h2>%50 destekli son kontenjanlar açık.</h2>
-        <p>Önce size uygun başlangıcı seçin, sonra eğitim içeriğini ve ödeme seçeneklerini inceleyin.</p>
+        <p class="urgency-kicker">16 Temmuz saat 23.59’da sona eriyor</p>
+        <h2>BioExpo %50 destekli kayıtlarda son 2 gün.</h2>
+        <p>Önce size uygun başlangıcı seçin; destekli kontenjanlar son 1-2 seviyesinde.</p>
         <a class="support-cta" href="{{ "/" | relURL }}#karar-yollari" data-event="hero_primary_cta_click">Bana uygun eğitimi seç</a>
       </div>
     </div>
@@ -88,6 +88,10 @@
           {{ end }}
           <div class="post-card-body">
             <div class="badge-row">
+              {{ with $course }}
+                <span class="badge campaign-status-badge">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" .) }}</span>
+              {{ end }}
+              <span class="badge">%50 destekli kayıt</span>
               <span class="badge">Açıklamalı uygulamalar</span>
               <span class="badge">Tekrar erişilebilir içerik</span>
             </div>
@@ -95,24 +99,22 @@
             <p>{{ with $course }}{{ .card_description }}{{ else }}{{ .Description }}{{ end }}</p>
             {{ if and (eq .Params.course_status "active") .Params.student_checkout_url .Params.employee_checkout_url }}
               <div class="catalog-price-summary" aria-label="Destekli ücret özeti">
-                {{ if .Params.student_price }}
+                {{ with $course }}
                   <p>
                     <span>Öğrenci</span>
-                    <strong>{{ .Params.student_price }}</strong>
+                    <del>{{ .normal_student_price }}</del>
+                    <strong>{{ .sale_student_price }}</strong>
                   </p>
-                {{ end }}
-                {{ if .Params.employee_price }}
                   <p>
                     <span>Çalışan</span>
-                    <strong>{{ .Params.employee_price }}</strong>
+                    <del>{{ .normal_employee_price }}</del>
+                    <strong>{{ .sale_employee_price }}</strong>
                   </p>
                 {{ end }}
                 <small>Taksit seçenekleri ödeme adımında görünebilir.</small>
               </div>
               {{ with $course }}
                 <p class="card-urgency-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" .) }}.</p>
-              {{ else }}
-                <p class="card-urgency-line">Son 4–5 destekli kontenjan.</p>
               {{ end }}
             {{ end }}
           </div>

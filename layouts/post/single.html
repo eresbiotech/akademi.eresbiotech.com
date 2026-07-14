@@ -57,12 +57,12 @@
 {{- end -}}
 {{- $studentLabel := .Params.student_plan_label | default "Öğrenci" -}}
 {{- $employeeLabel := .Params.employee_plan_label | default "Çalışan" -}}
-{{- $quotaBySlug := dict
-  "biyoinformatik-giris-egitim-buyuk-veri-kurs" "Son 3 kontenjan · 7/10 doldu"
-  "biyoinformatik-icin-r-programlama" "Son 4 kontenjan · 6/10 doldu"
-  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" "Son 5 kontenjan · 5/10 doldu"
--}}
-{{- $quotaCopy := index $quotaBySlug $slug | default "Son 4–5 destekli kontenjan" -}}
+{{- $remainingSlots := 0 -}}
+{{- $quotaCopy := "" -}}
+{{- if $isBioexpoCourse -}}
+  {{- $remainingSlots = int (partial "bioexpo/remaining-slots.html" (dict "campaign" $campaign "course" $courseCampaign)) -}}
+  {{- $quotaCopy = partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) -}}
+{{- end -}}
 {{- $lessonFlow := slice "Öğrenme hedefleri ve temel kavramlar" "Konuya uygun veri, araç ve uygulama mantığı" "Araştırma pratiğine yakın örneklerle ilerleme" -}}
 {{- $outcomes := slice "Konuya ait temel kavramları araştırma pratiğiyle ilişkilendirebileceksiniz." "İlgili veri kaynaklarını, araçları ve çıktıları daha bilinçli okuyabileceksiniz." "Sonraki öğrenme yolunuzu daha net seçebileceksiniz." -}}
 {{- $codingNote := "Bu eğitimler, kodlama geçmişi sınırlı olan yaşam bilimleri öğrencileri ve araştırmacılarının biyolojik veriyle adım adım çalışabilmesi için yapılandırılmıştır." -}}
@@ -158,16 +158,23 @@
           <span>Açıklamalı uygulamalar</span>
         {{ end }}
       </div>
-      {{ if $hasPricingPlans }}
-        <div class="campaign-urgency-banner training-urgency-banner">
-          <p class="urgency-kicker">BioExpo 2026 destekli kayıt</p>
-          {{ if $isRCourse }}
-            <h2>{{ $quotaCopy }}</h2>
-            <p>RStudio’dan biyolojik veri tablolarına uzanan yapılandırılmış akışta %50 destekli kayıt fırsatını kullanabilirsiniz.</p>
-          {{ else }}
-            <h2>{{ $quotaCopy }}</h2>
-            <p>BioExpo 2026 desteğiyle sınırlı sayıda %50 destekli kontenjan açık. Eğitimlere asenkron ve tekrar izlenebilir şekilde başlayabilirsiniz.</p>
-          {{ end }}
+      {{ if $isBioexpoCourse }}
+        <div class="campaign-urgency-banner training-urgency-banner bioexpo-final-campaign-card" data-bioexpo-active>
+          <p class="urgency-kicker">BIOEXPO DESTEKLİ KAYIT</p>
+          <h2>
+            {{- if le $remainingSlots 0 -}}
+              Bu içerik için destekli kontenjan doldu.
+            {{- else -}}
+              Bu içerik için son {{ $remainingSlots }} destekli kontenjan kaldı.
+            {{- end -}}
+          </h2>
+          <p>%50 destekli fiyatlar 16 Temmuz saat 23.59’da sona eriyor.</p>
+          <p class="course-trust-note">Tekrar erişilebilir içerik · Açıklamalı uygulamalar · Güvenli ödeme</p>
+        </div>
+        <div class="campaign-urgency-banner training-urgency-banner bioexpo-expired-state" data-bioexpo-expired hidden>
+          <p class="urgency-kicker">BIOEXPO DESTEKLİ KAYIT</p>
+          <h2>BioExpo destekli kayıt dönemi tamamlandı.</h2>
+          <p>Güncel içerikleri ve erişim seçeneklerini inceleyebilirsiniz.</p>
         </div>
       {{ end }}
       <div class="hero-actions">
@@ -187,27 +194,47 @@
     <section id="kayit-secenekleri" class="course-pricing">
       <p class="eyebrow">Kayıt seçenekleri</p>
       <h2>Kayıt Seçenekleri</h2>
-      <p class="pricing-intro">{{ if $isRCourse }}Biyoinformatik için R Programlama eğitimine BioExpo 2026 destekli kayıt fırsatıyla başlayabilirsiniz.{{ else }}Bu eğitim için BioExpo 2026 destekli kayıt fırsatıyla başlayabilirsiniz.{{ end }}</p>
-      <div class="supported-fee-note">
-        <p class="support-label">BioExpo 2026 destekli kayıt</p>
-        <h3>{{ $quotaCopy }}</h3>
-        <p>{{ if $isRCourse }}RStudio’dan biyoinformatik veri örneklerine uzanan bu eğitimle, kendi hızınızda ilerleyebilir ve öğrendiklerinizi düzenli pratiklerle pekiştirebilirsiniz.{{ else }}Yaz aylarında kendi hızınızda ilerleyebilir, öğrendiklerinizi pratiğe dökerek yeni döneme daha donanımlı başlayabilirsiniz.{{ end }}</p>
+      <p class="pricing-intro">Bu eğitim için BioExpo 2026 destekli kayıt fırsatıyla başlayabilirsiniz.</p>
+      <div class="supported-fee-note bioexpo-final-campaign-card" data-bioexpo-active>
+        <p class="support-label">BIOEXPO DESTEKLİ KAYIT</p>
+        <h3>
+          {{- if le $remainingSlots 0 -}}
+            Destekli kontenjan doldu.
+          {{- else -}}
+            Bu içerik için son {{ $remainingSlots }} destekli kontenjan kaldı.
+          {{- end -}}
+        </h3>
+        <p>%50 destekli fiyatlar 16 Temmuz saat 23.59’da sona eriyor.</p>
       </div>
-      <p class="course-trust-note">Kayıt işleminiz tamamlandığında erişiminiz kullanıcı hesabınıza tanımlanır.</p>
+      <p class="course-trust-note">Tekrar erişilebilir içerik · Açıklamalı uygulamalar · Güvenli ödeme</p>
       <div class="course-pricing-grid">
         <article class="pricing-card pricing-card-featured price-card">
           <span class="pricing-badge">Destekli kayıt</span>
           <h3>{{ $studentLabel }}</h3>
-          {{ with .Params.student_price }}<p class="supported-price"><span>Destekli kayıt ücreti</span>{{ . }}</p>{{ end }}
+          <div class="bioexpo-final-price">
+            <p><span>Normal ücret</span><del>{{ $courseCampaign.normal_student_price }}</del></p>
+            <p><span>BioExpo destekli ücret</span><strong>{{ $courseCampaign.sale_student_price }}</strong></p>
+          </div>
           <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
-          <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="{{ if in .Params.student_checkout_url "payhip" }}payhip_checkout_click{{ else }}iyzico_checkout_click{{ end }}" data-payment-provider="{{ if in .Params.student_checkout_url "payhip" }}payhip{{ else }}iyzico{{ end }}" data-course="{{ $slug }}" data-plan="student">Eğitime kaydol</a>
+          {{ if gt $remainingSlots 0 }}
+            <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="bioexpo_payhip_click" data-campaign="bioexpo2026" data-payment-provider="payhip" data-course="{{ $courseCampaign.key }}" data-plan="student" data-remaining-slots="{{ $remainingSlots }}" data-bioexpo-active>%50 destekli öğrenci kaydını tamamla</a>
+          {{ else }}
+            <p class="bioexpo-expired-state">Destekli kontenjan doldu.</p>
+          {{ end }}
         </article>
         <article class="pricing-card price-card">
           <span class="pricing-badge">Destekli kayıt</span>
           <h3>{{ $employeeLabel }}</h3>
-          {{ with .Params.employee_price }}<p class="supported-price"><span>Destekli kayıt ücreti</span>{{ . }}</p>{{ end }}
+          <div class="bioexpo-final-price">
+            <p><span>Normal ücret</span><del>{{ $courseCampaign.normal_employee_price }}</del></p>
+            <p><span>BioExpo destekli ücret</span><strong>{{ $courseCampaign.sale_employee_price }}</strong></p>
+          </div>
           <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar veya kurumsal yapılarda çalışan profesyoneller için eğitim erişimi.</p>
-          <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="{{ if in .Params.employee_checkout_url "payhip" }}payhip_checkout_click{{ else }}iyzico_checkout_click{{ end }}" data-payment-provider="{{ if in .Params.employee_checkout_url "payhip" }}payhip{{ else }}iyzico{{ end }}" data-course="{{ $slug }}" data-plan="employee">Eğitime kaydol</a>
+          {{ if gt $remainingSlots 0 }}
+            <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="bioexpo_payhip_click" data-campaign="bioexpo2026" data-payment-provider="payhip" data-course="{{ $courseCampaign.key }}" data-plan="employee" data-remaining-slots="{{ $remainingSlots }}" data-bioexpo-active>%50 destekli profesyonel kaydı tamamla</a>
+          {{ else }}
+            <p class="bioexpo-expired-state">Destekli kontenjan doldu.</p>
+          {{ end }}
         </article>
       </div>
     </section>
@@ -314,6 +341,18 @@
       <a class="hero-action" href="#kayit-secenekleri">Erişim seçeneklerine dön</a>
     </section>
   </div>
+  {{ if gt $remainingSlots 0 }}
+    <div class="bioexpo-final-mobile-cta" data-bioexpo-active>
+      <span>
+        {{- if eq $remainingSlots 1 -}}
+          Son 1 destekli kontenjan
+        {{- else -}}
+          Son {{ $remainingSlots }} destekli kontenjan
+        {{- end -}}
+      </span>
+      <a href="#kayit-secenekleri">%50 destekli kayıt seçenekleri</a>
+    </div>
+  {{ end }}
   {{ else }}
   <div class="training-layout">
     <aside class="training-sidebar" aria-label="Eğitim özeti">

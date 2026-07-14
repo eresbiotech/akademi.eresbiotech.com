@@ -21,12 +21,15 @@ campaign:
     - "tek-hucre-rna-seq-analizi-egitimi"
     - "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme"
     - "phyml-uygulamali-filogenetik-egitimi"
+# Son iki günlük BioExpo destekli kontenjanlar Elçin tarafından manuel takip edilir.
+# Her doğrulanmış satıştan sonra yalnız ilgili ürünün remaining_slots değeri 2 → 1 → 0 olarak güncellenmelidir.
 courses:
   biyoinformatik-icin-r-programlama:
     key: "r-programlama"
     title: "Biyoinformatik için R Programlama"
     quota: 10
     filled: 6
+    remaining_slots: 2
     normal_student_price: "3.500 TL"
     sale_student_price: "1.750 TL"
     normal_employee_price: "5.500 TL"
@@ -44,6 +47,7 @@ courses:
     title: "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi"
     quota: 10
     filled: 7
+    remaining_slots: 2
     normal_student_price: "2.700 TL"
     sale_student_price: "1.350 TL"
     normal_employee_price: "4.700 TL"
@@ -61,6 +65,7 @@ courses:
     title: "Temel Biyoinformatik Araçlar ve Veritabanları Uygulamalı Eğitimi"
     quota: 10
     filled: 5
+    remaining_slots: 2
     normal_student_price: "2.800 TL"
     sale_student_price: "1.400 TL"
     normal_employee_price: "4.800 TL"
@@ -78,6 +83,7 @@ courses:
     title: "NCBI, Ensembl ve UCSC Genom Tarayıcısı Uygulamalı Eğitimi"
     quota: 10
     filled: 6
+    remaining_slots: 2
     normal_student_price: "3.300 TL"
     sale_student_price: "1.650 TL"
     normal_employee_price: "5.300 TL"
@@ -95,6 +101,7 @@ courses:
     title: "Tek Hücre RNA-Seq Analizi Eğitimi"
     quota: 10
     filled: 5
+    remaining_slots: 2
     normal_student_price: "4.700 TL"
     sale_student_price: "2.350 TL"
     normal_employee_price: "6.700 TL"
@@ -112,6 +119,7 @@ courses:
     title: "Yapısal Biyoinformatik ve in silico Protein Modelleme Eğitimi"
     quota: 10
     filled: 5
+    remaining_slots: 2
     normal_student_price: "4.200 TL"
     sale_student_price: "2.100 TL"
     normal_employee_price: "6.200 TL"
@@ -129,6 +137,7 @@ courses:
     title: "phyML Uygulamalı Filogenetik ve Dizi Hizalama Eğitimi"
     quota: 10
     filled: 6
+    remaining_slots: 2
     normal_student_price: "4.200 TL"
     sale_student_price: "2.100 TL"
     normal_employee_price: "6.200 TL"

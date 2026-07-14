@@ -1,55 +1,72 @@
 {{ define "main" }}
 {{- $campaign := site.Data.bioexpo_campaign.campaign -}}
+{{- $courses := site.Data.bioexpo_campaign.courses -}}
 {{- $introCourse := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $rCourse := site.GetPage "/post/biyoinformatik-icin-r-programlama" -}}
 {{- $proteinCourse := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
+{{- $introCampaign := index $courses "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
+{{- $rCampaign := index $courses "biyoinformatik-icin-r-programlama" -}}
+{{- $proteinCampaign := index $courses "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
 {{- $nidaLiveLab := site.GetPage "/post/yasam-bilimlerinde-veri-analizi" -}}
 {{- $otherCourses := slice
-  (dict "slug" "biyoinformatik-veritabanlari-araclar-egitimi" "title" "Temel Biyoinformatik Araçlar ve Veritabanları" "description" "NCBI, UniProt, PDB ve BLAST gibi kaynakları daha bilinçli okumak için." "quota" "Son 5 destekli kontenjan")
-  (dict "slug" "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "title" "NCBI, Ensembl ve UCSC Genom Tarayıcısı" "description" "Gen, transkript, varyant ve genom bölgelerini karşılaştırmalı incelemek için." "quota" "Son 4 destekli kontenjan")
-  (dict "slug" "tek-hucre-rna-seq-analizi-egitimi" "title" "Tek Hücre RNA-Seq Analizi" "description" "scRNA-seq iş akışı, kalite kontrol, kümeleme ve marker gen yorumu için." "quota" "Son 5 destekli kontenjan")
-  (dict "slug" "phyml-uygulamali-filogenetik-egitimi" "title" "phyML Filogenetik ve Dizi Hizalama" "description" "Dizi hizalama, model seçimi, phyML ve filogenetik ağaç yorumlama için." "quota" "Son 4 destekli kontenjan")
+  (dict "slug" "biyoinformatik-veritabanlari-araclar-egitimi" "title" "Temel Biyoinformatik Araçlar ve Veritabanları" "description" "NCBI, UniProt, PDB ve BLAST gibi kaynakları daha bilinçli okumak için.")
+  (dict "slug" "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "title" "NCBI, Ensembl ve UCSC Genom Tarayıcısı" "description" "Gen, transkript, varyant ve genom bölgelerini karşılaştırmalı incelemek için.")
+  (dict "slug" "tek-hucre-rna-seq-analizi-egitimi" "title" "Tek Hücre RNA-Seq Analizi" "description" "scRNA-seq iş akışı, kalite kontrol, kümeleme ve marker gen yorumu için.")
+  (dict "slug" "phyml-uygulamali-filogenetik-egitimi" "title" "phyML Filogenetik ve Dizi Hizalama" "description" "Dizi hizalama, model seçimi, phyML ve filogenetik ağaç yorumlama için.")
 -}}
 
 {{ if $campaign.active }}
-<section class="home-hero conversion-hero">
+<section class="home-hero conversion-hero bioexpo-final-hero" data-bioexpo-active>
   <div class="container home-hero-grid conversion-hero-grid">
     <div class="home-hero-head">
-      <p class="eyebrow">BioExpo 2026 destekli kayıt</p>
-      <h1><span>Biyoinformatiğe bu yaz başlayın.</span> <span>%50 destekli son kontenjanlar açık.</span></h1>
+      <p class="eyebrow">16 Temmuz saat 23.59’da sona eriyor</p>
+      <h1>BioExpo %50 destekli kayıtlarda son 2 gün</h1>
     </div>
 
     <aside id="kontenjanlar" class="home-quota-card" aria-labelledby="quota-card-title">
-      <p class="quota-kicker">Sınırlı destekli kayıt</p>
+      <p class="quota-kicker" data-bioexpo-state-label>SON 2 GÜN</p>
       <h2 id="quota-card-title">Son kontenjanlar</h2>
       <div class="quota-list">
         <a href="{{ with $introCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="quota_card_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">
           <span>Biyoinformatiğe Giriş</span>
-          <strong>Son 3</strong>
+          <strong>{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $introCampaign) }}</strong>
         </a>
         <a href="{{ with $rCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="quota_card_click" data-course="biyoinformatik-icin-r-programlama">
           <span>R Programlama</span>
-          <strong>Son 4</strong>
+          <strong>{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $rCampaign) }}</strong>
         </a>
         <a href="{{ with $proteinCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="quota_card_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">
           <span>Protein Modelleme</span>
-          <strong>Son 5</strong>
+          <strong>{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $proteinCampaign) }}</strong>
         </a>
       </div>
       <p class="quota-trust">Payhip ve iyzico güvenli ödeme altyapısı · Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir</p>
     </aside>
 
     <div class="home-hero-body">
-      <p class="lead">BioExpo 2026 desteğiyle %50 kayıt açık. Seçili ERES Biyoinformatik Akademi eğitimlerinde sınırlı sayıda destekli kontenjan var.</p>
+      <p class="lead">Seçili asenkron biyoinformatik çalışmalarında destekli kontenjanlar son 1-2 seviyesinde.</p>
       <div class="hero-actions">
-        <a class="hero-action" href="#karar-yollari" data-event="hero_primary_cta_click">Bana uygun eğitimi seç</a>
-        <a class="hero-action hero-action-secondary" href="#tum-kontenjanlar" data-event="quota_card_click">Tüm kontenjanları gör</a>
+        <a class="hero-action" href="{{ "/bioexpo-2026-destekli-kayit/" | relURL }}" data-event="hero_primary_cta_click" data-campaign="bioexpo2026" data-destination="landing">%50 destekli eğitimleri gör</a>
+        <a class="hero-action hero-action-secondary" href="#karar-yollari" data-event="quota_card_click">Hangi içerikle başlamalıyım?</a>
       </div>
       <div class="trust-row" aria-label="Eğitim özellikleri">
         <span>Kendi hızınızda erişim</span>
         <span>Açıklamalı uygulamalar</span>
         <span>Kod ve çalışma dosyaları</span>
         <span>Güvenli ödeme</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-hero conversion-hero bioexpo-expired-state" data-bioexpo-expired hidden>
+  <div class="container home-hero-grid">
+    <div class="home-hero-copy">
+      <p class="eyebrow">BioExpo destekli kayıt dönemi tamamlandı.</p>
+      <h1>Güncel içerikleri ve erişim seçeneklerini inceleyebilirsiniz.</h1>
+      <p class="lead">ERES Biyoinformatik Akademi eğitim kataloğunda asenkron içerikleri ve canlı araştırma çalışmalarını görebilirsiniz.</p>
+      <div class="hero-actions">
+        <a class="hero-action" href="{{ "/post/" | relURL }}">Güncel içerikleri gör</a>
       </div>
     </div>
   </div>
@@ -113,21 +130,21 @@
       <p class="path-label">Sıfırdan başlıyorum</p>
       <h3>Sıfırdan başlıyorum</h3>
       <p>Biyoinformatiğin temel mantığını, veri türlerini ve analiz akışını öğrenmek için.</p>
-      <p class="quota-line">Son 3 kontenjan · 7/10 doldu</p>
+      <p class="quota-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $introCampaign) }}</p>
       <a class="card-link" href="{{ with $introCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">Giriş eğitimini incele</a>
     </article>
     <article class="path-card decision-card">
       <p class="path-label">Kodla analiz yapmak istiyorum</p>
       <h3>Kodla analiz yapmak istiyorum</h3>
       <p>RStudio, veri yapıları, grafikler ve biyolojik veri örnekleriyle pratik kazanmak için.</p>
-      <p class="quota-line">Son 4 kontenjan · 6/10 doldu</p>
+      <p class="quota-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $rCampaign) }}</p>
       <a class="card-link" href="{{ with $rCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click" data-course="biyoinformatik-icin-r-programlama">R eğitimini incele</a>
     </article>
     <article class="path-card decision-card">
       <p class="path-label">Protein yapısı çalışıyorum</p>
       <h3>Protein yapısı çalışıyorum</h3>
       <p>PDB, AlphaFold, protein yapısı ve in silico modelleme yaklaşımını öğrenmek için.</p>
-      <p class="quota-line">Son 5 kontenjan · 5/10 doldu</p>
+      <p class="quota-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $proteinCampaign) }}</p>
       <a class="card-link" href="{{ with $proteinCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_protein_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">Protein eğitimini incele</a>
     </article>
   </div>
@@ -148,9 +165,10 @@
   <div class="compact-course-grid">
     {{ range $otherCourses }}
       {{- $course := site.GetPage (printf "/post/%s" .slug) -}}
+      {{- $courseCampaign := index $courses .slug -}}
       <article class="compact-course-card">
         <div>
-          <span class="compact-quota">{{ .quota }}</span>
+          <span class="compact-quota">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) }}</span>
           <h3>{{ .title }}</h3>
           <p>{{ .description }}</p>
         </div>

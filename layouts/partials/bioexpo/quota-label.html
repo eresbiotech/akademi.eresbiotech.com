@@ -1,18 +1,29 @@
 {{- $campaign := .campaign -}}
 {{- $course := .course -}}
 {{- $quota := int ($course.quota | default $campaign.default_quota | default 10) -}}
-{{- $filledRaw := int ($course.filled | default 0) -}}
-{{- $filled := $filledRaw -}}
-{{- if lt $filledRaw 0 -}}
-  {{- $filled = 0 -}}
-{{- else if gt $filledRaw $quota -}}
-  {{- $filled = $quota -}}
-{{- end -}}
-{{- if ge $filled $quota -}}
-Destekli kontenjan doldu
-{{- else if gt $filled 0 -}}
-{{- $remaining := sub $quota $filled -}}
-Son {{ $remaining }} kontenjan · {{ $filled }}/{{ $quota }} doldu
+{{- if isset $course "remaining_slots" -}}
+  {{- $remaining := int (partial "bioexpo/remaining-slots.html" (dict "campaign" $campaign "course" $course)) -}}
+  {{- if le $remaining 0 -}}
+DESTEKLİ KONTENJAN DOLDU
+  {{- else if eq $remaining 1 -}}
+SON 1 DESTEKLİ KONTENJAN
+  {{- else -}}
+SON {{ $remaining }} DESTEKLİ KONTENJAN
+  {{- end -}}
 {{- else -}}
+  {{- $filledRaw := int ($course.filled | default 0) -}}
+  {{- $filled := $filledRaw -}}
+  {{- if lt $filledRaw 0 -}}
+    {{- $filled = 0 -}}
+  {{- else if gt $filledRaw $quota -}}
+    {{- $filled = $quota -}}
+  {{- end -}}
+  {{- if ge $filled $quota -}}
+Destekli kontenjan doldu
+  {{- else if gt $filled 0 -}}
+    {{- $remaining := sub $quota $filled -}}
+Son {{ $remaining }} kontenjan · {{ $filled }}/{{ $quota }} doldu
+  {{- else -}}
 {{ $quota }} destekli kontenjan açıldı
+  {{- end -}}
 {{- end -}}

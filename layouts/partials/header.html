@@ -1,14 +1,5 @@
 {{- $campaign := site.Data.bioexpo_campaign.campaign -}}
 {{- $isStudentLogin := eq .RelPermalink "/ders-giris/" -}}
-{{- if and $campaign.active (not $isStudentLogin) -}}
-<div class="site-announcement" role="status">
-  <div class="container site-announcement-inner">
-    <strong>BioExpo 2026</strong>
-    <span>BioExpo 2026 desteğiyle %50 kayıt açık · Son kontenjanlar: Giriş 3, R 4, Protein 5</span>
-    <a class="announcement-cta" href="{{ "/#kontenjanlar" | relURL }}" data-event="quota_card_click">Kontenjanları gör</a>
-  </div>
-</div>
-{{- end -}}
 <header class="site-header{{ if $isStudentLogin }} student-login-site-header{{ end }}">
   <div class="container header-inner">
     <a class="brand" href="{{ "/" | relURL }}" aria-label="ERES Akademi">

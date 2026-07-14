@@ -3,7 +3,8 @@
 {{- $campaign := .campaign -}}
 {{- $displayTitle := $course.title | default (replaceRE "^2024\\s+" "" $page.Title) -}}
 {{- $courseKey := $course.key | default $page.File.BaseFileName -}}
-<article class="post-card course-card featured-card bioexpo-course-card">
+{{- $remaining := int (partial "bioexpo/remaining-slots.html" (dict "campaign" $campaign "course" $course)) -}}
+<article class="post-card course-card featured-card bioexpo-course-card" data-bioexpo-course-card data-remaining-slots="{{ $remaining }}">
   {{ with $page.Params.images }}
     {{- $src := index . 0 -}}
     {{- with resources.Get $src -}}
@@ -12,11 +13,10 @@
   {{ end }}
   <div class="post-card-body">
     <div class="badge-row">
-      <span class="badge bioexpo-badge">%50 destekli kayıt</span>
       <span class="badge campaign-status-badge">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $course) }}</span>
-      <span class="badge">Asenkron ve tekrar izlenebilir</span>
-      <span class="badge">Ödev & quiz destekli</span>
-      <span class="badge">Dijital doğrulanabilir sertifika</span>
+      <span class="badge bioexpo-badge">%50 destekli kayıt</span>
+      <span class="badge">Asenkron ve tekrar erişilebilir</span>
+      <span class="badge">Açıklamalı uygulamalar</span>
     </div>
     <h3><a href="{{ $page.RelPermalink }}">{{ $displayTitle }}</a></h3>
     <p>{{ $course.card_description | default $page.Description }}</p>
@@ -38,16 +38,30 @@
       <p><span>Çalışan</span><del>{{ $course.normal_employee_price }}</del><strong>{{ $course.sale_employee_price }}</strong></p>
       <small>Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir.</small>
     </div>
-    <p class="card-urgency-line">Kontenjan dolduğunda ilgili eğitim için destekli fiyat kapanır.</p>
-    <p class="payment-flow-note">Destekli fiyat, kayıt adımında BioExpo 2026 destekli kayıt seçeneği olarak görünür.</p>
+    <p class="card-urgency-line">
+      {{- if le $remaining 0 -}}
+        Destekli kontenjan doldu.
+      {{- else if eq $remaining 1 -}}
+        Bu fiyatla son kayıt hakkı.
+      {{- else -}}
+        Destekli kayıtlar kapanmak üzere.
+      {{- end -}}
+    </p>
   </div>
   <div class="catalog-card-actions bioexpo-card-actions">
-    {{ with $page.Params.student_checkout_url }}
-      <a class="card-link" href="{{ . }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="student-card" data-destination="payhip" data-event="bioexpo_payhip_click">Öğrenci destekli kayıt al</a>
+    {{ if gt $remaining 0 }}
+      <div data-bioexpo-active>
+        {{ with $page.Params.student_checkout_url }}
+          <a class="card-link" href="{{ . }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-plan="student" data-cta="student-card" data-destination="payhip" data-payment-provider="payhip" data-remaining-slots="{{ $remaining }}" data-event="bioexpo_payhip_click">%50 destekli öğrenci kaydı</a>
+        {{ end }}
+        {{ with $page.Params.employee_checkout_url }}
+          <a class="card-link card-link-secondary" href="{{ . }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-plan="employee" data-cta="employee-card" data-destination="payhip" data-payment-provider="payhip" data-remaining-slots="{{ $remaining }}" data-event="bioexpo_payhip_click">%50 destekli profesyonel kayıt</a>
+        {{ end }}
+      </div>
+      <p class="bioexpo-expired-state" data-bioexpo-expired hidden>BioExpo destekli kayıt dönemi tamamlandı.</p>
+    {{ else }}
+      <p class="bioexpo-expired-state">Destekli kontenjan doldu.</p>
     {{ end }}
-    {{ with $page.Params.employee_checkout_url }}
-      <a class="card-link card-link-secondary" href="{{ . }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="employee-card" data-destination="payhip" data-event="bioexpo_payhip_click">Çalışan destekli kayıt al</a>
-    {{ end }}
-    <a class="card-link card-link-muted" href="{{ $page.RelPermalink }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="course-detail" data-destination="course" data-event="bioexpo_course_card_click">Ders içeriğini incele</a>
+    <a class="card-link card-link-muted" href="{{ $page.RelPermalink }}" data-campaign="bioexpo2026" data-course="{{ $courseKey }}" data-cta="course-detail" data-destination="course" data-event="bioexpo_course_card_click">İçeriği ve erişim seçeneklerini gör</a>
   </div>
 </article>
