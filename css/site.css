@@ -572,14 +572,6 @@
   text-align: center;
 }
 
-html[data-bioexpo-state="expired"] [data-bioexpo-active] {
-  display: none !important;
-}
-
-html[data-bioexpo-state="expired"] [data-bioexpo-expired] {
-  display: block;
-}
-
 @media (max-width: 760px) {
   .bioexpo-final-days-inner {
     align-items: flex-start;
