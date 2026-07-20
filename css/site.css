@@ -736,6 +736,8 @@
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
   padding: 22px;
 }
 
@@ -750,6 +752,16 @@
   display: block;
   font-size: clamp(1.8rem, 4vw, 2.7rem);
   overflow-wrap: anywhere;
+}
+
+.live-lab-price-card .pricing-button {
+  width: 100%;
+}
+
+.live-lab-price-card .pricing-note {
+  color: var(--muted);
+  font-size: 0.84rem;
+  margin: 12px 0 0;
 }
 
 .live-lab-checkout-note {
@@ -3097,6 +3109,12 @@ h1 {
 .pricing-button:hover {
   background: #115e59;
   color: #fff;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #0f766e;
+  outline-offset: 3px;
 }
 
 .pricing-button-secondary {
