@@ -41,7 +41,7 @@ assert_file_absent() {
 assert_file_absent_regex() {
   local file="$1"
   local pattern="$2"
-  if rg --pcre2 -q "$pattern" "$file"; then
+  if rg --pcre2 -U -q "$pattern" "$file"; then
     echo "Unexpected pattern in $file: $pattern" >&2
     exit 1
   fi
@@ -50,7 +50,7 @@ assert_file_absent_regex() {
 assert_file_contains_regex() {
   local file="$1"
   local pattern="$2"
-  if ! rg --pcre2 -q "$pattern" "$file"; then
+  if ! rg --pcre2 -U -q "$pattern" "$file"; then
     echo "Missing expected pattern in $file: $pattern" >&2
     exit 1
   fi
@@ -122,8 +122,8 @@ for page in "$build_dir"/post/*/index.html; do
   assert_file_absent "$page" '>Ön bilgi al<'
 done
 
-rg -F -q '.live-lab-price-card .pricing-button' "$repo_dir/static/css/site.css"
-rg -F -q 'width: 100%;' "$repo_dir/static/css/site.css"
+assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)@media \(max-width: 820px\) \{.*?\.live-lab-price-grid,.*?grid-template-columns: 1fr;'
+assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.live-lab-price-card \.pricing-button \{.*?width: 100%;'
 
 landing_page="$build_dir/bioexpo-2026-destekli-kayit/index.html"
 rg -F -q 'BioExpo 2026 destekli kayıt dönemi sona erdi' "$landing_page"
