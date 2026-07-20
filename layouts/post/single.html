@@ -30,7 +30,6 @@
   {{- $heroLead = . -}}
 {{- end -}}
 {{- $studentLabel := .Params.student_plan_label | default "Öğrenci" -}}
-{{- $employeeLabel := .Params.employee_plan_label | default "Profesyonel" -}}
 {{- $lessonFlow := slice "Öğrenme hedefleri ve temel kavramlar" "Konuya uygun veri, araç ve uygulama mantığı" "Araştırma pratiğine yakın örneklerle ilerleme" -}}
 {{- $outcomes := slice "Konuya ait temel kavramları araştırma pratiğiyle ilişkilendirebileceksiniz." "İlgili veri kaynaklarını, araçları ve çıktıları daha bilinçli okuyabileceksiniz." "Sonraki öğrenme yolunuzu daha net seçebileceksiniz." -}}
 {{- $codingNote := "Bu eğitimler, kodlama geçmişi sınırlı olan yaşam bilimleri öğrencileri ve araştırmacılarının biyolojik veriyle adım adım çalışabilmesi için yapılandırılmıştır." -}}
@@ -362,7 +361,7 @@
             </article>
             <article class="pricing-card price-card">
               <span class="pricing-badge">Profesyonel erişim</span>
-              <h3>{{ $employeeLabel }} erişimi</h3>
+              <h3>Profesyonel erişim</h3>
               {{ with .Params.employee_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar ve Ar-Ge çalışanları için.</p>
               <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel erişimle kaydolun</a>
