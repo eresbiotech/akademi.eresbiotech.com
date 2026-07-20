@@ -27,7 +27,7 @@ Adres: Söğütözü Mahallesi Söğütözü Caddesi Ankara Koç İkiz Kuleleri,
 
 Zorunlu çerezler için açık rıza aranmaz. Analitik ve pazarlama çerezleri yalnızca kabul etmeniz veya tercihlerden seçmeniz halinde etkinleştirilmelidir.
 
-Bu sürümde sitede aktif GA4 veya Meta Pixel kodu bulunmamaktadır. İleride analitik veya reklam çerezleri eklenirse, açık rıza tercihiniz dikkate alınarak çalıştırılmalıdır.
+Sitede Meta Pixel, yalnızca analitik veya pazarlama çerezleri için açık rıza verilmesi halinde etkinleştirilir. Rıza verilmeden Meta Pixel yüklenmez ve pazarlama ölçümü yapılmaz.
 
 ## Tercihlerinizi Yönetme
 

@@ -1,12 +1,7 @@
 {{ define "main" }}
-{{- $campaign := site.Data.bioexpo_campaign.campaign -}}
-{{- $courses := site.Data.bioexpo_campaign.courses -}}
 {{- $introCourse := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $rCourse := site.GetPage "/post/biyoinformatik-icin-r-programlama" -}}
 {{- $proteinCourse := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
-{{- $introCampaign := index $courses "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
-{{- $rCampaign := index $courses "biyoinformatik-icin-r-programlama" -}}
-{{- $proteinCampaign := index $courses "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
 {{- $nidaLiveLab := site.GetPage "/post/yasam-bilimlerinde-veri-analizi" -}}
 {{- $otherCourses := slice
   (dict "slug" "biyoinformatik-veritabanlari-araclar-egitimi" "title" "Temel Biyoinformatik Araçlar ve Veritabanları" "description" "NCBI, UniProt, PDB ve BLAST gibi kaynakları daha bilinçli okumak için.")
@@ -15,72 +10,17 @@
   (dict "slug" "phyml-uygulamali-filogenetik-egitimi" "title" "phyML Filogenetik ve Dizi Hizalama" "description" "Dizi hizalama, model seçimi, phyML ve filogenetik ağaç yorumlama için.")
 -}}
 
-{{ if $campaign.active }}
-<section class="home-hero conversion-hero bioexpo-final-hero" data-bioexpo-active>
-  <div class="container home-hero-grid conversion-hero-grid">
-    <div class="home-hero-head">
-      <p class="eyebrow">16 Temmuz saat 23.59’da sona eriyor</p>
-      <h1>BioExpo %50 destekli kayıtlarda son 2 gün</h1>
-    </div>
-
-    <aside id="kontenjanlar" class="home-quota-card" aria-labelledby="quota-card-title">
-      <p class="quota-kicker" data-bioexpo-state-label>SON 2 GÜN</p>
-      <h2 id="quota-card-title">Son kontenjanlar</h2>
-      <div class="quota-list">
-        <a href="{{ with $introCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="quota_card_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">
-          <span>Biyoinformatiğe Giriş</span>
-          <strong>{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $introCampaign) }}</strong>
-        </a>
-        <a href="{{ with $rCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="quota_card_click" data-course="biyoinformatik-icin-r-programlama">
-          <span>R Programlama</span>
-          <strong>{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $rCampaign) }}</strong>
-        </a>
-        <a href="{{ with $proteinCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="quota_card_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">
-          <span>Protein Modelleme</span>
-          <strong>{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $proteinCampaign) }}</strong>
-        </a>
-      </div>
-      <p class="quota-trust">Payhip ve iyzico güvenli ödeme altyapısı · Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir</p>
-    </aside>
-
-    <div class="home-hero-body">
-      <p class="lead">Seçili asenkron biyoinformatik çalışmalarında destekli kontenjanlar son 1-2 seviyesinde.</p>
-      <div class="hero-actions">
-        <a class="hero-action" href="{{ "/bioexpo-2026-destekli-kayit/" | relURL }}" data-event="hero_primary_cta_click" data-campaign="bioexpo2026" data-destination="landing">%50 destekli eğitimleri gör</a>
-        <a class="hero-action hero-action-secondary" href="#karar-yollari" data-event="quota_card_click">Hangi içerikle başlamalıyım?</a>
-      </div>
-      <div class="trust-row" aria-label="Eğitim özellikleri">
-        <span>Kendi hızınızda erişim</span>
-        <span>Açıklamalı uygulamalar</span>
-        <span>Kod ve çalışma dosyaları</span>
-        <span>Güvenli ödeme</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="home-hero conversion-hero bioexpo-expired-state" data-bioexpo-expired hidden>
+<section class="home-hero">
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
-      <p class="eyebrow">BioExpo destekli kayıt dönemi tamamlandı.</p>
-      <h1>Güncel içerikleri ve erişim seçeneklerini inceleyebilirsiniz.</h1>
-      <p class="lead">ERES Biyoinformatik Akademi eğitim kataloğunda asenkron içerikleri ve canlı araştırma çalışmalarını görebilirsiniz.</p>
+      <p class="eyebrow">ERES Biyoinformatik Akademi</p>
+      <h1>Biyoinformatik eğitimlerinde kendi hızınızda ilerleyin.</h1>
+      <p class="lead">Dijital bilimsel ürünleri, canlı araştırma çalışmalarını ve R programlama, genom tarayıcıları, tek hücre RNA-seq, protein modelleme ile filogenetik odaklı asenkron içerikleri inceleyin.</p>
       <div class="hero-actions">
-        <a class="hero-action" href="{{ "/post/" | relURL }}">Güncel içerikleri gör</a>
+        <a class="hero-action" href="#karar-yollari">Size uygun içeriği seçin</a>
+        <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm içerikleri inceleyin</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="container student-access-band" aria-label="Satın alma sonrası içerik erişimi">
-  <div class="student-access-card">
-    <div>
-      <p class="support-label">Satın alma sonrası içerik erişimi</p>
-      <h2>Satın aldıktan sonra dersinize kolayca dönün</h2>
-      <p>ERES Kampüs / Payhip üzerinden kayıt olduğunuzda, satın alma sırasında kullandığınız e-posta ve şifreyle kullanıcı hesabınıza giriş yaparak derslerinize tekrar ulaşabilirsiniz.</p>
-      <small>Şifrenizi hatırlamıyorsanız giriş ekranındaki "Forgot your password?" bağlantısını kullanabilirsiniz.</small>
-    </div>
-    <a class="support-cta" href="{{ "/ders-giris/" | relURL }}">İçeriklere Erişim</a>
   </div>
 </section>
 
@@ -101,22 +41,23 @@
       </div>
     </div>
 
-    <article class="live-lab-home-card">
-      <p class="live-lab-card-kicker">Yeni canlı araştırma çalışması</p>
-      <h3>Yaşam Bilimlerinde Veri Analizi</h3>
-      <p>Dijital araştırma varlıkları ve 8 saatlik Canlı Veri Vaka Laboratuvarı ile yaşam bilimleri verisini Python ve Pandas üzerinden sistemli bir çalışma akışına dönüştürün.</p>
-      <p><strong>Bilimsel Yürütücü: Dr. Nida Tokaç Er</strong></p>
-      <ul class="live-lab-home-features">
-        <li>4 oturum × 2 saat</li>
-        <li>Google Meet</li>
-        <li>20 kişi</li>
-        <li>Kodlama önkoşulu yok</li>
-      </ul>
-      <p class="live-lab-home-price">Öğrenci 2.850 TL · Profesyonel 3.850 TL</p>
-      <p>Canlı oturumlar 15–16 ve 22–23 Ağustos 2026 tarihlerinde gerçekleştirilecektir.</p>
-      <p class="live-lab-campaign-note">BioExpo 2026 destekli kayıt kampanyasına dahil değildir.</p>
-      <a class="card-link" href="{{ with $nidaLiveLab }}{{ .RelPermalink }}{{ else }}{{ "/post/yasam-bilimlerinde-veri-analizi/" | relURL }}{{ end }}" data-event="other_courses_click" data-course="yasam-bilimlerinde-veri-analizi">Çalışmayı inceleyin</a>
-    </article>
+    {{ with $nidaLiveLab }}
+      <article class="live-lab-home-card">
+        <p class="live-lab-card-kicker">Yeni canlı araştırma çalışması</p>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Description }}</p>
+        <p><strong>Bilimsel Yürütücü: {{ .Params.scientific_lead }}</strong></p>
+        <ul class="live-lab-home-features">
+          <li>{{ .Params.session_count }}</li>
+          <li>{{ .Params.platform }}</li>
+          <li>{{ .Params.capacity }}</li>
+          <li>Kodlama önkoşulu yok</li>
+        </ul>
+        <p class="live-lab-home-price">{{ .Params.student_plan_label }} {{ .Params.student_price }} · {{ .Params.employee_plan_label }} {{ .Params.employee_price }}</p>
+        {{ with .Params.date_note }}<p>{{ . }}</p>{{ end }}
+        <a class="card-link" href="{{ .RelPermalink }}" data-event="other_courses_click" data-course="{{ .File.BaseFileName }}">Çalışmayı inceleyin</a>
+      </article>
+    {{ end }}
   </div>
 </section>
 
@@ -130,47 +71,43 @@
       <p class="path-label">Sıfırdan başlıyorum</p>
       <h3>Sıfırdan başlıyorum</h3>
       <p>Biyoinformatiğin temel mantığını, veri türlerini ve analiz akışını öğrenmek için.</p>
-      <p class="quota-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $introCampaign) }}</p>
       <a class="card-link" href="{{ with $introCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">Giriş eğitimini incele</a>
     </article>
     <article class="path-card decision-card">
       <p class="path-label">Kodla analiz yapmak istiyorum</p>
       <h3>Kodla analiz yapmak istiyorum</h3>
       <p>RStudio, veri yapıları, grafikler ve biyolojik veri örnekleriyle pratik kazanmak için.</p>
-      <p class="quota-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $rCampaign) }}</p>
       <a class="card-link" href="{{ with $rCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click" data-course="biyoinformatik-icin-r-programlama">R eğitimini incele</a>
     </article>
     <article class="path-card decision-card">
       <p class="path-label">Protein yapısı çalışıyorum</p>
       <h3>Protein yapısı çalışıyorum</h3>
       <p>PDB, AlphaFold, protein yapısı ve in silico modelleme yaklaşımını öğrenmek için.</p>
-      <p class="quota-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $proteinCampaign) }}</p>
       <a class="card-link" href="{{ with $proteinCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_protein_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">Protein eğitimini incele</a>
     </article>
   </div>
-  <p class="section-foot-link">
-    <a class="text-link" href="#tum-kontenjanlar" data-event="other_courses_click">Diğer destekli eğitimleri de görmek istiyorum</a>
-  </p>
 </section>
 
-<section id="tum-kontenjanlar" class="container home-section other-courses-section">
+<section class="container home-section other-courses-section">
   <div class="section-heading section-heading-row">
     <div>
-      <p class="eyebrow">Diğer destekli eğitimler</p>
-      <h2>Daha sakin seçenekler</h2>
-      <p>Kararınızı netleştirdiyseniz, destekli kontenjanı süren diğer eğitimleri de buradan inceleyebilirsiniz.</p>
+      <p class="eyebrow">Aktif asenkron içerikler</p>
+      <h2>Çalışma alanınıza uygun içeriği inceleyin</h2>
+      <p>Kendi hızınızda ilerleyebileceğiniz açıklamalı uygulamalar ve çalışma kaynaklarıyla başlayın.</p>
     </div>
     <a class="text-link" href="{{ "/post/" | relURL }}" data-event="other_courses_click">Tüm eğitim kataloğu</a>
   </div>
   <div class="compact-course-grid">
     {{ range $otherCourses }}
       {{- $course := site.GetPage (printf "/post/%s" .slug) -}}
-      {{- $courseCampaign := index $courses .slug -}}
       <article class="compact-course-card">
         <div>
-          <span class="compact-quota">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) }}</span>
+          <span class="compact-quota">Asenkron içerik</span>
           <h3>{{ .title }}</h3>
           <p>{{ .description }}</p>
+          {{ with $course }}
+            <p class="compact-course-price">{{ .Params.student_plan_label }} {{ .Params.student_price }} · {{ .Params.employee_plan_label }} {{ .Params.employee_price }}</p>
+          {{ end }}
         </div>
         <a class="card-link card-link-light" href="{{ with $course }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="other_courses_click" data-course="{{ .slug }}">İçeriği incele</a>
       </article>
@@ -189,16 +126,28 @@
     <article><span>03</span><strong>Kendi hızınızda erişim</strong><p>Açıklamalı içeriklere hesabınız üzerinden yeniden erişebilirsiniz.</p></article>
     <article><span>04</span><strong>Güvenli satın alma ve yazılı destek</strong><p>Satın alma ve erişim süreçlerinde yazılı destek kanalları kullanılır.</p></article>
   </div>
-  <p class="trust-payment-note">Kayıtlar akademi.eresbiotech.com ve ERES Kampüs üzerinden başlar. Payhip ve iyzico güvenli ödeme altyapısı kullanılır. Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir.</p>
+  <p class="trust-payment-note">Kayıtlar akademi.eresbiotech.com ve ERES Kampüs üzerinden başlar. Payhip ve iyzico güvenli ödeme altyapısı kullanılır. Ödeme adımında kartınıza veya bankanıza göre taksit seçenekleri görünebilir.</p>
 </section>
 
 <section class="container home-section trust-support-section">
   <div class="support-band-card conversion-trust-card">
     <div>
       <h2>Güvenli satın alma ve yazılı destek</h2>
-      <p>Kayıtlar yalnızca akademi.eresbiotech.com üzerindeki eğitim sayfalarından başlar ve ERES Kampüs / Payhip güvenli ödeme altyapısıyla tamamlanır. Tereddüt yaşarsanız ödeme yapmadan önce WhatsApp üzerinden yazılı destek alabilirsiniz.</p>
+      <p>Kayıtlar yalnızca akademi.eresbiotech.com üzerindeki ürün sayfalarından başlar ve ERES Kampüs / Payhip güvenli ödeme altyapısıyla tamamlanır. Tereddüt yaşarsanız ödeme yapmadan önce WhatsApp üzerinden yazılı destek alabilirsiniz.</p>
       <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp'tan yazılı destek alın</a>
     </div>
+  </div>
+</section>
+
+<section class="container student-access-band" aria-label="Satın alma sonrası içerik erişimi">
+  <div class="student-access-card">
+    <div>
+      <p class="support-label">Satın alma sonrası içerik erişimi</p>
+      <h2>Satın aldıktan sonra içeriğinize kolayca dönün</h2>
+      <p>ERES Kampüs / Payhip üzerinden kayıt olduğunuzda, satın alma sırasında kullandığınız e-posta ve şifreyle kullanıcı hesabınıza giriş yaparak içeriklerinize tekrar ulaşabilirsiniz.</p>
+      <small>Şifrenizi hatırlamıyorsanız giriş ekranındaki "Forgot your password?" bağlantısını kullanabilirsiniz.</small>
+    </div>
+    <a class="support-cta" href="{{ "/ders-giris/" | relURL }}">İçeriklere Erişim</a>
   </div>
 </section>
 
@@ -232,21 +181,7 @@ print("Kod çalışmadı. Hikaye devam ediyor.")</code></pre>
 </section>
 
 <div class="mobile-sticky-cta" aria-label="Hızlı kayıt bağlantıları">
-  <a class="mobile-sticky-primary" href="#karar-yollari" data-event="hero_primary_cta_click">Bana uygun eğitimi seç</a>
+  <a class="mobile-sticky-primary" href="#karar-yollari" data-event="hero_primary_cta_click">Bana uygun içeriği seç</a>
   <a class="mobile-sticky-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp</a>
 </div>
-{{ else }}
-<section class="home-hero">
-  <div class="container home-hero-grid">
-    <div class="home-hero-copy">
-      <p class="eyebrow">ERES Biyoinformatik Akademi</p>
-      <h1>Biyoinformatik eğitimlerinde kendi hızınızda ilerleyin.</h1>
-      <p class="lead">R programlama, temel biyoinformatik, genom tarayıcıları, tek hücre RNA-seq, protein modelleme ve filogenetik eğitimlerini inceleyin.</p>
-      <div class="hero-actions">
-        <a class="hero-action" href="{{ "/post/" | relURL }}">Eğitimleri incele</a>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
 {{ end }}

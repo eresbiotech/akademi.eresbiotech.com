@@ -1,44 +1,30 @@
 {{ define "main" }}
-{{- $campaign := site.Data.bioexpo_campaign.campaign -}}
-{{- $courses := site.Data.bioexpo_campaign.courses -}}
 {{- $posts := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
 {{- $liveLabPosts := where $posts "Params.product_type" "live_lab" -}}
-{{- $prioritySlugs := $campaign.priority_slugs -}}
-{{- $priorityPosts := slice -}}
-{{- range $prioritySlugs -}}
-  {{- with site.GetPage (printf "/post/%s" .) -}}
-    {{- $priorityPosts = $priorityPosts | append . -}}
-  {{- end -}}
-{{- end -}}
+{{- $activePosts := where (where $posts "Params.course_status" "active") "Params.product_type" "!=" "live_lab" -}}
 
 <section class="container page-shell">
   <header class="page-header split-header post-index-hero">
     <div>
-      <p class="eyebrow">Eğitim kataloğu</p>
+      <p class="eyebrow">ERES Akademi kataloğu</p>
       <h1>Biyoinformatik eğitimleri</h1>
-      <p class="lead">BioExpo 2026 desteğiyle seçili ERES Biyoinformatik Akademi eğitimlerinde sınırlı sayıda %50 destekli kayıt fırsatı açık.</p>
+      <p class="lead">Kendi hızınızda ilerleyebileceğiniz asenkron içerikleri, dijital çalışma kaynaklarını ve canlı araştırma çalışmalarını inceleyin.</p>
       <div class="trust-row" aria-label="Katalog özellikleri">
-        <span>%50 destekli kayıt</span>
+        <span>Kendi hızınızda</span>
         <span>Açıklamalı uygulamalar</span>
         <span>Tekrar erişilebilir içerik</span>
       </div>
       <div class="catalog-support-note">
-        <strong data-bioexpo-state-label>SON 2 GÜN</strong>
-        <span>BioExpo %50 destekli kayıt dönemi 16 Temmuz saat 23.59’da kapanıyor.</span>
-        <span>Payhip ve iyzico güvenli ödeme altyapısı kullanılır. Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir.</span>
-      </div>
-      <div class="campaign-urgency-banner catalog-urgency-banner">
-        <p class="urgency-kicker">16 Temmuz saat 23.59’da sona eriyor</p>
-        <h2>BioExpo %50 destekli kayıtlarda son 2 gün.</h2>
-        <p>Önce size uygun başlangıcı seçin; destekli kontenjanlar son 1-2 seviyesinde.</p>
-        <a class="support-cta" href="{{ "/" | relURL }}#karar-yollari" data-event="hero_primary_cta_click">Bana uygun eğitimi seç</a>
+        <strong>Güvenli satın alma ve yazılı destek</strong>
+        <span>Aktif ürünlerde öğrenci ve profesyonel erişim seçenekleri ilgili ürün sayfasında gösterilir.</span>
+        <span>Ödeme sayfası açılmazsa veya kayıt sırasında hata alırsanız WhatsApp üzerinden yazılı destek alabilirsiniz.</span>
       </div>
     </div>
     <div class="hero-side">
-      <span class="bioexpo-text-badge">Destekli kontenjan</span>
-      <strong class="hero-panel-title">Öncelikli eğitim vitrini</strong>
-      <span>R, temel biyoinformatik, NCBI, Ensembl, UCSC, scRNA-seq ve ileri analizler</span>
-      <a class="hero-action" href="#egitimler" data-event="other_courses_click">Kontenjanları gör</a>
+      <span class="badge">Dijital bilimsel ürünler</span>
+      <strong class="hero-panel-title">Araştırma pratiğine yakın içerikler</strong>
+      <span>R, temel biyoinformatik, genom tarayıcıları, scRNA-seq, protein modelleme ve filogenetik</span>
+      <a class="hero-action" href="#egitimler" data-event="other_courses_click">İçerikleri incele</a>
     </div>
   </header>
 
@@ -46,25 +32,24 @@
     <div class="section-heading">
       <p class="eyebrow">Canlı araştırma çalışmaları</p>
       <h2 id="live-lab-catalog-title">Canlı Veri Vaka Laboratuvarları</h2>
-      <p>Dijital çalışma dosyalarını ve canlı vaka uygulamalarını aynı sistemde bir araya getiren sınırlı katılımlı araştırma çalışmaları.</p>
+      <p>Dijital çalışma dosyalarını ve canlı vaka uygulamalarını aynı sistemde bir araya getiren araştırma çalışmaları.</p>
     </div>
     <div class="live-lab-catalog-grid">
       {{ range $liveLabPosts }}
         <article class="live-lab-catalog-card">
           <div class="badge-row">
             <span class="badge">Canlı vaka laboratuvarı</span>
-            <span class="badge">4 oturum × 2 saat</span>
-            <span class="badge">Google Meet</span>
+            <span class="badge">{{ .Params.session_count }}</span>
+            <span class="badge">{{ .Params.platform }}</span>
           </div>
-          <h3>Yaşam Bilimlerinde Veri Analizi</h3>
-          <p>Python ve Pandas ile yaşam bilimleri verisini okuma, temizleme, görselleştirme ve yorumlama için dijital araştırma varlıkları ve canlı vaka uygulamaları.</p>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description }}</p>
           <div class="live-lab-catalog-prices" aria-label="Erişim ücretleri">
-            <strong>Öğrenci 2.850 TL</strong>
-            <strong>Profesyonel 3.850 TL</strong>
+            <strong>{{ .Params.student_plan_label }} {{ .Params.student_price }}</strong>
+            <strong>{{ .Params.employee_plan_label }} {{ .Params.employee_price }}</strong>
           </div>
-          <p>Canlı oturumlar 15–16 ve 22–23 Ağustos 2026 tarihlerinde gerçekleştirilecektir.</p>
-          <p class="live-lab-campaign-note">BioExpo destekli kayıt kampanyasına dahil değildir.</p>
-          <a class="card-link" href="{{ .RelPermalink }}" data-event="other_courses_click" data-course="yasam-bilimlerinde-veri-analizi">Çalışmayı inceleyin</a>
+          {{ with .Params.date_note }}<p>{{ . }}</p>{{ end }}
+          <a class="card-link" href="{{ .RelPermalink }}" data-event="other_courses_click" data-course="{{ .File.BaseFileName }}">Çalışmayı inceleyin</a>
         </article>
       {{ end }}
     </div>
@@ -72,13 +57,12 @@
 
   <section id="egitimler" class="catalog-section">
     <div class="section-heading">
-      <p class="eyebrow">Öne çıkan eğitimler</p>
-      <h2>BioExpo 2026 destekli kayıtları açık eğitimler</h2>
+      <p class="eyebrow">Aktif asenkron içerikler</p>
+      <h2>Çalışma alanınıza uygun içeriği seçin</h2>
     </div>
     <div class="card-grid catalog-grid">
-      {{ range $priorityPosts }}
+      {{ range $activePosts.ByDate.Reverse }}
         {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
-        {{- $course := index $courses .File.BaseFileName -}}
         <article class="post-card course-card featured-card">
           {{ with .Params.images }}
             {{- $src := index . 0 -}}
@@ -88,34 +72,18 @@
           {{ end }}
           <div class="post-card-body">
             <div class="badge-row">
-              {{ with $course }}
-                <span class="badge campaign-status-badge">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" .) }}</span>
-              {{ end }}
-              <span class="badge">%50 destekli kayıt</span>
+              <span class="badge">Aktif içerik</span>
               <span class="badge">Açıklamalı uygulamalar</span>
               <span class="badge">Tekrar erişilebilir içerik</span>
             </div>
             <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
-            <p>{{ with $course }}{{ .card_description }}{{ else }}{{ .Description }}{{ end }}</p>
-            {{ if and (eq .Params.course_status "active") .Params.student_checkout_url .Params.employee_checkout_url }}
-              <div class="catalog-price-summary" aria-label="Destekli ücret özeti">
-                {{ with $course }}
-                  <p>
-                    <span>Öğrenci</span>
-                    <del>{{ .normal_student_price }}</del>
-                    <strong>{{ .sale_student_price }}</strong>
-                  </p>
-                  <p>
-                    <span>Çalışan</span>
-                    <del>{{ .normal_employee_price }}</del>
-                    <strong>{{ .sale_employee_price }}</strong>
-                  </p>
-                {{ end }}
+            <p>{{ .Description }}</p>
+            {{ if and .Params.student_checkout_url .Params.employee_checkout_url }}
+              <div class="catalog-price-summary" aria-label="Erişim ücretleri">
+                <p><span>{{ .Params.student_plan_label }} erişimi</span><strong>{{ .Params.student_price }}</strong></p>
+                <p><span>{{ .Params.employee_plan_label }} erişimi</span><strong>{{ .Params.employee_price }}</strong></p>
                 <small>Taksit seçenekleri ödeme adımında görünebilir.</small>
               </div>
-              {{ with $course }}
-                <p class="card-urgency-line">{{ partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" .) }}.</p>
-              {{ end }}
             {{ end }}
           </div>
           <div class="catalog-card-actions">
@@ -129,12 +97,12 @@
   <section class="catalog-section archive-section">
     <div class="section-heading">
       <p class="eyebrow">Hazırlık ve arşiv içerikleri</p>
-      <h2>Kampanya vitrini dışındaki içerikler</h2>
-      <p>Bu içerikler katalogda korunur; ancak destekli kontenjan rozeti verilmez.</p>
+      <h2>Diğer içerikler</h2>
+      <p>Bu içerikler katalogda korunur; kayıt bilgisi netleşmemiş olanlar satın alınabilir ürün gibi gösterilmez.</p>
     </div>
     <div class="card-grid archive-grid">
       {{ range $posts.ByDate.Reverse }}
-        {{- if and (not (in $prioritySlugs .File.BaseFileName)) (ne .Params.product_type "live_lab") -}}
+        {{- if and (ne .Params.course_status "active") (ne .Params.product_type "live_lab") -}}
           {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
           <article class="post-card course-card archive-card">
             {{ with .Params.images }}
@@ -160,7 +128,7 @@
                 <p>{{ .Summary | plainify }}</p>
               {{ end }}
             </div>
-            <a class="card-link card-link-muted" href="{{ .RelPermalink }}">Eğitimi incele</a>
+            <a class="card-link card-link-muted" href="{{ .RelPermalink }}">İçeriği incele</a>
           </article>
         {{- end -}}
       {{ end }}

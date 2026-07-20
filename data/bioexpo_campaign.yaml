@@ -1,5 +1,5 @@
 campaign:
-  active: true
+  active: false
   name: "BioExpo 2026 Destekli Kayıt Dönemi"
   product_name: "ERES Akademi Sektör Destekli Eğitim Kontenjanı Programı"
   case_file_name: "BioExpo 2026 Destekli Biyoinformatik Eğitim Kontenjanı — Vaka Dosyası"
@@ -9,8 +9,8 @@ campaign:
   ends_at: "2026-07-16T23:59:00+03:00"
   timezone: "Europe/Istanbul"
   default_quota: 10
-  show_countdown: true
-  show_quota: true
+  show_countdown: false
+  show_quota: false
   ethical_counter_mode: true
   counter_note: "Doluluk sayısı yalnızca doğrulanmış satış/rezervasyon verisiyle güncellenmelidir."
   priority_slugs:

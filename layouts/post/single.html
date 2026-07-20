@@ -1,9 +1,6 @@
 {{ define "main" }}
 {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
 {{- $slug := .File.BaseFileName -}}
-{{- $campaign := site.Data.bioexpo_campaign.campaign -}}
-{{- $courseCampaign := index site.Data.bioexpo_campaign.courses $slug -}}
-{{- $isBioexpoCourse := and $campaign.active $courseCampaign -}}
 {{- $isRCourse := eq $slug "biyoinformatik-icin-r-programlama" -}}
 {{- $comingSoonSlugs := slice "biyoinformatik-dizi-hizalama-algoritmalari-egitimi" "biyoinformatik-yaz-kampi" -}}
 {{- $isComingSoonFeature := in $comingSoonSlugs $slug -}}
@@ -17,9 +14,6 @@
 {{- if $isComingSoonFeature -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
   {{- $primaryCTAText = "Yazılı bilgi almak istiyorum" -}}
-{{- else if $isBioexpoCourse -}}
-  {{- $primaryCTAURL = "#kayit-secenekleri" -}}
-  {{- $primaryCTAText = "Destekli kayıt al" -}}
 {{- else if $hasPricingPlans -}}
   {{- $primaryCTAURL = "#kayit-secenekleri" -}}
   {{- $primaryCTAText = "Kaydını tamamla" -}}
@@ -31,38 +25,12 @@
 {{- with .Params.course_hero_headline -}}
   {{- $heroTitle = . -}}
 {{- end -}}
-{{- if and $isBioexpoCourse $courseCampaign.hero_headline -}}
-  {{- $heroTitle = $courseCampaign.hero_headline -}}
-{{- end -}}
-{{- if $isBioexpoCourse -}}
-  {{- if eq $slug "biyoinformatik-icin-r-programlama" -}}
-    {{- $heroTitle = "R öğrenmeyi biyoinformatik veriye bağlayarak başlayın." -}}
-  {{- else if eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
-    {{- $heroTitle = "Biyoinformatiğin temel mantığını ve büyük veri dünyasını öğrenin." -}}
-  {{- else if eq $slug "biyoinformatik-veritabanlari-araclar-egitimi" -}}
-    {{- $heroTitle = "Temel biyoinformatik araçları daha bilinçli kullanmayı öğrenin." -}}
-  {{- else if eq $slug "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
-    {{- $heroTitle = "NCBI, Ensembl ve UCSC genom tarayıcılarını daha güvenli okuyun." -}}
-  {{- else if eq $slug "tek-hucre-rna-seq-analizi-egitimi" -}}
-    {{- $heroTitle = "Tek hücre RNA-seq analiz akışını daha bilinçli okuyun." -}}
-  {{- else if eq $slug "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
-    {{- $heroTitle = "Protein yapısı ve in silico modelleme dünyasına uygulamalı bir başlangıç yapın." -}}
-  {{- else if eq $slug "phyml-uygulamali-filogenetik-egitimi" -}}
-    {{- $heroTitle = "Filogenetik analiz ve dizi hizalama pratiğinizi güçlendirin." -}}
-  {{- end -}}
-{{- end -}}
 {{- $heroLead := .Description -}}
 {{- with .Params.course_hero_subheadline -}}
   {{- $heroLead = . -}}
 {{- end -}}
 {{- $studentLabel := .Params.student_plan_label | default "Öğrenci" -}}
 {{- $employeeLabel := .Params.employee_plan_label | default "Çalışan" -}}
-{{- $remainingSlots := 0 -}}
-{{- $quotaCopy := "" -}}
-{{- if $isBioexpoCourse -}}
-  {{- $remainingSlots = int (partial "bioexpo/remaining-slots.html" (dict "campaign" $campaign "course" $courseCampaign)) -}}
-  {{- $quotaCopy = partial "bioexpo/quota-label.html" (dict "campaign" $campaign "course" $courseCampaign) -}}
-{{- end -}}
 {{- $lessonFlow := slice "Öğrenme hedefleri ve temel kavramlar" "Konuya uygun veri, araç ve uygulama mantığı" "Araştırma pratiğine yakın örneklerle ilerleme" -}}
 {{- $outcomes := slice "Konuya ait temel kavramları araştırma pratiğiyle ilişkilendirebileceksiniz." "İlgili veri kaynaklarını, araçları ve çıktıları daha bilinçli okuyabileceksiniz." "Sonraki öğrenme yolunuzu daha net seçebileceksiniz." -}}
 {{- $codingNote := "Bu eğitimler, kodlama geçmişi sınırlı olan yaşam bilimleri öğrencileri ve araştırmacılarının biyolojik veriyle adım adım çalışabilmesi için yapılandırılmıştır." -}}
@@ -139,7 +107,7 @@
 <article class="container page-shell training-page" data-meta-content-name="{{ $displayTitle }}" data-meta-content-category="Biyoinformatik Eğitimi">
   <header class="page-header training-hero training-hero-grid">
     <div>
-      <p class="eyebrow">{{ if $isBioexpoCourse }}Destekli kontenjan{{ else if $isRCourse }}Biyoinformatik için R Programlama{{ else }}Eğitim{{ end }}</p>
+      <p class="eyebrow">{{ if $isRCourse }}Biyoinformatik için R Programlama{{ else }}Eğitim{{ end }}</p>
       <h1>{{ $heroTitle }}</h1>
       {{ with $heroLead }}<p class="lead">{{ . }}</p>{{ end }}
       {{ with .Params.course_hero_note }}<p class="course-hero-note">{{ . }}</p>{{ end }}
@@ -148,37 +116,13 @@
           <span>Yakında açılacak</span>
           <span>Program hazırlıkta</span>
           <span>Duyuru bekleniyor</span>
-        {{ else if $isBioexpoCourse }}
-          <span>Kendi hızınızda</span>
-          <span>Açıklamalı uygulamalar</span>
-          <span>10 destekli kontenjan</span>
-          <span>%50 destekli kayıt</span>
         {{ else }}
           <span>Kendi hızınızda</span>
           <span>Açıklamalı uygulamalar</span>
         {{ end }}
       </div>
-      {{ if $isBioexpoCourse }}
-        <div class="campaign-urgency-banner training-urgency-banner bioexpo-final-campaign-card" data-bioexpo-active>
-          <p class="urgency-kicker">BIOEXPO DESTEKLİ KAYIT</p>
-          <h2>
-            {{- if le $remainingSlots 0 -}}
-              Bu içerik için destekli kontenjan doldu.
-            {{- else -}}
-              Bu içerik için son {{ $remainingSlots }} destekli kontenjan kaldı.
-            {{- end -}}
-          </h2>
-          <p>%50 destekli fiyatlar 16 Temmuz saat 23.59’da sona eriyor.</p>
-          <p class="course-trust-note">Tekrar erişilebilir içerik · Açıklamalı uygulamalar · Güvenli ödeme</p>
-        </div>
-        <div class="campaign-urgency-banner training-urgency-banner bioexpo-expired-state" data-bioexpo-expired hidden>
-          <p class="urgency-kicker">BIOEXPO DESTEKLİ KAYIT</p>
-          <h2>BioExpo destekli kayıt dönemi tamamlandı.</h2>
-          <p>Güncel içerikleri ve erişim seçeneklerini inceleyebilirsiniz.</p>
-        </div>
-      {{ end }}
       <div class="hero-actions">
-        <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="detail-hero" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ $primaryCTAText }}</a>
+        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
       </div>
     </div>
     {{ with .Params.images }}
@@ -189,185 +133,17 @@
     {{ end }}
   </header>
 
-  {{ if $isBioexpoCourse }}
-  <div class="training-conversion-layout">
-    <section id="kayit-secenekleri" class="course-pricing">
-      <p class="eyebrow">Kayıt seçenekleri</p>
-      <h2>Kayıt Seçenekleri</h2>
-      <p class="pricing-intro">Bu eğitim için BioExpo 2026 destekli kayıt fırsatıyla başlayabilirsiniz.</p>
-      <div class="supported-fee-note bioexpo-final-campaign-card" data-bioexpo-active>
-        <p class="support-label">BIOEXPO DESTEKLİ KAYIT</p>
-        <h3>
-          {{- if le $remainingSlots 0 -}}
-            Destekli kontenjan doldu.
-          {{- else -}}
-            Bu içerik için son {{ $remainingSlots }} destekli kontenjan kaldı.
-          {{- end -}}
-        </h3>
-        <p>%50 destekli fiyatlar 16 Temmuz saat 23.59’da sona eriyor.</p>
-      </div>
-      <p class="course-trust-note">Tekrar erişilebilir içerik · Açıklamalı uygulamalar · Güvenli ödeme</p>
-      <div class="course-pricing-grid">
-        <article class="pricing-card pricing-card-featured price-card">
-          <span class="pricing-badge">Destekli kayıt</span>
-          <h3>{{ $studentLabel }}</h3>
-          <div class="bioexpo-final-price">
-            <p><span>Normal ücret</span><del>{{ $courseCampaign.normal_student_price }}</del></p>
-            <p><span>BioExpo destekli ücret</span><strong>{{ $courseCampaign.sale_student_price }}</strong></p>
-          </div>
-          <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
-          {{ if gt $remainingSlots 0 }}
-            <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="bioexpo_payhip_click" data-campaign="bioexpo2026" data-payment-provider="payhip" data-course="{{ $courseCampaign.key }}" data-plan="student" data-remaining-slots="{{ $remainingSlots }}" data-bioexpo-active>%50 destekli öğrenci kaydını tamamla</a>
-          {{ else }}
-            <p class="bioexpo-expired-state">Destekli kontenjan doldu.</p>
-          {{ end }}
-        </article>
-        <article class="pricing-card price-card">
-          <span class="pricing-badge">Destekli kayıt</span>
-          <h3>{{ $employeeLabel }}</h3>
-          <div class="bioexpo-final-price">
-            <p><span>Normal ücret</span><del>{{ $courseCampaign.normal_employee_price }}</del></p>
-            <p><span>BioExpo destekli ücret</span><strong>{{ $courseCampaign.sale_employee_price }}</strong></p>
-          </div>
-          <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar veya kurumsal yapılarda çalışan profesyoneller için eğitim erişimi.</p>
-          {{ if gt $remainingSlots 0 }}
-            <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="bioexpo_payhip_click" data-campaign="bioexpo2026" data-payment-provider="payhip" data-course="{{ $courseCampaign.key }}" data-plan="employee" data-remaining-slots="{{ $remainingSlots }}" data-bioexpo-active>%50 destekli profesyonel kaydı tamamla</a>
-          {{ else }}
-            <p class="bioexpo-expired-state">Destekli kontenjan doldu.</p>
-          {{ end }}
-        </article>
-      </div>
-    </section>
-
-    <section class="training-summary-grid" aria-label="Kısa karar özeti">
-      <article class="training-summary-card">
-        <h2>Bu içerik ne için?</h2>
-        <p>{{ $fitIntro }}</p>
-      </article>
-      <article class="training-summary-card">
-        <h2>Çalışma yaklaşımı</h2>
-        <p>{{ $codingNote }}</p>
-      </article>
-      <article class="training-summary-card">
-        <h2>İlk bakışta içerik akışı</h2>
-        <ol>
-          {{ range first 3 $lessonFlow }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ol>
-      </article>
-    </section>
-
-    <section class="training-resource-panel" aria-labelledby="training-resources-title">
-      <p class="eyebrow">Dahil olan materyaller</p>
-      <h2 id="training-resources-title">Açıklamalı içerik ve çalışma kaynakları</h2>
-      {{ with .Params.course_hero_note }}<p>{{ . }}</p>{{ end }}
-      <ul class="training-resource-list">
-        {{ with .Params.course_card_highlights }}
-          {{ range . }}
-            {{ if not (in (lower .) "ödev") }}<li>{{ . }}</li>{{ end }}
-          {{ end }}
-        {{ else }}
-          <li>Açıklamalı uygulamalar</li>
-          <li>Tekrar erişilebilir içerik</li>
-          <li>Araştırma pratiğine yakın örnekler</li>
-        {{ end }}
-      </ul>
-    </section>
-
-    <details class="training-details">
-      <summary>Ayrıntılı içerik ve çalışma akışını inceleyin</summary>
-      <div class="training-details-content">
-        <section>
-          <h2>Tam içerik akışı</h2>
-          <ol class="lesson-flow">
-            {{ range $lessonFlow }}
-              <li>{{ . }}</li>
-            {{ end }}
-          </ol>
-        </section>
-        <section>
-          <h2>Bu içerikle çalışırken</h2>
-          <ul class="training-resource-list">
-            {{ range $outcomes }}
-              <li>{{ . }}</li>
-            {{ end }}
-          </ul>
-        </section>
-      </div>
-    </details>
-
-    {{ if gt (len $testimonials) 0 }}
-      <section class="training-testimonials-compact">
-        <p class="eyebrow">Kullanıcı deneyimleri</p>
-        <h2>Kullanıcı deneyimlerinden</h2>
-        <div class="testimonial-grid">
-          {{ range first 2 $testimonials }}
-            <article class="testimonial-card">
-              <p>“{{ .quote }}”</p>
-              <span>{{ .profile }}</span>
-            </article>
-          {{ end }}
-        </div>
-      </section>
-    {{ end }}
-
-    <section class="training-faq-compact">
-      <p class="eyebrow">Sık sorulan sorular</p>
-      <h2>Sık sorulan sorular</h2>
-      <div class="faq-grid">
-        <article>
-          <h3>İçeriklere nasıl erişeceğim?</h3>
-          <p>Satın alma sonrasında, kullandığınız e-posta adresiyle ERES Kampüs / Payhip kullanıcı hesabınız üzerinden içeriklere erişebilirsiniz.</p>
-        </article>
-        <article>
-          <h3>Teknik önkoşul var mı?</h3>
-          <p>{{ $codingNote }}</p>
-        </article>
-        <article>
-          <h3>Yazılı destek hangi alanı kapsar?</h3>
-          <p>Yazılı destek; satın alma, hesap erişimi ve ürün içinde belirtilen teknik kullanım adımlarıyla sınırlıdır. Kullanıcıya özel proje analizi veya danışmanlık bu ürünün kapsamında değildir.</p>
-        </article>
-        <article>
-          <h3>Ödeme nasıl tamamlanır?</h3>
-          <p>Öğrenci ve çalışan/profesyonel erişim seçenekleri güvenli ödeme sayfasında gösterilir. Kartınıza veya bankanıza göre taksit seçenekleri ödeme adımında görünebilir.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="training-closing-cta">
-      <p class="eyebrow">Sonraki adım</p>
-      <h2>İçeriği inceleyin ve size uygun erişim seçeneğiyle başlayın.</h2>
-      <a class="hero-action" href="#kayit-secenekleri">Erişim seçeneklerine dön</a>
-    </section>
-  </div>
-  {{ if gt $remainingSlots 0 }}
-    <div class="bioexpo-final-mobile-cta" data-bioexpo-active>
-      <span>
-        {{- if eq $remainingSlots 1 -}}
-          Son 1 destekli kontenjan
-        {{- else -}}
-          Son {{ $remainingSlots }} destekli kontenjan
-        {{- end -}}
-      </span>
-      <a href="#kayit-secenekleri">%50 destekli kayıt seçenekleri</a>
-    </div>
-  {{ end }}
-  {{ else }}
   <div class="training-layout">
     <aside class="training-sidebar" aria-label="Eğitim özeti">
       <div class="sidebar-card decision-card">
         <p class="eyebrow">Eğitim özeti</p>
-        <h2>{{ if $isComingSoonFeature }}Bu program ilginizi çekiyorsa duyuruyu takip edebilirsiniz.{{ else if $isBioexpoCourse }}Bu eğitimde destekli kontenjan var.{{ else }}Bu eğitim size uygunsa bugün başlayabilirsiniz.{{ end }}</h2>
+        <h2>{{ if $isComingSoonFeature }}Bu program ilginizi çekiyorsa duyuruyu takip edebilirsiniz.{{ else }}Bu eğitim size uygunsa bugün başlayabilirsiniz.{{ end }}</h2>
         <ul>
           <li>Kendi hızınızda</li>
           <li>Videolu ve tekrar izlenebilir dersler</li>
           <li>Açıklamalı uygulamalar</li>
         </ul>
-        {{ if and $hasPricingPlans .Params.student_price }}
-          <p class="sidebar-note">{{ $quotaCopy }}.</p>
-        {{ end }}
-        <a class="card-link" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="detail-sidebar" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ $primaryCTAText }}</a>
+        <a class="card-link" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
       </div>
     </aside>
 
@@ -435,7 +211,7 @@
               <li>CRAN, Bioconductor ve paket kurulumu ayrımı</li>
               <li>Metadata-expression eşleşmesi ve sample ID problemleri</li>
             </ul>
-            <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="r-error" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ if $isBioexpoCourse }}Destekli kayıt al{{ else }}Taksit seçenekleriyle kayıt ol{{ end }}</a>
+            <a class="hero-action" href="{{ $primaryCTAURL }}">Taksit seçenekleriyle kayıt ol</a>
           </div>
         </section>
 
@@ -559,7 +335,7 @@
             <li>Açıklamalı uygulamalar</li>
             <li>Tekrar izlenebilir eğitim yapısı</li>
           </ul>
-          <a class="hero-action" href="{{ $primaryCTAURL }}"{{ if $isBioexpoCourse }} data-campaign="bioexpo2026" data-course="{{ $courseCampaign.key }}" data-cta="format" data-destination="pricing" data-event="bioexpo_course_detail_cta_click"{{ end }}>{{ $primaryCTAText }}</a>
+          <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
         </div>
       </section>
 
@@ -574,30 +350,25 @@
         {{ else if $hasPricingPlans }}
           <p class="eyebrow">Kayıt seçenekleri</p>
           <h2>Kayıt Seçenekleri</h2>
-          <p class="pricing-intro">{{ if $isRCourse }}Biyoinformatik için R Programlama eğitimine BioExpo 2026 destekli kayıt fırsatıyla başlayabilirsiniz.{{ else }}Bu eğitim için BioExpo 2026 destekli kayıt fırsatıyla başlayabilirsiniz.{{ end }}</p>
-          <div class="supported-fee-note">
-            <p class="support-label">BioExpo 2026 destekli kayıt</p>
-            <h3>{{ $quotaCopy }}</h3>
-            <p>{{ if $isRCourse }}RStudio’dan biyoinformatik veri örneklerine uzanan bu eğitimle, kendi hızınızda ilerleyebilir ve öğrendiklerinizi düzenli pratiklerle pekiştirebilirsiniz.{{ else }}Yaz aylarında kendi hızınızda ilerleyebilir, öğrendiklerinizi pratiğe dökerek yeni döneme daha donanımlı başlayabilirsiniz.{{ end }}</p>
-          </div>
-          <p class="course-trust-note">Kayıt işleminiz tamamlandığında eğitime otomatik olarak tanımlanırsınız. Kredi kartı ile güvenli ödeme yapabilir, ödeme adımında kartınıza/bankanıza göre taksit seçeneklerini görebilirsiniz.</p>
+          <p class="pricing-intro">Size uygun erişim seçeneğini seçerek güvenli ödeme sayfasına geçebilirsiniz.</p>
+          <p class="course-trust-note">Kayıt işleminiz tamamlandığında erişiminiz kullanıcı hesabınıza tanımlanır. Ödeme adımında kartınıza veya bankanıza göre taksit seçenekleri görünebilir.</p>
           <div class="course-pricing-grid">
             <article class="pricing-card pricing-card-featured price-card">
-              <span class="pricing-badge">Destekli kayıt</span>
-              <h3>{{ $studentLabel }}</h3>
-              {{ with .Params.student_price }}<p class="supported-price"><span>Destekli kayıt ücreti</span>{{ . }}</p>{{ end }}
-              <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için avantajlı eğitim erişimi.</p>
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="{{ if in .Params.student_checkout_url "payhip" }}payhip_checkout_click{{ else }}iyzico_checkout_click{{ end }}" data-payment-provider="{{ if in .Params.student_checkout_url "payhip" }}payhip{{ else }}iyzico{{ end }}" data-course="{{ $slug }}" data-plan="student">Eğitime kaydol</a>
+              <span class="pricing-badge">Öğrenci erişimi</span>
+              <h3>{{ $studentLabel }} erişimi</h3>
+              {{ with .Params.student_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
+              <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için.</p>
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci erişimiyle kaydol</a>
             </article>
             <article class="pricing-card price-card">
-              <span class="pricing-badge">Destekli kayıt</span>
-              <h3>{{ $employeeLabel }}</h3>
-              {{ with .Params.employee_price }}<p class="supported-price"><span>Destekli kayıt ücreti</span>{{ . }}</p>{{ end }}
-              <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar veya kurumsal yapılarda çalışan profesyoneller için eğitim erişimi.</p>
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="{{ if in .Params.employee_checkout_url "payhip" }}payhip_checkout_click{{ else }}iyzico_checkout_click{{ end }}" data-payment-provider="{{ if in .Params.employee_checkout_url "payhip" }}payhip{{ else }}iyzico{{ end }}" data-course="{{ $slug }}" data-plan="employee">Eğitime kaydol</a>
+              <span class="pricing-badge">Profesyonel erişim</span>
+              <h3>{{ $employeeLabel }} erişimi</h3>
+              {{ with .Params.employee_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
+              <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar ve Ar-Ge çalışanları için.</p>
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel erişimle kaydol</a>
             </article>
           </div>
-          {{ partial "support/trust-box.html" (dict) }}
+          {{ partial "support/trust-box.html" (dict "cta" "WhatsApp üzerinden yazılı destek alın") }}
         {{ else }}
           <div class="format-panel">
             <p>Bu eğitim şu anda hazırlık aşamasındadır. Program ve kayıt bilgileri netleştiğinde resmi akademi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
@@ -685,7 +456,6 @@
       </details>
     </div>
   </div>
-  {{ end }}
 </article>
 {{- end -}}
 {{ end }}

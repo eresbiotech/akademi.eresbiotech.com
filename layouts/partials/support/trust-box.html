@@ -7,5 +7,6 @@
   {{- $cta = . -}}
 {{- end -}}
 <div class="written-support-box">
-  <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" $message) }}" target="_blank" rel="noopener noreferrer">{{ $cta }}</a>
+  <p>Ödeme sayfası açılmazsa veya kayıt sırasında hata alırsanız WhatsApp üzerinden yazılı destek alabilirsiniz.</p>
+  <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" $message) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">{{ $cta }}</a>
 </div>

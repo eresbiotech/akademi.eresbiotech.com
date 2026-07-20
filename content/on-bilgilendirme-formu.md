@@ -17,7 +17,7 @@ ERES Biyoinformatik Akademi eğitimleri asenkron, tekrar izlenebilir ve dijital 
 
 ## Fiyat ve Ödeme
 
-Güncel eğitim bedeli ilgili eğitim sayfasında ve ödeme ekranında gösterilir. BioExpo 2026 destekli kayıt kampanyası kapsamında seçili eğitimlerde sınırlı sayıda %50 destekli kontenjan sunulabilir. Payhip ve iyzico güvenli ödeme altyapısı kullanılabilir. Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir.
+Güncel eğitim bedeli ilgili eğitim sayfasında ve ödeme ekranında gösterilir. Payhip ve iyzico güvenli ödeme altyapısı kullanılabilir. Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir.
 
 ## Teslimat
 

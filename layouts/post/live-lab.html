@@ -1,29 +1,29 @@
 {{ define "main" }}
 {{- $checkoutURL := .Params.checkout_url -}}
+{{- $dateNote := .Params.date_note -}}
 <article
   class="container page-shell live-lab-page"
-  data-meta-content-name="Yaşam Bilimlerinde Veri Analizi"
+  data-meta-content-name="{{ .Title }}"
   data-meta-content-category="Dijital Araştırma Varlığı"
 >
   <header class="page-header live-lab-hero">
     <p class="eyebrow">Dijital Araştırma Varlıkları ve Canlı Veri Vaka Laboratuvarı</p>
-    <h1>Yaşam Bilimlerinde Veri Analizi</h1>
+    <h1>{{ .Title }}</h1>
     <p class="live-lab-lead">Yaşam bilimleri verisini Python ve Pandas ile okumak, düzenlemek, kontrol etmek, görselleştirmek ve araştırma sorusuyla ilişkilendirmek için hazırlanmış bütünleşik bir çalışma sistemi.</p>
     <p class="live-lab-scientific-lead"><strong>Bilimsel Yürütücü:</strong> {{ .Params.scientific_lead }}</p>
-    <p class="live-lab-campaign-note">Bu çalışma BioExpo 2026 destekli kayıt kampanyasına dahil değildir.</p>
   </header>
 
   <section class="live-lab-meta-grid" aria-label="Çalışma bilgileri">
     <article class="live-lab-meta-card">
-      <strong>8 saat</strong>
-      <span>4 canlı oturum × 2 saat</span>
+      <strong>{{ .Params.duration }}</strong>
+      <span>{{ .Params.session_count }}</span>
     </article>
     <article class="live-lab-meta-card">
-      <strong>Google Meet</strong>
+      <strong>{{ .Params.platform }}</strong>
       <span>Canlı vaka laboratuvarı</span>
     </article>
     <article class="live-lab-meta-card">
-      <strong>20 kişi</strong>
+      <strong>{{ .Params.capacity }}</strong>
       <span>Operasyonel katılım sınırı</span>
     </article>
     <article class="live-lab-meta-card">
@@ -33,7 +33,7 @@
   </section>
 
   <section class="live-lab-date-note" aria-labelledby="live-lab-date-title">
-    <h2 id="live-lab-date-title">Canlı oturumlar 15–16 ve 22–23 Ağustos 2026 tarihlerinde gerçekleştirilecektir.</h2>
+    {{ with $dateNote }}<h2 id="live-lab-date-title">{{ . }}</h2>{{ end }}
     <p>Canlı oturum bağlantıları ve hazırlık bilgileri, satın alma sırasında kullanılan e-posta adresi üzerinden paylaşılacaktır.</p>
   </section>
 
@@ -45,14 +45,14 @@
     <div class="live-lab-price-grid">
       <article class="live-lab-price-card">
         <h3>Öğrenci erişimi</h3>
-        <strong>2.850 TL</strong>
+        <strong>{{ .Params.student_price }}</strong>
       </article>
       <article class="live-lab-price-card">
         <h3>Profesyonel erişim</h3>
-        <strong>3.850 TL</strong>
+        <strong>{{ .Params.employee_price }}</strong>
       </article>
     </div>
-    <a class="hero-action" href="{{ $checkoutURL }}" target="_blank" rel="noopener noreferrer" data-event="payhip_checkout_click" data-course="yasam-bilimlerinde-veri-analizi" data-plan="student_professional" data-payment-provider="payhip">Erişim Seçeneğinizi Belirleyin</a>
+    <a class="hero-action" href="{{ $checkoutURL }}" target="_blank" rel="noopener noreferrer" data-event="payhip_checkout_click" data-course="{{ .File.BaseFileName }}" data-plan="student_professional" data-payment-provider="payhip">Erişim Seçeneğinizi Belirleyin</a>
     <p class="live-lab-checkout-note">Öğrenci veya profesyonel erişim seçeneğinizi güvenli ödeme sayfasında belirleyebilirsiniz.</p>
   </section>
 
@@ -63,7 +63,7 @@
   <section class="live-lab-closing">
     <h2>Yaşam bilimleri verisiyle sistemli bir çalışma akışı kurun.</h2>
     <p>Dijital araştırma varlıklarına ve dört oturumluk Canlı Veri Vaka Laboratuvarına tek ürün üzerinden erişin.</p>
-    <a class="hero-action" href="{{ $checkoutURL }}" target="_blank" rel="noopener noreferrer" data-event="payhip_checkout_click" data-course="yasam-bilimlerinde-veri-analizi" data-plan="student_professional" data-payment-provider="payhip">Canlı Veri Vaka Laboratuvarına Erişin</a>
+    <a class="hero-action" href="{{ $checkoutURL }}" target="_blank" rel="noopener noreferrer" data-event="payhip_checkout_click" data-course="{{ .File.BaseFileName }}" data-plan="student_professional" data-payment-provider="payhip">Canlı Veri Vaka Laboratuvarına Erişin</a>
   </section>
 </article>
 {{ end }}

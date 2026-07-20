@@ -1,4 +1,3 @@
-{{- $campaign := site.Data.bioexpo_campaign.campaign -}}
 {{- $isStudentLogin := eq .RelPermalink "/ders-giris/" -}}
 <header class="site-header{{ if $isStudentLogin }} student-login-site-header{{ end }}">
   <div class="container header-inner">
@@ -7,7 +6,6 @@
     </a>
     <nav class="site-nav" aria-label="Ana menu">
       <a href="{{ "/post/" | relURL }}">Eğitimler</a>
-      {{ if $campaign.active }}<a href="{{ "/bioexpo-2026-destekli-kayit/" | relURL }}">Destekli Kayıt</a>{{ end }}
       <a href="{{ "/canli-egitimler/" | relURL }}">Canlı Eğitimler</a>
       <a href="{{ "/about/" | relURL }}">Hakkımızda</a>
       <a class="nav-student-login{{ if $isStudentLogin }} is-active{{ end }}" href="{{ "/ders-giris/" | relURL }}"{{ if $isStudentLogin }} aria-current="page"{{ end }}>İçeriklere Erişim</a>
@@ -19,7 +17,6 @@
         <summary>Menü</summary>
         <nav aria-label="Mobil menu">
           <a href="{{ "/post/" | relURL }}">Eğitimler</a>
-          {{ if $campaign.active }}<a href="{{ "/bioexpo-2026-destekli-kayit/" | relURL }}">Destekli Kayıt</a>{{ end }}
           <a href="{{ "/canli-egitimler/" | relURL }}">Canlı Eğitimler</a>
           <a href="{{ "/ders-giris/" | relURL }}">İçeriklere Erişim</a>
           <a href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Yazılı Destek</a>

@@ -6,13 +6,11 @@
   <body>
     <a class="skip-link" href="#main">Icerige gec</a>
     {{ partial "header.html" . }}
-    {{ partial "bioexpo/final-days-banner.html" . }}
     <main id="main" class="site-main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
     {{ partial "cookie-consent.html" . }}
-    <script src="{{ "js/bioexpo-final-days.js" | relURL }}" defer></script>
     <script src="{{ "js/site-consent.js" | relURL }}" defer></script>
   </body>
 </html>

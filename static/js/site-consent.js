@@ -32,7 +32,7 @@
 
   function coursePayload() {
     var courseRoot = document.querySelector("[data-meta-content-name]");
-    var checkoutLink = document.querySelector('[data-event="iyzico_checkout_click"], [data-event="payhip_checkout_click"], [data-event="bioexpo_payhip_click"]');
+    var checkoutLink = document.querySelector('[data-event="iyzico_checkout_click"], [data-event="payhip_checkout_click"]');
     var contentName = courseRoot ? courseRoot.getAttribute("data-meta-content-name") : "";
     if (!courseRoot || !checkoutLink || !contentName) return null;
     return {
@@ -110,22 +110,14 @@
       track(trackedEventName, {
         course: tracked.getAttribute("data-course") || undefined,
         plan: tracked.getAttribute("data-plan") || undefined,
-        provider: tracked.getAttribute("data-payment-provider") || undefined,
-        campaign: tracked.getAttribute("data-campaign") || undefined,
-        remaining_slots: tracked.getAttribute("data-remaining-slots") || undefined
+        provider: tracked.getAttribute("data-payment-provider") || undefined
       });
-      if (trackedEventName === "iyzico_checkout_click" || trackedEventName === "payhip_checkout_click" || trackedEventName === "bioexpo_payhip_click") {
+      if (trackedEventName === "iyzico_checkout_click" || trackedEventName === "payhip_checkout_click") {
         var initiatePayload = coursePayload() || {
           content_name: tracked.getAttribute("data-course") || document.title,
           content_category: "Biyoinformatik Eğitimi",
           currency: "TRY"
         };
-        if (tracked.getAttribute("data-campaign")) {
-          initiatePayload.campaign = tracked.getAttribute("data-campaign");
-        }
-        if (tracked.getAttribute("data-remaining-slots")) {
-          initiatePayload.remaining_slots = tracked.getAttribute("data-remaining-slots");
-        }
         trackMeta("standard", "InitiateCheckout", initiatePayload);
       }
       if (trackedEventName === "whatsapp_click") {
