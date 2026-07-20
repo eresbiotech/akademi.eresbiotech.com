@@ -95,7 +95,7 @@
       <h2>Çalışma alanınıza uygun içeriği inceleyin</h2>
       <p>Kendi hızınızda ilerleyebileceğiniz açıklamalı uygulamalar ve çalışma kaynaklarıyla başlayın.</p>
     </div>
-    <a class="text-link" href="{{ "/post/" | relURL }}" data-event="other_courses_click">Tüm eğitim kataloğu</a>
+    <a class="text-link" href="{{ "/post/" | relURL }}" data-event="other_courses_click">Tüm içerikleri görün</a>
   </div>
   <div class="compact-course-grid">
     {{ range $otherCourses }}
@@ -109,7 +109,7 @@
             <p class="compact-course-price">{{ .Params.student_plan_label }} {{ .Params.student_price }} · {{ .Params.employee_plan_label }} {{ .Params.employee_price }}</p>
           {{ end }}
         </div>
-        <a class="card-link card-link-light" href="{{ with $course }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="other_courses_click" data-course="{{ .slug }}">İçeriği incele</a>
+        <a class="card-link card-link-light" href="{{ with $course }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="other_courses_click" data-course="{{ .slug }}">İçeriği inceleyin</a>
       </article>
     {{ end }}
   </div>
@@ -147,7 +147,7 @@
       <p>ERES Kampüs / Payhip üzerinden kayıt olduğunuzda, satın alma sırasında kullandığınız e-posta ve şifreyle kullanıcı hesabınıza giriş yaparak içeriklerinize tekrar ulaşabilirsiniz.</p>
       <small>Şifrenizi hatırlamıyorsanız giriş ekranındaki "Forgot your password?" bağlantısını kullanabilirsiniz.</small>
     </div>
-    <a class="support-cta" href="{{ "/ders-giris/" | relURL }}">İçeriklere Erişim</a>
+    <a class="support-cta" href="{{ "/ders-giris/" | relURL }}">İçeriklerime giriş yapın</a>
   </div>
 </section>
 
@@ -181,7 +181,7 @@ print("Kod çalışmadı. Hikaye devam ediyor.")</code></pre>
 </section>
 
 <div class="mobile-sticky-cta" aria-label="Hızlı kayıt bağlantıları">
-  <a class="mobile-sticky-primary" href="#karar-yollari" data-event="hero_primary_cta_click">Bana uygun içeriği seç</a>
+  <a class="mobile-sticky-primary" href="#karar-yollari" data-event="hero_primary_cta_click">Size uygun içeriği seçin</a>
   <a class="mobile-sticky-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp</a>
 </div>
 {{ end }}

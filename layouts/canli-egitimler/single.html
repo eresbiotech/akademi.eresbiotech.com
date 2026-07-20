@@ -10,8 +10,8 @@
       <p class="live-claim">{{ .Params.hero_claim }}</p><p>{{ .Params.hero_text }}</p>
       <div class="live-trust" aria-label="Eğitim özellikleri">{{ range .Params.trust_points }}<span>{{ . }}</span>{{ end }}</div>
       <div class="live-cta">
-        {{ if and .Params.registration_url (eq $status "kayit-acik") }}<a class="live-button" href="{{ .Params.registration_url }}">Kayıt ol</a>{{ else }}<span class="live-button live-button-disabled" aria-disabled="true">{{ $statusLabel }}</span>{{ end }}
-        <a class="live-button live-button-secondary" href="#program">Programı incele</a>
+        {{ if and .Params.registration_url (eq $status "kayit-acik") }}<a class="live-button" href="{{ .Params.registration_url }}">Canlı eğitime kaydolun</a>{{ else }}<span class="live-button live-button-disabled" aria-disabled="true">{{ $statusLabel }}</span>{{ end }}
+        <a class="live-button live-button-secondary" href="#program">Programı inceleyin</a>
       </div>
     </div>
     <aside class="live-card live-hero-card"><span class="live-status {{ printf "live-status-%s" $status }}">{{ $statusLabel }}</span><dl class="live-meta">
@@ -29,7 +29,7 @@
     <section class="live-section live-card live-instructor" aria-labelledby="instructor-title"><p class="live-kicker">Eğitmen</p><h2 id="instructor-title">{{ .Params.instructor }}</h2><p>{{ .Params.instructor_bio }}</p></section>
     <section class="live-section live-why" aria-labelledby="why-title"><p class="live-kicker">Bütünlüklü yaklaşım</p><h2 id="why-title">Neden bu eğitim?</h2><p>RNA-seq analizinde kullanılan araçları bilmek kadar, her adımın neden yapıldığını ve çıktının nasıl yorumlanacağını anlamak da önemlidir. Bu eğitim, katılımcıların ham veri, kalite kontrol, hizalama, sayım matrisi, diferansiyel ekspresyon ve biyolojik yorumlama arasındaki ilişkiyi bütünlüklü biçimde görmesini hedefler.</p></section>
     <section class="live-section live-faq" aria-labelledby="faq-title"><p class="live-kicker">Merak edilenler</p><h2 id="faq-title">Sık sorulan sorular</h2><div>{{ range .Params.faqs }}<details><summary>{{ .question }}</summary><p>{{ .answer }}</p></details>{{ end }}</div></section>
-    <section class="live-section live-final-cta"><h2>RNA-seq analiz akışını biyolojik yorumla birlikte takip edin.</h2><p>Kayıt tarihi ve ücret bilgisi kesinleştiğinde bu sayfa güncellenecektir.</p><div class="live-cta">{{ if and .Params.registration_url (eq $status "kayit-acik") }}<a class="live-button" href="{{ .Params.registration_url }}">Kayıt ol</a>{{ else }}<a class="live-button" href="{{ .Params.contact_url | default "/post/contact/" | relURL }}">Ön bilgi al</a>{{ end }}<a class="live-button live-button-secondary" href="{{ "/canli-egitimler/" | relURL }}">Tüm canlı eğitimler</a></div></section>
+    <section class="live-section live-final-cta"><h2>RNA-seq analiz akışını biyolojik yorumla birlikte takip edin.</h2><p>Kayıt tarihi ve ücret bilgisi kesinleştiğinde bu sayfa güncellenecektir.</p><div class="live-cta">{{ if and .Params.registration_url (eq $status "kayit-acik") }}<a class="live-button" href="{{ .Params.registration_url }}">Canlı eğitime kaydolun</a>{{ else }}<a class="live-button" href="{{ .Params.contact_url | default "/post/contact/" | relURL }}">Ön bilgi alın</a>{{ end }}<a class="live-button live-button-secondary" href="{{ "/canli-egitimler/" | relURL }}">Tüm canlı eğitimleri görün</a></div></section>
   </div>
 </article>
 {{ end }}

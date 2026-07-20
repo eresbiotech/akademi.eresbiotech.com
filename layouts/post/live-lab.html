@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{- $checkoutURL := .Params.checkout_url -}}
 {{- $dateNote := .Params.date_note -}}
+{{- $hasPricingPlans := and .Params.student_checkout_url .Params.employee_checkout_url -}}
 <article
   class="container page-shell live-lab-page"
   data-meta-content-name="{{ .Title }}"
@@ -37,7 +37,7 @@
     <p>Canlı oturum bağlantıları ve hazırlık bilgileri, satın alma sırasında kullanılan e-posta adresi üzerinden paylaşılacaktır.</p>
   </section>
 
-  <section class="live-lab-checkout" aria-labelledby="live-lab-checkout-title">
+  <section id="kayit-secenekleri" class="live-lab-checkout" aria-labelledby="live-lab-checkout-title">
     <div class="section-heading">
       <p class="eyebrow">Erişim seçenekleri</p>
       <h2 id="live-lab-checkout-title">Dijital araştırma varlıklarına ve canlı vaka oturumlarına erişin.</h2>
@@ -46,14 +46,34 @@
       <article class="live-lab-price-card">
         <h3>Öğrenci erişimi</h3>
         <strong>{{ .Params.student_price }}</strong>
+        <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için.</p>
+        {{ if $hasPricingPlans }}
+          <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ .Title }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="student">Öğrenci erişimiyle kaydolun</a>
+          <p class="pricing-note">Güvenli ödeme · Taksit seçenekleri ödeme adımında</p>
+        {{ else }}
+          <p class="pricing-note">Bu planın güvenli checkout bağlantısı doğrulanıyor.</p>
+          <a class="pricing-button" href="{{ partial "support/whatsapp-url.html" (dict "message" (printf "Merhaba, %s öğrenci erişimi (%s) için güvenli ödeme bağlantısı hakkında yazılı destek almak istiyorum." .Title .Params.student_price)) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Öğrenci erişimi için yazılı destek alın</a>
+        {{ end }}
       </article>
       <article class="live-lab-price-card">
         <h3>Profesyonel erişim</h3>
         <strong>{{ .Params.employee_price }}</strong>
+        <p class="pricing-description">Araştırmacılar, akademisyenler ve sektör profesyonelleri için.</p>
+        {{ if $hasPricingPlans }}
+          <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ .Title }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="employee">Profesyonel erişimle kaydolun</a>
+          <p class="pricing-note">Güvenli ödeme · Taksit seçenekleri ödeme adımında</p>
+        {{ else }}
+          <p class="pricing-note">Bu planın güvenli checkout bağlantısı doğrulanıyor.</p>
+          <a class="pricing-button pricing-button-secondary" href="{{ partial "support/whatsapp-url.html" (dict "message" (printf "Merhaba, %s profesyonel erişimi (%s) için güvenli ödeme bağlantısı hakkında yazılı destek almak istiyorum." .Title .Params.employee_price)) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Profesyonel erişim için yazılı destek alın</a>
+        {{ end }}
       </article>
     </div>
-    <a class="hero-action" href="{{ $checkoutURL }}" target="_blank" rel="noopener noreferrer" data-event="payhip_checkout_click" data-course="{{ .File.BaseFileName }}" data-plan="student_professional" data-payment-provider="payhip">Erişim Seçeneğinizi Belirleyin</a>
-    <p class="live-lab-checkout-note">Öğrenci veya profesyonel erişim seçeneğinizi güvenli ödeme sayfasında belirleyebilirsiniz.</p>
+    {{ if $hasPricingPlans }}
+      <p class="live-lab-checkout-note">Size uygun erişim kartındaki butonu kullanarak güvenli ödeme adımına geçebilirsiniz.</p>
+    {{ else }}
+      <p class="live-lab-checkout-note">Size uygun erişim kartındaki yazılı destek butonunu kullanarak doğrulanmış ödeme bağlantısını isteyebilirsiniz.</p>
+    {{ end }}
+    {{ partial "support/trust-box.html" (dict "cta" "Ödeme konusunda destek alın" "message" (printf "Merhaba, %s kayıt seçenekleri hakkında yazılı destek almak istiyorum." .Title)) }}
   </section>
 
   <section class="content-card prose live-lab-content">
@@ -63,7 +83,7 @@
   <section class="live-lab-closing">
     <h2>Yaşam bilimleri verisiyle sistemli bir çalışma akışı kurun.</h2>
     <p>Dijital araştırma varlıklarına ve dört oturumluk Canlı Veri Vaka Laboratuvarına tek ürün üzerinden erişin.</p>
-    <a class="hero-action" href="{{ $checkoutURL }}" target="_blank" rel="noopener noreferrer" data-event="payhip_checkout_click" data-course="{{ .File.BaseFileName }}" data-plan="student_professional" data-payment-provider="payhip">Canlı Veri Vaka Laboratuvarına Erişin</a>
+    <a class="hero-action" href="#kayit-secenekleri">Ücret ve kayıt seçeneklerine dönün</a>
   </section>
 </article>
 {{ end }}

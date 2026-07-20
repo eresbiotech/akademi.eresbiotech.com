@@ -10,13 +10,13 @@
 {{- end -}}
 {{- $hasPricingPlans := and .Params.student_checkout_url .Params.employee_checkout_url -}}
 {{- $primaryCTAURL := $fallbackCTAURL -}}
-{{- $primaryCTAText := "Eğitimi incele" -}}
+{{- $primaryCTAText := "İçeriği inceleyin" -}}
 {{- if $isComingSoonFeature -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
-  {{- $primaryCTAText = "Yazılı bilgi almak istiyorum" -}}
+  {{- $primaryCTAText = "Yazılı bilgi alın" -}}
 {{- else if $hasPricingPlans -}}
   {{- $primaryCTAURL = "#kayit-secenekleri" -}}
-  {{- $primaryCTAText = "Kaydını tamamla" -}}
+  {{- $primaryCTAText = "Kayıt seçeneklerini görün" -}}
 {{- else -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
   {{- $primaryCTAText = "Yazılı bilgi alın" -}}
@@ -30,7 +30,7 @@
   {{- $heroLead = . -}}
 {{- end -}}
 {{- $studentLabel := .Params.student_plan_label | default "Öğrenci" -}}
-{{- $employeeLabel := .Params.employee_plan_label | default "Çalışan" -}}
+{{- $employeeLabel := .Params.employee_plan_label | default "Profesyonel" -}}
 {{- $lessonFlow := slice "Öğrenme hedefleri ve temel kavramlar" "Konuya uygun veri, araç ve uygulama mantığı" "Araştırma pratiğine yakın örneklerle ilerleme" -}}
 {{- $outcomes := slice "Konuya ait temel kavramları araştırma pratiğiyle ilişkilendirebileceksiniz." "İlgili veri kaynaklarını, araçları ve çıktıları daha bilinçli okuyabileceksiniz." "Sonraki öğrenme yolunuzu daha net seçebileceksiniz." -}}
 {{- $codingNote := "Bu eğitimler, kodlama geçmişi sınırlı olan yaşam bilimleri öğrencileri ve araştırmacılarının biyolojik veriyle adım adım çalışabilmesi için yapılandırılmıştır." -}}
@@ -211,7 +211,7 @@
               <li>CRAN, Bioconductor ve paket kurulumu ayrımı</li>
               <li>Metadata-expression eşleşmesi ve sample ID problemleri</li>
             </ul>
-            <a class="hero-action" href="{{ $primaryCTAURL }}">Taksit seçenekleriyle kayıt ol</a>
+            <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
           </div>
         </section>
 
@@ -345,7 +345,7 @@
           <h2>Yakında açılacak</h2>
           <div class="soon-panel">
             <p>Bu eğitim şu anda hazırlık aşamasındadır. Program ve kayıt bilgileri netleştiğinde resmi akademi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
-            <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Yazılı bilgi almak istiyorum</a>
+            <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Yazılı bilgi alın</a>
           </div>
         {{ else if $hasPricingPlans }}
           <p class="eyebrow">Kayıt seçenekleri</p>
@@ -358,21 +358,21 @@
               <h3>{{ $studentLabel }} erişimi</h3>
               {{ with .Params.student_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için.</p>
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci erişimiyle kaydol</a>
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci erişimiyle kaydolun</a>
             </article>
             <article class="pricing-card price-card">
               <span class="pricing-badge">Profesyonel erişim</span>
               <h3>{{ $employeeLabel }} erişimi</h3>
               {{ with .Params.employee_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar ve Ar-Ge çalışanları için.</p>
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel erişimle kaydol</a>
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel erişimle kaydolun</a>
             </article>
           </div>
-          {{ partial "support/trust-box.html" (dict "cta" "WhatsApp üzerinden yazılı destek alın") }}
+          {{ partial "support/trust-box.html" (dict "cta" "Ödeme konusunda destek alın") }}
         {{ else }}
           <div class="format-panel">
             <p>Bu eğitim şu anda hazırlık aşamasındadır. Program ve kayıt bilgileri netleştiğinde resmi akademi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
-            <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Yazılı bilgi almak istiyorum</a>
+            <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Yazılı bilgi alın</a>
           </div>
         {{ end }}
       </section>
@@ -425,7 +425,7 @@
       <section class="training-final-cta">
         <p class="eyebrow">Sonraki adım</p>
         <h2>{{ if $isComingSoonFeature }}Açılış duyurusunu takip edebilirsiniz.{{ else if $isRCourse }}R karmaşasını adım adım düzenleyerek başlayın.{{ else }}Bu eğitimle ilk adımı bugün atabilirsiniz.{{ end }}</h2>
-        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ if $isComingSoonFeature }}{{ $primaryCTAText }}{{ else if $isRCourse }}Kendi hızınızda öğrenmeye başlayın{{ else }}Kaydını tamamla{{ end }}</a>
+        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
       </section>
 
       <details class="legacy-content">

@@ -30,7 +30,7 @@
           </dl>
         </div>
         <div class="live-cta">
-          {{ if and .Params.registration_url (eq $status "kayit-acik") }}<a class="live-button" href="{{ .Params.registration_url }}">Kayıt ol</a>{{ else }}<a class="live-button" href="{{ .RelPermalink }}">Eğitimi incele</a>{{ end }}
+          {{ if and .Params.registration_url (eq $status "kayit-acik") }}<a class="live-button" href="{{ .Params.registration_url }}">Canlı eğitime kaydolun</a>{{ else }}<a class="live-button" href="{{ .RelPermalink }}">Eğitimi inceleyin</a>{{ end }}
         </div>
       </article>
     {{ else }}

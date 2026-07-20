@@ -10,8 +10,6 @@ slug = "yasam-bilimlerinde-veri-analizi"
 product_type = "live_lab"
 course_status = "active"
 
-checkout_url = "https://kampus.eresbiotech.com/order?link=m9QSY"
-
 student_price = "2.850 TL"
 employee_price = "3.850 TL"
 student_plan_label = "Öğrenci"
