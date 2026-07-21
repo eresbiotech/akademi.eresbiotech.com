@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatik için R Programlama"
 date = "2024-07-08"
-description = "Yaşam bilimleri öğrencileri ve araştırmacıları için RStudio, veri yapıları, ggplot2, GEOquery, metadata ve expression verisini biyoinformatik bağlamında adım adım öğreten uygulamalı R başlangıç eğitimi."
+description = "RStudio, veri yapıları, ggplot2, GEOquery, metadata ve expression verisini araştırma pratiğine yakın vakalarla ele alan; kod kartları, çalışma dosyaları ve kendi kendine kontrol araçları içeren dijital çalışma sistemi."
 
 images =[ "images/Biyoinformatik-icin-R-Programlama.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=a6zY3gmEGq"
@@ -13,13 +13,13 @@ student_plan_label = "Öğrenci"
 employee_plan_label = "Çalışan"
 course_status = "active"
 course_hero_headline = "R öğrenmeyi biyoinformatik veriye bağlayarak başlayın."
-course_hero_subheadline = "Bu eğitim, RStudio’dan veri yapılarına, ggplot2 görselleştirmeden GEO metadata ve expression verisine kadar R programlamayı yaşam bilimleri öğrencileri için adım adım ve uygulamalı şekilde anlatır."
-course_hero_note = "Video dersler; kod kartları, mini pratikler, hızlı başvuru PDF’leri, örnek veri dosyaları, ana R script ve kapsamlı hata çözüm rehberiyle desteklenir."
+course_hero_subheadline = "RStudio’dan veri yapılarına, ggplot2 görselleştirmeden GEO metadata ve expression verisine kadar R programlamayı açıklamalı içerikler, çalışma dosyaları ve araştırma pratiğine yakın örneklerle ele alır."
+course_hero_note = "Açıklamalı bölümler; kod kartları, isteğe bağlı uygulamalar, hızlı başvuru PDF’leri, örnek veri dosyaları, ana R script ve kapsamlı hata çözüm rehberiyle desteklenir."
 course_card_highlights = [
     "Ana R Script",
     "Hata Çözüm Rehberi",
     "Örnek Veri",
-    "Mini Ödevler",
+    "İsteğe bağlı uygulamalar",
     "GEO + Metadata",
     "ggplot2",
 ]

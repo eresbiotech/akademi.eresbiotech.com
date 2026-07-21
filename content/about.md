@@ -1,28 +1,28 @@
 +++
 title = "Hakkımızda"
-description = "ERES Biyoinformatik Akademi; Ar-Ge deneyiminden beslenen, uygulama odaklı ve sertifika destekli biyoinformatik eğitimleri sunar."
+description = "ERES Biyoinformatik; Ar-Ge deneyiminden beslenen dijital bilimsel içerikler ve araştırma çalışma sistemleri sunar."
 date = "2023-12-08"
 aliases = ["about-us", "about-hugo", "contact"]
 author = "Eres Akademi"
 +++
 
-# ERES Biyoinformatik Akademi
+# ERES Biyoinformatik
 
-ERES Biyoinformatik Akademi, yaşam bilimleri araştırmacıları için uygulama odaklı biyoinformatik eğitimleri sunar. Eğitim yaklaşımımız; biyolojik veriyi anlamlandırmak, analiz adımlarını daha bilinçli takip etmek ve araştırma pratiğine yakın örneklerle ilerlemek isteyen öğrenciler, araştırmacılar ve profesyoneller için tasarlanmıştır.
+ERES Biyoinformatik, yaşam bilimleri araştırmacıları için dijital bilimsel içerikler ve çalışma kaynakları sunar. Yaklaşımımız; biyolojik veriyi anlamlandırmak, analiz adımlarını daha bilinçli takip etmek ve araştırma pratiğine yakın vakalarla çalışmak isteyen yetişkin kullanıcılar için tasarlanmıştır.
 
 Akademi, ERES Biyoteknoloji'nin Ar-Ge ve eğitim deneyiminden beslenir. Amacımız, biyoinformatik öğrenme sürecini erişilebilir, tekrarlanabilir ve araştırma hedefleriyle uyumlu hale getirmektir.
 
-## Öğrenme yaklaşımımız
+## Çalışma yaklaşımımız
 
-Eğitimlerimiz videolu, tekrar izlenebilir ve kendi hızınızda ilerleyebileceğiniz bir yapı ile sunulur. Katılımcılar ders içeriklerine çevrimiçi olarak erişebilir, ihtiyaç duydukları bölümlere tekrar dönebilir ve analiz adımlarını kendi akademik ya da profesyonel takvimlerine göre çalışabilir.
+İçeriklerimiz videolu, tekrar kullanılabilir ve kendi hızınızda çalışabileceğiniz bir yapı ile sunulur. Kullanıcılar açıklamalı içeriklere, çalışma dosyalarına ve araştırma araçlarına çevrimiçi erişebilir; ihtiyaç duydukları bölümlere tekrar dönebilir.
 
-İçerikler temel kavramlardan başlayarak araç kullanımı, veri türleri, yorumlama mantığı ve tekrarlanabilir analiz yaklaşımı etrafında yapılandırılır. Ödevler, kısa quizler ve uygulama adımları öğrenmeyi pekiştirir. Eğitimleri tamamlayan katılımcılar dijital doğrulanabilir başarı sertifikalarını CV, LinkedIn ve profesyonel platformlarda paylaşabilir.
+İçerikler temel kavramlardan başlayarak araç kullanımı, veri türleri, yorumlama mantığı ve tekrarlanabilir analiz yaklaşımı etrafında yapılandırılır. İsteğe bağlı uygulamalar ve kendi kendine değerlendirme araçları, kullanıcının çalışma akışını kontrol etmesine yardımcı olur. Uygun içeriklerde dijital tamamlama kaydı sunulabilir; diploma, mesleki yeterlilik, kamu kurumu onayı veya resmî sertifika niteliğinde değildir.
 
 R programlama, genomik veri analizi, NCBI, ENSEMBL, UCSC, scRNA-seq, yapısal biyoinformatik ve filogenetik gibi başlıklar, araştırma pratiğine yakın örneklerle ele alınır.
 
 ## Dijital ürünler ve erişim
 
-ERES Akademi; asenkron içerikleri, dijital çalışma varlıklarını ve canlı araştırma çalışmalarını kademeli olarak aynı araştırma odaklı ürün sisteminde buluşturur. Aktif ürünlerde öğrenci ve profesyonel erişim seçenekleri ilgili ürün sayfasında açıkça gösterilir.
+ERES Biyoinformatik; asenkron dijital içerikleri, çalışma dosyalarını, araştırma araçlarını ve canlı vaka çalışmalarını aynı araştırma odaklı ürün sisteminde buluşturur. Aktif ürünlerde öğrenci ve profesyonel erişim seçenekleri ilgili ürün sayfasında açıkça gösterilir.
 
 ## Kimler için?
 
@@ -33,12 +33,12 @@ ERES Akademi; asenkron içerikleri, dijital çalışma varlıklarını ve canlı
 
 ## ERES çizgisi
 
-ERES Biyoinformatik Akademi, sıradan bir online eğitim vitrini olmaktan çok, Ar-Ge deneyimiyle beslenen uygulama odaklı bir öğrenme alanı olarak konumlanır. Buradaki amaç hızlı vaatler vermek değil; doğru öğrenme yolunu seçmeyi kolaylaştıran bir karar rehberi, anlaşılır teknik dil, ödev/quiz desteği ve gerçek veriyle çalışma pratiğine yakın bir öğrenme akışı sunmaktır.
+ERES Biyoinformatik, sıradan bir online eğitim vitrini olmaktan çok, Ar-Ge deneyimiyle beslenen dijital bilimsel içerik alanı olarak konumlanır. Amaç hızlı vaatler vermek değil; doğru çalışma yolunu seçmeyi kolaylaştıran bir karar rehberi, anlaşılır teknik dil, isteğe bağlı uygulamalar ve gerçek veriyle çalışma pratiğine yakın bir akış sunmaktır.
 
-Eğitimleri incelemek için [Eğitim kataloğuna](/post/) gidebilir, hangi eğitimden başlamanız gerektiğinden emin değilseniz [İletişim](/post/contact/) sayfasından bize ulaşabilirsiniz.
+Dijital içerikleri incelemek için [Dijital içerik kataloğuna](/post/) gidebilir, hangi içerikle başlamanız gerektiğinden emin değilseniz [İletişim](/post/contact/) sayfasından bize ulaşabilirsiniz.
 
 ## Resmi kanal ve yazılı destek
 
-ERES Biyoinformatik Akademi eğitimleriyle ilgili güncel içerik ve kayıt yönlendirmeleri resmi akademi sitemiz üzerinden paylaşılır. Kayıt veya ödeme bağlantıları konusunda tereddütünüz varsa ödeme yapmadan önce WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.
+ERES Biyoinformatik dijital içerikleriyle ilgili güncel erişim ve satın alma yönlendirmeleri resmi sitemiz üzerinden paylaşılır. Ödeme bağlantıları konusunda tereddütünüz varsa satın alma yapmadan önce WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.
 
 [İletişim ve yazılı destek](/post/contact/)

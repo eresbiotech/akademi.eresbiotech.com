@@ -1,13 +1,13 @@
 +++
 title = "Mesafeli Satış Sözleşmesi"
-description = "ERES Biyoinformatik Akademi dijital eğitim satışları için mesafeli satış sözleşmesi."
+description = "ERES Biyoinformatik dijital bilimsel içerik ve çalışma kaynağı satışları için mesafeli satış sözleşmesi."
 date = "2026-07-09"
 author = "ERES Akademi"
 +++
 
 ## Taraflar
 
-Bu sözleşme, ERES Biyoteknoloji tarafından sunulan ERES Biyoinformatik Akademi dijital eğitimlerine kayıt olan alıcı ile ERES Biyoteknoloji arasında kurulur.
+Bu sözleşme, ERES Biyoteknoloji tarafından sunulan ERES Biyoinformatik dijital bilimsel içerik ve çalışma kaynaklarını satın alan alıcı ile ERES Biyoteknoloji arasında kurulur.
 
 Satıcı / hizmet sağlayıcı: ERES Biyoteknoloji  
 Adres: Söğütözü Mahallesi Söğütözü Caddesi Ankara Koç İkiz Kuleleri, D:2/D No:34, 06000 Çankaya/Ankara  
@@ -15,19 +15,19 @@ Adres: Söğütözü Mahallesi Söğütözü Caddesi Ankara Koç İkiz Kuleleri,
 
 ## Konu
 
-Sözleşmenin konusu, alıcının elektronik ortamda sipariş verdiği dijital eğitim içeriğinin satışına, erişimine, ödeme ve teslim koşullarına ilişkin hak ve yükümlülüklerin belirlenmesidir.
+Sözleşmenin konusu, alıcının elektronik ortamda sipariş verdiği dijital bilimsel içerik ve çalışma kaynağının satışına, erişimine, ödeme ve teslim koşullarına ilişkin hak ve yükümlülüklerin belirlenmesidir.
 
 ## Ürün / Hizmet
 
-Satışa konu hizmet; asenkron video dersler, eğitim materyalleri, quiz/ödev bileşenleri, dijital sertifika süreçleri ve eğitim platformu erişimini içeren dijital eğitim hizmetidir. Eğitim kapsamı ilgili eğitim sayfasında belirtilir.
+Satışa konu ürün; açıklamalı dijital içerikler, çalışma dosyaları, araştırma araçları, isteğe bağlı uygulamalar ve kullanıcı hesabı erişimini içeren dijital bilimsel içerik ve çalışma kaynağıdır. Kapsam ilgili içerik sayfasında belirtilir. Dijital tamamlama kaydı sunulduğu durumlarda diploma, mesleki yeterlilik, kamu kurumu onayı veya resmî sertifika niteliğinde değildir.
 
 ## Bedel ve Ödeme
 
-Eğitim bedeli, ilgili eğitim sayfasında ve ödeme ekranında gösterilir. Payhip ve iyzico güvenli ödeme altyapısı kullanılabilir. Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir. Kart bilgileriniz ödeme altyapısı sağlayıcısı tarafından işlenir.
+Ürün bedeli, ilgili içerik sayfasında ve ödeme ekranında gösterilir. Payhip ve iyzico güvenli ödeme altyapısı kullanılabilir. Ödeme adımında kartınıza/bankanıza göre taksit seçenekleri görünebilir. Kart bilgileriniz ödeme altyapısı sağlayıcısı tarafından işlenir.
 
 ## Teslimat ve Erişim
 
-Ödeme tamamlandıktan sonra eğitim erişimi dijital olarak tanımlanır. Erişim bilgilerinin teslimi e-posta veya eğitim platformu hesabı üzerinden yapılabilir.
+Ödeme tamamlandıktan sonra içerik erişimi dijital olarak tanımlanır. Erişim bilgilerinin teslimi e-posta veya kullanıcı hesabı üzerinden yapılabilir.
 
 ## Cayma Hakkı
 
@@ -35,4 +35,4 @@ Dijital içeriklerde cayma hakkı, hizmetin ifasına başlanması veya dijital i
 
 ## Genel Hükümler
 
-Alıcı, siparişi onaylamadan önce eğitim kapsamı, fiyat, ödeme, teslimat, cayma hakkı ve iade koşulları hakkında bilgilendirildiğini kabul eder. Uyuşmazlıklarda ilgili tüketici hakem heyeti veya tüketici mahkemeleri yetkilidir.
+Alıcı, siparişi onaylamadan önce ürün kapsamı, fiyat, ödeme, teslimat, cayma hakkı ve iade koşulları hakkında bilgilendirildiğini kabul eder. Uyuşmazlıklarda ilgili tüketici hakem heyeti veya tüketici mahkemeleri yetkilidir.

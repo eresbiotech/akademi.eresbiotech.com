@@ -1,13 +1,13 @@
 +++
 title = "İptal / İade Politikası"
-description = "ERES Biyoinformatik Akademi dijital eğitimleri için iptal ve iade koşulları."
+description = "ERES Biyoinformatik dijital bilimsel içerik ve çalışma kaynakları için iptal ve iade koşulları."
 date = "2026-07-09"
 author = "ERES Akademi"
 +++
 
 ## Genel İlke
 
-ERES Biyoinformatik Akademi eğitimleri dijital içerik ve çevrimiçi eğitim erişimi olarak sunulur. İade değerlendirmeleri dijital içeriğe erişim durumu, ödeme kaydı ve teknik sorun bilgileri dikkate alınarak yapılır.
+ERES Biyoinformatik ürünleri dijital bilimsel içerik ve çalışma kaynağı olarak sunulur. İade değerlendirmeleri dijital içeriğe erişim durumu, ödeme kaydı ve teknik sorun bilgileri dikkate alınarak yapılır.
 
 Hizmet sağlayıcı: ERES Biyoteknoloji  
 Adres: Söğütözü Mahallesi Söğütözü Caddesi Ankara Koç İkiz Kuleleri, D:2/D No:34, 06000 Çankaya/Ankara  
@@ -15,7 +15,7 @@ Adres: Söğütözü Mahallesi Söğütözü Caddesi Ankara Koç İkiz Kuleleri,
 
 ## Erişim Başlamadan Önce
 
-Eğitim erişimi henüz tanımlanmadıysa veya içeriklere erişim başlamadıysa, iptal/iade talebinizi [info@eresbiotech.com](mailto:info@eresbiotech.com) adresine iletebilirsiniz.
+İçerik erişimi henüz tanımlanmadıysa veya çalışma kaynaklarına erişim başlamadıysa, iptal/iade talebinizi [info@eresbiotech.com](mailto:info@eresbiotech.com) adresine iletebilirsiniz.
 
 ## Erişim Başladıktan Sonra
 
@@ -23,7 +23,7 @@ Dijital içeriklere erişim başladıktan sonra cayma/iade hakkı ilgili mevzuat
 
 ## Teknik Sorunlar
 
-Eğitime erişemiyorsanız, lütfen kullandığınız e-posta adresini, eğitim adını, ödeme tarihini ve karşılaştığınız hata mesajını paylaşın. Teknik sorun doğrulanırsa erişim yeniden tanımlanır veya uygun çözüm sunulur.
+İçeriğe erişemiyorsanız, lütfen kullandığınız e-posta adresini, içerik adını, ödeme tarihini ve karşılaştığınız hata mesajını paylaşın. Teknik sorun doğrulanırsa erişim yeniden tanımlanır veya uygun çözüm sunulur.
 
 ## İade Süreci
 

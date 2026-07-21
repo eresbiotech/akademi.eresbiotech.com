@@ -1,13 +1,13 @@
 +++
 title = "KVKK Aydınlatma Metni"
-description = "ERES Biyoteknoloji ve ERES Biyoinformatik Akademi hizmetleri kapsamında işlenen kişisel verilere ilişkin aydınlatma metni."
+description = "ERES Biyoteknoloji ve ERES Biyoinformatik dijital bilimsel içerik hizmetleri kapsamında işlenen kişisel verilere ilişkin aydınlatma metni."
 date = "2026-07-09"
 author = "ERES Akademi"
 +++
 
 ## Veri Sorumlusu
 
-ERES Biyoinformatik Akademi hizmetleri ERES Biyoteknoloji tarafından sunulur. Kişisel verileriniz, eğitim kaydı, ödeme, iletişim, destek ve sertifika süreçlerinin yürütülmesi amacıyla işlenebilir.
+ERES Biyoinformatik dijital bilimsel içerik hizmetleri ERES Biyoteknoloji tarafından sunulur. Kişisel verileriniz, erişim, satın alma, iletişim, destek ve dijital tamamlama kaydı süreçlerinin yürütülmesi amacıyla işlenebilir.
 
 Veri sorumlusu / hizmet sağlayıcı: ERES Biyoteknoloji  
 Adres: Söğütözü Mahallesi Söğütözü Caddesi Ankara Koç İkiz Kuleleri, D:2/D No:34, 06000 Çankaya/Ankara  
@@ -15,15 +15,15 @@ Adres: Söğütözü Mahallesi Söğütözü Caddesi Ankara Koç İkiz Kuleleri,
 
 ## İşlenen Kişisel Veriler
 
-Kayıt ve iletişim süreçlerinde ad soyad, e-posta adresi, telefon numarası, fatura ve ödeme işlem bilgileri, eğitim tercihleri, mesaj içerikleri, eğitim erişim/tamamlama bilgileri ve sertifika doğrulama bilgileri işlenebilir.
+Satın alma ve iletişim süreçlerinde ad soyad, e-posta adresi, telefon numarası, fatura ve ödeme işlem bilgileri, dijital içerik tercihleri, mesaj içerikleri, erişim/tamamlama bilgileri ve dijital tamamlama kaydı bilgileri işlenebilir.
 
 ## İşleme Amaçları
 
 Kişisel verileriniz şu amaçlarla işlenir:
 
-- Eğitim kaydı ve öğrenci erişim süreçlerini yürütmek
+- Dijital içerik satın alma ve kullanıcı erişim süreçlerini yürütmek
 - Ödeme, faturalama ve tahsilat süreçlerini tamamlamak
-- Eğitim içeriklerine erişim, quiz, ödev ve sertifika süreçlerini yönetmek
+- Dijital içeriklere erişim, isteğe bağlı uygulama, kendi kendine değerlendirme ve dijital tamamlama kaydı süreçlerini yönetmek
 - Talep, şikayet, destek ve iletişim başvurularını yanıtlamak
 - KVKK, vergi, tüketici mevzuatı ve ilgili yasal yükümlülükleri yerine getirmek
 - Açık rızanız varsa kampanya, duyuru, analitik ve pazarlama faaliyetlerini yürütmek
@@ -34,7 +34,7 @@ Verileriniz KVKK madde 5 kapsamında sözleşmenin kurulması veya ifası, hukuk
 
 ## Aktarım
 
-Kişisel verileriniz; ödeme altyapısı sağlayıcıları, eğitim platformu sağlayıcıları, e-posta/form altyapıları, muhasebe ve yasal danışmanlık hizmetleri, yetkili kamu kurumları ve zorunlu hallerde hizmet alınan teknik tedarikçilerle amaçla sınırlı olarak paylaşılabilir.
+Kişisel verileriniz; ödeme altyapısı sağlayıcıları, dijital içerik platformu sağlayıcıları, e-posta/form altyapıları, muhasebe ve yasal danışmanlık hizmetleri, yetkili kamu kurumları ve zorunlu hallerde hizmet alınan teknik tedarikçilerle amaçla sınırlı olarak paylaşılabilir.
 
 ## Saklama Süresi
 

@@ -1,8 +1,8 @@
 +++
 aliases = ["posts", "articles", "blog", "showcase", "docs"]
-title = "Eğitimler"
-seo_title = "Destekli Biyoinformatik Eğitimleri | ERES Akademi"
-description = "ERES Biyoinformatik Akademi'de sınırlı kontenjanlı biyoinformatik eğitimlerini karşılaştırın ve size uygun eğitimi seçin."
+title = "Dijital İçerikler"
+seo_title = "Dijital Biyoinformatik İçerikleri | ERES Biyoinformatik"
+description = "Kendi hızınızda kullanılan dijital bilimsel içerikleri, çalışma dosyalarını ve araştırma araçlarını karşılaştırın."
 author = "Eres Biyoinformatik Akademi"
 tags = ["egitimler"]
 +++

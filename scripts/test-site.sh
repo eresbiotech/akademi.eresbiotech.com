@@ -98,6 +98,9 @@ for slug in "${course_slugs[@]}"; do
   rg -F -q 'Erişim seçeneğinizi seçin' "$page"
   rg -F -q 'Öğrenci erişimiyle başlayın' "$page"
   rg -F -q 'Profesyonel erişimiyle başlayın' "$page"
+  rg -F -q 'Bu ürün, yetişkin kullanıcılar için kendi hızında kullanılabilen dijital bilimsel içerikler ve çalışma kaynakları sunar.' "$page"
+  rg -F -q 'Diploma, mesleki yeterlilik veya kamu kurumu onayı sağlamaz.' "$page"
+  rg -F -q 'Zorunlu devam, sınav, geçti-kaldı değerlendirmesi ve kişiye özel proje danışmanlığı içermez.' "$page"
   assert_file_absent "$page" 'Kayıt seçeneklerini görün'
 done
 
@@ -113,23 +116,29 @@ for phrase in \
   'Tüm asenkron biyoinformatik içeriklerine tek erişim' \
   '%50 paket avantajı' \
   'Tüm içeriklere birlikte başlayın' \
-  'Tekil içerikleri karşılaştırın'; do
+  'Tekil içerikleri karşılaştırın' \
+  'ERES Biyoinformatik' \
+  'Dijital bilimsel içerikler ve araştırma çalışma sistemleri'; do
   rg -F -q "$phrase" "$home_page"
 done
+rg -F -q '>Dijital İçerikler<' "$home_page"
+rg -F -q '>Canlı Çalışmalar<' "$home_page"
 rg -F -q 'Merhaba, tüm asenkron biyoinformatik içeriklerine tek paket üzerinden erişmek istiyorum. Güncel paket kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?' "$repo_dir/layouts/index.html"
 
 nida_page="$build_dir/post/yasam-bilimlerinde-veri-analizi/index.html"
 nida_source="$repo_dir/content/post/yasam-bilimlerinde-veri-analizi.md"
 [[ -f "$nida_page" ]] || { echo "Missing Nida product page" >&2; exit 1; }
 rg -F -q 'Canlı oturumlar 15–16 ve 22–23 Ağustos 2026 tarihlerinde gerçekleştirilecektir.' "$nida_page"
+rg -F -q 'Canlı oturumlara katılım isteğe bağlıdır' "$nida_page"
+rg -F -q 'Diploma, mesleki yeterlilik veya kamu kurumu onayı sağlamaz' "$nida_page"
 assert_file_absent "$nida_page" 'BioExpo'
 assert_file_absent "$nida_page" 'Erişim Seçeneğinizi Belirleyin'
 assert_file_absent "$nida_page" 'student_professional'
 assert_file_absent "$nida_page" 'Öğrenci veya profesyonel erişim seçeneğinizi güvenli ödeme sayfasında belirleyebilirsiniz.'
 
 if rg -q '^student_checkout_url = ' "$nida_source" && rg -q '^employee_checkout_url = ' "$nida_source"; then
-  assert_file_contains_regex "$nida_page" "<a(?=[^>]*data-plan=[\"']?student)(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*pricing_plan=)[^>]*>Öğrenci erişimiyle kaydolun</a>"
-  assert_file_contains_regex "$nida_page" "<a(?=[^>]*data-plan=[\"']?employee)(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*pricing_plan=)[^>]*>Profesyonel erişimle kaydolun</a>"
+  assert_file_contains_regex "$nida_page" "<a(?=[^>]*data-plan=[\"']?student)(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*pricing_plan=)[^>]*>Öğrenci erişimiyle başlayın</a>"
+  assert_file_contains_regex "$nida_page" "<a(?=[^>]*data-plan=[\"']?employee)(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*pricing_plan=)[^>]*>Profesyonel erişimiyle başlayın</a>"
   nida_student_url="$(rg '^student_checkout_url = ' "$nida_source" | sed -E 's/^[^\"]*\"([^\"]+)\".*/\1/')"
   nida_employee_url="$(rg '^employee_checkout_url = ' "$nida_source" | sed -E 's/^[^\"]*\"([^\"]+)\".*/\1/')"
   [[ "$nida_student_url" != "$nida_employee_url" ]] || { echo "Nida plan checkout URLs must differ" >&2; exit 1; }

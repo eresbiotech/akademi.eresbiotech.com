@@ -20,7 +20,7 @@
     </article>
     <article class="live-lab-meta-card">
       <strong>{{ .Params.platform }}</strong>
-      <span>Canlı vaka laboratuvarı</span>
+      <span>Canlı vaka çalışması</span>
     </article>
     <article class="live-lab-meta-card">
       <strong>{{ .Params.capacity }}</strong>
@@ -34,13 +34,13 @@
 
   <section class="live-lab-date-note" aria-labelledby="live-lab-date-title">
     {{ with $dateNote }}<h2 id="live-lab-date-title">{{ . }}</h2>{{ end }}
-    <p>Canlı oturum bağlantıları ve hazırlık bilgileri, satın alma sırasında kullanılan e-posta adresi üzerinden paylaşılacaktır.</p>
+    <p>Canlı uygulama oturumu bağlantıları ve hazırlık bilgileri, satın alma sırasında kullanılan e-posta adresi üzerinden paylaşılacaktır.</p>
   </section>
 
   <section id="kayit-secenekleri" class="live-lab-checkout" aria-labelledby="live-lab-checkout-title">
     <div class="section-heading">
       <p class="eyebrow">Erişim seçenekleri</p>
-      <h2 id="live-lab-checkout-title">Dijital araştırma varlıklarına ve canlı vaka oturumlarına erişin.</h2>
+      <h2 id="live-lab-checkout-title">Dijital araştırma varlıklarına ve canlı vaka çalışmasına erişin.</h2>
     </div>
     <div class="live-lab-price-grid">
       <article class="live-lab-price-card">
@@ -48,7 +48,7 @@
         <strong>{{ .Params.student_price }}</strong>
         <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için.</p>
         {{ if $hasPricingPlans }}
-          <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ .Title }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="student">Öğrenci erişimiyle kaydolun</a>
+          <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ .Title }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="student">Öğrenci erişimiyle başlayın</a>
           <p class="pricing-note">Güvenli ödeme · Taksit seçenekleri ödeme adımında</p>
         {{ else }}
           <p class="pricing-note">Bu planın güvenli checkout bağlantısı doğrulanıyor.</p>
@@ -60,7 +60,7 @@
         <strong>{{ .Params.employee_price }}</strong>
         <p class="pricing-description">Araştırmacılar, akademisyenler ve sektör profesyonelleri için.</p>
         {{ if $hasPricingPlans }}
-          <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ .Title }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="employee">Profesyonel erişimle kaydolun</a>
+          <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ .Title }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="employee">Profesyonel erişimiyle başlayın</a>
           <p class="pricing-note">Güvenli ödeme · Taksit seçenekleri ödeme adımında</p>
         {{ else }}
           <p class="pricing-note">Bu planın güvenli checkout bağlantısı doğrulanıyor.</p>
@@ -73,7 +73,8 @@
     {{ else }}
       <p class="live-lab-checkout-note">Size uygun erişim kartındaki yazılı destek butonunu kullanarak doğrulanmış ödeme bağlantısını isteyebilirsiniz.</p>
     {{ end }}
-    {{ partial "support/trust-box.html" (dict "cta" "Ödeme konusunda destek alın" "message" (printf "Merhaba, %s kayıt seçenekleri hakkında yazılı destek almak istiyorum." .Title)) }}
+    <p class="course-scope-note">Bu ürün, yetişkin kullanıcılar için dijital bilimsel içerikler, çalışma dosyaları ve canlı uygulama oturumları sunar. Canlı oturumlara katılım isteğe bağlıdır; katılamayan kullanıcılar mevcut uygulama kayıtları ve dijital varlıklarla çalışabilir. Diploma, mesleki yeterlilik veya kamu kurumu onayı sağlamaz; zorunlu devam, sınav, geçti-kaldı değerlendirmesi ve kişiye özel proje danışmanlığı içermez.</p>
+    {{ partial "support/trust-box.html" (dict "cta" "Ödeme konusunda destek alın" "message" (printf "Merhaba, %s erişim seçenekleri hakkında yazılı destek almak istiyorum." .Title)) }}
   </section>
 
   <section class="content-card prose live-lab-content">
@@ -82,8 +83,8 @@
 
   <section class="live-lab-closing">
     <h2>Yaşam bilimleri verisiyle sistemli bir çalışma akışı kurun.</h2>
-    <p>Dijital araştırma varlıklarına ve dört oturumluk Canlı Veri Vaka Laboratuvarına tek ürün üzerinden erişin.</p>
-    <a class="hero-action" href="#kayit-secenekleri">Ücret ve kayıt seçeneklerine dönün</a>
+    <p>Dijital araştırma varlıklarına ve dört uygulama oturumundan oluşan Canlı Veri Vaka Laboratuvarına tek ürün üzerinden erişin.</p>
+    <a class="hero-action" href="#kayit-secenekleri">Erişim seçeneklerine dönün</a>
   </section>
 </article>
 {{ end }}

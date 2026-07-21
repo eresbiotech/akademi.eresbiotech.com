@@ -1,6 +1,6 @@
 +++
-title = "Eres Biyoinformatik Akademi"
-seo_title = "ERES Biyoinformatik Akademi | Dijital Bilimsel Ürünler"
-description = "ERES Biyoinformatik Akademi'nin dijital bilimsel ürünlerini, canlı araştırma çalışmalarını ve asenkron içeriklerini inceleyin."
+title = "ERES Biyoinformatik"
+seo_title = "ERES Biyoinformatik | Dijital Bilimsel İçerikler"
+description = "Dijital bilimsel içerikler ve araştırma çalışma sistemleri: kendi hızında kullanılan açıklamalı içerikler, çalışma dosyaları ve araştırma araçları."
 author = "Eres Biyoinformatik Akademi"
 +++

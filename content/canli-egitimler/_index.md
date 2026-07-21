@@ -1,9 +1,9 @@
 ---
-title: "Canlı Online Eğitimler"
-seo_title: "Canlı Online Eğitimler | ERES Akademi"
-description: "ERES Akademi canlı online eğitimleriyle biyoinformatik, omik veri analizi ve yaşam bilimlerinde uygulamalı öğrenme deneyimi kazanın."
+title: "Canlı Çalışmalar"
+seo_title: "Canlı Çalışmalar | ERES Biyoinformatik"
+description: "ERES Biyoinformatik canlı vaka çalışmalarıyla yaşam bilimleri verisinde uygulama oturumlarını ve araştırma pratiğine yakın akışları inceleyin."
 ---
 
-ERES Akademi canlı online eğitimleri, yaşam bilimlerinde veri analizi, biyoinformatik ve omik teknolojiler alanlarında uygulamalı öğrenme deneyimi sunar. Bu eğitimlerde katılımcılar yalnızca izleyici olmaz; analiz akışını, karar noktalarını ve sonuçların biyolojik yorumunu eğitmen eşliğinde takip eder.
+ERES Biyoinformatik canlı çalışmaları, yaşam bilimlerinde veri analizi, biyoinformatik ve omik teknolojiler alanlarında uygulama oturumları sunar. Katılımcılar analiz akışını, karar noktalarını ve sonuçların biyolojik yorumunu bilimsel yürütücü eşliğinde takip eder.
 
-Canlı eğitim takvimi ve kayıt bilgisi netleştiğinde bu sayfada duyurulacaktır. Program hakkında ön bilgi almak veya bilgilendirme talep etmek için WhatsApp üzerinden yazılı destek alabilirsiniz.
+Canlı çalışma takvimi ve satın alma bilgisi netleştiğinde bu sayfada duyurulacaktır. Çalışma hakkında yazılı bilgi almak için WhatsApp üzerinden destek alabilirsiniz.

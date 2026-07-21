@@ -83,11 +83,11 @@ Canlı oturumlara katılamayan kullanıcılar ürünü daha sonra satın alabili
 
 ## Çalışma ve katılım kaydı
 
-Canlı oturumlarda ödev, puanlama veya geçti–kaldı değerlendirmesi bulunmaz. Kullanıcıların kendi çalışmalarını kontrol edebilmeleri için referans akış ve kendi kendine kontrol araçları sunulur.
+Canlı uygulama oturumlarında zorunlu ödev, puanlama, sınav veya geçti-kaldı değerlendirmesi bulunmaz. Kullanıcıların kendi çalışmalarını kontrol edebilmeleri için isteğe bağlı uygulamalar, referans akış ve kendi kendine kontrol araçları sunulur.
 
-Canlı oturumlara katılan kullanıcılar için, ilgili Canlı Veri Vaka Laboratuvarı çalışmasına katılımı belirten dijital katılım kaydı oluşturulur.
+Canlı uygulama oturumlarına katılan kullanıcılar için, ilgili Canlı Veri Vaka Laboratuvarı çalışmasına katılımı belirten dijital tamamlama kaydı oluşturulur.
 
-Bu kayıt diploma, kamu kurumu onayı veya mesleki yeterlilik belgesi değildir.
+Diploma, mesleki yeterlilik, kamu kurumu onayı veya resmî sertifika niteliğinde değildir.
 
 ## Bilimsel yürütücü
 

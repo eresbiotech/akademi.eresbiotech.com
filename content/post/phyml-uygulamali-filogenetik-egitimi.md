@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "phyML Uygulamalı Filogenetik ve Dizi Hizalama Eğitimi"
 date = "2023-12-25"
-description = "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlama pratiği kazanmak isteyenler için."
+description = "Dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları yorumlamayı açıklamalı içerikler, çalışma dosyaları ve araştırma pratiğine yakın vakalarla ele alan dijital çalışma sistemi."
 
 images =[ "images/filogenetik-dizi-hizalama-Egitimi.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=8y1M3&pricing_plan=YLBN50Y8zK"

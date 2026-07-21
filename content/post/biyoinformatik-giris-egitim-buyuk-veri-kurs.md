@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Biyoinformatiğe Giriş ve Biyoinformatikte Büyük Veri Eğitimi"
 date = "2023-02-27"
-description = "Omik veri dünyasını, temel biyoinformatik kavramlarını ve büyük veri mantığını araştırma sorularıyla ilişkilendirerek anlamak isteyenler için."
+description = "Omik veri dünyasını, temel biyoinformatik kavramlarını ve büyük veri mantığını araştırma pratiğine yakın örnekler, açıklamalı içerikler ve kendi hızında kullanılabilen çalışma kaynaklarıyla ele alan dijital çalışma sistemi."
 
 images =[ "images/Biyoinformatik-Genomik-Proteomik-Büyük-Veri-Egitimi.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=SB3Oz&pricing_plan=MrW6dLmgBN"

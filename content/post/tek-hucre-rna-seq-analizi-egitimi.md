@@ -2,7 +2,7 @@
 author = "Eres Biyoinformatik Akademi"
 title = "Tek Hücre RNA-Seq Analizi Eğitimi"
 date = "2023-12-23"
-description = "scRNA-seq verilerinde kalite kontrol, kümeleme, marker gen yorumu ve Seurat iş akışını anlamak isteyen araştırmacılar için."
+description = "scRNA-seq verilerinde kalite kontrol, kümeleme, marker gen yorumu ve Seurat iş akışını açıklamalı içerikler, çalışma dosyaları ve kendi kendine kontrol araçlarıyla incelemek isteyenler için dijital çalışma sistemi."
 
 images =[ "images/Tek-Hucre-RNA-Seq-dizi-Analizi-Egitimi.png" ]
 student_checkout_url = "https://kampus.eresbiotech.com/order?link=Zk1nE&pricing_plan=Q9zO5NYwGx"
