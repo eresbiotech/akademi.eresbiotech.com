@@ -124,6 +124,8 @@ done
 rg -F -q '>Dijital İçerikler<' "$home_page"
 rg -F -q '>Canlı Çalışmalar<' "$home_page"
 rg -F -q 'Merhaba, tüm asenkron biyoinformatik içeriklerine tek paket üzerinden erişmek istiyorum. Güncel paket kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?' "$repo_dir/layouts/index.html"
+assert_file_absent "$repo_dir/layouts/_default/student-login.html" 'ERES+Biyoinformatik+Akademi+e%C4%9Fitimleri'
+rg -F -q 'ERES+Biyoinformatik+dijital+i%C3%A7erikleri+ve+%C3%A7al%C4%B1%C5%9Fma+kaynaklar%C4%B1' "$repo_dir/layouts/_default/student-login.html"
 
 nida_page="$build_dir/post/yasam-bilimlerinde-veri-analizi/index.html"
 nida_source="$repo_dir/content/post/yasam-bilimlerinde-veri-analizi.md"
