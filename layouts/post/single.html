@@ -286,7 +286,7 @@
             </article>
             <article>
               <h3>Sonraki adım netliği</h3>
-              <p>Eğitim sonunda hangi ileri analiz başlığına veya öğrenme yoluna geçmeniz gerektiğini daha bilinçli seçebilirsiniz.</p>
+              <p>İçeriği tamamladıktan sonra hangi ileri analiz başlığına veya çalışma yoluna geçmeniz gerektiğini daha bilinçli seçebilirsiniz.</p>
             </article>
           </div>
         </section>
@@ -294,7 +294,7 @@
 
       <section class="sales-section outcome-section">
         <p class="eyebrow">Somut çıktı</p>
-        <h2>Bu eğitimin sonunda ne yapabileceksiniz?</h2>
+        <h2>Bu dijital içerikle neleri uygulayabilirsiniz?</h2>
         <div class="outcome-grid">
           {{ range $outcomes }}
             <article>
@@ -325,7 +325,7 @@
           <p class="eyebrow">İndirilebilir materyaller</p>
           <h2>İçerik boyunca elinizin altında olacak çalışma dosyaları</h2>
           <div class="outcome-grid">
-            <article><span aria-hidden="true">✓</span><p>Tüm dersleri kapsayan ana R script</p></article>
+            <article><span aria-hidden="true">✓</span><p>Tüm bölümleri kapsayan ana R script</p></article>
             <article><span aria-hidden="true">✓</span><p>Bölüm bazlı R script dosyaları</p></article>
             <article><span aria-hidden="true">✓</span><p>Hızlı başvuru PDF’leri ve isteğe bağlı uygulama notları</p></article>
             <article><span aria-hidden="true">✓</span><p>CSV, FASTA, metadata ve expression örnek dosyaları</p></article>
@@ -355,7 +355,7 @@
           <p class="eyebrow">Yakında açılacak</p>
           <h2>Yakında açılacak</h2>
           <div class="soon-panel">
-            <p>Bu eğitim şu anda hazırlık aşamasındadır. Program ve kayıt bilgileri netleştiğinde resmi akademi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
+            <p>Bu dijital içerik şu anda hazırlık aşamasındadır. Kapsam ve satın alma bilgileri netleştiğinde resmi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
             <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Yazılı bilgi alın</a>
           </div>
         {{ else if $hasPricingPlans }}
@@ -383,7 +383,7 @@
           {{ partial "support/trust-box.html" (dict "cta" "Ödeme konusunda destek alın") }}
         {{ else }}
           <div class="format-panel">
-            <p>Bu eğitim şu anda hazırlık aşamasındadır. Program ve kayıt bilgileri netleştiğinde resmi akademi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
+            <p>Bu dijital içerik şu anda hazırlık aşamasındadır. Kapsam ve satın alma bilgileri netleştiğinde resmi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
             <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Yazılı bilgi alın</a>
           </div>
         {{ end }}
@@ -394,7 +394,7 @@
           <p class="eyebrow">{{ if $isComingSoonFeature }}Öğrenme ihtiyacı{{ else }}Katılımcı deneyimleri{{ end }}</p>
           <h2>{{ if $isComingSoonFeature }}Bu programın hitap ettiği öğrenme ihtiyaçları{{ else }}Katılımcı deneyimleri{{ end }}</h2>
           {{ if not $isComingSoonFeature }}
-            <p class="social-proof-note">Bugüne kadar farklı düzeylerden yaşam bilimleri öğrencileri ve araştırmacıları, biyoinformatik öğrenme süreçlerinde ERES eğitimlerinden yararlandı.</p>
+            <p class="social-proof-note">Bugüne kadar farklı düzeylerden yaşam bilimleri kullanıcıları ve araştırmacılar, biyoinformatik çalışma süreçlerinde ERES dijital içeriklerinden yararlandı.</p>
           {{ end }}
           <p class="experience-intro">Aşağıdaki ifadeler, katılımcıların sık dile getirdiği öğrenme ihtiyaçlarını temsil eden özet geri bildirimlerdir.</p>
           <div class="testimonial-grid">
@@ -414,12 +414,12 @@
         <div class="faq-grid">
           {{ if $isComingSoonFeature }}
             <article>
-              <h3>Bu eğitim şu anda kayıt alıyor mu?</h3>
-              <p>Hayır. Bu sayfa hazırlık ve duyuru amacıyla görünür durumda; kayıt süreci açıldığında içerik ve erişim bilgileri güncellenecektir.</p>
+              <h3>Bu dijital içerik şu anda satın alınabiliyor mu?</h3>
+              <p>Hayır. Bu sayfa hazırlık ve duyuru amacıyla görünür durumda; satın alma açıldığında içerik ve erişim bilgileri güncellenecektir.</p>
             </article>
             <article>
               <h3>Açılış duyurusunu nasıl takip edebilirim?</h3>
-              <p>İletişim sayfasından bize yazabilir, program ve kayıt bilgileri netleştiğinde bilgilendirme almak istediğinizi belirtebilirsiniz.</p>
+              <p>İletişim sayfasından bize yazabilir, kapsam ve satın alma bilgileri netleştiğinde bilgilendirme almak istediğinizi belirtebilirsiniz.</p>
             </article>
             <article>
               <h3>Bu program kimler için uygun?</h3>
