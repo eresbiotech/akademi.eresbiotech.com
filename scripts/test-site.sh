@@ -92,7 +92,31 @@ for slug in "${course_slugs[@]}"; do
   assert_file_contains_regex "$page" "<a(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*aria-label=)[^>]*>"
   assert_file_absent_regex "$page" "<a(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*(?:hidden|style=[\"'][^\"']*display\\s*:\\s*none))[^>]*>"
   assert_file_absent_regex "$page" "<a(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*target=[\"']?_blank)[^>]*>"
+  rg -F -q 'Bu içerikle başlayın' "$page"
+  rg -F -q 'Size uygun erişimi seçin' "$page"
+  rg -F -q 'Şimdi başlayın' "$page"
+  rg -F -q 'Erişim seçeneğinizi seçin' "$page"
+  rg -F -q 'Öğrenci erişimiyle başlayın' "$page"
+  rg -F -q 'Profesyonel erişimiyle başlayın' "$page"
+  assert_file_absent "$page" 'Kayıt seçeneklerini görün'
 done
+
+home_page="$build_dir/index.html"
+[[ -f "$home_page" ]] || { echo "Missing generated home page" >&2; exit 1; }
+for phrase in \
+  'Biyoinformatiğe bugün başlayın' \
+  'Tüm içerikleri karşılaştırın' \
+  'Temelden başlayın' \
+  'R ile çalışmaya başlayın' \
+  'Protein modellemeye başlayın' \
+  'Toplu erişim' \
+  'Tüm asenkron biyoinformatik içeriklerine tek erişim' \
+  '%50 paket avantajı' \
+  'Tüm içeriklere birlikte başlayın' \
+  'Tekil içerikleri karşılaştırın'; do
+  rg -F -q "$phrase" "$home_page"
+done
+rg -F -q 'Merhaba, tüm asenkron biyoinformatik içeriklerine tek paket üzerinden erişmek istiyorum. Güncel paket kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?' "$repo_dir/layouts/index.html"
 
 nida_page="$build_dir/post/yasam-bilimlerinde-veri-analizi/index.html"
 nida_source="$repo_dir/content/post/yasam-bilimlerinde-veri-analizi.md"
@@ -124,6 +148,7 @@ done
 
 assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)@media \(max-width: 820px\) \{.*?\.live-lab-price-grid,.*?grid-template-columns: 1fr;'
 assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.live-lab-price-card \.pricing-button \{.*?width: 100%;'
+assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.bundle-actions \.hero-action \{.*?width: 100%;'
 
 landing_page="$build_dir/bioexpo-2026-destekli-kayit/index.html"
 rg -F -q 'BioExpo 2026 destekli kayıt dönemi sona erdi' "$landing_page"

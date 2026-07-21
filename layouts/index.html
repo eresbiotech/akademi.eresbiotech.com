@@ -17,8 +17,8 @@
       <h1>Biyoinformatik eğitimlerinde kendi hızınızda ilerleyin.</h1>
       <p class="lead">Dijital bilimsel ürünleri, canlı araştırma çalışmalarını ve R programlama, genom tarayıcıları, tek hücre RNA-seq, protein modelleme ile filogenetik odaklı asenkron içerikleri inceleyin.</p>
       <div class="hero-actions">
-        <a class="hero-action" href="#karar-yollari">Size uygun içeriği seçin</a>
-        <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm içerikleri inceleyin</a>
+        <a class="hero-action" href="#karar-yollari">Biyoinformatiğe bugün başlayın</a>
+        <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm içerikleri karşılaştırın</a>
       </div>
     </div>
   </div>
@@ -68,23 +68,38 @@
   </div>
   <div class="decision-grid">
     <article class="path-card decision-card">
-      <p class="path-label">Sıfırdan başlıyorum</p>
-      <h3>Sıfırdan başlıyorum</h3>
+      <p class="path-label">Başlangıç yolu</p>
+      <h3>Temelden başlayın</h3>
       <p>Biyoinformatiğin temel mantığını, veri türlerini ve analiz akışını öğrenmek için.</p>
-      <a class="card-link" href="{{ with $introCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">Giriş eğitimini incele</a>
+      <a class="card-link" href="{{ with $introCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">Temelden başlayın</a>
     </article>
     <article class="path-card decision-card">
-      <p class="path-label">Kodla analiz yapmak istiyorum</p>
-      <h3>Kodla analiz yapmak istiyorum</h3>
+      <p class="path-label">R programlama</p>
+      <h3>R ile çalışmaya başlayın</h3>
       <p>RStudio, veri yapıları, grafikler ve biyolojik veri örnekleriyle pratik kazanmak için.</p>
-      <a class="card-link" href="{{ with $rCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click" data-course="biyoinformatik-icin-r-programlama">R eğitimini incele</a>
+      <a class="card-link" href="{{ with $rCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click" data-course="biyoinformatik-icin-r-programlama">R ile çalışmaya başlayın</a>
     </article>
     <article class="path-card decision-card">
-      <p class="path-label">Protein yapısı çalışıyorum</p>
-      <h3>Protein yapısı çalışıyorum</h3>
+      <p class="path-label">Yapısal biyoinformatik</p>
+      <h3>Protein modellemeye başlayın</h3>
       <p>PDB, AlphaFold, protein yapısı ve in silico modelleme yaklaşımını öğrenmek için.</p>
-      <a class="card-link" href="{{ with $proteinCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_protein_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">Protein eğitimini incele</a>
+      <a class="card-link" href="{{ with $proteinCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_protein_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">Protein modellemeye başlayın</a>
     </article>
+  </div>
+</section>
+
+<section class="container home-section" aria-labelledby="bundle-title">
+  <div class="lite-band async-bundle">
+    <div>
+      <p class="eyebrow">Toplu erişim</p>
+      <h2 id="bundle-title">Tüm asenkron biyoinformatik içeriklerine tek erişim</h2>
+      <p class="bundle-highlight">%50 paket avantajı</p>
+      <p>Biyoinformatiği tek bir başlıkla sınırlamadan ilerlemek isteyenler için aktif asenkron içeriklerimizi bütünlüklü bir çalışma yolunda bir araya getiriyoruz.</p>
+    </div>
+    <div class="bundle-actions">
+      <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, tüm asenkron biyoinformatik içeriklerine tek paket üzerinden erişmek istiyorum. Güncel paket kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Tüm içeriklere birlikte başlayın</a>
+      <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}" data-event="other_courses_click">Tekil içerikleri karşılaştırın</a>
+    </div>
   </div>
 </section>
 

@@ -11,6 +11,9 @@
 {{- $hasPricingPlans := and .Params.student_checkout_url .Params.employee_checkout_url -}}
 {{- $primaryCTAURL := $fallbackCTAURL -}}
 {{- $primaryCTAText := "İçeriği inceleyin" -}}
+{{- $heroCTAText := $primaryCTAText -}}
+{{- $middleCTAText := $primaryCTAText -}}
+{{- $finalCTAText := $primaryCTAText -}}
 {{- if $isComingSoonFeature -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
   {{- $primaryCTAText = "Yazılı bilgi alın" -}}
@@ -20,6 +23,15 @@
 {{- else -}}
   {{- $primaryCTAURL = "/post/contact/" | relURL -}}
   {{- $primaryCTAText = "Yazılı bilgi alın" -}}
+{{- end -}}
+{{- if $hasPricingPlans -}}
+  {{- $heroCTAText = "Bu içerikle başlayın" -}}
+  {{- $middleCTAText = "Size uygun erişimi seçin" -}}
+  {{- $finalCTAText = "Şimdi başlayın" -}}
+{{- else -}}
+  {{- $heroCTAText = $primaryCTAText -}}
+  {{- $middleCTAText = $primaryCTAText -}}
+  {{- $finalCTAText = $primaryCTAText -}}
 {{- end -}}
 {{- $heroTitle := $displayTitle -}}
 {{- with .Params.course_hero_headline -}}
@@ -121,7 +133,7 @@
         {{ end }}
       </div>
       <div class="hero-actions">
-        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $heroCTAText }}</a>
       </div>
     </div>
     {{ with .Params.images }}
@@ -142,7 +154,7 @@
           <li>Videolu ve tekrar izlenebilir dersler</li>
           <li>Açıklamalı uygulamalar</li>
         </ul>
-        <a class="card-link" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+        <a class="card-link" href="{{ $primaryCTAURL }}">{{ $middleCTAText }}</a>
       </div>
     </aside>
 
@@ -210,7 +222,7 @@
               <li>CRAN, Bioconductor ve paket kurulumu ayrımı</li>
               <li>Metadata-expression eşleşmesi ve sample ID problemleri</li>
             </ul>
-            <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+            <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $middleCTAText }}</a>
           </div>
         </section>
 
@@ -334,7 +346,7 @@
             <li>Açıklamalı uygulamalar</li>
             <li>Tekrar izlenebilir eğitim yapısı</li>
           </ul>
-          <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+          <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $middleCTAText }}</a>
         </div>
       </section>
 
@@ -357,14 +369,14 @@
               <h3>{{ $studentLabel }} erişimi</h3>
               {{ with .Params.student_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için.</p>
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci erişimiyle kaydolun</a>
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci erişimiyle başlayın</a>
             </article>
             <article class="pricing-card price-card">
               <span class="pricing-badge">Profesyonel erişim</span>
               <h3>Profesyonel erişim</h3>
               {{ with .Params.employee_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
               <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar ve Ar-Ge çalışanları için.</p>
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden kaydolun" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel erişimle kaydolun</a>
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel erişimiyle başlayın</a>
             </article>
           </div>
           {{ partial "support/trust-box.html" (dict "cta" "Ödeme konusunda destek alın") }}
@@ -424,7 +436,7 @@
       <section class="training-final-cta">
         <p class="eyebrow">Sonraki adım</p>
         <h2>{{ if $isComingSoonFeature }}Açılış duyurusunu takip edebilirsiniz.{{ else if $isRCourse }}R karmaşasını adım adım düzenleyerek başlayın.{{ else }}Bu eğitimle ilk adımı bugün atabilirsiniz.{{ end }}</h2>
-        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $primaryCTAText }}</a>
+        <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $finalCTAText }}</a>
       </section>
 
       <details class="legacy-content">
@@ -456,5 +468,11 @@
     </div>
   </div>
 </article>
+{{ if $hasPricingPlans }}
+  <div class="mobile-sticky-cta training-mobile-sticky-cta" aria-label="Kayıt seçenekleri">
+    <a class="mobile-sticky-primary" href="#kayit-secenekleri" data-event="hero_primary_cta_click">Erişim seçeneğinizi seçin</a>
+    <a class="mobile-sticky-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp</a>
+  </div>
+{{ end }}
 {{- end -}}
 {{ end }}
