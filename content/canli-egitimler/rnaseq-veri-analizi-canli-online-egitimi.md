@@ -53,7 +53,7 @@ training_outputs: ["QC raporları", "SAM/BAM hizalama çıktıları", "Gen sayı
 instructor_bio: "Ceren Nizamoğlu, yaşam bilimleri altyapısını yazılım ve veri analiziyle birleştirerek biyoinformatik alanına yönelmiştir. RNA-seq ve omik veri analizi süreçlerine odaklanan çalışmalarıyla, biyolojik verinin analiz edilmesi ve yorumlanması konusunda uygulamalı bir yaklaşım benimsemektedir. ERES Biyoinformatik'te bilimsel yürütücü olarak, RNA-seq analiz akışının teknik komutların ötesinde biyolojik anlam üretme süreci olarak incelenmesini sağlar."
 faqs:
   - {question: "Bu canlı vaka çalışması kimler için uygun?", answer: "Yaşam bilimleri alanında çalışan veya araştırma yapan kullanıcılar ile RNA-seq analiz sonuçlarını daha iyi anlamak isteyen araştırmacılar için uygundur."}
-  - {question: "Kodlama bilmek gerekiyor mu?", answer: "Temel düzeyde komut satırı veya R bilgisi faydalı olabilir; ancak eğitim, analiz akışını ve çıktıların yorumlanmasını anlaşılır biçimde takip etmeyi hedefler."}
+  - {question: "Kodlama bilmek gerekiyor mu?", answer: "Temel düzeyde komut satırı veya R bilgisi faydalı olabilir; ancak çalışma, analiz akışını ve çıktıların yorumlanmasını anlaşılır biçimde takip etmeyi hedefler."}
   - {question: "Canlı oturumlar kayıt altına alınacak mı?", answer: "Dijital varlık ve kayıt erişimiyle ilgili bilgi satın alma duyurusunda ayrıca paylaşılacaktır."}
   - {question: "Dijital tamamlama kaydı olacak mı?", answer: "Bu çalışma için dijital tamamlama kaydı planlanmamaktadır."}
   - {question: "Canlı vaka çalışmasında hangi analiz adımları işlenecek?", answer: "Kalite kontrol, trimming, HISAT2 ile hizalama, SAM/BAM dosyaları, featureCounts ile gen sayımı, DESeq2 analizi, PCA, volcano plot, heatmap ve GO/KEGG yorumlama başlıkları ele alınacaktır."}

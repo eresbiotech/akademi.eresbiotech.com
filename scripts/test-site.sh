@@ -76,11 +76,41 @@ course_slugs=(
   phyml-uygulamali-filogenetik-egitimi
 )
 
+checkout_expectations=(
+  "biyoinformatik-icin-r-programlama|https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=a6zY3gmEGq|https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=PjWlKdY4Gv"
+  "biyoinformatik-giris-egitim-buyuk-veri-kurs|https://kampus.eresbiotech.com/order?link=SB3Oz&pricing_plan=MrW6dLmgBN|https://kampus.eresbiotech.com/order?link=SB3Oz&pricing_plan=bZz2M7y2Wr"
+  "biyoinformatik-veritabanlari-araclar-egitimi|https://kampus.eresbiotech.com/order?link=G8fph&pricing_plan=1QW9lMoEG6|https://kampus.eresbiotech.com/order?link=G8fph&pricing_plan=20zAXvowWr"
+  "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim|https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=a6zY3Ew1Gq|https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=91zw82LVBL"
+  "tek-hucre-rna-seq-analizi-egitimi|https://kampus.eresbiotech.com/order?link=Zk1nE&pricing_plan=Q9zO5NYwGx|https://kampus.eresbiotech.com/order?link=Zk1nE&pricing_plan=w9B35d4dWR"
+  "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme|https://kampus.eresbiotech.com/order?link=YOeiS&pricing_plan=3ZGX9q8QWq|https://kampus.eresbiotech.com/order?link=YOeiS&pricing_plan=PjWlK3k3Gv"
+  "phyml-uygulamali-filogenetik-egitimi|https://kampus.eresbiotech.com/order?link=8y1M3&pricing_plan=YLBN50Y8zK|https://kampus.eresbiotech.com/order?link=8y1M3&pricing_plan=bxGaMqvpGD"
+)
+
 for slug in "${course_slugs[@]}"; do
   page="$build_dir/post/$slug/index.html"
+  source="$repo_dir/content/post/$slug.md"
   [[ -f "$page" ]] || { echo "Missing generated page: $page" >&2; exit 1; }
+  rg -F -q 'employee_plan_label = "Profesyonel"' "$source"
   assert_file_absent "$page" 'data-bioexpo-active'
   assert_file_absent "$page" 'BioExpo 2026 destekli kayıt'
+  assert_file_absent "$page" 'QR kodlu ve doğrulanabilir'
+  assert_file_absent "$page" 'başarı sertifikası'
+  assert_file_absent "$page" 'zorunlu ödev'
+  assert_file_absent "$page" 'zorunlu quiz'
+
+  expected_checkout=""
+  for entry in "${checkout_expectations[@]}"; do
+    if [[ "$entry" == "$slug"'|'* ]]; then
+      expected_checkout="$entry"
+      break
+    fi
+  done
+  [[ -n "$expected_checkout" ]] || { echo "Missing checkout expectation for $slug" >&2; exit 1; }
+  IFS='|' read -r _ student_checkout employee_checkout <<< "$expected_checkout"
+  student_checkout_html="${student_checkout//&/&amp;}"
+  employee_checkout_html="${employee_checkout//&/&amp;}"
+  rg -F -q "href=\"$student_checkout_html\"" "$page"
+  rg -F -q "href=\"$employee_checkout_html\"" "$page"
 
   for plan in student employee; do
     if ! rg -q "<a[^>]+href=[\"']?https://kampus\\.eresbiotech\\.com/order\\?[^>]+data-course=[\"']?$slug[\"']?[^>]+data-plan=[\"']?$plan[\"']?[^>]*>" "$page"; then
@@ -123,6 +153,7 @@ for phrase in \
 done
 rg -F -q '>Dijital İçerikler<' "$home_page"
 rg -F -q '>Canlı Çalışmalar<' "$home_page"
+assert_file_absent "$home_page" 'ERES Biyoinformatik Akademi'
 rg -F -q 'Merhaba, tüm asenkron biyoinformatik içeriklerine tek paket üzerinden erişmek istiyorum. Güncel paket kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?' "$repo_dir/layouts/index.html"
 assert_file_absent "$repo_dir/layouts/_default/student-login.html" 'ERES+Biyoinformatik+Akademi+e%C4%9Fitimleri'
 rg -F -q 'ERES+Biyoinformatik+dijital+i%C3%A7erikleri+ve+%C3%A7al%C4%B1%C5%9Fma+kaynaklar%C4%B1' "$repo_dir/layouts/_default/student-login.html"

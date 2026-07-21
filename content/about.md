@@ -10,7 +10,7 @@ author = "Eres Akademi"
 
 ERES Biyoinformatik, yaşam bilimleri araştırmacıları için dijital bilimsel içerikler ve çalışma kaynakları sunar. Yaklaşımımız; biyolojik veriyi anlamlandırmak, analiz adımlarını daha bilinçli takip etmek ve araştırma pratiğine yakın vakalarla çalışmak isteyen yetişkin kullanıcılar için tasarlanmıştır.
 
-Akademi, ERES Biyoteknoloji'nin Ar-Ge ve eğitim deneyiminden beslenir. Amacımız, biyoinformatik öğrenme sürecini erişilebilir, tekrarlanabilir ve araştırma hedefleriyle uyumlu hale getirmektir.
+ERES Biyoinformatik, ERES Biyoteknoloji'nin Ar-Ge ve bilimsel içerik geliştirme deneyiminden beslenir. Amacımız, biyoinformatik çalışma sürecini erişilebilir, tekrarlanabilir ve araştırma hedefleriyle uyumlu hale getirmektir.
 
 ## Çalışma yaklaşımımız
 
