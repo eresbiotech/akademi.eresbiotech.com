@@ -167,6 +167,83 @@ assert_file_contains_regex "$repo_dir/layouts/index.html" '(?s)<div class="lite-
 assert_file_absent "$repo_dir/layouts/_default/student-login.html" 'ERES+Biyoinformatik+Akademi+e%C4%9Fitimleri'
 rg -F -q 'ERES+Biyoinformatik+dijital+i%C3%A7erikleri+ve+%C3%A7al%C4%B1%C5%9Fma+kaynaklar%C4%B1' "$repo_dir/layouts/_default/student-login.html"
 
+nida_launch_config="$repo_dir/data/nida_launch.yaml"
+rg -F -q 'enabled: true' "$nida_launch_config"
+rg -F -q 'capacity: 20' "$nida_launch_config"
+rg -F -q 'remaining_places: null' "$nida_launch_config"
+assert_file_contains_regex "$nida_launch_config" 'early_window_start: "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\+03:00"'
+
+rg -F -q 'id=nida-canli-calisma' "$home_page"
+rg -F -q 'data-nida-launch' "$home_page"
+assert_file_contains_regex "$home_page" '<a[^>]+href=#nida-canli-calisma[^>]*data-event=nida_announcement_click[^>]*>Yeni · Ağustos Canlı Veri Vaka Laboratuvarı</a>'
+assert_file_contains_regex "$home_page" '<a[^>]+href=#nida-canli-calisma[^>]*data-event=nida_announcement_click[^>]*>Canlı çalışmayı görün</a>'
+for phrase in \
+  'Ağustos Canlı Veri Vaka Laboratuvarı' \
+  'Yaşam Bilimlerinde Veri Analizi' \
+  '20 kişiyle sınırlı canlı grup' \
+  '15–16 ve 22–23 Ağustos 2026' \
+  '4 oturum × 2 saat' \
+  'Google Meet' \
+  'Kodlama önkoşulu yok' \
+  '2.850 TL' \
+  '3.850 TL' \
+  'Öğrenci olarak yerimi ayır' \
+  'Profesyonel olarak yerimi ayır' \
+  '20 kişiyle sınırlı · Güvenli ödeme bağlantısı yazılı olarak paylaşılır' \
+  'Çalışma planını ve oturumları inceleyin'; do
+  rg -F -q "$phrase" "$home_page"
+done
+rg -F -q 'Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına öğrenci erişimiyle katılmak istiyorum.' "$repo_dir/layouts/index.html"
+rg -F -q 'Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına profesyonel erişimle katılmak istiyorum.' "$repo_dir/layouts/index.html"
+assert_file_contains_regex "$home_page" '<a(?=[^>]*data-event=nida_reservation_click)(?=[^>]*data-plan=student)(?=[^>]*data-placement=homepage)[^>]*>Öğrenci olarak yerimi ayır</a>'
+assert_file_contains_regex "$home_page" '<a(?=[^>]*data-event=nida_reservation_click)(?=[^>]*data-plan=employee)(?=[^>]*data-placement=homepage)[^>]*>Profesyonel olarak yerimi ayır</a>'
+assert_file_absent_regex "$home_page" '(?s)<section id=nida-canli-calisma(?:(?!</section>).)*pricing_plan'
+assert_file_absent_regex "$home_page" '(?s)<section id=nida-canli-calisma(?:(?!</section>).)*(?: yer kaldı|doluluk|progress)'
+assert_absent 'hızla doluyor'
+rg -F -q 'Erken katılım avantajının sona ermesine:' "$repo_dir/static/js/nida-launch.js"
+rg -F -q 'Bekleme listesine katılın' "$repo_dir/layouts/index.html"
+rg -F -q 'if eq $nidaRemaining 0' "$repo_dir/layouts/index.html"
+rg -F -q 'function getEarlyWindowState(startValue, hours, nowValue)' "$repo_dir/static/js/nida-launch.js"
+rg -F -q 'function getCapacityState(remainingPlaces, capacity)' "$repo_dir/static/js/nida-launch.js"
+rg -F -q 'remaining_places must be null or an integer between 0 and capacity' "$repo_dir/static/js/nida-launch.js"
+
+nida_window_state() {
+  local elapsed_hours="$1"
+  if (( elapsed_hours < 4 )); then echo '0-4'
+  elif (( elapsed_hours < 24 )); then echo '4-24'
+  elif (( elapsed_hours < 48 )); then echo '24-48'
+  elif (( elapsed_hours < 72 )); then echo '48-72'
+  else echo 'ended'; fi
+}
+
+[[ "$(nida_window_state 2)" == '0-4' ]]
+[[ "$(nida_window_state 8)" == '4-24' ]]
+[[ "$(nida_window_state 30)" == '24-48' ]]
+[[ "$(nida_window_state 60)" == '48-72' ]]
+[[ "$(nida_window_state 73)" == 'ended' ]]
+[[ "$(nida_window_state 2)" != '48-72' ]]
+[[ "$(nida_window_state 8)" != '48-72' ]]
+[[ "$(nida_window_state 30)" != '48-72' ]]
+[[ "$(nida_window_state 60)" == '48-72' ]]
+[[ "$(nida_window_state 73)" != '48-72' ]]
+
+validate_remaining_places() {
+  local value="$1"
+  [[ "$value" == 'null' ]] && return 0
+  [[ "$value" =~ ^[0-9]+$ ]] || return 1
+  (( value >= 0 && value <= 20 ))
+}
+
+validate_remaining_places null
+validate_remaining_places 0
+validate_remaining_places 20
+for invalid_remaining in -1 21 1.5 foo; do
+  if validate_remaining_places "$invalid_remaining"; then
+    echo "Invalid remaining_places accepted: $invalid_remaining" >&2
+    exit 1
+  fi
+done
+
 for entry in "${checkout_expectations[@]}"; do
   IFS='|' read -r slug student_checkout employee_checkout <<< "$entry"
   student_checkout_html="${student_checkout//&/&amp;}"
@@ -216,6 +293,8 @@ assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.live-lab-price
 assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.bundle-actions \.hero-action \{.*?width: 100%;'
 assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)@media \(max-width: 820px\) \{.*?\.home-program-grid\s*\{.*?grid-template-columns: 1fr;'
 assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.program-checkout,\s*\.program-route-link\s*\{.*?width: 100%;'
+assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)@media \(max-width: 820px\) \{.*?\.nida-launch-card \{ grid-template-columns: minmax\(0,1fr\); \}.*?\.nida-launch-purchase,.nida-price-card,.nida-reservation-cta,.nida-waitlist-cta \{.*?width: 100%;'
+assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)@media \(max-width: 520px\) \{.*?\.nida-price-grid \{ grid-template-columns: minmax\(0,1fr\); \}'
 
 landing_page="$build_dir/bioexpo-2026-destekli-kayit/index.html"
 rg -F -q 'BioExpo 2026 destekli kayıt dönemi sona erdi' "$landing_page"

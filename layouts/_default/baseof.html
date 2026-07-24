@@ -6,11 +6,13 @@
   <body>
     <a class="skip-link" href="#main">Icerige gec</a>
     {{ partial "header.html" . }}
+    {{ partial "nida-announcement.html" . }}
     <main id="main" class="site-main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
     {{ partial "cookie-consent.html" . }}
     <script src="{{ "js/site-consent.js" | relURL }}" defer></script>
+    {{ if .IsHome }}<script src="{{ "js/nida-launch.js" | relURL }}" defer></script>{{ end }}
   </body>
 </html>

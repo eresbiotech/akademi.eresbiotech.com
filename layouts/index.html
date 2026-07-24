@@ -5,11 +5,30 @@
 {{- $rProgram := site.GetPage "/post/biyoinformatik-icin-r-programlama" -}}
 {{- $proteinProgram := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
 {{- $nidaLiveLab := site.GetPage "/post/yasam-bilimlerinde-veri-analizi" -}}
+{{- $nidaLaunch := site.Data.nida_launch -}}
+{{- $nidaRemainingIsUnknown := eq $nidaLaunch.remaining_places nil -}}
+{{- $nidaRemaining := -1 -}}
+{{- if not $nidaRemainingIsUnknown -}}
+  {{- if ne (printf "%T" $nidaLaunch.remaining_places) "int" -}}
+    {{- errorf "data/nida_launch.yaml remaining_places must be null or an integer from 0 to %d" $nidaLaunch.capacity -}}
+  {{- end -}}
+  {{- $nidaRemaining = $nidaLaunch.remaining_places -}}
+  {{- if or (lt $nidaRemaining 0) (gt $nidaRemaining $nidaLaunch.capacity) -}}
+    {{- errorf "data/nida_launch.yaml remaining_places must be between 0 and %d" $nidaLaunch.capacity -}}
+  {{- end -}}
+{{- end -}}
+{{- if or (ne (printf "%T" $nidaLaunch.capacity) "int") (lt $nidaLaunch.capacity 1) -}}
+  {{- errorf "data/nida_launch.yaml capacity must be a positive integer" -}}
+{{- end -}}
+{{- if or (not $nidaLaunch.early_window_start) (le (int $nidaLaunch.early_window_hours) 0) -}}
+  {{- errorf "data/nida_launch.yaml must include early_window_start and a positive early_window_hours value" -}}
+{{- end -}}
 
 <section class="home-hero">
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
       <p class="eyebrow">ERES Biyoinformatik Çalışma Programları</p>
+      <a class="hero-live-link" href="#nida-canli-calisma" data-event="nida_announcement_click">Yeni · Ağustos Canlı Veri Vaka Laboratuvarı</a>
       <h1>Biyoinformatikte kendi hızınızda, adım adım ilerleyin.</h1>
       <p class="lead">Başlangıçtan ileri uygulamalara uzanan; açıklamalı anlatımlar, çalışma dosyaları ve araştırma pratiğine yakın örneklerle yapılandırılmış programlar.</p>
       <div class="hero-actions">
@@ -20,8 +39,74 @@
   </div>
 </section>
 
+{{ with $nidaLiveLab }}
+<section id="nida-canli-calisma" class="container home-section nida-launch-section" aria-labelledby="nida-launch-title" data-nida-launch data-early-window-start="{{ $nidaLaunch.early_window_start }}" data-early-window-hours="{{ $nidaLaunch.early_window_hours }}" data-remaining-places="{{ if $nidaRemainingIsUnknown }}null{{ else }}{{ $nidaRemaining }}{{ end }}" data-capacity="{{ $nidaLaunch.capacity }}">
+  <article class="nida-launch-card">
+    <div class="nida-launch-main">
+      <p class="eyebrow">Ağustos Canlı Veri Vaka Laboratuvarı</p>
+      <div class="nida-urgency" aria-live="polite">
+        <strong data-nida-urgency-title>Canlı çalışma için katılım açık.</strong>
+        <p data-nida-urgency-message>20 kişiyle sınırlı canlı grup için katılım bilgilerini inceleyin.</p>
+        <p class="nida-countdown" data-nida-countdown hidden></p>
+      </div>
+      <h2 id="nida-launch-title">Yaşam Bilimlerinde Veri Analizi</h2>
+      <p class="nida-value-proposition">Veriyi yalnızca açmayın. Düzenleyin, kontrol edin ve araştırma sorunuzla birlikte anlamlandırın.</p>
+      <p>Veriniz var ama analiz akışınız dağınık mı? Bu canlı çalışma; veriyi açma, düzenleme, kontrol etme, görselleştirme ve araştırma sorusuyla ilişkilendirme sürecini tek bir vaka akışında bir araya getirir.</p>
+      <p>Dr. Nida Tokaç Er’in bilimsel yürütücülüğünde, yaşam bilimleri verileri Google Colab üzerinde dört canlı uygulama oturumunda adım adım ele alınır. Önceden kodlama deneyimi gerekmez.</p>
+      <div class="nida-fact-list" aria-label="Canlı çalışma hızlı bilgileri">
+        <span>15–16 ve 22–23 Ağustos 2026</span>
+        <span>4 oturum × 2 saat</span>
+        <span>Google Meet</span>
+        <span>Kodlama önkoşulu yok</span>
+        <span>20 kişiyle sınırlı canlı grup</span>
+      </div>
+      <ul class="nida-value-list">
+        <li>Gerçekçi yaşam bilimleri veri vakası</li>
+        <li>Canlı ve açıklamalı çalışma akışı</li>
+        <li>Araştırmaya aktarılabilir çalışma dosyaları</li>
+      </ul>
+      <p class="nida-early-benefit" data-nida-early-benefit>İlk 72 saatte yerini ayıran katılımcıların önceden ilettiği sorular, canlı vaka akışının hazırlanmasında öncelikli olarak değerlendirilir. Bu uygulama kişiye özel proje danışmanlığı veya katılımcının verisinin analiz edilmesi anlamına gelmez.</p>
+    </div>
+
+    <div class="nida-launch-purchase" aria-label="Yaşam Bilimlerinde Veri Analizi katılım seçenekleri">
+      {{ if eq $nidaRemaining 0 }}
+        <p class="nida-capacity-status">Ağustos grubu doldu</p>
+        <p>Bekleme listesi için yazılı olarak bilgi alın.</p>
+        <a class="nida-waitlist-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasının Ağustos grubu için bekleme listesine katılmak istiyorum.") }}" target="_blank" rel="noopener noreferrer" data-event="nida_waitlist_click" data-placement="homepage">Bekleme listesine katılın</a>
+      {{ else }}
+        {{ if $nidaRemainingIsUnknown }}
+          <p class="nida-capacity-status">20 kişiyle sınırlı</p>
+        {{ else if ge $nidaRemaining 10 }}
+          <p class="nida-capacity-status">Katılım açık · {{ $nidaRemaining }} yer kaldı</p>
+        {{ else if ge $nidaRemaining 6 }}
+          <p class="nida-capacity-status">Grubun yarısından fazlası ayrıldı · {{ $nidaRemaining }} yer kaldı</p>
+        {{ else if ge $nidaRemaining 3 }}
+          <p class="nida-capacity-status">Son {{ $nidaRemaining }} yer</p>
+        {{ else }}
+          <p class="nida-capacity-status">Yalnızca {{ $nidaRemaining }} yer kaldı</p>
+        {{ end }}
+        <div class="nida-price-grid">
+          <article class="nida-price-card">
+            <p class="nida-price-label">Öğrenci erişimi</p>
+            <p class="nida-price">{{ .Params.student_price }}</p>
+            <a class="nida-reservation-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına öğrenci erişimiyle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="student" data-placement="homepage">Öğrenci olarak yerimi ayır</a>
+          </article>
+          <article class="nida-price-card">
+            <p class="nida-price-label">Profesyonel erişim</p>
+            <p class="nida-price">{{ .Params.employee_price }}</p>
+            <a class="nida-reservation-cta nida-reservation-cta-secondary" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına profesyonel erişimle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="employee" data-placement="homepage">Profesyonel olarak yerimi ayır</a>
+          </article>
+        </div>
+        <p class="nida-payment-note">20 kişiyle sınırlı · Güvenli ödeme bağlantısı yazılı olarak paylaşılır</p>
+      {{ end }}
+      <a class="nida-detail-link" href="{{ .RelPermalink }}" data-event="nida_detail_click">Çalışma planını ve oturumları inceleyin</a>
+    </div>
+  </article>
+</section>
+{{ end }}
+
 <section class="container home-section research-system-launch" aria-labelledby="research-system-title">
-  <div class="research-system-launch-grid">
+  <div class="research-system-launch-grid research-system-launch-grid-single">
     <div class="research-system-copy">
       <p class="eyebrow">ERES’in araştırma yaklaşımı</p>
       <h2 id="research-system-title">Bilgi gürültüsünden araştırma sistemine.</h2>
@@ -37,23 +122,6 @@
       </div>
     </div>
 
-    {{ with $nidaLiveLab }}
-      <article class="live-lab-home-card">
-        <p class="live-lab-card-kicker">Yeni canlı araştırma çalışması</p>
-        <h3>{{ .Title }}</h3>
-        <p>{{ .Description }}</p>
-        <p><strong>Bilimsel Yürütücü: {{ .Params.scientific_lead }}</strong></p>
-        <ul class="live-lab-home-features">
-          <li>{{ .Params.session_count }}</li>
-          <li>{{ .Params.platform }}</li>
-          <li>{{ .Params.capacity }}</li>
-          <li>Kodlama önkoşulu yok</li>
-        </ul>
-        <p class="live-lab-home-price">{{ .Params.student_plan_label }} {{ .Params.student_price }} · {{ .Params.employee_plan_label }} {{ .Params.employee_price }}</p>
-        {{ with .Params.date_note }}<p>{{ . }}</p>{{ end }}
-        <a class="card-link" href="{{ .RelPermalink }}" data-event="other_courses_click" data-course="{{ .File.BaseFileName }}">Çalışmayı inceleyin</a>
-      </article>
-    {{ end }}
   </div>
 </section>
 

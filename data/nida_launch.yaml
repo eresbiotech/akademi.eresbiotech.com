@@ -1,0 +1,5 @@
+enabled: true
+capacity: 20
+early_window_start: "2026-07-24T18:23:10+03:00"
+early_window_hours: 72
+remaining_places: null
