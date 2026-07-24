@@ -93,12 +93,12 @@
       <details><summary>Kendi verim analiz edilir mi?</summary><p>Hayır. Kişisel, klinik veya gizli araştırma verileri canlı ortamda incelenmez; bireysel analiz veya proje danışmanlığı kapsamda değildir.</p></details>
       <details><summary>Öğrenci ve profesyonel erişimi arasındaki fark nedir?</summary><p>Çalışma kapsamı aynıdır; erişim seçeneği katılımcının durumuna göre belirlenir.</p></details>
       <details><summary>Dijital tamamlama kaydı ne anlama gelir?</summary><p>Canlı uygulama oturumlarına katılan kullanıcılar için katılımı belirten dijital tamamlama kaydı oluşturulur. Diploma, mesleki yeterlilik, kamu kurumu onayı veya resmî sertifika niteliğinde değildir.</p></details>
-      <details><summary>Ödeme bağlantısını nasıl alırım?</summary><p>Size uygun erişim seçeneğindeki WhatsApp butonunu kullanın; güncel katılım durumu ve güvenli ödeme bağlantısı yazılı olarak paylaşılır.</p></details>
+      <details><summary>Satın alma işlemini nasıl tamamlarım?</summary><p>Size uygun öğrenci veya profesyonel erişim seçeneğini seçtiğinizde ERES Kampüs / Payhip güvenli ödeme adımına doğrudan yönlendirilirsiniz. Ödeme sonrasında program erişimi, satın alma sırasında kullandığınız e-posta adresine tanımlanır.</p></details>
     </div>
   </section>
 
   <section class="container nida-final-cta" aria-labelledby="nida-final-title">
-    <div><p class="eyebrow">Ağustos canlı grubu</p><h2 id="nida-final-title">Ağustos canlı grubunda yerinizi ayırın.</h2><p>Katılım durumunu ve güvenli ödeme bağlantısını yazılı olarak alın.</p></div>
+    <div><p class="eyebrow">Ağustos canlı grubu</p><h2 id="nida-final-title">Ağustos canlı grubunda yerinizi ayırın.</h2><p>Size uygun erişim seçeneğiyle güvenli ödeme adımına doğrudan geçin.</p></div>
     {{ partial "nida-price-options.html" (dict "page" . "remaining" $remaining "remaining_is_unknown" $remainingIsUnknown "placement" "landing_page" "class" "nida-final-price-options") }}
   </section>
 
@@ -107,8 +107,8 @@
     {{ if eq $remaining 0 }}
       <a href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasının Ağustos grubu için bekleme listesine katılmak istiyorum.") }}" target="_blank" rel="noopener noreferrer" data-event="nida_waitlist_click" data-placement="mobile_sticky">Bekleme listesine katılın</a>
     {{ else }}
-      <a href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına öğrenci erişimiyle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="student" data-placement="mobile_sticky">Öğrenci</a>
-      <a href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına profesyonel erişimle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="employee" data-placement="mobile_sticky">Profesyonel</a>
+      <a href="{{ .Params.student_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="yasam-bilimlerinde-veri-analizi" data-plan="student" data-placement="mobile_sticky">Öğrenci olarak yerimi ayır</a>
+      <a href="{{ .Params.employee_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="yasam-bilimlerinde-veri-analizi" data-plan="employee" data-placement="mobile_sticky">Profesyonel olarak yerimi ayır</a>
     {{ end }}
   </div>
 </article>

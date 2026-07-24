@@ -4,6 +4,7 @@ set -euo pipefail
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 hugo_bin="${HUGO_BIN:-hugo}"
 created_build_dir=false
+zero_capacity_repo=""
 
 if [[ -n "${BUILD_DIR:-}" ]]; then
   build_dir="$BUILD_DIR"
@@ -15,6 +16,9 @@ fi
 cleanup() {
   if [[ "$created_build_dir" == true ]]; then
     rm -rf "$build_dir"
+  fi
+  if [[ -n "$zero_capacity_repo" ]]; then
+    rm -rf "$zero_capacity_repo"
   fi
 }
 trap cleanup EXIT
@@ -188,13 +192,12 @@ for phrase in \
   'Kodlama önkoşulu yok' \
   '2.850 TL' \
   '3.850 TL' \
-  'Canlı çalışmada yerinizi ayırın' \
+  'Öğrenci olarak yerimi ayır' \
+  'Profesyonel olarak yerimi ayır' \
   'Çalışma planını görün'; do
   rg -F -q "$phrase" "$home_page"
 done
-assert_file_contains_regex "$home_page" '<a[^>]+href=/yasam-bilimlerinde-veri-analizi-canli-calisma/[^>]*data-event=nida_landing_click[^>]*>Canlı çalışmada yerinizi ayırın</a>'
 assert_file_contains_regex "$home_page" '<a[^>]+href=/yasam-bilimlerinde-veri-analizi-canli-calisma/[^>]*data-event=nida_landing_click[^>]*>Çalışma planını görün</a>'
-assert_file_absent_regex "$home_page" '(?s)<section id=yasam-bilimlerinde-veri-analizi(?:(?!</section>).)*pricing_plan'
 assert_file_absent_regex "$home_page" '(?s)<section id=yasam-bilimlerinde-veri-analizi(?:(?!</section>).)*(?: yer kaldı|doluluk|progress)'
 assert_absent 'hızla doluyor'
 rg -F -q 'Erken katılım avantajının sona ermesine:' "$repo_dir/static/js/nida-launch.js"
@@ -272,14 +275,53 @@ rg -F -q 'https://akademi.eresbiotech.com/yasam-bilimlerinde-veri-analizi-canli-
 assert_file_absent "$nida_page" 'Biyoinformatik için R Programlama'
 assert_file_absent "$nida_page" 'Program koleksiyonu'
 assert_file_absent "$nida_page" 'Tüm programları karşılaştırın'
-assert_file_absent "$nida_page" 'pricing_plan='
 assert_file_absent_regex "$nida_page" '(?: yer kaldı|doluluk|progress)'
-assert_file_contains_regex "$nida_page" '<a(?=[^>]*data-event=nida_reservation_click)(?=[^>]*data-plan=student)(?=[^>]*data-placement=landing_page)[^>]*>Öğrenci olarak yerimi ayır</a>'
-assert_file_contains_regex "$nida_page" '<a(?=[^>]*data-event=nida_reservation_click)(?=[^>]*data-plan=employee)(?=[^>]*data-placement=landing_page)[^>]*>Profesyonel olarak yerimi ayır</a>'
-assert_file_contains_regex "$nida_page" '<a(?=[^>]*data-event=nida_reservation_click)(?=[^>]*data-plan=student)(?=[^>]*data-placement=mobile_sticky)[^>]*>Öğrenci</a>'
-assert_file_contains_regex "$nida_page" '<a(?=[^>]*data-event=nida_reservation_click)(?=[^>]*data-plan=employee)(?=[^>]*data-placement=mobile_sticky)[^>]*>Profesyonel</a>'
-rg -F -q 'Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına öğrenci erişimiyle katılmak istiyorum.' "$repo_dir/layouts/partials/nida-price-options.html"
-rg -F -q 'Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına profesyonel erişimle katılmak istiyorum.' "$repo_dir/layouts/partials/nida-price-options.html"
+NIDA_STUDENT_CHECKOUT='https://kampus.eresbiotech.com/order?link=m9QSY&pricing_plan=PAWg3K4qWK'
+NIDA_EMPLOYEE_CHECKOUT='https://kampus.eresbiotech.com/order?link=m9QSY&pricing_plan=91zw8wePBL'
+NIDA_STUDENT_CHECKOUT_HTML="${NIDA_STUDENT_CHECKOUT//&/&amp;}"
+NIDA_EMPLOYEE_CHECKOUT_HTML="${NIDA_EMPLOYEE_CHECKOUT//&/&amp;}"
+rg -F -q "student_checkout_url = \"$NIDA_STUDENT_CHECKOUT\"" "$nida_source"
+rg -F -q "employee_checkout_url = \"$NIDA_EMPLOYEE_CHECKOUT\"" "$nida_source"
+rg -F -q 'payhip_product_url = "https://kampus.eresbiotech.com/b/m9QSY"' "$nida_source"
+[[ "$NIDA_STUDENT_CHECKOUT" != "$NIDA_EMPLOYEE_CHECKOUT" ]] || { echo "Nida pricing plans must differ" >&2; exit 1; }
+for page in "$home_page" "$nida_page"; do
+  rg -F -q "href=\"$NIDA_STUDENT_CHECKOUT_HTML\"" "$page"
+  rg -F -q "href=\"$NIDA_EMPLOYEE_CHECKOUT_HTML\"" "$page"
+  assert_file_absent_regex "$page" "<a(?=[^>]*href=[\"']?https://kampus\\.eresbiotech\\.com/order\\?link=m9QSY)(?=[^>]*target=[\"']?_blank)[^>]*>"
+  assert_file_absent "$page" 'Güvenli ödeme bağlantısı yazılı olarak paylaşılır'
+done
+for placement in homepage landing_page mobile_sticky; do
+  page="$nida_page"
+  [[ "$placement" == homepage ]] && page="$home_page"
+  assert_file_contains_regex "$page" "<a(?=[^>]*href=[\"']?[^\"']*PAWg3K4qWK)(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*data-payment-provider=[\"']?payhip)(?=[^>]*data-course=[\"']?yasam-bilimlerinde-veri-analizi)(?=[^>]*data-plan=[\"']?student)(?=[^>]*data-placement=[\"']?$placement)[^>]*>Öğrenci olarak yerimi ayır</a>"
+  assert_file_contains_regex "$page" "<a(?=[^>]*href=[\"']?[^\"']*91zw8wePBL)(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*data-payment-provider=[\"']?payhip)(?=[^>]*data-course=[\"']?yasam-bilimlerinde-veri-analizi)(?=[^>]*data-plan=[\"']?employee)(?=[^>]*data-placement=[\"']?$placement)[^>]*>Profesyonel olarak yerimi ayır</a>"
+done
+[[ "$(rg -o 'data-placement=landing_page' "$nida_page" | wc -l | tr -d ' ')" == "4" ]] || { echo "Landing page must keep hero and final student/professional checkout CTAs" >&2; exit 1; }
+assert_file_absent "$nida_page" 'Ödeme bağlantısını nasıl alırım?'
+assert_file_absent "$nida_page" 'WhatsApp butonunu kullanın'
+rg -F -q 'Satın alma işlemini nasıl tamamlarım?' "$nida_page"
+rg -F -q 'ERES Kampüs / Payhip güvenli ödeme adımına doğrudan yönlendirilirsiniz.' "$nida_page"
+rg -F -q 'Güvenli ödeme · Taksit seçenekleri ödeme adımında' "$nida_page"
+rg -F -q 'Satın alma sonrası erişim, kullandığınız e-posta adresine tanımlanır.' "$nida_page"
+assert_file_absent "$nida_page" 'https://kampus.eresbiotech.com/b/m9QSY'
+assert_file_absent "$home_page" 'https://kampus.eresbiotech.com/b/m9QSY'
+[[ "$(printf '%s\n' "${checkout_expectations[@]}" | wc -l | tr -d ' ')" == "7" ]] || { echo "Expected seven asynchronous products" >&2; exit 1; }
+[[ "$(( ${#checkout_expectations[@]} * 2 + 2 ))" == "16" ]] || { echo "Expected sixteen verified active checkout URLs" >&2; exit 1; }
+
+# A real zero-capacity build proves Payhip CTA visibility switches to the WhatsApp waitlist.
+zero_capacity_repo="$(mktemp -d "${TMPDIR:-/tmp}/eres-akademi-zero-capacity.XXXXXX")"
+cp -R "$repo_dir"/. "$zero_capacity_repo"/
+perl -0pi -e 's/remaining_places: null/remaining_places: 0/' "$zero_capacity_repo/data/nida_launch.yaml"
+zero_capacity_build="$zero_capacity_repo/public-zero-capacity"
+"$hugo_bin" --source "$zero_capacity_repo" --minify --destination "$zero_capacity_build"
+zero_nida_page="$zero_capacity_build/yasam-bilimlerinde-veri-analizi-canli-calisma/index.html"
+zero_home_page="$zero_capacity_build/index.html"
+rg -F -q 'Bekleme listesine katılın' "$zero_nida_page"
+rg -F -q 'Bekleme listesine katılın' "$zero_home_page"
+assert_file_absent "$zero_nida_page" "$NIDA_STUDENT_CHECKOUT_HTML"
+assert_file_absent "$zero_nida_page" "$NIDA_EMPLOYEE_CHECKOUT_HTML"
+assert_file_absent "$zero_home_page" "$NIDA_STUDENT_CHECKOUT_HTML"
+assert_file_absent "$zero_home_page" "$NIDA_EMPLOYEE_CHECKOUT_HTML"
 rg -F -q 'data-meta-content-name="Yaşam Bilimlerinde Veri Analizi"' "$repo_dir/layouts/post/live-lab-landing.html"
 rg -F -q 'live-lab-landing-header' "$repo_dir/layouts/partials/header.html"
 assert_file_absent_regex "$nida_page" '(?s)<header class=site-header.*?>.*?>Çalışma Programları<' 

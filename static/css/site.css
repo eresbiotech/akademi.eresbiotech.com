@@ -5718,7 +5718,8 @@ summary:focus-visible {
 .nida-launch-main .nida-urgency,.nida-launch-main .nida-early-benefit { background: rgba(255,255,255,.1); border-color: rgba(153,246,228,.28); color: #e2e8f0; }
 .nida-launch-main .nida-urgency p,.nida-launch-main .nida-countdown { color: #e2e8f0 !important; }
 .nida-launch-main .nida-fact-list span { background: rgba(255,255,255,.08); border-color: rgba(153,246,228,.3); color: #f8fafc; }
-.nida-home-price-summary { display: grid; gap: 10px; margin: 18px 0; }
+.nida-home-price-summary { display: grid; gap: 12px; margin: 18px 0; }
+.nida-home-price-summary > div { display: grid; gap: 8px; }
 .nida-home-price-summary span { color: var(--muted); display: flex; justify-content: space-between; }
 .nida-home-price-summary strong { color: var(--text); font-size: 1.18rem; }
 .nida-home-purchase .nida-detail-link { display: block; text-align: center; }

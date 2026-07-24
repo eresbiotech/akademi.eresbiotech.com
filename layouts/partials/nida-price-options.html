@@ -24,14 +24,15 @@
       <article class="nida-price-card">
         <p class="nida-price-label">Öğrenci erişimi</p>
         <p class="nida-price">{{ $page.Params.student_price }}</p>
-        <a class="nida-reservation-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına öğrenci erişimiyle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="student" data-placement="{{ $placement }}">Öğrenci olarak yerimi ayır</a>
+        <a class="nida-reservation-cta" href="{{ $page.Params.student_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="yasam-bilimlerinde-veri-analizi" data-plan="student" data-placement="{{ $placement }}">Öğrenci olarak yerimi ayır</a>
       </article>
       <article class="nida-price-card">
         <p class="nida-price-label">Profesyonel erişim</p>
         <p class="nida-price">{{ $page.Params.employee_price }}</p>
-        <a class="nida-reservation-cta nida-reservation-cta-secondary" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına profesyonel erişimle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="employee" data-placement="{{ $placement }}">Profesyonel olarak yerimi ayır</a>
+        <a class="nida-reservation-cta nida-reservation-cta-secondary" href="{{ $page.Params.employee_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="yasam-bilimlerinde-veri-analizi" data-plan="employee" data-placement="{{ $placement }}">Profesyonel olarak yerimi ayır</a>
       </article>
     </div>
-    <p class="nida-payment-note">20 kişiyle sınırlı · Güvenli ödeme bağlantısı yazılı olarak paylaşılır</p>
+    <p class="nida-payment-note">Güvenli ödeme · Taksit seçenekleri ödeme adımında</p>
+    <p class="nida-payment-note nida-access-note">Satın alma sonrası erişim, kullandığınız e-posta adresine tanımlanır.</p>
   {{ end }}
 </div>
