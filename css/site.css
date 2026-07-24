@@ -5702,10 +5702,88 @@ summary:focus-visible {
     padding: 8px;
   }
 
-  .catalog-grid .post-card h2 a,
+.catalog-grid .post-card h2 a,
   .archive-grid .post-card h2 a {
     overflow-wrap: normal;
     word-break: normal;
     hyphens: none;
   }
+}
+
+/* Focused Nida live-lab landing and homepage emphasis */
+.nida-launch-card { background: linear-gradient(135deg,#06283a 0%,#073b4c 50%,#102d4a 100%); border-color: rgba(94,234,212,.42); position: relative; }
+.nida-launch-card::before,.nida-landing-hero::before { background: repeating-linear-gradient(90deg,rgba(94,234,212,.1) 0 1px,transparent 1px 50px),linear-gradient(145deg,transparent 35%,rgba(56,189,248,.16) 35% 36%,transparent 36%); content: ""; inset: 0; pointer-events: none; position: absolute; }
+.nida-launch-card > *,.nida-landing-hero-grid { position: relative; z-index: 1; }
+.nida-launch-main > h2,.nida-launch-main > p:not(.eyebrow),.nida-launch-main .nida-value-proposition,.nida-launch-main .nida-value-list li { color: #f8fafc !important; }
+.nida-launch-main .nida-urgency,.nida-launch-main .nida-early-benefit { background: rgba(255,255,255,.1); border-color: rgba(153,246,228,.28); color: #e2e8f0; }
+.nida-launch-main .nida-urgency p,.nida-launch-main .nida-countdown { color: #e2e8f0 !important; }
+.nida-launch-main .nida-fact-list span { background: rgba(255,255,255,.08); border-color: rgba(153,246,228,.3); color: #f8fafc; }
+.nida-home-price-summary { display: grid; gap: 10px; margin: 18px 0; }
+.nida-home-price-summary span { color: var(--muted); display: flex; justify-content: space-between; }
+.nida-home-price-summary strong { color: var(--text); font-size: 1.18rem; }
+.nida-home-purchase .nida-detail-link { display: block; text-align: center; }
+
+.live-lab-landing-header .header-inner { max-width: 1120px; }
+.live-lab-landing-header .site-nav { margin-left: auto; }
+.nida-landing-page { background: #f7fafc; color: var(--body); padding-bottom: 64px; }
+.nida-landing-hero { background: linear-gradient(135deg,#031d30 0%,#06455b 55%,#0f2d50 100%); color: #f8fafc; overflow: hidden; padding: clamp(38px,7vw,82px) 0; position: relative; }
+.nida-landing-hero-grid { display: grid; gap: clamp(28px,5vw,64px); grid-template-columns: minmax(0,1.18fr) minmax(320px,.82fr); }
+.nida-landing-hero .eyebrow,.nida-landing-hero .nida-scientific-lead { color: #99f6e4; }
+.nida-scientific-lead { font-weight: 900; margin: 18px 0 0; }
+.nida-landing-hero h1 { color: #fff; font-size: clamp(2.4rem,5.3vw,4.7rem); line-height: .98; margin: 12px 0; max-width: 13ch; }
+.nida-landing-subtitle { color: #99f6e4; font-size: 1.12rem; font-weight: 900; margin: 0; }
+.nida-landing-value { color: #fff; font-size: clamp(1.22rem,2.5vw,1.65rem); font-weight: 900; line-height: 1.35; margin: 22px 0 12px; max-width: 34ch; }
+.nida-landing-lead,.nida-landing-problem { color: #dbeafe; line-height: 1.65; max-width: 64ch; }
+.nida-landing-hero .nida-urgency { background: rgba(255,255,255,.1); border-color: rgba(153,246,228,.3); }
+.nida-landing-hero .nida-urgency strong,.nida-landing-hero .nida-urgency p,.nida-landing-hero .nida-countdown { color: #fff !important; }
+.nida-landing-facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.nida-landing-facts span { background: rgba(255,255,255,.1); border: 1px solid rgba(153,246,228,.3); border-radius: 999px; color: #fff; font-size: .85rem; font-weight: 850; padding: 7px 10px; }
+.nida-landing-hero-action { align-self: center; background: #fff; border: 1px solid rgba(153,246,228,.5); border-radius: 18px; box-shadow: 0 22px 48px rgba(0,0,0,.24); color: var(--body); padding: clamp(20px,3vw,30px); }
+.nida-landing-hero-action .nida-early-benefit { margin-bottom: 0; }
+.nida-landing-section { padding-bottom: clamp(34px,6vw,72px); padding-top: clamp(34px,6vw,72px); }
+.nida-landing-section h2,.nida-final-cta h2 { color: var(--text); font-size: clamp(1.8rem,3vw,2.8rem); margin-top: 8px; }
+.nida-problem-section { max-width: 1040px; }
+.nida-problem-grid,.nida-roadmap-grid { display: grid; gap: 16px; grid-template-columns: repeat(4,minmax(0,1fr)); margin-top: 26px; }
+.nida-problem-grid article { background: #fff; border: 1px solid var(--line); border-radius: 14px; color: var(--text); font-weight: 800; padding: 20px; }
+.nida-roadmap-grid article { background: #073b4c; border-radius: 16px; color: #e2e8f0; padding: 22px; }
+.nida-roadmap-grid span { color: #99f6e4; font-size: .84rem; font-weight: 950; }
+.nida-roadmap-grid h3 { color: #fff; font-size: 1.1rem; margin: 16px 0 8px; }
+.nida-roadmap-grid p { margin-bottom: 0; }
+.nida-included-section { background: #e6fffb; border-radius: 20px; max-width: 1120px; padding-left: clamp(24px,5vw,60px); padding-right: clamp(24px,5vw,60px); }
+.nida-included-list { display: grid; gap: 12px; grid-template-columns: repeat(3,minmax(0,1fr)); list-style: none; margin: 28px 0 0; padding: 0; }
+.nida-included-list li { background: #fff; border: 1px solid rgba(13,148,136,.2); border-radius: 12px; color: var(--text); font-weight: 800; padding: 15px; }
+.nida-audience-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.nida-audience-list span { background: #fff; border: 1px solid var(--line); border-radius: 999px; color: var(--text); font-weight: 800; padding: 9px 13px; }
+.nida-reassurance-section { display: grid; gap: 20px; grid-template-columns: repeat(2,minmax(0,1fr)); }
+.nida-reassurance-section > div { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px,4vw,38px); }
+.nida-faq-section { max-width: 980px; }
+.nida-faq-grid { display: grid; gap: 12px; margin-top: 24px; }
+.nida-faq-grid details { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+.nida-faq-grid summary { color: var(--text); cursor: pointer; font-weight: 900; }
+.nida-faq-grid p { margin-bottom: 0; }
+.nida-final-cta { align-items: start; background: linear-gradient(135deg,#063b4d,#0f2d50); border-radius: 20px; color: #e2e8f0; display: grid; gap: 28px; grid-template-columns: minmax(0,1fr) minmax(320px,.85fr); padding: clamp(24px,5vw,52px); }
+.nida-final-cta h2 { color: #fff; }
+.nida-final-cta .eyebrow { color: #99f6e4; }
+.nida-final-cta .nida-price-options { background: #fff; border-radius: 16px; color: var(--body); padding: 20px; }
+.nida-mobile-sticky { display: none; }
+
+@media (max-width: 820px) {
+  .nida-landing-hero-grid,.nida-final-cta,.nida-reassurance-section { grid-template-columns: minmax(0,1fr); }
+  .nida-problem-grid,.nida-roadmap-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .nida-included-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .nida-mobile-sticky { align-items: stretch; background: rgba(3,29,48,.98); bottom: 0; box-shadow: 0 -8px 24px rgba(0,0,0,.22); display: grid; gap: 7px; grid-template-columns: repeat(2,minmax(0,1fr)); left: 0; padding: 8px 12px max(8px,env(safe-area-inset-bottom)); position: fixed; right: 0; z-index: 20; }
+  .nida-mobile-sticky span { color: #ccfbf1; font-size: .78rem; font-weight: 850; grid-column: 1 / -1; text-align: center; }
+  .nida-mobile-sticky a { align-items: center; background: var(--teal); border-radius: 8px; color: #fff; display: flex; font-size: .84rem; font-weight: 900; justify-content: center; min-height: 42px; padding: 8px; text-align: center; }
+  .nida-mobile-sticky a:last-child { background: #fff; color: #0f2744; }
+  .nida-landing-page { padding-bottom: 148px; }
+}
+
+@media (max-width: 520px) {
+  .nida-landing-hero { padding-top: 32px; }
+  .nida-landing-hero h1 { font-size: clamp(2.25rem,11vw,3.2rem); }
+  .nida-landing-facts,.nida-audience-list { display: grid; grid-template-columns: minmax(0,1fr); }
+  .nida-landing-facts span,.nida-audience-list span { border-radius: 10px; overflow-wrap: anywhere; }
+  .nida-problem-grid,.nida-roadmap-grid,.nida-included-list { grid-template-columns: minmax(0,1fr); }
+  .nida-mobile-sticky { grid-template-columns: minmax(0,1fr); }
+  .nida-mobile-sticky span { grid-column: auto; }
 }
