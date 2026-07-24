@@ -1,0 +1,37 @@
+{{- $page := .page -}}
+{{- $remaining := .remaining -}}
+{{- $remainingIsUnknown := .remaining_is_unknown -}}
+{{- $placement := .placement -}}
+{{- $class := .class | default "" -}}
+<div class="nida-price-options {{ $class }}" aria-label="Yaşam Bilimlerinde Veri Analizi katılım seçenekleri">
+  {{ if eq $remaining 0 }}
+    <p class="nida-capacity-status">Ağustos grubu doldu</p>
+    <p>Bekleme listesi için yazılı olarak bilgi alın.</p>
+    <a class="nida-waitlist-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasının Ağustos grubu için bekleme listesine katılmak istiyorum.") }}" target="_blank" rel="noopener noreferrer" data-event="nida_waitlist_click" data-placement="{{ $placement }}">Bekleme listesine katılın</a>
+  {{ else }}
+    {{ if $remainingIsUnknown }}
+      <p class="nida-capacity-status">20 kişiyle sınırlı</p>
+    {{ else if ge $remaining 10 }}
+      <p class="nida-capacity-status">Katılım açık · {{ $remaining }} yer kaldı</p>
+    {{ else if ge $remaining 6 }}
+      <p class="nida-capacity-status">Grubun yarısından fazlası ayrıldı · {{ $remaining }} yer kaldı</p>
+    {{ else if ge $remaining 3 }}
+      <p class="nida-capacity-status">Son {{ $remaining }} yer</p>
+    {{ else }}
+      <p class="nida-capacity-status">Yalnızca {{ $remaining }} yer kaldı</p>
+    {{ end }}
+    <div class="nida-price-grid">
+      <article class="nida-price-card">
+        <p class="nida-price-label">Öğrenci erişimi</p>
+        <p class="nida-price">{{ $page.Params.student_price }}</p>
+        <a class="nida-reservation-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına öğrenci erişimiyle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="student" data-placement="{{ $placement }}">Öğrenci olarak yerimi ayır</a>
+      </article>
+      <article class="nida-price-card">
+        <p class="nida-price-label">Profesyonel erişim</p>
+        <p class="nida-price">{{ $page.Params.employee_price }}</p>
+        <a class="nida-reservation-cta nida-reservation-cta-secondary" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına profesyonel erişimle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="employee" data-placement="{{ $placement }}">Profesyonel olarak yerimi ayır</a>
+      </article>
+    </div>
+    <p class="nida-payment-note">20 kişiyle sınırlı · Güvenli ödeme bağlantısı yazılı olarak paylaşılır</p>
+  {{ end }}
+</div>

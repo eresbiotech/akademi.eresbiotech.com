@@ -49,7 +49,7 @@
             <strong>{{ .Params.employee_plan_label }} {{ .Params.employee_price }}</strong>
           </div>
           {{ with .Params.date_note }}<p>{{ . }}</p>{{ end }}
-          <a class="card-link" href="{{ .RelPermalink }}" data-event="other_courses_click" data-course="{{ .File.BaseFileName }}">Çalışmayı inceleyin</a>
+          <a class="card-link" href="{{ .RelPermalink }}" data-event="nida_landing_click" data-placement="catalog" data-course="{{ .File.BaseFileName }}">Çalışmayı inceleyin</a>
         </article>
       {{ end }}
     </div>

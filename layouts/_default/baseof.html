@@ -13,6 +13,6 @@
     {{ partial "footer.html" . }}
     {{ partial "cookie-consent.html" . }}
     <script src="{{ "js/site-consent.js" | relURL }}" defer></script>
-    {{ if .IsHome }}<script src="{{ "js/nida-launch.js" | relURL }}" defer></script>{{ end }}
+    {{ if or .IsHome (eq .Layout "live-lab-landing") }}<script src="{{ "js/nida-launch.js" | relURL }}" defer></script>{{ end }}
   </body>
 </html>

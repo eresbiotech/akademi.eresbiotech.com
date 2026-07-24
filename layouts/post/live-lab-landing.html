@@ -1,0 +1,115 @@
+{{ define "main" }}
+{{- $launch := site.Data.nida_launch -}}
+{{- $remainingIsUnknown := eq $launch.remaining_places nil -}}
+{{- $remaining := -1 -}}
+{{- if not $remainingIsUnknown -}}
+  {{- if ne (printf "%T" $launch.remaining_places) "int" -}}
+    {{- errorf "data/nida_launch.yaml remaining_places must be null or an integer from 0 to %d" $launch.capacity -}}
+  {{- end -}}
+  {{- $remaining = $launch.remaining_places -}}
+  {{- if or (lt $remaining 0) (gt $remaining $launch.capacity) -}}
+    {{- errorf "data/nida_launch.yaml remaining_places must be between 0 and %d" $launch.capacity -}}
+  {{- end -}}
+{{- end -}}
+<article class="nida-landing-page" data-meta-content-name="Yaşam Bilimlerinde Veri Analizi" data-meta-content-category="Canlı Veri Vaka Laboratuvarı">
+  <section class="nida-landing-hero" data-nida-launch data-early-window-start="{{ $launch.early_window_start }}" data-early-window-hours="{{ $launch.early_window_hours }}" data-remaining-places="{{ if $remainingIsUnknown }}null{{ else }}{{ $remaining }}{{ end }}" data-capacity="{{ $launch.capacity }}">
+    <div class="container nida-landing-hero-grid">
+      <div class="nida-landing-hero-copy">
+        <p class="eyebrow">Ağustos Canlı Veri Vaka Laboratuvarı</p>
+        <div class="nida-urgency" aria-live="polite">
+          <strong data-nida-urgency-title>Canlı çalışma için katılım açık.</strong>
+          <p data-nida-urgency-message>20 kişiyle sınırlı canlı grup için katılım bilgilerini inceleyin.</p>
+          <p class="nida-countdown" data-nida-countdown hidden></p>
+        </div>
+        <p class="nida-scientific-lead">Bilimsel yürütücü · Dr. Nida Tokaç Er</p>
+        <h1>Yaşam Bilimlerinde Veri Analizi</h1>
+        <p class="nida-landing-subtitle">Python ve Pandas ile canlı veri vaka çalışması</p>
+        <p class="nida-landing-value">Veriyi yalnızca açmayın. Düzenleyin, kontrol edin ve araştırma sorunuzla birlikte anlamlandırın.</p>
+        <p class="nida-landing-lead">Yaşam bilimleri verisini Python ve Pandas ile okuma, düzenleme, kontrol etme, görselleştirme ve yorumlama sürecini Dr. Nida Tokaç Er ile dört canlı uygulama oturumunda adım adım takip edin.</p>
+        <p class="nida-landing-problem">Veriniz var ama analiz akışınız dağınık mı? Bu çalışma, ham bir veri tablosundan yorumlanabilir araştırma çıktısına uzanan süreci tek bir vaka akışında bir araya getirir.</p>
+        <div class="nida-landing-facts" aria-label="Canlı çalışma hızlı bilgileri">
+          <span>15–16 ve 22–23 Ağustos 2026</span>
+          <span>4 canlı oturum × 2 saat</span>
+          <span>Google Meet</span>
+          <span>Kodlama önkoşulu yok</span>
+          <span>20 kişiyle sınırlı</span>
+        </div>
+      </div>
+      <div class="nida-landing-hero-action">
+        {{ partial "nida-price-options.html" (dict "page" . "remaining" $remaining "remaining_is_unknown" $remainingIsUnknown "placement" "landing_page" "class" "nida-landing-price-options") }}
+        <p class="nida-early-benefit" data-nida-early-benefit>İlk 72 saatte yerini ayıran katılımcıların önceden ilettiği sorular, canlı vaka akışının hazırlanmasında öncelikli olarak değerlendirilir. Bu uygulama kişiye özel proje danışmanlığı veya katılımcının verisinin analiz edilmesi anlamına gelmez.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container nida-landing-section nida-problem-section" aria-labelledby="nida-problem-title">
+    <p class="eyebrow">Bu çalışma size tanıdık geliyor mu?</p>
+    <h2 id="nida-problem-title">Veriyle çalışırken akışın nerede koptuğunu görün.</h2>
+    <div class="nida-problem-grid">
+      <article>Veri tablosunu açıyor ama nereden başlayacağınızı bilemiyorsunuz.</article>
+      <article>Eksik ve tutarsız değerleri nasıl kontrol edeceğiniz net değil.</article>
+      <article>Hangi grafiğin araştırma sorunuza uygun olduğundan emin değilsiniz.</article>
+      <article>Sonuçları araştırma sorusuyla ilişkilendirmekte zorlanıyorsunuz.</article>
+    </div>
+  </section>
+
+  <section class="container nida-landing-section" aria-labelledby="nida-roadmap-title">
+    <p class="eyebrow">Dört oturumluk çalışma rotası</p>
+    <h2 id="nida-roadmap-title">Ham veriden yorumlanabilir araştırma çıktısına.</h2>
+    <div class="nida-roadmap-grid">
+      <article><span>01</span><h3>Veriyi tanımak ve hazırlamak</h3><p>Google Colab, CSV dosyaları, değişken türleri, veri yapısı ve ilk kontroller.</p></article>
+      <article><span>02</span><h3>Veriyi temizlemek ve özetlemek</h3><p>Eksik değerler, veri tipleri, filtreleme, gruplama ve özet istatistikler.</p></article>
+      <article><span>03</span><h3>Görselleştirmek</h3><p>Grafik seçimi, temel görselleştirmeler ve veriyi anlaşılır anlatma yaklaşımı.</p></article>
+      <article><span>04</span><h3>Yorumlamak ve uçtan uca mini vaka</h3><p>Araştırma sorusuyla ilişki kurma, çıktıları yorumlama ve kısa vaka uygulaması.</p></article>
+    </div>
+  </section>
+
+  <section class="container nida-landing-section nida-included-section" aria-labelledby="nida-included-title">
+    <p class="eyebrow">Erişime dahil olanlar</p>
+    <h2 id="nida-included-title">Canlı akışı destekleyen çalışma kaynakları.</h2>
+    <ul class="nida-included-list">
+      <li>Google Colab çalışma notebook’u</li><li>Veri sözlüğü şablonu</li><li>Grafik seçim matrisi</li><li>Açıklamalı canlı uygulama kayıtları</li><li>Kendi kendine kontrol adımları</li><li>Referans analiz akışı</li>
+    </ul>
+  </section>
+
+  <section class="container nida-landing-section nida-audience-section" aria-labelledby="nida-audience-title">
+    <p class="eyebrow">Kimler için?</p>
+    <h2 id="nida-audience-title">Yaşam bilimleri verisiyle daha düzenli çalışmak isteyenler için.</h2>
+    <div class="nida-audience-list"><span>Biyoloji</span><span>Moleküler biyoloji ve genetik</span><span>Biyoteknoloji</span><span>Beslenme ve diyetetik</span><span>Sağlık bilimleri</span><span>Tıp</span><span>Veterinerlik</span><span>Yaşam bilimleri araştırmacıları</span></div>
+  </section>
+
+  <section class="container nida-landing-section nida-reassurance-section" aria-labelledby="nida-reassurance-title">
+    <div><p class="eyebrow">Kurulum ve ön koşul</p><h2 id="nida-reassurance-title">Kodlama deneyiminiz olmasa da başlayabilirsiniz.</h2><p>Google Colab üzerinden ilerlenir, ayrıca kurulum gerekmez ve temel akış adım adım gösterilir.</p></div>
+    <div><p class="eyebrow">Bilimsel yürütücü</p><h2>Dr. Nida Tokaç Er</h2><p>Beslenme ve Diyetetik alanındaki akademik araştırma deneyimini Python, Pandas ve veri analitiği çalışmalarıyla birleştirir; yaşam bilimleri verilerinin düzenlenmesi, analiz öncesi kontrolü, görselleştirilmesi ve araştırma sorusuyla ilişkilendirilmesi üzerine çalışır.</p></div>
+  </section>
+
+  <section class="container nida-landing-section nida-faq-section" aria-labelledby="nida-faq-title">
+    <p class="eyebrow">Sık sorulan sorular</p><h2 id="nida-faq-title">Katılım öncesi netlik.</h2>
+    <div class="nida-faq-grid">
+      <details><summary>Kodlama bilmek gerekiyor mu?</summary><p>Hayır. Önceden kodlama bilgisi gerekmez; temel akış canlı uygulama oturumlarında adım adım gösterilir.</p></details>
+      <details><summary>Bilgisayara kurulum gerekiyor mu?</summary><p>Hayır. Çalışmalar tarayıcı üzerinden Google Colab ile yürütülür.</p></details>
+      <details><summary>Canlı oturumlara katılamazsam ne olur?</summary><p>Canlı oturumlar kaydedilir; katılamayan kullanıcılar mevcut uygulama kayıtları ve dijital araştırma varlıklarıyla çalışabilir.</p></details>
+      <details><summary>Kayıtlar ne zaman eklenir?</summary><p>Kayıtlar her oturumdan sonra 1–2 gün içinde kullanıcı hesabına eklenir.</p></details>
+      <details><summary>Kendi verim analiz edilir mi?</summary><p>Hayır. Kişisel, klinik veya gizli araştırma verileri canlı ortamda incelenmez; bireysel analiz veya proje danışmanlığı kapsamda değildir.</p></details>
+      <details><summary>Öğrenci ve profesyonel erişimi arasındaki fark nedir?</summary><p>Çalışma kapsamı aynıdır; erişim seçeneği katılımcının durumuna göre belirlenir.</p></details>
+      <details><summary>Dijital tamamlama kaydı ne anlama gelir?</summary><p>Canlı uygulama oturumlarına katılan kullanıcılar için katılımı belirten dijital tamamlama kaydı oluşturulur. Diploma, mesleki yeterlilik, kamu kurumu onayı veya resmî sertifika niteliğinde değildir.</p></details>
+      <details><summary>Ödeme bağlantısını nasıl alırım?</summary><p>Size uygun erişim seçeneğindeki WhatsApp butonunu kullanın; güncel katılım durumu ve güvenli ödeme bağlantısı yazılı olarak paylaşılır.</p></details>
+    </div>
+  </section>
+
+  <section class="container nida-final-cta" aria-labelledby="nida-final-title">
+    <div><p class="eyebrow">Ağustos canlı grubu</p><h2 id="nida-final-title">Ağustos canlı grubunda yerinizi ayırın.</h2><p>Katılım durumunu ve güvenli ödeme bağlantısını yazılı olarak alın.</p></div>
+    {{ partial "nida-price-options.html" (dict "page" . "remaining" $remaining "remaining_is_unknown" $remainingIsUnknown "placement" "landing_page" "class" "nida-final-price-options") }}
+  </section>
+
+  <div class="nida-mobile-sticky" aria-label="Yaşam Bilimlerinde Veri Analizi hızlı katılım seçenekleri">
+    <span>20 kişiyle sınırlı</span>
+    {{ if eq $remaining 0 }}
+      <a href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasının Ağustos grubu için bekleme listesine katılmak istiyorum.") }}" target="_blank" rel="noopener noreferrer" data-event="nida_waitlist_click" data-placement="mobile_sticky">Bekleme listesine katılın</a>
+    {{ else }}
+      <a href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına öğrenci erişimiyle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="student" data-placement="mobile_sticky">Öğrenci</a>
+      <a href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasına profesyonel erişimle katılmak istiyorum. Güncel katılım durumunu ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="nida_reservation_click" data-plan="employee" data-placement="mobile_sticky">Profesyonel</a>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

@@ -1,11 +1,17 @@
 +++
 author = "ERES Biyoteknoloji"
 title = "Yaşam Bilimlerinde Veri Analizi"
+page_title = "Yaşam Bilimlerinde Veri Analizi Canlı Çalışması | Python ve Pandas"
+seo_title = "Yaşam Bilimlerinde Veri Analizi Canlı Çalışması | ERES Biyoinformatik"
 date = "2026-07-13"
-description = "Python ve Pandas ile yaşam bilimleri verisini okuma, temizleme, görselleştirme ve yorumlama için dijital araştırma varlıkları ve 8 saatlik Canlı Veri Vaka Laboratuvarı."
+description = "Python ve Pandas ile yaşam bilimleri verisini düzenleme, kontrol etme, görselleştirme ve yorumlama sürecini dört canlı uygulama oturumunda inceleyin."
+og_description = "Dr. Nida Tokaç Er ile 15–16 ve 22–23 Ağustos 2026 tarihlerinde Python ve Pandas kullanarak yaşam bilimleri veri analizini dört canlı uygulama oturumunda inceleyin."
+og_title = "Yaşam Bilimlerinde Veri Analizi Canlı Çalışması | Python ve Pandas | Dr. Nida Tokaç Er"
 
-layout = "live-lab"
+layout = "live-lab-landing"
 slug = "yasam-bilimlerinde-veri-analizi"
+url = "/yasam-bilimlerinde-veri-analizi-canli-calisma/"
+aliases = ["/post/yasam-bilimlerinde-veri-analizi/"]
 
 product_type = "live_lab"
 course_status = "active"
