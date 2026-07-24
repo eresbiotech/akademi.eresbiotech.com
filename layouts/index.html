@@ -1,24 +1,20 @@
 {{ define "main" }}
-{{- $introCourse := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
-{{- $rCourse := site.GetPage "/post/biyoinformatik-icin-r-programlama" -}}
-{{- $proteinCourse := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
+{{- $posts := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
+{{- $activePrograms := where (where $posts "Params.course_status" "active") "Params.product_type" "!=" "live_lab" -}}
+{{- $introProgram := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
+{{- $rProgram := site.GetPage "/post/biyoinformatik-icin-r-programlama" -}}
+{{- $proteinProgram := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
 {{- $nidaLiveLab := site.GetPage "/post/yasam-bilimlerinde-veri-analizi" -}}
-{{- $otherCourses := slice
-  (dict "slug" "biyoinformatik-veritabanlari-araclar-egitimi" "title" "Temel Biyoinformatik Araçlar ve Veritabanları" "description" "NCBI, UniProt, PDB ve BLAST gibi kaynakları daha bilinçli okumak için.")
-  (dict "slug" "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" "title" "NCBI, Ensembl ve UCSC Genom Tarayıcısı" "description" "Gen, transkript, varyant ve genom bölgelerini karşılaştırmalı incelemek için.")
-  (dict "slug" "tek-hucre-rna-seq-analizi-egitimi" "title" "Tek Hücre RNA-Seq Analizi" "description" "scRNA-seq iş akışı, kalite kontrol, kümeleme ve marker gen yorumu için.")
-  (dict "slug" "phyml-uygulamali-filogenetik-egitimi" "title" "phyML Filogenetik ve Dizi Hizalama" "description" "Dizi hizalama, model seçimi, phyML ve filogenetik ağaç yorumlama için.")
--}}
 
 <section class="home-hero">
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
-      <p class="eyebrow">ERES Biyoinformatik</p>
-      <h1>Dijital bilimsel içerikler ve araştırma çalışma sistemleri</h1>
-      <p class="lead">Kendi hızınızda kullanabileceğiniz açıklamalı içerikleri, çalışma dosyalarını, araştırma araçlarını ve canlı vaka çalışmalarını inceleyin.</p>
+      <p class="eyebrow">ERES Biyoinformatik Çalışma Programları</p>
+      <h1>Biyoinformatikte kendi hızınızda, adım adım ilerleyin.</h1>
+      <p class="lead">Başlangıçtan ileri uygulamalara uzanan; açıklamalı anlatımlar, çalışma dosyaları ve araştırma pratiğine yakın örneklerle yapılandırılmış programlar.</p>
       <div class="hero-actions">
-        <a class="hero-action" href="#karar-yollari">Biyoinformatiğe bugün başlayın</a>
-        <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm içerikleri karşılaştırın</a>
+        <a class="hero-action" href="#programlar" data-event="hero_primary_cta_click">Bugün başlayın</a>
+        <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm programları karşılaştırın</a>
       </div>
     </div>
   </div>
@@ -27,10 +23,10 @@
 <section class="container home-section research-system-launch" aria-labelledby="research-system-title">
   <div class="research-system-launch-grid">
     <div class="research-system-copy">
-      <p class="eyebrow">ERES’in yeni dijital ürün sistemi</p>
+      <p class="eyebrow">ERES’in araştırma yaklaşımı</p>
       <h2 id="research-system-title">Bilgi gürültüsünden araştırma sistemine.</h2>
       <p>Manual, makale, video, kod ve yöntem notları arasında dağılmış bilimsel bilgiyi; belirli araştırma problemleri etrafında kullanılabilir çalışma sistemlerine dönüştürüyoruz.</p>
-      <p>Mevcut açıklamalı içeriklerimizi; vaka bağlamları, dijital çalışma dosyaları, bilimsel karar araçları ve kendi araştırmanıza aktarım kaynaklarıyla kademeli olarak genişletiyoruz.</p>
+      <p>Çalışma programlarımız, açıklamalı anlatımları; vaka bağlamları, dijital çalışma dosyaları, bilimsel karar araçları ve araştırma pratiğine aktarım kaynaklarıyla bir araya getirir.</p>
       <div class="research-system-steps" aria-label="Araştırma sistemi adımları">
         <span>Vaka</span>
         <span>Bilimsel çerçeve</span>
@@ -61,29 +57,68 @@
   </div>
 </section>
 
+<section id="programlar" class="container home-section home-programs-section" aria-labelledby="programs-title">
+  <div class="section-heading">
+    <p class="eyebrow">Çalışma programları</p>
+    <h2 id="programs-title">Başlamak istediğiniz programı seçin.</h2>
+    <p>Size uygun erişim seçeneğinden güvenli ödeme adımına doğrudan geçin.</p>
+  </div>
+  <div class="home-program-grid">
+    {{ range $activePrograms.ByDate.Reverse }}
+      {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
+      <article class="home-program-card">
+        <div class="home-program-card-main">
+          <span class="program-label">Kendi hızında çalışma programı</span>
+          <h3>{{ $displayTitle }}</h3>
+          <p class="program-value">{{ .Description }}</p>
+          {{ with .Params.program_features }}
+            <ul class="program-feature-list">
+              {{ range first 3 . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+        </div>
+        <div class="home-program-purchase" aria-label="{{ $displayTitle }} erişim seçenekleri">
+          <div class="program-price-row"><span>Öğrenci</span><strong>{{ .Params.student_price }}</strong></div>
+          <a class="program-checkout" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="student" data-placement="homepage">Öğrenci erişimiyle başlayın</a>
+          <div class="program-price-row"><span>Profesyonel</span><strong>{{ .Params.employee_price }}</strong></div>
+          <a class="program-checkout program-checkout-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="employee" data-placement="homepage">Profesyonel erişimiyle başlayın</a>
+          <p class="program-payment-note">Güvenli ödeme · Taksit seçenekleri ödeme adımında</p>
+          <a class="program-route-link" href="{{ .RelPermalink }}" data-event="program_detail_click" data-course="{{ .File.BaseFileName }}">Program rotasını görün</a>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+  <div class="program-purchase-trust" aria-label="Satın alma güvencesi">
+    <span>ERES Kampüs / Payhip güvenli ödeme</span>
+    <span>Satın alma sonrası kullanıcı hesabına erişim</span>
+    <span>Yazılı destek</span>
+    <span>Kendi hızınızda tekrar erişim</span>
+  </div>
+</section>
+
 <section id="karar-yollari" class="container home-section decision-section">
   <div class="section-heading">
     <p class="eyebrow">Karar rehberi</p>
-    <h2>Size en uygun başlangıcı seçin</h2>
+    <h2>Nereden başlayacağınıza karar verin</h2>
   </div>
   <div class="decision-grid">
     <article class="path-card decision-card">
       <p class="path-label">Başlangıç yolu</p>
       <h3>Temelden başlayın</h3>
-      <p>Biyoinformatiğin temel mantığını, veri türlerini ve analiz akışını öğrenmek için.</p>
-      <a class="card-link" href="{{ with $introCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">Temelden başlayın</a>
+      <p>Biyoinformatiğin temel mantığını, veri türlerini ve analiz akışını tanımak için.</p>
+      <a class="card-link" href="{{ with $introProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">Program rotasını görün</a>
     </article>
     <article class="path-card decision-card">
       <p class="path-label">R programlama</p>
       <h3>R ile çalışmaya başlayın</h3>
-      <p>RStudio, veri yapıları, grafikler ve biyolojik veri örnekleriyle pratik kazanmak için.</p>
-      <a class="card-link" href="{{ with $rCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click" data-course="biyoinformatik-icin-r-programlama">R ile çalışmaya başlayın</a>
+      <p>RStudio, veri yapıları, grafikler ve biyolojik veri örnekleriyle ilerlemek için.</p>
+      <a class="card-link" href="{{ with $rProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click" data-course="biyoinformatik-icin-r-programlama">Program rotasını görün</a>
     </article>
     <article class="path-card decision-card">
       <p class="path-label">Yapısal biyoinformatik</p>
       <h3>Protein modellemeye başlayın</h3>
-      <p>PDB, AlphaFold, protein yapısı ve in silico modelleme yaklaşımını öğrenmek için.</p>
-      <a class="card-link" href="{{ with $proteinCourse }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_protein_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">Protein modellemeye başlayın</a>
+      <p>PDB, AlphaFold, protein yapısı ve in silico modelleme yaklaşımını tanımak için.</p>
+      <a class="card-link" href="{{ with $proteinProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_protein_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">Program rotasını görün</a>
     </article>
   </div>
 </section>
@@ -91,112 +126,42 @@
 <section class="container home-section" aria-labelledby="bundle-title">
   <div class="lite-band async-bundle">
     <div>
-      <p class="eyebrow">Toplu erişim</p>
-      <h2 id="bundle-title">Tüm asenkron biyoinformatik içeriklerine tek erişim</h2>
+      <p class="eyebrow">Program koleksiyonu</p>
+      <h2 id="bundle-title">Tüm asenkron biyoinformatik programlarına tek erişim</h2>
       <p class="bundle-highlight">%50 paket avantajı</p>
-      <p>Biyoinformatiği tek bir başlıkla sınırlamadan ilerlemek isteyenler için aktif asenkron içeriklerimizi bütünlüklü bir çalışma yolunda bir araya getiriyoruz.</p>
+      <p>Biyoinformatiği tek bir başlıkla sınırlamadan ilerlemek isteyenler için kendi hızında çalışma programlarımızı bütünlüklü bir program koleksiyonunda bir araya getiriyoruz.</p>
     </div>
     <div class="bundle-actions">
-      <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, tüm asenkron biyoinformatik içeriklerine tek paket üzerinden erişmek istiyorum. Güncel paket kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Tüm içeriklere birlikte başlayın</a>
-      <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}" data-event="other_courses_click">Tekil içerikleri karşılaştırın</a>
+      <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, tüm asenkron biyoinformatik çalışma programlarına toplu erişim sağlamak istiyorum. Güncel program kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Toplu erişimi başlatın</a>
+      <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}" data-event="other_courses_click">Tekil programları karşılaştırın</a>
     </div>
   </div>
 </section>
 
-<section class="container home-section other-courses-section">
-  <div class="section-heading section-heading-row">
+<section class="container student-access-band" aria-label="Satın alma sonrası program erişimi">
+  <div class="student-access-card">
     <div>
-      <p class="eyebrow">Aktif asenkron içerikler</p>
-      <h2>Çalışma alanınıza uygun içeriği inceleyin</h2>
-      <p>Kendi hızınızda ilerleyebileceğiniz açıklamalı uygulamalar ve çalışma kaynaklarıyla başlayın.</p>
+      <p class="support-label">Satın alma sonrası program erişimi</p>
+      <h2>Programınıza kaldığınız yerden devam edin</h2>
+      <p>ERES Kampüs / Payhip üzerinden satın alma yaptığınızda, kullandığınız e-posta ve şifreyle kullanıcı hesabınıza giriş yaparak programlarınıza tekrar ulaşabilirsiniz.</p>
+      <small>Şifrenizi hatırlamıyorsanız giriş ekranındaki “Forgot your password?” bağlantısını kullanabilirsiniz.</small>
     </div>
-    <a class="text-link" href="{{ "/post/" | relURL }}" data-event="other_courses_click">Tüm içerikleri görün</a>
+    <a class="support-cta" href="{{ "/ders-giris/" | relURL }}">Programlarıma giriş</a>
   </div>
-  <div class="compact-course-grid">
-    {{ range $otherCourses }}
-      {{- $course := site.GetPage (printf "/post/%s" .slug) -}}
-      <article class="compact-course-card">
-        <div>
-          <span class="compact-quota">Asenkron içerik</span>
-          <h3>{{ .title }}</h3>
-          <p>{{ .description }}</p>
-          {{ with $course }}
-            <p class="compact-course-price">{{ .Params.student_plan_label }} {{ .Params.student_price }} · {{ .Params.employee_plan_label }} {{ .Params.employee_price }}</p>
-          {{ end }}
-        </div>
-        <a class="card-link card-link-light" href="{{ with $course }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="other_courses_click" data-course="{{ .slug }}">İçeriği inceleyin</a>
-      </article>
-    {{ end }}
-  </div>
-</section>
-
-<section class="container home-section trust-section" aria-labelledby="trust-title">
-  <div class="section-heading">
-    <p class="eyebrow">Güvenli satın alma</p>
-    <h2 id="trust-title">Neden güvenle erişim sağlayabilirsiniz?</h2>
-  </div>
-  <div class="trust-badge-grid">
-    <article><span>01</span><strong>Gerçek araştırma bağlamları</strong><p>Açıklamalı uygulamalar, yaşam bilimlerinden gerçekçi problemler etrafında yapılandırılır.</p></article>
-    <article><span>02</span><strong>Kod, veri ve çalışma dosyaları</strong><p>Ürüne göre örnek dosyalar, kodlar, tablolar veya teknik kaynaklar sunulur.</p></article>
-    <article><span>03</span><strong>Kendi hızınızda erişim</strong><p>Açıklamalı içeriklere hesabınız üzerinden yeniden erişebilirsiniz.</p></article>
-    <article><span>04</span><strong>Güvenli satın alma ve yazılı destek</strong><p>Satın alma ve erişim süreçlerinde yazılı destek kanalları kullanılır.</p></article>
-  </div>
-  <p class="trust-payment-note">Satın alma akademi.eresbiotech.com ve ERES Kampüs üzerinden başlar. Payhip ve iyzico güvenli ödeme altyapısı kullanılır. Ödeme adımında kartınıza veya bankanıza göre taksit seçenekleri görünebilir.</p>
 </section>
 
 <section class="container home-section trust-support-section">
   <div class="support-band-card conversion-trust-card">
     <div>
       <h2>Güvenli satın alma ve yazılı destek</h2>
-      <p>Satın alma yalnızca akademi.eresbiotech.com üzerindeki ürün sayfalarından başlar ve ERES Kampüs / Payhip güvenli ödeme altyapısıyla tamamlanır. Tereddüt yaşarsanız ödeme yapmadan önce WhatsApp üzerinden yazılı destek alabilirsiniz.</p>
+      <p>Satın alma yalnızca akademi.eresbiotech.com üzerindeki program sayfalarından başlar ve ERES Kampüs / Payhip güvenli ödeme altyapısıyla tamamlanır.</p>
       <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp'tan yazılı destek alın</a>
     </div>
   </div>
 </section>
 
-<section class="container student-access-band" aria-label="Satın alma sonrası içerik erişimi">
-  <div class="student-access-card">
-    <div>
-      <p class="support-label">Satın alma sonrası içerik erişimi</p>
-      <h2>Satın aldıktan sonra içeriğinize kolayca dönün</h2>
-      <p>ERES Kampüs / Payhip üzerinden satın alma yaptığınızda, kullandığınız e-posta ve şifreyle kullanıcı hesabınıza giriş yaparak içeriklerinize tekrar ulaşabilirsiniz.</p>
-      <small>Şifrenizi hatırlamıyorsanız giriş ekranındaki "Forgot your password?" bağlantısını kullanabilirsiniz.</small>
-    </div>
-    <a class="support-cta" href="{{ "/ders-giris/" | relURL }}">İçeriklerime giriş yapın</a>
-  </div>
-</section>
-
-<section class="container home-section mira-bridge-section" aria-label="Mira'nın Debug Defteri">
-  <div class="mira-bridge-card">
-    <div class="mira-bridge-copy">
-      <p class="mira-bridge-kicker">~/mira/gizli-debug-defteri/init.py</p>
-      <h2>Hikaye başlıyor: Mira'nın Debug Defteri</h2>
-      <p class="mira-bridge-lead">Biyoinformatiğe başlamak istiyor ama nereden başlayacağını bilmiyorsan, Mira'nın hata mesajları sana tanıdık gelebilir.</p>
-      <blockquote>"Ben Mira. Doktoraya başlayacağım. Sanırım. Python, R, Linux, veri setleri ve hayatın bilinmeyen değişkenleriyle aram biraz karışık. Her Çarşamba Instagram'da hatalarımı debug edeceğim. Ama anlatmadıklarımı gizli debug defterimde tutuyorum."</blockquote>
-      <p class="mira-bridge-support">Mira'nın Debug Defteri; biyoinformatiğe başlamak isteyenler için hikayeli kod kartları, küçük debug notları ve Instagram'da devam eden Debug Çarşambası evrenine açılan bir giriş kapısıdır.</p>
-      <div class="mira-bridge-actions">
-        <a class="mira-bridge-cta" href="{{ "/miranin-debug-defteri/" | relURL }}" data-event="mira_click">Mira'nın Debug Defteri'ni keşfet</a>
-        <span>İçerik seçmeye hazır değilsen önce Mira'nın hikayesinden başlayabilirsin.</span>
-      </div>
-    </div>
-    <div class="mira-terminal-card" aria-label="Mira debug kod kartı">
-      <div class="mira-terminal-bar">
-        <span></span><span></span><span></span>
-        <strong>~/mira/gizli-debug-defteri/init.py</strong>
-      </div>
-      <pre><code>mira = {
-  "hedef": "biyoinformatik öğrenmek",
-  "durum": "biraz panik, biraz merak",
-  "hata_mesaji": "NeredenBaslayacagimHatasi"
-}
-
-print("Kod çalışmadı. Hikaye devam ediyor.")</code></pre>
-    </div>
-  </div>
-</section>
-
-<div class="mobile-sticky-cta" aria-label="Hızlı erişim bağlantıları">
-  <a class="mobile-sticky-primary" href="#karar-yollari" data-event="hero_primary_cta_click">Size uygun içeriği seçin</a>
+<div class="mobile-sticky-cta" aria-label="Hızlı program bağlantıları">
+  <a class="mobile-sticky-primary" href="#programlar" data-event="hero_primary_cta_click">Programınızı seçin</a>
   <a class="mobile-sticky-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp</a>
 </div>
 {{ end }}

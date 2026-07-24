@@ -5,10 +5,10 @@
       <img class="brand-logo" src="{{ "images/logos/Eres_Yatay_AcikZemin.svg" | relURL }}" alt="ERES Biyoinformatik">
     </a>
     <nav class="site-nav" aria-label="Ana menu">
-      <a href="{{ "/post/" | relURL }}">Dijital İçerikler</a>
+      <a href="{{ "/post/" | relURL }}">Çalışma Programları</a>
       <a href="{{ "/canli-egitimler/" | relURL }}">Canlı Çalışmalar</a>
       <a href="{{ "/about/" | relURL }}">Hakkımızda</a>
-      <a class="nav-student-login{{ if $isStudentLogin }} is-active{{ end }}" href="{{ "/ders-giris/" | relURL }}"{{ if $isStudentLogin }} aria-current="page"{{ end }}>İçeriklerime Giriş</a>
+      <a class="nav-student-login{{ if $isStudentLogin }} is-active{{ end }}" href="{{ "/ders-giris/" | relURL }}"{{ if $isStudentLogin }} aria-current="page"{{ end }}>Programlarıma Giriş</a>
       <a class="nav-button nav-button-support" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Yazılı Destek</a>
     </nav>
     <div class="mobile-header-actions">
@@ -16,9 +16,9 @@
       <details class="mobile-menu">
         <summary>Menü</summary>
         <nav aria-label="Mobil menu">
-          <a href="{{ "/post/" | relURL }}">Dijital İçerikler</a>
+          <a href="{{ "/post/" | relURL }}">Çalışma Programları</a>
           <a href="{{ "/canli-egitimler/" | relURL }}">Canlı Çalışmalar</a>
-          <a href="{{ "/ders-giris/" | relURL }}">İçeriklerime Giriş</a>
+          <a href="{{ "/ders-giris/" | relURL }}">Programlarıma Giriş</a>
           <a href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Yazılı Destek</a>
         </nav>
       </details>

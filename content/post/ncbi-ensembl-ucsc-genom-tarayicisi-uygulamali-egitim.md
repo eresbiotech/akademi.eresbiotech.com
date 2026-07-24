@@ -12,6 +12,7 @@ employee_price = "5.300 TL"
 student_plan_label = "Öğrenci"
 employee_plan_label = "Profesyonel"
 course_status = "active"
+program_features = ["Örnek genom bölgeleri", "Açıklamalı bölümler", "İsteğe bağlı uygulamalar"]
 
 categories = [
     "themes",

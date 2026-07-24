@@ -6,13 +6,13 @@
 <section class="container page-shell">
   <header class="page-header split-header post-index-hero">
     <div>
-      <p class="eyebrow">ERES Akademi kataloğu</p>
-      <h1>Dijital biyoinformatik içerikleri</h1>
-      <p class="lead">Kendi hızınızda ilerleyebileceğiniz asenkron içerikleri, dijital çalışma kaynaklarını ve canlı araştırma çalışmalarını inceleyin.</p>
+      <p class="eyebrow">ERES Biyoinformatik programları</p>
+      <h1>Kendi hızınızda çalışma programları</h1>
+      <p class="lead">Başlangıçtan ileri uygulamalara uzanan yapılandırılmış programları, çalışma kaynaklarını ve canlı vaka çalışmalarını inceleyin.</p>
       <div class="trust-row" aria-label="Katalog özellikleri">
         <span>Kendi hızınızda</span>
         <span>Açıklamalı uygulamalar</span>
-        <span>Tekrar erişilebilir içerik</span>
+        <span>Tekrar erişilebilir programlar</span>
       </div>
       <div class="catalog-support-note">
         <strong>Güvenli satın alma ve yazılı destek</strong>
@@ -22,9 +22,9 @@
     </div>
     <div class="hero-side">
       <span class="badge">Dijital bilimsel ürünler</span>
-      <strong class="hero-panel-title">Araştırma pratiğine yakın içerikler</strong>
+      <strong class="hero-panel-title">Araştırma pratiğine yakın programlar</strong>
       <span>R, temel biyoinformatik, genom tarayıcıları, scRNA-seq, protein modelleme ve filogenetik</span>
-      <a class="hero-action" href="#egitimler" data-event="other_courses_click">İçerikleri incele</a>
+      <a class="hero-action" href="#programlar" data-event="other_courses_click">Programlara başlayın</a>
     </div>
   </header>
 
@@ -55,10 +55,10 @@
     </div>
   </section>
 
-  <section id="egitimler" class="catalog-section">
+  <section id="programlar" class="catalog-section">
     <div class="section-heading">
-      <p class="eyebrow">Aktif asenkron içerikler</p>
-      <h2>Çalışma alanınıza uygun içeriği seçin</h2>
+      <p class="eyebrow">Kendi hızında çalışma programları</p>
+      <h2>Çalışma alanınıza uygun programı seçin</h2>
     </div>
     <div class="card-grid catalog-grid">
       {{ range $activePosts.ByDate.Reverse }}
@@ -72,9 +72,9 @@
           {{ end }}
           <div class="post-card-body">
             <div class="badge-row">
-              <span class="badge">Aktif içerik</span>
+              <span class="badge">Kendi hızında çalışma programı</span>
               <span class="badge">Açıklamalı uygulamalar</span>
-              <span class="badge">Tekrar erişilebilir içerik</span>
+              <span class="badge">Tekrar erişilebilir</span>
             </div>
             <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
             <p>{{ .Description }}</p>
@@ -82,12 +82,16 @@
               <div class="catalog-price-summary" aria-label="Erişim ücretleri">
                 <p><span>{{ .Params.student_plan_label }} erişimi</span><strong>{{ .Params.student_price }}</strong></p>
                 <p><span>{{ .Params.employee_plan_label }} erişimi</span><strong>{{ .Params.employee_price }}</strong></p>
-                <small>Taksit seçenekleri ödeme adımında görünebilir.</small>
+                <small>Güvenli ödeme · Taksit seçenekleri ödeme adımında</small>
               </div>
             {{ end }}
           </div>
-          <div class="catalog-card-actions">
-            <a class="card-link" href="{{ .RelPermalink }}" data-event="other_courses_click" data-course="{{ .File.BaseFileName }}">İçeriği inceleyin</a>
+          <div class="catalog-card-actions catalog-program-actions">
+            {{ if and .Params.student_checkout_url .Params.employee_checkout_url }}
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="student">Öğrenci erişimiyle başlayın</a>
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="employee">Profesyonel erişimiyle başlayın</a>
+            {{ end }}
+            <a class="text-link" href="{{ .RelPermalink }}" data-event="program_detail_click" data-course="{{ .File.BaseFileName }}">Program rotasını görün</a>
           </div>
         </article>
       {{ end }}
@@ -96,9 +100,9 @@
 
   <section class="catalog-section archive-section">
     <div class="section-heading">
-      <p class="eyebrow">Hazırlık ve arşiv içerikleri</p>
-      <h2>Diğer içerikler</h2>
-      <p>Bu içerikler katalogda korunur; kayıt bilgisi netleşmemiş olanlar satın alınabilir ürün gibi gösterilmez.</p>
+      <p class="eyebrow">Hazırlık ve arşiv programları</p>
+      <h2>Diğer programlar</h2>
+      <p>Bu programlar katalogda korunur; satın alma bilgisi netleşmemiş olanlar aktif program gibi gösterilmez.</p>
     </div>
     <div class="card-grid archive-grid">
       {{ range $posts.ByDate.Reverse }}
@@ -119,7 +123,7 @@
                   <span class="badge">Arşiv</span>
                 {{ end }}
                 <span class="badge">Açıklamalı uygulamalar</span>
-                <span class="badge">Tekrar erişilebilir içerik</span>
+                <span class="badge">Tekrar erişilebilir</span>
               </div>
               <h2><a href="{{ .RelPermalink }}">{{ $displayTitle }}</a></h2>
               {{ with .Description }}
@@ -128,7 +132,7 @@
                 <p>{{ .Summary | plainify }}</p>
               {{ end }}
             </div>
-            <a class="card-link card-link-muted" href="{{ .RelPermalink }}">İçeriği inceleyin</a>
+            <a class="card-link card-link-muted" href="{{ .RelPermalink }}" data-event="program_detail_click">Program rotasını görün</a>
           </article>
         {{- end -}}
       {{ end }}

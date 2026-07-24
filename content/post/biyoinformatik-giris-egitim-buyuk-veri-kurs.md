@@ -12,6 +12,7 @@ employee_price = "4.700 TL"
 student_plan_label = "Öğrenci"
 employee_plan_label = "Profesyonel"
 course_status = "active"
+program_features = ["Açıklamalı bölümler", "Konu özetleri", "Kendi kendine kontrol notları"]
 
 categories = [
     "themes",

@@ -122,13 +122,13 @@ for slug in "${course_slugs[@]}"; do
   assert_file_contains_regex "$page" "<a(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*aria-label=)[^>]*>"
   assert_file_absent_regex "$page" "<a(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*(?:hidden|style=[\"'][^\"']*display\\s*:\\s*none))[^>]*>"
   assert_file_absent_regex "$page" "<a(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*target=[\"']?_blank)[^>]*>"
-  rg -F -q 'Bu içerikle başlayın' "$page"
+  rg -F -q 'Bu programla başlayın' "$page"
   rg -F -q 'Size uygun erişimi seçin' "$page"
   rg -F -q 'Şimdi başlayın' "$page"
   rg -F -q 'Erişim seçeneğinizi seçin' "$page"
   rg -F -q 'Öğrenci erişimiyle başlayın' "$page"
   rg -F -q 'Profesyonel erişimiyle başlayın' "$page"
-  rg -F -q 'Bu ürün, yetişkin kullanıcılar için kendi hızında kullanılabilen dijital bilimsel içerikler ve çalışma kaynakları sunar.' "$page"
+  rg -F -q 'Bu çalışma programı, yetişkin kullanıcılar için kendi hızında kullanılabilen dijital bilimsel içerikler ve çalışma kaynaklarından oluşur.' "$page"
   rg -F -q 'Diploma, mesleki yeterlilik veya kamu kurumu onayı sağlamaz.' "$page"
   rg -F -q 'Zorunlu devam, sınav, geçti-kaldı değerlendirmesi ve kişiye özel proje danışmanlığı içermez.' "$page"
   assert_file_absent "$page" 'Kayıt seçeneklerini görün'
@@ -137,26 +137,48 @@ done
 home_page="$build_dir/index.html"
 [[ -f "$home_page" ]] || { echo "Missing generated home page" >&2; exit 1; }
 for phrase in \
-  'Biyoinformatiğe bugün başlayın' \
-  'Tüm içerikleri karşılaştırın' \
-  'Temelden başlayın' \
-  'R ile çalışmaya başlayın' \
-  'Protein modellemeye başlayın' \
-  'Toplu erişim' \
-  'Tüm asenkron biyoinformatik içeriklerine tek erişim' \
+  'ERES Biyoinformatik Çalışma Programları' \
+  'Biyoinformatikte kendi hızınızda, adım adım ilerleyin.' \
+  'Başlangıçtan ileri uygulamalara uzanan; açıklamalı anlatımlar, çalışma dosyaları ve araştırma pratiğine yakın örneklerle yapılandırılmış programlar.' \
+  'Bugün başlayın' \
+  'Tüm programları karşılaştırın' \
+  'Çalışma programları' \
+  'Başlamak istediğiniz programı seçin.' \
+  'Size uygun erişim seçeneğinden güvenli ödeme adımına doğrudan geçin.' \
+  'Program koleksiyonu' \
+  'Tüm asenkron biyoinformatik programlarına tek erişim' \
   '%50 paket avantajı' \
-  'Tüm içeriklere birlikte başlayın' \
-  'Tekil içerikleri karşılaştırın' \
+  'Toplu erişimi başlatın' \
+  'Tekil programları karşılaştırın' \
   'ERES Biyoinformatik' \
   'Dijital bilimsel içerikler ve araştırma çalışma sistemleri'; do
   rg -F -q "$phrase" "$home_page"
 done
-rg -F -q '>Dijital İçerikler<' "$home_page"
+assert_file_contains_regex "$home_page" '<a[^>]+href=#programlar[^>]*>Bugün başlayın</a>'
+rg -F -q 'id=programlar' "$home_page"
+rg -F -q '>Çalışma Programları<' "$home_page"
 rg -F -q '>Canlı Çalışmalar<' "$home_page"
+rg -F -q '>Programlarıma Giriş<' "$home_page"
+assert_file_absent "$home_page" '>Dijital İçerikler<'
+assert_file_absent "$home_page" '>İçeriklerime Giriş<'
 assert_file_absent "$home_page" 'ERES Biyoinformatik Akademi'
-rg -F -q 'Merhaba, tüm asenkron biyoinformatik içeriklerine tek paket üzerinden erişmek istiyorum. Güncel paket kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?' "$repo_dir/layouts/index.html"
+rg -F -q 'Merhaba, tüm asenkron biyoinformatik çalışma programlarına toplu erişim sağlamak istiyorum. Güncel program kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?' "$repo_dir/layouts/index.html"
+assert_file_contains_regex "$repo_dir/layouts/index.html" '(?s)<div class="lite-band async-bundle">.*?whatsapp-url\.html.*?Toplu erişimi başlatın.*?</div>\s*</div>'
 assert_file_absent "$repo_dir/layouts/_default/student-login.html" 'ERES+Biyoinformatik+Akademi+e%C4%9Fitimleri'
 rg -F -q 'ERES+Biyoinformatik+dijital+i%C3%A7erikleri+ve+%C3%A7al%C4%B1%C5%9Fma+kaynaklar%C4%B1' "$repo_dir/layouts/_default/student-login.html"
+
+for entry in "${checkout_expectations[@]}"; do
+  IFS='|' read -r slug student_checkout employee_checkout <<< "$entry"
+  student_checkout_html="${student_checkout//&/&amp;}"
+  employee_checkout_html="${employee_checkout//&/&amp;}"
+  rg -F -q "href=\"$student_checkout_html\"" "$home_page"
+  rg -F -q "href=\"$employee_checkout_html\"" "$home_page"
+  assert_file_contains_regex "$home_page" "<a(?=[^>]*href=[\"']?https://kampus\\.eresbiotech\\.com/order\\?)(?=[^>]*data-course=[\"']?$slug[\"']?)(?=[^>]*data-plan=[\"']?student[\"']?)(?=[^>]*data-placement=[\"']?homepage)[^>]*>Öğrenci erişimiyle başlayın</a>"
+  assert_file_contains_regex "$home_page" "<a(?=[^>]*href=[\"']?https://kampus\\.eresbiotech\\.com/order\\?)(?=[^>]*data-course=[\"']?$slug[\"']?)(?=[^>]*data-plan=[\"']?employee[\"']?)(?=[^>]*data-placement=[\"']?homepage)[^>]*>Profesyonel erişimiyle başlayın</a>"
+  assert_file_contains_regex "$home_page" "<a(?=[^>]*href=[\"']?/post/$slug/[\"']?)(?=[^>]*data-event=[\"']?program_detail_click)[^>]*>Program rotasını görün</a>"
+done
+assert_file_absent_regex "$home_page" "<a(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*target=[\"']?_blank)[^>]*>"
+[[ "$(rg -o 'Kendi hızında çalışma programı' "$home_page" | wc -l | tr -d ' ')" == "7" ]] || { echo "Homepage must contain seven active program cards" >&2; exit 1; }
 
 nida_page="$build_dir/post/yasam-bilimlerinde-veri-analizi/index.html"
 nida_source="$repo_dir/content/post/yasam-bilimlerinde-veri-analizi.md"
@@ -168,6 +190,7 @@ assert_file_absent "$nida_page" 'BioExpo'
 assert_file_absent "$nida_page" 'Erişim Seçeneğinizi Belirleyin'
 assert_file_absent "$nida_page" 'student_professional'
 assert_file_absent "$nida_page" 'Öğrenci veya profesyonel erişim seçeneğinizi güvenli ödeme sayfasında belirleyebilirsiniz.'
+assert_file_absent "$nida_page" 'Yerinizi ayırın'
 
 if rg -q '^student_checkout_url = ' "$nida_source" && rg -q '^employee_checkout_url = ' "$nida_source"; then
   assert_file_contains_regex "$nida_page" "<a(?=[^>]*data-plan=[\"']?student)(?=[^>]*data-event=[\"']?payhip_checkout_click)(?=[^>]*pricing_plan=)[^>]*>Öğrenci erişimiyle başlayın</a>"
@@ -191,6 +214,8 @@ done
 assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)@media \(max-width: 820px\) \{.*?\.live-lab-price-grid,.*?grid-template-columns: 1fr;'
 assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.live-lab-price-card \.pricing-button \{.*?width: 100%;'
 assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.bundle-actions \.hero-action \{.*?width: 100%;'
+assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)@media \(max-width: 820px\) \{.*?\.home-program-grid\s*\{.*?grid-template-columns: 1fr;'
+assert_file_contains_regex "$repo_dir/static/css/site.css" '(?s)\.program-checkout,\s*\.program-route-link\s*\{.*?width: 100%;'
 
 landing_page="$build_dir/bioexpo-2026-destekli-kayit/index.html"
 rg -F -q 'BioExpo 2026 destekli kayıt dönemi sona erdi' "$landing_page"

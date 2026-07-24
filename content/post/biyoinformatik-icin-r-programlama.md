@@ -12,6 +12,7 @@ employee_price = "5.500 TL"
 student_plan_label = "Öğrenci"
 employee_plan_label = "Profesyonel"
 course_status = "active"
+program_features = ["Kod kartları", "Örnek veri", "Hata çözüm rehberi"]
 course_hero_headline = "R öğrenmeyi biyoinformatik veriye bağlayarak başlayın."
 course_hero_subheadline = "RStudio’dan veri yapılarına, ggplot2 görselleştirmeden GEO metadata ve expression verisine kadar R programlamayı açıklamalı içerikler, çalışma dosyaları ve araştırma pratiğine yakın örneklerle ele alır."
 course_hero_note = "Açıklamalı bölümler; kod kartları, isteğe bağlı uygulamalar, hızlı başvuru PDF’leri, örnek veri dosyaları, ana R script ve kapsamlı hata çözüm rehberiyle desteklenir."
