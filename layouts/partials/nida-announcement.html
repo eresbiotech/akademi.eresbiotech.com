@@ -1,4 +1,4 @@
-{{- if and .IsHome site.Data.nida_launch.enabled -}}
+{{- if and .IsHome site.Data.nida_launch.enabled (not site.Data.flash_campaign.enabled) -}}
 <aside class="site-announcement" aria-label="Yeni canlı çalışma duyurusu">
   <div class="container site-announcement-inner">
     <strong>Yeni canlı çalışma</strong>
