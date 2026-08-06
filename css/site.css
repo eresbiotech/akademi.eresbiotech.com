@@ -5724,6 +5724,71 @@ summary:focus-visible {
 .nida-home-price-summary strong { color: var(--text); font-size: 1.18rem; }
 .nida-home-purchase .nida-detail-link { display: block; text-align: center; }
 
+/* Homepage flash campaign */
+.flash-campaign { background: #062f32; color: #f8fafc; overflow: hidden; padding: clamp(18px, 3vw, 34px) 0 0; position: relative; }
+.flash-campaign::before { background: repeating-linear-gradient(112deg, transparent 0 38px, rgba(153,246,228,.09) 39px 40px, transparent 41px 76px), radial-gradient(circle at 78% 16%, rgba(45,212,191,.24), transparent 31%); content: ""; inset: 0; pointer-events: none; position: absolute; }
+.flash-campaign-shell { display: grid; gap: clamp(18px, 2.5vw, 28px); grid-template-columns: minmax(0, 1.05fr) minmax(560px, .95fr); position: relative; }
+.flash-campaign-intro { align-self: center; padding: clamp(4px, 1vw, 14px) 0; }
+.flash-campaign-badge { background: #c7f9e9; border-radius: 999px; color: #064e4a; display: inline-block; font-size: .76rem; font-weight: 950; letter-spacing: .11em; margin: 0 0 13px; padding: 7px 10px; text-transform: uppercase; }
+.flash-campaign h1 { color: #fff; font-size: clamp(2.05rem, 4.25vw, 4.2rem); letter-spacing: -.045em; line-height: .98; margin: 0; max-width: 12ch; text-transform: uppercase; }
+.flash-campaign h1 span { color: #9cf3d9; display: block; }
+.flash-campaign-lead { color: #dcfce7; font-size: clamp(.95rem, 1.45vw, 1.08rem); line-height: 1.5; margin: 18px 0 12px; max-width: 56ch; }
+.flash-campaign-includes { border-left: 2px solid #5eead4; color: #fff; font-size: .84rem; font-weight: 850; line-height: 1.4; margin: 0; padding-left: 11px; }
+.flash-campaign-options { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.flash-price-card { background: #fffdf5; border: 1px solid rgba(255,255,255,.52); border-radius: 14px; box-shadow: 0 17px 32px rgba(0,0,0,.18); color: #163b3a; display: flex; flex-direction: column; min-width: 0; padding: clamp(17px, 2vw, 24px); }
+.flash-price-card-professional { background: #ecfdf5; }
+.flash-audience { color: #0f766e; font-size: .87rem; font-weight: 950; line-height: 1.28; margin: 0 0 9px; text-transform: uppercase; }
+.flash-old-price { color: #64748b; font-size: .9rem; font-weight: 750; margin: 0; text-decoration: line-through; text-decoration-thickness: 1.5px; }
+.flash-new-price { color: #053b39; font-size: clamp(2.15rem, 4vw, 3.45rem); font-weight: 950; letter-spacing: -.065em; line-height: .98; margin: 4px 0 10px; white-space: nowrap; }
+.flash-new-price small { font-size: .37em; letter-spacing: 0; vertical-align: .17em; }
+.flash-capacity { background: #fff1c7; border-radius: 5px; color: #7c2d12; font-size: .78rem; font-weight: 950; line-height: 1.25; margin: 0 0 14px; padding: 7px 8px; }
+.flash-checkout { align-items: center; background: #073b4c; border: 1px solid #073b4c; border-radius: 7px; color: #fff; display: flex; font-size: .78rem; font-weight: 950; justify-content: center; line-height: 1.18; margin-top: auto; min-height: 47px; padding: 9px 10px; text-align: center; text-transform: uppercase; }
+.flash-checkout:hover { background: #0f766e; border-color: #0f766e; color: #fff; }
+.flash-checkout:focus-visible { outline: 3px solid #fbbf24; outline-offset: 3px; }
+.flash-campaign-footer { background: rgba(2,19,21,.52); border-top: 1px solid rgba(153,246,228,.22); display: grid; gap: 16px; grid-column: 1 / -1; grid-template-columns: auto minmax(0, 1fr) minmax(260px, .92fr); margin-top: 2px; padding: 13px clamp(16px, 3vw, 28px); }
+.flash-countdown { align-items: center; border-right: 1px solid rgba(153,246,228,.24); display: flex; gap: 10px; padding-right: 18px; }
+.flash-countdown span { color: #ccfbf1; font-size: .75rem; font-weight: 850; text-transform: uppercase; }
+.flash-countdown strong { color: #fff; font-size: 1.25rem; letter-spacing: .05em; }
+.flash-urgency { display: flex; flex-direction: column; justify-content: center; }
+.flash-urgency strong { color: #fef3c7; font-size: .92rem; letter-spacing: .04em; text-transform: uppercase; }
+.flash-urgency span,.flash-access-note { color: #d1fae5; font-size: .77rem; line-height: 1.35; }
+.flash-access-note { align-self: center; border-left: 2px solid #5eead4; margin: 0; padding-left: 11px; }
+.flash-campaign-ended { background: #fffdf5; border-radius: 8px; color: #163b3a; font-weight: 900; grid-column: 1 / -1; margin: 0 0 20px; padding: 13px 16px; text-align: center; }
+.flash-campaign[data-flash-campaign-state="ended"] .flash-checkout { background: #cbd5e1; border-color: #cbd5e1; color: #475569; cursor: not-allowed; pointer-events: none; }
+.flash-campaign[data-flash-campaign-state="ended"] .flash-campaign-options { opacity: .67; }
+
+@media (max-width: 900px) {
+  .flash-campaign-shell { grid-template-columns: 1fr; }
+  .flash-campaign h1 { max-width: 17ch; }
+  .flash-campaign-footer { grid-template-columns: auto minmax(0, 1fr); }
+  .flash-access-note { grid-column: 1 / -1; }
+}
+
+@media (max-width: 620px) {
+  .flash-campaign { padding-top: 15px; }
+  .flash-campaign-shell { gap: 14px; }
+  .flash-campaign-intro { padding: 0; }
+  .flash-campaign-badge { font-size: .68rem; margin-bottom: 9px; padding: 6px 9px; }
+  .flash-campaign h1 { font-size: clamp(1.82rem, 8vw, 2.45rem); max-width: 18ch; }
+  .flash-campaign-lead { font-size: .86rem; line-height: 1.42; margin: 11px 0 9px; }
+  .flash-campaign-includes { font-size: .73rem; }
+  .flash-campaign-options { gap: 9px; grid-template-columns: 1fr; }
+  .flash-price-card { border-radius: 10px; padding: 14px; }
+  .flash-audience { font-size: .74rem; margin-bottom: 5px; }
+  .flash-old-price { font-size: .78rem; }
+  .flash-new-price { font-size: 2.25rem; margin: 3px 0 8px; }
+  .flash-capacity { font-size: .7rem; margin-bottom: 10px; padding: 6px 7px; }
+  .flash-checkout { font-size: .66rem; min-height: 43px; padding: 8px 6px; }
+  .flash-campaign-footer { gap: 10px; grid-template-columns: 1fr; padding: 11px 14px; }
+  .flash-countdown { border-bottom: 1px solid rgba(153,246,228,.24); border-right: 0; justify-content: space-between; padding: 0 0 9px; }
+  .flash-countdown strong { font-size: 1.13rem; }
+  .flash-urgency strong { font-size: .79rem; }
+  .flash-urgency span,.flash-access-note { font-size: .71rem; }
+  .flash-access-note { grid-column: auto; }
+}
+
+
+
 .live-lab-landing-header .header-inner { max-width: 1120px; }
 .live-lab-landing-header .site-nav { margin-left: auto; }
 .nida-landing-page { background: #f7fafc; color: var(--body); padding-bottom: 64px; }
