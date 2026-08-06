@@ -39,14 +39,6 @@
       return;
     }
 
-    section.querySelector(".flash-campaign-badge").textContent = "YALNIZCA BU GECE";
-    section.querySelector("#flash-campaign-title").innerHTML = "3 BİYOİNFORMATİK PROGRAMI <span>%60 NATURALOGIC DESTEĞİYLE</span>";
-    section.querySelector(".flash-campaign-lead").textContent = "Ödemenizi tamamladığınız anda üç programa erişebilir ve derslere hemen başlayabilirsiniz. Pakete NaturaLogic Anadolu Doğa Atlası’ndan özel uygulamalar da dahildir.";
-    section.querySelector(".flash-price-card .flash-audience").textContent = "Öğrenciler İçin";
-    section.querySelector(".flash-price-card .flash-checkout").textContent = "ÖĞRENCİ KAYDINI TAMAMLA";
-    section.querySelector(".flash-price-card-professional .flash-audience").textContent = "Çalışanlar ve Profesyoneller İçin";
-    section.querySelector(".flash-price-card-professional .flash-checkout").textContent = "PROFESYONEL KAYDINI TAMAMLA";
-
     var end = new Date(section.dataset.endsAt).getTime();
     var countdown = section.querySelector("[data-flash-countdown]");
     if (!Number.isFinite(end)) {
