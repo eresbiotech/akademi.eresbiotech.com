@@ -145,15 +145,17 @@ flash_campaign_config="$repo_dir/data/flash_campaign.yaml"
 rg -F -q 'enabled: true' "$flash_campaign_config"
 rg -F -q 'ends_at: "2026-08-06T23:59:00+03:00"' "$flash_campaign_config"
 for phrase in \
-  'Yalnızca bu gece' \
-  '3 Biyoinformatik Programı' \
-  '%60 NaturaLogic desteğiyle' \
+  'YALNIZCA BU GECE' \
+  '3 BİYOİNFORMATİK PROGRAMI' \
+  '%60 NATURALOGIC DESTEĞİYLE' \
+  'Üç programa kaydolduğunuz anda erişin ve hemen çalışmaya başlayın. Pakete NaturaLogic Anadolu Doğa Atlası’ndan özel uygulamalar da eklenecek.' \
+  'Biyoinformatiğe Giriş ve Büyük Veri + R Programlama + Tek Hücre RNA-Seq' \
   '10.900 TL' \
   '4.360' \
   '16.900 TL' \
   '6.760' \
   'Kapanışa kalan süre' \
-  'Bu gece 23.59’da bitiyor' \
+  'BU GECE 23.59’DA BİTİYOR' \
   'Kontenjanlar dolarsa kampanya daha erken kapanır.' \
   'Ödemenizi tamamladığınız anda mevcut üç programa erişebilir ve derslere hemen başlayabilirsiniz.'; do
   rg -F -q "$phrase" "$home_page"
