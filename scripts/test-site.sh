@@ -166,6 +166,7 @@ rg -F -q 'href="https://kampus.eresbiotech.com/order?link=rl3b5&amp;pricing_plan
 assert_file_absent_regex "$home_page" '<a(?=[^>]*data-flash-checkout)(?=[^>]*target=)[^>]*>'
 rg -F -q 'section.dataset.flashCampaignState = "ended"' "$repo_dir/static/js/flash-campaign.js"
 rg -F -q 'checkout.removeAttribute("href")' "$repo_dir/static/js/flash-campaign.js"
+rg -F -q 'js/flash-campaign.js?v=20260806-2' "$home_page"
 
 for phrase in \
   'ERES Biyoinformatik Çalışma Programları' \
