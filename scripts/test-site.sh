@@ -140,6 +140,31 @@ done
 
 home_page="$build_dir/index.html"
 [[ -f "$home_page" ]] || { echo "Missing generated home page" >&2; exit 1; }
+
+flash_campaign_config="$repo_dir/data/flash_campaign.yaml"
+rg -F -q 'enabled: true' "$flash_campaign_config"
+rg -F -q 'ends_at: "2026-08-06T23:59:00+03:00"' "$flash_campaign_config"
+for phrase in \
+  'Yalnızca bu gece' \
+  '3 Biyoinformatik Programı' \
+  '%60 NaturaLogic desteğiyle' \
+  '10.900 TL' \
+  '4.360' \
+  '16.900 TL' \
+  '6.760' \
+  'Kapanışa kalan süre' \
+  'Bu gece 23.59’da bitiyor' \
+  'Kontenjanlar dolarsa kampanya daha erken kapanır.' \
+  'Ödemenizi tamamladığınız anda mevcut üç programa erişebilir ve derslere hemen başlayabilirsiniz.'; do
+  rg -F -q "$phrase" "$home_page"
+done
+[[ "$(rg -o 'Yalnızca 5 kişilik kontenjan' "$home_page" | wc -l | tr -d ' ')" == "2" ]] || { echo "Flash campaign must contain two five-person capacity notices" >&2; exit 1; }
+rg -F -q 'href="https://kampus.eresbiotech.com/order?link=rl3b5&amp;pricing_plan=ANzp0Zx9zX" data-flash-checkout data-event=flash_student_checkout' "$home_page"
+rg -F -q 'href="https://kampus.eresbiotech.com/order?link=rl3b5&amp;pricing_plan=ZjBLY8KbGm" data-flash-checkout data-event=flash_professional_checkout' "$home_page"
+assert_file_absent_regex "$home_page" '<a(?=[^>]*data-flash-checkout)(?=[^>]*target=)[^>]*>'
+rg -F -q 'section.dataset.flashCampaignState = "ended"' "$repo_dir/static/js/flash-campaign.js"
+rg -F -q 'checkout.removeAttribute("href")' "$repo_dir/static/js/flash-campaign.js"
+
 for phrase in \
   'ERES Biyoinformatik Çalışma Programları' \
   'Biyoinformatikte kendi hızınızda, adım adım ilerleyin.' \
@@ -180,7 +205,7 @@ assert_file_contains_regex "$nida_launch_config" 'early_window_start: "[0-9]{4}-
 rg -F -q 'id=yasam-bilimlerinde-veri-analizi' "$home_page"
 rg -F -q 'data-nida-launch' "$home_page"
 assert_file_contains_regex "$home_page" '<a[^>]+href=/yasam-bilimlerinde-veri-analizi-canli-calisma/[^>]*data-event=nida_landing_click[^>]*data-placement=homepage[^>]*>Yeni · Ağustos Canlı Veri Vaka Laboratuvarı</a>'
-assert_file_contains_regex "$home_page" '<a[^>]+href=/yasam-bilimlerinde-veri-analizi-canli-calisma/[^>]*data-event=nida_landing_click[^>]*data-placement=homepage[^>]*>Canlı çalışmayı görün</a>'
+assert_file_absent "$home_page" '>Canlı çalışmayı görün<'
 assert_file_absent "$home_page" '#nida-canli-calisma'
 for phrase in \
   'Ağustos Canlı Veri Vaka Laboratuvarı' \
