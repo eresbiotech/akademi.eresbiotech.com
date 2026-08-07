@@ -5732,7 +5732,6 @@ summary:focus-visible {
 .flash-campaign-badge { background: #c7f9e9; border-radius: 999px; color: #064e4a; display: inline-block; font-size: .76rem; font-weight: 950; letter-spacing: .11em; margin: 0 0 13px; padding: 7px 10px; text-transform: uppercase; }
 .flash-campaign h1 { color: #fff; font-size: clamp(2.05rem, 4.25vw, 4.2rem); letter-spacing: -.045em; line-height: .98; margin: 0; max-width: 17ch; text-transform: uppercase; }
 .flash-campaign h1 span { color: #9cf3d9; display: block; }
-.flash-campaign-thanks { color: #ccfbf1; font-size: .88rem; font-weight: 750; margin: -5px 0 16px; }
 .flash-campaign-support { color: #9cf3d9; font-size: .83rem; font-weight: 950; letter-spacing: .09em; margin: 16px 0 9px; text-transform: uppercase; }
 .flash-campaign-lead { color: #dcfce7; font-size: clamp(.95rem, 1.45vw, 1.08rem); line-height: 1.5; margin: 18px 0 12px; max-width: 56ch; }
 .flash-campaign-includes { border-left: 2px solid #5eead4; color: #fff; font-size: .84rem; font-weight: 850; line-height: 1.4; margin: 0; padding-left: 11px; }
@@ -5747,6 +5746,7 @@ summary:focus-visible {
 .flash-checkout { align-items: center; background: #073b4c; border: 1px solid #073b4c; border-radius: 7px; color: #fff; display: flex; font-size: .78rem; font-weight: 950; justify-content: center; line-height: 1.18; margin-top: auto; min-height: 47px; padding: 9px 10px; text-align: center; text-transform: uppercase; }
 .flash-checkout:hover { background: #0f766e; border-color: #0f766e; color: #fff; }
 .flash-checkout:focus-visible { outline: 3px solid #fbbf24; outline-offset: 3px; }
+.flash-card-note { color: #47615f; font-size: .7rem; line-height: 1.38; margin: 8px 0 0; text-align: center; }
 .flash-campaign-footer { background: rgba(2,19,21,.52); border-top: 1px solid rgba(153,246,228,.22); display: grid; gap: 16px; grid-column: 1 / -1; grid-template-columns: auto minmax(0, 1fr) minmax(260px, .92fr); margin-top: 2px; padding: 13px clamp(16px, 3vw, 28px); }
 .flash-countdown { align-items: center; border-right: 1px solid rgba(153,246,228,.24); display: flex; gap: 10px; padding-right: 18px; }
 .flash-countdown span { color: #ccfbf1; font-size: .75rem; font-weight: 850; text-transform: uppercase; }
@@ -5754,6 +5754,7 @@ summary:focus-visible {
 .flash-urgency { display: flex; flex-direction: column; justify-content: center; }
 .flash-urgency strong { color: #fef3c7; font-size: .92rem; letter-spacing: .04em; text-transform: uppercase; }
 .flash-urgency span,.flash-access-note { color: #d1fae5; font-size: .77rem; line-height: 1.35; }
+.flash-urgency .flash-early-close { color: #ccfbf1; font-size: .7rem; margin-top: 2px; }
 .flash-access-note { align-self: center; border-left: 2px solid #5eead4; margin: 0; padding-left: 11px; }
 .flash-campaign-ended { background: #fffdf5; border-radius: 8px; color: #163b3a; font-weight: 900; grid-column: 1 / -1; margin: 0 0 20px; padding: 13px 16px; text-align: center; }
 .flash-campaign[data-flash-campaign-state="ended"] .flash-checkout { background: #cbd5e1; border-color: #cbd5e1; color: #475569; cursor: not-allowed; pointer-events: none; }
@@ -5781,6 +5782,7 @@ summary:focus-visible {
   .flash-new-price { font-size: 2.25rem; margin: 3px 0 8px; }
   .flash-capacity { font-size: .7rem; margin-bottom: 10px; padding: 6px 7px; }
   .flash-checkout { font-size: .66rem; min-height: 43px; padding: 8px 6px; }
+  .flash-card-note { font-size: .66rem; }
   .flash-campaign-footer { gap: 10px; grid-template-columns: 1fr; padding: 11px 14px; }
   .flash-countdown { border-bottom: 1px solid rgba(153,246,228,.24); border-right: 0; justify-content: space-between; padding: 0 0 9px; }
   .flash-countdown strong { font-size: 1.13rem; }
