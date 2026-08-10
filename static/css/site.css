@@ -1378,7 +1378,7 @@ img {
   align-items: stretch;
   display: grid;
   gap: 28px;
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.65fr);
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .home-hero-copy,

@@ -1,227 +1,105 @@
 {{ define "main" }}
-{{- $posts := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
-{{- $activePrograms := where (where $posts "Params.course_status" "active") "Params.product_type" "!=" "live_lab" -}}
 {{- $introProgram := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $rProgram := site.GetPage "/post/biyoinformatik-icin-r-programlama" -}}
-{{- $proteinProgram := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
+{{- $singleCellProgram := site.GetPage "/post/tek-hucre-rna-seq-analizi-egitimi" -}}
 {{- $nidaLiveLab := site.GetPage "/post/yasam-bilimlerinde-veri-analizi" -}}
-{{- $nidaLaunch := site.Data.nida_launch -}}
-{{- $nidaRemainingIsUnknown := eq $nidaLaunch.remaining_places nil -}}
-{{- $nidaRemaining := -1 -}}
-{{- if not $nidaRemainingIsUnknown -}}
-  {{- if ne (printf "%T" $nidaLaunch.remaining_places) "int" -}}
-    {{- errorf "data/nida_launch.yaml remaining_places must be null or an integer from 0 to %d" $nidaLaunch.capacity -}}
-  {{- end -}}
-  {{- $nidaRemaining = $nidaLaunch.remaining_places -}}
-  {{- if or (lt $nidaRemaining 0) (gt $nidaRemaining $nidaLaunch.capacity) -}}
-    {{- errorf "data/nida_launch.yaml remaining_places must be between 0 and %d" $nidaLaunch.capacity -}}
-  {{- end -}}
-{{- end -}}
-{{- if or (ne (printf "%T" $nidaLaunch.capacity) "int") (lt $nidaLaunch.capacity 1) -}}
-  {{- errorf "data/nida_launch.yaml capacity must be a positive integer" -}}
-{{- end -}}
-{{- if or (not $nidaLaunch.early_window_start) (le (int $nidaLaunch.early_window_hours) 0) -}}
-  {{- errorf "data/nida_launch.yaml must include early_window_start and a positive early_window_hours value" -}}
-{{- end -}}
-
-{{ partial "flash-campaign-hero.html" . }}
+{{- $featuredPrograms := slice $introProgram $rProgram $singleCellProgram -}}
 
 <section class="home-hero">
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
       <p class="eyebrow">ERES Biyoinformatik Çalışma Programları</p>
-      <a class="hero-live-link" href="{{ "/yasam-bilimlerinde-veri-analizi-canli-calisma/" | relURL }}" data-event="nida_landing_click" data-placement="homepage">Yeni · Ağustos Canlı Veri Vaka Laboratuvarı</a>
-      <h1>Biyoinformatikte kendi hızınızda, adım adım ilerleyin.</h1>
-      <p class="lead">Başlangıçtan ileri uygulamalara uzanan; açıklamalı anlatımlar, çalışma dosyaları ve araştırma pratiğine yakın örneklerle yapılandırılmış programlar.</p>
+      <h1>Biyoinformatik eğitimlerine bugün başlayın</h1>
+      <p class="lead">Uygulamalı eğitimlerle biyoinformatik ve veri analizi becerilerinizi geliştirin. Kayıtlı eğitimlere satın alma sonrasında hemen erişin; kendi programınıza göre ilerleyin.</p>
       <div class="hero-actions">
-        <a class="hero-action" href="#programlar" data-event="hero_primary_cta_click">Bugün başlayın</a>
-        <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}">Tüm programları karşılaştırın</a>
+        <a class="hero-action" href="#programlar" data-event="hero_primary_cta_click">Eğitimleri ve Fiyatları Gör</a>
+      </div>
+      <div class="trust-row" aria-label="Eğitim avantajları">
+        <span>Hemen erişim</span>
+        <span>Kendi hızınızda öğrenme</span>
+        <span>Uygulamalı içerik</span>
+        <span>Güvenli ödeme</span>
       </div>
     </div>
-  </div>
-</section>
-
-{{ with $nidaLiveLab }}
-<section id="yasam-bilimlerinde-veri-analizi" class="container home-section nida-launch-section" aria-labelledby="nida-launch-title" data-nida-launch data-early-window-start="{{ $nidaLaunch.early_window_start }}" data-early-window-hours="{{ $nidaLaunch.early_window_hours }}" data-remaining-places="{{ if $nidaRemainingIsUnknown }}null{{ else }}{{ $nidaRemaining }}{{ end }}" data-capacity="{{ $nidaLaunch.capacity }}">
-  <article class="nida-launch-card">
-    <div class="nida-launch-main">
-      <p class="eyebrow">Ağustos Canlı Veri Vaka Laboratuvarı</p>
-      <div class="nida-urgency" aria-live="polite">
-        <strong data-nida-urgency-title>Canlı çalışma için katılım açık.</strong>
-        <p data-nida-urgency-message>20 kişiyle sınırlı canlı grup için katılım bilgilerini inceleyin.</p>
-        <p class="nida-countdown" data-nida-countdown hidden></p>
-      </div>
-      <h2 id="nida-launch-title">Yaşam Bilimlerinde Veri Analizi</h2>
-      <p class="nida-value-proposition">Veriyi yalnızca açmayın. Düzenleyin, kontrol edin ve araştırma sorunuzla birlikte anlamlandırın.</p>
-      <p>Veriniz var ama analiz akışınız dağınık mı? Bu canlı çalışma; veriyi açma, düzenleme, kontrol etme, görselleştirme ve araştırma sorusuyla ilişkilendirme sürecini tek bir vaka akışında bir araya getirir.</p>
-      <p>Dr. Nida Tokaç Er’in bilimsel yürütücülüğünde, yaşam bilimleri verileri Google Colab üzerinde dört canlı uygulama oturumunda adım adım ele alınır. Önceden kodlama deneyimi gerekmez.</p>
-      <div class="nida-fact-list" aria-label="Canlı çalışma hızlı bilgileri">
-        <span>15–16 ve 22–23 Ağustos 2026</span>
-        <span>4 oturum × 2 saat</span>
-        <span>Google Meet</span>
-        <span>Kodlama önkoşulu yok</span>
-        <span>20 kişiyle sınırlı canlı grup</span>
-      </div>
-      <ul class="nida-value-list">
-        <li>Gerçekçi yaşam bilimleri veri vakası</li>
-        <li>Canlı ve açıklamalı çalışma akışı</li>
-        <li>Araştırmaya aktarılabilir çalışma dosyaları</li>
-      </ul>
-      <p class="nida-early-benefit" data-nida-early-benefit>İlk 72 saatte yerini ayıran katılımcıların önceden ilettiği sorular, canlı vaka akışının hazırlanmasında öncelikli olarak değerlendirilir. Bu uygulama kişiye özel proje danışmanlığı veya katılımcının verisinin analiz edilmesi anlamına gelmez.</p>
-    </div>
-
-    <div class="nida-launch-purchase nida-home-purchase" aria-label="Yaşam Bilimlerinde Veri Analizi katılım bilgileri">
-      {{ if eq $nidaRemaining 0 }}
-        <p class="nida-capacity-status">Ağustos grubu doldu</p>
-        <p>Bekleme listesi için yazılı olarak bilgi alın.</p>
-        <a class="nida-waitlist-cta" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, Dr. Nida Tokaç Er ile Yaşam Bilimlerinde Veri Analizi canlı çalışmasının Ağustos grubu için bekleme listesine katılmak istiyorum.") }}" target="_blank" rel="noopener noreferrer" data-event="nida_waitlist_click" data-placement="homepage">Bekleme listesine katılın</a>
-      {{ else }}
-        {{ if $nidaRemainingIsUnknown }}
-          <p class="nida-capacity-status">20 kişiyle sınırlı</p>
-        {{ else if ge $nidaRemaining 10 }}
-          <p class="nida-capacity-status">Katılım açık · {{ $nidaRemaining }} yer kaldı</p>
-        {{ else if ge $nidaRemaining 6 }}
-          <p class="nida-capacity-status">Grubun yarısından fazlası ayrıldı · {{ $nidaRemaining }} yer kaldı</p>
-        {{ else if ge $nidaRemaining 3 }}
-          <p class="nida-capacity-status">Son {{ $nidaRemaining }} yer</p>
-        {{ else }}
-          <p class="nida-capacity-status">Yalnızca {{ $nidaRemaining }} yer kaldı</p>
-        {{ end }}
-        <div class="nida-home-price-summary">
-          <div><span>Öğrenci <strong>{{ .Params.student_price }}</strong></span><a class="nida-reservation-cta" href="{{ .Params.student_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="yasam-bilimlerinde-veri-analizi" data-plan="student" data-placement="homepage">Öğrenci olarak yerimi ayır</a></div>
-          <div><span>Profesyonel <strong>{{ .Params.employee_price }}</strong></span><a class="nida-reservation-cta nida-reservation-cta-secondary" href="{{ .Params.employee_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="yasam-bilimlerinde-veri-analizi" data-plan="employee" data-placement="homepage">Profesyonel olarak yerimi ayır</a></div>
-        </div>
-        <p class="nida-payment-note">Güvenli ödeme · Taksit seçenekleri ödeme adımında</p>
-        <p class="nida-payment-note nida-access-note">Satın alma sonrası erişim, kullandığınız e-posta adresine tanımlanır.</p>
-      {{ end }}
-      <a class="nida-detail-link" href="{{ .RelPermalink }}" data-event="nida_landing_click" data-placement="homepage">Çalışma planını görün</a>
-    </div>
-  </article>
-</section>
-{{ end }}
-
-<section class="container home-section research-system-launch" aria-labelledby="research-system-title">
-  <div class="research-system-launch-grid research-system-launch-grid-single">
-    <div class="research-system-copy">
-      <p class="eyebrow">ERES’in araştırma yaklaşımı</p>
-      <h2 id="research-system-title">Bilgi gürültüsünden araştırma sistemine.</h2>
-      <p>Manual, makale, video, kod ve yöntem notları arasında dağılmış bilimsel bilgiyi; belirli araştırma problemleri etrafında kullanılabilir çalışma sistemlerine dönüştürüyoruz.</p>
-      <p>Çalışma programlarımız, açıklamalı anlatımları; vaka bağlamları, dijital çalışma dosyaları, bilimsel karar araçları ve araştırma pratiğine aktarım kaynaklarıyla bir araya getirir.</p>
-      <div class="research-system-steps" aria-label="Araştırma sistemi adımları">
-        <span>Vaka</span>
-        <span>Bilimsel çerçeve</span>
-        <span>Uygulama</span>
-        <span>Araç</span>
-        <span>Güvence</span>
-        <span>Aktarım</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <section id="programlar" class="container home-section home-programs-section" aria-labelledby="programs-title">
   <div class="section-heading">
-    <p class="eyebrow">Çalışma programları</p>
-    <h2 id="programs-title">Başlamak istediğiniz programı seçin.</h2>
-    <p>Size uygun erişim seçeneğinden güvenli ödeme adımına doğrudan geçin.</p>
+    <p class="eyebrow">Kayıtlı eğitimler</p>
+    <h2 id="programs-title">Bugün başlayabileceğiniz eğitimler</h2>
+    <p>Size uygun eğitimi seçin, fiyatları inceleyin ve hemen başlayın.</p>
   </div>
   <div class="home-program-grid">
-    {{ range $activePrograms.ByDate.Reverse }}
-      {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
-      <article class="home-program-card">
-        <div class="home-program-card-main">
-          <span class="program-label">Kendi hızında çalışma programı</span>
-          <h3>{{ $displayTitle }}</h3>
-          <p class="program-value">{{ .Description }}</p>
-          {{ with .Params.program_features }}
-            <ul class="program-feature-list">
-              {{ range first 3 . }}<li>{{ . }}</li>{{ end }}
-            </ul>
-          {{ end }}
-        </div>
-        <div class="home-program-purchase" aria-label="{{ $displayTitle }} erişim seçenekleri">
-          <div class="program-price-row"><span>Öğrenci</span><strong>{{ .Params.student_price }}</strong></div>
-          <a class="program-checkout" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="student" data-placement="homepage">Öğrenci erişimiyle başlayın</a>
-          <div class="program-price-row"><span>Profesyonel</span><strong>{{ .Params.employee_price }}</strong></div>
-          <a class="program-checkout program-checkout-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="employee" data-placement="homepage">Profesyonel erişimiyle başlayın</a>
-          <p class="program-payment-note">Güvenli ödeme · Taksit seçenekleri ödeme adımında</p>
-          <a class="program-route-link" href="{{ .RelPermalink }}" data-event="program_detail_click" data-course="{{ .File.BaseFileName }}">Program rotasını görün</a>
-        </div>
-      </article>
+    {{ range $featuredPrograms }}
+      {{ with . }}
+        {{- $displayTitle := .Title -}}
+        {{- $shortDescription := "" -}}
+        {{- if eq .File.BaseFileName "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
+          {{- $shortDescription = "Biyoinformatiğin temel kavramlarını ve büyük veri yaklaşımını uygulamalı olarak keşfedin." -}}
+        {{- else if eq .File.BaseFileName "biyoinformatik-icin-r-programlama" -}}
+          {{- $shortDescription = "R ile biyolojik verileri düzenleme, analiz etme ve görselleştirme becerisi kazanın." -}}
+        {{- else if eq .File.BaseFileName "tek-hucre-rna-seq-analizi-egitimi" -}}
+          {{- $displayTitle = "Tek Hücre RNA-Seq" -}}
+          {{- $shortDescription = "Tek hücre RNA-Seq verilerinin temel analiz akışını uygulamalı olarak inceleyin." -}}
+        {{- end -}}
+        <article class="home-program-card">
+          <div class="home-program-card-main">
+            <span class="program-label">Kayıtlı Eğitim</span>
+            <h3>{{ $displayTitle }}</h3>
+            <p class="program-value">{{ $shortDescription }}</p>
+          </div>
+          <div class="home-program-purchase" aria-label="{{ $displayTitle }} erişim seçenekleri">
+            <p class="program-payment-note">Hemen Başlayın</p>
+            <div class="program-price-row"><span>Öğrenci</span><strong>{{ .Params.student_price }}</strong></div>
+            <div class="program-price-row"><span>Profesyonel</span><strong>{{ .Params.employee_price }}</strong></div>
+            <a class="program-checkout" href="{{ .RelPermalink }}" data-event="program_detail_click" data-course="{{ .File.BaseFileName }}">Eğitimi İncele</a>
+          </div>
+        </article>
+      {{ end }}
     {{ end }}
   </div>
-  <div class="program-purchase-trust" aria-label="Satın alma güvencesi">
-    <span>ERES Kampüs / Payhip güvenli ödeme</span>
-    <span>Satın alma sonrası kullanıcı hesabına erişim</span>
-    <span>Yazılı destek</span>
-    <span>Kendi hızınızda tekrar erişim</span>
+  <div class="program-purchase-trust" aria-label="Satın alma hızlı bilgileri">
+    <span><strong>Ne zaman başlarım?</strong> Satın alma sonrasında hemen.</span>
+    <span><strong>Nasıl erişirim?</strong> Çevrimiçi olarak.</span>
+    <span><strong>Nasıl ilerlerim?</strong> Kendi programınıza göre.</span>
+    <span><strong>Ödeme?</strong> Güvenli ödeme seçenekleri ödeme adımında.</span>
   </div>
 </section>
 
-<section id="karar-yollari" class="container home-section decision-section">
-  <div class="section-heading">
-    <p class="eyebrow">Karar rehberi</p>
-    <h2>Nereden başlayacağınıza karar verin</h2>
-  </div>
-  <div class="decision-grid">
-    <article class="path-card decision-card">
-      <p class="path-label">Başlangıç yolu</p>
-      <h3>Temelden başlayın</h3>
-      <p>Biyoinformatiğin temel mantığını, veri türlerini ve analiz akışını tanımak için.</p>
-      <a class="card-link" href="{{ with $introProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click" data-course="biyoinformatik-giris-egitim-buyuk-veri-kurs">Program rotasını görün</a>
-    </article>
-    <article class="path-card decision-card">
-      <p class="path-label">R programlama</p>
-      <h3>R ile çalışmaya başlayın</h3>
-      <p>RStudio, veri yapıları, grafikler ve biyolojik veri örnekleriyle ilerlemek için.</p>
-      <a class="card-link" href="{{ with $rProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click" data-course="biyoinformatik-icin-r-programlama">Program rotasını görün</a>
-    </article>
-    <article class="path-card decision-card">
-      <p class="path-label">Yapısal biyoinformatik</p>
-      <h3>Protein modellemeye başlayın</h3>
-      <p>PDB, AlphaFold, protein yapısı ve in silico modelleme yaklaşımını tanımak için.</p>
-      <a class="card-link" href="{{ with $proteinProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_protein_click" data-course="uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme">Program rotasını görün</a>
-    </article>
-  </div>
-</section>
-
-<section class="container home-section" aria-labelledby="bundle-title">
-  <div class="lite-band async-bundle">
+<section id="karar-yollari" class="container home-section decision-section" aria-labelledby="decision-title">
+  <div class="lite-band">
     <div>
-      <p class="eyebrow">Program koleksiyonu</p>
-      <h2 id="bundle-title">Tüm asenkron biyoinformatik programlarına tek erişim</h2>
-      <p class="bundle-highlight">%50 paket avantajı</p>
-      <p>Biyoinformatiği tek bir başlıkla sınırlamadan ilerlemek isteyenler için kendi hızında çalışma programlarımızı bütünlüklü bir program koleksiyonunda bir araya getiriyoruz.</p>
-    </div>
-    <div class="bundle-actions">
-      <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict "message" "Merhaba, tüm asenkron biyoinformatik çalışma programlarına toplu erişim sağlamak istiyorum. Güncel program kapsamı, fiyatı ve güvenli ödeme bağlantısını paylaşabilir misiniz?") }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Toplu erişimi başlatın</a>
-      <a class="hero-action hero-action-secondary" href="{{ "/post/" | relURL }}" data-event="other_courses_click">Tekil programları karşılaştırın</a>
+      <p class="eyebrow">Kısa karar rehberi</p>
+      <h2 id="decision-title">Nereden başlamalısınız?</h2>
+      <p>Biyoinformatiğe yeni başlıyorsanız → <a href="{{ with $introProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click">Biyoinformatiğe Giriş ve Büyük Veri</a></p>
+      <p>Veri analizi becerisi geliştirmek istiyorsanız → <a href="{{ with $rProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click">R Programlama</a></p>
+      <p>İleri analizlere geçmek istiyorsanız → <a href="{{ with $singleCellProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_single_cell_click">Tek Hücre RNA-Seq</a></p>
     </div>
   </div>
 </section>
 
-<section class="container student-access-band" aria-label="Satın alma sonrası program erişimi">
-  <div class="student-access-card">
-    <div>
-      <p class="support-label">Satın alma sonrası program erişimi</p>
-      <h2>Programınıza kaldığınız yerden devam edin</h2>
-      <p>ERES Kampüs / Payhip üzerinden satın alma yaptığınızda, kullandığınız e-posta ve şifreyle kullanıcı hesabınıza giriş yaparak programlarınıza tekrar ulaşabilirsiniz.</p>
-      <small>Şifrenizi hatırlamıyorsanız giriş ekranındaki “Forgot your password?” bağlantısını kullanabilirsiniz.</small>
+{{ with $nidaLiveLab }}
+<section id="yasam-bilimlerinde-veri-analizi" class="container home-section nida-launch-section" aria-labelledby="nida-launch-title">
+  <article class="nida-launch-card">
+    <div class="nida-launch-main">
+      <p class="eyebrow">Yaklaşan Canlı Çalışma</p>
+      <h2 id="nida-launch-title">Yaşam Bilimlerinde Veri Analizi</h2>
+      <p>Dr. Nida Tokaç Er</p>
+      <div class="nida-fact-list" aria-label="Canlı çalışma bilgileri">
+        <span>15–16 ve 22–23 Ağustos</span>
+      </div>
     </div>
-    <a class="support-cta" href="{{ "/ders-giris/" | relURL }}">Programlarıma giriş</a>
-  </div>
-</section>
-
-<section class="container home-section trust-support-section">
-  <div class="support-band-card conversion-trust-card">
-    <div>
-      <h2>Güvenli satın alma ve yazılı destek</h2>
-      <p>Satın alma yalnızca akademi.eresbiotech.com üzerindeki program sayfalarından başlar ve ERES Kampüs / Payhip güvenli ödeme altyapısıyla tamamlanır.</p>
-      <a class="support-cta" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp'tan yazılı destek alın</a>
+    <div class="nida-launch-purchase nida-home-purchase" aria-label="Yaşam Bilimlerinde Veri Analizi katılım bilgileri">
+      <div class="nida-home-price-summary">
+        <div><span>Öğrenci <strong>{{ .Params.student_price }}</strong></span></div>
+        <div><span>Profesyonel <strong>{{ .Params.employee_price }}</strong></span></div>
+      </div>
+      <a class="nida-detail-link hero-action" href="{{ .RelPermalink }}" data-event="nida_landing_click" data-placement="homepage">Canlı Çalışmayı İncele</a>
     </div>
-  </div>
+  </article>
 </section>
+{{ end }}
 
 <div class="mobile-sticky-cta" aria-label="Hızlı program bağlantıları">
   <a class="mobile-sticky-primary" href="#programlar" data-event="hero_primary_cta_click">Programınızı seçin</a>

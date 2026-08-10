@@ -14,6 +14,5 @@
     {{ partial "cookie-consent.html" . }}
     <script src="{{ "js/site-consent.js" | relURL }}" defer></script>
     {{ if or .IsHome (eq .Layout "live-lab-landing") }}<script src="{{ "js/nida-launch.js" | relURL }}" defer></script>{{ end }}
-    {{ if .IsHome }}<script src="{{ "js/flash-campaign.js?v=20260806-2" | relURL }}" defer></script>{{ end }}
   </body>
 </html>
