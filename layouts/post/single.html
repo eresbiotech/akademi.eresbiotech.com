@@ -1,6 +1,14 @@
 {{ define "main" }}
 {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
 {{- $slug := .File.BaseFileName -}}
+{{- $packageCatalog := site.Data.program_packages -}}
+{{- $programMeta := index $packageCatalog.programs $slug -}}
+{{- $programPackage := false -}}
+{{- $programCategory := "Çalışma Programı" -}}
+{{- with $programMeta -}}
+  {{- $programCategory = .category -}}
+  {{- $programPackage = index $packageCatalog.packages .package -}}
+{{- end -}}
 {{- $isRCourse := eq $slug "biyoinformatik-icin-r-programlama" -}}
 {{- $comingSoonSlugs := slice "biyoinformatik-dizi-hizalama-algoritmalari-egitimi" "biyoinformatik-yaz-kampi" -}}
 {{- $isComingSoonFeature := in $comingSoonSlugs $slug -}}
@@ -25,9 +33,9 @@
   {{- $primaryCTAText = "Yazılı bilgi alın" -}}
 {{- end -}}
 {{- if $hasPricingPlans -}}
-  {{- $heroCTAText = "Bu programla başlayın" -}}
-  {{- $middleCTAText = "Size uygun erişimi seçin" -}}
-  {{- $finalCTAText = "Şimdi başlayın" -}}
+  {{- $heroCTAText = "Programı Satın Al" -}}
+  {{- $middleCTAText = "Programı Satın Al" -}}
+  {{- $finalCTAText = "Programı Satın Al" -}}
 {{- else -}}
   {{- $heroCTAText = $primaryCTAText -}}
   {{- $middleCTAText = $primaryCTAText -}}
@@ -41,40 +49,46 @@
 {{- with .Params.course_hero_subheadline -}}
   {{- $heroLead = . -}}
 {{- end -}}
+{{- with $programMeta -}}
+  {{- $heroTitle = $displayTitle -}}
+  {{- with .short_lead -}}
+    {{- $heroLead = . -}}
+  {{- end -}}
+{{- end -}}
 {{- $studentLabel := .Params.student_plan_label | default "Öğrenci" -}}
 {{- $lessonFlow := slice "Öğrenme hedefleri ve temel kavramlar" "Konuya uygun veri, araç ve uygulama mantığı" "Araştırma pratiğine yakın örneklerle ilerleme" -}}
 {{- $outcomes := slice "Konuya ait temel kavramları araştırma pratiğiyle ilişkilendirebileceksiniz." "İlgili veri kaynaklarını, araçları ve çıktıları daha bilinçli okuyabileceksiniz." "Sonraki öğrenme yolunuzu daha net seçebileceksiniz." -}}
 {{- $codingNote := "Bu çalışma programları, kodlama geçmişi sınırlı olan yaşam bilimleri kullanıcılarının biyolojik veriyle adım adım çalışabilmesi için yapılandırılmıştır." -}}
 {{- $fitIntro := "Bu çalışma programı; biyoinformatik araçları daha bilinçli kullanmak, araştırma sorularına uygun analiz adımlarını seçmek ve uygulama pratiğini adım adım güçlendirmek isteyenler için yapılandırılmıştır." -}}
 {{- if $isRCourse -}}
-  {{- $fitIntro = "Bu dijital çalışma sistemi, R programlamaya yaşam bilimleri verileri üzerinden sistemli bir başlangıç yapmak isteyen kullanıcılar için yapılandırılmıştır." -}}
+  {{- $fitIntro = "Bu çalışma programı, R programlamaya yaşam bilimleri verileri üzerinden sistemli bir başlangıç yapmak isteyen kullanıcılar için yapılandırılmıştır." -}}
   {{- $lessonFlow = slice "Başlamadan Önce: İçeriği nasıl kullanacağınızı, ana scriptle nasıl çalışacağınızı ve çalışma yolunu görürsünüz." "R ve RStudio’ya Giriş: RStudio arayüzü, temel hesaplamalar, nesne oluşturma, class(), print(), vektör ve basit fonksiyon mantığı." "Veri Türleri ve Veri Yapıları: Numeric, character, logical veri tipleri; vektör, matriks, data frame ve liste yapıları." "Veri Import / Export: CSV, TXT ve Excel mantığı; çalışma klasörü, dosya yolu, veri okuma-yazma ve temel filtreleme." "ggplot2 ile Görselleştirme: Bar plot, histogram, boxplot, violin plot, scatter plot ve line plot ile biyolojik veriyi görselleştirme." "Koşullar, Döngüler ve Veri Filtreleme: if, else, for döngüsü, filtreleme ve tekrar eden analiz mantığı." "Çoklu Dizi Hizalaması ve Filogenetik Ağaç: Bioconductor, Biostrings, msa, ape, FASTA, AAStringSet / DNAStringSet ve temel ağaç mantığı." "GEOquery, Metadata ve Expression Verisi: GEO verisi, metadata okuma, expression matrisi, sample ID eşleşmesi ve grup ortalaması hesaplama." "Hata Çözüm Laboratuvarı: Paket kurulumu, fonksiyon bulunamaması, dosya yolu, sütun adı, metadata-expression eşleşmesi ve object not found gibi problemler için sistemli yaklaşım." "Kapanış ve Sonraki Adımlar: Çalışma notları, isteğe bağlı uygulama önerisi, FAQ ve ileri biyoinformatik çalışma yolu." -}}
   {{- $outcomes = slice "RStudio’da temel kodları çalıştırabilirsiniz." "R nesnelerini, veri tiplerini ve veri yapılarını ayırt edebilirsiniz." "CSV/TXT dosyalarını okuyup yazabilirsiniz." "Basit biyolojik veri tabloları üzerinde seçme, filtreleme ve düzenleme yapabilirsiniz." "ggplot2 ile temel grafikler oluşturabilirsiniz." "Koşul ve döngü mantığını basit analiz örneklerinde kullanabilirsiniz." "FASTA, dizi nesneleri ve çoklu hizalama mantığına giriş yapabilirsiniz." "GEO metadata ve expression verisi arasındaki ilişkiyi anlayabilirsiniz." "Hata mesajlarını daha sistemli okuyup çözüm için kontrol komutlarını kullanabilirsiniz." "Ana R scriptini kendi çalışma defteriniz gibi kullanabilirsiniz." -}}
   {{- $codingNote = "Daha önce R'ı açıp nereden başlayacağını bilemeyen katılımcılar için, veri yapıları ve grafik üretimi biyolojik örnekler üzerinden sadeleştirilir." -}}
 {{- else if eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
-  {{- $fitIntro = "Bu dijital çalışma sistemi, biyoinformatiğin temel kavramlarını, omik veri türlerini ve büyük veri mantığını araştırma sorularıyla ilişkilendirmek isteyenler için yapılandırılmıştır." -}}
+  {{- $fitIntro = "Bu çalışma programı, biyoinformatiğin temel kavramlarını, omik veri türlerini ve büyük veri mantığını araştırma sorularıyla ilişkilendirmek isteyenler için yapılandırılmıştır." -}}
   {{- $lessonFlow = slice "Biyoinformatiğin araştırmadaki yeri ve omik veri dünyasına giriş" "Genomik, transkriptomik ve proteomik veri türlerini okuma" "Büyük veri, veri tabanları ve modern biyoloji araştırmalarında analiz mantığı" "NCBI, Ensembl, UCSC gibi kaynakların araştırma sorularıyla ilişkisi" -}}
   {{- $outcomes = slice "Genomik, transkriptomik ve proteomik veri türlerini temel düzeyde ayırt edebileceksiniz." "Biyoinformatik araçların hangi araştırma sorularında kullanıldığını daha net görebileceksiniz." "Büyük veri kavramını yaşam bilimleri araştırmaları bağlamında yorumlayabileceksiniz." -}}
 {{- else if eq $slug "biyoinformatik-veritabanlari-araclar-egitimi" -}}
-  {{- $fitIntro = "Bu dijital çalışma sistemi, NCBI, UniProt, PDB ve BLAST gibi temel biyoinformatik araçları daha bilinçli kullanmak ve çıktıları araştırma sorusuyla ilişkilendirmek isteyenler için yapılandırılmıştır." -}}
+  {{- $fitIntro = "Bu çalışma programı, NCBI, UniProt, PDB ve BLAST gibi temel biyoinformatik araçları daha bilinçli kullanmak ve çıktıları araştırma sorusuyla ilişkilendirmek isteyenler için yapılandırılmıştır." -}}
   {{- $lessonFlow = slice "NCBI, UniProt, PDB ve temel biyolojik veri kaynaklarına giriş" "Gen, protein, dizi ve anotasyon kayıtlarını doğru okuma" "BLAST ve benzeri araçlarla biyolojik soruya uygun arama yapma" "Veritabanı çıktılarından anlamlı sonuç çıkarma ve raporlama mantığı" -}}
   {{- $outcomes = slice "NCBI, UniProt, PDB gibi kaynaklarda temel kayıtları okuyabileceksiniz." "BLAST çıktılarındaki temel metrikleri daha bilinçli yorumlayabileceksiniz." "Gen, protein ve dizi bilgilerinin veri tabanlarında nasıl temsil edildiğini anlayabileceksiniz." -}}
 {{- else if eq $slug "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
-  {{- $fitIntro = "Bu dijital çalışma sistemi, gen, transkript, varyant ve genom koordinatı bilgilerini NCBI, Ensembl ve UCSC üzerinden daha güvenli okumak isteyenler için yapılandırılmıştır." -}}
+  {{- $fitIntro = "Bu çalışma programı, gen, transkript, varyant ve genom koordinatı bilgilerini NCBI, Ensembl ve UCSC üzerinden daha güvenli okumak isteyenler için yapılandırılmıştır." -}}
   {{- $lessonFlow = slice "Genom tarayıcılarının araştırma sorularındaki rolü" "NCBI üzerinden gen, transkript ve anotasyon kayıtlarını inceleme" "Ensembl ile genomik koordinat, varyant ve gen bilgilerini yorumlama" "UCSC Genome Browser ile genom bölgelerini görsel olarak değerlendirme" -}}
   {{- $outcomes = slice "Gen, transkript, varyant ve genom koordinatı bilgilerini farklı kaynaklarda karşılaştırabileceksiniz." "UCSC Genome Browser üzerinde genom bölgelerini daha rahat inceleyebileceksiniz." "MANE, RefSeq ve Ensembl gibi anotasyon farklarını araştırma pratiğinde daha bilinçli ele alabileceksiniz." -}}
 {{- else if eq $slug "tek-hucre-rna-seq-analizi-egitimi" -}}
-  {{- $fitIntro = "Bu dijital çalışma sistemi, scRNA-seq analiz akışını, kalite kontrol, kümeleme, marker gen ve Seurat çıktıları üzerinden daha bilinçli yorumlamak isteyen araştırmacılar için yapılandırılmıştır." -}}
+  {{- $fitIntro = "Bu çalışma programı, scRNA-seq analiz akışını, kalite kontrol, kümeleme, marker gen ve Seurat çıktıları üzerinden daha bilinçli yorumlamak isteyen araştırmacılar için yapılandırılmıştır." -}}
   {{- $lessonFlow = slice "Tek hücre RNA-seq verisinin biyolojik mantığı ve deney tasarımını okuma" "Hücre filtreleme, kalite kontrol ve ön işleme adımlarını yorumlama" "Seurat yaklaşımıyla kümeleme, boyut indirgeme ve hücre gruplarını değerlendirme" "Marker genler, hücre tipi yorumlama ve biyolojik anlam çıkarma" -}}
   {{- $outcomes = slice "scRNA-seq analiz akışının temel aşamalarını takip edebileceksiniz." "Kalite kontrol, kümeleme ve marker gen yorumlama adımlarını daha net değerlendirebileceksiniz." "Seurat tabanlı çıktıları makale okuma ve proje planlama bağlamında yorumlayabileceksiniz." -}}
   {{- $codingNote = "Bu çalışma programı temel kavramları anlaşılır bir sırayla ele alır; ancak scRNA-seq gibi ileri analiz başlıklarında düzenli tekrar ve isteğe bağlı uygulama çalışma pratiğini belirgin biçimde güçlendirir." -}}
 {{- else if eq $slug "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
-  {{- $fitIntro = "Bu dijital çalışma sistemi, PDB kayıtları, AlphaFold çıktıları, protein yapısı ve in silico modelleme yaklaşımına uygulamalı bir başlangıç yapmak isteyenler için yapılandırılmıştır." -}}
+  {{- $fitIntro = "Bu çalışma programı, PDB kayıtları, AlphaFold çıktıları, protein yapısı ve in silico modelleme yaklaşımına uygulamalı bir başlangıç yapmak isteyenler için yapılandırılmıştır." -}}
   {{- $lessonFlow = slice "Protein yapısına giriş ve yapısal biyoinformatiğin araştırmadaki rolü" "PDB kayıtlarını okuma, yapı dosyalarını inceleme ve görselleştirme" "AlphaFold ve benzeri yapı tahmini yaklaşımlarının temel mantığı" "Ligand, aktif bölge ve protein etkileşimlerini yorumlama" -}}
   {{- $outcomes = slice "PDB ve protein yapı dosyalarını temel düzeyde okuyabileceksiniz." "AlphaFold benzeri yapı tahmin çıktılarının ne söylediğini ve ne söylemediğini ayırt edebileceksiniz." "Protein-ligand ve aktif bölge yorumlarında daha bilinçli bir başlangıç yapabileceksiniz." -}}
   {{- $codingNote = "Bu çalışma programı temel kavramları anlaşılır bir sırayla ele alır; ancak in silico modelleme gibi ileri başlıklarda düzenli tekrar ve isteğe bağlı uygulama gerektirdiğini açıkça varsayar." -}}
 {{- else if eq $slug "phyml-uygulamali-filogenetik-egitimi" -}}
-  {{- $fitIntro = "Bu dijital çalışma sistemi, dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları biyolojik soruyla ilişkilendirmek isteyenler için yapılandırılmıştır." -}}
+  {{- $fitIntro = "Bu çalışma programı, dizi hizalama, model seçimi, phyML ile ağaç oluşturma ve filogenetik sonuçları biyolojik soruyla ilişkilendirmek isteyenler için yapılandırılmıştır." -}}
   {{- $lessonFlow = slice "Dizi hizalamanın filogenetik analizdeki yeri" "Çoklu dizi hizalama çıktısını okuma ve kaliteyi değerlendirme" "Model seçimi ve phyML ile filogenetik ağaç oluşturma" "Ağaç yorumlama, bootstrap değerleri ve biyolojik sonuç çıkarma" -}}
   {{- $outcomes = slice "Çoklu dizi hizalama çıktısını filogenetik analiz öncesi değerlendirebileceksiniz." "phyML ile filogenetik ağaç oluşturma mantığını takip edebileceksiniz." "Bootstrap, model seçimi ve ağaç yorumlama adımlarını biyolojik soruyla ilişkilendirebileceksiniz." -}}
   {{- $codingNote = "Bu çalışma programı temel kavramları anlaşılır bir sırayla ele alır; ancak filogenetik analizde düzenli tekrar ve çıktıları dikkatle yorumlama pratiği önemlidir." -}}
@@ -118,10 +132,9 @@
 <article class="container page-shell training-page" data-meta-content-name="{{ $displayTitle }}" data-meta-content-category="Çalışma Programı">
   <header class="page-header training-hero training-hero-grid">
     <div>
-      <p class="eyebrow">{{ if $isRCourse }}Biyoinformatik için R Programlama{{ else }}Dijital çalışma sistemi{{ end }}</p>
+      <p class="eyebrow">{{ $programCategory }}</p>
       <h1>{{ $heroTitle }}</h1>
       {{ with $heroLead }}<p class="lead">{{ . }}</p>{{ end }}
-      {{ with .Params.course_hero_note }}<p class="course-hero-note">{{ . }}</p>{{ end }}
       <div class="meta-row">
         {{ if $isComingSoonFeature }}
           <span>Yakında açılacak</span>
@@ -129,6 +142,7 @@
           <span>Duyuru bekleniyor</span>
         {{ else }}
           <span>Kendi hızınızda</span>
+          <span>Anında erişim</span>
           <span>Açıklamalı uygulamalar</span>
         {{ end }}
       </div>
@@ -144,6 +158,32 @@
     {{ end }}
   </header>
 
+  {{ if and $hasPricingPlans (not $isComingSoonFeature) }}
+    <section id="kayit-secenekleri" class="course-pricing course-pricing-above-fold" aria-labelledby="single-program-purchase-title">
+      <div class="program-sales-grid">
+        <div class="single-program-purchase">
+          <p class="eyebrow">Program erişimi</p>
+          <h2 id="single-program-purchase-title">Bu Programı Satın Al</h2>
+          <div class="course-pricing-grid">
+            <article class="pricing-card pricing-card-featured price-card">
+              <span class="pricing-badge">Öğrenci</span>
+              <h3>Öğrenci</h3>
+              {{ with .Params.student_price }}<p class="supported-price">{{ . }}</p>{{ end }}
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden satın alın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci Olarak Satın Al</a>
+            </article>
+            <article class="pricing-card price-card">
+              <span class="pricing-badge">Profesyonel</span>
+              <h3>Profesyonel</h3>
+              {{ with .Params.employee_price }}<p class="supported-price">{{ . }}</p>{{ end }}
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden satın alın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel Olarak Satın Al</a>
+            </article>
+          </div>
+        </div>
+        {{ partial "program-package-card.html" (dict "package" $programPackage) }}
+      </div>
+    </section>
+  {{ end }}
+
   <div class="training-layout">
     <aside class="training-sidebar" aria-label="Program özeti">
       <div class="sidebar-card decision-card">
@@ -151,7 +191,7 @@
         <h2>{{ if $isComingSoonFeature }}Bu çalışma sistemi ilginizi çekiyorsa duyuruyu takip edebilirsiniz.{{ else }}Bu çalışma programı size uygunsa bugün başlayabilirsiniz.{{ end }}</h2>
         <ul>
           <li>Kendi hızınızda</li>
-          <li>Açıklamalı içerikler ve çalışma dosyaları</li>
+          <li>Açıklamalı uygulamalar ve çalışma dosyaları</li>
           <li>Açıklamalı uygulamalar</li>
         </ul>
         <a class="card-link" href="{{ $primaryCTAURL }}">{{ $middleCTAText }}</a>
@@ -173,7 +213,7 @@
       {{ if $isRCourse }}
         <section class="sales-section r-problem-section">
           <p class="eyebrow">Problem ve çözüm</p>
-          <h2>Bu dijital çalışma sistemi hangi problemi çözer?</h2>
+          <h2>Bu çalışma programı hangi probleme odaklanır?</h2>
           <p>R öğrenmeye çalışırken en zor kısım çoğu zaman komutlar değil; nereden başlayacağını, hata alınca ne yapacağını ve kodun biyolojik veriyle nasıl ilişkileneceğini bilmektir.</p>
           <div class="sales-card-grid">
             <article>
@@ -202,7 +242,7 @@
             </article>
             <article>
               <h3>Ana R script ve örnek veri</h3>
-              <p>Tüm dersleri kapsayan ana R script; CSV, FASTA, expression ve metadata örnek dosyalarıyla birlikte ilerler.</p>
+              <p>Ana R script; CSV, FASTA, expression ve metadata örnek dosyalarıyla birlikte ilerler.</p>
             </article>
             <article>
               <h3>Hata çözüm rehberi</h3>
@@ -215,7 +255,7 @@
           <p class="eyebrow">Hata çözüm pratiği</p>
           <h2>R öğrenirken hata almak normal. Önemli olan hatayı nasıl okuyacağınızı öğrenmek.</h2>
           <div class="format-panel">
-            <p>Bu eğitimde yalnızca kod çalıştırmayı değil; hata mesajlarını okumayı, veri yapısını kontrol etmeyi, sütun adlarını incelemeyi, dosya yolunu doğrulamayı ve çözüm yolunu adım adım kurmayı da öğrenirsiniz.</p>
+            <p>Bu programda yalnızca kod çalıştırmayı değil; hata mesajlarını okumayı, veri yapısını kontrol etmeyi, sütun adlarını incelemeyi, dosya yolunu doğrulamayı ve çözüm yolunu adım adım kurmayı da öğrenirsiniz.</p>
             <ul class="format-list">
               <li>20’den fazla yaygın R ve biyoinformatik hata örneği</li>
               <li><code>class()</code>, <code>str()</code>, <code>names()</code>, <code>head()</code>, <code>dim()</code>, <code>getwd()</code> ve <code>list.files()</code> gibi kontrol komutları</li>
@@ -350,45 +390,6 @@
         </div>
       </section>
 
-      <section id="kayit-secenekleri" class="course-pricing">
-        {{ if $isComingSoonFeature }}
-          <p class="eyebrow">Yakında açılacak</p>
-          <h2>Yakında açılacak</h2>
-          <div class="soon-panel">
-            <p>Bu çalışma programı şu anda hazırlık aşamasındadır. Kapsam ve satın alma bilgileri netleştiğinde resmi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
-            <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Yazılı bilgi alın</a>
-          </div>
-        {{ else if $hasPricingPlans }}
-          <p class="eyebrow">Erişim seçenekleri</p>
-          <h2>Erişim seçenekleri</h2>
-          <p class="pricing-intro">Size uygun erişim seçeneğini seçerek güvenli ödeme sayfasına geçebilirsiniz.</p>
-          <p class="course-trust-note">Satın alma işleminiz tamamlandığında erişiminiz kullanıcı hesabınıza tanımlanır. Ödeme adımında kartınıza veya bankanıza göre taksit seçenekleri görünebilir.</p>
-          <div class="course-pricing-grid">
-            <article class="pricing-card pricing-card-featured price-card">
-              <span class="pricing-badge">Öğrenci erişimi</span>
-              <h3>{{ $studentLabel }} erişimi</h3>
-              {{ with .Params.student_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
-              <p class="pricing-description">Lisans, yüksek lisans ve doktora öğrencileri için.</p>
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci erişimiyle başlayın</a>
-            </article>
-            <article class="pricing-card price-card">
-              <span class="pricing-badge">Profesyonel erişim</span>
-              <h3>Profesyonel erişim</h3>
-              {{ with .Params.employee_price }}<p class="supported-price"><span>Ücret</span>{{ . }}</p>{{ end }}
-              <p class="pricing-description">Kamu, özel sektör, araştırma merkezi, hastane, laboratuvar ve Ar-Ge çalışanları için.</p>
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden başlayın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel erişimiyle başlayın</a>
-            </article>
-          </div>
-          <p class="course-scope-note">Bu çalışma programı, yetişkin kullanıcılar için kendi hızında kullanılabilen dijital bilimsel içerikler ve çalışma kaynaklarından oluşur. Diploma, mesleki yeterlilik veya kamu kurumu onayı sağlamaz. Zorunlu devam, sınav, geçti-kaldı değerlendirmesi ve kişiye özel proje danışmanlığı içermez.</p>
-          {{ partial "support/trust-box.html" (dict "cta" "Ödeme konusunda destek alın") }}
-        {{ else }}
-          <div class="format-panel">
-            <p>Bu çalışma programı şu anda hazırlık aşamasındadır. Kapsam ve satın alma bilgileri netleştiğinde resmi sitemizde duyurulacaktır. Açılış bilgisi almak isterseniz WhatsApp veya e-posta üzerinden yazılı destek alabilirsiniz.</p>
-            <a class="hero-action" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer">Yazılı bilgi alın</a>
-          </div>
-        {{ end }}
-      </section>
-
       {{ if gt (len $testimonials) 0 }}
         <section class="sales-section course-experience">
           <p class="eyebrow">{{ if $isComingSoonFeature }}Öğrenme ihtiyacı{{ else }}Katılımcı deneyimleri{{ end }}</p>
@@ -427,7 +428,7 @@
             </article>
           {{ else }}
             <article>
-              <h3>İçeriği satın aldıktan sonra tekrar nasıl giriş yaparım?</h3>
+              <h3>Programı satın aldıktan sonra tekrar nasıl giriş yaparım?</h3>
               <p>Çalışma programını satın aldıktan sonra ERES Kampüs / Payhip kullanıcı hesabınıza giriş yaparak programlarınıza ulaşabilirsiniz. Giriş için satın alma sırasında kullandığınız e-posta ve şifreyi kullanmanız gerekir. Şifrenizi hatırlamıyorsanız giriş ekranındaki “Forgot your password?” bağlantısını kullanabilirsiniz.</p>
             </article>
           {{ end }}
@@ -467,7 +468,7 @@
 </article>
 {{ if $hasPricingPlans }}
   <div class="mobile-sticky-cta training-mobile-sticky-cta" aria-label="Erişim seçenekleri">
-    <a class="mobile-sticky-primary" href="#kayit-secenekleri" data-event="hero_primary_cta_click">Erişim seçeneğinizi seçin</a>
+    <a class="mobile-sticky-primary" href="#kayit-secenekleri" data-event="hero_primary_cta_click">Programı Satın Al</a>
     <a class="mobile-sticky-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp</a>
   </div>
 {{ end }}

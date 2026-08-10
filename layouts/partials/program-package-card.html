@@ -1,0 +1,33 @@
+{{- $package := .package -}}
+{{- if $package -}}
+<aside class="program-package-card" aria-label="{{ $package.title }}">
+  <p class="program-package-kicker">Birlikte ilerlemek daha avantajlı</p>
+  <h2>{{ $package.title }}</h2>
+  <ul class="program-package-includes">
+    {{ range $package.programs }}<li>{{ . }}</li>{{ end }}
+  </ul>
+  <div class="program-package-prices">
+    <div>
+      <span>Öğrenci</span>
+      <del>{{ $package.student.individual_total }}</del>
+      <strong>{{ $package.student.package_price }}</strong>
+      <p>{{ $package.student.benefit }}</p>
+    </div>
+    <div>
+      <span>Profesyonel</span>
+      <del>{{ $package.professional.individual_total }}</del>
+      <strong>{{ $package.professional.package_price }}</strong>
+      <p>{{ $package.professional.benefit }}</p>
+    </div>
+  </div>
+  {{ if or $package.student_checkout_url $package.professional_checkout_url }}
+    <div class="program-package-actions">
+      {{ with $package.student_checkout_url }}<a class="pricing-button" href="{{ . }}">Öğrenci Paketini Seç — {{ $package.student.package_price }}</a>{{ end }}
+      {{ with $package.professional_checkout_url }}<a class="pricing-button pricing-button-secondary" href="{{ . }}">Profesyonel Paketini Seç — {{ $package.professional.package_price }}</a>{{ end }}
+    </div>
+  {{ else }}
+    <span class="pricing-button program-package-disabled" aria-disabled="true">Program Paketini Seç</span>
+    <p class="program-package-pending">Satın alma bağlantısı ekleniyor</p>
+  {{ end }}
+</aside>
+{{- end -}}

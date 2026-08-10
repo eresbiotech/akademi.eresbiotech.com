@@ -1,81 +1,85 @@
 {{ define "main" }}
+{{- $catalog := site.Data.program_packages -}}
 {{- $introProgram := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
+{{- $toolsProgram := site.GetPage "/post/biyoinformatik-veritabanlari-araclar-egitimi" -}}
+{{- $genomeProgram := site.GetPage "/post/ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
 {{- $rProgram := site.GetPage "/post/biyoinformatik-icin-r-programlama" -}}
 {{- $singleCellProgram := site.GetPage "/post/tek-hucre-rna-seq-analizi-egitimi" -}}
+{{- $proteinProgram := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
+{{- $phymlProgram := site.GetPage "/post/phyml-uygulamali-filogenetik-egitimi" -}}
 {{- $nidaLiveLab := site.GetPage "/post/yasam-bilimlerinde-veri-analizi" -}}
-{{- $featuredPrograms := slice $introProgram $rProgram $singleCellProgram -}}
+{{- $featuredPrograms := slice $introProgram $toolsProgram $genomeProgram $rProgram $singleCellProgram $proteinProgram $phymlProgram -}}
 
 <section class="home-hero">
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
-      <p class="eyebrow">ERES Biyoinformatik Çalışma Programları</p>
-      <h1>Biyoinformatik eğitimlerine bugün başlayın</h1>
-      <p class="lead">Uygulamalı eğitimlerle biyoinformatik ve veri analizi becerilerinizi geliştirin. Kayıtlı eğitimlere satın alma sonrasında hemen erişin; kendi programınıza göre ilerleyin.</p>
+      <p class="eyebrow">Uygulama Odaklı Çalışma Programları</p>
+      <h1>Biyoinformatikte hedefinize uygun programı seçin</h1>
+      <p class="lead">Başlangıçtan ileri uygulamalara uzanan çalışma programlarıyla kendi hızınızda ilerleyin.</p>
       <div class="hero-actions">
-        <a class="hero-action" href="#programlar" data-event="hero_primary_cta_click">Eğitimleri ve Fiyatları Gör</a>
+        <a class="hero-action" href="#programlar" data-event="hero_primary_cta_click">Programları Keşfet</a>
       </div>
-      <div class="trust-row" aria-label="Eğitim avantajları">
-        <span>Hemen erişim</span>
-        <span>Kendi hızınızda öğrenme</span>
-        <span>Uygulamalı içerik</span>
+      <div class="trust-row" aria-label="Çalışma programı avantajları">
+        <span>Anında erişim</span>
+        <span>Kendi hızınızda</span>
+        <span>Uygulama odaklı</span>
         <span>Güvenli ödeme</span>
       </div>
     </div>
   </div>
 </section>
 
+<section class="container home-section goal-selector" aria-labelledby="goal-selector-title">
+  <div class="section-heading">
+    <h2 id="goal-selector-title">Nerede olduğunuzu seçin</h2>
+  </div>
+  <div class="decision-grid goal-card-grid">
+    <article class="path-card decision-card goal-card">
+      <span class="goal-card-icon" aria-hidden="true">01</span>
+      <h3>Yeni Başlıyorum</h3>
+      <p>Biyoinformatiğe temelden başlayarak sağlam bir temel oluşturmak istiyorum.</p>
+      <a class="card-link" href="#baslangic" data-event="goal_start_click">Başlangıç Programları →</a>
+    </article>
+    <article class="path-card decision-card goal-card">
+      <span class="goal-card-icon" aria-hidden="true">02</span>
+      <h3>Veri Analizine Odaklanıyorum</h3>
+      <p>R, veri analizi ve tek hücre çalışmalarında ilerlemek istiyorum.</p>
+      <a class="card-link" href="#veri-analizi" data-event="goal_data_analysis_click">Veri Analizi Programları →</a>
+    </article>
+    <article class="path-card decision-card goal-card">
+      <span class="goal-card-icon" aria-hidden="true">03</span>
+      <h3>İleri Uygulamalara Geçiyorum</h3>
+      <p>Protein, filogenetik ve ileri biyoinformatik uygulamalarında çalışmak istiyorum.</p>
+      <a class="card-link" href="#ileri-uygulamalar" data-event="goal_advanced_click">İleri Programlar →</a>
+    </article>
+  </div>
+</section>
+
 <section id="programlar" class="container home-section home-programs-section" aria-labelledby="programs-title">
   <div class="section-heading">
-    <p class="eyebrow">Kayıtlı eğitimler</p>
-    <h2 id="programs-title">Bugün başlayabileceğiniz eğitimler</h2>
-    <p>Size uygun eğitimi seçin, fiyatları inceleyin ve hemen başlayın.</p>
+    <h2 id="programs-title">Bugün başlayabileceğiniz çalışma programları</h2>
   </div>
   <div class="home-program-grid">
     {{ range $featuredPrograms }}
       {{ with . }}
-        {{- $displayTitle := .Title -}}
-        {{- $shortDescription := "" -}}
-        {{- if eq .File.BaseFileName "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
-          {{- $shortDescription = "Biyoinformatiğin temel kavramlarını ve büyük veri yaklaşımını uygulamalı olarak keşfedin." -}}
-        {{- else if eq .File.BaseFileName "biyoinformatik-icin-r-programlama" -}}
-          {{- $shortDescription = "R ile biyolojik verileri düzenleme, analiz etme ve görselleştirme becerisi kazanın." -}}
-        {{- else if eq .File.BaseFileName "tek-hucre-rna-seq-analizi-egitimi" -}}
-          {{- $displayTitle = "Tek Hücre RNA-Seq" -}}
-          {{- $shortDescription = "Tek hücre RNA-Seq verilerinin temel analiz akışını uygulamalı olarak inceleyin." -}}
-        {{- end -}}
-        <article class="home-program-card">
+        {{- $slug := .File.BaseFileName -}}
+        {{- $programMeta := index $catalog.programs $slug -}}
+        {{- $anchor := "" -}}
+        {{- if eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}{{- $anchor = "baslangic" -}}{{- end -}}
+        {{- if eq $slug "biyoinformatik-icin-r-programlama" -}}{{- $anchor = "veri-analizi" -}}{{- end -}}
+        {{- if eq $slug "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}{{- $anchor = "ileri-uygulamalar" -}}{{- end -}}
+        <article{{ with $anchor }} id="{{ . }}"{{ end }} class="home-program-card">
           <div class="home-program-card-main">
-            <span class="program-label">Kayıtlı Eğitim</span>
-            <h3>{{ $displayTitle }}</h3>
-            <p class="program-value">{{ $shortDescription }}</p>
+            <span class="program-label">{{ $programMeta.category }}</span>
+            <h3>{{ .Title }}</h3>
           </div>
-          <div class="home-program-purchase" aria-label="{{ $displayTitle }} erişim seçenekleri">
-            <p class="program-payment-note">Hemen Başlayın</p>
-            <div class="program-price-row"><span>Öğrenci</span><strong>{{ .Params.student_price }}</strong></div>
-            <div class="program-price-row"><span>Profesyonel</span><strong>{{ .Params.employee_price }}</strong></div>
-            <a class="program-checkout" href="{{ .RelPermalink }}" data-event="program_detail_click" data-course="{{ .File.BaseFileName }}">Eğitimi İncele</a>
+          <div class="home-program-purchase" aria-label="{{ .Title }} erişim seçenekleri">
+            <p class="program-starting-price">{{ .Params.student_price }}’den başlayan erişim</p>
+            <a class="program-checkout" href="{{ .RelPermalink }}" data-event="program_detail_click" data-course="{{ $slug }}">Programı Gör →</a>
           </div>
         </article>
       {{ end }}
     {{ end }}
-  </div>
-  <div class="program-purchase-trust" aria-label="Satın alma hızlı bilgileri">
-    <span><strong>Ne zaman başlarım?</strong> Satın alma sonrasında hemen.</span>
-    <span><strong>Nasıl erişirim?</strong> Çevrimiçi olarak.</span>
-    <span><strong>Nasıl ilerlerim?</strong> Kendi programınıza göre.</span>
-    <span><strong>Ödeme?</strong> Güvenli ödeme seçenekleri ödeme adımında.</span>
-  </div>
-</section>
-
-<section id="karar-yollari" class="container home-section decision-section" aria-labelledby="decision-title">
-  <div class="lite-band">
-    <div>
-      <p class="eyebrow">Kısa karar rehberi</p>
-      <h2 id="decision-title">Nereden başlamalısınız?</h2>
-      <p>Biyoinformatiğe yeni başlıyorsanız → <a href="{{ with $introProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_intro_click">Biyoinformatiğe Giriş ve Büyük Veri</a></p>
-      <p>Veri analizi becerisi geliştirmek istiyorsanız → <a href="{{ with $rProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_r_click">R Programlama</a></p>
-      <p>İleri analizlere geçmek istiyorsanız → <a href="{{ with $singleCellProgram }}{{ .RelPermalink }}{{ else }}{{ "/post/" | relURL }}{{ end }}" data-event="decision_single_cell_click">Tek Hücre RNA-Seq</a></p>
-    </div>
   </div>
 </section>
 
@@ -85,7 +89,7 @@
     <div class="nida-launch-main">
       <p class="eyebrow">Yaklaşan Canlı Çalışma</p>
       <h2 id="nida-launch-title">Yaşam Bilimlerinde Veri Analizi</h2>
-      <p>Dr. Nida Tokaç Er</p>
+      <p>Nida Tokaç Er</p>
       <div class="nida-fact-list" aria-label="Canlı çalışma bilgileri">
         <span>15–16 ve 22–23 Ağustos</span>
       </div>
@@ -102,7 +106,7 @@
 {{ end }}
 
 <div class="mobile-sticky-cta" aria-label="Hızlı program bağlantıları">
-  <a class="mobile-sticky-primary" href="#programlar" data-event="hero_primary_cta_click">Programınızı seçin</a>
+  <a class="mobile-sticky-primary" href="#programlar" data-event="hero_primary_cta_click">Programları Keşfet</a>
   <a class="mobile-sticky-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp</a>
 </div>
 {{ end }}
