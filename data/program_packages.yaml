@@ -52,7 +52,7 @@ all_programs:
   discount_label: "%50 İNDİRİM"
   price: "12.500 TL"
   scope: "7 asenkron biyoinformatik çalışma programının tamamı"
-  checkout_url: ""
+  checkout_url: "https://kampus.eresbiotech.com/order?link=nxKgr&pricing_plan=yZGjlw1qzN"
   programs:
     - "Biyoinformatiğe Giriş ve Büyük Veri"
     - "Temel Biyoinformatik Araçlar ve Veritabanları"

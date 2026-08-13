@@ -41,12 +41,7 @@
         <p>Başlangıçtan veri analizine ve ileri uygulamalara uzanan {{ $allPrograms.scope }}.</p>
         <span class="package-discount">{{ $allPrograms.discount_label }}</span>
         <strong class="package-all-price">{{ $allPrograms.price }}</strong>
-        {{ with $allPrograms.checkout_url }}
-          <a class="hero-action hero-action-gold" href="{{ . }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş</a>
-        {{ else }}
-          <span class="hero-action package-checkout-pending" aria-disabled="true">7 Programa Eriş</span>
-          <p class="package-checkout-note">Satın alma bağlantısı eklendiğinde bu seçenek doğrudan erişime açılacaktır.</p>
-        {{ end }}
+        <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş</a>
         <p class="package-decision-note">7 program · Tek erişim · Kendi hızınızda ilerleme</p>
         <p class="package-exclusion">Canlı çalışmalar dahil değildir.</p>
       </article>
@@ -108,14 +103,10 @@
     <div>
       <p class="eyebrow">{{ $allPrograms.discount_label }}</p>
       <h2 id="all-programs-return-title">Birden fazla alanda ilerlemek istiyorsanız</h2>
-      <p>Başlangıç, Veri Analizi ve İleri Uygulamalar alanlarını ayrı ayrı seçmek yerine {{ $allPrograms.scope }} tek erişimle ulaşabilirsiniz.</p>
+      <p>Başlangıç, Veri Analizi ve İleri Uygulamalar alanlarını ayrı ayrı seçmek yerine 7 asenkron biyoinformatik çalışma programının tamamına tek erişimle ulaşabilirsiniz.</p>
     </div>
     <div class="package-return-price"><strong>{{ $allPrograms.price }}</strong><span>7 program · Tek erişim</span></div>
-    {{ with $allPrograms.checkout_url }}
-      <a class="hero-action hero-action-gold" href="{{ . }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Birlikte Eriş</a>
-    {{ else }}
-      <span class="hero-action package-checkout-pending" aria-disabled="true">7 Programa Birlikte Eriş</span>
-    {{ end }}
+    <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Birlikte Eriş</a>
   </section>
 
   <section class="container package-value-section" aria-labelledby="value-anchor-title">
