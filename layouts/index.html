@@ -3,6 +3,7 @@
 {{- $allPrograms := $catalog.all_programs -}}
 {{- $allProgramsURL := "/program-paketleri/" | relURL -}}
 {{- with $allPrograms.checkout_url -}}{{- $allProgramsURL = . -}}{{- end -}}
+{{- $allProgramsUsesIyzico := hasPrefix $allProgramsURL "https://iyzi.link/" -}}
 {{- $introProgram := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $toolsProgram := site.GetPage "/post/biyoinformatik-veritabanlari-araclar-egitimi" -}}
 {{- $genomeProgram := site.GetPage "/post/ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
@@ -25,9 +26,10 @@
         <div><span>Tüm çalışma yolu</span><strong>7 program · %50 indirim · 12.500 TL</strong></div>
       </div>
       <div class="hero-actions">
-        <a class="hero-action hero-action-gold" href="{{ $allProgramsURL }}" data-event="homepage_all_programs_click"{{ with $allPrograms.checkout_url }} data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs"{{ end }}>7 Programa Eriş — 12.500 TL</a>
+        <a class="hero-action hero-action-gold" href="{{ $allProgramsURL }}" data-event="homepage_all_programs_click"{{ with $allPrograms.checkout_url }} data-checkout-event="all_programs_checkout" data-payment-provider="{{ if $allProgramsUsesIyzico }}iyzico{{ else }}eres-kampus{{ end }}" data-course="all_programs"{{ end }}>7 Programa Eriş — 12.500 TL</a>
         <a class="hero-action hero-action-secondary" href="{{ "/program-paketleri/" | relURL }}" data-event="homepage_compare_click">Paketleri Karşılaştır</a>
       </div>
+      {{ if $allProgramsUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
       <p class="hero-package-support">Eylül hızlanmadan “nereden başlayacağım?” sorusunu kapatın.</p>
       <div class="trust-row" aria-label="Çalışma programı avantajları">
         <span>Anında erişim</span>
@@ -95,7 +97,8 @@
 </section>
 
 <div class="mobile-sticky-cta" aria-label="Hızlı program bağlantıları">
-  <a class="mobile-sticky-primary" href="{{ $allProgramsURL }}" data-event="homepage_all_programs_click"{{ with $allPrograms.checkout_url }} data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs"{{ end }}>7 Programa Eriş</a>
+  {{ if $allProgramsUsesIyzico }}<span class="mobile-sticky-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</span>{{ end }}
+  <a class="mobile-sticky-primary" href="{{ $allProgramsURL }}" data-event="homepage_all_programs_click"{{ with $allPrograms.checkout_url }} data-checkout-event="all_programs_checkout" data-payment-provider="{{ if $allProgramsUsesIyzico }}iyzico{{ else }}eres-kampus{{ end }}" data-course="all_programs"{{ end }}>7 Programa Eriş</a>
   <a class="mobile-sticky-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp</a>
 </div>
 {{ end }}

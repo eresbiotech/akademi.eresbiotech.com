@@ -5,7 +5,7 @@ date = "2023-12-26"
 description = "Gen, transkript, varyant ve genom bölgelerini NCBI, Ensembl ve UCSC üzerinden açıklamalı içerikler, çalışma kaynakları ve araştırma pratiğine yakın vakalarla yorumlamak isteyenler için dijital çalışma sistemi."
 
 images =[ "images/NCBI-ENSEMBL-UCSC-Genom-Tarayicileri-Kursu.png" ]
-student_checkout_url = "https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=a6zY3Ew1Gq"
+student_checkout_url = "https://iyzi.link/AKsKdg"
 employee_checkout_url = "https://kampus.eresbiotech.com/order?link=xedXE&pricing_plan=91zw82LVBL"
 student_price = "3.300 TL"
 employee_price = "5.300 TL"
