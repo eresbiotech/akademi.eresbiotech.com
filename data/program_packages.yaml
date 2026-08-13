@@ -13,8 +13,8 @@ packages:
       individual_total: "14.800 TL"
       package_price: "10.800 TL"
       benefit: "4.000 TL birlikte erişim avantajı"
-    student_checkout_url: ""
-    professional_checkout_url: ""
+    student_checkout_url: "https://kampus.eresbiotech.com/order?link=k69NV&pricing_plan=2VGJjqJjGD"
+    professional_checkout_url: "https://kampus.eresbiotech.com/order?link=k69NV&pricing_plan=N9G8469RGV"
   data_analysis:
     title: "Veri Analizi Program Paketi"
     programs:
@@ -28,8 +28,8 @@ packages:
       individual_total: "12.200 TL"
       package_price: "8.200 TL"
       benefit: "4.000 TL birlikte erişim avantajı"
-    student_checkout_url: ""
-    professional_checkout_url: ""
+    student_checkout_url: "https://kampus.eresbiotech.com/order?link=lBKU6&pricing_plan=lNzM4oylW7"
+    professional_checkout_url: "https://kampus.eresbiotech.com/order?link=lBKU6&pricing_plan=xABmK1nXW1"
   advanced:
     title: "İleri Uygulamalar Program Paketi"
     programs:
@@ -43,8 +43,8 @@ packages:
       individual_total: "12.400 TL"
       package_price: "8.400 TL"
       benefit: "4.000 TL birlikte erişim avantajı"
-    student_checkout_url: ""
-    professional_checkout_url: ""
+    student_checkout_url: "https://kampus.eresbiotech.com/order?link=SDNeh&pricing_plan=w9B35xAeWR"
+    professional_checkout_url: "https://kampus.eresbiotech.com/order?link=SDNeh&pricing_plan=qLWxZx10Bk"
 
 programs:
   biyoinformatik-giris-egitim-buyuk-veri-kurs:
