@@ -17,8 +17,6 @@
   {{- $fallbackCTAURL = . -}}
 {{- end -}}
 {{- $hasPricingPlans := and .Params.student_checkout_url .Params.employee_checkout_url -}}
-{{- $studentUsesIyzico := hasPrefix .Params.student_checkout_url "https://iyzi.link/" -}}
-{{- $employeeUsesIyzico := hasPrefix .Params.employee_checkout_url "https://iyzi.link/" -}}
 {{- $primaryCTAURL := $fallbackCTAURL -}}
 {{- $primaryCTAText := "Program rotasını görün" -}}
 {{- $heroCTAText := $primaryCTAText -}}
@@ -171,15 +169,15 @@
               <span class="pricing-badge">Öğrenci</span>
               <h3>Öğrenci</h3>
               {{ with .Params.student_price }}<p class="supported-price">{{ . }}</p>{{ end }}
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden satın alın" data-event="payhip_checkout_click" data-payment-provider="{{ if $studentUsesIyzico }}iyzico{{ else }}payhip{{ end }}" data-course="{{ $slug }}" data-plan="student">Öğrenci Olarak Satın Al</a>
-              {{ if $studentUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden satın alın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci Olarak Satın Al</a>
+              <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
             </article>
             <article class="pricing-card price-card">
               <span class="pricing-badge">Profesyonel</span>
               <h3>Profesyonel</h3>
               {{ with .Params.employee_price }}<p class="supported-price">{{ . }}</p>{{ end }}
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden satın alın" data-event="payhip_checkout_click" data-payment-provider="{{ if $employeeUsesIyzico }}iyzico{{ else }}payhip{{ end }}" data-course="{{ $slug }}" data-plan="employee">Profesyonel Olarak Satın Al</a>
-              {{ if $employeeUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden satın alın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel Olarak Satın Al</a>
+              <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
             </article>
           </div>
         </div>

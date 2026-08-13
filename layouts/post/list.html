@@ -63,8 +63,6 @@
     <div class="card-grid catalog-grid">
       {{ range $activePosts.ByDate.Reverse }}
         {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
-        {{- $studentUsesIyzico := hasPrefix .Params.student_checkout_url "https://iyzi.link/" -}}
-        {{- $employeeUsesIyzico := hasPrefix .Params.employee_checkout_url "https://iyzi.link/" -}}
         <article class="post-card course-card featured-card">
           {{ with .Params.images }}
             {{- $src := index . 0 -}}
@@ -90,10 +88,10 @@
           </div>
           <div class="catalog-card-actions catalog-program-actions">
             {{ if and .Params.student_checkout_url .Params.employee_checkout_url }}
-              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="{{ if $studentUsesIyzico }}iyzico{{ else }}payhip{{ end }}" data-course="{{ .File.BaseFileName }}" data-plan="student">Öğrenci erişimiyle başlayın</a>
-              {{ if $studentUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
-              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="{{ if $employeeUsesIyzico }}iyzico{{ else }}payhip{{ end }}" data-course="{{ .File.BaseFileName }}" data-plan="employee">Profesyonel erişimiyle başlayın</a>
-              {{ if $employeeUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+              <a class="pricing-button" href="{{ .Params.student_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="student">Öğrenci erişimiyle başlayın</a>
+              <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+              <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ .File.BaseFileName }}" data-plan="employee">Profesyonel erişimiyle başlayın</a>
+              <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
             {{ end }}
             <a class="text-link" href="{{ .RelPermalink }}" data-event="program_detail_click" data-course="{{ .File.BaseFileName }}">Program rotasını görün</a>
           </div>

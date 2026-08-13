@@ -5,7 +5,7 @@ date = "2023-12-24"
 description = "Protein yapısı, PDB kayıtları, AlphaFold çıktıları ve in silico modelleme yaklaşımını açıklamalı içerikler, çalışma kaynakları ve araştırma pratiğine yakın örneklerle ele alan dijital çalışma sistemi."
 
 images =[ "images/uygulamali-Yapisal-Biyoinformatik-in-silico-Protein-Modelleme-Egitimi.png" ]
-student_checkout_url = "https://iyzi.link/AKnR4w"
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=YOeiS&pricing_plan=3ZGX9q8QWq"
 employee_checkout_url = "https://kampus.eresbiotech.com/order?link=YOeiS&pricing_plan=PjWlK3k3Gv"
 student_price = "4.200 TL"
 employee_price = "6.200 TL"

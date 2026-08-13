@@ -1,8 +1,6 @@
 {{- $package := .package -}}
 {{- if $package -}}
 {{- $packageKey := .packageKey -}}
-{{- $studentUsesIyzico := hasPrefix $package.student_checkout_url "https://iyzi.link/" -}}
-{{- $professionalUsesIyzico := hasPrefix $package.professional_checkout_url "https://iyzi.link/" -}}
 {{- $studentEvent := "starter_student_checkout" -}}
 {{- $professionalEvent := "starter_professional_checkout" -}}
 {{- if eq $packageKey "data_analysis" -}}
@@ -34,10 +32,10 @@
   </div>
   {{ if or $package.student_checkout_url $package.professional_checkout_url }}
     <div class="program-package-actions">
-      {{ with $package.student_checkout_url }}<a class="pricing-button" href="{{ . }}" data-event="{{ $studentEvent }}" data-payment-provider="{{ if $studentUsesIyzico }}iyzico{{ else }}eres-kampus{{ end }}" data-course="{{ $packageKey }}" data-plan="student">Öğrenci Paketini Seç — {{ $package.student.package_price }}</a>{{ end }}
-      {{ with $package.professional_checkout_url }}<a class="pricing-button pricing-button-secondary" href="{{ . }}" data-event="{{ $professionalEvent }}" data-payment-provider="{{ if $professionalUsesIyzico }}iyzico{{ else }}eres-kampus{{ end }}" data-course="{{ $packageKey }}" data-plan="professional">Profesyonel Paketini Seç — {{ $package.professional.package_price }}</a>{{ end }}
+      {{ with $package.student_checkout_url }}<a class="pricing-button" href="{{ . }}" data-event="{{ $studentEvent }}" data-payment-provider="eres-kampus" data-course="{{ $packageKey }}" data-plan="student">Öğrenci Paketini Seç — {{ $package.student.package_price }}</a>{{ end }}
+      {{ with $package.professional_checkout_url }}<a class="pricing-button pricing-button-secondary" href="{{ . }}" data-event="{{ $professionalEvent }}" data-payment-provider="eres-kampus" data-course="{{ $packageKey }}" data-plan="professional">Profesyonel Paketini Seç — {{ $package.professional.package_price }}</a>{{ end }}
     </div>
-    {{ if or $studentUsesIyzico $professionalUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+    <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
   {{ else }}
     <span class="pricing-button program-package-disabled" aria-disabled="true">Program Paketini Seç</span>
     <p class="program-package-pending">Satın alma bağlantısı ekleniyor</p>

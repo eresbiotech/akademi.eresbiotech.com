@@ -5,7 +5,7 @@ date = "2024-07-08"
 description = "RStudio, veri yapıları, ggplot2, GEOquery, metadata ve expression verisini araştırma pratiğine yakın vakalarla ele alan; kod kartları, çalışma dosyaları ve kendi kendine kontrol araçları içeren dijital çalışma sistemi."
 
 images =[ "images/Biyoinformatik-icin-R-Programlama.png" ]
-student_checkout_url = "https://iyzi.link/AKqr4w"
+student_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=a6zY3gmEGq"
 employee_checkout_url = "https://kampus.eresbiotech.com/order?link=YD8vn&pricing_plan=PjWlKdY4Gv"
 student_price = "3.500 TL"
 employee_price = "5.500 TL"

@@ -8,10 +8,6 @@
 {{- $dataAnalysis := $catalog.packages.data_analysis -}}
 {{- $advanced := $catalog.packages.advanced -}}
 {{- $allPrograms := $catalog.all_programs -}}
-{{- $allProgramsUsesIyzico := hasPrefix $allPrograms.checkout_url "https://iyzi.link/" -}}
-{{- $starterUsesIyzico := or (hasPrefix $starter.student_checkout_url "https://iyzi.link/") (hasPrefix $starter.professional_checkout_url "https://iyzi.link/") -}}
-{{- $dataAnalysisUsesIyzico := or (hasPrefix $dataAnalysis.student_checkout_url "https://iyzi.link/") (hasPrefix $dataAnalysis.professional_checkout_url "https://iyzi.link/") -}}
-{{- $advancedUsesIyzico := or (hasPrefix $advanced.student_checkout_url "https://iyzi.link/") (hasPrefix $advanced.professional_checkout_url "https://iyzi.link/") -}}
 <article class="program-packages-page">
   <section class="package-landing-hero">
     <div class="container package-landing-hero-grid">
@@ -49,8 +45,8 @@
         <p>Bugün R’a, yarın tek hücre analizine; başka bir projede genom tarayıcıları, protein modelleme veya filogenetiğe ihtiyacınız olabilir. Başlangıçtan ileri uygulamalara kadar bütün yolu açık tutun.</p>
         <span class="package-discount">{{ $allPrograms.discount_label }}</span>
         <strong class="package-all-price">{{ $allPrograms.price }}</strong>
-        <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="{{ if $allProgramsUsesIyzico }}iyzico{{ else }}eres-kampus{{ end }}" data-course="all_programs">7 Programa Eriş</a>
-        {{ if $allProgramsUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+        <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş</a>
+        <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
         <p class="package-decision-note">7 program · Tek erişim · Kendi hızınızda ilerleme</p>
         <p class="package-exclusion">Canlı çalışmalar dahil değildir.</p>
       </article>
@@ -76,10 +72,10 @@
         <ul>{{ range $starter.programs }}<li>{{ . }}</li>{{ end }}</ul>
         <div class="package-area-prices"><p><span>Öğrenci</span><span class="package-price-stack"><del>{{ $starter.student.individual_total }}</del><strong>{{ $starter.student.package_price }}</strong><small>3.000 TL avantaj</small></span></p><p><span>Profesyonel</span><span class="package-price-stack"><del>{{ $starter.professional.individual_total }}</del><strong>{{ $starter.professional.package_price }}</strong><small>4.000 TL avantaj</small></span></p></div>
         <div class="package-area-actions">
-          <a class="pricing-button" href="{{ $starter.student_checkout_url }}" data-event="starter_student_checkout" data-payment-provider="{{ if hasPrefix $starter.student_checkout_url "https://iyzi.link/" }}iyzico{{ else }}eres-kampus{{ end }}" data-course="starting" data-plan="student">Öğrenci Olarak Başla</a>
-          <a class="pricing-button pricing-button-secondary" href="{{ $starter.professional_checkout_url }}" data-event="starter_professional_checkout" data-payment-provider="{{ if hasPrefix $starter.professional_checkout_url "https://iyzi.link/" }}iyzico{{ else }}eres-kampus{{ end }}" data-course="starting" data-plan="professional">Profesyonel Olarak Başla</a>
+          <a class="pricing-button" href="{{ $starter.student_checkout_url }}" data-event="starter_student_checkout" data-payment-provider="eres-kampus" data-course="starting" data-plan="student">Öğrenci Olarak Başla</a>
+          <a class="pricing-button pricing-button-secondary" href="{{ $starter.professional_checkout_url }}" data-event="starter_professional_checkout" data-payment-provider="eres-kampus" data-course="starting" data-plan="professional">Profesyonel Olarak Başla</a>
         </div>
-        {{ if $starterUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+        <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
       </article>
       <article class="package-area-card">
         <p class="eyebrow">2 PROGRAM</p>
@@ -88,10 +84,10 @@
         <ul>{{ range $dataAnalysis.programs }}<li>{{ . }}</li>{{ end }}</ul>
         <div class="package-area-prices"><p><span>Öğrenci</span><span class="package-price-stack"><del>{{ $dataAnalysis.student.individual_total }}</del><strong>{{ $dataAnalysis.student.package_price }}</strong><small>3.000 TL avantaj</small></span></p><p><span>Profesyonel</span><span class="package-price-stack"><del>{{ $dataAnalysis.professional.individual_total }}</del><strong>{{ $dataAnalysis.professional.package_price }}</strong><small>4.000 TL avantaj</small></span></p></div>
         <div class="package-area-actions">
-          <a class="pricing-button" href="{{ $dataAnalysis.student_checkout_url }}" data-event="data_student_checkout" data-payment-provider="{{ if hasPrefix $dataAnalysis.student_checkout_url "https://iyzi.link/" }}iyzico{{ else }}eres-kampus{{ end }}" data-course="data_analysis" data-plan="student">Öğrenci Olarak Başla</a>
-          <a class="pricing-button pricing-button-secondary" href="{{ $dataAnalysis.professional_checkout_url }}" data-event="data_professional_checkout" data-payment-provider="{{ if hasPrefix $dataAnalysis.professional_checkout_url "https://iyzi.link/" }}iyzico{{ else }}eres-kampus{{ end }}" data-course="data_analysis" data-plan="professional">Profesyonel Olarak Başla</a>
+          <a class="pricing-button" href="{{ $dataAnalysis.student_checkout_url }}" data-event="data_student_checkout" data-payment-provider="eres-kampus" data-course="data_analysis" data-plan="student">Öğrenci Olarak Başla</a>
+          <a class="pricing-button pricing-button-secondary" href="{{ $dataAnalysis.professional_checkout_url }}" data-event="data_professional_checkout" data-payment-provider="eres-kampus" data-course="data_analysis" data-plan="professional">Profesyonel Olarak Başla</a>
         </div>
-        {{ if $dataAnalysisUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+        <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
       </article>
       <article class="package-area-card">
         <p class="eyebrow">2 PROGRAM</p>
@@ -100,10 +96,10 @@
         <ul>{{ range $advanced.programs }}<li>{{ . }}</li>{{ end }}</ul>
         <div class="package-area-prices"><p><span>Öğrenci</span><span class="package-price-stack"><del>{{ $advanced.student.individual_total }}</del><strong>{{ $advanced.student.package_price }}</strong><small>3.000 TL avantaj</small></span></p><p><span>Profesyonel</span><span class="package-price-stack"><del>{{ $advanced.professional.individual_total }}</del><strong>{{ $advanced.professional.package_price }}</strong><small>4.000 TL avantaj</small></span></p></div>
         <div class="package-area-actions">
-          <a class="pricing-button" href="{{ $advanced.student_checkout_url }}" data-event="advanced_student_checkout" data-payment-provider="{{ if hasPrefix $advanced.student_checkout_url "https://iyzi.link/" }}iyzico{{ else }}eres-kampus{{ end }}" data-course="advanced" data-plan="student">Öğrenci Olarak Başla</a>
-          <a class="pricing-button pricing-button-secondary" href="{{ $advanced.professional_checkout_url }}" data-event="advanced_professional_checkout" data-payment-provider="{{ if hasPrefix $advanced.professional_checkout_url "https://iyzi.link/" }}iyzico{{ else }}eres-kampus{{ end }}" data-course="advanced" data-plan="professional">Profesyonel Olarak Başla</a>
+          <a class="pricing-button" href="{{ $advanced.student_checkout_url }}" data-event="advanced_student_checkout" data-payment-provider="eres-kampus" data-course="advanced" data-plan="student">Öğrenci Olarak Başla</a>
+          <a class="pricing-button pricing-button-secondary" href="{{ $advanced.professional_checkout_url }}" data-event="advanced_professional_checkout" data-payment-provider="eres-kampus" data-course="advanced" data-plan="professional">Profesyonel Olarak Başla</a>
         </div>
-        {{ if $advancedUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+        <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
       </article>
     </div>
   </section>
@@ -115,8 +111,8 @@
       <p>Bugün ihtiyacınız olan konu yarın değişebilir. 7 asenkron programın tamamına tek erişimle başlangıçtan veri analizine ve ileri uygulamalara kadar çalışma yolunuzu açık tutabilirsiniz.</p>
     </div>
     <div class="package-return-price"><strong>{{ $allPrograms.price }}</strong><span>7 program · Tek erişim</span></div>
-    <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="{{ if $allProgramsUsesIyzico }}iyzico{{ else }}eres-kampus{{ end }}" data-course="all_programs">7 Programa Birlikte Eriş</a>
-    {{ if $allProgramsUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+    <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Birlikte Eriş</a>
+    <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
   </section>
 
   <section class="container package-value-section" aria-labelledby="value-anchor-title">
@@ -144,10 +140,10 @@
       <p>Eylül’ün tez, proje, ders ve analiz temposu gelmeden çalışma yolunuzu şimdi netleştirin.</p>
     </div>
     <div class="package-final-actions">
-      <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="{{ if $allProgramsUsesIyzico }}iyzico{{ else }}eres-kampus{{ end }}" data-course="all_programs">7 Programa Eriş — 12.500 TL</a>
+      <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş — 12.500 TL</a>
       <a class="hero-action hero-action-secondary" href="#alan-paketleri" data-event="landing_single_area_click">Bana Uygun Paketi Seç</a>
     </div>
-    {{ if $allProgramsUsesIyzico }}<p class="payment-access-note">Dersleriniz, kaydınızın ardından 24 saat içinde hesabınıza tanımlanır.</p>{{ end }}
+    <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
   </section>
 </article>
 {{ end }}
