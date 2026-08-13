@@ -1,5 +1,15 @@
 {{- $package := .package -}}
 {{- if $package -}}
+{{- $packageKey := .packageKey -}}
+{{- $studentEvent := "starter_student_checkout" -}}
+{{- $professionalEvent := "starter_professional_checkout" -}}
+{{- if eq $packageKey "data_analysis" -}}
+  {{- $studentEvent = "data_student_checkout" -}}
+  {{- $professionalEvent = "data_professional_checkout" -}}
+{{- else if eq $packageKey "advanced" -}}
+  {{- $studentEvent = "advanced_student_checkout" -}}
+  {{- $professionalEvent = "advanced_professional_checkout" -}}
+{{- end -}}
 <aside class="program-package-card" aria-label="{{ $package.title }}">
   <p class="program-package-kicker">Birlikte ilerlemek daha avantajlı</p>
   <h2>{{ $package.title }}</h2>
@@ -22,12 +32,13 @@
   </div>
   {{ if or $package.student_checkout_url $package.professional_checkout_url }}
     <div class="program-package-actions">
-      {{ with $package.student_checkout_url }}<a class="pricing-button" href="{{ . }}">Öğrenci Paketini Seç — {{ $package.student.package_price }}</a>{{ end }}
-      {{ with $package.professional_checkout_url }}<a class="pricing-button pricing-button-secondary" href="{{ . }}">Profesyonel Paketini Seç — {{ $package.professional.package_price }}</a>{{ end }}
+      {{ with $package.student_checkout_url }}<a class="pricing-button" href="{{ . }}" data-event="{{ $studentEvent }}" data-payment-provider="eres-kampus" data-course="{{ $packageKey }}" data-plan="student">Öğrenci Paketini Seç — {{ $package.student.package_price }}</a>{{ end }}
+      {{ with $package.professional_checkout_url }}<a class="pricing-button pricing-button-secondary" href="{{ . }}" data-event="{{ $professionalEvent }}" data-payment-provider="eres-kampus" data-course="{{ $packageKey }}" data-plan="professional">Profesyonel Paketini Seç — {{ $package.professional.package_price }}</a>{{ end }}
     </div>
   {{ else }}
     <span class="pricing-button program-package-disabled" aria-disabled="true">Program Paketini Seç</span>
     <p class="program-package-pending">Satın alma bağlantısı ekleniyor</p>
   {{ end }}
+  <a class="nida-detail-link" href="{{ "/program-paketleri/" | relURL }}" data-event="package_compare_click">Paketleri Karşılaştır →</a>
 </aside>
 {{- end -}}

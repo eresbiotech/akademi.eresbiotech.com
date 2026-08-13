@@ -112,7 +112,15 @@
         plan: tracked.getAttribute("data-plan") || undefined,
         provider: tracked.getAttribute("data-payment-provider") || undefined
       });
-      if (trackedEventName === "iyzico_checkout_click" || trackedEventName === "payhip_checkout_click") {
+      var checkoutEventName = tracked.getAttribute("data-checkout-event") || (/_checkout$/.test(trackedEventName) ? trackedEventName : "");
+      if (checkoutEventName && checkoutEventName !== trackedEventName) {
+        track(checkoutEventName, {
+          course: tracked.getAttribute("data-course") || undefined,
+          plan: tracked.getAttribute("data-plan") || undefined,
+          provider: tracked.getAttribute("data-payment-provider") || undefined
+        });
+      }
+      if (checkoutEventName || trackedEventName === "iyzico_checkout_click" || trackedEventName === "payhip_checkout_click") {
         var initiatePayload = coursePayload() || {
           content_name: tracked.getAttribute("data-course") || document.title,
           content_category: "Biyoinformatik Eğitimi",

@@ -1,5 +1,8 @@
 {{ define "main" }}
 {{- $catalog := site.Data.program_packages -}}
+{{- $allPrograms := $catalog.all_programs -}}
+{{- $allProgramsURL := "/program-paketleri/" | relURL -}}
+{{- with $allPrograms.checkout_url -}}{{- $allProgramsURL = . -}}{{- end -}}
 {{- $introProgram := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $toolsProgram := site.GetPage "/post/biyoinformatik-veritabanlari-araclar-egitimi" -}}
 {{- $genomeProgram := site.GetPage "/post/ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
@@ -7,7 +10,6 @@
 {{- $singleCellProgram := site.GetPage "/post/tek-hucre-rna-seq-analizi-egitimi" -}}
 {{- $proteinProgram := site.GetPage "/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
 {{- $phymlProgram := site.GetPage "/post/phyml-uygulamali-filogenetik-egitimi" -}}
-{{- $nidaLiveLab := site.GetPage "/post/yasam-bilimlerinde-veri-analizi" -}}
 {{- $featuredPrograms := slice $introProgram $toolsProgram $genomeProgram $rProgram $singleCellProgram $proteinProgram $phymlProgram -}}
 
 <section class="home-hero">
@@ -15,10 +17,16 @@
     <div class="home-hero-copy">
       <p class="eyebrow">Uygulama Odaklı Çalışma Programları</p>
       <h1>Biyoinformatikte hedefinize uygun programı seçin</h1>
-      <p class="lead">Başlangıçtan ileri uygulamalara uzanan çalışma programlarıyla kendi hızınızda ilerleyin.</p>
-      <div class="hero-actions">
-        <a class="hero-action" href="#programlar" data-event="hero_primary_cta_click">Programları Keşfet</a>
+      <p class="lead">Yalnızca ihtiyacınız olan çalışma alanına odaklanın veya 7 asenkron biyoinformatik programının tamamına %50 indirimle 12.500 TL’ye erişin.</p>
+      <div class="home-pricing-summary" aria-label="Program paketleri fiyat özeti">
+        <span>Öğrenci paketleri 5.200 TL'den başlıyor</span>
+        <strong>7 programın tamamı 12.500 TL</strong>
       </div>
+      <div class="hero-actions">
+        <a class="hero-action hero-action-gold" href="{{ $allProgramsURL }}" data-event="homepage_all_programs_click"{{ with $allPrograms.checkout_url }} data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs"{{ end }}>7 Programa Eriş — 12.500 TL</a>
+        <a class="hero-action hero-action-secondary" href="{{ "/program-paketleri/" | relURL }}" data-event="homepage_compare_click">Paketleri Karşılaştır</a>
+      </div>
+      <p class="hero-package-support">Başlangıç · Veri Analizi · İleri Uygulamalar</p>
       <div class="trust-row" aria-label="Çalışma programı avantajları">
         <span>Anında erişim</span>
         <span>Kendi hızınızda</span>
@@ -83,30 +91,8 @@
   </div>
 </section>
 
-{{ with $nidaLiveLab }}
-<section id="yasam-bilimlerinde-veri-analizi" class="container home-section nida-launch-section" aria-labelledby="nida-launch-title">
-  <article class="nida-launch-card">
-    <div class="nida-launch-main">
-      <p class="eyebrow">Yaklaşan Canlı Çalışma</p>
-      <h2 id="nida-launch-title">Yaşam Bilimlerinde Veri Analizi</h2>
-      <p>Nida Tokaç Er</p>
-      <div class="nida-fact-list" aria-label="Canlı çalışma bilgileri">
-        <span>15–16 ve 22–23 Ağustos</span>
-      </div>
-    </div>
-    <div class="nida-launch-purchase nida-home-purchase" aria-label="Yaşam Bilimlerinde Veri Analizi katılım bilgileri">
-      <div class="nida-home-price-summary">
-        <div><span>Öğrenci <strong>{{ .Params.student_price }}</strong></span></div>
-        <div><span>Profesyonel <strong>{{ .Params.employee_price }}</strong></span></div>
-      </div>
-      <a class="nida-detail-link hero-action" href="{{ .RelPermalink }}" data-event="nida_landing_click" data-placement="homepage">Canlı Çalışmayı İncele</a>
-    </div>
-  </article>
-</section>
-{{ end }}
-
 <div class="mobile-sticky-cta" aria-label="Hızlı program bağlantıları">
-  <a class="mobile-sticky-primary" href="#programlar" data-event="hero_primary_cta_click">Programları Keşfet</a>
+  <a class="mobile-sticky-primary" href="{{ $allProgramsURL }}" data-event="homepage_all_programs_click"{{ with $allPrograms.checkout_url }} data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs"{{ end }}>7 Programa Eriş</a>
   <a class="mobile-sticky-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp</a>
 </div>
 {{ end }}

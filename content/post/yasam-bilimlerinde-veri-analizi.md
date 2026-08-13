@@ -14,7 +14,7 @@ url = "/yasam-bilimlerinde-veri-analizi-canli-calisma/"
 aliases = ["/post/yasam-bilimlerinde-veri-analizi/"]
 
 product_type = "live_lab"
-course_status = "active"
+course_status = "postponed"
 
 student_price = "2.850 TL"
 employee_price = "3.850 TL"

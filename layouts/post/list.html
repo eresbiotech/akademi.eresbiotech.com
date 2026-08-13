@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{- $posts := where (where site.RegularPages "Section" "post") "File.BaseFileName" "!=" "contact" -}}
-{{- $liveLabPosts := where $posts "Params.product_type" "live_lab" -}}
+{{- $liveLabPosts := where (where $posts "Params.product_type" "live_lab") "Params.course_status" "active" -}}
 {{- $activePosts := where (where $posts "Params.course_status" "active") "Params.product_type" "!=" "live_lab" -}}
 
 <section class="container page-shell">

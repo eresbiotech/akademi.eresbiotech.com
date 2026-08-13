@@ -179,7 +179,7 @@
             </article>
           </div>
         </div>
-        {{ partial "program-package-card.html" (dict "package" $programPackage) }}
+        {{ partial "program-package-card.html" (dict "package" $programPackage "packageKey" $programMeta.package) }}
       </div>
     </section>
   {{ end }}

@@ -1,5 +1,11 @@
 {{- $isStudentLogin := eq .RelPermalink "/ders-giris/" -}}
 {{- $isLiveLabLanding := eq .Layout "live-lab-landing" -}}
+<aside class="site-promo-bar" aria-label="Program paketleri duyurusu">
+  <div class="container site-promo-bar-inner">
+    <span>7 Programa Birlikte Erişim · %50 İndirimle 12.500 TL</span>
+    <a href="{{ "/program-paketleri/" | relURL }}" data-event="promo_bar_click">İncele →</a>
+  </div>
+</aside>
 <header class="site-header{{ if $isStudentLogin }} student-login-site-header{{ end }}{{ if $isLiveLabLanding }} live-lab-landing-header{{ end }}">
   <div class="container header-inner">
     <a class="brand" href="{{ "/" | relURL }}" aria-label="ERES Biyoinformatik">
@@ -8,6 +14,7 @@
     <nav class="site-nav" aria-label="Ana menu">
       {{ if not $isLiveLabLanding }}
         <a href="{{ "/post/" | relURL }}">Çalışma Programları</a>
+        <a href="{{ "/program-paketleri/" | relURL }}">Paketleri Karşılaştır</a>
         <a href="{{ "/canli-egitimler/" | relURL }}">Canlı Çalışmalar</a>
         <a href="{{ "/about/" | relURL }}">Hakkımızda</a>
       {{ end }}
@@ -21,6 +28,7 @@
         <nav aria-label="Mobil menu">
           {{ if not $isLiveLabLanding }}
             <a href="{{ "/post/" | relURL }}">Çalışma Programları</a>
+            <a href="{{ "/program-paketleri/" | relURL }}">Paketleri Karşılaştır</a>
             <a href="{{ "/canli-egitimler/" | relURL }}">Canlı Çalışmalar</a>
           {{ end }}
           <a href="{{ "/ders-giris/" | relURL }}">Programlarıma Giriş</a>

@@ -1,0 +1,140 @@
+{{ define "main" }}
+{{ template "program-packages-main" . }}
+{{ end }}
+
+{{ define "program-packages-main" }}
+{{- $catalog := site.Data.program_packages -}}
+{{- $starter := $catalog.packages.starting -}}
+{{- $dataAnalysis := $catalog.packages.data_analysis -}}
+{{- $advanced := $catalog.packages.advanced -}}
+{{- $allPrograms := $catalog.all_programs -}}
+<article class="program-packages-page">
+  <section class="package-landing-hero">
+    <div class="container package-landing-hero-grid">
+      <div>
+        <p class="eyebrow">ERES Biyoinformatik Programları</p>
+        <h1>Hedefinize uygun çalışma yolunu seçin</h1>
+        <p class="lead">Yalnızca ihtiyacınız olan alana odaklanabilir veya 7 programın tamamına birlikte erişebilirsiniz.</p>
+      </div>
+      <div class="package-landing-hero-price">
+        <span>{{ $allPrograms.discount_label }}</span>
+        <strong>{{ $allPrograms.price }}</strong>
+        <p>7 asenkron program · Tek erişim</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container package-decision-section" aria-labelledby="package-decision-title">
+    <h2 id="package-decision-title" class="visually-hidden">Çalışma yolunuzu seçin</h2>
+    <div class="package-decision-grid">
+      <article class="package-decision-card package-decision-single">
+        <p class="eyebrow">HEDEFİNİZE GÖRE SEÇİN</p>
+        <h2>Tek Bir Alana Odaklanmak İstiyorum</h2>
+        <p>Başlangıç, Veri Analizi veya İleri Uygulamalar paketlerinden ihtiyacınıza uygun olanı seçin.</p>
+        <strong class="package-decision-price">5.200 TL'den başlayan öğrenci paketleri</strong>
+        <p class="package-decision-note">Profesyonel paketler 8.200 TL'den başlıyor</p>
+        <a class="hero-action hero-action-secondary" href="#alan-paketleri" data-event="landing_single_area_click">Bana Uygun Paketi Seç</a>
+      </article>
+      <article class="package-decision-card package-decision-all">
+        <p class="eyebrow">{{ $allPrograms.eyebrow }}</p>
+        <h2>{{ $allPrograms.title }}</h2>
+        <p>Başlangıçtan veri analizine ve ileri uygulamalara uzanan {{ $allPrograms.scope }}.</p>
+        <span class="package-discount">{{ $allPrograms.discount_label }}</span>
+        <strong class="package-all-price">{{ $allPrograms.price }}</strong>
+        {{ with $allPrograms.checkout_url }}
+          <a class="hero-action hero-action-gold" href="{{ . }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş</a>
+        {{ else }}
+          <span class="hero-action package-checkout-pending" aria-disabled="true">7 Programa Eriş</span>
+          <p class="package-checkout-note">Satın alma bağlantısı eklendiğinde bu seçenek doğrudan erişime açılacaktır.</p>
+        {{ end }}
+        <p class="package-decision-note">7 program · Tek erişim · Kendi hızınızda ilerleme</p>
+        <p class="package-exclusion">Canlı çalışmalar dahil değildir.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container package-fit-section" aria-labelledby="package-fit-title">
+    <h2 id="package-fit-title">Hangisi size daha uygun?</h2>
+    <div>
+      <p><strong>Tek bir çalışma alanına ihtiyacınız varsa</strong> → ilgili paketi seçin.</p>
+      <p><strong>Birden fazla alanda ilerlemeyi planlıyorsanız</strong> → 7 programın tamamına erişin.</p>
+    </div>
+  </section>
+
+  <section id="alan-paketleri" class="container package-area-section" aria-labelledby="area-packages-title">
+    <div class="section-heading">
+      <p class="eyebrow">ALAN PAKETLERİ</p>
+      <h2 id="area-packages-title">Tek bir alana odaklanmak istiyorsanız</h2>
+      <p>Hedefinize uygun çalışma paketini seçin.</p>
+    </div>
+    <div class="package-area-grid">
+      <article class="package-area-card">
+        <p class="eyebrow">3 PROGRAM</p>
+        <h3>Biyoinformatiğe Yeni Başlıyorum</h3>
+        <p>Temel kavramları, araçları, veritabanlarını ve genom tarayıcılarını birlikte öğrenmek isteyenler için.</p>
+        <ul>{{ range $starter.programs }}<li>{{ . }}</li>{{ end }}</ul>
+        <div class="package-area-prices"><p><span>Öğrenci</span><strong>{{ $starter.student.package_price }}</strong></p><p><span>Profesyonel</span><strong>{{ $starter.professional.package_price }}</strong></p></div>
+        <div class="package-area-actions">
+          <a class="pricing-button" href="{{ $starter.student_checkout_url }}" data-event="starter_student_checkout" data-payment-provider="eres-kampus" data-course="starting" data-plan="student">Öğrenci Olarak Başla</a>
+          <a class="pricing-button pricing-button-secondary" href="{{ $starter.professional_checkout_url }}" data-event="starter_professional_checkout" data-payment-provider="eres-kampus" data-course="starting" data-plan="professional">Profesyonel Olarak Başla</a>
+        </div>
+      </article>
+      <article class="package-area-card">
+        <p class="eyebrow">2 PROGRAM</p>
+        <h3>Veri Analizine Odaklanıyorum</h3>
+        <p>R ve tek hücre RNA-Seq ile biyolojik veri analizine odaklanmak isteyenler için.</p>
+        <ul>{{ range $dataAnalysis.programs }}<li>{{ . }}</li>{{ end }}</ul>
+        <div class="package-area-prices"><p><span>Öğrenci</span><strong>{{ $dataAnalysis.student.package_price }}</strong></p><p><span>Profesyonel</span><strong>{{ $dataAnalysis.professional.package_price }}</strong></p></div>
+        <div class="package-area-actions">
+          <a class="pricing-button" href="{{ $dataAnalysis.student_checkout_url }}" data-event="data_student_checkout" data-payment-provider="eres-kampus" data-course="data_analysis" data-plan="student">Öğrenci Olarak Başla</a>
+          <a class="pricing-button pricing-button-secondary" href="{{ $dataAnalysis.professional_checkout_url }}" data-event="data_professional_checkout" data-payment-provider="eres-kampus" data-course="data_analysis" data-plan="professional">Profesyonel Olarak Başla</a>
+        </div>
+      </article>
+      <article class="package-area-card">
+        <p class="eyebrow">2 PROGRAM</p>
+        <h3>İleri Uygulamalara Geçiyorum</h3>
+        <p>Protein modelleme, filogenetik ve dizi analizine odaklanmak isteyenler için.</p>
+        <ul>{{ range $advanced.programs }}<li>{{ . }}</li>{{ end }}</ul>
+        <div class="package-area-prices"><p><span>Öğrenci</span><strong>{{ $advanced.student.package_price }}</strong></p><p><span>Profesyonel</span><strong>{{ $advanced.professional.package_price }}</strong></p></div>
+        <div class="package-area-actions">
+          <a class="pricing-button" href="{{ $advanced.student_checkout_url }}" data-event="advanced_student_checkout" data-payment-provider="eres-kampus" data-course="advanced" data-plan="student">Öğrenci Olarak Başla</a>
+          <a class="pricing-button pricing-button-secondary" href="{{ $advanced.professional_checkout_url }}" data-event="advanced_professional_checkout" data-payment-provider="eres-kampus" data-course="advanced" data-plan="professional">Profesyonel Olarak Başla</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="container package-return-section" aria-labelledby="all-programs-return-title">
+    <div>
+      <p class="eyebrow">{{ $allPrograms.discount_label }}</p>
+      <h2 id="all-programs-return-title">Birden fazla alanda ilerlemek istiyorsanız</h2>
+      <p>Başlangıç, Veri Analizi ve İleri Uygulamalar alanlarını ayrı ayrı seçmek yerine {{ $allPrograms.scope }} tek erişimle ulaşabilirsiniz.</p>
+    </div>
+    <div class="package-return-price"><strong>{{ $allPrograms.price }}</strong><span>7 program · Tek erişim</span></div>
+    {{ with $allPrograms.checkout_url }}
+      <a class="hero-action hero-action-gold" href="{{ . }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Birlikte Eriş</a>
+    {{ else }}
+      <span class="hero-action package-checkout-pending" aria-disabled="true">7 Programa Birlikte Eriş</span>
+    {{ end }}
+  </section>
+
+  <section class="container package-value-section" aria-labelledby="value-anchor-title">
+    <h2 id="value-anchor-title">Birden fazla çalışma alanına ihtiyacınız varsa</h2>
+    <div class="package-value-grid">
+      <p><span>Başlangıç</span><strong>{{ $starter.professional.package_price }}</strong></p>
+      <p><span>Veri Analizi</span><strong>{{ $dataAnalysis.professional.package_price }}</strong></p>
+      <p><span>İleri Uygulamalar</span><strong>{{ $advanced.professional.package_price }}</strong></p>
+      <p class="package-value-highlight"><span>Tüm 7 Program</span><strong>{{ $allPrograms.price }}</strong></p>
+    </div>
+    <p>Birden fazla çalışma alanına ihtiyacınız varsa tüm programlara erişim seçeneğini değerlendirin.</p>
+  </section>
+
+  <section class="container package-program-list-section" aria-labelledby="all-programs-list-title">
+    <p class="eyebrow">{{ $allPrograms.scope }}</p>
+    <h2 id="all-programs-list-title">7 programın tamamı</h2>
+    <ul class="package-program-list">{{ range $allPrograms.programs }}<li>{{ . }}</li>{{ end }}</ul>
+    <div class="package-trust-row"><span>Anında erişim</span><span>Kendi hızınızda ilerleme</span><span>Uygulamalı çalışma içerikleri</span><span>Güvenli ödeme</span><span>Satın alma sonrası ERES Kampüs erişimi</span></div>
+    <p class="package-exclusion">Canlı çalışmalar dahil değildir.</p>
+  </section>
+</article>
+{{ end }}

@@ -46,6 +46,22 @@ packages:
     student_checkout_url: "https://kampus.eresbiotech.com/order?link=SDNeh&pricing_plan=w9B35xAeWR"
     professional_checkout_url: "https://kampus.eresbiotech.com/order?link=SDNeh&pricing_plan=qLWxZx10Bk"
 
+all_programs:
+  title: "7 Programa Birlikte Erişim"
+  eyebrow: "EN KAPSAMLI SEÇENEK"
+  discount_label: "%50 İNDİRİM"
+  price: "12.500 TL"
+  scope: "7 asenkron biyoinformatik çalışma programının tamamı"
+  checkout_url: ""
+  programs:
+    - "Biyoinformatiğe Giriş ve Büyük Veri"
+    - "Temel Biyoinformatik Araçlar ve Veritabanları"
+    - "NCBI, Ensembl ve UCSC Genom Tarayıcısı"
+    - "Biyoinformatik için R Programlama"
+    - "Tek Hücre RNA-Seq Analizi"
+    - "Yapısal Biyoinformatik ve in silico Protein Modelleme"
+    - "phyML Filogenetik ve Dizi Hizalama"
+
 programs:
   biyoinformatik-giris-egitim-buyuk-veri-kurs:
     category: "Başlangıç"
