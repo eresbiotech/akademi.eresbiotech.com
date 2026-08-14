@@ -30,6 +30,7 @@
       <p>{{ $package.professional.benefit }}</p>
     </div>
   </div>
+  <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
   {{ if or $package.student_checkout_url $package.professional_checkout_url }}
     <div class="program-package-actions">
       {{ with $package.student_checkout_url }}<a class="pricing-button" href="{{ . }}" data-event="{{ $studentEvent }}" data-payment-provider="eres-kampus" data-course="{{ $packageKey }}" data-plan="student">Öğrenci Paketini Seç — {{ $package.student.package_price }}</a>{{ end }}

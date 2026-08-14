@@ -45,6 +45,7 @@
         <p>Bugün R’a, yarın tek hücre analizine; başka bir projede genom tarayıcıları, protein modelleme veya filogenetiğe ihtiyacınız olabilir. Başlangıçtan ileri uygulamalara kadar bütün yolu açık tutun.</p>
         <span class="package-discount">{{ $allPrograms.discount_label }}</span>
         <strong class="package-all-price">{{ $allPrograms.price }}</strong>
+        <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
         <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş</a>
         <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
         <p class="package-decision-note">7 program · Tek erişim · Kendi hızınızda ilerleme</p>
@@ -71,6 +72,7 @@
         <p>Temelleri, araçları ve genom tarayıcılarını üç ayrı sekme yerine tek çalışma yolunda toparlayın.</p>
         <ul>{{ range $starter.programs }}<li>{{ . }}</li>{{ end }}</ul>
         <div class="package-area-prices"><p><span>Öğrenci</span><span class="package-price-stack"><del>{{ $starter.student.individual_total }}</del><strong>{{ $starter.student.package_price }}</strong><small>3.000 TL avantaj</small></span></p><p><span>Profesyonel</span><span class="package-price-stack"><del>{{ $starter.professional.individual_total }}</del><strong>{{ $starter.professional.package_price }}</strong><small>4.000 TL avantaj</small></span></p></div>
+        <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
         <div class="package-area-actions">
           <a class="pricing-button" href="{{ $starter.student_checkout_url }}" data-event="starter_student_checkout" data-payment-provider="eres-kampus" data-course="starting" data-plan="student">Öğrenci Olarak Başla</a>
           <a class="pricing-button pricing-button-secondary" href="{{ $starter.professional_checkout_url }}" data-event="starter_professional_checkout" data-payment-provider="eres-kampus" data-course="starting" data-plan="professional">Profesyonel Olarak Başla</a>
@@ -83,6 +85,7 @@
         <p>R ve tek hücre RNA-seq çalışmalarını dağınık kaynaklar yerine tek analiz yolunda birleştirin.</p>
         <ul>{{ range $dataAnalysis.programs }}<li>{{ . }}</li>{{ end }}</ul>
         <div class="package-area-prices"><p><span>Öğrenci</span><span class="package-price-stack"><del>{{ $dataAnalysis.student.individual_total }}</del><strong>{{ $dataAnalysis.student.package_price }}</strong><small>3.000 TL avantaj</small></span></p><p><span>Profesyonel</span><span class="package-price-stack"><del>{{ $dataAnalysis.professional.individual_total }}</del><strong>{{ $dataAnalysis.professional.package_price }}</strong><small>4.000 TL avantaj</small></span></p></div>
+        <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
         <div class="package-area-actions">
           <a class="pricing-button" href="{{ $dataAnalysis.student_checkout_url }}" data-event="data_student_checkout" data-payment-provider="eres-kampus" data-course="data_analysis" data-plan="student">Öğrenci Olarak Başla</a>
           <a class="pricing-button pricing-button-secondary" href="{{ $dataAnalysis.professional_checkout_url }}" data-event="data_professional_checkout" data-payment-provider="eres-kampus" data-course="data_analysis" data-plan="professional">Profesyonel Olarak Başla</a>
@@ -95,6 +98,7 @@
         <p>Protein modelleme ve filogenetik çalışmalarına daha net bir ileri uygulama rotasıyla geçin.</p>
         <ul>{{ range $advanced.programs }}<li>{{ . }}</li>{{ end }}</ul>
         <div class="package-area-prices"><p><span>Öğrenci</span><span class="package-price-stack"><del>{{ $advanced.student.individual_total }}</del><strong>{{ $advanced.student.package_price }}</strong><small>3.000 TL avantaj</small></span></p><p><span>Profesyonel</span><span class="package-price-stack"><del>{{ $advanced.professional.individual_total }}</del><strong>{{ $advanced.professional.package_price }}</strong><small>4.000 TL avantaj</small></span></p></div>
+        <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
         <div class="package-area-actions">
           <a class="pricing-button" href="{{ $advanced.student_checkout_url }}" data-event="advanced_student_checkout" data-payment-provider="eres-kampus" data-course="advanced" data-plan="student">Öğrenci Olarak Başla</a>
           <a class="pricing-button pricing-button-secondary" href="{{ $advanced.professional_checkout_url }}" data-event="advanced_professional_checkout" data-payment-provider="eres-kampus" data-course="advanced" data-plan="professional">Profesyonel Olarak Başla</a>
@@ -111,6 +115,7 @@
       <p>Bugün ihtiyacınız olan konu yarın değişebilir. 7 asenkron programın tamamına tek erişimle başlangıçtan veri analizine ve ileri uygulamalara kadar çalışma yolunuzu açık tutabilirsiniz.</p>
     </div>
     <div class="package-return-price"><strong>{{ $allPrograms.price }}</strong><span>7 program · Tek erişim</span></div>
+    <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
     <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Birlikte Eriş</a>
     <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
   </section>
@@ -143,6 +148,7 @@
       <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş — 12.500 TL</a>
       <a class="hero-action hero-action-secondary" href="#alan-paketleri" data-event="landing_single_area_click">Bana Uygun Paketi Seç</a>
     </div>
+    <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
     <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
   </section>
 </article>
