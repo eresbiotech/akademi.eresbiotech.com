@@ -1333,7 +1333,19 @@ img {
 }
 
 .site-nav .nav-button {
+  gap: 6px;
   padding: 9px 15px;
+}
+
+.whatsapp-icon {
+  fill: none;
+  flex: 0 0 auto;
+  height: 1em;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 1em;
 }
 
 .site-nav .nav-button-support {
@@ -5449,6 +5461,11 @@ summary:focus-visible {
     justify-content: center;
     line-height: 1.2;
     padding: 8px 10px;
+  }
+
+  .mobile-support-link {
+    align-items: center;
+    gap: 5px;
   }
 
   .mobile-menu {
