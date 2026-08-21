@@ -1,0 +1,7 @@
+<aside class="welcome-offer{{ if or .IsHome (eq .Layout "live-lab-landing") }} welcome-offer-with-mobile-cta{{ end }}" data-welcome-offer hidden aria-label="Tanışma indirimi">
+  <button class="welcome-offer-close" type="button" data-welcome-offer-close aria-label="Tanışma indirimi kartını kapat">×</button>
+  <p class="welcome-offer-kicker">İlk kez mi buradasınız?</p>
+  <strong class="welcome-offer-title">%8 Tanışma İndirimi</strong>
+  <span class="welcome-offer-code">MERHABA8</span>
+  <a class="welcome-offer-cta" href="{{ "/program-paketleri/" | relURL }}">Programları incele →</a>
+</aside>

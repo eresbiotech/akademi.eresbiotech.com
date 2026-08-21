@@ -12,7 +12,12 @@
     </main>
     {{ partial "footer.html" . }}
     {{ partial "cookie-consent.html" . }}
+    {{- $welcomeOfferPath := .RelPermalink -}}
+    {{- $welcomeOfferPage := or .IsHome (eq .Type "post") (eq .Type "canli-egitimler") -}}
+    {{- $excludeWelcomeOffer := or (eq .Layout "student-login") (hasPrefix $welcomeOfferPath "/ders-giris/") (hasPrefix $welcomeOfferPath "/admin/") (hasPrefix $welcomeOfferPath "/yonetim/") (hasPrefix $welcomeOfferPath "/checkout/") (hasPrefix $welcomeOfferPath "/login/") (hasPrefix $welcomeOfferPath "/thank-you/") (hasPrefix $welcomeOfferPath "/tesekkurler/") -}}
+    {{ if and $welcomeOfferPage (not $excludeWelcomeOffer) }}{{ partial "welcome-offer.html" . }}{{ end }}
     <script src="{{ "js/site-consent.js" | relURL }}" defer></script>
+    {{ if and $welcomeOfferPage (not $excludeWelcomeOffer) }}<script src="{{ "js/welcome-offer.js" | relURL }}" defer></script>{{ end }}
     {{ if or .IsHome (eq .Layout "live-lab-landing") }}<script src="{{ "js/nida-launch.js" | relURL }}" defer></script>{{ end }}
   </body>
 </html>
