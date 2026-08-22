@@ -3,6 +3,7 @@ title = "Mira'nın Debug Defteri"
 description = "Biyoinformatiğe nereden başlayacağını bilmiyorsan, Mira'nın hata mesajları ve küçük notlarıyla başlangıç yolunu keşfet."
 date = "2026-07-09"
 author = "ERES Akademi"
+draft = true
 +++
 
 ## Nereden başlayacağını bilmiyorsan
@@ -16,4 +17,3 @@ Eğer "R mı öğrenmeliyim, temel biyoinformatikten mi başlamalıyım, yoksa p
 - [Protein yapısı çalışıyorum](/post/uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme/)
 
 Karar veremiyorsanız bize [yazılı destek](/post/contact/) üzerinden ulaşabilirsiniz.
-
