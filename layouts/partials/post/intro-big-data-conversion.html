@@ -1,0 +1,177 @@
+{{- $studentURL := .Params.student_checkout_url -}}
+{{- $professionalURL := .Params.employee_checkout_url -}}
+<article class="container page-shell training-page intro-conversion-page">
+  <header class="intro-conversion-hero" aria-labelledby="intro-course-title">
+    <div class="intro-conversion-copy">
+      <p class="eyebrow">ERES Biyoinformatik Akademi</p>
+      <h1 id="intro-course-title">Biyoinformatiğe Giriş ve Büyük Veri</h1>
+      <p class="intro-conversion-lead">Biyoinformatiğe sağlam bir başlangıç yapın.</p>
+      <p class="intro-conversion-support">Biyoinformatik temellerini, omik veri türlerini, büyük veri yaklaşımını ve gerçek biyolojik veri kaynaklarıyla çalışma mantığını öğrenin.</p>
+      <ul class="intro-benefit-list" aria-label="Eğitim özellikleri">
+        <li>Başlangıç seviyesine uygun</li>
+        <li>Kendi hızınızda</li>
+        <li>Kayıt sonrası çevrimiçi erişim</li>
+        <li>Videolu ve uygulama odaklı</li>
+      </ul>
+    </div>
+    <section class="intro-hero-offer" aria-labelledby="intro-hero-offer-title">
+      <p class="intro-offer-kicker">Kayıt seçenekleri</p>
+      <h2 id="intro-hero-offer-title">Size uygun planı seçin</h2>
+      <div class="intro-plan-grid">
+        <a class="intro-plan-card" href="{{ $studentURL }}" target="_blank" rel="noopener noreferrer">
+          <span>Öğrenci</span>
+          <strong>{{ .Params.student_price }}</strong>
+          <small>Öğrenci Olarak Başla</small>
+        </a>
+        <a class="intro-plan-card intro-plan-card-professional" href="{{ $professionalURL }}" target="_blank" rel="noopener noreferrer">
+          <span>Profesyonel</span>
+          <strong>{{ .Params.employee_price }}</strong>
+          <small>Profesyonel Olarak Başla</small>
+        </a>
+      </div>
+      <p class="intro-payment-note"><strong>Kredi kartına taksit imkanı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
+      <p class="intro-access-note">Kayıt sonrası ders içeriklerine çevrimiçi olarak erişebilirsiniz.</p>
+    </section>
+  </header>
+
+  <div class="intro-conversion-content">
+    <section class="sales-section intro-concrete-section" aria-labelledby="intro-concrete-title">
+      <p class="eyebrow">Program deneyimi</p>
+      <h2 id="intro-concrete-title">Bu programda gerçekten ne yapacaksınız?</h2>
+      <p class="section-lead">Kavramları tek tek ezberlemek yerine, biyolojik veri türleri ile araştırma soruları arasındaki ilişkiyi kuran bir başlangıç çerçevesiyle ilerlersiniz.</p>
+      <div class="intro-concrete-grid">
+        <article><h3>Temel kavramları tanıyın</h3><p>Biyoinformatiğin araştırmadaki yerini, temel kavramlarını ve veri odaklı yaklaşımını bir arada inceleyin.</p></article>
+        <article><h3>Omik verileri ayırt edin</h3><p>Genomik, transkriptomik ve proteomik veri türlerinin hangi sorularla ilişkilendiğini görün.</p></article>
+        <article><h3>Büyük veri yaklaşımını yorumlayın</h3><p>Yaşam bilimlerinde yüksek hacimli verinin neden yeni yöntem ve araçlar gerektirdiğini anlayın.</p></article>
+        <article><h3>Veri kaynaklarıyla ilişki kurun</h3><p>NCBI, PubMed, Nucleotide, Gene, Protein ve GEO gibi kaynakların araştırma sorularındaki rolünü tanıyın.</p></article>
+        <article><h3>GEO2R sonucunu ilk adım olarak okuyun</h3><p>GEO2R çıktısından CSV/tablo ve R ortamıyla daha kontrollü incelemeye geçiş mantığını görün.</p></article>
+      </div>
+    </section>
+
+    <section class="sales-section intro-audience-section" aria-labelledby="intro-audience-title">
+      <p class="eyebrow">Kimler için?</p>
+      <h2 id="intro-audience-title">Başlamak veya temelini toparlamak isteyenler için</h2>
+      <div class="intro-audience-grid">
+        <article><h3>Sıfırdan başlıyorum.</h3><p>Biyoinformatiğin kavramlarını, veri türlerini, temel kaynaklarını ve analiz mantığını bir arada görmek isteyenler için.</p></article>
+        <article><h3>Bilgilerimi yenilemek istiyorum.</h3><p>Daha önce biyoinformatikle karşılaşmış ancak temelini yeniden toparlamak, güncel araçları hatırlamak ve sonraki adımını netleştirmek isteyenler için.</p></article>
+      </div>
+      <p class="intro-secondary-copy">Bilgisayar ve internet erişimi yeterlidir; program başlangıç seviyesinde yapılandırılmıştır ve kodlama bilgisi gerektirmez.</p>
+    </section>
+
+    <section class="sales-section intro-roadmap-section" aria-labelledby="intro-roadmap-title">
+      <p class="eyebrow">Program rotası</p>
+      <h2 id="intro-roadmap-title">Temelden veri odaklı araştırma mantığına</h2>
+      <ol class="lesson-flow intro-roadmap">
+        <li>Biyoinformatiğin araştırmadaki yeri ve omik veri dünyasına giriş</li>
+        <li>Genomik, transkriptomik ve proteomik veri türlerini okuma</li>
+        <li>Büyük veri, veri tabanları ve modern biyoloji araştırmalarında analiz mantığı</li>
+        <li>NCBI, PubMed, GEO ve GEO2R gibi kaynakların araştırma sorularıyla ilişkisi</li>
+        <li>Quiz ve kısa değerlendirmelerle temel kavramları pekiştirme</li>
+      </ol>
+    </section>
+
+    <section class="sales-section intro-course-proof-section" aria-labelledby="intro-course-proof-title">
+      <p class="eyebrow">Dersin içinden</p>
+      <h2 id="intro-course-proof-title">Kurs ekranlarından gerçek örnekler</h2>
+      <p class="section-lead">Program; kavram kartları, kısa rehberler ve araştırma verisini yorumlamaya bağlayan ders ekranlarıyla ilerler.</p>
+      <div class="intro-course-proof-grid">
+        {{ with resources.Get "images/course-proof/intro-course-roadmap.jpg" }}
+          <figure>
+            <img src="{{ .RelPermalink }}" alt="Biyoinformatiğe giriş kurs yol haritasını gösteren ders ekranı" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
+            <figcaption>Kurs yol haritası; temel veri kaynakları, GEO/GEO2R ve biyoinformatikte programlama araçlarının rolüne giriş.</figcaption>
+          </figure>
+        {{ end }}
+        {{ with resources.Get "images/course-proof/intro-course-blast-guide.jpg" }}
+          <figure>
+            <img src="{{ .RelPermalink }}" alt="BLAST ne yapar ve ne yapmaz başlıklı kurs mini rehberi" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
+            <figcaption>BLAST sonucunu kesin hüküm yerine, araştırma için yorumlanacak bir başlangıç ipucu olarak ele alan mini rehber.</figcaption>
+          </figure>
+        {{ end }}
+        {{ with resources.Get "images/course-proof/intro-course-geo2r-r.jpg" }}
+          <figure>
+            <img src="{{ .RelPermalink }}" alt="GEO2R çıktısından R ile filtreleme ve biyolojik yoruma geçişi anlatan ders ekranı" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
+            <figcaption>GEO2R çıktısından CSV/tablo ve R ile filtreleme mantığına, ardından biyolojik yoruma uzanan ders bağlantısı.</figcaption>
+          </figure>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="sales-section outcome-section intro-outcomes-section" aria-labelledby="intro-outcomes-title">
+      <p class="eyebrow">Öğrenme çıktıları</p>
+      <h2 id="intro-outcomes-title">Bu eğitimin sonunda neyi daha rahat değerlendirebilirsiniz?</h2>
+      <div class="outcome-grid">
+        <article><span aria-hidden="true">✓</span><p>Genomik, transkriptomik ve proteomik veri türlerini temel düzeyde ayırt edebilme</p></article>
+        <article><span aria-hidden="true">✓</span><p>Temel veri kaynaklarının hangi amaçlarla kullanıldığını anlama</p></article>
+        <article><span aria-hidden="true">✓</span><p>Araştırma sorusu ile araç veya veri kaynağı arasındaki ilişkiyi görme</p></article>
+        <article><span aria-hidden="true">✓</span><p>Yaşam bilimlerinde büyük veri yaklaşımını yorumlama</p></article>
+        <article><span aria-hidden="true">✓</span><p>Sonraki biyoinformatik öğrenme adımını daha bilinçli seçme</p></article>
+      </div>
+    </section>
+
+    <section class="sales-section intro-needs-section" aria-labelledby="intro-needs-title">
+      <p class="eyebrow">Öğrenme ihtiyacı</p>
+      <h2 id="intro-needs-title">Katılımcıların sık dile getirdiği ihtiyaçlar</h2>
+      <div class="intro-needs-grid">
+        <article>Kavramları tek bir çerçevede görmek</article>
+        <article>Omik veri türlerinin farklarını netleştirmek</article>
+        <article>Hangi aracın hangi araştırma sorusunda kullanıldığını anlamak</article>
+        <article>Sonraki öğrenme adımını belirlemek</article>
+      </div>
+    </section>
+
+    <section class="sales-section faq-section intro-faq-section" aria-labelledby="intro-faq-title">
+      <p class="eyebrow">Satın alma öncesi</p>
+      <h2 id="intro-faq-title">Sık sorulan sorular</h2>
+      <div class="intro-faq-list">
+        <details open><summary>Hiç biyoinformatik bilmiyorum. Katılabilir miyim?</summary><p>Evet. Eğitim giriş seviyesindedir; temel kavramları ve veri odaklı araştırma mantığını bir arada görmek isteyenler için yapılandırılmıştır.</p></details>
+        <details><summary>R bilmem gerekiyor mu?</summary><p>Hayır. Bu program giriş seviyesindedir ve katılım için kodlama bilgisi gerektirmez. R ortamının biyoinformatikteki rolünü ve GEO2R çıktılarından sonraki inceleme mantığını tanırsınız; kapsamlı R programlama pratiği için ayrı R eğitimi daha uygundur.</p></details>
+        <details><summary>Programda GEO ve GEO2R var mı?</summary><p>Evet. Kurs yol haritasında GEO/GEO2R ile ekspresyon verisine ilk bakış ve GEO2R çıktısını yorumlamaya giriş yer alır. Bu bölüm, ileri düzey GEO2R uzmanlığı değil; sonraki analiz adımlarına hazırlayan bir başlangıç çerçevesidir.</p></details>
+        <details><summary>Programda hangi araç ve veri kaynaklarıyla tanışacağım?</summary><p>Program kapsamında NCBI, PubMed, Nucleotide, Gene, Protein, GEO ve GEO2R gibi kaynakların araştırma sorularıyla ilişkisini tanırsınız.</p></details>
+        <details><summary>Program canlı mı, kendi hızımda mı?</summary><p>Program videolu ve tekrar izlenebilir içeriklerle, kendi hızınızda ilerleyebileceğiniz şekilde sunulur.</p></details>
+        <details><summary>Satın aldıktan sonra ne zaman başlayabilirim?</summary><p>Kayıt sonrası ders içeriklerine çevrimiçi olarak erişebilir, çalışmanızı kendi akademik veya profesyonel takviminize göre planlayabilirsiniz.</p></details>
+        <details><summary>Eğitim sonunda belge var mı?</summary><p>Eğitimdeki çalışmaları tamamlayan katılımcılara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgesi verilir.</p></details>
+        <details><summary>Taksit yapabilir miyim?</summary><p>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</p></details>
+        <details><summary>Satın aldıktan sonra derslerime nasıl giriş yaparım?</summary><p>Ders erişimi, kayıt sırasında kullandığınız e-posta adresiyle oluşturulan öğrenci hesabınız üzerinden yönetilir.</p></details>
+      </div>
+    </section>
+
+    <section id="kayit-secenekleri" class="intro-final-purchase" aria-labelledby="intro-final-purchase-title">
+      <p class="eyebrow">Kayıt seçenekleri</p>
+      <h2 id="intro-final-purchase-title">Biyoinformatiğe bugün başlayın.</h2>
+      <p>Biyoinformatiğe Giriş ve Büyük Veri programı için size uygun kayıt seçeneğini belirleyin.</p>
+      <div class="intro-final-plan-grid">
+        <article><span>Öğrenci</span><strong>{{ .Params.student_price }}</strong><a class="pricing-button" href="{{ $studentURL }}" target="_blank" rel="noopener noreferrer">Öğrenci Olarak Başla</a></article>
+        <article><span>Profesyonel</span><strong>{{ .Params.employee_price }}</strong><a class="pricing-button pricing-button-secondary" href="{{ $professionalURL }}" target="_blank" rel="noopener noreferrer">Profesyonel Olarak Başla</a></article>
+      </div>
+      <p class="intro-final-reassurance"><strong>Kredi kartına taksit imkanı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir. Kayıt sonrası ders içeriklerine çevrimiçi olarak erişebilirsiniz.</span></p>
+    </section>
+
+    <section class="intro-package-upsell" aria-labelledby="intro-package-title">
+      <p class="eyebrow">Daha kapsamlı ilerlemek isteyenler için</p>
+      <h2 id="intro-package-title">Biyoinformatik Başlangıç Program Paketi</h2>
+      <p>Başlangıç çerçevesini; temel araçlar, veritabanları ve genom tarayıcılarıyla birlikte ele almak isteyenler için üç programlık bir öğrenme rotası.</p>
+      <ul>
+        <li>Biyoinformatiğe Giriş ve Büyük Veri</li>
+        <li>Temel Biyoinformatik Araçlar ve Veritabanları</li>
+        <li>NCBI, Ensembl ve UCSC</li>
+      </ul>
+      <div class="intro-package-plan-grid">
+        <article>
+          <span>Öğrenci paketi</span>
+          <del>8.800 TL</del>
+          <strong>5.800 TL</strong>
+          <small>3.000 TL birlikte erişim avantajı</small>
+          <a class="pricing-button" href="https://kampus.eresbiotech.com/order?link=k69NV&amp;pricing_plan=2VGJjqJjGD" target="_blank" rel="noopener noreferrer">Öğrenci Paketini Seç</a>
+        </article>
+        <article>
+          <span>Profesyonel paketi</span>
+          <del>14.800 TL</del>
+          <strong>10.800 TL</strong>
+          <small>4.000 TL birlikte erişim avantajı</small>
+          <a class="pricing-button pricing-button-secondary" href="https://kampus.eresbiotech.com/order?link=k69NV&amp;pricing_plan=N9G8469RGV" target="_blank" rel="noopener noreferrer">Profesyonel Paketini Seç</a>
+        </article>
+      </div>
+      <p class="intro-package-note">Kredi kartına taksit seçenekleri ödeme adımında görüntülenir. Yalnızca tek bir eğitimle başlamak isterseniz, üstteki tekil kayıt seçeneklerini kullanabilirsiniz.</p>
+    </section>
+  </div>
+</article>

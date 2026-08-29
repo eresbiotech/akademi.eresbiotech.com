@@ -1,12 +1,13 @@
 {{- $isStudentLogin := eq .RelPermalink "/ders-giris/" -}}
 {{- $isLiveLabLanding := eq .Layout "live-lab-landing" -}}
+{{- $isIntroBigDataCourse := and .IsPage (eq .File.BaseFileName "biyoinformatik-giris-egitim-buyuk-veri-kurs") -}}
 <aside class="site-promo-bar" aria-label="Program paketleri duyurusu">
   <div class="container site-promo-bar-inner">
     <span>Yaz bitmeden %50’ye varan fırsatlar · 7 programa birlikte erişim 12.500 TL</span>
     <a href="{{ "/program-paketleri/" | relURL }}" data-event="promo_bar_click">İncele →</a>
   </div>
 </aside>
-<header class="site-header{{ if $isStudentLogin }} student-login-site-header{{ end }}{{ if $isLiveLabLanding }} live-lab-landing-header{{ end }}">
+<header class="site-header{{ if $isStudentLogin }} student-login-site-header{{ end }}{{ if $isLiveLabLanding }} live-lab-landing-header{{ end }}{{ if $isIntroBigDataCourse }} intro-conversion-header{{ end }}">
   <div class="container header-inner">
     <a class="brand" href="{{ "/" | relURL }}" aria-label="ERES Biyoinformatik">
       <img class="brand-logo" src="{{ "images/logos/Eres_Yatay_AcikZemin.svg" | relURL }}" alt="ERES Biyoinformatik">

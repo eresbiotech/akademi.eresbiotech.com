@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
 {{- $slug := .File.BaseFileName -}}
+{{- $isIntroBigDataCourse := eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $packageCatalog := site.Data.program_packages -}}
 {{- $programMeta := index $packageCatalog.programs $slug -}}
 {{- $programPackage := false -}}
@@ -128,6 +129,8 @@
     {{ .Content }}
   </div>
 </article>
+{{- else if $isIntroBigDataCourse -}}
+  {{ partial "post/intro-big-data-conversion.html" . }}
 {{- else -}}
 <article class="container page-shell training-page" data-meta-content-name="{{ $displayTitle }}" data-meta-content-category="Çalışma Programı">
   <header class="page-header training-hero training-hero-grid">

@@ -6436,3 +6436,93 @@ summary:focus-visible {
     bottom: max(106px, calc(90px + env(safe-area-inset-bottom)));
   }
 }
+
+/* Conversion page styles are limited to the introductory big-data course. */
+.intro-conversion-page { padding-top: clamp(28px, 5vw, 52px); }
+.intro-conversion-hero { align-items: start; display: grid; gap: clamp(28px, 5vw, 56px); grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); padding: clamp(24px, 4vw, 48px) 0 clamp(30px, 5vw, 58px); }
+.intro-conversion-copy { max-width: 720px; }
+.intro-conversion-copy h1 { font-size: clamp(2.2rem, 5.2vw, 4.25rem); line-height: 1.04; margin: 0; max-width: 13ch; }
+.intro-conversion-lead { color: var(--text); font-size: clamp(1.25rem, 2.2vw, 1.75rem); font-weight: 900; line-height: 1.28; margin: 20px 0 10px; }
+.intro-conversion-support { color: var(--muted); font-size: 1.08rem; line-height: 1.72; margin: 0; max-width: 62ch; }
+.intro-benefit-list { display: flex; flex-wrap: wrap; gap: 9px; list-style: none; margin: 24px 0 0; padding: 0; }
+.intro-benefit-list li { background: #f0fdfa; border: 1px solid rgba(13, 148, 136, .22); border-radius: 999px; color: #115e59; font-size: .86rem; font-weight: 850; padding: 7px 11px; }
+.intro-benefit-list li::before { content: "✓"; margin-right: 6px; }
+.intro-hero-offer { background: linear-gradient(155deg, #fff, #f5fbfa); border: 1px solid rgba(13, 148, 136, .24); border-radius: 12px; box-shadow: 0 20px 45px rgba(0, 33, 71, .1); padding: clamp(20px, 3vw, 30px); }
+.intro-offer-kicker { color: var(--teal); font-size: .76rem; font-weight: 950; letter-spacing: .08em; margin: 0 0 8px; text-transform: uppercase; }
+.intro-hero-offer h2 { font-size: clamp(1.35rem, 2.6vw, 1.8rem); margin: 0 0 18px; }
+.intro-plan-grid, .intro-final-plan-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.intro-plan-card { background: #fff; border: 1px solid var(--line); border-radius: 9px; color: var(--text); display: grid; gap: 5px; min-height: 132px; padding: 16px; transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+.intro-plan-card:hover { border-color: var(--teal); box-shadow: 0 12px 24px rgba(13, 148, 136, .12); color: var(--text); transform: translateY(-2px); }
+.intro-plan-card-professional { background: #f8fafc; }
+.intro-plan-card span, .intro-final-plan-grid span { color: var(--muted); font-size: .82rem; font-weight: 900; }
+.intro-plan-card strong, .intro-final-plan-grid strong { color: var(--text); font-size: clamp(1.35rem, 2.5vw, 1.8rem); line-height: 1.1; }
+.intro-plan-card small { color: var(--teal); font-weight: 900; margin-top: auto; }
+.intro-payment-note, .intro-access-note, .intro-final-reassurance { border-top: 1px solid var(--line); display: grid; gap: 4px; margin: 18px 0 0; padding-top: 16px; }
+.intro-payment-note strong, .intro-final-reassurance strong { color: var(--text); font-size: .92rem; }
+.intro-payment-note span, .intro-access-note, .intro-final-reassurance span { color: var(--muted); font-size: .88rem; line-height: 1.55; }
+.intro-conversion-content { display: grid; gap: 26px; }
+.intro-conversion-content .sales-section { margin: 0; }
+.section-lead { color: var(--muted); font-size: 1.05rem; line-height: 1.7; margin: 10px 0 0; max-width: 68ch; }
+.intro-concrete-grid, .intro-audience-grid, .intro-needs-grid { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px; }
+.intro-concrete-grid article, .intro-audience-grid article, .intro-needs-grid article { background: #fff; border: 1px solid var(--line); border-radius: 9px; padding: 20px; }
+.intro-concrete-grid h3, .intro-audience-grid h3 { font-size: 1.06rem; margin: 0 0 8px; }
+.intro-concrete-grid p, .intro-audience-grid p { color: var(--muted); line-height: 1.62; margin: 0; }
+.intro-audience-section { background: #f8fafc; }
+.intro-secondary-copy { color: var(--muted); font-size: .93rem; margin: 18px 0 0; }
+.intro-roadmap-section { background: linear-gradient(135deg, rgba(240, 253, 250, .75), rgba(255, 255, 255, .96)); }
+.intro-roadmap { margin-top: 18px; }
+.intro-course-proof-section { background: #f8fafc; }
+.intro-course-proof-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 22px; }
+.intro-course-proof-grid figure { background: #fff; border: 1px solid var(--line); border-radius: 9px; margin: 0; overflow: hidden; }
+.intro-course-proof-grid img { aspect-ratio: 1.54 / 1; display: block; height: auto; object-fit: cover; object-position: center; width: 100%; }
+.intro-course-proof-grid figcaption { color: var(--muted); font-size: .9rem; line-height: 1.55; padding: 14px 16px 16px; }
+.intro-outcomes-section { background: #fff; }
+.intro-needs-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.intro-needs-grid article { color: var(--body); font-weight: 800; line-height: 1.5; }
+.intro-faq-section { background: #f8fafc; }
+.intro-faq-list { display: grid; gap: 10px; margin-top: 20px; }
+.intro-faq-list details { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0 18px; }
+.intro-faq-list summary { color: var(--text); cursor: pointer; font-weight: 900; padding: 16px 0; }
+.intro-faq-list p { border-top: 1px solid var(--line); color: var(--muted); line-height: 1.62; margin: 0; padding: 14px 0 17px; }
+.intro-final-purchase { background: linear-gradient(135deg, rgba(0, 33, 71, .98), rgba(15, 118, 110, .92)); border-radius: 12px; box-shadow: var(--shadow-md); color: #fff; margin-top: 4px; padding: clamp(24px, 5vw, 48px); scroll-margin-top: 104px; }
+.intro-final-purchase .eyebrow, .intro-final-purchase h2 { color: #fff; }
+.intro-final-purchase > p:not(.eyebrow):not(.intro-final-reassurance) { color: rgba(255,255,255,.84); line-height: 1.65; max-width: 65ch; }
+.intro-final-plan-grid { margin-top: 24px; }
+.intro-final-plan-grid article { background: #fff; border-radius: 9px; display: grid; gap: 9px; padding: 20px; }
+.intro-final-plan-grid .pricing-button { margin-top: 8px; }
+.intro-final-reassurance { border-color: rgba(255,255,255,.2); }
+.intro-final-reassurance strong { color: #fff; }
+.intro-final-reassurance span { color: rgba(255,255,255,.82); }
+.intro-package-upsell { background: #f8fafc; border: 1px solid var(--line); border-radius: 12px; margin-top: 0; padding: clamp(22px, 4vw, 36px); }
+.intro-package-upsell h2 { margin: 0; }
+.intro-package-upsell > p:not(.eyebrow):not(.intro-package-note) { color: var(--muted); line-height: 1.65; margin: 12px 0 0; max-width: 70ch; }
+.intro-package-upsell ul { color: var(--body); display: grid; gap: 7px; margin: 20px 0 0; padding-left: 20px; }
+.intro-package-plan-grid { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px; }
+.intro-package-plan-grid article { background: #fff; border: 1px solid var(--line); border-radius: 9px; display: grid; gap: 7px; padding: 20px; }
+.intro-package-plan-grid span { color: var(--muted); font-size: .84rem; font-weight: 900; }
+.intro-package-plan-grid del { color: var(--muted); font-size: .9rem; }
+.intro-package-plan-grid strong { color: var(--text); font-size: 1.7rem; line-height: 1.1; }
+.intro-package-plan-grid small { color: #115e59; font-weight: 800; }
+.intro-package-plan-grid .pricing-button { margin-top: 9px; }
+.intro-package-note { border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; line-height: 1.55; margin: 20px 0 0; padding-top: 16px; }
+
+@media (max-width: 760px) {
+  .intro-conversion-hero { display: flex; flex-direction: column; gap: 18px; padding-top: 14px; }
+  .intro-conversion-copy { display: contents; }
+  .intro-conversion-copy .eyebrow { order: 1; }
+  .intro-conversion-copy h1 { order: 2; }
+  .intro-conversion-lead { order: 3; }
+  .intro-hero-offer { order: 4; }
+  .intro-conversion-support { order: 5; }
+  .intro-benefit-list { order: 6; }
+  .intro-conversion-copy h1 { max-width: none; }
+  .intro-conversion-support { font-size: 1rem; }
+  .intro-benefit-list li { font-size: .8rem; }
+  .intro-needs-grid, .intro-course-proof-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .intro-plan-grid, .intro-final-plan-grid, .intro-concrete-grid, .intro-audience-grid, .intro-package-plan-grid { grid-template-columns: 1fr; }
+  .intro-plan-card { min-height: 112px; }
+  .intro-conversion-page { padding-top: 16px; }
+}
