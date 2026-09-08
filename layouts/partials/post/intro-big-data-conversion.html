@@ -31,6 +31,15 @@
       </div>
       <p class="intro-payment-note"><strong>Kredi kartına taksit imkanı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
       <p class="intro-access-note">Kayıt sonrası ders içeriklerine çevrimiçi olarak erişebilirsiniz.</p>
+      <aside class="intro-value-summary" aria-label="Kayıtla birlikte gelenler">
+        <strong>Kaydınızla birlikte</strong>
+        <ul>
+          <li>Başlangıç seviyesine uygun çalışma rotası</li>
+          <li>GEO/GEO2R ve gerçek biyolojik veri kaynaklarına giriş</li>
+          <li>Kendi hızınızda, tekrar izlenebilir videolu içerikler</li>
+          <li>QR kodlu doğrulanabilir tamamlama ve katılım belgesi</li>
+        </ul>
+      </aside>
     </section>
   </header>
 
@@ -71,29 +80,53 @@
     </section>
 
     <section class="sales-section intro-course-proof-section" aria-labelledby="intro-course-proof-title">
-      <p class="eyebrow">Dersin içinden</p>
-      <h2 id="intro-course-proof-title">Kurs ekranlarından gerçek örnekler</h2>
-      <p class="section-lead">Program; kavram kartları, kısa rehberler ve araştırma verisini yorumlamaya bağlayan ders ekranlarıyla ilerler.</p>
-      <div class="intro-course-proof-grid">
-        {{ with resources.Get "images/course-proof/intro-course-roadmap.jpg" }}
-          <figure>
-            <img src="{{ .RelPermalink }}" alt="Biyoinformatiğe giriş kurs yol haritasını gösteren ders ekranı" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
-            <figcaption>Kurs yol haritası; temel veri kaynakları, GEO/GEO2R ve biyoinformatikte programlama araçlarının rolüne giriş.</figcaption>
-          </figure>
-        {{ end }}
-        {{ with resources.Get "images/course-proof/intro-course-blast-guide.jpg" }}
-          <figure>
-            <img src="{{ .RelPermalink }}" alt="BLAST ne yapar ve ne yapmaz başlıklı kurs mini rehberi" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
-            <figcaption>BLAST sonucunu kesin hüküm yerine, araştırma için yorumlanacak bir başlangıç ipucu olarak ele alan mini rehber.</figcaption>
-          </figure>
-        {{ end }}
-        {{ with resources.Get "images/course-proof/intro-course-geo2r-r.jpg" }}
-          <figure>
-            <img src="{{ .RelPermalink }}" alt="GEO2R çıktısından R ile filtreleme ve biyolojik yoruma geçişi anlatan ders ekranı" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
-            <figcaption>GEO2R çıktısından CSV/tablo ve R ile filtreleme mantığına, ardından biyolojik yoruma uzanan ders bağlantısı.</figcaption>
-          </figure>
-        {{ end }}
+      <p class="eyebrow">Gerçek kurs ortamı</p>
+      <h2 id="intro-course-proof-title">Kaydolduğunuzda sizi nasıl bir çalışma ortamı bekliyor?</h2>
+      <p class="section-lead">Programın gerçek ders ortamından bir görünüm.</p>
+      {{ with resources.Get "images/course-proof/intro-course-roadmap.jpg" }}
+        <figure class="intro-campus-primary">
+          <img src="{{ .RelPermalink }}" alt="Biyoinformatiğe giriş kursunun navigasyon ve ders yol haritasını gösteren gerçek ERES Kampüs ekranı" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
+          <figcaption>Sol tarafta ders rotası, ana alanda ise konu anlatımı ve öğrenme hedefleriyle ilerleyen gerçek kurs ekranı.</figcaption>
+        </figure>
+      {{ end }}
+      <details class="intro-campus-details">
+        <summary>Gerçek ders ekranlarından iki örnek daha</summary>
+        <div class="intro-course-proof-grid">
+          {{ with resources.Get "images/course-proof/intro-course-blast-guide.jpg" }}
+            <figure>
+              <img src="{{ .RelPermalink }}" alt="BLAST ne yapar ve ne yapmaz başlıklı gerçek kurs mini rehberi" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
+              <figcaption>BLAST sonucunu kesin hüküm yerine yorumlanacak bir başlangıç ipucu olarak ele alan mini rehber.</figcaption>
+            </figure>
+          {{ end }}
+          {{ with resources.Get "images/course-proof/intro-course-geo2r-r.jpg" }}
+            <figure>
+              <img src="{{ .RelPermalink }}" alt="GEO2R çıktısından R ile filtreleme ve biyolojik yoruma geçişi anlatan gerçek ders ekranı" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
+              <figcaption>GEO2R çıktısından CSV/tablo ve R ile filtreleme mantığına uzanan ders bağlantısı.</figcaption>
+            </figure>
+          {{ end }}
+        </div>
+      </details>
+    </section>
+
+    <section class="intro-proof-purchase" aria-labelledby="intro-proof-purchase-title">
+      <div>
+        <p class="eyebrow">Program erişimi</p>
+        <h2 id="intro-proof-purchase-title">Bu çalışma ortamına erişin.</h2>
+        <p>Size uygun bağımsız kayıt seçeneğini belirleyerek ders rotasına erişebilirsiniz.</p>
       </div>
+      <div class="intro-proof-plan-grid">
+        <a class="intro-plan-card" href="{{ $studentURL }}" target="_blank" rel="noopener noreferrer">
+          <span>Öğrenci</span>
+          <strong>{{ .Params.student_price }}</strong>
+          <small>Öğrenci Olarak Başla</small>
+        </a>
+        <a class="intro-plan-card intro-plan-card-professional" href="{{ $professionalURL }}" target="_blank" rel="noopener noreferrer">
+          <span>Profesyonel</span>
+          <strong>{{ .Params.employee_price }}</strong>
+          <small>Profesyonel Olarak Başla</small>
+        </a>
+      </div>
+      <p class="intro-payment-note"><strong>Kredi kartına taksit imkanı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
     </section>
 
     <section class="sales-section outcome-section intro-outcomes-section" aria-labelledby="intro-outcomes-title">
