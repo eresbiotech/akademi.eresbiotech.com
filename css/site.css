@@ -6662,6 +6662,7 @@ summary:focus-visible {
 .academy-current-item .academy-text-link { background: #fff; border-radius: 7px; color: #0b2a5d; margin-top: 22px; padding: 12px 16px; }
 .academy-current-media { background: #eef3fb; margin: 0; min-height: 100%; overflow: hidden; position: relative; z-index: 1; }
 .academy-current-media img { display: block; height: 100%; object-fit: contain; object-position: center; width: 100%; }
+.academy-current-human img { object-fit: cover; object-position: center 46%; }
 
 .academy-programs { scroll-margin-top: 100px; }
 .academy-programs-header { margin-bottom: 30px; }
@@ -6700,8 +6701,11 @@ summary:focus-visible {
 .academy-output-list span { color: #6652ac; font-size: .68rem; font-weight: 950; letter-spacing: .09em; }
 .academy-output-list h3 { color: #122d5b; font-family: Georgia, "Times New Roman", serif; font-size: 1.28rem; margin: 7px 0 0; }
 
-.academy-guidance { align-items: center; border-bottom: 1px solid rgba(0,141,132,.22); border-radius: 0; border-top: 1px solid rgba(0,141,132,.22); display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr) auto; margin-top: 72px; padding: 28px 0; }
+.academy-guidance { align-items: center; border-bottom: 1px solid rgba(0,141,132,.22); border-radius: 0; border-top: 1px solid rgba(0,141,132,.22); display: grid; gap: clamp(24px, 4vw, 44px); grid-template-columns: minmax(0, 1fr) minmax(250px, .72fr); margin-top: 72px; padding: 28px 0; }
 .academy-guidance h2 { font-size: 1.9rem; }
+.academy-guidance-copy .academy-button { margin-top: 22px; }
+.academy-guidance-media { border-radius: 10px; margin: 0; overflow: hidden; }
+.academy-guidance-media img { aspect-ratio: 1.38 / 1; display: block; height: 100%; object-fit: cover; object-position: center 48%; width: 100%; }
 
 .academy-packages { background: linear-gradient(110deg, #f8f6ff, #fbfbfe); border-radius: 0; padding: 42px; }
 .academy-package-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -6797,6 +6801,7 @@ summary:focus-visible {
   .academy-current-item .academy-text-link { margin-top: 20px; }
   .academy-current-media { aspect-ratio: 1.5 / 1; min-height: 0; }
   .academy-current-media img { object-position: center; }
+  .academy-guidance-media { max-width: 640px; width: 100%; }
   .academy-program-grid { grid-template-columns: 1fr; }
   .academy-program-card { min-height: 0; }
   .academy-program-card-copy { padding: 20px 19px 10px; }
@@ -6804,6 +6809,7 @@ summary:focus-visible {
   .academy-output-list { grid-template-columns: 1fr; }
   .academy-output-list img { height: auto; max-height: none; object-fit: contain; }
   .academy-guidance { margin-top: 60px; padding: 25px 0; }
+  .academy-guidance-media img { aspect-ratio: 1.45 / 1; }
   .academy-packages { margin-left: 0; margin-right: 0; padding: 28px 21px; }
   .academy-process { padding-top: 56px; }
   .academy-campus { margin-top: 64px; padding: 58px 0; }
@@ -6834,4 +6840,19 @@ summary:focus-visible {
   .intro-plan-grid, .intro-final-plan-grid, .intro-concrete-grid, .intro-audience-grid, .intro-package-plan-grid { grid-template-columns: 1fr; }
   .intro-plan-card { min-height: 112px; }
   .intro-conversion-page { padding-top: 16px; }
+}
+
+/* Human editorial visuals are scoped to the homepage and seven mapped programs. */
+.editorial-human-visual { align-items: stretch; background: linear-gradient(135deg, #f7fafc, #f1f7f8); border: 1px solid rgba(0, 141, 132, .2); border-radius: 12px; display: grid; gap: 0; grid-template-columns: minmax(0, 1fr) minmax(300px, .95fr); margin: 0 0 clamp(34px, 5vw, 54px); overflow: hidden; }
+.editorial-human-visual-copy { align-self: center; padding: clamp(26px, 4.5vw, 48px); }
+.editorial-human-visual-copy h2 { color: #071d42; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.65rem, 3vw, 2.45rem); letter-spacing: 0; line-height: 1.1; margin: 8px 0 14px; max-width: 16ch; }
+.editorial-human-visual-copy p:not(.eyebrow) { color: #475569; font-size: 1rem; line-height: 1.68; margin: 0; max-width: 53ch; }
+.editorial-human-visual-media { background: #dfe9ef; margin: 0; min-height: 320px; overflow: hidden; }
+.editorial-human-visual-media img { display: block; height: 100%; object-fit: cover; object-position: var(--editorial-object-position, center); width: 100%; }
+
+@media (max-width: 760px) {
+  .editorial-human-visual { grid-template-columns: 1fr; }
+  .editorial-human-visual-copy { padding: 28px 22px; }
+  .editorial-human-visual-copy h2 { max-width: 20ch; }
+  .editorial-human-visual-media { aspect-ratio: 1.18 / 1; min-height: 0; }
 }
