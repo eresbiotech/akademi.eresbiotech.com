@@ -6,6 +6,8 @@
 {{- $advancedPackage := index $packages "advanced" -}}
 {{- $homeCurrent := index site.Data "home-current" -}}
 {{- $currentItems := where $homeCurrent.items "active" true -}}
+{{- $testimonials := site.Data.testimonials -}}
+{{- $iremTestimonial := index $testimonials "irem" -}}
 {{- $introProgram := site.GetPage "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $toolsProgram := site.GetPage "/post/biyoinformatik-veritabanlari-araclar-egitimi" -}}
 {{- $genomeProgram := site.GetPage "/post/ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
@@ -224,6 +226,8 @@
     {{ with $phylogeneticTree }}<figure><img src="{{ .RelPermalink }}" alt="Türler arasındaki ilişkileri gösteren temsili filogenetik ağaç" width="{{ .Width }}" height="{{ .Height }}" loading="lazy"><figcaption><span>phyML</span><h3>Bir filogenetik ağaç</h3></figcaption></figure>{{ end }}
   </div>
 </section>
+
+{{ partial "testimonial.html" (dict "testimonial" $iremTestimonial "variant" "short" "heading_id" "home-testimonial-title") }}
 
 <section class="container academy-final-cta" aria-labelledby="academy-final-title">
   <div>

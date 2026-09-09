@@ -6701,6 +6701,18 @@ summary:focus-visible {
 .academy-output-list span { color: #6652ac; font-size: .68rem; font-weight: 950; letter-spacing: .09em; }
 .academy-output-list h3 { color: #122d5b; font-family: Georgia, "Times New Roman", serif; font-size: 1.28rem; margin: 7px 0 0; }
 
+.testimonial-block { background: #f7fafc; border-left: 3px solid #008d84; border-radius: 0 10px 10px 0; margin-top: 72px; padding: clamp(28px, 4vw, 42px); }
+.testimonial-block .eyebrow { margin: 0; }
+.testimonial-block h2 { color: #071d42; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.55rem, 2.5vw, 2.15rem); letter-spacing: 0; line-height: 1.12; margin: 8px 0 20px; }
+.testimonial-block blockquote { border: 0; margin: 0; max-width: 850px; padding: 0; }
+.testimonial-block blockquote > p { color: #1f344f; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.2rem, 2.1vw, 1.52rem); line-height: 1.55; margin: 0; }
+.testimonial-block footer { align-items: baseline; display: flex; flex-wrap: wrap; gap: 7px 12px; margin-top: 20px; }
+.testimonial-block cite { color: #0b2a5d; font-size: 1rem; font-style: normal; font-weight: 900; }
+.testimonial-block footer span { color: #64748b; font-size: .93rem; line-height: 1.45; }
+.academy-outputs + .testimonial-block { margin-top: 72px; }
+.intro-conversion-content .testimonial-block { margin: 0; }
+.intro-conversion-content .testimonial-block blockquote > p { font-size: clamp(1.1rem, 2vw, 1.34rem); }
+
 .academy-guidance { align-items: center; border-bottom: 1px solid rgba(0,141,132,.22); border-radius: 0; border-top: 1px solid rgba(0,141,132,.22); display: grid; gap: clamp(24px, 4vw, 44px); grid-template-columns: minmax(0, 1fr) minmax(250px, .72fr); margin-top: 72px; padding: 28px 0; }
 .academy-guidance h2 { font-size: 1.9rem; }
 .academy-guidance-copy .academy-button { margin-top: 22px; }
@@ -6808,6 +6820,8 @@ summary:focus-visible {
   .academy-program-card-purchase { padding: 15px 19px 19px; }
   .academy-output-list { grid-template-columns: 1fr; }
   .academy-output-list img { height: auto; max-height: none; object-fit: contain; }
+  .testimonial-block { margin-top: 60px; padding: 27px 22px; }
+  .testimonial-block footer { align-items: flex-start; flex-direction: column; gap: 3px; }
   .academy-guidance { margin-top: 60px; padding: 25px 0; }
   .academy-guidance-media img { aspect-ratio: 1.45 / 1; }
   .academy-packages { margin-left: 0; margin-right: 0; padding: 28px 21px; }

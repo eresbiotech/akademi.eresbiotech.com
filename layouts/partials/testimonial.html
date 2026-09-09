@@ -1,0 +1,17 @@
+{{- $testimonial := .testimonial -}}
+{{- $variant := .variant | default "full" -}}
+{{- $headingID := .heading_id -}}
+{{- if and $testimonial $testimonial.approved -}}
+  {{- $quote := $testimonial.full_quote -}}
+  {{- if eq $variant "short" -}}
+    {{- $quote = $testimonial.short_quote -}}
+  {{- end -}}
+  <section class="testimonial-block testimonial-block--{{ $variant }}" aria-labelledby="{{ $headingID }}">
+    <p class="eyebrow">KATILIMCI DENEYİMİ</p>
+    <h2 id="{{ $headingID }}">Programdan bir geri bildirim</h2>
+    <blockquote>
+      <p>{{ $quote }}</p>
+      <footer><cite>{{ $testimonial.name }}</cite><span>{{ $testimonial.program }}</span></footer>
+    </blockquote>
+  </section>
+{{- end -}}

@@ -81,6 +81,8 @@
       </ol>
     </section>
 
+    {{ partial "testimonial.html" (dict "testimonial" (index site.Data.testimonials "irem") "variant" "full" "heading_id" "intro-testimonial-title") }}
+
     <section class="sales-section intro-course-proof-section" aria-labelledby="intro-course-proof-title">
       <p class="eyebrow">Gerçek kurs ortamı</p>
       <h2 id="intro-course-proof-title">Kaydolduğunuzda sizi nasıl bir çalışma ortamı bekliyor?</h2>
