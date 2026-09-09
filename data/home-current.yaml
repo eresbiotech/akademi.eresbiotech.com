@@ -1,0 +1,9 @@
+items:
+  - active: true
+    featured: true
+    type: academic-season
+    label: "AKADEMİK DÖNEM"
+    title: "Dönem başlamadan önce başlayın."
+    summary: "Şimdi birkaç akşam ayırın; dönem yoğunlaştığında temel kavramlara ve ilk uygulamalara yabancı olmayın."
+    url: "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs/"
+    cta: "Başlangıç programını incele"
