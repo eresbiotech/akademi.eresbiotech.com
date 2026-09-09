@@ -1,0 +1,20 @@
+{{- $page := .page -}}
+{{- $visuals := index site.Data "product-editorial-visuals" -}}
+{{- $visual := index $visuals.programs $page.File.BaseFileName -}}
+{{- with $visual -}}
+  {{- $visualData := . -}}
+  {{- with resources.Get $visualData.image -}}
+    {{- $desktop := .Fit "1200x1000 webp q82" -}}
+    {{- $mobile := .Fit "640x800 webp q76" -}}
+    <section class="editorial-human-visual" aria-labelledby="editorial-human-visual-title">
+      <div class="editorial-human-visual-copy">
+        <p class="eyebrow">{{ $visualData.eyebrow }}</p>
+        <h2 id="editorial-human-visual-title">{{ $visualData.title }}</h2>
+        <p>{{ $visualData.description }}</p>
+      </div>
+      <figure class="editorial-human-visual-media">
+        <img src="{{ $desktop.RelPermalink }}" srcset="{{ $mobile.RelPermalink }} {{ $mobile.Width }}w, {{ $desktop.RelPermalink }} {{ $desktop.Width }}w" sizes="(max-width: 760px) 100vw, 48vw" alt="{{ $visualData.alt }}" width="{{ $desktop.Width }}" height="{{ $desktop.Height }}" loading="lazy" style="--editorial-object-position: {{ $visualData.position | default "center" }}">
+      </figure>
+    </section>
+  {{- end -}}
+{{- end -}}

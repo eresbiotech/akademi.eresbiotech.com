@@ -31,6 +31,8 @@
 {{- $courseRoadmap := resources.Get "images/course-proof/intro-course-roadmap.jpg" -}}
 {{- $courseGeo2r := resources.Get "images/course-proof/intro-course-geo2r-r.jpg" -}}
 {{- $courseBlast := resources.Get "images/course-proof/intro-course-blast-guide.jpg" -}}
+{{- $academicSeasonHuman := resources.Get "images/editorial/people/student-evening-data-analysis-01.png" -}}
+{{- $guidanceHuman := resources.Get "images/editorial/people/research-team-collaboration-01.png" -}}
 
 <section id="hero" class="academy-hero" aria-labelledby="academy-hero-title">
   <div class="container academy-hero-inner">
@@ -73,9 +75,11 @@
             {{ with .summary }}<span>{{ . }}</span>{{ end }}
             {{ with .url }}<a class="academy-text-link" href="{{ . | relURL }}" data-event="homepage_current_click">{{ $item.cta | default "İncele" }} <span aria-hidden="true">→</span></a>{{ end }}
           </div>
-          {{ if .featured }}{{ with $expressionOverview }}
-            <figure class="academy-current-media academy-current-science">
-              <img src="{{ .RelPermalink }}" alt="Gen ifade analizi ve kümeleme türünü gösteren bilimsel görsel" width="{{ .Width }}" height="{{ .Height }}" loading="lazy">
+          {{ if .featured }}{{ with $academicSeasonHuman }}
+            {{- $desktop := .Fit "1200x900 webp q82" -}}
+            {{- $mobile := .Fit "640x480 webp q76" -}}
+            <figure class="academy-current-media academy-current-human">
+              <img src="{{ $desktop.RelPermalink }}" srcset="{{ $mobile.RelPermalink }} {{ $mobile.Width }}w, {{ $desktop.RelPermalink }} {{ $desktop.Width }}w" sizes="(max-width: 520px) 100vw, 48vw" alt="Bilgisayarında veri analizi çalışan temsili araştırmacı" width="{{ $desktop.Width }}" height="{{ $desktop.Height }}" loading="lazy">
             </figure>
           {{ end }}{{ end }}
         </article>
@@ -121,12 +125,19 @@
 </section>
 
 <section class="container academy-guidance" aria-labelledby="academy-guidance-title">
-  <div>
+  <div class="academy-guidance-copy">
     <p class="eyebrow">YAZILI DESTEK</p>
     <h2 id="academy-guidance-title">Nereden başlayacağınızdan emin değil misiniz?</h2>
     <p>Ne öğrenmek ya da ne üzerinde çalışmak istediğinizi bize yazın; birlikte uygun programı bulalım.</p>
+    <a class="academy-button academy-button-primary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp’tan sor</a>
   </div>
-  <a class="academy-button academy-button-primary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp’tan sor</a>
+  {{ with $guidanceHuman }}
+    {{- $desktop := .Fit "1000x760 webp q80" -}}
+    {{- $mobile := .Fit "640x486 webp q76" -}}
+    <figure class="academy-guidance-media">
+      <img src="{{ $desktop.RelPermalink }}" srcset="{{ $mobile.RelPermalink }} {{ $mobile.Width }}w, {{ $desktop.RelPermalink }} {{ $desktop.Width }}w" sizes="(max-width: 820px) 100vw, 34vw" alt="Biyolojik veri üzerinde birlikte çalışan temsili araştırma ekibi" width="{{ $desktop.Width }}" height="{{ $desktop.Height }}" loading="lazy">
+    </figure>
+  {{ end }}
 </section>
 
 <section id="paketler" class="container academy-section academy-packages" aria-labelledby="academy-packages-title">
