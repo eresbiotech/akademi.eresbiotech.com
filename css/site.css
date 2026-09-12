@@ -3327,6 +3327,60 @@ h1 {
   margin: 10px 0 0;
 }
 
+.purchase-certainty-note {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 16px 0 0;
+}
+
+.purchase-certainty-note p {
+  margin: 8px 0 0;
+}
+
+.purchase-certainty-note .purchase-eligibility-note {
+  margin-top: 8px;
+}
+
+.purchase-certainty-note strong {
+  color: var(--text);
+}
+
+.purchase-certainty-note a {
+  color: var(--teal);
+  font-weight: 850;
+  text-decoration: underline;
+  text-decoration-color: rgba(13, 148, 136, 0.28);
+  text-underline-offset: 3px;
+}
+
+.purchase-eligibility-note {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
+
+.purchase-eligibility-note strong {
+  color: var(--text);
+}
+
+.purchase-policy-details {
+  border-top: 1px solid rgba(13, 148, 136, 0.2);
+  margin-top: 12px;
+  padding-top: 10px;
+}
+
+.purchase-policy-details summary {
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.purchase-policy-details p {
+  font-size: 0.82rem;
+}
+
 .payment-installment-note {
   color: var(--muted);
   display: grid;
@@ -6716,6 +6770,9 @@ summary:focus-visible {
 .academy-guidance { align-items: center; border-bottom: 1px solid rgba(0,141,132,.22); border-radius: 0; border-top: 1px solid rgba(0,141,132,.22); display: grid; gap: clamp(24px, 4vw, 44px); grid-template-columns: minmax(0, 1fr) minmax(250px, .72fr); margin-top: 72px; padding: 28px 0; }
 .academy-guidance h2 { font-size: 1.9rem; }
 .academy-guidance-copy .academy-button { margin-top: 22px; }
+.academy-guidance-paths { display: grid; gap: 8px 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); list-style: none; margin: 18px 0 0; max-width: 660px; padding: 0; }
+.academy-guidance-paths a { align-items: center; border-bottom: 1px solid rgba(0, 141, 132, .2); color: #183a61; display: flex; font-size: .93rem; font-weight: 800; gap: 8px; justify-content: space-between; line-height: 1.35; min-height: 42px; padding: 7px 0; }
+.academy-guidance-paths a:hover { color: var(--teal); }
 .academy-guidance-media { border-radius: 10px; margin: 0; overflow: hidden; }
 .academy-guidance-media img { aspect-ratio: 1.38 / 1; display: block; height: 100%; object-fit: cover; object-position: center 48%; width: 100%; }
 
@@ -6824,6 +6881,7 @@ summary:focus-visible {
   .testimonial-block footer { align-items: flex-start; flex-direction: column; gap: 3px; }
   .academy-guidance { margin-top: 60px; padding: 25px 0; }
   .academy-guidance-media img { aspect-ratio: 1.45 / 1; }
+  .academy-guidance-paths { grid-template-columns: 1fr; }
   .academy-packages { margin-left: 0; margin-right: 0; padding: 28px 21px; }
   .academy-process { padding-top: 56px; }
   .academy-campus { margin-top: 64px; padding: 58px 0; }
