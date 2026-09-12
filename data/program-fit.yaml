@@ -1,0 +1,44 @@
+biyoinformatik-veritabanlari-araclar-egitimi:
+  situations:
+    - title: "Araç ekranlarında nereden başlayacağınızı bilmiyorsanız"
+      text: "NCBI, UniProt, PDB veya BLAST kayıtlarında hangi alanların araştırma sorunuz için önemli olduğunu ayırt etmek istiyorsanız."
+    - title: "Gen ve protein kayıtlarını ilişkilendirmeniz gerekiyorsa"
+      text: "Gen, protein, dizi ve anotasyon bilgilerinin veri tabanlarında nasıl temsil edildiğini daha bilinçli okumak istiyorsanız."
+    - title: "BLAST çıktısını yorumlamak istiyorsanız"
+      text: "Temel metrikleri, dizi hizalama mantığını ve kaynak seçimini biyolojik sorunuzla birlikte değerlendirmek istiyorsanız."
+
+ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim:
+  situations:
+    - title: "Gen, transkript veya varyant bilgisini karşılaştırıyorsanız"
+      text: "Aynı biyolojik soruyu NCBI, Ensembl ve UCSC üzerinden daha düzenli incelemek istiyorsanız."
+    - title: "Genom bölgesini ekranda okumak istiyorsanız"
+      text: "Genom koordinatlarını, anotasyonları ve farklı görünüm seçeneklerini araştırma sorunuzla ilişkilendirmek istiyorsanız."
+    - title: "Kaynaklar arasındaki farkları ayırmak istiyorsanız"
+      text: "RefSeq, MANE ve Ensembl anotasyonlarının hangi bağlamda farklılaştığını görmek istiyorsanız."
+
+tek-hucre-rna-seq-analizi-egitimi:
+  situations:
+    - title: "scRNA-seq akışını takip etmekte zorlanıyorsanız"
+      text: "Tek hücre verisindeki kalite kontrol, kümeleme ve boyut indirgeme adımlarının ne yaptığını anlamak istiyorsanız."
+    - title: "Marker genleri daha dikkatli yorumlamak istiyorsanız"
+      text: "Hücre tipi yorumlaması ile marker genler arasındaki ilişkiyi daha bilinçli değerlendirmek istiyorsanız."
+    - title: "Seurat çıktılarıyla karşılaşıyorsanız"
+      text: "Seurat tabanlı analiz sonuçlarını makale okuma veya proje planlama bağlamında takip etmek istiyorsanız."
+
+uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme:
+  situations:
+    - title: "PDB kaydında neye bakacağınızı bilmiyorsanız"
+      text: "Protein yapı dosyalarını, ligandları ve aktif bölge bilgisini araştırma sorunuzla ilişkilendirmek istiyorsanız."
+    - title: "AlphaFold çıktısını yorumlamak istiyorsanız"
+      text: "Yapı tahminlerindeki güven ve sınırlılık bilgisini daha bilinçli okumak istiyorsanız."
+    - title: "Yapısal bir başlangıç arıyorsanız"
+      text: "Protein yapısı ve in silico modelleme yaklaşımının temel mantığını uygulamalı örneklerle görmek istiyorsanız."
+
+phyml-uygulamali-filogenetik-egitimi:
+  situations:
+    - title: "Dizi hizalamasını filogenetik soruya bağlamak istiyorsanız"
+      text: "Çoklu hizalama çıktısının analiz öncesinde nasıl değerlendirildiğini anlamak istiyorsanız."
+    - title: "Ağaç üretmeden önce analizin mantığını görmek istiyorsanız"
+      text: "Model seçimi ve phyML ile ağaç oluşturma akışını biyolojik sorunuzla ilişkilendirmek istiyorsanız."
+    - title: "Bootstrap değerlerini yorumlamak istiyorsanız"
+      text: "Ağaçtaki destek değerlerini ve sonuçların sınırlarını daha bilinçli ele almak istiyorsanız."

@@ -1,0 +1,15 @@
+{{- $page := .page -}}
+{{- if $page -}}
+  <div class="purchase-certainty-note">
+    <p><strong>Program biçimi:</strong> Videolu içeriklerle kendi hızınızda çevrimiçi çalışırsınız.</p>
+    <p><strong>Erişim:</strong> Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
+    {{ partial "purchase-eligibility.html" . }}
+    <details class="purchase-policy-details">
+      <summary>Destek ve belge bilgisi</summary>
+      <p>Yazılı destek; program içeriği, hesabınıza erişim ve ders içinde anlaşılmayan veya takıldığınız noktalar içindir.</p>
+      <p>Kişisel veri setinizde kapsamlı hata ayıklama, özel veri analizi, tez veya proje metodolojisi danışmanlığı ve sınırsız mentorluk standart destek kapsamında değildir.</p>
+      <p>Programı tamamlayan katılımcılara ERES tarafından Katılım ve Tamamlama Belgesi sunulur.</p>
+    </details>
+    <p class="purchase-certainty-links"><a href="{{ "/ders-giris/" | relURL }}">Erişim hakkında</a><span aria-hidden="true">·</span><a href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Satın alma veya erişim sorusu sorun</a></p>
+  </div>
+{{- end -}}

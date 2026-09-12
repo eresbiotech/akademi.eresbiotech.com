@@ -47,7 +47,7 @@
         <a class="academy-button academy-button-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Nereden başlamalıyım?</a>
       </div>
       <ul class="academy-hero-signals" aria-label="Program avantajları">
-        <li>Hemen erişim</li>
+        <li>Hesabınızda sürekli erişim</li>
         <li>Gerçek veri ve uygulamalar</li>
         <li>Yazılı destek</li>
       </ul>
@@ -130,7 +130,13 @@
   <div class="academy-guidance-copy">
     <p class="eyebrow">YAZILI DESTEK</p>
     <h2 id="academy-guidance-title">Nereden başlayacağınızdan emin değil misiniz?</h2>
-    <p>Ne öğrenmek ya da ne üzerinde çalışmak istediğinizi bize yazın; birlikte uygun programı bulalım.</p>
+    <p>Durumunuza en yakın başlangıç noktasını seçin; daha özel bir sorunuz varsa bize yazın.</p>
+    <ul class="academy-guidance-paths">
+      <li><a href="{{ $introProgram.RelPermalink }}">Biyoinformatiğe yeniyim <span aria-hidden="true">→</span></a></li>
+      <li><a href="{{ $rProgram.RelPermalink }}">R ile biyolojik veri analizi <span aria-hidden="true">→</span></a></li>
+      <li><a href="{{ $genomeProgram.RelPermalink }}">Genom tarayıcıları ve kayıtlar <span aria-hidden="true">→</span></a></li>
+      <li><a href="#programlar">Belirli bir ileri analiz ihtiyacım var <span aria-hidden="true">→</span></a></li>
+    </ul>
     <a class="academy-button academy-button-primary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">WhatsApp’tan sor</a>
   </div>
   {{ with $guidanceHuman }}
@@ -175,7 +181,7 @@
     </div>
   </div>
   <ol class="academy-process-list">
-    <li><span>01</span><h3>Başlayın</h3><p>Derslere hemen erişin.</p></li>
+    <li><span>01</span><h3>Başlayın</h3><p>Programınıza hesabınızdan sürekli erişin.</p></li>
     <li><span>02</span><h3>Deneyin</h3><p>Araçları ve verileri kendi hızınızda kullanın.</p></li>
     <li><span>03</span><h3>Uygulayın</h3><p>Bir analiz, grafik, model ya da başka bir çıktı üretin.</p></li>
     <li><span>04</span><h3>Sorun</h3><p>Takıldığınız yerde WhatsApp veya e-posta üzerinden bize yazın.</p></li>

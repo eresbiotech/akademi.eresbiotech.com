@@ -10,7 +10,7 @@
       <ul class="intro-benefit-list" aria-label="Eğitim özellikleri">
         <li>Başlangıç seviyesine uygun</li>
         <li>Kendi hızınızda</li>
-        <li>Kayıt sonrası çevrimiçi erişim</li>
+        <li>Hesabınızda sürekli erişim</li>
         <li>Videolu ve uygulama odaklı</li>
       </ul>
     </div>
@@ -30,14 +30,14 @@
         </a>
       </div>
       <p class="intro-payment-note"><strong>Kredi kartına taksit imkanı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
-      <p class="intro-access-note">Kayıt sonrası ders içeriklerine çevrimiçi olarak erişebilirsiniz.</p>
+      {{ partial "purchase-certainty.html" (dict "page" .) }}
       <aside class="intro-value-summary" aria-label="Kayıtla birlikte gelenler">
         <strong>Kaydınızla birlikte</strong>
         <ul>
           <li>Başlangıç seviyesine uygun çalışma rotası</li>
           <li>GEO/GEO2R ve gerçek biyolojik veri kaynaklarına giriş</li>
           <li>Kendi hızınızda, tekrar izlenebilir videolu içerikler</li>
-          <li>QR kodlu doğrulanabilir tamamlama ve katılım belgesi</li>
+          <li>ERES tarafından sunulan Katılım ve Tamamlama Belgesi</li>
         </ul>
       </aside>
     </section>
@@ -165,8 +165,8 @@
         <details><summary>Programda GEO ve GEO2R var mı?</summary><p>Evet. Kurs yol haritasında GEO/GEO2R ile ekspresyon verisine ilk bakış ve GEO2R çıktısını yorumlamaya giriş yer alır. Bu bölüm, ileri düzey GEO2R uzmanlığı değil; sonraki analiz adımlarına hazırlayan bir başlangıç çerçevesidir.</p></details>
         <details><summary>Programda hangi araç ve veri kaynaklarıyla tanışacağım?</summary><p>Program kapsamında NCBI, PubMed, Nucleotide, Gene, Protein, GEO ve GEO2R gibi kaynakların araştırma sorularıyla ilişkisini tanırsınız.</p></details>
         <details><summary>Program canlı mı, kendi hızımda mı?</summary><p>Program videolu ve tekrar izlenebilir içeriklerle, kendi hızınızda ilerleyebileceğiniz şekilde sunulur.</p></details>
-        <details><summary>Satın aldıktan sonra ne zaman başlayabilirim?</summary><p>Kayıt sonrası ders içeriklerine çevrimiçi olarak erişebilir, çalışmanızı kendi akademik veya profesyonel takviminize göre planlayabilirsiniz.</p></details>
-        <details><summary>Eğitim sonunda belge var mı?</summary><p>Eğitimdeki çalışmaları tamamlayan katılımcılara QR kodlu ve doğrulanabilir Certifly tamamlama ve katılım belgesi verilir.</p></details>
+        <details><summary>Satın aldıktan sonra ne zaman başlayabilirim?</summary><p>Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır; çalışmanızı kendi akademik veya profesyonel takviminize göre planlayabilirsiniz.</p></details>
+        <details><summary>Eğitim sonunda belge var mı?</summary><p>Eğitimdeki çalışmaları tamamlayan katılımcılara ERES tarafından Katılım ve Tamamlama Belgesi sunulur.</p></details>
         <details><summary>Taksit yapabilir miyim?</summary><p>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</p></details>
         <details><summary>Satın aldıktan sonra derslerime nasıl giriş yaparım?</summary><p>Ders erişimi, kayıt sırasında kullandığınız e-posta adresiyle oluşturulan öğrenci hesabınız üzerinden yönetilir.</p></details>
       </div>
@@ -180,7 +180,7 @@
         <article><span>Öğrenci</span><strong>{{ .Params.student_price }}</strong><a class="pricing-button" href="{{ $studentURL }}" target="_blank" rel="noopener noreferrer">Öğrenci Olarak Başla</a></article>
         <article><span>Profesyonel</span><strong>{{ .Params.employee_price }}</strong><a class="pricing-button pricing-button-secondary" href="{{ $professionalURL }}" target="_blank" rel="noopener noreferrer">Profesyonel Olarak Başla</a></article>
       </div>
-      <p class="intro-final-reassurance"><strong>Kredi kartına taksit imkanı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir. Kayıt sonrası ders içeriklerine çevrimiçi olarak erişebilirsiniz.</span></p>
+      <p class="intro-final-reassurance"><strong>Kredi kartına taksit imkanı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir. Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</span></p>
     </section>
 
     <section class="intro-package-upsell" aria-labelledby="intro-package-title">

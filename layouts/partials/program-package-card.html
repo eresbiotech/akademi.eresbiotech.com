@@ -36,7 +36,8 @@
       {{ with $package.student_checkout_url }}<a class="pricing-button" href="{{ . }}" data-event="{{ $studentEvent }}" data-payment-provider="eres-kampus" data-course="{{ $packageKey }}" data-plan="student">Öğrenci Paketini Seç — {{ $package.student.package_price }}</a>{{ end }}
       {{ with $package.professional_checkout_url }}<a class="pricing-button pricing-button-secondary" href="{{ . }}" data-event="{{ $professionalEvent }}" data-payment-provider="eres-kampus" data-course="{{ $packageKey }}" data-plan="professional">Profesyonel Paketini Seç — {{ $package.professional.package_price }}</a>{{ end }}
     </div>
-    <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+    <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
+    {{ partial "purchase-eligibility.html" . }}
   {{ else }}
     <span class="pricing-button program-package-disabled" aria-disabled="true">Program Paketini Seç</span>
     <p class="program-package-pending">Satın alma bağlantısı ekleniyor</p>

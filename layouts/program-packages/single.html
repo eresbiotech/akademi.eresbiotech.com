@@ -47,7 +47,8 @@
         <strong class="package-all-price">{{ $allPrograms.price }}</strong>
         <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
         <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş</a>
-        <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+        <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
+        {{ partial "purchase-eligibility.html" . }}
         <p class="package-decision-note">7 program · Tek erişim · Kendi hızınızda ilerleme</p>
         <p class="package-exclusion">Canlı çalışmalar dahil değildir.</p>
       </article>
@@ -77,7 +78,7 @@
           <a class="pricing-button" href="{{ $starter.student_checkout_url }}" data-event="starter_student_checkout" data-payment-provider="eres-kampus" data-course="starting" data-plan="student">Öğrenci Olarak Başla</a>
           <a class="pricing-button pricing-button-secondary" href="{{ $starter.professional_checkout_url }}" data-event="starter_professional_checkout" data-payment-provider="eres-kampus" data-course="starting" data-plan="professional">Profesyonel Olarak Başla</a>
         </div>
-        <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+        <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
       </article>
       <article class="package-area-card">
         <p class="eyebrow">2 PROGRAM</p>
@@ -90,7 +91,7 @@
           <a class="pricing-button" href="{{ $dataAnalysis.student_checkout_url }}" data-event="data_student_checkout" data-payment-provider="eres-kampus" data-course="data_analysis" data-plan="student">Öğrenci Olarak Başla</a>
           <a class="pricing-button pricing-button-secondary" href="{{ $dataAnalysis.professional_checkout_url }}" data-event="data_professional_checkout" data-payment-provider="eres-kampus" data-course="data_analysis" data-plan="professional">Profesyonel Olarak Başla</a>
         </div>
-        <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+        <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
       </article>
       <article class="package-area-card">
         <p class="eyebrow">2 PROGRAM</p>
@@ -103,7 +104,7 @@
           <a class="pricing-button" href="{{ $advanced.student_checkout_url }}" data-event="advanced_student_checkout" data-payment-provider="eres-kampus" data-course="advanced" data-plan="student">Öğrenci Olarak Başla</a>
           <a class="pricing-button pricing-button-secondary" href="{{ $advanced.professional_checkout_url }}" data-event="advanced_professional_checkout" data-payment-provider="eres-kampus" data-course="advanced" data-plan="professional">Profesyonel Olarak Başla</a>
         </div>
-        <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+        <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
       </article>
     </div>
   </section>
@@ -117,7 +118,7 @@
     <div class="package-return-price"><strong>{{ $allPrograms.price }}</strong><span>7 program · Tek erişim</span></div>
     <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
     <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Birlikte Eriş</a>
-    <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+    <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
   </section>
 
   <section class="container package-value-section" aria-labelledby="value-anchor-title">
@@ -135,7 +136,7 @@
     <p class="eyebrow">{{ $allPrograms.scope }}</p>
     <h2 id="all-programs-list-title">7 programın tamamı</h2>
     <ul class="package-program-list">{{ range $allPrograms.programs }}<li>{{ . }}</li>{{ end }}</ul>
-    <div class="package-trust-row"><span>Anında erişim</span><span>Kendi hızınızda ilerleme</span><span>Uygulamalı çalışma içerikleri</span><span>Güvenli ödeme</span><span>Satın alma sonrası ERES Kampüs erişimi</span></div>
+    <div class="package-trust-row"><span>Hesabınızda sürekli erişim</span><span>Kendi hızınızda ilerleme</span><span>Uygulamalı çalışma içerikleri</span><span>Güvenli ödeme</span><span>Satın alma sonrası ERES Kampüs erişimi</span></div>
     <p class="package-exclusion">Canlı çalışmalar dahil değildir.</p>
   </section>
 
@@ -149,7 +150,7 @@
       <a class="hero-action hero-action-secondary" href="#alan-paketleri" data-event="landing_single_area_click">Bana Uygun Paketi Seç</a>
     </div>
     <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
-    <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+    <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
   </section>
 </article>
 {{ end }}

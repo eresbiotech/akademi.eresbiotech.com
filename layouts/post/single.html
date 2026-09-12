@@ -4,6 +4,7 @@
 {{- $isIntroBigDataCourse := eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
 {{- $packageCatalog := site.Data.program_packages -}}
 {{- $programMeta := index $packageCatalog.programs $slug -}}
+{{- $programFit := index (index site.Data "program-fit") $slug -}}
 {{- $programPackage := false -}}
 {{- $programCategory := "Çalışma Programı" -}}
 {{- with $programMeta -}}
@@ -98,26 +99,6 @@
 {{- else if eq $slug "biyoinformatik-yaz-kampi" -}}
   {{- $lessonFlow = slice "Biyoinformatiğe giriş ve veri okuryazarlığı" "R programlama ile biyolojik veri analizi ve görselleştirme" "Temel veritabanları, NCBI/Ensembl/UCSC kullanımı" "NGS, tek hücre ve yapısal biyoinformatik başlıklarına yönelim" "Mini proje, ödevler ve quizlerle kamp sürecini pekiştirme" -}}
 {{- end -}}
-{{- $testimonials := slice -}}
-{{- if eq $slug "biyoinformatik-icin-r-programlama" -}}
-  {{- $testimonials = slice (dict "quote" "R'ı birkaç kez açıp kapatmıştım ama nereden başlayacağımı bilemiyordum. Biyolojik veriyle örnek yapmak işi daha anlaşılır hale getirdi." "profile" "Yüksek lisans öğrencisi, Moleküler Biyoloji") (dict "quote" "Tezimde grafik hazırlamam gerekiyordu. ggplot2 mantığını görmek ve veriyi düzenlemeyi öğrenmek benim için çok işe yaradı." "profile" "Doktora öğrencisi, Biyoloji") (dict "quote" "Excel'de yaptığım bazı işleri R'a taşımak istiyordum. Eğitimdeki adım adım anlatım geçişi kolaylaştırdı." "profile" "Araştırma görevlisi") (dict "quote" "Raporlama tarafında daha düzenli grafikler üretmek istiyordum. Uygulamalar bu açıdan pratik oldu." "profile" "Biyoteknoloji sektörü çalışanı") -}}
-{{- else if eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
-  {{- $testimonials = slice (dict "quote" "Biyoinformatik literatüründe geçen kavramları parça parça biliyordum. Bu eğitim genel resmi daha net görmemi sağladı." "profile" "Yüksek lisans öğrencisi, Genetik") (dict "quote" "Omik veri türlerini ve hangi soruya nasıl yaklaştıklarını toparlamak benim için faydalı oldu." "profile" "Araştırma görevlisi") (dict "quote" "Alan değiştirmeyi düşünüyordum. Temel kavramları sade bir akışta görmek karar vermemi kolaylaştırdı." "profile" "Yeni mezun, Yaşam Bilimleri") (dict "quote" "Büyük veri kavramını biyoloji araştırmalarıyla ilişkilendirmek, okuduğum makaleleri daha iyi takip etmemi sağladı." "profile" "Doktora öğrencisi, Biyoloji") -}}
-{{- else if eq $slug "biyoinformatik-veritabanlari-araclar-egitimi" -}}
-  {{- $testimonials = slice (dict "quote" "NCBI ve UniProt çıktılarında hangi alanlara odaklanmam gerektiğini çoğu zaman bilemiyordum. Kayıtları daha bilinçli okumaya başladım." "profile" "Lisansüstü öğrenci, Moleküler Biyoloji") (dict "quote" "BLAST sonucunu sadece en yüksek eşleşme gibi yorumluyordum. Arka plandaki mantığı görmek önemliydi." "profile" "Araştırmacı") (dict "quote" "Laboratuvarda karşılaştığımız gen ve protein kayıtlarını raporlarken daha düzenli ilerlememi sağladı." "profile" "Laboratuvar çalışanı") (dict "quote" "Literatürde geçen accession, gen ve protein bilgilerinin nasıl takip edileceği daha anlaşılır hale geldi." "profile" "Doktora öğrencisi, Biyoteknoloji") -}}
-{{- else if eq $slug "ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim" -}}
-  {{- $testimonials = slice (dict "quote" "Gen bölgelerini incelerken farklı ekranlar arasında kayboluyordum. NCBI, Ensembl ve UCSC ilişkisini birlikte görmek çok yardımcı oldu." "profile" "Yüksek lisans öğrencisi, Genetik") (dict "quote" "Varyant, transkript ve gen bilgilerini ayırmakta zorlanıyordum. Örnekler bu ayrımı daha netleştirdi." "profile" "Araştırma görevlisi") (dict "quote" "UCSC ekranları ilk başta karmaşık geliyordu. Genom bölgesini görsel olarak okumak artık daha yönetilebilir." "profile" "Doktora öğrencisi, Biyoloji") (dict "quote" "Klinik ve akademik veri yorumlama sürecinde genom tarayıcılarını daha güvenli kullanmak istiyordum. Eğitim bu ihtiyaca iyi yanıt verdi." "profile" "Klinik araştırma alanında çalışan profesyonel") -}}
-{{- else if eq $slug "tek-hucre-rna-seq-analizi-egitimi" -}}
-  {{- $testimonials = slice (dict "quote" "scRNA-seq makalelerinde geçen kalite kontrol ve kümeleme adımlarını daha iyi takip etmeye başladım." "profile" "Doktora öğrencisi, Biyoloji") (dict "quote" "Seurat akışını parça parça görmüştüm ama bütün iş akışını sırayla görmek çok daha anlaşılır oldu." "profile" "Araştırma görevlisi") (dict "quote" "Marker gen yorumlama kısmı benim için kritikti. Hücre tipi çıkarımını daha dikkatli değerlendirmeyi öğrendim." "profile" "Yüksek lisans öğrencisi, Moleküler Biyoloji") (dict "quote" "Tek hücre analizini projeye dahil etmeden önce hangi adımların ne anlama geldiğini görmek istiyordum. Eğitim iyi bir çerçeve sundu." "profile" "Akademisyen") -}}
-{{- else if eq $slug "uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme" -}}
-  {{- $testimonials = slice (dict "quote" "PDB dosyalarını açıyordum ama yapıya nasıl bakacağımı bilmiyordum. Görselleştirme ve yorumlama adımları iyi oturdu." "profile" "Lisans öğrencisi, Moleküler Biyoloji") (dict "quote" "AlphaFold çıktısını sadece model olarak görüyordum. Güven skorları ve yorumlama mantığı daha anlaşılır hale geldi." "profile" "Araştırmacı") (dict "quote" "Ligand ve aktif bölge ilişkisini temel düzeyde kavramak, okuduğum yapısal biyoloji çalışmalarını takip etmeme yardımcı oldu." "profile" "Doktora öğrencisi, Biyokimya") (dict "quote" "Islak lab sonuçlarını in silico yaklaşımlarla desteklemek istiyordum. Eğitim iyi bir başlangıç çerçevesi verdi." "profile" "Biyoteknoloji sektörü çalışanı") -}}
-{{- else if eq $slug "phyml-uygulamali-filogenetik-egitimi" -}}
-  {{- $testimonials = slice (dict "quote" "Filogenetik ağaçları okuyabiliyor gibi hissediyordum ama bootstrap ve model seçimi kısmı hep belirsizdi. Bu eğitim o boşluğu azalttı." "profile" "Doktora öğrencisi, Biyoloji") (dict "quote" "Dizi hizalama çıktısını doğrudan kullanıyordum. Kaliteyi ve sonuçların güvenilirliğini değerlendirmek benim için faydalı oldu." "profile" "Araştırmacı") (dict "quote" "Ağaç görselini biyolojik hikâyeye bağlamakta zorlanıyordum. Yorumlama adımları bu açıdan iyi bir rehber oldu." "profile" "Akademisyen") (dict "quote" "phyML kullanımını pratik bir akış içinde görmek, filogenetik analizden çekinmemi azalttı." "profile" "Yüksek lisans öğrencisi, Evrimsel Biyoloji") -}}
-{{- else if eq $slug "biyoinformatik-dizi-hizalama-algoritmalari-egitimi" -}}
-  {{- $testimonials = slice (dict "quote" "Dizi hizalama sonucunu görüyorum ama algoritmanın neye göre karar verdiğini anlamak istiyorum." "profile" "Yüksek lisans öğrencisi, Biyoloji") (dict "quote" "BLAST ve hizalama araçlarını kullanıyorum; arka plandaki skorlama mantığını bilmek sonuçları daha doğru yorumlamama yardımcı olacak." "profile" "Araştırma görevlisi") (dict "quote" "Algoritma kısmı göz korkutabiliyor. Biyolojik örneklerle anlatılan bir akışa ihtiyaç duyuyorum." "profile" "Doktora öğrencisi, Genetik") -}}
-{{- else if eq $slug "biyoinformatik-yaz-kampi" -}}
-  {{- $testimonials = slice (dict "quote" "Biyoinformatiğe tek bir başlıktan değil, genel bir öğrenme rotasıyla başlamak istiyorum." "profile" "Lisans öğrencisi, Moleküler Biyoloji") (dict "quote" "R, veritabanları ve omik veri başlıklarını bir arada görebileceğim yoğun ama anlaşılır bir programa ihtiyaç duyuyorum." "profile" "Yüksek lisans öğrencisi") (dict "quote" "Araştırma grubumuzda farklı analiz başlıklarına giriş yapacak ortak bir temel oluşturmak istiyoruz." "profile" "Araştırma görevlisi") -}}
-{{- end -}}
 {{- if eq .File.BaseFileName "contact" -}}
 <article class="container page-shell page-narrow">
   <header class="page-header soft-hero">
@@ -145,7 +126,7 @@
           <span>Duyuru bekleniyor</span>
         {{ else }}
           <span>Kendi hızınızda</span>
-          <span>Anında erişim</span>
+          <span>Hesabınızda sürekli erişim</span>
           <span>Açıklamalı uygulamalar</span>
         {{ end }}
       </div>
@@ -173,17 +154,18 @@
               <h3>Öğrenci</h3>
               {{ with .Params.student_price }}<p class="supported-price">{{ . }}</p>{{ end }}
               <a class="pricing-button" href="{{ .Params.student_checkout_url }}" aria-label="{{ $displayTitle }} öğrenci erişimiyle {{ .Params.student_price }} üzerinden satın alın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="student">Öğrenci Olarak Satın Al</a>
-              <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+              <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
             </article>
             <article class="pricing-card price-card">
               <span class="pricing-badge">Profesyonel</span>
               <h3>Profesyonel</h3>
               {{ with .Params.employee_price }}<p class="supported-price">{{ . }}</p>{{ end }}
               <a class="pricing-button pricing-button-secondary" href="{{ .Params.employee_checkout_url }}" aria-label="{{ $displayTitle }} profesyonel erişimiyle {{ .Params.employee_price }} üzerinden satın alın" data-event="payhip_checkout_click" data-payment-provider="payhip" data-course="{{ $slug }}" data-plan="employee">Profesyonel Olarak Satın Al</a>
-              <p class="payment-access-note">Kaydınızı tamamladığınız anda derslerinize hemen başlayabilirsiniz.</p>
+              <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
             </article>
           </div>
           <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
+          {{ partial "purchase-certainty.html" (dict "page" .) }}
         </div>
         {{ partial "program-package-card.html" (dict "package" $programPackage "packageKey" $programMeta.package) }}
       </div>
@@ -217,6 +199,21 @@
           <p>{{ if $isRCourse }}RStudio, veri yapıları, dosya yolları, ggplot2, metadata ve expression matrisi gibi başlıkları küçük pratiklerle birleştirerek R karmaşasını adım adım düzenlersiniz.{{ else }}Kavramları araştırma pratiğine yakın vakalarla ele alır; açıklamalı anlatımlar, çalışma dosyaları ve kendi kendine kontrol araçlarıyla kendi hızınızda ilerlersiniz.{{ end }}</p>
         </article>
       </section>
+
+      {{ with $programFit }}
+        <section class="sales-section program-fit-section" aria-labelledby="program-fit-title">
+          <p class="eyebrow">Bu program size uygunsa</p>
+          <h2 id="program-fit-title">Şu bilimsel durumlarla karşılaşıyorsanız</h2>
+          <div class="sales-card-grid">
+            {{ range .situations }}
+              <article>
+                <h3>{{ .title }}</h3>
+                <p>{{ .text }}</p>
+              </article>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
 
       {{ if $isRCourse }}
         <section class="sales-section r-problem-section">
@@ -397,25 +394,6 @@
           <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $middleCTAText }}</a>
         </div>
       </section>
-
-      {{ if gt (len $testimonials) 0 }}
-        <section class="sales-section course-experience">
-          <p class="eyebrow">{{ if $isComingSoonFeature }}Öğrenme ihtiyacı{{ else }}Katılımcı deneyimleri{{ end }}</p>
-          <h2>{{ if $isComingSoonFeature }}Bu programın hitap ettiği öğrenme ihtiyaçları{{ else }}Katılımcı deneyimleri{{ end }}</h2>
-          {{ if not $isComingSoonFeature }}
-            <p class="social-proof-note">Bugüne kadar farklı düzeylerden yaşam bilimleri kullanıcıları ve araştırmacılar, biyoinformatik çalışma süreçlerinde ERES çalışma programlarından yararlandı.</p>
-          {{ end }}
-          <p class="experience-intro">Aşağıdaki ifadeler, katılımcıların sık dile getirdiği öğrenme ihtiyaçlarını temsil eden özet geri bildirimlerdir.</p>
-          <div class="testimonial-grid">
-            {{ range $testimonials }}
-              <article class="testimonial-card">
-                <p>“{{ .quote }}”</p>
-                <span>{{ .profile }}</span>
-              </article>
-            {{ end }}
-          </div>
-        </section>
-      {{ end }}
 
       <section class="sales-section faq-section">
         <p class="eyebrow">Sık sorulan sorular</p>
