@@ -1,5 +1,8 @@
 {{ define "main" }}
-{{- $product := site.GetPage (strings.TrimSuffix "/" .Params.product_path) -}}
+{{- $product := false -}}
+{{- with .Params.product_path -}}
+  {{- $product = site.GetPage (strings.TrimSuffix "/" .) -}}
+{{- end -}}
 <article class="container page-shell reference-page" data-reference-id="{{ .Params.article_id }}">
   <nav class="reference-breadcrumb" aria-label="Sayfa yolu">
     <a href="{{ "/" | relURL }}">Ana Sayfa</a><span aria-hidden="true">›</span>
