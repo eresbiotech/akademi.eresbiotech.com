@@ -83,5 +83,6 @@ menus:
       weight: 5
 
 taxonomies:
+  categories: "categories"
   series: "series"
   tags: "tags"

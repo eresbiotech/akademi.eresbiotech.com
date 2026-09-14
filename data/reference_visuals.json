@@ -1,0 +1,308 @@
+{
+  "W1-PROBLEM-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Bir gen listesini yorumlamaya gen isimlerinden değil, listenin nasıl üretildiğinden başlayın.",
+    "details": "`Gen listesi → Hangi karşılaştırma? → Örnekler ne? → Hangi filtre? → Etki + istatistik → Biyolojik yorum`",
+    "caption": "Bir gen listesini yorumlamaya gen isimlerinden değil, listenin nasıl üretildiğinden başlayın.",
+    "alt": "Gen listesinden biyolojik yoruma giden altı adımlı kontrol akışı.",
+    "source_preference": "Generated diagram"
+  },
+  "W1-PROBLEM-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Aynı listedeki genler etki büyüklüğü ve istatistiksel destek açısından çok farklı profiller gösterebilir.",
+    "details": "| Gene | log2FC | P-value | Adjusted P-value |\n|---|---:|---:|---:|\n| GENE_A | +1.8 | 0.0004 | 0.012 |\n| GENE_B | -0.7 | 0.00001 | 0.001 |\n| GENE_C | +2.3 | 0.041 | 0.18 |",
+    "caption": "Aynı listedeki genler etki büyüklüğü ve istatistiksel destek açısından çok farklı profiller gösterebilir.",
+    "alt": "Üç örnek gen için log2 fold change, p-value ve adjusted p-value değerlerini karşılaştıran tablo.",
+    "source_preference": "Teaching table"
+  },
+  "W1-PROBLEM-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "Tek bir gen adı, tek başına mekanistik sonuç değildir.",
+    "details": "`Gen bulundu` → `Etki güvenilir mi?` → `Biyolojik bağlam uygun mu?` → `Birden fazla ilişkili gen/kanıt var mı?` → `Hipotez / ileri analiz`",
+    "caption": "Tek bir gen adı, tek başına mekanistik sonuç değildir.",
+    "alt": "Bir gen sonucunu biyolojik hipoteze taşımadan önce kontrol edilmesi gereken sorular.",
+    "source_preference": "Generated decision map"
+  },
+  "W1-REFRAME-1": {
+    "number": "1",
+    "kind": "source-note",
+    "title": "GEO2R’da analiz, hangi Sample kayıtlarının hangi gruba atandığıyla başlar.",
+    "details": "Sample listesi, iki tanımlanmış grup ve Analyze alanı; kişisel bilgi içermemeli",
+    "caption": "GEO2R’da analiz, hangi Sample kayıtlarının hangi gruba atandığıyla başlar.",
+    "alt": "NCBI GEO2R arayüzünde örnek gruplarının tanımlandığı analiz ekranı.",
+    "source_preference": "Real NCBI GEO2R screenshot"
+  },
+  "W1-REFRAME-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "GEO2R çıktısındaki alanları yorumlarken önce veri tipini bilin.",
+    "details": "| | Mikroarray | RNA-seq |\n|---|---|---|\n| Ana analiz paketi | limma | DESeq2 |\n| Veri temeli | Submitter processed data | NCBI-computed raw counts |\n| Fold-change alanı | logFC | log2FoldChange |\n| Düzeltilmiş p | adj.P.Val | padj |",
+    "caption": "GEO2R çıktısındaki alanları yorumlarken önce veri tipini bilin.",
+    "alt": "GEO2R mikroarray ve RNA-seq analizlerinde kullanılan paket ve temel çıktı alanlarının karşılaştırması.",
+    "source_preference": "Table"
+  },
+  "W1-REFRAME-3": {
+    "number": "3",
+    "kind": "table",
+    "title": "Tool output ile bilimsel conclusion aynı katman değildir.",
+    "details": "| GEO2R yardımcı olur | GEO2R tek başına belirlemez |\n|---|---|\n| Gruplar arası expression farkı | Nedensellik |\n| logFC/log2FC | Biyolojik önem |\n| adjusted p-value | Mekanistik doğrulama |\n| Volcano/MD plot | Doğru deney tasarımı |\n| Gen sıralaması | “En önemli gen” kararı |",
+    "caption": "Tool output ile bilimsel conclusion aynı katman değildir.",
+    "alt": "GEO2R’ın sağladığı analiz çıktıları ile tek başına cevaplayamadığı bilimsel soruları karşılaştıran tablo.",
+    "source_preference": "Table"
+  },
+  "W1-REFRAME-4": {
+    "number": "4",
+    "kind": "diagram",
+    "title": "Volcano plot dikkat çekici genleri bulmayı kolaylaştırır; biyolojik yorum için bağlam yine gereklidir.",
+    "details": "X ekseni log2FC, Y ekseni −log10 adjusted p-value; üç örnek nokta işaretli",
+    "caption": "Volcano plot dikkat çekici genleri bulmayı kolaylaştırır; biyolojik yorum için bağlam yine gereklidir.",
+    "alt": "Log2 fold change ve adjusted p-value eksenleri üzerinde üç örnek genin işaretlendiği volcano plot.",
+    "source_preference": "Generated teaching plot veya doğrulanmış gerçek çıktı"
+  },
+  "W1-WORKFLOW-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Log2 ölçeğinde +1 yaklaşık iki kat artışa, −1 ise yaklaşık yarıya düşmeye karşılık gelir.",
+    "details": "`−2 → −1 → 0 → +1 → +2` ve karşılıklarında `0.25× → 0.5× → değişim yok → 2× → 4×`",
+    "caption": "Log2 ölçeğinde +1 yaklaşık iki kat artışa, −1 ise yaklaşık yarıya düşmeye karşılık gelir.",
+    "alt": "Log2 fold change değerleri ile yaklaşık lineer fold change karşılıklarını gösteren ölçek.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "W1-WORKFLOW-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Aynı differential expression tablosunda farklı effect-size/kanıt kombinasyonları bulunabilir.",
+    "details": "Gene A, B, C tablosu; iki ayrı görsel vurgu alanı: effect size / statistical support",
+    "caption": "Aynı differential expression tablosunda farklı effect-size/kanıt kombinasyonları bulunabilir.",
+    "alt": "Üç varsayımsal genin log2 fold change ve adjusted p-value değerlerinin karşılaştırılması.",
+    "source_preference": "Table"
+  },
+  "W1-WORKFLOW-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "Büyük effect size ile güçlü istatistiksel destek aynı şey değildir.",
+    "details": "Aynı varsayımsal üç gen; Gene A yatayda uzak ama aşağıda, Gene B merkeze daha yakın fakat yukarıda, Gene C sol-yukarı bölgede",
+    "caption": "Büyük effect size ile güçlü istatistiksel destek aynı şey değildir.",
+    "alt": "Üç varsayımsal genin effect size ve statistical significance bakımından farklı konumlarda gösterildiği volcano plot.",
+    "source_preference": "Generated plot"
+  },
+  "W1-WORKFLOW-4": {
+    "number": "4",
+    "kind": "table",
+    "title": "Differential expression sonuçlarını tek kolon yerine en az iki boyutta okuyun.",
+    "details": "| Effect size | Statistical support | Nasıl yaklaşılır? |\n|---|---|---|\n| Büyük | Güçlü | Öncelikli inceleme adayı |\n| Büyük | Zayıf | Varyasyon/veri desteğini kontrol et |\n| Küçük | Güçlü | Biyolojik anlamlılığını değerlendir |\n| Küçük | Zayıf | Genellikle düşük öncelik; bağlama bak |",
+    "caption": "Differential expression sonuçlarını tek kolon yerine en az iki boyutta okuyun.",
+    "alt": "Effect size ve istatistiksel desteğin dört kombinasyonu için önerilen yorumlama yaklaşımı.",
+    "source_preference": "Table"
+  },
+  "W1-DECISION-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Başlangıç aracını “doğru teknoloji” değil, çözmek istediğiniz problem belirlemeli.",
+    "details": "`Bilimsel sorunuz ne?`\n\n→ `Veri bulmak / incelemek / hazır karşılaştırma yapmak`  \n→ **Web / database / GUI ile başlayabilirsiniz**\n\n→ `Tekrarlamak / özelleştirmek / çok veri işlemek / otomasyon`  \n→ **R giderek gerekli hale gelir**",
+    "caption": "Başlangıç aracını “doğru teknoloji” değil, çözmek istediğiniz problem belirlemeli.",
+    "alt": "Bilimsel soruya göre web araçları veya R ile başlangıç rotasını gösteren karar ağacı.",
+    "source_preference": "Generated decision map"
+  },
+  "W1-DECISION-2": {
+    "number": "2",
+    "kind": "diagram",
+    "title": "Computational beceri, gerçek bilimsel problemle birlikte büyüdüğünde daha anlamlı hale gelir.",
+    "details": "`Bilimsel soru → İlk analiz → Yeni ihtiyaç → R becerisi → Daha kontrollü analiz → Yeni bilimsel soru`",
+    "caption": "Computational beceri, gerçek bilimsel problemle birlikte büyüdüğünde daha anlamlı hale gelir.",
+    "alt": "Bilimsel sorudan başlayıp R becerisine ve daha kontrollü analize dönen öğrenme döngüsü.",
+    "source_preference": "Generated diagram"
+  },
+  "W1-DECISION-3": {
+    "number": "3",
+    "kind": "table",
+    "title": "Başlangıç rotası araçtan değil, o anda çözmeye çalıştığınız bilimsel problemden çıkmalıdır.",
+    "details": "| Şu anki ihtiyaç | İlk odak |\n|---|---|\n| Veri tabanını anlamak | Web/database |\n| Public veri incelemek | GEO / web tools |\n| Differential expression mantığını görmek | GEO2R + temel istatistik |\n| Veriyi işlemek ve grafikleri özelleştirmek | R |\n| Analizi tekrarlanabilir hale getirmek | R + script workflow |\n| Karmaşık analiz kurmak | R/Bioconductor + yöntem bilgisi |",
+    "caption": "Başlangıç rotası araçtan değil, o anda çözmeye çalıştığınız bilimsel problemden çıkmalıdır.",
+    "alt": "Altı farklı bilimsel ihtiyaç için önerilen ilk computational çalışma yüzeylerini gösteren tablo.",
+    "source_preference": "Table"
+  },
+  "W2-PROBLEM-1": {
+    "number": "1",
+    "kind": "source-note",
+    "title": "Aynı gen üç platformda aynı bilimsel nesnedir; fakat kullanıcıya aynı veri görünümü sunulmaz.",
+    "details": "Aynı insan geni için NCBI Gene record, Ensembl Gene/Transcript view ve UCSC Genome Browser region görünümünden sade kırpımlar",
+    "caption": "Aynı gen üç platformda aynı bilimsel nesnedir; fakat kullanıcıya aynı veri görünümü sunulmaz.",
+    "alt": "Aynı genin NCBI Gene, Ensembl ve UCSC Genome Browser üzerindeki üç farklı veri görünümü.",
+    "source_preference": "Real screenshots"
+  },
+  "W2-PROBLEM-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Üç kaynak büyük ölçüde örtüşür; fark çoğu zaman hangi veri görünümünün önceliklendirildiğidir.",
+    "details": "| Platform | Baskın çalışma görünümü | Özellikle yararlı olduğunda | Kontrol edilmesi gereken |\n|---|---|---|---|\n| NCBI | Gene/sequence/accession merkezli kayıtlar | Gene kaydı, RefSeq, accession, sequence bağlantıları | Record ve accession türü |\n| Ensembl | Gene–transcript–genome annotation ekosistemi | Transcript/exon yapısı, comparative genomics, annotation inceleme | Stable ID, release, assembly |\n| UCSC | Genome region + track katmanları | Farklı annotation'ları aynı locus üzerinde karşılaştırma | Assembly ve hangi track'in açık olduğu |",
+    "caption": "Üç kaynak büyük ölçüde örtüşür; fark çoğu zaman hangi veri görünümünün önceliklendirildiğidir.",
+    "alt": "NCBI, Ensembl ve UCSC'nin temel çalışma görünümlerini karşılaştıran tablo.",
+    "source_preference": "Table"
+  },
+  "W2-PROBLEM-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "Database farkını yorumlamadan önce biyolojik ve teknik bağlamı eşitleyin.",
+    "details": "`Farklı sonuç gördüm`  \n→ `aynı species?`  \n→ `aynı assembly?`  \n→ `gene / transcript / protein aynı seviye?`  \n→ `aynı annotation/release?`  \n→ `bilimsel sorum hangisini gerektiriyor?`",
+    "caption": "Database farkını yorumlamadan önce biyolojik ve teknik bağlamı eşitleyin.",
+    "alt": "Farklı gen veritabanı sonuçlarının karşılaştırılmasında izlenecek kontrol akışı.",
+    "source_preference": "Generated decision map"
+  },
+  "W2-REFRAME-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Gene, transcript ve protein ilişkisi basit bir bire-bir zincir değildir.",
+    "details": "Bir gene kutusundan üç transcript; iki coding transcriptin proteinlere bağlanması, bir non-coding transcriptin proteinsiz sonlanması",
+    "caption": "Gene, transcript ve protein ilişkisi basit bir bire-bir zincir değildir.",
+    "alt": "Tek bir genin birden fazla transcript ve protein ürününe bağlanabileceğini gösteren biyolojik seviye şeması.",
+    "source_preference": "Generated deterministic diagram"
+  },
+  "W2-REFRAME-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Prefix veya format yalnız teknik isim değildir; çoğu zaman veri seviyesini de söyler.",
+    "details": "| Biological level | Örnek identifier tipi | Ne temsil eder? |\n|---|---|---|\n| Gene | NCBI GeneID / ENSG | Gene-level kayıt |\n| Transcript | NM_/NR_/XM_/XR_ / ENST | Belirli transcript veya RNA kaydı |\n| Protein | NP_/XP_ / ENSP | Protein ürünü |\n| Genomic region | chr:start-end | Bir assembly üzerindeki konum |",
+    "caption": "Prefix veya format yalnız teknik isim değildir; çoğu zaman veri seviyesini de söyler.",
+    "alt": "Gene, transcript, protein ve genomik bölge seviyelerini örnek identifier tipleriyle eşleştiren tablo.",
+    "source_preference": "Table"
+  },
+  "W2-REFRAME-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "Bir gene ID'yi transcript ID'ye çevirmek bazen bir seçim problemi yaratır.",
+    "details": "`1 gene ID` → `Transcript A / Transcript B / Transcript C`  \nve altında:  \n`Hangi transcript? → araştırma sorusu + annotation + evidence`",
+    "caption": "Bir gene ID'yi transcript ID'ye çevirmek bazen bir seçim problemi yaratır.",
+    "alt": "Bir gene identifier'ın birden fazla transcript identifier'a eşleşebileceğini gösteren şema.",
+    "source_preference": "Generated diagram"
+  },
+  "W2-WORKFLOW-1": {
+    "number": "1",
+    "kind": "source-note",
+    "title": "Aynı gene bağlı transcriptler exon ve UTR yapıları bakımından farklılaşabilir.",
+    "details": "BRCA1 veya başka iyi destekli bir insan protein-coding geninin Ensembl/UCSC transcript track görünümü; exon kutuları ve splice bağlantıları okunabilir olmalı",
+    "caption": "Aynı gene bağlı transcriptler exon ve UTR yapıları bakımından farklılaşabilir.",
+    "alt": "Tek bir gen locus'unda farklı exon kombinasyonlarına sahip birden fazla transcript modeli.",
+    "source_preference": "Real Ensembl or UCSC screenshot"
+  },
+  "W2-WORKFLOW-2": {
+    "number": "2",
+    "kind": "diagram",
+    "title": "Transcript uzunluğu seçim için tek başına yeterli bir biyolojik kriter değildir.",
+    "details": "Aynı gene ait üç transcript; biri en uzun, biri daha kısa fakat yüksek evidence/representative tag taşıyor, biri tissue-specific örnek olarak işaretlenmiş",
+    "caption": "Transcript uzunluğu seçim için tek başına yeterli bir biyolojik kriter değildir.",
+    "alt": "Farklı uzunluk ve kanıt profillerine sahip üç transcript isoformunu karşılaştıran şema.",
+    "source_preference": "Generated scientific diagram"
+  },
+  "W2-WORKFLOW-3": {
+    "number": "3",
+    "kind": "table",
+    "title": "Transcript seçimi “hangisi en uzun?” sorusundan önce analiz amacını gerektirir.",
+    "details": "| Analiz amacı | İlk bakılacak kanıt | Tek representative transcript yeterli olabilir mi? |\n|---|---|---|\n| Genel gene özeti | Canonical / Select | Çoğu zaman başlangıç için |\n| Variant raporlama | MANE/RefSeq + kullanılan standard | Sıklıkla yararlı |\n| Isoform biyolojisi | Tüm transcriptler + expression | Genellikle hayır |\n| Protein sequence | Coding transcript + protein product | Spesifik seçim gerekir |\n| Genome-wide özet | Representative transcript rule | Yönteme göre evet |",
+    "caption": "Transcript seçimi “hangisi en uzun?” sorusundan önce analiz amacını gerektirir.",
+    "alt": "Beş analiz amacı için transcript seçerken değerlendirilmesi gereken evidence türlerini gösteren tablo.",
+    "source_preference": "Table"
+  },
+  "W2-WORKFLOW-4": {
+    "number": "4",
+    "kind": "diagram",
+    "title": "Transcript annotation yalnız liste değildir; kaynağı, evidence'i ve genome üzerindeki yapısıyla birlikte okunmalıdır.",
+    "details": "Aynı locus için NCBI RefSeq transcript paneli, Ensembl transcript table ve UCSC GENCODE/RefSeq track görünümünden küçük kesitler",
+    "caption": "Transcript annotation yalnız liste değildir; kaynağı, evidence'i ve genome üzerindeki yapısıyla birlikte okunmalıdır.",
+    "alt": "Aynı gene ait transcript bilgilerinin NCBI, Ensembl ve UCSC üzerindeki farklı sunumlarının karşılaştırması.",
+    "source_preference": "Real screenshots"
+  },
+  "W2-DECISION-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Önce platformu değil, bilimsel soruyu seçin.",
+    "details": "`Ne arıyorum?`\n\n→ gene / RefSeq / accession → **NCBI ile başlayabilirsin**  \n→ transcript / exon / comparative context → **Ensembl güçlü başlangıç**  \n→ genomic region / çoklu tracks / kendi verim → **UCSC güçlü başlangıç**\n\nAlt not:\n\n`Bu yollar mutlak değildir; platform yetenekleri örtüşür.`",
+    "caption": "Önce platformu değil, bilimsel soruyu seçin.",
+    "alt": "Gene, transcript ve genome-track ihtiyaçlarını NCBI, Ensembl ve UCSC başlangıç noktalarıyla eşleştiren karar ağacı.",
+    "source_preference": "Generated decision map"
+  },
+  "W2-DECISION-2": {
+    "number": "2",
+    "kind": "diagram",
+    "title": "Platformların yetenekleri örtüşür; doğru başlangıç noktası araştırma görevine göre değişir.",
+    "details": "| Bilimsel ihtiyaç | NCBI | Ensembl | UCSC |\n|---|---|---|---|\n| Gene-centric genel kayıt | **Çok doğal başlangıç** | Güçlü | Gene tracks üzerinden mümkün |\n| RefSeq / sequence accession | **Özellikle güçlü** | Cross-reference bulunabilir | Accession aranabilir / track üzerinden görülebilir |\n| Transcript ve exon exploration | Güçlü | **Özellikle güçlü** | **Track tabanlı güçlü görünüm** |\n| Comparative genomics | Kaynaklar mevcut | **Compara çok güçlü** | Conservation/comparative tracks güçlü |\n| Farklı annotation'ları aynı locus'ta karşılaştırma | Genome viewer araçları mevcut | Region views mevcut | **Track yaklaşımı özellikle uygun** |\n| Kendi genomic annotation verisini bindirme | Araç/servise göre | External data eklenebilir | **Custom Tracks / Track Hubs güçlü** |\n| Representative transcript kontrolü | RefSeq/MANE | Canonical/MANE | RefSeq/GENCODE/MANE track'lerini birlikte görebilir |",
+    "caption": "Platformların yetenekleri örtüşür; doğru başlangıç noktası araştırma görevine göre değişir.",
+    "alt": "Yedi genomik araştırma görevi için NCBI, Ensembl ve UCSC'nin pratik güçlü taraflarını karşılaştıran tablo.",
+    "source_preference": "Table"
+  },
+  "W2-DECISION-3": {
+    "number": "3",
+    "kind": "source-note",
+    "title": "Aynı gene ulaşabilirsiniz; fakat üç platform sizi farklı çalışma biçimlerine yönlendirir.",
+    "details": "1. NCBI Gene summary + RefSeq alanı  \n2. Ensembl gene/transcript view  \n3. UCSC same-locus multi-track view",
+    "caption": "Aynı gene ulaşabilirsiniz; fakat üç platform sizi farklı çalışma biçimlerine yönlendirir.",
+    "alt": "NCBI gene-centric kayıt, Ensembl transcript annotation ve UCSC multi-track genome view ekranlarının karşılaştırması.",
+    "source_preference": "Real current screenshots"
+  },
+  "W2-DECISION-4": {
+    "number": "4",
+    "kind": "diagram",
+    "title": "Site seçimi bilimsel sorudan çıkmalı; alışkanlıktan değil.",
+    "details": "**Gene / RefSeq / accession?**  \n→ NCBI ile başla\n\n**Transcript / exon / orthology?**  \n→ Ensembl'i aç\n\n**Region / tracks / kendi verin?**  \n→ UCSC'ye geç\n\nAlt satır:\n\n**“Başlangıç noktasıdır; gerektiğinde kaynaklar arasında geç.”**",
+    "caption": "Site seçimi bilimsel sorudan çıkmalı; alışkanlıktan değil.",
+    "alt": "Üç temel genomik soru tipini NCBI, Ensembl ve UCSC başlangıç noktalarıyla eşleştiren kısa rota kartı.",
+    "source_preference": "Generated route card"
+  },
+  "W3-PROBLEM-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Kodun çalışması, metadata içindeki biyolojik etiketlerin doğru olduğunu doğrulamaz.",
+    "details": "Solda doğru `sample → condition`; sağda iki sample'ın condition'ı değiştirilmiş. Aynı analiz kodu iki tarafta da yürütülüyor ve farklı sonuç profilleri üretiyor.",
+    "caption": "Kodun çalışması, metadata içindeki biyolojik etiketlerin doğru olduğunu doğrulamaz.",
+    "alt": "Aynı R analizinin doğru ve yanlış grup etiketleriyle teknik olarak çalışabildiğini gösteren karşılaştırma.",
+    "source_preference": "Deterministic educational code + plot"
+  },
+  "W3-PROBLEM-2": {
+    "number": "2",
+    "kind": "diagram",
+    "title": "Başarılı execution analiz kontrolünün başlangıcıdır, sonu değil.",
+    "details": "`Kod çalıştı`\n\n→ `Sample/grup doğru mu?`\n\n→ `Model doğru soruyu mu test ediyor?`\n\n→ `Veri türüne uygun yöntem mi?`\n\n→ `Effect + uncertainty uygun okunuyor mu?`\n\n→ `Biyolojik bağlam destekliyor mu?`",
+    "caption": "Başarılı execution analiz kontrolünün başlangıcıdır, sonu değil.",
+    "alt": "Çalışan R kodundan bilimsel yoruma geçmeden önce yapılması gereken beş kontrol.",
+    "source_preference": "Generated diagram"
+  },
+  "W3-PROBLEM-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "R çıktısından yoruma geçmeden önce analitik bağlamı kontrol edin.",
+    "details": "Comparison / metadata / model-assumptions / effect & evidence / biological context",
+    "caption": "R çıktısından yoruma geçmeden önce analitik bağlamı kontrol edin.",
+    "alt": "Bir R analiz sonucunu yorumlamadan önce kontrol edilecek beş bilimsel alan.",
+    "source_preference": "Generated checklist"
+  },
+  "W3-REFRAME-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Ölçüm matrisi size “ne kadar?”ı, sample metadata ise büyük ölçüde “hangi koşulda?”yı anlatır.",
+    "details": "Solda genes × samples expression matrix; sağda samples × metadata tablosu: condition, batch, tissue",
+    "caption": "Ölçüm matrisi size “ne kadar?”ı, sample metadata ise büyük ölçüde “hangi koşulda?”yı anlatır.",
+    "alt": "Genlerin satırlarda, sample'ların sütunlarda bulunduğu expression matrix ile sample metadata tablosunun yan yana görünümü.",
+    "source_preference": "Deterministic educational table"
+  },
+  "W3-REFRAME-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Bir matrix'i anlamak için hücredeki sayının yanında iki eksenin neyi temsil ettiğini de bilmeniz gerekir.",
+    "details": "Rows: Gene/features  \nColumns: Sample IDs  \nCells: measurement/count/expression  \nAyrı layer: sample metadata",
+    "caption": "Bir matrix'i anlamak için hücredeki sayının yanında iki eksenin neyi temsil ettiğini de bilmeniz gerekir.",
+    "alt": "Expression matrix'in feature, sample ve measurement bileşenlerini etiketleyen öğretici tablo.",
+    "source_preference": "Deterministic educational diagram"
+  },
+  "W3-REFRAME-3": {
+    "number": "3",
+    "kind": "table",
+    "title": "Temiz görünen tablo, veri modelini bilmiyorsanız hâlâ belirsiz olabilir.",
+    "details": "Solda düzgün ama başlıkları `ID / S1 / S2`; sağda aynı tabloya species, identifier type, feature level ve sample metadata bağlantısı eklenmiş",
+    "caption": "Temiz görünen tablo, veri modelini bilmiyorsanız hâlâ belirsiz olabilir.",
+    "alt": "Aynı expression tablosunun biyolojik açıklama olmadan ve metadata ile açıklanmış iki sürümü.",
+    "source_preference": "Deterministic educational table"
+  }
+}

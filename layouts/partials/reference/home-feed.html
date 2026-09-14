@@ -1,0 +1,17 @@
+{{- $references := where .Site.RegularPages "Type" "reference" -}}
+{{- $published := where $references "Draft" false -}}
+{{- with first 3 ($published.ByDate.Reverse) -}}
+  <section class="container academy-living reference-home-feed" aria-labelledby="reference-home-feed-title">
+    <div>
+      <p class="eyebrow">ERES'TEN</p>
+      <h2 id="reference-home-feed-title">Reference Hub'da yeni yazılar</h2>
+      <p>Biyoinformatik ve yaşam bilimleri verisiyle çalışırken kritik kavramları, karar noktalarını ve yöntemsel sınırları kaynaklı biçimde ele alıyoruz.</p>
+    </div>
+    <ul class="reference-home-feed-list">
+      {{- range . -}}
+        <li><a class="academy-text-link" href="{{ .RelPermalink }}">{{ .Title }} <span aria-hidden="true">→</span></a></li>
+      {{- end -}}
+    </ul>
+    <a class="academy-text-link" href="{{ "/reference/" | relURL }}">Tüm Reference yazıları <span aria-hidden="true">→</span></a>
+  </section>
+{{- end -}}

@@ -22,7 +22,12 @@
 <meta property="og:url" content="{{ .Permalink }}">
 {{ with $image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 <meta name="twitter:card" content="summary_large_image">
+{{ if eq .Type "reference" }}
+  {{- $modified := .Lastmod | default .Date -}}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "Article" "headline" .Title "description" $description "datePublished" (.Date.Format "2006-01-02") "dateModified" ($modified.Format "2006-01-02") "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink) "author" (dict "@type" "Organization" "name" (.Params.author | default "ERES Biyoinformatik Akademi")) "publisher" (dict "@type" "Organization" "name" "ERES Biyoinformatik Akademi") | jsonify | safeJS }}</script>
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" (slice (dict "@type" "ListItem" "position" 1 "name" "Ana Sayfa" "item" site.Home.Permalink) (dict "@type" "ListItem" "position" 2 "name" "Reference Hub" "item" ((site.GetPage "/reference").Permalink)) (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink)) | jsonify | safeJS }}</script>
+{{ end }}
 <link rel="icon" type="image/svg+xml" href="{{ "images/logos/Eres_Sembol_Renkli.svg" | relURL }}">
 <link rel="shortcut icon" href="{{ "images/logos/Eres_Sembol_Renkli.svg" | relURL }}">
-<link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v=20260806-flash-campaign">
+<link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v=20260914-reference-hub">
 {{ partial "meta-pixel.html" . }}

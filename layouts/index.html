@@ -235,6 +235,8 @@
 
 {{ partial "testimonial.html" (dict "testimonial" $iremTestimonial "variant" "short" "heading_id" "home-testimonial-title") }}
 
+{{ partial "reference/home-feed.html" . }}
+
 <section class="container academy-final-cta" aria-labelledby="academy-final-title">
   <div>
     <p class="eyebrow">ERES BİYOİNFORMATİK AKADEMİ</p>
@@ -255,4 +257,6 @@
   </div>
   <a class="academy-text-link" href="{{ "/miranin-debug-defteri/" | relURL }}">Mira’yı keşfet <span aria-hidden="true">→</span></a>
 </section>
+
+{{ partial "reference/home-discovery.html" . }}
 {{ end }}

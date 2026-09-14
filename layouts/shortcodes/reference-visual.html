@@ -1,0 +1,11 @@
+{{- $visuals := site.Data.reference_visuals -}}
+{{- $visual := index $visuals (.Get "id") -}}
+{{- if $visual -}}
+  <figure class="reference-evidence reference-evidence--{{ $visual.kind | default "guide" }}" aria-label="{{ $visual.alt }}">
+    <div class="reference-evidence-board">
+      <span class="reference-evidence-number" aria-hidden="true">{{ $visual.number }}</span>
+      <div><p class="eyebrow">{{ if eq $visual.kind "source-note" }}KAYNAK EKRANI İÇİN İNCELEME NOTU{{ else }}BİLİMSEL İNCELEME{{ end }}</p><h3>{{ $visual.title }}</h3>{{ with $visual.details }}<div class="reference-evidence-details">{{ . | markdownify }}</div>{{ end }}</div>
+    </div>
+    <figcaption>{{ $visual.caption }}</figcaption>
+  </figure>
+{{- end -}}

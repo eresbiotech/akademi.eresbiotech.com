@@ -1,0 +1,54 @@
+{{ define "main" }}
+{{- $product := site.GetPage (strings.TrimSuffix "/" .Params.product_path) -}}
+<article class="container page-shell reference-page" data-reference-id="{{ .Params.article_id }}">
+  <nav class="reference-breadcrumb" aria-label="Sayfa yolu">
+    <a href="{{ "/" | relURL }}">Ana Sayfa</a><span aria-hidden="true">›</span>
+    <a href="{{ "/reference/" | relURL }}">Reference Hub</a><span aria-hidden="true">›</span>
+    <span>{{ .Params.category_label }}</span><span aria-hidden="true">›</span><span aria-current="page">{{ .Title }}</span>
+  </nav>
+
+  <div class="reference-layout">
+    <main class="reference-main">
+      <header class="reference-header">
+        <div class="reference-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02.01.2006" }}</time><span aria-hidden="true">|</span><span>{{ .ReadingTime }} dk okuma</span></div>
+        <p class="eyebrow">{{ .Params.category_label }}</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.answer_first }}<p class="reference-answer">{{ . }}</p>{{ end }}
+      </header>
+
+      <div class="reference-body prose">{{ .Content }}</div>
+
+      <section class="reference-capability" aria-labelledby="reference-capability-title">
+        <p class="eyebrow">BİR SONRAKİ UYGULAMA ADIMI</p>
+        <h2 id="reference-capability-title">Sorunun kaynağını görmek başka, analizi doğru yönetmek başka.</h2>
+        {{ with .Params.capability_bridge }}<p>{{ . }}</p>{{ end }}
+        {{ with $product }}<a class="hero-action" href="{{ .RelPermalink }}">{{ $.Params.product_cta }}</a>{{ end }}
+      </section>
+
+      {{ with .Params.sources }}
+        <section class="reference-sources" aria-labelledby="reference-sources-title">
+          <p class="eyebrow">KAYNAKLAR</p><h2 id="reference-sources-title">Bu yazıda yararlanılan kaynaklar</h2>
+          <ol>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ol>
+        </section>
+      {{ end }}
+    </main>
+
+    <aside class="reference-rail" aria-label="İlgili kaynaklar ve program">
+      {{ with $product }}
+        <section class="reference-product-card">
+          <p class="eyebrow">BU KONUYU UYGULAMALI ÖĞRENİN</p>
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Description }}</p>
+          <a class="hero-action" href="{{ .RelPermalink }}">{{ $.Params.product_cta }}</a>
+        </section>
+      {{ end }}
+      {{ with .Params.related_references }}
+        <section class="reference-related-rail"><h2>İlgili yazılar</h2><ul>
+          {{ range . }}{{ with site.GetPage (strings.TrimSuffix "/" .) }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a><span>{{ .ReadingTime }} dk okuma</span></li>{{ end }}{{ end }}
+        </ul></section>
+      {{ end }}
+      <section class="reference-route-helper"><p class="eyebrow">BAŞLANGIÇ ROTASI</p><h2>Hangi programın size uygun olduğundan emin değil misiniz?</h2><p>Kısa yönlendirme rehberinden ihtiyacınıza en yakın başlangıç noktasını belirleyin.</p><a href="{{ "/post/" | relURL }}">Çalışma programlarını görün <span aria-hidden="true">→</span></a></section>
+    </aside>
+  </div>
+</article>
+{{ end }}

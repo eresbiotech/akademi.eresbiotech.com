@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="container page-shell reference-hub" aria-labelledby="reference-hub-title">
+  <nav class="reference-breadcrumb" aria-label="Sayfa yolu"><a href="{{ "/" | relURL }}">Ana Sayfa</a><span aria-hidden="true">›</span><span aria-current="page">Reference Hub</span></nav>
+  <header class="reference-hub-header">
+    <p class="eyebrow">ERES REFERENCE HUB</p>
+    <h1 id="reference-hub-title">Biyoinformatik için güvenilir bilgi, gerçek ilerleme.</h1>
+    <p>{{ .Description }}</p>
+  </header>
+  {{ $pages := where .RegularPages "Draft" false }}
+  {{ if $pages }}
+    <div class="reference-hub-grid">
+      {{ range $pages.ByDate.Reverse }}
+        <article class="reference-hub-card">
+          <p>{{ .Params.category_label | default "Reference" }}</p>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <span>{{ .Date.Format "02.01.2006" }} · {{ .ReadingTime }} dk okuma</span>
+          <a class="card-link" href="{{ .RelPermalink }}">Yazıyı okuyun <span aria-hidden="true">→</span></a>
+        </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <div class="reference-empty"><p>İlk Reference yazıları bilimsel ve editöryal yayın kontrolünden geçiyor.</p></div>
+  {{ end }}
+</section>
+{{ end }}
