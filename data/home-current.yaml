@@ -1,9 +1,9 @@
 items:
   - active: true
     featured: true
-    type: academic-season
-    label: "AKADEMİK DÖNEM"
-    title: "Dönem başlamadan önce başlayın."
-    summary: "Şimdi birkaç akşam ayırın; dönem yoğunlaştığında temel kavramlara ve ilk uygulamalara yabancı olmayın."
-    url: "/post/biyoinformatik-giris-egitim-buyuk-veri-kurs/"
-    cta: "Başlangıç programını incele"
+    type: full-access-campaign
+    label: "30 EYLÜL'E KADAR"
+    title: "7 eğitimin tamamına 8.750 TL'ye erişin."
+    summary: "7 eğitimin Full Access paket fiyatı 12.500 TL. 30 Eylül'e kadar paket fiyatına ek %30 indirimle 8.750 TL."
+    url: "/program-paketleri/"
+    cta: "Fırsatı Kaçırma — Şimdi Kaydol"

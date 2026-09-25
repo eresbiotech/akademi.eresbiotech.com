@@ -1,16 +1,14 @@
 {{- $isStudentLogin := eq .RelPermalink "/ders-giris/" -}}
 {{- $isLiveLabLanding := eq .Layout "live-lab-landing" -}}
 {{- $isIntroBigDataCourse := and .IsPage (eq .File.BaseFileName "biyoinformatik-giris-egitim-buyuk-veri-kurs") -}}
-{{ with index site.Data "home-current" }}
-  {{- $currentItems := where .items "active" true -}}
-  {{ range first 1 (where $currentItems "featured" true) }}
-    <aside class="site-promo-bar" aria-label="{{ .label }} duyurusu">
-      <div class="container site-promo-bar-inner">
-        <span>{{ .title }}</span>
-        <a href="{{ .url | relURL }}" data-event="promo_bar_click">{{ .cta }}</a>
-      </div>
-    </aside>
-  {{ end }}
+{{ with site.Data.full_access_campaign }}
+  <aside class="site-promo-bar" aria-label="Full Access kampanya duyurusu" data-full-access-promo data-full-access-deadline="{{ .deadline }}">
+    <a class="site-promo-bar-link" href="{{ .target | relURL }}" data-event="promo_bar_click">
+      <span class="container site-promo-bar-inner">
+        <span>Full Access fırsatının bitmesine <span data-full-access-countdown>{{ .deadline_display }}'e kadar</span> · 7 eğitim {{ .campaign_price }} · Kaçırmayın <span aria-hidden="true">→</span></span>
+      </span>
+    </a>
+  </aside>
 {{ end }}
 <header class="site-header{{ if $isStudentLogin }} student-login-site-header{{ end }}{{ if $isLiveLabLanding }} live-lab-landing-header{{ end }}{{ if $isIntroBigDataCourse }} intro-conversion-header{{ end }}">
   <div class="container header-inner">

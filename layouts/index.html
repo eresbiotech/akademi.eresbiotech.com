@@ -4,6 +4,7 @@
 {{- $starterPackage := index $packages "starting" -}}
 {{- $dataPackage := index $packages "data_analysis" -}}
 {{- $advancedPackage := index $packages "advanced" -}}
+{{- $fullAccessCampaign := site.Data.full_access_campaign -}}
 {{- $homeCurrent := index site.Data "home-current" -}}
 {{- $currentItems := where $homeCurrent.items "active" true -}}
 {{- $testimonials := site.Data.testimonials -}}
@@ -74,7 +75,15 @@
           <div class="academy-current-copy">
             <p>{{ .label }}</p>
             <h3>{{ .title }}</h3>
+            {{ if eq .type "full-access-campaign" }}
+              <div class="academy-current-price-ladder" aria-label="Full Access kampanya fiyatı">
+                <p><span>Tek tek öğrenci fiyatlarıyla</span><strong>{{ $fullAccessCampaign.single_course_total }}</strong></p>
+                <p><span>Full Access paket fiyatı</span><strong>{{ $fullAccessCampaign.normal_price }}</strong></p>
+                <p class="is-campaign-price"><span>30 Eylül'e kadar</span><strong>{{ $fullAccessCampaign.campaign_price }}</strong></p>
+              </div>
+            {{ end }}
             {{ with .summary }}<span>{{ . }}</span>{{ end }}
+            {{ if eq .type "full-access-campaign" }}<p class="academy-current-deadline">{{ $fullAccessCampaign.deadline_display }}'te sona eriyor.</p>{{ end }}
             {{ with .url }}<a class="academy-text-link" href="{{ . | relURL }}" data-event="homepage_current_click">{{ $item.cta | default "İncele" }} <span aria-hidden="true">→</span></a>{{ end }}
           </div>
           {{ if .featured }}{{ with $academicSeasonHuman }}

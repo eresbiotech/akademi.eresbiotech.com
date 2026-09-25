@@ -8,20 +8,21 @@
 {{- $dataAnalysis := $catalog.packages.data_analysis -}}
 {{- $advanced := $catalog.packages.advanced -}}
 {{- $allPrograms := $catalog.all_programs -}}
+{{- $fullAccessCampaign := site.Data.full_access_campaign -}}
 <article class="program-packages-page">
   <section class="package-landing-hero">
     <div class="container package-landing-hero-grid">
       <div>
-        <p class="eyebrow">YAZ BİTMEDEN %50’YE VARAN FIRSATLAR</p>
+        <p class="eyebrow">FULL ACCESS PROGRAM PAKETLERİ</p>
         <h1>Açık sekmeleri bir çalışma yoluna dönüştürün.</h1>
         <p class="lead">Bir sekmede R, diğerinde NCBI, kaydedilmiş bir RNA-seq videosu, okunacak makaleler, protein modelleme, filogenetik…</p>
-        <p class="lead">Eylül’ün akademik telaşı başlamadan neyi hangi sırayla çalışacağınızı netleştirin. Yalnızca ihtiyacınız olan alandan başlayabilir veya 7 programın tamamını tek erişimde açabilirsiniz.</p>
+        <p class="lead">İhtiyacınız olan programdan başlayabilir veya 7 programın tamamını tek erişimde açabilirsiniz.</p>
       </div>
       <div class="package-landing-hero-price">
-        <span>%50’ye varan paket fırsatları</span>
-        <strong>{{ $allPrograms.price }}</strong>
+        <span>30 Eylül'e kadar</span>
+        <strong>{{ $fullAccessCampaign.campaign_price }}</strong>
         <p>Tek alan paketleri 5.200 TL’den başlıyor</p>
-        <p>7 programın tamamı %50 indirimle 12.500 TL</p>
+        <p><del>{{ $fullAccessCampaign.normal_price }}</del> Full Access paket fiyatına ek %30</p>
       </div>
     </div>
   </section>
@@ -39,14 +40,18 @@
         <a class="hero-action hero-action-secondary" href="#alan-paketleri" data-event="landing_single_area_click">Bana Uygun Paketi Seç</a>
       </article>
       <article class="package-decision-card package-decision-all">
-        <p class="eyebrow">{{ $allPrograms.eyebrow }}</p>
+        <p class="eyebrow">7 EĞİTİM FULL ACCESS</p>
         <h2>Bütün çalışma yolunu açık tutayım</h2>
         <strong class="package-all-title">{{ $allPrograms.title }}</strong>
         <p>Bugün R’a, yarın tek hücre analizine; başka bir projede genom tarayıcıları, protein modelleme veya filogenetiğe ihtiyacınız olabilir. Başlangıçtan ileri uygulamalara kadar bütün yolu açık tutun.</p>
-        <span class="package-discount">{{ $allPrograms.discount_label }}</span>
-        <strong class="package-all-price">{{ $allPrograms.price }}</strong>
+        <dl class="full-access-price-ladder">
+          <div><dt>Tek tek öğrenci fiyatlarıyla</dt><dd>{{ $fullAccessCampaign.single_course_total }}</dd></div>
+          <div><dt>Normal Full Access paket fiyatı</dt><dd><del>{{ $fullAccessCampaign.normal_price }}</del></dd></div>
+          <div class="is-campaign"><dt>{{ $fullAccessCampaign.extra_discount_label }}</dt><dd>{{ $fullAccessCampaign.campaign_price }}</dd></div>
+        </dl>
+        <p class="full-access-deadline">{{ $fullAccessCampaign.deadline_display }}'e kadar</p>
         <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
-        <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş</a>
+        <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">Şimdi Kaydol</a>
         <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
         {{ partial "purchase-eligibility.html" . }}
         <p class="package-decision-note">7 program · Tek erişim · Kendi hızınızda ilerleme</p>
@@ -56,8 +61,8 @@
   </section>
 
   <section class="container package-fit-section package-fomo-section" aria-labelledby="package-fit-title">
-    <h2 id="package-fit-title">Eylül geldiğinde zaten yeterince açık işiniz olacak.</h2>
-    <p>Biyoinformatikte “nereden başlamalıyım?” sorusunu da o yoğunluğun içine bırakmayın.</p>
+    <h2 id="package-fit-title">Çalışma yolunuzu kendi hızınızda kurun.</h2>
+    <p>Biyoinformatikte nereden başlayacağınızı belirleyin; ihtiyacınız olan programdan ilerleyin.</p>
   </section>
 
   <section id="alan-paketleri" class="container package-area-section" aria-labelledby="area-packages-title">
@@ -111,13 +116,13 @@
 
   <section class="container package-return-section" aria-labelledby="all-programs-return-title">
     <div>
-      <p class="eyebrow">%50 İndirim</p>
+      <p class="eyebrow">7 EĞİTİM FULL ACCESS</p>
       <h2 id="all-programs-return-title">Birkaç ay sonra hangi sekmeye ihtiyacınız olacağını bilmiyorsanız, bütün yolu açık tutun.</h2>
       <p>Bugün ihtiyacınız olan konu yarın değişebilir. 7 asenkron programın tamamına tek erişimle başlangıçtan veri analizine ve ileri uygulamalara kadar çalışma yolunuzu açık tutabilirsiniz.</p>
     </div>
-    <div class="package-return-price"><strong>{{ $allPrograms.price }}</strong><span>7 program · Tek erişim</span></div>
+    <div class="package-return-price"><del>{{ $fullAccessCampaign.normal_price }}</del><strong>{{ $fullAccessCampaign.campaign_price }}</strong><span>30 Eylül 23:55'e kadar · 7 program · Tek erişim</span></div>
     <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
-    <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Birlikte Eriş</a>
+    <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">Şimdi Kaydol</a>
     <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
   </section>
 
@@ -127,9 +132,9 @@
       <p><span>Başlangıç</span><strong>{{ $starter.professional.package_price }}</strong></p>
       <p><span>Veri Analizi</span><strong>{{ $dataAnalysis.professional.package_price }}</strong></p>
       <p><span>İleri Uygulamalar</span><strong>{{ $advanced.professional.package_price }}</strong></p>
-      <p class="package-value-highlight"><span>Tüm 7 Program</span><strong>{{ $allPrograms.price }}</strong></p>
+      <p class="package-value-highlight"><span>Tüm 7 Program · Full Access</span><strong>{{ $fullAccessCampaign.campaign_price }}</strong><small><del>{{ $fullAccessCampaign.normal_price }}</del> · Paket fiyatına ek %30</small></p>
     </div>
-    <p>Tek bir paket sizin için yeterliyse onu seçin. Birden fazla çalışma alanına geçecekseniz 7 programın tamamı 12.500 TL.</p>
+    <p>Tek bir paket sizin için yeterliyse onu seçin. Birden fazla çalışma alanına geçecekseniz Full Access ile 7 programın tamamına erişebilirsiniz.</p>
   </section>
 
   <section class="container package-program-list-section" aria-labelledby="all-programs-list-title">
@@ -142,11 +147,11 @@
 
   <section class="container package-fit-section package-final-cta" aria-labelledby="package-final-cta-title">
     <div>
-      <h2 id="package-final-cta-title">Yaz bitmeden birkaç sekmeyi gerçekten kapatın.</h2>
-      <p>Eylül’ün tez, proje, ders ve analiz temposu gelmeden çalışma yolunuzu şimdi netleştirin.</p>
+      <h2 id="package-final-cta-title">Bugün başlayın, kendi hızınızda ilerleyin.</h2>
+      <p>İhtiyacınız olan programı seçin veya Full Access ile bütün çalışma yolunu açık tutun.</p>
     </div>
     <div class="package-final-actions">
-      <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">7 Programa Eriş — 12.500 TL</a>
+      <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">Şimdi Kaydol — {{ $fullAccessCampaign.campaign_price }}</a>
       <a class="hero-action hero-action-secondary" href="#alan-paketleri" data-event="landing_single_area_click">Bana Uygun Paketi Seç</a>
     </div>
     <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
