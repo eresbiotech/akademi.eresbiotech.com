@@ -26,10 +26,9 @@
         return;
       }
 
-      const countdown = bar.querySelector('[data-full-access-countdown]');
-      if (countdown) {
+      bar.querySelectorAll('[data-full-access-countdown]').forEach((countdown) => {
         countdown.textContent = formatRemaining(remaining, mobile);
-      }
+      });
     });
   };
 

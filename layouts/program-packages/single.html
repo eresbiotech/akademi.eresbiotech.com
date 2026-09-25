@@ -52,6 +52,7 @@
         <p class="full-access-deadline">{{ $fullAccessCampaign.deadline_display }}'e kadar</p>
         <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
         <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">Şimdi Kaydol</a>
+        <p class="full-access-auto-discount">İndirim kodu gerekmez · {{ $fullAccessCampaign.campaign_price }} ödeme adımında otomatik uygulanır.</p>
         <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
         {{ partial "purchase-eligibility.html" . }}
         <p class="package-decision-note">7 program · Tek erişim · Kendi hızınızda ilerleme</p>
@@ -123,6 +124,7 @@
     <div class="package-return-price"><del>{{ $fullAccessCampaign.normal_price }}</del><strong>{{ $fullAccessCampaign.campaign_price }}</strong><span>30 Eylül 23:55'e kadar · 7 program · Tek erişim</span></div>
     <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
     <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">Şimdi Kaydol</a>
+    <p class="full-access-auto-discount">İndirim kodu gerekmez · {{ $fullAccessCampaign.campaign_price }} ödeme adımında otomatik uygulanır.</p>
     <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
   </section>
 
@@ -154,6 +156,7 @@
       <a class="hero-action hero-action-gold" href="{{ $allPrograms.checkout_url }}" data-event="landing_all_programs_click" data-checkout-event="all_programs_checkout" data-payment-provider="eres-kampus" data-course="all_programs">Şimdi Kaydol — {{ $fullAccessCampaign.campaign_price }}</a>
       <a class="hero-action hero-action-secondary" href="#alan-paketleri" data-event="landing_single_area_click">Bana Uygun Paketi Seç</a>
     </div>
+    <p class="full-access-auto-discount">İndirim kodu gerekmez · {{ $fullAccessCampaign.campaign_price }} ödeme adımında otomatik uygulanır.</p>
     <p class="payment-installment-note"><strong>Kredi kartına taksit imkânı</strong><span>Kartınıza ve bankanıza uygun taksit seçenekleri ödeme adımında görüntülenir.</span></p>
     <p class="payment-access-note">Satın aldığınız programa erişiminiz hesabınızda sürekli açık kalır.</p>
   </section>

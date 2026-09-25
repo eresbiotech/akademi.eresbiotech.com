@@ -1,7 +1,9 @@
-<aside class="welcome-offer{{ if or .IsHome (eq .Layout "live-lab-landing") }} welcome-offer-with-mobile-cta{{ end }}" data-welcome-offer hidden aria-label="Tanışma indirimi">
-  <button class="welcome-offer-close" type="button" data-welcome-offer-close aria-label="Tanışma indirimi kartını kapat">×</button>
-  <p class="welcome-offer-kicker">İlk kez mi buradasınız?</p>
-  <strong class="welcome-offer-title">%8 Tanışma İndirimi</strong>
-  <span class="welcome-offer-code">MERHABA8</span>
-  <a class="welcome-offer-cta" href="{{ "/program-paketleri/" | relURL }}">Programları incele →</a>
-</aside>
+{{ with site.Data.full_access_campaign }}
+  <aside class="welcome-offer{{ if or $.IsHome (eq $.Layout "live-lab-landing") }} welcome-offer-with-mobile-cta{{ end }}" data-welcome-offer hidden aria-label="Full Access kampanya bilgisi">
+    <button class="welcome-offer-close" type="button" data-welcome-offer-close aria-label="Full Access kampanya kartını kapat">×</button>
+    <p class="welcome-offer-kicker">Full Access fırsatı</p>
+    <strong class="welcome-offer-title">7 eğitim · {{ .campaign_price }}</strong>
+    <span class="welcome-offer-reassurance">İndirim kodu gerekmez · {{ .campaign_price }} ödeme adımında otomatik uygulanır.</span>
+    <a class="welcome-offer-cta" href="{{ .target | relURL }}">Full Access'i incele →</a>
+  </aside>
+{{ end }}

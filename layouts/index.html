@@ -85,6 +85,7 @@
             {{ with .summary }}<span>{{ . }}</span>{{ end }}
             {{ if eq .type "full-access-campaign" }}<p class="academy-current-deadline">{{ $fullAccessCampaign.deadline_display }}'te sona eriyor.</p>{{ end }}
             {{ with .url }}<a class="academy-text-link" href="{{ . | relURL }}" data-event="homepage_current_click">{{ $item.cta | default "İncele" }} <span aria-hidden="true">→</span></a>{{ end }}
+            {{ if eq .type "full-access-campaign" }}<p class="academy-current-auto-discount">İndirim kodu gerekmez · {{ $fullAccessCampaign.campaign_price }} ödeme adımında otomatik uygulanır.</p>{{ end }}
           </div>
           {{ if .featured }}{{ with $academicSeasonHuman }}
             {{- $desktop := .Fit "1200x900 webp q82" -}}
