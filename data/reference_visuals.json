@@ -304,5 +304,23 @@
     "caption": "Temiz görünen tablo, veri modelini bilmiyorsanız hâlâ belirsiz olabilir.",
     "alt": "Aynı expression tablosunun biyolojik açıklama olmadan ve metadata ile açıklanmış iki sürümü.",
     "source_preference": "Deterministic educational table"
+  },
+  "TR-202609-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Veri üretimi ve bilimsel yorum aynı adım değildir.",
+    "details": "**Biyolojik örnek → Sekans / veri üretimi → Biyoinformatik analiz → Bilimsel yorum**",
+    "caption": "TUGEM hizmet kapsamı üzerinden yazıda ele alınan çalışma zincirinin kavramsal özeti; ölçülmüş bir sonuç veya kurumun resmî şeması değildir.",
+    "alt": "Biyolojik örnekten bilimsel yoruma uzanan dört aşamalı kavramsal akış.",
+    "source_preference": "Yazıdan türetilmiş özgün metin diyagramı; TUGEM Hizmetlerimiz."
+  },
+  "TR-202609-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Kurumsal sinyaller bize neyi gösterir, neyi göstermez?",
+    "details": "| Gözlem | Gösterdiği | Tek başına göstermediği |\n|---|---|---|\n| Genomik hizmet kapsamı | Analizin veri üretimiyle birlikte ele alınması | Kullanım veya talep artışının miktarı |\n| Kamu ve üniversite eğitimleri | Yetkinliklerin kurumsal görünürlüğü | Ticari ödeme isteği |\n| İş ilanları | Aynı rolde birlikte aranan beceriler | Türkiye’de toplam istihdam veya pazar büyüklüğü |",
+    "caption": "Yazıdaki kaynak ve editoryal sınırlılıkların karşılaştırması. Nicel pazar araştırması değildir.",
+    "alt": "Hizmet, eğitim ve iş ilanı sinyallerinin yorum sınırlarını karşılaştıran üç satırlı tablo.",
+    "source_preference": "Yazarın editoryal doğruluk notundan türetilen özgün karşılaştırma."
   }
 }
