@@ -84,7 +84,15 @@
             {{ end }}
             {{ with .summary }}<span>{{ . }}</span>{{ end }}
             {{ if eq .type "full-access-campaign" }}<p class="academy-current-deadline">{{ $fullAccessCampaign.deadline_display }}'te sona eriyor.</p>{{ end }}
-            {{ with .url }}<a class="academy-text-link" href="{{ . | relURL }}" data-event="homepage_current_click">{{ $item.cta | default "İncele" }} <span aria-hidden="true">→</span></a>{{ end }}
+            {{ if eq .type "live-mentorship" }}
+              <div class="academy-hero-actions">
+                <a class="academy-button academy-button-primary" href="{{ .checkout_url }}" data-event="homepage_mentorship_checkout">Şimdi Kaydol — 4.750 TL</a>
+                <a class="academy-button academy-button-secondary" href="{{ .url | relURL }}" data-event="homepage_mentorship_detail">Programı İncele</a>
+              </div>
+              <p>Henüz karar vermediyseniz <a class="academy-text-link" href="{{ .pre_registration_url }}" target="_blank" rel="noopener noreferrer" data-event="homepage_mentorship_preregister">ön kayıt listesine katılın <span aria-hidden="true">→</span></a></p>
+            {{ else }}
+              {{ with .url }}<a class="academy-text-link" href="{{ . | relURL }}" data-event="homepage_current_click">{{ $item.cta | default "İncele" }} <span aria-hidden="true">→</span></a>{{ end }}
+            {{ end }}
             {{ if eq .type "full-access-campaign" }}<p class="academy-current-auto-discount">İndirim kodu gerekmez · {{ $fullAccessCampaign.campaign_price }} ödeme adımında otomatik uygulanır.</p>{{ end }}
           </div>
           {{ if .featured }}{{ with $academicSeasonHuman }}

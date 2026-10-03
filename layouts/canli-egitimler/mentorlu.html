@@ -1,0 +1,69 @@
+{{ define "main" }}
+{{- $roadmap := resources.Get "images/course-proof/intro-course-roadmap.jpg" -}}
+{{- $geo2r := resources.Get "images/course-proof/intro-course-geo2r-r.jpg" -}}
+{{- $blast := resources.Get "images/course-proof/intro-course-blast-guide.jpg" -}}
+<article class="mentor-page">
+  <header class="mentor-hero">
+    <div class="container mentor-hero-grid">
+      <div>
+        <div class="mentor-signal-row"><span>17 EKİM'DE BAŞLIYOR</span><span>15 KİŞİLİK KONTENJAN</span><span>SON KAYIT 16 EKİM</span></div>
+        <p class="mentor-eyebrow">{{ .Params.period_label }} · BİRE BİR MENTÖRLÜ</p>
+        <h1>Biyoinformatiğe Giriş ve Büyük Veri</h1>
+        <p class="mentor-lead">1 saatlik başlangıç mentörlüğü ile programa hızlı başlayın ve daha kolay ilerleyin.</p>
+        <p class="mentor-support">Programda ilerleyin, sorularınızı biriktirin ve 2 saatlik bire bir mentörlük oturumunda canlı çözün.</p>
+        <div class="mentor-hero-actions">
+          <a class="mentor-button" href="{{ .Params.checkout_url }}">Şimdi Kaydol — {{ .Params.student_price }}</a>
+          <a class="mentor-button mentor-button-secondary" href="{{ .Params.pre_registration_url }}" target="_blank" rel="noopener noreferrer">Ön Kayıt Listesine Katıl</a>
+          <a class="mentor-text-link" href="#nasil-ilerliyor">Nasıl ilerliyor? ↓</a>
+        </div>
+        <p class="mentor-fineprint">Kesin kayıt ödeme tamamlandığında oluşur. Henüz karar vermediyseniz ön kayıt listesine katılabilirsiniz; ön kayıt ücretsizdir ve kontenjanda yer ayırmaz.</p>
+      </div>
+      <aside class="mentor-price-card">
+        <p class="mentor-eyebrow">1. DÖNEM</p><span class="mentor-price-label">Öğrenci</span><strong class="mentor-price">{{ .Params.student_price }}</strong>
+        <p class="mentor-installment"><strong>Derslere taksitli kayıt imkânı vardır.</strong><br>Ödeme adımında bankanıza özel seçenekleri görebilirsiniz.</p>
+        <dl class="mentor-keyfacts"><div><dt>Başlangıç</dt><dd>{{ .Params.start_date_display }}</dd></div><div><dt>Son kayıt</dt><dd>{{ .Params.registration_deadline }}</dd></div><div><dt>Kontenjan</dt><dd>15 kişi</dd></div><div><dt>Bire bir mentörlük</dt><dd>Toplam 3 saat</dd></div></dl>
+        <p class="mentor-fomo"><strong>Kontenjan 16 Ekim'den önce dolarsa 1. Dönem kayıtları daha erken kapanır.</strong></p>
+        <a class="mentor-button" href="{{ .Params.checkout_url }}">Şimdi Kaydol — {{ .Params.student_price }}</a>
+        <p class="mentor-fineprint">Kesin kayıt ödeme tamamlandığında oluşur.</p>
+      </aside>
+    </div>
+  </header>
+
+  <div class="container mentor-main">
+    <section id="nasil-ilerliyor" class="mentor-section">
+      <div class="mentor-section-heading"><p class="mentor-eyebrow">3 ADIMDA İLERLEYİN</p><h2>Başlayın, uygulayın, sorularınızı canlı çözün.</h2></div>
+      <div class="mentor-steps">
+        <article><span>01</span><h3>1 saat başlangıç mentörlüğü</h3><p>Çalışma alanınızı, mevcut seviyenizi ve hedefinizi konuşur; hangi başlıklara ve uygulamalara öncelik vereceğinizi planlarız.</p><small>Kesin kayıt sonrasında randevusu planlanır. Bire bir mentörlük dönemi 17 Ekim'de başlar.</small></article>
+        <article><span>02</span><h3>Programda kendi hızınızda ilerleyin</h3><p>Veri kaynaklarını inceleyin, uygulamaları kendi ekranınızda deneyin ve ilerlerken ortaya çıkan sorularınızı biriktirin.</p><small>Kesin kayıt tamamlandığında eğitim içeriklerine hemen erişebilirsiniz.</small></article>
+        <article><span>03</span><h3>2 saat uygulama + soru-cevap</h3><p>Sorularınızı, takıldığınız uygulamaları ve yorumlamakta zorlandığınız çıktıları bire bir oturumda canlı çalışın.</p><small>{{ .Params.mentorship_window }} arasında takviminize uygun bir tarih seçin.</small></article>
+      </div>
+    </section>
+
+    <section class="mentor-section" id="program">
+      <div class="mentor-section-heading"><p class="mentor-eyebrow">BİYOINFORMATİĞE GİRİŞ VE BÜYÜK VERİ</p><h2>Temel kavramlardan gerçek biyolojik veri kaynaklarına ilerleyin.</h2><p>Programı kendi hızınızda çalışırken biyolojik soruyu doğru veri kaynağı ve araçla ilişkilendirmeyi uygulayın.</p></div>
+      <div class="mentor-topic-grid">{{ range .Params.program_topics }}<article><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div>
+    </section>
+
+    <section class="mentor-section">
+      <div class="mentor-section-heading"><p class="mentor-eyebrow">DERSİN İÇİNDEN</p><h2>Kaydolmadan önce gerçek çalışma ekranlarını görün.</h2></div>
+      <div class="mentor-proof-grid">
+        {{ with $roadmap }}<figure><img src="{{ .RelPermalink }}" alt="ERES Kampüs Biyoinformatiğe Giriş programı ders rotası" width="{{ .Width }}" height="{{ .Height }}" loading="lazy"><figcaption>Gerçek ERES Kampüs ders rotası</figcaption></figure>{{ end }}
+        {{ with $geo2r }}<figure><img src="{{ .RelPermalink }}" alt="GEO2R ve R uygulamasını gösteren gerçek ders ekranı" width="{{ .Width }}" height="{{ .Height }}" loading="lazy"><figcaption>GEO2R uygulamasından gerçek ders ekranı</figcaption></figure>{{ end }}
+        {{ with $blast }}<figure><img src="{{ .RelPermalink }}" alt="BLAST çalışma mantığını gösteren gerçek ders ekranı" width="{{ .Width }}" height="{{ .Height }}" loading="lazy"><figcaption>BLAST başlığından gerçek ders ekranı</figcaption></figure>{{ end }}
+      </div>
+    </section>
+
+    <section class="mentor-section"><div class="mentor-section-heading"><p class="mentor-eyebrow">2 SAAT BİRE BİR</p><h2>Sorularınızı oturuma getirin.</h2><p>Programda ilerlerken takıldığınız noktaları not alın. Oturumdan önce sorularınızı, uygulama notlarınızı ve konuşmak istediğiniz ekran görüntülerini iletin.</p></div><div class="mentor-check-grid"><div>GEO/GEO2R uygulamalarında takıldığınız noktalar</div><div>Veri kaynaklarında bulamadığınız veya anlamadığınız alanlar</div><div>Programdaki uygulama soruları</div><div>Çıktıları nasıl okuyacağınız ve yorumlayacağınız</div></div></section>
+
+    <section class="mentor-section"><div class="mentor-section-heading"><p class="mentor-eyebrow">KİMLER İÇİN?</p><h2>Biyoinformatiğe başlamak ve uygulayarak ilerlemek isteyen yaşam bilimciler için.</h2></div><ul class="mentor-list"><li>Yaşam bilimlerinde lisans, yüksek lisans veya doktora eğitimi alanlar</li><li>Biyoinformatikle ilk kez çalışacak araştırmacılar</li><li>Makalelerde biyoinformatik analizlerle karşılaşanlar</li><li>NCBI, GEO, GEO2R ve biyolojik veri kaynaklarını uygulayarak öğrenmek isteyenler</li><li>Daha önce başlangıç eğitimi almış ancak konuları uygulamalı biçimde toparlamak isteyenler</li></ul><p class="mentor-note"><strong>Önceden kodlama veya R bilgisi gerekmez.</strong></p></section>
+
+    <section class="mentor-section"><div class="mentor-section-heading"><p class="mentor-eyebrow">1. DÖNEM TAKVİMİ</p><h2>17 Ekim'de mentörlük dönemi başlıyor.</h2></div><div class="mentor-timeline"><div><span>Şimdi</span><strong>Ön kayıt listesine katılın</strong><p>Ön kayıt ücretsizdir; kontenjanda yer ayırmaz.</p></div><div><span>Kesin kayıt</span><strong>Eğitim içeriklerine hemen erişin</strong><p>Kesin kayıt ödeme tamamlandığında oluşur.</p></div><div><span>17 Ekim</span><strong>Bire bir mentörlük dönemi başlar</strong><p>Başlangıç mentörlüğünüz kayıt sonrasında planlanır.</p></div><div><span>17 Ekim–16 Kasım</span><strong>2 saatlik oturumunuzu planlayın</strong><p>Takviminize uygun bir tarih seçin.</p></div></div></section>
+
+    <section class="mentor-section mentor-scope-section"><div class="mentor-section-heading"><p class="mentor-eyebrow">MENTÖRLÜK KAPSAMI</p><h2>Birlikte öğrenir ve uygularız; çalışmanızı sizin yerinize tamamlamayız.</h2></div><p>Bire bir mentörlük, program içeriğini uygulamanız, konuları daha iyi anlamanız ve sorularınızı çözmeniz için hazırlanmıştır.</p><p>Mentörlük; sizin adınıza tamamlanan tez analizi, kapsamlı özel veri analizi, araştırma projesi yürütme veya sınırsız danışmanlık hizmeti değildir.</p></section>
+
+    <section class="mentor-section"><div class="mentor-section-heading"><p class="mentor-eyebrow">SIK SORULAN SORULAR</p><h2>1. Dönem hakkında merak edilenler</h2></div><div class="mentor-faq-list">{{ range .Params.faqs }}<details><summary>{{ .question }}</summary><p>{{ .answer }}</p></details>{{ end }}</div></section>
+
+    <section class="mentor-final"><div><p class="mentor-eyebrow">1. DÖNEM · 17 EKİM'DE BAŞLIYOR</p><h2>15 kişilik kontenjan.</h2><p>1 saat başlangıç + Biyoinformatiğe Giriş ve Büyük Veri + 2 saat bire bir uygulama ve soru-cevap.</p><p class="mentor-fomo"><strong>Son kayıt 16 Ekim. Kontenjan daha önce dolarsa 1. Dönem kayıtları erken kapanır.</strong></p></div><div class="mentor-final-price"><span>Öğrenci</span><strong>{{ .Params.student_price }}</strong><p><strong>Derslere taksitli kayıt imkânı vardır.</strong><br>Ödeme adımında bankanıza özel seçenekleri görebilirsiniz.</p><a class="mentor-button" href="{{ .Params.checkout_url }}">Şimdi Kaydol — {{ .Params.student_price }}</a><a class="mentor-text-link" href="{{ .Params.pre_registration_url }}" target="_blank" rel="noopener noreferrer">Henüz karar vermedim — ön kayıt listesine katıl →</a><small>Ön kayıt ücretsizdir; kontenjanda yer ayırmaz. Kesin kayıt ödeme tamamlandığında oluşur.</small></div></section>
+  </div>
+</article>
+{{ end }}

@@ -1,9 +1,11 @@
 items:
   - active: true
     featured: true
-    type: full-access-campaign
-    label: "30 EYLÜL'E KADAR"
-    title: "7 eğitimin tamamına 8.750 TL'ye erişin."
-    summary: "7 eğitimin Full Access paket fiyatı 12.500 TL. 30 Eylül'e kadar paket fiyatına ek %30 indirimle 8.750 TL."
-    url: "/program-paketleri/"
-    cta: "Fırsatı Kaçırma — Şimdi Kaydol"
+    type: live-mentorship
+    label: "1. DÖNEM · 17 EKİM'DE BAŞLIYOR"
+    title: "Bire Bir Mentörlü Biyoinformatiğe Giriş"
+    summary: "1 saat başlangıç mentörlüğü + Biyoinformatiğe Giriş ve Büyük Veri + 2 saat bire bir uygulama ve soru-cevap. Öğrenci 4.750 TL · 15 kişilik kontenjan · Son kayıt 16 Ekim."
+    url: "/canli-egitimler/bire-bir-mentorlu-biyoinformatige-giris/"
+    checkout_url: "https://kampus.eresbiotech.com/order?link=TO3NH&pricing_plan=ANzp091XzX"
+    pre_registration_url: "https://forms.gle/iNuW1FXZnGQJRb8W9"
+    cta: "Programı İncele"
