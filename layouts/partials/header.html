@@ -1,23 +1,16 @@
 {{- $isStudentLogin := eq .RelPermalink "/ders-giris/" -}}
 {{- $isLiveLabLanding := eq .Layout "live-lab-landing" -}}
 {{- $isIntroBigDataCourse := and .IsPage (eq .File.BaseFileName "biyoinformatik-giris-egitim-buyuk-veri-kurs") -}}
-{{ with site.Data.full_access_campaign }}
-  <aside class="site-promo-bar" aria-label="Full Access kampanya duyurusu" data-full-access-promo data-full-access-deadline="{{ .deadline }}">
-    <a class="site-promo-bar-link" href="{{ .target | relURL }}" data-event="promo_bar_click">
-      <span class="container site-promo-bar-inner">
-        <span class="site-promo-proof">
-          <span class="site-promo-proof-desktop">200+ kişi biyoinformatik programlarında ilerliyor...</span>
-          <span class="site-promo-proof-mobile">200 + katılımcı programlarda ilerliyor</span>
-        </span>
-        <span class="site-promo-divider" aria-hidden="true">|</span>
-        <span class="site-promo-campaign">
-          <span class="site-promo-campaign-desktop">Full Access fırsatının bitmesine <span data-full-access-countdown role="timer">{{ .deadline_display }}'e kadar</span> · 7 eğitim {{ .campaign_price }} · Kaçırmayın <span aria-hidden="true">→</span></span>
-          <span class="site-promo-campaign-mobile">Full Access · <span data-full-access-countdown role="timer">{{ .deadline_display }}'e kadar</span> · {{ .campaign_price }} <span aria-hidden="true">→</span></span>
-        </span>
+<aside class="site-promo-bar site-proof-bar" aria-label="ERES programları katılımcı bilgisi">
+  <a class="site-promo-bar-link" href="{{ "/post/" | relURL }}" data-event="proof_bar_programs_click">
+    <span class="container site-promo-bar-inner">
+      <span class="site-promo-proof">
+        <span class="site-promo-proof-desktop">Şu an ERES biyoinformatik programlarında 200+ kişi ilerliyor. <span aria-hidden="true">→</span></span>
+        <span class="site-promo-proof-mobile">200+ kişi programlarda ilerliyor <span aria-hidden="true">→</span></span>
       </span>
-    </a>
-  </aside>
-{{ end }}
+    </span>
+  </a>
+</aside>
 <header class="site-header{{ if $isStudentLogin }} student-login-site-header{{ end }}{{ if $isLiveLabLanding }} live-lab-landing-header{{ end }}{{ if $isIntroBigDataCourse }} intro-conversion-header{{ end }}">
   <div class="container header-inner">
     <a class="brand" href="{{ "/" | relURL }}" aria-label="ERES Biyoinformatik">
