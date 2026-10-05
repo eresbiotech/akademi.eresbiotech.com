@@ -322,5 +322,140 @@
     "caption": "Yazıdaki kaynak ve editoryal sınırlılıkların karşılaştırması. Nicel pazar araştırması değildir.",
     "alt": "Hizmet, eğitim ve iş ilanı sinyallerinin yorum sınırlarını karşılaştıran üç satırlı tablo.",
     "source_preference": "Yazarın editoryal doğruluk notundan türetilen özgün karşılaştırma."
+  },
+  "NOBEL-OPTO-01-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Bir nöronun elektriksel durumu, hücre zarından geçen iyonlarla değişebilir.",
+    "details": "`İyon kanalı kapalı → iyon geçişi sınırlı`  \n`İyon kanalı açık → iyon akışı değişir → zar potansiyeli etkilenir`",
+    "caption": "Optogenetiği anlamanın ilk adımı, iyon kanallarını hücre zarındaki kontrollü geçiş kapıları olarak düşünmektir.",
+    "alt": "İyon kanalının açılmasıyla iyon akışının ve hücrenin elektriksel durumunun değişmesini gösteren şema.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-01-2": {
+    "number": "2",
+    "kind": "diagram",
+    "title": "Channelrhodopsin, ışığı iyon akışındaki değişime bağlayan moleküler anahtardır.",
+    "details": "`Işık → Channelrhodopsin açılır → iyon geçişi değişir → nöronun elektriksel aktivitesi etkilenir`",
+    "caption": "Işık sıradan bir nöronu doğrudan kontrol etmez; önce hücrenin ışığa duyarlı proteini üretmesi gerekir.",
+    "alt": "Işıktan channelrhodopsin kanalının açılmasına ve nöronal aktivite değişimine uzanan süreç.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-01-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "Moleküler veri hücreyi tanımaya, optogenetik ise işlevini test etmeye yardımcı olabilir.",
+    "details": "`Single-cell RNA-seq → Hangi hücre? Hangi genler aktif?`  \n↓  \n`Hedef hücre grubu`  \n↓  \n`Optogenetik → Bu hücrelerin aktivitesi değiştirildiğinde ne oluyor?`",
+    "caption": "Modern nörobilimde hesaplamalı veri ile deneysel müdahale birbirini tamamlayan iki farklı kanıt katmanı olabilir.",
+    "alt": "Single-cell RNA-seq ile hücre tanımlamadan optogenetik işlev testine uzanan araştırma akışı.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-02-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Bir protein adından doğrulanabilir biyolojik kayda gitmek için accession numarasını takip edin.",
+    "details": "`Makaledeki protein adı → accession → organizma → dizi → kaynak yayın`",
+    "caption": "İsimler ve anotasyonlar değişebilir; accession numarası belirli bir kaydın izini sürmeye yardım eder.",
+    "alt": "Protein adından accession, organizma, dizi ve kaynak yayına uzanan doğrulama akışı.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-02-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Nucleotide, Gene ve Protein kayıtları aynı şeyi temsil etmez.",
+    "details": "| Kayıt | Temel soru |\\n|---|---|\\n| Nucleotide | Nükleotid dizisi nedir? |\\n| Gene | Genomdaki gen/lokus nedir? |\\n| Protein | Amino asit dizisi nedir? |",
+    "caption": "NCBI kaydını yorumlarken önce hangi biyolojik seviyeye baktığınızı belirleyin.",
+    "alt": "Nucleotide, Gene ve Protein kayıtlarının temel farklarını gösteren tablo.",
+    "source_preference": "Teaching table"
+  },
+  "NOBEL-OPTO-02-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "BLAST sequence similarity gösterir; protein fonksiyonunu tek başına kanıtlamaz.",
+    "details": "`Dizi → BLAST → coverage + identity + E-value + organizma → biyolojik yorum`",
+    "caption": "Benzerlik güçlü bir başlangıç kanıtıdır; fonksiyon için ek biyolojik ve deneysel bilgi gerekir.",
+    "alt": "Bir protein dizisinin BLAST sonuçlarından biyolojik yoruma taşınmasını gösteren akış.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-03-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Optogenetik tek bir deneyden değil, birbirini izleyen bilimsel sorulardan doğdu.",
+    "details": "`Algde ışık yanıtı → membran akımı → ışığa duyarlı protein → iyon kanalı → başka hücrede çalışma → nöronal kontrol`",
+    "caption": "Her deney bir sonraki bilimsel sorunun sorulabilmesini sağladı.",
+    "alt": "Alg fizyolojisinden nöronal optik kontrole uzanan bilimsel soru zinciri.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-03-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Temel çalışmalar optogenetiğin farklı parçalarını ortaya koydu.",
+    "details": "| Yıl | Çalışma | Temel katkı |\\n|---|---|---|\\n| 1991 | Harz & Hegemann | Algde ışıkla ilişkili iyon akımları |\\n| 2002 | Nagel et al. | Channelrhodopsin-1'in ışığa bağlı kanal özelliği |\\n| 2003 | Nagel et al. | ChR2'nin doğrudan ışıkla açılan katyon kanalı olması |\\n| 2005 | Boyden et al. | Memeli nöronlarında hızlı optik kontrol |",
+    "caption": "Moleküler mekanizma adım adım farklı deney sistemlerinde test edildi.",
+    "alt": "1991 ile 2005 arasındaki dört temel optogenetik çalışmasını karşılaştıran tablo.",
+    "source_preference": "Teaching table"
+  },
+  "NOBEL-OPTO-03-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "Birlikte görülmek ile neden olmak aynı şey değildir.",
+    "details": "`Davranış sırasında nöron aktif → ilişki`  \n`Nöron aktivitesini kontrollü değiştir → davranış değişiyor mu? → nedenselliği test et`",
+    "caption": "Optogenetik, hücresel aktiviteye deneysel müdahale ederek işlevi test etmeyi mümkün kılar.",
+    "alt": "Korelasyon gözlemi ile kontrollü optogenetik müdahaleyi karşılaştıran şema.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-04-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Optogenetik ve biyoinformatik aynı yöntem değildir; araştırma zincirinin farklı halkalarında çalışırlar.",
+    "details": "`Bilimsel soru → biyolojik veri → hedef/molekül seçimi → deneysel müdahale → çıktı → computational analiz → biyolojik yorum`",
+    "caption": "Deneysel yöntem ile hesaplamalı analiz aynı bilimsel soruda birbirini tamamlayabilir.",
+    "alt": "Bilimsel sorudan biyolojik veriye, optogenetik deneye ve hesaplamalı analize uzanan araştırma akışı.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-04-2": {
+    "number": "2",
+    "kind": "table",
+    "title": "Bilimsel soruya göre kullanılacak veri ve araç değişir.",
+    "details": "| Bilimsel soru | Veri / yaklaşım |\\n|---|---|\\n| Benzer opsinler var mı? | BLAST / sequence |\\n| Evrimsel ilişkileri ne? | Alignment + phylogeny |\\n| Hangi amino asitler önemli olabilir? | Structure + literature |\\n| Hangi hücreyi hedeflemeli? | Single-cell / marker genes |\\n| Deney sonucu değişti mi? | R / istatistik / görselleştirme |",
+    "caption": "Araç seçiminden önce bilimsel soruyu tanımlayın.",
+    "alt": "Optogenetik araştırmasındaki farklı soruları uygun biyoinformatik veri ve yöntemlerle eşleştiren tablo.",
+    "source_preference": "Teaching table"
+  },
+  "NOBEL-OPTO-04-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "Tek bir araç biyolojinin bütün ölçeklerini açıklayamaz.",
+    "details": "`Dizi → protein → hücre → hücre popülasyonu → devre → davranış`  \n`Her ölçekte farklı veri ve deneysel kanıt gerekir.`",
+    "caption": "Güçlü biyolojik yorum, farklı ölçeklerden gelen kanıtların birlikte değerlendirilmesiyle oluşur.",
+    "alt": "Diziden proteine, hücreye, devreye ve davranışa uzanan biyolojik ölçekler.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-05-1": {
+    "number": "1",
+    "kind": "diagram",
+    "title": "Bilimsel yenilik bazen yeni bir molekül icat etmek değil, var olan mekanizmaya yeni bir soru sormaktır.",
+    "details": "`Doğal işlev → mekanizmayı anla → başka sistemde dene → yeni deneysel araç → yeni bilimsel soru`",
+    "caption": "Channelrhodopsin'in yolculuğu temel araştırma ile uygulama arasındaki beklenmedik geçişi gösterir.",
+    "alt": "Doğal biyolojik mekanizmadan yeni deneysel araca uzanan keşif akışı.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-05-2": {
+    "number": "2",
+    "kind": "diagram",
+    "title": "Biyolojik veri tabanları yalnız cevap deposu değil, yeni hipotezler için keşif alanıdır.",
+    "details": "`Genom + protein + expression + structure + literature + taxonomy → beklenmedik bağlantı → test edilebilir hipotez`",
+    "caption": "Biyoinformatiğin yaratıcı tarafı farklı biyolojik veri katmanları arasında test edilebilir bağlantılar kurabilmektir.",
+    "alt": "Farklı biyolojik veri kaynaklarından test edilebilir hipoteze giden araştırma akışı.",
+    "source_preference": "Generated teaching diagram"
+  },
+  "NOBEL-OPTO-05-3": {
+    "number": "3",
+    "kind": "diagram",
+    "title": "Bilimde hayal gücü sonucu uydurmak değil, test edilebilir yeni soruyu bulmaktır.",
+    "details": "`Merak → bağlantı → hipotez → veri / deney → sonuç → yeni soru`",
+    "caption": "Bilimsel merak, kanıt üretme döngüsünü başlatır.",
+    "alt": "Meraktan hipotez ve deney yoluyla yeni soruya dönen bilimsel araştırma döngüsü.",
+    "source_preference": "Generated teaching diagram"
   }
 }
