@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{- $emailSignup := index site.Data "email-signup" -}}
+{{- $baseName := "" -}}
+{{- with .File -}}{{- $baseName = .BaseFileName -}}{{- end -}}
 <article class="container page-shell page-narrow">
   <header class="page-header soft-hero">
     <p class="eyebrow">ERES Akademi</p>
@@ -8,5 +11,10 @@
   <div class="content-card prose">
     {{ .Content }}
   </div>
+  {{ if eq $baseName "about" }}
+    <div class="email-signup-placement">{{ partial "email-signup.html" (dict "page" . "config" $emailSignup.about "instance" "about" "variant" "banner") }}</div>
+  {{ else if eq $baseName "work" }}
+    <div class="email-signup-placement">{{ partial "email-signup.html" (dict "page" . "config" $emailSignup.corporate "instance" "corporate" "variant" "banner") }}</div>
+  {{ end }}
 </article>
 {{ end }}

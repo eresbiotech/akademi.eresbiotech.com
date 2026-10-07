@@ -1,0 +1,58 @@
+{{- $page := .page -}}
+{{- $config := .config -}}
+{{- $instance := .instance | default "site" -}}
+{{- $variant := .variant | default "standard" -}}
+{{- $enabled := true -}}
+{{- with $config.enabled -}}{{- $enabled = . -}}{{- end -}}
+{{- if $enabled -}}
+  {{- $context := $config.context | default "site" -}}
+  {{- $eyebrow := $config.eyebrow | default "ERES E-POSTA LİSTESİ" -}}
+  {{- $title := $config.title | default "ERES’ten haberdar olun." -}}
+  {{- $body := $config.body | default "Yeni bilimsel içerikleri ve seçili Akademi duyurularını e-postanızda takip edin." -}}
+  {{- $cta := $config.cta | default "Haberdar olun" -}}
+  {{- $success := $config.success_message | default "Kaydınız alındı." -}}
+  {{- $existing := $config.existing_message | default "Bu e-posta zaten listede." -}}
+  {{- $campaignID := $config.campaign_id | default "" -}}
+  {{- $offerType := $config.offer_type | default "newsletter" -}}
+  {{- $assetID := $config.asset_id | default "" -}}
+  {{- $emailID := printf "email-signup-email-%s" $instance -}}
+  {{- $target := printf "email-signup-target-%s" $instance -}}
+<section class="email-signup email-signup--{{ $variant }}" aria-labelledby="email-signup-title-{{ $instance }}"
+  data-email-signup data-signup-context="{{ $context }}" data-success-message="{{ $success }}" data-existing-message="{{ $existing }}">
+  <p class="eyebrow">{{ $eyebrow }}</p>
+  <h2 id="email-signup-title-{{ $instance }}">{{ $title }}</h2>
+  <p class="email-signup-copy">{{ $body }}</p>
+
+  <form class="email-signup-form" action="{{ site.Params.referenceSignupEndpoint }}" method="post" target="{{ $target }}" data-email-signup-form>
+    <div class="email-signup-row">
+      <label class="sr-only" for="{{ $emailID }}">E-posta adresiniz</label>
+      <input id="{{ $emailID }}" name="email" type="email" inputmode="email" autocomplete="email" placeholder="E-posta adresiniz" required>
+      <button type="submit">{{ $cta }}</button>
+    </div>
+
+    <label class="email-signup-consent">
+      <input type="checkbox" name="consent" value="true" required>
+      <span>ERES’in yeni bilimsel içerikleri ve seçili Akademi duyuruları için e-posta almak istiyorum.</span>
+    </label>
+
+    <input type="hidden" name="source_url" value="{{ $page.Permalink }}" data-email-signup-source-url>
+    <input type="hidden" name="source_title" value="{{ $page.Title }}">
+    <input type="hidden" name="signup_context" value="{{ $context }}">
+    <input type="hidden" name="campaign_id" value="{{ $campaignID }}">
+    <input type="hidden" name="offer_type" value="{{ $offerType }}">
+    <input type="hidden" name="asset_id" value="{{ $assetID }}">
+    <input type="hidden" name="request_id" value="" data-email-signup-request-id>
+    <input type="text" name="website" class="email-signup-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="email-signup-meta">
+      <span>İstediğiniz zaman ayrılabilirsiniz.</span>
+      <a href="{{ "/kvkk-aydinlatma-metni/" | relURL }}">KVKK Aydınlatma Metni</a>
+    </div>
+
+    <p class="email-signup-status" role="status" aria-live="polite" data-email-signup-status></p>
+    <div class="email-signup-delivery" data-email-signup-delivery hidden></div>
+  </form>
+
+  <iframe class="email-signup-target" name="{{ $target }}" title="E-posta abonelik gönderimi" tabindex="-1" aria-hidden="true"></iframe>
+</section>
+{{- end -}}

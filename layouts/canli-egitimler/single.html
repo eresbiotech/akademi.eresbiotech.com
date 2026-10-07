@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{- $emailSignup := index site.Data "email-signup" -}}
 {{- $statusLabels := dict "yakinda" "Satın alma bilgisi yakında" "kayit-acik" "Erişim açık" "doldu" "Katılım sınırına ulaşıldı" "tamamlandi" "Tamamlandı" -}}
 {{- $status := .Params.status | default "yakinda" -}}
 {{- $statusLabel := index $statusLabels $status | default "Satın alma bilgisi yakında" -}}
@@ -18,6 +19,7 @@
       <div><dt>Tarih</dt><dd>{{ .Params.event_date | default "Yakında açıklanacak" }}</dd></div><div><dt>Saat</dt><dd>{{ .Params.event_time | default "Yakında açıklanacak" }}</dd></div><div><dt>Süre</dt><dd>{{ .Params.duration | default "Yakında açıklanacak" }}</dd></div><div><dt>Seviye</dt><dd>{{ .Params.level | default "Yakında açıklanacak" }}</dd></div>
     </dl></aside>
   </div></header>
+  <div class="container email-signup-placement">{{ partial "email-signup.html" (dict "page" . "config" $emailSignup.live "instance" "live-program" "variant" "banner") }}</div>
   <div class="container live-content">
     <section class="live-section" aria-labelledby="audience-title"><p class="live-kicker">Kimler için?</p><h2 id="audience-title">Bu canlı vaka çalışması kimler için tasarlandı?</h2><p>Bu çalışma özellikle moleküler biyoloji ve genetik, biyoloji, biyoteknoloji ve ilgili yaşam bilimleri alanlarında çalışan veya araştırma yapan kullanıcılar; RNA-seq verisiyle karşılaşan lisansüstü araştırmacılar; diferansiyel ekspresyon sonuçlarını daha doğru okumak isteyen araştırmacılar ve biyoinformatik analiz akışını incelemek isteyen yaşam bilimciler için tasarlanmıştır.</p><div class="live-card-grid">{{ range .Params.audience }}<article class="live-card"><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div></section>
     <section id="program" class="live-section" aria-labelledby="program-title"><p class="live-kicker">Uygulama akışı</p><h2 id="program-title">Canlı vaka çalışmasında neleri inceleyeceksiniz?</h2><ol class="live-program">{{ range .Params.program }}<li><span>{{ . }}</span></li>{{ end }}</ol></section>

@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{- $emailSignup := index site.Data "email-signup" -}}
 {{- $catalog := site.Data.program_packages -}}
 {{- $packages := $catalog.packages -}}
 {{- $starterPackage := index $packages "starting" -}}
@@ -60,6 +61,10 @@
     {{ end }}
   </div>
 </section>
+
+<div class="container email-signup-placement">
+  {{ partial "email-signup.html" (dict "page" . "config" $emailSignup.home "instance" "home-primary" "variant" "banner") }}
+</div>
 
 {{ with $currentItems }}
   <section id="ereste-simdi" class="container academy-section academy-current" aria-labelledby="academy-current-title">

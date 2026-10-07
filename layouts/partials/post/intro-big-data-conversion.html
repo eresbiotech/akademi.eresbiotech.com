@@ -43,6 +43,10 @@
     </section>
   </header>
 
+  <div class="email-signup-placement">
+    {{ partial "email-signup.html" (dict "page" . "config" (index (index site.Data "email-signup") "course") "instance" "intro-course" "variant" "banner") }}
+  </div>
+
   {{ partial "post/editorial-human-visual.html" (dict "page" .) }}
 
   <div class="intro-conversion-content">

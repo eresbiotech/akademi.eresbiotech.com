@@ -4,6 +4,7 @@
 
 {{ define "program-packages-main" }}
 {{- $catalog := site.Data.program_packages -}}
+{{- $emailSignup := index site.Data "email-signup" -}}
 {{- $starter := $catalog.packages.starting -}}
 {{- $dataAnalysis := $catalog.packages.data_analysis -}}
 {{- $advanced := $catalog.packages.advanced -}}
@@ -25,6 +26,8 @@
       </div>
     </div>
   </section>
+
+  <div class="container email-signup-placement">{{ partial "email-signup.html" (dict "page" . "config" $emailSignup.packages "instance" "packages" "variant" "banner") }}</div>
 
   <section class="container package-decision-section" aria-labelledby="package-decision-title">
     <h2 id="package-decision-title" class="visually-hidden">Çalışma yolunuzu seçin</h2>

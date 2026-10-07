@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{- $emailSignup := index site.Data "email-signup" -}}
 <section class="container page-shell reference-hub" aria-labelledby="reference-hub-title">
   <nav class="reference-breadcrumb" aria-label="Sayfa yolu"><a href="{{ "/" | relURL }}">Ana Sayfa</a><span aria-hidden="true">›</span><span aria-current="page">Reference Hub</span></nav>
   <header class="reference-hub-header">
@@ -6,6 +7,7 @@
     <h1 id="reference-hub-title">Biyoinformatik için güvenilir bilgi, gerçek ilerleme.</h1>
     <p>{{ .Description }}</p>
   </header>
+  <div class="email-signup-placement">{{ partial "email-signup.html" (dict "page" . "config" $emailSignup.reference_hub "instance" "reference-hub" "variant" "banner") }}</div>
   {{ $pages := where .RegularPages "Draft" false }}
   {{ if $pages }}
     <div class="reference-hub-grid">

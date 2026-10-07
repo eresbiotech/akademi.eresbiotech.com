@@ -1,0 +1,116 @@
+home:
+  enabled: true
+  context: "home"
+  eyebrow: "ERES AKADEMİ E-POSTA LİSTESİ"
+  title: "ERES’te yeni olanı kaçırmayın."
+  body: "Yeni programları, bilimsel içerikleri ve seçili Akademi duyurularını e-postanızda takip edin."
+  cta: "Haberdar olun"
+  success_message: "Kaydınız alındı. Yeni ERES içeriklerinde görüşmek üzere."
+  existing_message: "Bu e-posta zaten listede. Yeni ERES içeriklerinde görüşmek üzere."
+  offer_type: "newsletter"
+  campaign_id: ""
+  asset_id: ""
+
+reference_end:
+  enabled: true
+  context: "reference"
+  eyebrow: "REFERENCE HUB E-POSTA LİSTESİ"
+  title: "Yeni Reference yazılarını kaçırmayın."
+  body: "Biyoinformatik, genomik, veri analizi ve yaşam bilimlerindeki yeni gelişmeleri anlaşılır bilimsel yazılarla takip edin."
+  cta: "Listeye katıl"
+  success_message: "Kaydınız alındı. Yeni Reference yazılarında görüşmek üzere."
+  existing_message: "Bu e-posta zaten listede. Yeni Reference yazılarında görüşmek üzere."
+  offer_type: "newsletter"
+  campaign_id: ""
+  asset_id: ""
+
+reference_rail:
+  enabled: true
+  context: "reference"
+  eyebrow: "YENİ YAZILAR"
+  title: "Reference Hub’ı e-postanızdan takip edin."
+  body: "Yeni bilimsel yazılar yayınlandığında haberdar olun."
+  cta: "Listeye katıl"
+  success_message: "Kaydınız alındı."
+  existing_message: "Bu e-posta zaten listede."
+  offer_type: "newsletter"
+  campaign_id: ""
+  asset_id: ""
+
+reference_hub:
+  enabled: true
+  context: "reference_hub"
+  eyebrow: "REFERENCE HUB E-POSTA LİSTESİ"
+  title: "Yeni Reference yazıları yayınlandığında haber alın."
+  body: "Biyoinformatik ve yaşam bilimlerindeki yeni Reference içeriklerini doğrudan e-postanızdan takip edin."
+  cta: "Listeye katıl"
+  success_message: "Kaydınız alındı."
+  existing_message: "Bu e-posta zaten listede."
+  offer_type: "newsletter"
+  campaign_id: ""
+  asset_id: ""
+
+course:
+  enabled: true
+  context: "course"
+  eyebrow: "PROGRAM GÜNCELLEMELERİ"
+  title: "Yeni programları ve güncellemeleri kaçırmayın."
+  body: "Yeni eğitimler, canlı çalışmalar ve önemli program güncellemeleri açıldığında haberdar olun."
+  cta: "Haberdar olun"
+  success_message: "Kaydınız alındı. Yeni programlarda görüşmek üzere."
+  existing_message: "Bu e-posta zaten listede."
+  offer_type: "newsletter"
+  campaign_id: ""
+  asset_id: ""
+
+live:
+  enabled: true
+  context: "live"
+  eyebrow: "CANLI PROGRAM DUYURULARI"
+  title: "Yeni canlı programlar açıldığında haber alın."
+  body: "Yeni oturum tarihleri, kayıt açılışları ve canlı çalışma duyurularını kaçırmayın."
+  cta: "Haberdar olun"
+  success_message: "Kaydınız alındı. Yeni canlı programlarda görüşmek üzere."
+  existing_message: "Bu e-posta zaten listede."
+  offer_type: "announcement"
+  campaign_id: ""
+  asset_id: ""
+
+about:
+  enabled: true
+  context: "about"
+  eyebrow: "ERES’TEN HABERLER"
+  title: "Ekibimizden ve yeni bilimsel çalışmalardan haberdar olun."
+  body: "ERES’in yeni içerikleri, programları ve bilimsel üretimlerinden seçili duyuruları e-postanızda takip edin."
+  cta: "Haberdar olun"
+  success_message: "Kaydınız alındı."
+  existing_message: "Bu e-posta zaten listede."
+  offer_type: "newsletter"
+  campaign_id: ""
+  asset_id: ""
+
+corporate:
+  enabled: true
+  context: "corporate"
+  eyebrow: "KURUMLAR İÇİN"
+  title: "Kurumunuz için yeni çalışma ve programlardan haberdar olun."
+  body: "Araştırma grupları ve kurumlar için yeni çalışma formatları ve seçili duyuruları takip edin."
+  cta: "Haberdar olun"
+  success_message: "Kaydınız alındı."
+  existing_message: "Bu e-posta zaten listede."
+  offer_type: "announcement"
+  campaign_id: ""
+  asset_id: ""
+
+packages:
+  enabled: true
+  context: "packages"
+  eyebrow: "PROGRAM DUYURULARI"
+  title: "Yeni paketleri ve program güncellemelerini kaçırmayın."
+  body: "Yeni eğitimler, paketler ve önemli erişim duyuruları yayınlandığında haberdar olun."
+  cta: "Haberdar olun"
+  success_message: "Kaydınız alındı."
+  existing_message: "Bu e-posta zaten listede."
+  offer_type: "newsletter"
+  campaign_id: ""
+  asset_id: ""

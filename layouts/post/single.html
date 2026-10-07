@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{- $emailSignup := index site.Data "email-signup" -}}
 {{- $displayTitle := replaceRE "^2024\\s+" "" .Title -}}
 {{- $slug := .File.BaseFileName -}}
 {{- $isIntroBigDataCourse := eq $slug "biyoinformatik-giris-egitim-buyuk-veri-kurs" -}}
@@ -176,6 +177,7 @@
 
   <div class="training-layout">
     <aside class="training-sidebar" aria-label="Program özeti">
+      {{ partial "email-signup.html" (dict "page" . "config" $emailSignup.course "instance" "course-sidebar" "variant" "compact") }}
       <div class="sidebar-card decision-card">
         <p class="eyebrow">Program özeti</p>
         <h2>{{ if $isComingSoonFeature }}Bu çalışma sistemi ilginizi çekiyorsa duyuruyu takip edebilirsiniz.{{ else }}Bu çalışma programı size uygunsa bugün başlayabilirsiniz.{{ end }}</h2>

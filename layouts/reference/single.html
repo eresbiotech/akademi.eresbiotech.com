@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{- $product := false -}}
+{{- $emailSignup := index site.Data "email-signup" -}}
 {{- with .Params.product_path -}}
   {{- $product = site.GetPage (strings.TrimSuffix "/" .) -}}
 {{- end -}}
@@ -21,7 +22,7 @@
 
       <div class="reference-body prose">{{ .Content }}</div>
 
-      {{ partial "reference/email-signup.html" . }}
+      {{ partial "email-signup.html" (dict "page" . "config" $emailSignup.reference_end "instance" "reference-end" "variant" "feature") }}
 
       <section class="reference-capability" aria-labelledby="reference-capability-title">
         <p class="eyebrow">BİR SONRAKİ UYGULAMA ADIMI</p>
@@ -39,6 +40,7 @@
     </main>
 
     <aside class="reference-rail" aria-label="İlgili kaynaklar ve program">
+      {{ partial "email-signup.html" (dict "page" . "config" $emailSignup.reference_rail "instance" "reference-rail" "variant" "compact") }}
       {{ with $product }}
         <section class="reference-product-card">
           <p class="eyebrow">BU KONUYU UYGULAMALI ÖĞRENİN</p>
