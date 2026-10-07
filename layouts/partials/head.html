@@ -30,5 +30,6 @@
 <link rel="icon" type="image/svg+xml" href="{{ "images/logos/Eres_Sembol_Renkli.svg" | relURL }}">
 <link rel="shortcut icon" href="{{ "images/logos/Eres_Sembol_Renkli.svg" | relURL }}">
 <link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v=20260925-full-access-clarity">
+{{ if eq .Type "reference" }}<link rel="stylesheet" href="{{ "css/reference-email-signup.css" | relURL }}?v=20261006-1">{{ end }}
 {{ if eq .Type "canli-egitimler" }}<link rel="stylesheet" href="{{ "css/mentorship.css" | relURL }}?v=20261003-1">{{ end }}
 {{ partial "meta-pixel.html" . }}

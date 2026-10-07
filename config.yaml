@@ -37,6 +37,7 @@ params:
 
   whatsapp_support_url: "https://wa.me/905313780485?text=Merhaba%2C+ERES+Biyoinformatik+Akademi+e%C4%9Fitimleri+hakk%C4%B1nda+bilgi+almak+istiyorum."
   metaPixelId: "808990395937726"
+  referenceSignupEndpoint: "https://script.google.com/macros/s/AKfycbwhNXfxEiYtDzJSmcHn7bWB_BeapKZvpu1Z9jJdtcHU6ygcJd29g37eydIxG7o1IP9F/exec"
 
   copyright: "© 2023 Eres Biotech"
 

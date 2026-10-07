@@ -1,0 +1,32 @@
+<section class="reference-signup" aria-labelledby="reference-signup-title" data-reference-signup data-article-id="{{ .Params.article_id }}" data-source-title="{{ .Title }}">
+  <p class="eyebrow">REFERENCE HUB E-POSTA LİSTESİ</p>
+  <h2 id="reference-signup-title">Yeni Reference yazılarını kaçırmayın.</h2>
+  <p class="reference-signup-copy">Biyoinformatik, genomik, veri analizi ve yaşam bilimlerindeki yeni gelişmeleri anlaşılır bilimsel yazılarla takip edin.</p>
+
+  <form class="reference-signup-form" action="{{ site.Params.referenceSignupEndpoint }}" method="post" target="reference-signup-target" data-reference-signup-form>
+    <div class="reference-signup-row">
+      <label class="sr-only" for="reference-signup-email">E-posta adresiniz</label>
+      <input id="reference-signup-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="E-posta adresiniz" required>
+      <button type="submit">Listeye katıl</button>
+    </div>
+
+    <label class="reference-signup-consent">
+      <input type="checkbox" name="consent" value="true" required>
+      <span>ERES’in yeni bilimsel içerikleri ve seçili Akademi duyuruları için e-posta almak istiyorum.</span>
+    </label>
+
+    <input type="hidden" name="source_url" value="{{ .Permalink }}" data-reference-source-url>
+    <input type="hidden" name="source_title" value="{{ .Title }}">
+    <input type="hidden" name="article_id" value="{{ .Params.article_id }}">
+    <input type="text" name="website" class="reference-signup-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="reference-signup-meta">
+      <span>İstediğiniz zaman ayrılabilirsiniz.</span>
+      <a href="{{ "/kvkk-aydinlatma-metni/" | relURL }}">KVKK Aydınlatma Metni</a>
+    </div>
+
+    <p class="reference-signup-status" role="status" aria-live="polite" data-reference-signup-status></p>
+  </form>
+
+  <iframe class="reference-signup-target" name="reference-signup-target" title="E-posta abonelik gönderimi" tabindex="-1" aria-hidden="true"></iframe>
+</section>
