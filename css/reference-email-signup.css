@@ -1,0 +1,140 @@
+.reference-signup {
+  background: linear-gradient(135deg, #ffffff, #f4f9ff);
+  border: 1px solid #cfe0f1;
+  border-left: 5px solid #0d75b8;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 42px;
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.reference-signup .eyebrow {
+  color: #12639f;
+  margin-bottom: 8px;
+}
+
+.reference-signup h2 {
+  color: #082e62;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  margin: 0;
+  max-width: 30ch;
+}
+
+.reference-signup-copy {
+  color: #31517e;
+  line-height: 1.6;
+  margin: 12px 0 20px;
+  max-width: 70ch;
+}
+
+.reference-signup-form {
+  display: grid;
+  gap: 14px;
+}
+
+.reference-signup-row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.reference-signup-row input[type="email"] {
+  background: #fff;
+  border: 1px solid #b8cee2;
+  border-radius: 6px;
+  color: #183555;
+  font: inherit;
+  min-height: 50px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.reference-signup-row input[type="email"]:focus {
+  border-color: #0d75b8;
+  box-shadow: 0 0 0 3px rgba(13, 117, 184, .14);
+  outline: none;
+}
+
+.reference-signup-row button {
+  background: #092f68;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 850;
+  min-height: 50px;
+  padding: 0 22px;
+}
+
+.reference-signup-row button:hover { background: #0d5f9d; }
+.reference-signup-row button:disabled { cursor: wait; opacity: .65; }
+
+.reference-signup-consent {
+  align-items: flex-start;
+  color: #31517e;
+  display: flex;
+  font-size: .91rem;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.reference-signup-consent input {
+  flex: 0 0 auto;
+  height: 18px;
+  margin-top: 2px;
+  width: 18px;
+}
+
+.reference-signup-meta {
+  color: #64748b;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .82rem;
+  gap: 8px 14px;
+}
+
+.reference-signup-meta a {
+  color: #174d8a;
+  font-weight: 750;
+}
+
+.reference-signup-status {
+  color: #31517e;
+  font-size: .91rem;
+  font-weight: 750;
+  margin: 0;
+  min-height: 1.4em;
+}
+
+.reference-signup-status[data-state="success"] { color: #13705f; }
+.reference-signup-status[data-state="error"] { color: #ad243d; }
+
+.reference-signup-honeypot,
+.reference-signup-target {
+  height: 1px !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (max-width: 620px) {
+  .reference-signup { padding: 19px; }
+  .reference-signup-row { grid-template-columns: 1fr; }
+  .reference-signup-row button { width: 100%; }
+}
