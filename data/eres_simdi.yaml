@@ -11,7 +11,7 @@ slides:
     image: "/images/03-kasim-nobel-protein.webp"
     eyebrow: '3 KASIM · 20.00 · ÖĞRENCİ TOPLULUKLARIYLA'
     title: "Nobel’e Uzanan Protein ve Salgın E. coli’nin İzinde"
-    desc: 'Biyolojik verilerle iki araştırma hikâyesinin peşine düşüyoruz. Ücretsiz kayıtlar başladı.'
+    desc: 'Bursa Teknik Üniversitesi Biyoteknoloji ve İnovasyon Topluluğu ile ücretsiz canlı buluşma. Kayıtlar açık.'
     cta: 'Öğrenci Workshop’una Kaydol'
     href: '/canli/3-kasim-ogrenci-protein-workshop/'
     status: published
@@ -27,8 +27,8 @@ slides:
     image: "/images/eres-2026-2027-planner.webp"
     eyebrow: '2026–2027 · AKADEMİ PLANNER'
     title: 'Akademik yılın rotasını birlikte çiziyoruz'
-    desc: 'Canlı eğitim takvimi ve araştırma ipuçlarını bir araya getirdiğimiz yazdırılabilir kaynak hazırlanıyor.'
-    cta: 'Planner’ı İncele'
+    desc: '50 sayfalık, A4 ve yazıcı dostu 2026–2027 Akademik Ajandanız hazır. E-posta adresinizi bırakarak indirebilirsiniz.'
+    cta: 'Ücretsiz Ajandamı Al'
     href: '/kaynaklar/akademi-planner-2026-2027/'
     status: published
   - id: mentor-cohort2

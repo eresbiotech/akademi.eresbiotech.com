@@ -1,4 +1,16 @@
 (function () {
+  // All Google registration forms open in a new tab, keeping ERES open.
+  document.querySelectorAll('a[href]').forEach(function (link) {
+    try {
+      var u = new URL(link.href, window.location.href);
+      if (u.protocol === 'https:' &&
+          (u.hostname === 'forms.gle' ||
+           (u.hostname === 'docs.google.com' && u.pathname.indexOf('/forms/') === 0))) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+    } catch (ignored) { /* Invalid/relative links are not modified. */ }
+  });
   var roots = document.querySelectorAll('[data-email-signup]');
   if (!roots.length) return;
 
@@ -50,6 +62,8 @@
 
     var statusNode = root.querySelector('[data-email-signup-status]');
     var deliveryNode = root.querySelector('[data-email-signup-delivery]');
+    var targetIframe = root.querySelector('iframe.email-signup-target');
+    var isPlanner = root.getAttribute('data-signup-context') === 'planner';
     var submitButton = form.querySelector('button[type="submit"]');
     var sourceUrl = form.querySelector('[data-email-signup-source-url]');
     var requestInput = form.querySelector('[data-email-signup-request-id]');
@@ -72,15 +86,43 @@
     }
 
     function showDelivery(payload) {
-      if (!deliveryNode || !payload.asset_url) return;
+      // Planner's PDF is a first-party, published resource. The Apps Script
+      // response need not know its URL, including for existing subscribers.
+      var assetUrl = isPlanner
+        ? '/downloads/eres-akademi-planner-2026-2027.pdf'
+        : payload.asset_url;
+      if (!deliveryNode || !assetUrl) return;
       deliveryNode.hidden = false;
       deliveryNode.innerHTML = '';
       var link = document.createElement('a');
       link.className = 'email-signup-download';
-      link.href = payload.asset_url;
+      link.href = assetUrl;
       link.textContent = payload.asset_label || 'Dosyanızı açın';
       link.rel = 'noopener';
       deliveryNode.appendChild(link);
+    }
+
+    // An embedded Google Apps Script can accept the POST (as confirmed in
+    // Consent Log) yet fail to relay postMessage to the top page. A completed
+    // iframe request offers a PDF fallback WITHOUT falsely claiming that the
+    // subscriber was saved. The download is always offered as a visible link.
+    function plannerDeliveryFallback() {
+      if (!pending || !isPlanner) return;
+      finish();
+      showDelivery({});
+      setState('warning',
+        'Ajandanız hazır. E-posta kaydının yanıtı tarayıcıda doğrulanamadı; indirme bağlantısını aşağıda bulabilirsiniz.');
+      emit(root, 'delivery_ready');
+    }
+
+    if (targetIframe && isPlanner) {
+      targetIframe.addEventListener('load', function () {
+        if (!pending) return;
+        // Prefer a verified Google postMessage when it is available.
+        window.setTimeout(function () {
+          if (pending) plannerDeliveryFallback();
+        }, 2000);
+      });
     }
 
     if ('IntersectionObserver' in window) {
@@ -121,6 +163,12 @@
 
       timeoutId = window.setTimeout(function () {
         if (!pending) return;
+        if (isPlanner) {
+          // Even if the cross-origin iframe does not signal load, do not trap
+          // visitors with the generic error and no PDF link.
+          plannerDeliveryFallback();
+          return;
+        }
         finish();
         setState('error', 'Kayıt şu anda tamamlanamadı. Lütfen biraz sonra yeniden deneyin.');
         emit(root, 'error');
@@ -130,12 +178,16 @@
     window.addEventListener('message', function (event) {
       if (!pending || !isAllowedMessageOrigin(event.origin)) return;
       var payload = event.data || {};
+      if (typeof payload === 'string') {
+        try { payload = JSON.parse(payload); } catch (ignored) { return; }
+      }
+      if (!payload || typeof payload !== 'object') return;
       if (payload.type !== 'eres-email-signup' && payload.type !== 'eres-reference-signup') return;
       if (requestId && payload.request_id && payload.request_id !== requestId) return;
 
       finish();
 
-      if (payload.status === 'success' || payload.status === 'resubscribed') {
+      if (payload.status === 'success' || payload.status === 'resubscribed' || payload.status === 'subscribed') {
         setState('success', root.getAttribute('data-success-message') || 'Kaydınız alındı.');
         showDelivery(payload);
         emit(root, 'success');
@@ -143,7 +195,7 @@
         return;
       }
 
-      if (payload.status === 'already_subscribed') {
+      if (payload.status === 'already_subscribed' || payload.status === 'duplicate_active') {
         setState('success', root.getAttribute('data-existing-message') || 'Bu e-posta zaten listede.');
         showDelivery(payload);
         emit(root, 'success');

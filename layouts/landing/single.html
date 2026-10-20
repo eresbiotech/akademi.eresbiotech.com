@@ -96,13 +96,15 @@
   let delivered=false;
   window.addEventListener('eres:event',function(event){
     const detail=event.detail||{};
-    if(delivered || detail.event!=='email_signup_success' || detail.signup_context!=='planner') return;
+    if(delivered ||
+       (detail.event!=='email_signup_success' && detail.event!=='email_signup_delivery_ready') ||
+       detail.signup_context!=='planner') return;
     delivered=true;
     const link=document.createElement('a');
     link.href='/downloads/eres-akademi-planner-2026-2027.pdf';
     link.download='ERES_2026_2027_Akademik_Ajanda.pdf';
     document.body.appendChild(link);link.click();link.remove();
-    window.setTimeout(function(){delivered=false;},1800);
+    // One download per page visit; do not repeat on a late response.
   });
 })();
 </script>

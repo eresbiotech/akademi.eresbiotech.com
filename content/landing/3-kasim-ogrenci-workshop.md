@@ -1,6 +1,6 @@
 ---
 title: "Mira'yla Nobel'e Uzanan Proteinin ve Salgın E. coli'nin İzinde"
-description: "3 Kasım 2026, 20.00. Öğrenci topluluklarıyla ücretsiz biyoinformatik keşfi."
+description: "3 Kasım 2026, 20.00. Bursa Teknik Üniversitesi Biyoteknoloji ve İnovasyon Topluluğu ile ücretsiz biyoinformatik buluşması."
 date: "2026-10-20"
 draft: false
 type: "landing"
@@ -15,6 +15,8 @@ hero_image: "/images/03-kasim-nobel-protein.webp"
 **Bir protein keşfi neden Nobel'e uzanır? Salgınla ilişkilendirilen bir bakterinin genomu bize neler anlatır?**
 
 **3 Kasım Salı · 20.00 · Canlı online · Ücretsiz**
+
+**Bursa Teknik Üniversitesi Biyoteknoloji ve İnovasyon Topluluğu** ile birlikte gerçekleştiriyoruz.
 
 Öğrenci topluluklarıyla biyoinformatik araştırmalarının heyecan verici iki farklı hikâyesinin peşindeyiz: **Channelrhodopsin ve optogenetik** ile **2011 salgınıyla ilişkilendirilen *E. coli* O104:H4**. Biri bir hücrenin ışığa yanıtıyla, diğeri genom verilerinin salgın araştırmalarındaki rolüyle ilgili.
 
