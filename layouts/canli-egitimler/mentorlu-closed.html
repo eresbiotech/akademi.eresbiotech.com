@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main class="container" style="max-width:1000px;margin:2.25rem auto 4rem;padding:0 1.25rem;color:#27232a">
+  <div style="background:#fff;border:1px solid #ece5ec;border-radius:20px;padding:clamp(1.4rem,4vw,3rem)">
+    <p style="letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;font-weight:750;color:#75547a">1. DÖNEM · BAŞVURULAR TAMAMLANDI</p>
+    <h1 style="font-size:clamp(1.7rem,4vw,3rem);line-height:1.15">Bire Bir Mentörlü Biyoinformatiğe Giriş</h1>
+    <p style="font-size:1.1rem;line-height:1.7">İlk dönem kontenjanımız doldu. Yoğun ilginiz ve güveniniz için teşekkür ederiz. Katılımcılarımızla ilk bire bir mentörlük görüşmelerimizi gerçekleştirdik.</p>
+    <p style="line-height:1.75">İlk dönemde yer alamayan arkadaşlarımızı ikinci dönemimizde görmeyi isteriz. İkinci dönem kesin kayıtları henüz başlamadı; yeni dönemin tarih ve koşulları açıklandığında bilgi almak için ön kayıt bırakabilirsiniz.</p>
+    <a href="https://forms.gle/fvyv9y6MHzaDtwvu8" target="_blank" rel="noopener noreferrer" style="display:inline-block;text-decoration:none;background:#723982;color:white;border-radius:10px;padding:.9rem 1.35rem;font-weight:700;margin:1rem 0">2. Dönem Ön Kayıt Formu →</a>
+    <p style="font-size:.9rem;color:#625a66">Ön kayıt, satın alma veya kontenjan garantisi değildir.</p>
+  </div>
+  {{ with .Params.program_topics }}
+  <section style="margin-top:2rem"><h2>Programda neler çalışıyoruz?</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem">
+      {{ range . }}<div style="padding:1.2rem;border:1px solid #ece5ec;border-radius:12px;background:#fff"><h3 style="font-size:1.1rem">{{ .title }}</h3><p>{{ .text }}</p></div>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+</main>
+{{ end }}

@@ -1,0 +1,109 @@
+{{ define "main" }}
+<main class="container eres-landing" style="max-width:1050px;margin:2.4rem auto 4rem;padding:0 1.2rem;color:#302a32">
+  <article>
+    <header class="eres-landing__hero">
+      {{ with .Params.hero_image }}<img class="eres-landing__cover" src="{{ . | relURL }}" alt="{{ $.Title }} tanıtım görseli" width="1491" height="1055" loading="eager">{{ end }}
+      {{ with .Params.eyebrow }}<p class="eres-landing__eyebrow">{{ . }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      <p class="eres-landing__description">{{ .Description }}</p>
+      {{ with .Params.price }}
+      <div class="eres-landing__price">
+        {{ with $.Params.price_before }}<p class="eres-landing__old">Tek tek toplam <s>{{ . }}</s></p>{{ end }}
+        <strong>{{ . }}</strong>
+        {{ with $.Params.price_saving }}<p class="eres-landing__saving">{{ . }}</p>{{ end }}
+        <p class="eres-landing__installment">Kredi kartına taksitli ödeme imkânı. Taksit seçenekleri ve koşulları ödeme ekranında belirlenir.</p>
+      </div>
+      {{ end }}
+      {{ if .Params.planner_gate }}
+      {{/* Same Google Apps Script + iframe/postMessage flow as the existing Reference Hub. */}}
+      {{ partial "email-signup.html" (dict "page" . "instance" "planner-2026-2027" "variant" "standard" "config" (dict
+        "enabled" true
+        "context" "planner"
+        "eyebrow" "ÜCRETSİZ AKADEMİK KAYNAK"
+        "title" "2026–2027 Akademik Ajandanız hazır"
+        "body" "50 sayfalık ERES Akademik Ajandası'nı hemen indirmek için e-posta listemize katılın."
+        "cta" "Ajandamı İndir"
+        "success_message" "Kaydınız alındı. Ajanda indiriliyor…"
+        "existing_message" "E-posta adresiniz zaten listemizde. Ajanda indiriliyor…"
+        "campaign_id" "academic-calendar-2026-2027"
+        "offer_type" "newsletter"
+        "asset_id" "eres-academic-planner-2026-2027"
+      )) }}
+      <p class="eres-planner-note">Dosyanız kayıt tamamlandıktan sonra otomatik indirilir. İndirme başlamazsa kayıt sonucunda görünen dosya bağlantısını kullanabilirsiniz.</p>
+      {{ else }}
+      {{ with .Params.cta_href }}<a class="eres-landing__button" href="{{ . | safeURL }}" {{ if hasPrefix . "https://" }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ $.Params.cta_text }} →</a>{{ end }}
+      {{ end }}
+      {{ with .Params.secondary_cta_href }}<p class="eres-landing__secondary"><a href="{{ . | safeURL }}">{{ $.Params.secondary_cta_text }}</a></p>{{ end }}
+    </header>
+    {{ if .Params.instructor }}
+    <section class="eres-landing__instructor" aria-label="Eğitmenimiz">
+      <img src="{{ "/images/tugce-unlu-atolyeler.webp" | relURL }}" alt="Eğitmen Tuğçe Ünlü" loading="lazy" width="480" height="640">
+      <div>
+        <p class="eres-landing__eyebrow">EĞİTMENİMİZ</p>
+        <h2>Tuğçe Ünlü</h2>
+        <p>Hacettepe Üniversitesi Biyoloji mezunu. Koç Üniversitesi Moleküler Biyoloji ve Genetik yüksek lisansı.</p>
+        <p><em>Daphnia magna</em> üzerine sıcaklık değişimi araştırmalarında deneysel biyoloji, R ile istatistiksel analiz, modelleme ve veri görselleştirmeyi bir araya getirdi. Genel biyoloji ve genetik derslerinde öğretim asistanlığı yaptı.</p>
+        <p>Tuğçe'nin yaklaşımı basit: Komutun ne yaptığını ezberlemekten önce, <strong>hangi biyolojik soruyu çözmek için kullandığımızı</strong> anlamak.</p>
+      </div>
+    </section>
+    {{ end }}
+    <div class="eres-landing__body">{{ .Content }}</div>
+    {{ if .Params.price }}
+    <section class="eres-landing__bottom">
+      <h2>Katılmaya hazır mısınız?</h2>
+      <p>{{ .Params.price }} · Canlı uygulamalı atölye{{ if .Params.instructor }} · Eğitmen Tuğçe Ünlü{{ end }}</p>
+      <p>Taksit seçenekleri ödeme ekranında gösterilir.</p>
+      <a class="eres-landing__button" href="{{ .Params.cta_href | safeURL }}" target="_blank" rel="noopener noreferrer">{{ .Params.cta_text }} →</a>
+    </section>
+    {{ end }}
+  </article>
+</main>
+<style>
+.eres-landing__hero{background:#fff;border:1px solid #e8e0e8;border-radius:20px;padding:clamp(1.4rem,4vw,3rem)}
+.eres-landing__cover{width:100%;height:auto;display:block;max-height:680px;object-fit:contain;border-radius:14px;margin:0 0 1.4rem}
+.eres-landing .email-signup{margin:1.1rem 0;max-width:640px}.eres-planner-note{color:#594f61;font-size:.86rem;line-height:1.55}
+
+
+
+
+
+
+.eres-landing__hero h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.14;margin:.4rem 0 1rem;color:#27212b}
+.eres-landing__eyebrow{font-weight:800;color:#713d78;letter-spacing:.07em;font-size:.82rem;margin-bottom:.75rem}
+.eres-landing__description{font-size:1.1rem;line-height:1.6;max-width:68ch}
+.eres-landing__price{padding:1.2rem 0 0}
+.eres-landing__price strong{font-size:clamp(2.2rem,5vw,3.1rem);color:#312638}
+.eres-landing__old{color:#685e6b;margin:0}.eres-landing__saving{color:#276e48;font-weight:750;margin:.3rem 0}
+.eres-landing__installment{font-size:.94rem;color:#4f4752;line-height:1.5;margin:.7rem 0}
+.eres-landing__button{display:inline-flex;margin-top:.85rem;align-items:center;min-height:48px;padding:.8rem 1.4rem;border-radius:11px;background:#723980;color:white!important;text-decoration:none!important;font-weight:800}
+.eres-landing__button:hover,.eres-landing__button:focus-visible{background:#542560;outline-offset:3px}
+.eres-landing__secondary{margin:.9rem 0 0}.eres-landing__secondary a{color:#6f337b;text-underline-offset:3px}
+.eres-landing__body{max-width:75ch;padding:clamp(1rem,3vw,2.5rem) 0;line-height:1.8}
+.eres-landing__body h2{margin:1.65rem 0 .65rem;font-size:1.55rem;line-height:1.24}
+.eres-landing__body h3{margin:1.3rem 0 .6rem;font-size:1.2rem}
+.eres-landing__body ul{padding-left:1.4rem}.eres-landing__body li{margin:.3rem 0}
+.eres-landing__body a{color:#713481;text-underline-offset:3px}
+.eres-landing__instructor{display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:1.6rem;align-items:center;margin-top:1.5rem;border:1px solid #eee2ed;background:#fffdfd;border-radius:18px;padding:1.1rem}
+.eres-landing__instructor img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 40%;border-radius:12px}
+.eres-landing__instructor h2{font-size:1.7rem;margin:.1rem 0 .65rem}.eres-landing__instructor p{line-height:1.65;margin:.5rem 0}
+.eres-landing__bottom{border-top:1px solid #e6dce4;padding:1.8rem 0}
+@media(max-width:600px){.eres-landing__instructor{grid-template-columns:1fr}.eres-landing__instructor img{max-width:230px}.eres-landing__hero{padding:1.5rem}}
+</style>
+<script>
+/* Existing Reference Hub script reports success only after receiving a trusted
+   Google Apps Script postMessage. We download AFTER that success event. */
+(function(){
+  let delivered=false;
+  window.addEventListener('eres:event',function(event){
+    const detail=event.detail||{};
+    if(delivered || detail.event!=='email_signup_success' || detail.signup_context!=='planner') return;
+    delivered=true;
+    const link=document.createElement('a');
+    link.href='/downloads/eres-akademi-planner-2026-2027.pdf';
+    link.download='ERES_2026_2027_Akademik_Ajanda.pdf';
+    document.body.appendChild(link);link.click();link.remove();
+    window.setTimeout(function(){delivered=false;},1800);
+  });
+})();
+</script>
+{{ end }}

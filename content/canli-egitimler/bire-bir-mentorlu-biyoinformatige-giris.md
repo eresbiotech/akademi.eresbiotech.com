@@ -1,22 +1,22 @@
 ---
 title: "Bire Bir Mentörlü Biyoinformatiğe Giriş ve Büyük Veri"
 seo_title: "Bire Bir Mentörlü Biyoinformatiğe Giriş | ERES Biyoinformatik"
-description: "Biyoinformatiğe Giriş ve Büyük Veri programına 1 saat başlangıç ve 2 saat uygulama-soru cevap olmak üzere toplam 3 saat bire bir mentörlükle katılın. 1. Dönem 17 Ekim'de başlıyor."
+description: "Bire Bir Mentörlü Biyoinformatiğe Giriş ilk dönem başvuruları tamamlandı, ilk görüşmeler yapıldı. İkinci dönem için ön kayıt bırakabilirsiniz."
 date: 2026-10-03
 draft: false
 type: "canli-egitimler"
-layout: "mentorlu"
+layout: "mentorlu-closed"
 slug: "bire-bir-mentorlu-biyoinformatige-giris"
-status: "on-kayit"
-period_label: "1. DÖNEM"
+status: "basvurular-tamamlandi"
+period_label: "1. DÖNEM BAŞVURULARI TAMAMLANDI"
 start_date_short: "17 Ekim"
 start_date_display: "17 Ekim 2026"
 registration_deadline: "16 Ekim 2026"
 mentorship_window: "17 Ekim–16 Kasım 2026"
 capacity: 15
 student_price: "4.750 TL"
-checkout_url: "https://kampus.eresbiotech.com/order?link=TO3NH&pricing_plan=ANzp091XzX"
-pre_registration_url: "https://forms.gle/iNuW1FXZnGQJRb8W9"
+checkout_url: ""
+pre_registration_url: "https://forms.gle/fvyv9y6MHzaDtwvu8"
 program_topics:
   - title: "Biyoinformatiğin temel kavramları"
     text: "Biyoinformatiğin yaşam bilimleri araştırmalarındaki yerini ve biyolojik sorularla veri arasındaki bağlantıyı kurun."

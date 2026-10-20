@@ -66,52 +66,7 @@
   {{ partial "email-signup.html" (dict "page" . "config" $emailSignup.home "instance" "home-primary" "variant" "banner") }}
 </div>
 
-{{ with $currentItems }}
-  <section id="ereste-simdi" class="container academy-section academy-current" aria-labelledby="academy-current-title">
-    <div class="academy-section-header academy-current-header">
-      <div>
-        <h2 id="academy-current-title">ERES'te Şimdi</h2>
-      </div>
-    </div>
-    <div class="academy-current-list">
-      {{ range . }}
-        {{- $item := . -}}
-        <article class="academy-current-item{{ if .featured }} is-featured{{ end }}">
-          <div class="academy-current-copy">
-            <p>{{ .label }}</p>
-            <h3>{{ .title }}</h3>
-            {{ if eq .type "full-access-campaign" }}
-              <div class="academy-current-price-ladder" aria-label="Full Access kampanya fiyatı">
-                <p><span>Tek tek öğrenci fiyatlarıyla</span><strong>{{ $fullAccessCampaign.single_course_total }}</strong></p>
-                <p><span>Full Access paket fiyatı</span><strong>{{ $fullAccessCampaign.normal_price }}</strong></p>
-                <p class="is-campaign-price"><span>30 Eylül'e kadar</span><strong>{{ $fullAccessCampaign.campaign_price }}</strong></p>
-              </div>
-            {{ end }}
-            {{ with .summary }}<span>{{ . }}</span>{{ end }}
-            {{ if eq .type "full-access-campaign" }}<p class="academy-current-deadline">{{ $fullAccessCampaign.deadline_display }}'te sona eriyor.</p>{{ end }}
-            {{ if eq .type "live-mentorship" }}
-              <div class="academy-hero-actions">
-                <a class="academy-button academy-button-primary" href="{{ .checkout_url }}" data-event="homepage_mentorship_checkout">Şimdi Kaydol — 4.750 TL</a>
-                <a class="academy-button academy-button-secondary" href="{{ .url | relURL }}" data-event="homepage_mentorship_detail">Programı İncele</a>
-              </div>
-              <p>Henüz karar vermediyseniz <a class="academy-text-link" href="{{ .pre_registration_url }}" target="_blank" rel="noopener noreferrer" data-event="homepage_mentorship_preregister">ön kayıt listesine katılın <span aria-hidden="true">→</span></a></p>
-            {{ else }}
-              {{ with .url }}<a class="academy-text-link" href="{{ . | relURL }}" data-event="homepage_current_click">{{ $item.cta | default "İncele" }} <span aria-hidden="true">→</span></a>{{ end }}
-            {{ end }}
-            {{ if eq .type "full-access-campaign" }}<p class="academy-current-auto-discount">İndirim kodu gerekmez · {{ $fullAccessCampaign.campaign_price }} ödeme adımında otomatik uygulanır.</p>{{ end }}
-          </div>
-          {{ if .featured }}{{ with $academicSeasonHuman }}
-            {{- $desktop := .Fit "1200x900 webp q82" -}}
-            {{- $mobile := .Fit "640x480 webp q76" -}}
-            <figure class="academy-current-media academy-current-human">
-              <img src="{{ $desktop.RelPermalink }}" srcset="{{ $mobile.RelPermalink }} {{ $mobile.Width }}w, {{ $desktop.RelPermalink }} {{ $desktop.Width }}w" sizes="(max-width: 520px) 100vw, 48vw" alt="Bilgisayarında veri analizi çalışan temsili araştırmacı" width="{{ $desktop.Width }}" height="{{ $desktop.Height }}" loading="lazy">
-            </figure>
-          {{ end }}{{ end }}
-        </article>
-      {{ end }}
-    </div>
-  </section>
-{{ end }}
+{{ partial "eres-simdi-carousel.html" . }}
 
 <section id="programlar" class="container academy-section academy-programs" aria-labelledby="academy-programs-title">
   <div class="academy-section-header academy-programs-header">

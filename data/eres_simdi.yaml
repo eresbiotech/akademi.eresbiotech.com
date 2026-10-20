@@ -1,0 +1,41 @@
+slides:
+  - id: workshop28
+    image: "/images/28-ekim-mira-channelrhodopsin.webp"
+    eyebrow: '28 EKİM · 20.00 · ÜCRETSİZ'
+    title: "Mira’yla Nobel’e Uzanan Channelrhodopsin’in Peşinde"
+    desc: 'Bir protein, bir biyolojik soru ve Bash, Python, Docker ile ilk analiz adımları. Ücretsiz kayıtlar başladı.'
+    cta: 'Ücretsiz Workshop’a Kaydol'
+    href: '/canli/28-ekim-mira-channelrhodopsin/'
+    status: published
+  - id: workshop03
+    image: "/images/03-kasim-nobel-protein.webp"
+    eyebrow: '3 KASIM · 20.00 · ÖĞRENCİ TOPLULUKLARIYLA'
+    title: "Nobel’e Uzanan Protein ve Salgın E. coli’nin İzinde"
+    desc: 'Biyolojik verilerle iki araştırma hikâyesinin peşine düşüyoruz. Ücretsiz kayıtlar başladı.'
+    cta: 'Öğrenci Workshop’una Kaydol'
+    href: '/canli/3-kasim-ogrenci-protein-workshop/'
+    status: published
+  - id: bash-series
+    image: "/images/bash-genom-analizi.webp"
+    eyebrow: '7–8 KASIM · CANLI ATÖLYE'
+    title: 'Bash’le Genom Analizi — 3.450 TL'
+    desc: 'Tuğçe Ünlü ile 10 saat uygulama. Bash, Python ve Docker üçlü serisi 8.000 TL; taksit imkânı var.'
+    cta: 'Bash Atölyesine ve Seriye Bak'
+    href: '/canli/bash-genom-analizi-7-8-kasim/'
+    status: published
+  - id: planner
+    image: "/images/eres-2026-2027-planner.webp"
+    eyebrow: '2026–2027 · AKADEMİ PLANNER'
+    title: 'Akademik yılın rotasını birlikte çiziyoruz'
+    desc: 'Canlı eğitim takvimi ve araştırma ipuçlarını bir araya getirdiğimiz yazdırılabilir kaynak hazırlanıyor.'
+    cta: 'Planner’ı İncele'
+    href: '/kaynaklar/akademi-planner-2026-2027/'
+    status: published
+  - id: mentor-cohort2
+    image: "/images/mentorluk-ikinci-donem.webp"
+    eyebrow: 'BİRE BİR MENTÖRLÜK · 1. DÖNEM DOLDU'
+    title: 'İlk görüşmelerimizi yaptık. İkinci dönemde görüşelim.'
+    desc: 'İlk dönem başvuruları tamamlandı. İkinci dönem henüz kayıt açmadı; ön kayıt listemiz açık.'
+    cta: '2. Dönem Ön Kayıt Formu'
+    href: 'https://forms.gle/fvyv9y6MHzaDtwvu8'
+    status: published

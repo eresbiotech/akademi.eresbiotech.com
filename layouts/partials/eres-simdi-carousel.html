@@ -1,0 +1,97 @@
+{{/*
+  ERES'te Şimdi carousel.
+  Source YAML: site root /data/eres_simdi.yaml.
+  Only entries marked status: published will be displayed.
+  Integration (where existing ERES'te Şimdi section is):
+  {{ partial "eres-simdi-carousel.html" . }}
+  IMPORTANT: Remove older active first-cohort sale CTA. Do not duplicate.
+*/}}
+{{ $all := site.Data.eres_simdi.slides }}
+{{ $slides := where $all "status" "published" }}
+{{ with $slides }}
+<div class="eres-now__top-notice" style="max-width:1120px;margin:1.5rem auto 0;padding:1rem 1.25rem;background:#faf7fb;border-left:4px solid #794581;border-radius:8px">
+  <strong>1. dönem bire bir mentörlük başvurularımız tamamlandı.</strong> İlk görüşmelerimizi gerçekleştirdik. İlginiz için teşekkür ederiz. İkinci dönem kayıtları henüz başlamadı.
+  <a href="https://forms.gle/fvyv9y6MHzaDtwvu8" target="_blank" rel="noopener noreferrer" style="color:#642f70;font-weight:750">2. dönem için ön kayıt →</a>
+</div>
+<section class="eres-now" aria-label="ERES'te Şimdi">
+  <div class="eres-now__heading">
+    <p class="eres-now__eyebrow">GÜNCEL DUYURULAR</p>
+    <h2>ERES'te Şimdi</h2>
+  </div>
+  <div class="eres-now__carousel" data-eres-carousel>
+    <div class="eres-now__slides">
+      {{ range $index, $slide := . }}
+      <article class="eres-now__slide" aria-label="{{ add $index 1 }} / {{ len $slides }}: {{ $slide.title }}" {{ if ne $index 0 }}hidden{{ end }} data-eres-slide>
+        {{ if $slide.image }}
+          <a href="{{ $slide.href | safeURL }}" aria-label="{{ $slide.cta }}"><img class="eres-now__image" src="{{ $slide.image | relURL }}" alt="{{ $slide.title }}" width="1491" height="1055" loading="lazy"></a>
+          <p class="eres-now__caption">{{ $slide.desc }}</p>
+          <a class="eres-now__cta" href="{{ $slide.href | safeURL }}">{{ $slide.cta }} <span aria-hidden="true">→</span></a>
+        {{ else }}
+          <p class="eres-now__eyebrow">{{ $slide.eyebrow }}</p>
+          <h3>{{ $slide.title }}</h3>
+          <p class="eres-now__desc">{{ $slide.desc }}</p>
+          <a class="eres-now__cta" href="{{ $slide.href | safeURL }}">{{ $slide.cta }} <span aria-hidden="true">→</span></a>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+    {{ if gt (len $slides) 1 }}
+    <div class="eres-now__nav" aria-label="Duyuru gezintisi">
+      <button type="button" data-eres-prev aria-label="Önceki duyuru">←</button>
+      <div class="eres-now__dots" role="group" aria-label="Duyuru seçimi">
+      {{ range $index, $slide := $slides }}
+        <button type="button" class="eres-now__dot" data-eres-go="{{ $index }}" aria-label="{{ add $index 1 }}. duyuru: {{ $slide.title }}" aria-current="{{ if eq $index 0 }}true{{ else }}false{{ end }}"></button>
+      {{ end }}
+      </div>
+      <button type="button" data-eres-next aria-label="Sonraki duyuru">→</button>
+    </div>
+    {{ end }}
+  </div>
+</section>
+<style>
+.eres-now{max-width:1120px;margin:0 auto;padding:2.5rem 1rem;color:#262626}
+.eres-now__heading h2{font-size:clamp(1.5rem,2.5vw,2.3rem);margin:.25rem 0 1rem}
+.eres-now__eyebrow{font-size:.82rem;font-weight:750;letter-spacing:.07em;color:#6b5579;margin:0 0 1rem}
+.eres-now__carousel{border:1px solid #e3e0e6;border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(35,25,35,.07);overflow:hidden}
+.eres-now__slides{min-height:280px}
+.eres-now__slide{padding:clamp(1.4rem,3vw,3rem);min-height:280px}
+.eres-now__slide[hidden]{display:none!important}
+.eres-now__image{display:block;width:100%;height:auto;max-height:620px;object-fit:contain}
+.eres-now__caption{color:#433849;font-size:.95rem;line-height:1.5;margin:1.2rem 0 .2rem}
+.eres-now__slide h3{font-size:clamp(1.45rem,3.2vw,2.5rem);line-height:1.16;margin:0 0 .8rem;max-width:25ch}
+.eres-now__desc{font-size:1rem;line-height:1.65;max-width:64ch;color:#454545}
+.eres-now__cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:.9rem;padding:.85rem 1.35rem;border-radius:12px;background:#6e367d;color:#fff!important;text-decoration:none;font-weight:750}
+.eres-now__cta:hover,.eres-now__cta:focus-visible{background:#52255d;outline-offset:3px}
+.eres-now__nav{display:flex;align-items:center;justify-content:center;gap:.8rem;padding:0 1rem 1.1rem}
+.eres-now__nav button{cursor:pointer;border:1px solid #d6d0d9;background:#fff;color:#323232;border-radius:9px;min-width:38px;min-height:38px;font-size:1.1rem}
+.eres-now__nav button:focus-visible{outline:3px solid #76478b;outline-offset:2px}
+.eres-now__dots{display:flex;gap:.4rem;align-items:center}
+.eres-now__dots .eres-now__dot{min-width:14px;min-height:14px;width:14px;height:14px;border-radius:50%;padding:0;border-color:#c4bec7}
+.eres-now__dots .eres-now__dot[aria-current="true"]{background:#76478b;border-color:#76478b}
+@media(max-width:600px){.eres-now__slide{min-height:315px}.eres-now__slides{min-height:315px}.eres-now__slide h3{max-width:none}}
+</style>
+<script>
+(function(){
+  const root=document.querySelector('[data-eres-carousel]');
+  if(!root || root.dataset.initialized==='yes') return;
+  root.dataset.initialized='yes';
+  const slides=[...root.querySelectorAll('[data-eres-slide]')];
+  const dots=[...root.querySelectorAll('[data-eres-go]')];
+  if(slides.length<2) return;
+  let index=0;
+  function go(next){
+    index=(next+slides.length)%slides.length;
+    slides.forEach((slide,i)=>{slide.hidden=i!==index;});
+    dots.forEach((dot,i)=>{dot.setAttribute('aria-current',String(i===index));});
+  }
+  root.querySelector('[data-eres-prev]')?.addEventListener('click',()=>go(index-1));
+  root.querySelector('[data-eres-next]')?.addEventListener('click',()=>go(index+1));
+  dots.forEach((dot,i)=>dot.addEventListener('click',()=>go(i)));
+  // Deliberately no autoplay: avoids moving focus, supports reduced motion and screen readers.
+  let startX=null;
+  root.addEventListener('touchstart',e=>{startX=e.changedTouches[0]?.screenX??null;},{passive:true});
+  root.addEventListener('touchend',e=>{if(startX===null)return;const dx=(e.changedTouches[0]?.screenX??startX)-startX;if(Math.abs(dx)>55)go(index+(dx<0?1:-1));startX=null;},{passive:true});
+})();
+</script>
+
+{{ end }}
