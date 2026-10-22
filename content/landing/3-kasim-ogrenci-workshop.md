@@ -1,5 +1,5 @@
 ---
-title: "Mira'yla Nobel'e Uzanan Proteinin ve Salgın E. coli'nin İzinde"
+title: "Mira'yla Nobel'e Uzanan Bir Proteinin İzinde: Biyoinformatiğe İlk Adım"
 description: "3 Kasım 2026, 20.00. Bursa Teknik Üniversitesi Biyoteknoloji ve İnovasyon Topluluğu ile ücretsiz biyoinformatik buluşması."
 date: "2026-10-20"
 draft: false
@@ -12,16 +12,16 @@ cta_href: "https://forms.gle/cwJ7bCkdB139vKtw6"
 instructor: true
 hero_image: "/images/03-kasim-nobel-protein.webp"
 ---
-**Bir protein keşfi neden Nobel'e uzanır? Salgınla ilişkilendirilen bir bakterinin genomu bize neler anlatır?**
+**Bir protein keşfinin arkasındaki biyolojik veriyi nasıl bulur, okur ve araştırma sorusuna dönüştürürüz?**
 
 **3 Kasım Salı · 20.00 · Canlı online · Ücretsiz**
 
 **Bursa Teknik Üniversitesi Biyoteknoloji ve İnovasyon Topluluğu** ile birlikte gerçekleştiriyoruz.
 
-Öğrenci topluluklarıyla biyoinformatik araştırmalarının heyecan verici iki farklı hikâyesinin peşindeyiz: **Channelrhodopsin ve optogenetik** ile **2011 salgınıyla ilişkilendirilen *E. coli* O104:H4**. Biri bir hücrenin ışığa yanıtıyla, diğeri genom verilerinin salgın araştırmalarındaki rolüyle ilgili.
+Öğrenci topluluklarıyla birlikte **Channelrhodopsin ve optogenetik** üzerinden gerçek bir bilimsel keşfin izini süreceğiz. Açık biyolojik veri kaynaklarının, protein ve dizi kayıtlarının araştırma sorularını anlamadaki yerini keşfedeceğiz.
 
 - Biyolojik bir keşfi genom/protein verisi üzerinden nasıl inceleriz?
-- Bir bakterinin genomunu karşılaştırdığımızda hangi soruları sorabiliriz?
+- NCBI gibi açık veri kaynaklarında protein ve dizi kayıtlarını nasıl buluruz?
 - FASTA gibi açık veri formatları ve biyoinformatik araçlar araştırmanın neresinde?
 - İlgilenen öğrenciler nereden başlayabilir?
 
