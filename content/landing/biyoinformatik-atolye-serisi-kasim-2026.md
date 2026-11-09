@@ -13,7 +13,7 @@ instructor: true
 price: "8.000 TL"
 price_before: "10.350 TL"
 price_saving: "2.350 TL avantaj · Üç eğitim için tek checkout"
-hero_image: "/images/biyoinformatik-uygulama-serisi.webp"
+hero_image: "/images/biyoinformatik-uygulama-serisi-20261109.webp"
 ---
 ## Üç farklı araç. Birbirini tamamlayan 30 saatlik araştırma pratiği.
 

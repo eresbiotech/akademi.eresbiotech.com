@@ -13,7 +13,7 @@ instructor: true
 price: "3.450 TL"
 secondary_cta_text: "Üçlü seri paketinde 2.350 TL avantaj"
 secondary_cta_href: "/canli/biyoinformatik-atolye-serisi-kasim-2026/"
-hero_image: "/images/docker-genom-analizi.webp"
+hero_image: "/images/docker-genom-analizi-20261109.webp"
 ---
 ## “Benim bilgisayarımda çalışıyor”dan tekrarlanabilir analize
 

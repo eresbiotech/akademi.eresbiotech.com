@@ -1,6 +1,6 @@
 slides:
   - id: bash-nov26
-    image: "/images/bash-genom-analizi.webp"
+    image: "/images/bash-genom-analizi-20261109.webp"
     eyebrow: '14–15 KASIM · 10 SAAT · CANLI ONLINE'
     title: 'Bash’le Genom Analizi'
     desc: '14–15 Kasım 2026 · Tuğçe Ünlü ile 10 saat canlı uygulama. Ücretsiz ön kayıt yaptırın, kontenjan önceliği kazanın. Yer ayrılması başvuru onayına bağlıdır.'
@@ -10,7 +10,7 @@ slides:
     secondary_href: '/canli/bash-genom-analizi-7-8-kasim/'
     status: published
   - id: python-nov26
-    image: "/images/python-biyoinformatik.webp"
+    image: "/images/python-biyoinformatik-20261109.webp"
     eyebrow: '21–22 KASIM · 10 SAAT · CANLI ONLINE'
     title: 'Python’la Biyoinformatik Analizler'
     desc: '21–22 Kasım 2026 · Biopython ile biyolojik dizileri inceleyin, veriyi işleyin ve analiz akışları kurun. 10 saat canlı uygulama.'
@@ -18,7 +18,7 @@ slides:
     href: '/canli/python-biyoinformatik-14-15-kasim/'
     status: published
   - id: docker-nov26
-    image: "/images/docker-genom-analizi.webp"
+    image: "/images/docker-genom-analizi-20261109.webp"
     eyebrow: '28–29 KASIM · 10 SAAT · CANLI ONLINE'
     title: 'Docker ile Tekrarlanabilir Genom Analizi'
     desc: '28–29 Kasım 2026 · Genom analizi ortamlarını yönetin ve iş akışlarınızı tekrarlanabilir hâle getirin. 10 saat canlı uygulama.'
@@ -26,7 +26,7 @@ slides:
     href: '/canli/docker-genom-analizi-21-22-kasim/'
     status: published
   - id: uc-program-nov26
-    image: "/images/biyoinformatik-uygulama-serisi.webp"
+    image: "/images/biyoinformatik-uygulama-serisi-20261109.webp"
     eyebrow: '14–29 KASIM · 30 SAAT · CANLI SERİ'
     title: 'Biyoinformatik Uygulama Serisi: Bash + Python + Docker'
     desc: '14–29 Kasım 2026 · Üç program tek seride: 30 saat, 8.000 TL. Ayrı ayrı katılıma göre 2.350 TL avantaj; taksit seçenekleri ödeme ekranında.'
