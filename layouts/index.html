@@ -38,21 +38,127 @@
 {{- $academicSeasonHuman := resources.Get "images/editorial/people/student-evening-data-analysis-01.png" -}}
 {{- $guidanceHuman := resources.Get "images/editorial/people/research-team-collaboration-01.png" -}}
 
+
+<style>
+.academy-hero .eres-hero-six {
+  padding-bottom: 32px;
+}
+.academy-hero .eres-hero-six h1 {
+  font-size: clamp(2.4rem, 3.5vw, 3.55rem);
+  max-width: 17ch;
+  margin-bottom: 12px;
+}
+.academy-hero .eres-hero-six .academy-hero-lead {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+.eres-six-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 9px;
+  margin-top: 20px;
+}
+.eres-six-grid a {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #dce4ea;
+  border-radius: 12px;
+  background: rgba(255,255,255,.94);
+  text-decoration: none;
+  color: #102747;
+  transition: border-color .15s, background .15s;
+}
+.eres-six-grid a:hover,
+.eres-six-grid a:focus-visible {
+  border-color: #008e84;
+  background: #f0faf9;
+}
+.eres-six-grid small {
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  color: #008e84;
+}
+.eres-six-grid strong {
+  font-size: .84rem;
+  line-height: 1.28;
+}
+.eres-six-grid span {
+  font-size: .73rem;
+  color: #5c5677;
+  font-weight: 700;
+  margin-top: auto;
+}
+.eres-six-async {
+  display: inline-block;
+  margin-top: 13px;
+  color: #006d69;
+  font-weight: 800;
+  font-size: .86rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media(max-width:520px) {
+  .academy-hero .eres-hero-six { padding-bottom: 0; }
+  .eres-six-grid { gap: 8px; }
+  .eres-six-grid a { padding: 10px; }
+  .eres-six-grid strong { font-size: .79rem; }
+  .eres-six-grid span { font-size: .69rem; }
+}
+</style>
 <section id="hero" class="academy-hero" aria-labelledby="academy-hero-title">
   <div class="container academy-hero-inner">
-    <div class="academy-hero-copy">
+    <div class="academy-hero-copy eres-hero-six">
       <p class="eyebrow">ERES BİYOİNFORMATİK AKADEMİ</p>
       <h1 id="academy-hero-title">Biyoinformatik yaparak öğrenilir.</h1>
-      <p class="academy-hero-lead">Gerçek verilerle çalışın; ilk analizinizden R, RNA-seq ve protein modellemeye kadar kendi çıktılarınızı üretin.</p>
-      <div class="academy-hero-actions">
-        <a class="academy-button academy-button-primary" href="#programlar" data-event="homepage_programs_click">Programları incele</a>
-        <a class="academy-button academy-button-secondary" href="{{ partial "support/whatsapp-url.html" (dict) }}" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click">Nereden başlamalıyım?</a>
-      </div>
-      <ul class="academy-hero-signals" aria-label="Program avantajları">
-        <li>Hesabınızda sürekli erişim</li>
-        <li>Gerçek veri ve uygulamalar</li>
-        <li>Yazılı destek</li>
-      </ul>
+      <p class="academy-hero-lead">Canlı uygulamalar, bire bir çalışmalar ve kendi hızınızda ilerleyebileceğiniz programlar.</p>
+
+      <nav class="eres-six-grid" aria-label="ERES program seçenekleri">
+
+        <a href="https://forms.gle/C53rXwYAc3jbFhwN8">
+          <small>14–15 KASIM</small>
+          <strong>Bash ile Genom Analizi</strong>
+          <span>Ücretsiz ön kayıt →</span>
+        </a>
+
+        <a href="/canli/python-biyoinformatik-14-15-kasim/">
+          <small>21–22 KASIM</small>
+          <strong>Python ile Biyoinformatik</strong>
+          <span>Programı incele →</span>
+        </a>
+
+        <a href="/canli/docker-genom-analizi-21-22-kasim/">
+          <small>28–29 KASIM</small>
+          <strong>Docker ile Genom Analizi</strong>
+          <span>Programı incele →</span>
+        </a>
+
+        <a href="https://forms.gle/fvyv9y6MHzaDtwvu8">
+          <small>2. DÖNEM · ÖN KAYIT</small>
+          <strong>Mentörlü Biyoinformatiğe Giriş</strong>
+          <span>Ücretsiz ön kayıt →</span>
+        </a>
+
+        <a href="{{ partial "support/whatsapp-url.html" (dict) }}">
+          <small>PREMIUM · TARİH YAKINDA</small>
+          <strong>Bir Günde Biyoinformatik</strong>
+          <span>6.250 TL · 3 kişilik kontenjan →</span>
+        </a>
+
+        <a href="{{ partial "support/whatsapp-url.html" (dict) }}">
+          <small>YENİ SERİ · YAKINDA</small>
+          <strong>ERES Uygulama Akşamları</strong>
+          <span>2 saatlik canlı uygulamalar →</span>
+        </a>
+
+      </nav>
+
+      <a class="eres-six-async" href="#programlar">
+        Kendi hızınızda başlayabileceğiniz programlar →
+      </a>
     </div>
     {{ with $heroProtein }}
       <figure class="academy-hero-visual">
