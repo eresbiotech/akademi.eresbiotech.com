@@ -9,10 +9,6 @@
 {{ $all := site.Data.eres_simdi.slides }}
 {{ $slides := where $all "status" "published" }}
 {{ with $slides }}
-<div class="eres-now__top-notice" style="max-width:1120px;margin:1.5rem auto 0;padding:1rem 1.25rem;background:#faf7fb;border-left:4px solid #794581;border-radius:8px">
-  <strong>1. dönem bire bir mentörlük başvurularımız tamamlandı.</strong> İlk görüşmelerimizi gerçekleştirdik. İlginiz için teşekkür ederiz. İkinci dönem kayıtları henüz başlamadı.
-  <a href="https://forms.gle/fvyv9y6MHzaDtwvu8" target="_blank" rel="noopener noreferrer" style="color:#642f70;font-weight:750">2. dönem için ön kayıt →</a>
-</div>
 <section class="eres-now" aria-label="ERES'te Şimdi">
   <div class="eres-now__heading">
     <p class="eres-now__eyebrow">GÜNCEL DUYURULAR</p>
@@ -26,11 +22,17 @@
           <a href="{{ $slide.href | safeURL }}" aria-label="{{ $slide.cta }}"><img class="eres-now__image" src="{{ $slide.image | relURL }}" alt="{{ $slide.title }}" width="1491" height="1055" loading="lazy"></a>
           <p class="eres-now__caption">{{ $slide.desc }}</p>
           <a class="eres-now__cta" href="{{ $slide.href | safeURL }}">{{ $slide.cta }} <span aria-hidden="true">→</span></a>
+          {{ with $slide.secondary_href }}
+          <a class="eres-now__secondary-cta" href="{{ . | safeURL }}">{{ $slide.secondary_cta }} <span aria-hidden="true">→</span></a>
+          {{ end }}
         {{ else }}
           <p class="eres-now__eyebrow">{{ $slide.eyebrow }}</p>
           <h3>{{ $slide.title }}</h3>
           <p class="eres-now__desc">{{ $slide.desc }}</p>
           <a class="eres-now__cta" href="{{ $slide.href | safeURL }}">{{ $slide.cta }} <span aria-hidden="true">→</span></a>
+          {{ with $slide.secondary_href }}
+          <a class="eres-now__secondary-cta" href="{{ . | safeURL }}">{{ $slide.secondary_cta }} <span aria-hidden="true">→</span></a>
+          {{ end }}
         {{ end }}
       </article>
       {{ end }}
@@ -62,6 +64,10 @@
 .eres-now__desc{font-size:1rem;line-height:1.65;max-width:64ch;color:#454545}
 .eres-now__cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:.9rem;padding:.85rem 1.35rem;border-radius:12px;background:#6e367d;color:#fff!important;text-decoration:none;font-weight:750}
 .eres-now__cta:hover,.eres-now__cta:focus-visible{background:#52255d;outline-offset:3px}
+.eres-now__secondary-cta{display:inline-flex;align-items:center;gap:.35rem;margin:.8rem 0 0 1rem;color:#60346e;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.eres-now__secondary-cta:focus-visible{outline:2px solid #60346e;outline-offset:3px}
+@media(max-width:600px){.eres-now__secondary-cta{display:flex;margin:.8rem 0 0}}
+
 .eres-now__nav{display:flex;align-items:center;justify-content:center;gap:.8rem;padding:0 1rem 1.1rem}
 .eres-now__nav button{cursor:pointer;border:1px solid #d6d0d9;background:#fff;color:#323232;border-radius:9px;min-width:38px;min-height:38px;font-size:1.1rem}
 .eres-now__nav button:focus-visible{outline:3px solid #76478b;outline-offset:2px}

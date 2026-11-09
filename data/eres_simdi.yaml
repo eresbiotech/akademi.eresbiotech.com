@@ -1,41 +1,35 @@
 slides:
-  - id: workshop28
-    image: "/images/28-ekim-mira-channelrhodopsin.webp"
-    eyebrow: '28 EKİM · 20.00 · ÜCRETSİZ'
-    title: "Mira’yla Nobel’e Uzanan Channelrhodopsin’in Peşinde"
-    desc: 'Bir protein, bir biyolojik soru ve Bash, Python, Docker ile ilk analiz adımları. Ücretsiz kayıtlar başladı.'
-    cta: 'Ücretsiz Workshop’a Kaydol'
-    href: '/canli/28-ekim-mira-channelrhodopsin/'
-    status: published
-  - id: workshop03
-    image: "/images/03-kasim-nobel-protein.webp"
-    eyebrow: '3 KASIM · 20.00 · ÖĞRENCİ TOPLULUKLARIYLA'
-    title: "Nobel’e Uzanan Bir Proteinle Biyoinformatiğe İlk Adım"
-    desc: 'Bursa Teknik Üniversitesi Biyoteknoloji ve İnovasyon Topluluğu ile ücretsiz canlı buluşma. Kayıtlar açık.'
-    cta: 'Öğrenci Workshop’una Kaydol'
-    href: '/canli/3-kasim-ogrenci-protein-workshop/'
-    status: published
-  - id: bash-series
+  - id: bash-nov26
     image: "/images/bash-genom-analizi.webp"
-    eyebrow: '14–15 KASIM · CANLI ATÖLYE'
-    title: 'Bash’le Genom Analizi — 3.450 TL'
-    desc: 'Tuğçe Ünlü ile 10 saat uygulama. Bash, Python ve Docker üçlü serisi 8.000 TL; taksit imkânı var.'
-    cta: 'Bash Atölyesine ve Seriye Bak'
-    href: '/canli/bash-genom-analizi-7-8-kasim/'
+    eyebrow: '14–15 KASIM · 10 SAAT · CANLI ONLINE'
+    title: 'Bash’le Genom Analizi'
+    desc: '14–15 Kasım 2026 · Tuğçe Ünlü ile 10 saat canlı uygulama. Ücretsiz ön kayıt yaptırın, kontenjan önceliği kazanın. Yer ayrılması başvuru onayına bağlıdır.'
+    cta: 'Bash için Ücretsiz Ön Kayıt'
+    href: 'https://forms.gle/C53rXwYAc3jbFhwN8'
+    secondary_cta: 'Programı ve kayıt seçeneklerini incele'
+    secondary_href: '/canli/bash-genom-analizi-7-8-kasim/'
     status: published
-  - id: planner
-    image: "/images/eres-2026-2027-planner.webp"
-    eyebrow: '2026–2027 · AKADEMİ PLANNER'
-    title: 'Akademik yılın rotasını birlikte çiziyoruz'
-    desc: '50 sayfalık, A4 ve yazıcı dostu 2026–2027 Akademik Ajandanız hazır. E-posta adresinizi bırakarak indirebilirsiniz.'
-    cta: 'Ücretsiz Ajandamı Al'
-    href: '/kaynaklar/akademi-planner-2026-2027/'
+  - id: python-nov26
+    image: "/images/python-biyoinformatik.webp"
+    eyebrow: '21–22 KASIM · 10 SAAT · CANLI ONLINE'
+    title: 'Python’la Biyoinformatik Analizler'
+    desc: '21–22 Kasım 2026 · Biopython ile biyolojik dizileri inceleyin, veriyi işleyin ve analiz akışları kurun. 10 saat canlı uygulama.'
+    cta: 'Python programını incele'
+    href: '/canli/python-biyoinformatik-14-15-kasim/'
     status: published
-  - id: mentor-cohort2
-    image: "/images/mentorluk-ikinci-donem.webp"
-    eyebrow: 'BİRE BİR MENTÖRLÜK · 1. DÖNEM DOLDU'
-    title: 'İlk görüşmelerimizi yaptık. İkinci dönemde görüşelim.'
-    desc: 'İlk dönem başvuruları tamamlandı. İkinci dönem henüz kayıt açmadı; ön kayıt listemiz açık.'
-    cta: '2. Dönem Ön Kayıt Formu'
-    href: 'https://forms.gle/fvyv9y6MHzaDtwvu8'
+  - id: docker-nov26
+    image: "/images/docker-genom-analizi.webp"
+    eyebrow: '28–29 KASIM · 10 SAAT · CANLI ONLINE'
+    title: 'Docker ile Tekrarlanabilir Genom Analizi'
+    desc: '28–29 Kasım 2026 · Genom analizi ortamlarını yönetin ve iş akışlarınızı tekrarlanabilir hâle getirin. 10 saat canlı uygulama.'
+    cta: 'Docker programını incele'
+    href: '/canli/docker-genom-analizi-21-22-kasim/'
+    status: published
+  - id: uc-program-nov26
+    image: "/images/biyoinformatik-uygulama-serisi.webp"
+    eyebrow: '14–29 KASIM · 30 SAAT · CANLI SERİ'
+    title: 'Biyoinformatik Uygulama Serisi: Bash + Python + Docker'
+    desc: '14–29 Kasım 2026 · Üç program tek seride: 30 saat, 8.000 TL. Ayrı ayrı katılıma göre 2.350 TL avantaj; taksit seçenekleri ödeme ekranında.'
+    cta: 'Üçlü seriyi incele'
+    href: '/canli/biyoinformatik-atolye-serisi-kasim-2026/'
     status: published
