@@ -1,0 +1,77 @@
+{{ define "main" }}
+<article class="container page-shell reference-page" data-reference-id="{{ .Params.article_id }}">
+  <nav class="reference-breadcrumb" aria-label="Sayfa yolu">
+    <a href="{{ "/" | relURL }}">Ana Sayfa</a>
+    <span aria-hidden="true">›</span>
+    <a href="{{ "/reference/" | relURL }}">Reference Hub</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Kariyer Sohbetleri</span>
+  </nav>
+
+  <div class="reference-layout">
+    <div class="reference-main">
+      <header class="reference-header">
+        <p class="eyebrow">ERES KARİYER SOHBETLERİ</p>
+        <h1>{{ .Title }}</h1>
+        <p class="reference-answer">{{ .Description }}</p>
+        <div class="reference-meta">
+          <span>{{ .Params.event_date_label }}</span>
+          <span aria-hidden="true">|</span>
+          <span>{{ .Params.event_time_label }}</span>
+        </div>
+        <p><strong>{{ .Params.event_place_label }}</strong></p>
+
+        <p>
+          <a class="hero-action"
+             href="{{ .Params.registration_url }}"
+             target="_blank"
+             rel="noopener noreferrer">
+            Ücretsiz kayıt ol
+          </a>
+        </p>
+      </header>
+
+      <div class="reference-body prose">
+        {{ .Content }}
+      </div>
+
+      <section class="reference-capability">
+        <p class="eyebrow">ETKİNLİĞE KATILIN</p>
+        <h2>Kariyer yolculuğuna yakından bakın.</h2>
+        <p>Katılım ücretsizdir. Kayıt bağlantısı üzerinden yerinizi ayırabilirsiniz.</p>
+        <a class="hero-action"
+           href="{{ .Params.registration_url }}"
+           target="_blank"
+           rel="noopener noreferrer">
+          Ücretsiz kayıt formu
+        </a>
+      </section>
+    </div>
+
+    <aside class="reference-rail" aria-label="Etkinlik bilgileri">
+      <section class="reference-product-card">
+        <p class="eyebrow">ETKİNLİK BİLGİLERİ</p>
+        <h2>ERES Kariyer Sohbetleri</h2>
+        <p><strong>Konuk:</strong> Sevim Kuçak, M.Sc.</p>
+        <p><strong>Kurum:</strong> Phenome Omics</p>
+        <p><strong>Tarih:</strong> {{ .Params.event_date_label }}</p>
+        <p><strong>Saat:</strong> {{ .Params.event_time_label }}</p>
+        <p><strong>Katılım:</strong> Ücretsiz, çevrim içi</p>
+        <a class="hero-action"
+           href="{{ .Params.registration_url }}"
+           target="_blank"
+           rel="noopener noreferrer">
+          Kayıt ol
+        </a>
+      </section>
+
+      <section class="reference-product-card">
+        <p class="eyebrow">KATILIMCI AVANTAJI</p>
+        <h2>750 TL indirim</h2>
+        <p>Bash ile Genom Analizi programına özel.</p>
+        <p>Kupon, canlı etkinlik sonunda katılımını doğrulayanlara iletilir.</p>
+      </section>
+    </aside>
+  </div>
+</article>
+{{ end }}
