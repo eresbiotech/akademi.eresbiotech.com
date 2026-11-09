@@ -1,12 +1,12 @@
 ---
 title: "Python'la Biyoinformatik Analizler Atölyesi"
-description: "14–15 Kasım 2026 · Tuğçe Ünlü ile 10 saat canlı uygulamalı biyoinformatik ve Python."
+description: "21–22 Kasım 2026 · Tuğçe Ünlü ile 10 saat canlı uygulamalı biyoinformatik ve Python."
 date: "2026-10-20"
 draft: false
 type: "landing"
 layout: "single"
 url: "/canli/python-biyoinformatik-14-15-kasim/"
-eyebrow: "14–15 KASIM · 10 SAAT · CANLI ONLINE"
+eyebrow: "21–22 KASIM · 10 SAAT · CANLI ONLINE"
 cta_text: "3.450 TL · Atölyeye Kaydol"
 cta_href: "https://kampus.eresbiotech.com/order?link=sN7ht&pricing_plan=nLWRakAvGa"
 instructor: true
@@ -28,7 +28,7 @@ Python'ı sırf sözdizimi öğrenmek için değil, **gerçek biyolojik verilerd
 - Motif ve HMM gibi yöntemlerin araştırma sorularıyla ilişkisini tanımak.
 - Bash ile hazırlanan veriyi Python analizine taşımak ve Docker atölyesine köprü kurmak.
 
-**Format:** 14–15 Kasım 2026; 2 gün, toplam 10 saat canlı online uygulama. Ayrıntılı ders blokları eğitmenle son kez netleştirilecektir.
+**Format:** 21–22 Kasım 2026; 2 gün, toplam 10 saat canlı online uygulama. Ayrıntılı ders blokları eğitmenle son kez netleştirilecektir.
 
 ### Kimler için?
 

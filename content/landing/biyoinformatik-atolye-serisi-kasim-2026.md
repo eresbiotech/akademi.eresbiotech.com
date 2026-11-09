@@ -1,12 +1,12 @@
 ---
 title: "Biyoinformatik Uygulama Serisi: Bash + Python + Docker"
-description: "7–22 Kasım 2026 · Tuğçe Ünlü ile 30 saat canlı uygulama. Üç atölyeyi birlikte alarak 2.350 TL avantaj elde edin."
+description: "14–29 Kasım 2026 · Tuğçe Ünlü ile 30 saat canlı uygulama. Üç atölyeyi birlikte alarak 2.350 TL avantaj elde edin."
 date: "2026-10-20"
 draft: false
 type: "landing"
 layout: "single"
 url: "/canli/biyoinformatik-atolye-serisi-kasim-2026/"
-eyebrow: "7–22 KASIM · ÜÇ HAFTA SONU · 30 SAAT"
+eyebrow: "14–29 KASIM · ÜÇ HAFTA SONU · 30 SAAT"
 cta_text: "8.000 TL · Üçlü Seriye Kaydol"
 cta_href: "https://kampus.eresbiotech.com/order?link=oLUXE&pricing_plan=QyBbw629GD"
 instructor: true
@@ -19,15 +19,15 @@ hero_image: "/images/biyoinformatik-uygulama-serisi.webp"
 
 Biyolojik veriyi indirdiniz. Dosyalarınızdaki bilgiyi görmek, veriyle sorular sormak ve aynı analizi tekrar çalıştırmak istiyorsunuz. **Bash, Python ve Docker birbirinin yerine değil, birbirini tamamlamak için var.**
 
-### 7–8 Kasım: Bash'le Genom Analizi — 10 saat
+### 14–15 Kasım: Bash'le Genom Analizi — 10 saat
 
 Terminalden biyolojik veri dosyalarını tanıma, inceleme, temel genom istatistikleri ve otomasyona giriş. **[Bash içeriği](/canli/bash-genom-analizi-7-8-kasim/)**
 
-### 14–15 Kasım: Python'la Biyoinformatik Analizler — 10 saat
+### 21–22 Kasım: Python'la Biyoinformatik Analizler — 10 saat
 
 Biopython, dizi verileri, motif gibi araştırma soruları ve küçük analiz akışları. **[Python içeriği](/canli/python-biyoinformatik-14-15-kasim/)**
 
-### 21–22 Kasım: Docker ile Tekrarlanabilir Genom Analizi — 10 saat
+### 28–29 Kasım: Docker ile Tekrarlanabilir Genom Analizi — 10 saat
 
 Biyoinformatik araçlarını tanımlı analiz ortamlarında çalıştırmak ve sonuçların yeniden üretilebilirliğini güçlendirmek. **[Docker içeriği](/canli/docker-genom-analizi-21-22-kasim/)**
 

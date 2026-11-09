@@ -1,12 +1,12 @@
 ---
 title: "Docker ile Tekrarlanabilir Genom Analizi Atölyesi"
-description: "21–22 Kasım 2026 · Tuğçe Ünlü ile 10 saat canlı uygulamalı Docker ve biyoinformatik iş akışları."
+description: "28–29 Kasım 2026 · Tuğçe Ünlü ile 10 saat canlı uygulamalı Docker ve biyoinformatik iş akışları."
 date: "2026-10-20"
 draft: false
 type: "landing"
 layout: "single"
 url: "/canli/docker-genom-analizi-21-22-kasim/"
-eyebrow: "21–22 KASIM · 10 SAAT · CANLI ONLINE"
+eyebrow: "28–29 KASIM · 10 SAAT · CANLI ONLINE"
 cta_text: "3.450 TL · Atölyeye Kaydol"
 cta_href: "https://kampus.eresbiotech.com/order?link=FDGTU&pricing_plan=rdWQ8KA6Gj"
 instructor: true
@@ -28,7 +28,7 @@ Bir biyoinformatik analizini bir makinede çalıştırmak başka; başka bir ort
 - Aynı veriyi daha tutarlı koşullarda yeniden işlemek; sürüm ve dosya izini korumak.
 - Analiz akışını paylaşılabilir ve açıklanabilir hale getirmek.
 
-**Format:** 21–22 Kasım 2026; 2 gün, toplam 10 saat canlı online uygulama. Ayrıntılı ders blokları eğitmenle son kez netleştirilecektir.
+**Format:** 28–29 Kasım 2026; 2 gün, toplam 10 saat canlı online uygulama. Ayrıntılı ders blokları eğitmenle son kez netleştirilecektir.
 
 ### Kimler için?
 

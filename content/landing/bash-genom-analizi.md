@@ -1,12 +1,12 @@
 ---
 title: "Bash'le Genom Analizi Atölyesi"
-description: "7–8 Kasım 2026 · Tuğçe Ünlü ile 10 saat canlı uygulamalı Bash ve genom analizi."
+description: "14–15 Kasım 2026 · Tuğçe Ünlü ile 10 saat canlı uygulamalı Bash ve genom analizi."
 date: "2026-10-20"
 draft: false
 type: "landing"
 layout: "single"
 url: "/canli/bash-genom-analizi-7-8-kasim/"
-eyebrow: "7–8 KASIM · 10 SAAT · CANLI ONLINE"
+eyebrow: "14–15 KASIM · 10 SAAT · CANLI ONLINE"
 cta_text: "3.450 TL · Atölyeye Kaydol"
 cta_href: "https://kampus.eresbiotech.com/order?link=dOCwm&pricing_plan=20zAXPAwWr"
 instructor: true

@@ -22,7 +22,7 @@ hero_image: "/images/28-ekim-mira-channelrhodopsin.webp"
 - **Bash:** FASTA dosyasının içindeki veriye ilk bakış.
 - **Python/Biopython:** Diziyi incelemek ve küçük bir analiz yapmak.
 - **Docker:** Benzer analiz ortamını farklı verilerde tekrar kullanmak.
-- **Son bölüm:** Sorular ve 7–8, 14–15, 21–22 Kasım atölyelerine devam rotası.
+- **Son bölüm:** Sorular ve 14–15, 21–22, 28–29 Kasım atölyelerine devam rotası.
 
 Bash, Python ve Docker'ı önceden bilmeniz gerekmiyor. Bu etkinlik uzun bir kodlama dersi değil; üç aracın aynı biyolojik soruda nasıl bir araya geldiğine bakacağız.
 
