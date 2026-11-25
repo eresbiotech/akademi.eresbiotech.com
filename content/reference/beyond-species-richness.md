@@ -30,6 +30,10 @@
 
 > **Temel sonuç:** İncelediğimiz yırtıcı kuşlarda evrimsel olarak daha uzak tür çiftleri, beslenme–avlanma nişleri bakımından da daha farklı olma eğilimindedir. Buna karşılık cinslerde daha fazla tür bulunması, ortalama cins içi niş farklılaşmasıyla bu örneklemde anlamlı bir monoton ilişki göstermemiştir. Bu örnek, tür sayısını, ekolojik farklılaşmayı ve evrimsel geçmişi tek bir gösterge gibi görmemenin önemini anlatır. **Ancak sonuçlarımız ekosistemlerin işleyişini veya herhangi bir işletmenin biyoçeşitlilik performansını doğrudan ölçmez.**
 
+> **Bir araştırma, iki farklı uygulama alanı.** NaturaLogic ile bilimsel iş birliği kapsamında yürütülen bu araştırmanın ekolojik ve filogenetik analizlerini ERES Akademi'de ele alıyoruz. Aynı bilimsel bulguların biyoçeşitlilik göstergeleri, kurumsal doğa zekâsı ve iş kararları açısından nasıl yorumlanabileceğini ise NaturaLogic'te inceleyebilirsiniz.
+>
+> [NaturaLogic — Doğa verilerinden iş zekâsına →](https://naturalogiclabs.com/research/beyond-species-richness/)
+
 ## Özet
 
 Biyoçeşitlilik, en sık tür sayısı üzerinden tanımlanır. Tür zenginliği gerekli bir başlangıç ölçüsüdür; ancak farklı türlerin kullandıkları kaynakların, beslenme–avlanma stratejilerinin ve evrimsel geçmişlerinin ne ölçüde çeşitlendiğini tek başına göstermez. NaturaLogic'in bu kurum içi bilimsel vaka çalışması, Accipitriformes olarak sınıflandırılmış kuş türlerine ilişkin açık küresel veri setlerini kullanarak birden fazla ekolojik çeşitlilik boyutunun birlikte incelenmesini örneklendirmektedir. AVONET ve AVONICHE veri setleri BirdTree taksonomi sürümüyle eşleştirilmiş, 251 tür için dokuz besin ve 32 bileşik beslenme–avlanma nişi profili değerlendirilmiştir. Bu türlerin 218'i yayımlanmış Aves 1.3 filogenetik sentez ağacının Clements 2022 sürümüyle ad düzeyinde eşleştirilmiş, 23.653 benzersiz tür çiftinde filogenetik patristik uzaklık ve Hellinger ekolojik uzaklığı hesaplanmıştır. Uzaklık sıraları arasında Spearman korelasyonu ve 499 tür-etiketi permütasyonu uygulanmıştır. Ana analiz 32 niş için pozitif ilişki vermiştir (ρ=0,329; iki yönlü etiket-permütasyonu p=0,002). Dokuz üst besin kategorisinde benzer sonuç bulunmuştur (ρ=0,338; p=0,002). En az iki eşleşmiş tür içeren 28 cinste tür zenginliği ve ortalama cins içi niş uzaklığı arasındaki keşifsel ilişkinin katsayısı ise ρ=0,041 (p=0,846) olarak hesaplanmıştır. Bulgular, taksonomik zenginlik, filogenetik uzaklık ve beslenme–avlanma farklılaşmasının birbirinin yerine kullanılamayan kavramlar olduğunu öğretmek için veri temelli bir örnek sunmaktadır. İstatistiksel yöntem keşifsel niteliktedir; tarihsel nedenler, mekânsal topluluk işlevleri ve kurumsal etki sınanmamıştır.
@@ -189,7 +193,7 @@ Tür kayıplarının ekolojik anlamı yalnızca kaybedilen tür sayısına bağl
 
 ERES Biyoinformatik Akademi olarak, bu çalışma üzerinden biyolojik bir sorunun R ile nasıl araştırıldığını, veri entegrasyonunu, uzaklık matrislerini ve istatistiksel çıkarımın sınırlarını ele alıyoruz. Aynı araştırmanın kurumsal kararlar açısından anlamı NaturaLogic'in *Beyond Species Richness* içgörüsünde incelenmektedir.
 
-[NaturaLogic — Tür sayısının ötesinde Nature Intelligence](https://naturalogiclabs.com/research/beyond-species-richness/).
+[**NaturaLogic — Doğa verilerinden iş zekâsına: bilimsel bulguların kurumsal kararlara aktarılması →**](https://naturalogiclabs.com/research/beyond-species-richness/)
 
 ## 8. Sınırlılıklar ve araştırma dürüstlüğü
 
