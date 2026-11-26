@@ -429,6 +429,24 @@
         <a class="hero-action" href="{{ $primaryCTAURL }}">{{ $finalCTAText }}</a>
       </section>
 
+      {{ with index site.Data.course_outlines $slug }}
+      <details class="legacy-content" id="mufredat" open>
+        <summary>
+          <span>Konu başlıklarını ve uygulama kapsamını inceleyin</span>
+          <small>Bu özet, modül/video/quiz sayımı değildir. Güncel dersler Kampüs hesabında görüntülenir.</small>
+        </summary>
+        <div class="content-card prose training-content">
+          <h2>Programın konu haritası</h2>
+          <h3>Kimler için?</h3><p>{{ .audience }}</p>
+          <h3>Ön bilgiler</h3><p>{{ .prerequisites }}</p>
+          <h3>Ele alınan konular</h3>
+          <ol>{{ range .topics }}<li>{{ . }}</li>{{ end }}</ol>
+          <h3>Uygulama örnekleri</h3>
+          <ul>{{ range .practice }}<li>{{ . }}</li>{{ end }}</ul>
+          <p><small>Başlıklar programın genel kapsamını özetler; her satır ayrı bir videoya veya modüle karşılık gelmez.</small></p>
+        </div>
+      </details>
+      {{ else }}
       <details class="legacy-content">
         <summary>
           <span>Detaylı program rotasını aç</span>
@@ -451,6 +469,7 @@
           </ul>
         </div>
       </details>
+      {{ end }}
     </div>
   </div>
 </article>

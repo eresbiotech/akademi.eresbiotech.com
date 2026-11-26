@@ -85,6 +85,22 @@
       </ol>
     </section>
 
+    {{ with index site.Data.course_outlines "biyoinformatik-giris-egitim-buyuk-veri-kurs" }}
+    <section class="sales-section intro-roadmap-section" aria-labelledby="intro-detailed-outline-title">
+      <p class="eyebrow">Konu haritası</p>
+      <h2 id="intro-detailed-outline-title">Hangi başlıklarla ilerleyeceksiniz?</h2>
+      <details class="intro-campus-details" open>
+        <summary>Detaylı konu ve uygulama başlıkları</summary>
+        <div class="content-card prose">
+          <ol>{{ range .topics }}<li>{{ . }}</li>{{ end }}</ol>
+          <h3>Uygulama örnekleri</h3>
+          <ul>{{ range .practice }}<li>{{ . }}</li>{{ end }}</ul>
+          <p><small>Bu liste konu haritasıdır; video ve quiz sayısı değildir. Güncel ders akışını Kampüs hesabınızda görürsünüz.</small></p>
+        </div>
+      </details>
+    </section>
+    {{ end }}
+
     {{ partial "testimonial.html" (dict "testimonial" (index site.Data.testimonials "irem") "variant" "full" "heading_id" "intro-testimonial-title") }}
 
     <section class="sales-section intro-course-proof-section" aria-labelledby="intro-course-proof-title">

@@ -1,0 +1,115 @@
+# 26 Kasim 2026 - hızlı yayın icin konu haritalari
+# Not: Bunlar bölüm/video/quiz sayimi degil. Güncel Payhip akisi ayrica doğrulanacak.
+biyoinformatik-giris-egitim-buyuk-veri-kurs:
+  audience: "Biyoinformatiğe yeni başlayan, yaşam bilimleri verilerini ve temel kaynakları anlamak isteyenler."
+  prerequisites: "Önceden programlama bilgisi gerektirmez."
+  topics:
+    - "Biyoinformatik nedir? Araştırmada kullanım alanları"
+    - "Biyoinformatiğin doğuşu ve DNA dizileme yöntemlerinin gelişimi"
+    - "Genomik veri, büyük veri ve modern biyoinformatik"
+    - "Biyolojik veri tabanlarına giriş: NCBI ekosistemi"
+    - "Araçlar, veri tabanları ve araştırma sorusu ilişkisi"
+    - "BLAST, FASTA ve dizi karşılaştırma mantığı"
+    - "NCBI Gene kayıtlarının okunması"
+    - "Omik veri türleri ve biyolojik araştırma soruları"
+    - "Büyük veri yaklaşımının yaşam bilimlerindeki yeri"
+    - "Proteine uzanan veri akışı"
+    - "GEO, GEO2R ve R script mantığı"
+    - "GEO2R sonucundan R ile incelemeye geçiş"
+  practice:
+    - "Gerçek veri kaynaklarının kullanım senaryolarını tanıma"
+    - "BLAST/FASTA ve GEO2R çıktılarını okumaya giriş"
+
+biyoinformatik-icin-r-programlama:
+  audience: "R programlamaya biyolojik veri üzerinden başlamak veya temelini düzenlemek isteyen öğrenciler ve araştırmacılar."
+  prerequisites: "İleri kodlama bilgisi gerekmez; dosya ve klasörlerle temel bilgisayar kullanımı yeterlidir."
+  topics:
+    - "R ve RStudio kurulumu, arayüzü ve başlangıç çalışma akışı"
+    - "Değişkenler, temel komutlar ve programlama mantığı"
+    - "Vektör, matriks, data frame, liste ve veri tipleri"
+    - "Biyolojik veri görselleştirme ve ggplot2"
+    - "Koşullu ifadeler, döngüler ve veri filtreleme"
+    - "FASTA, Biostrings ve dizi hizalamasıyla biyoinformatik uygulama mantığı"
+    - "GEOquery ile GEO verisi, metadata ve expression matrisi"
+    - "Paket kurulumu, nesne ve dosya yolu hataları için hata çözüm laboratuvarı"
+  practice:
+    - "R kod kartları, örnek biyolojik veri dosyaları ve ana script"
+    - "GEO metadata düzenleme ve basit grafikler"
+
+biyoinformatik-veritabanlari-araclar-egitimi:
+  audience: "Kod yazmadan biyolojik kayıt, dizi ve protein kaynaklarını daha bilinçli kullanmak isteyenler."
+  prerequisites: "Temel biyoloji bilgisi yararlı; biyoinformatiğe giriş programı önerilir."
+  topics:
+    - "Temel biyoinformatik araçları ve veri kaynaklarının kullanım amaçları"
+    - "BLAST'ın çalışma mantığı, sonuçları ve sınırlılıkları"
+    - "BLAST ile örnek arama ve sonuç yorumlama"
+    - "ClustalW ve çoklu dizi hizalamasına giriş"
+    - "Dizi hizalama çıktılarında benzerlik ve farklılıklar"
+    - "GenBank, UniProt ve PDB kayıt yapıları"
+    - "Veri tabanlarında gen, dizi, protein ve yapı verisi türleri"
+    - "PDB üzerinde protein yapısı kayıtlarını inceleme"
+  practice:
+    - "BLAST ve ClustalW çıktılarının yorumlanması"
+    - "GenBank, UniProt ve PDB üzerinden örnek kayıt incelemesi"
+
+ncbi-ensembl-ucsc-genom-tarayicisi-uygulamali-egitim:
+  audience: "Genom bölgeleri, gen ve transkript kayıtları veya varyantları tarayıcılar arasında karşılaştırmak isteyenler."
+  prerequisites: "Temel genomik kavramlar yararlıdır; kodlama önkoşulu yoktur."
+  topics:
+    - "Genom tarayıcılarına ve genom anotasyonlarına giriş"
+    - "NCBI Gene ve Nucleotide kayıtlarını bulma ve yorumlama"
+    - "Gen, transkript, referans dizi ve genom koordinatı ilişkisi"
+    - "Ensembl üzerinde gen ve transkript bilgilerini inceleme"
+    - "UCSC Genome Browser arayüzü ve genom bölgeleri"
+    - "Genom tarayıcılarında anotasyon katmanları ve varyant gösterimleri"
+    - "RefSeq, MANE ve Ensembl kaynakları arasındaki farkları kontrol etme"
+  practice:
+    - "Aynı genin farklı veri kaynaklarındaki kayıtlarını karşılaştırma"
+    - "Genom bölgesi ve varyant görünümünü araştırma sorusuyla ilişkilendirme"
+
+tek-hucre-rna-seq-analizi-egitimi:
+  audience: "Tek hücre RNA-seq analizinin aşamalarını ve Seurat çıktılarını yorumlamak isteyen araştırmacılar."
+  prerequisites: "Gen ifadesi, R ve temel veri analizi kavramlarına aşinalık faydalıdır."
+  topics:
+    - "Tek hücre RNA dizileme yaklaşımı, deney tasarımı ve veri biçimleri"
+    - "Hücre ve gen bazlı kalite kontrol ölçümleri"
+    - "Veri filtreleme, normalizasyon ve ön işleme mantığı"
+    - "Seurat analizi ve boyut indirgeme yaklaşımı"
+    - "Kümeleme sonuçları ve hücre gruplarının görselleştirilmesi"
+    - "Marker genlerin bulunması ve hücre tipi yorumlama"
+    - "Diferansiyel ekspresyon ve biyolojik yorum"
+  practice:
+    - "Kalite kontrol, kümeleme ve marker gen çıktılarının okunması"
+    - "Örnek tek hücre analiz akışının aşamalarını takip etme"
+
+uygulamali_yapisal_biyoinformatik_ve_in_silico_protein_modelleme:
+  audience: "Protein yapısı, yapı tahmini ve in silico modelleme yaklaşımlarına yönelen araştırmacılar."
+  prerequisites: "Protein yapısının temel kavramlarını bilmek yararlıdır; temel biyoinformatik araçları önerilir."
+  topics:
+    - "Protein yapısına ve yapısal biyoinformatiğe giriş"
+    - "PDB kayıtları, 3B yapı dosyaları ve temel görselleştirme"
+    - "Dizi-yapı ilişkisi ve homolog proteinler"
+    - "Homoloji modelleme ve SWISS-MODEL yaklaşımı"
+    - "AlphaFold çıktıları, güven skorları ve sınırlılıklar"
+    - "Aktif bölge, ligand ve protein etkileşimlerinin yorumlanması"
+    - "Moleküler kenetlenme mantığı ve AutoDock Vina'ya giriş"
+    - "Protein fonksiyon tahmini ve in silico sonuçların yorumlanması"
+  practice:
+    - "Protein yapı kayıtlarını ve tahmin çıktılarını karşılaştırma"
+    - "Modelleme sonuçlarının biyolojik bağlamda değerlendirilmesi"
+
+phyml-uygulamali-filogenetik-egitimi:
+  audience: "Dizi hizalama, filogenetik ağaç kurma ve evrimsel sonuçları yorumlamak isteyenler."
+  prerequisites: "Temel biyoinformatik ve DNA/dizi kavramlarına aşinalık önerilir."
+  topics:
+    - "Dizi hizalamasına ve filogenetik düşünceye giriş"
+    - "İkili ve çoklu dizi hizalamasının temel farkları"
+    - "Hizalama kalitesi ve filogenetik analiz öncesi kontroller"
+    - "Filogenetik ağaçların temel kavramları ve gösterimi"
+    - "Evrimsel modeller ve model seçimi mantığı"
+    - "Filogenetik ağaç oluşturma yöntemleri"
+    - "phyML ile maksimum olabilirlik yaklaşımı"
+    - "Bootstrap değerleri ve filogenetik sonuçları yorumlama"
+  practice:
+    - "Örnek dizi hizalama çıktılarının incelenmesi"
+    - "PhyML ağaç çıktısının ve destek değerlerinin yorumlanması"
