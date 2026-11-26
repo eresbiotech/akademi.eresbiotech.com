@@ -1,0 +1,256 @@
+{{ define "main" }}
+{{- $checkout := .Params.checkout_url -}}
+{{- $support := partial "support/whatsapp-url.html" (dict "message" "Merhaba, 7 program + 5 saat bire bir mentörlük Cyber Monday teklifi hakkında bilgi almak istiyorum.") -}}
+{{- $visual := resources.Get "images/homepage/hero-protein-bioinformatics.png" -}}
+<link rel="stylesheet" href="{{ "css/cyber-monday-2026.css" | relURL }}?v=20261126-4">
+<div class="cm-sale" data-cm-deadline="{{ .Params.campaign_end_iso }}" data-cm-seats="{{ .Params.seat_limit }}">
+  <div class="container cm-topline">
+    <a href="{{ "/" | relURL }}">ERES Akademi</a><span aria-hidden="true">/</span>
+    <span>Cyber Monday 2026</span>
+  </div>
+  <section class="cm-hero" aria-labelledby="cm-page-title">
+    <div class="container cm-hero-grid">
+      <div class="cm-hero-copy">
+        <p class="cm-eyebrow"><span class="cm-signal" aria-hidden="true"></span> CYBER MONDAY 2026 · 5 KİŞİLİK ÖZEL KONTENJAN</p>
+        <h1 id="cm-page-title">7 program.<br><em>5 saat bire bir.</em><br>Derslerde canlı destek.</h1>
+        <p class="cm-hero-lead">Yedi asenkron biyoinformatik programını yalnız başınıza tamamlamaya çalışmayın. <strong>Başlamadan önce 2 saat bire bir mentörlük</strong> ile kendi öğrenme rotanızı belirleyin, <strong>dersler boyunca canlı destek</strong> ile takıldığınız konuları konuşun, eğitim yolculuğunun sonunda <strong>3 saat bire bir mentörlük</strong> ile öğrendiklerinizi bir araya getirin.</p>
+        <div class="cm-urgency" aria-label="Sınırlı kontenjan ve kayıt kapanış bilgileri">
+          <div class="cm-urgency-seats"><span class="cm-urgency-label">MENTÖRLÜK KONTENJANI</span><strong>Yalnızca {{ .Params.seat_limit }} kişi</strong><small>Toplam kontenjan · Kalan yer sayısı değildir</small></div>
+          <div class="cm-urgency-clock"><span class="cm-urgency-label">KESİN KAYIT KAPANIŞI</span><strong>1 Aralık · 11.30</strong><small>Türkiye saati (UTC+3)</small></div>
+        </div>
+        <div class="cm-countdown-wrap" data-cm-countdown-wrap aria-live="off"><span>Kaydın kapanmasına kalan süre</span><strong data-cm-countdown aria-label="Kayıt kapanışına kalan süre">Hesaplanıyor…</strong></div>
+        <p class="cm-urgency-subnote">Kontenjan dolarsa 1 Aralık beklenmeden kayıt sona erer.</p>
+        <a class="cm-button cm-button-gold cm-hero-direct" href="{{ $checkout | safeURL }}" data-cm-checkout data-event="cyber_monday_checkout_click" data-checkout-event="cyber_monday_2026" data-payment-provider="eres-kampus">Bu özel grupta yerini al! · 8.000 TL <span aria-hidden="true">↗</span></a>
+        <div class="cm-hero-pills" aria-label="Paket kapsamı">
+          <span>7 asenkron program</span><span>Önce 2 saat bire bir</span><span>Derslerde canlı destek</span><span>Sonra 3 saat bire bir</span>
+        </div>
+        <div class="cm-inline-links">
+          <a href="#programlar">Yedi programı keşfet <span aria-hidden="true">↓</span></a>
+          <a href="#mentorluk">Mentörlüğü incele <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <aside class="cm-offer" aria-label="Cyber Monday kayıt ve fiyat bilgileri">
+        {{ with $visual }}
+          {{- $heroVisual := .Fit "640x380 webp q80" -}}
+          <div class="cm-offer-image"><img src="{{ $heroVisual.RelPermalink }}" alt="Biyoinformatik ve protein yapısı temalı bilimsel görsel" width="{{ $heroVisual.Width }}" height="{{ $heroVisual.Height }}" fetchpriority="high"></div>
+        {{ end }}
+        <div class="cm-offer-inner">
+          <p class="cm-offer-tag">SADECE 5 KİŞİ · 1 ARALIK 11.30’DA KAPANIŞ</p>
+          <p class="cm-offer-count"><strong>07</strong><span>program</span><b>+</b><strong>05</strong><span>saat bire bir</span></p>
+          <p class="cm-offer-journey">2 saat başlangıç · Canlı ders desteği · 3 saat kapanış</p>
+          <div class="cm-offer-divider"></div>
+          <p class="cm-offer-standard">7 programın standart paket fiyatı: {{ .Params.regular_bundle_price }}</p>
+          <p class="cm-offer-price-label">5 kişiye özel Cyber Monday fiyatı</p>
+          <p class="cm-offer-price">{{ .Params.price }}</p>
+          <a class="cm-button cm-button-gold cm-button-full" href="{{ $checkout | safeURL }}" data-cm-checkout data-event="cyber_monday_checkout_click" data-checkout-event="cyber_monday_2026" data-payment-provider="eres-kampus">Bu özel grupta yerini al! <span aria-hidden="true">↗</span></a>
+          <p class="cm-offer-note">Toplam 5 saat bire bir mentörlük + program süresince canlı destek. Kayıt {{ .Params.campaign_end }} itibarıyla veya kontenjan dolduğunda (hangisi önceyse) sona erer. Ödeme ERES Kampüs / Payhip üzerinden tamamlanır.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {{ with .Params.campaign_image }}
+  <section class="cm-feature-showcase" aria-label="Cyber Monday kampanya görseli">
+    <div class="container">
+      <figure class="cm-feature-figure">
+        <img src="{{ . | relURL }}" alt="Cyber Monday için hazırlanan bilimsel kampanya görseli" loading="lazy" decoding="async">
+        <figcaption>7 asenkron program · 5 saat bire bir mentörlük · Cyber Monday</figcaption>
+      </figure>
+    </div>
+  </section>
+  {{ end }}
+
+  <section class="cm-section cm-mentor-feature" id="mentorluk" aria-labelledby="cm-mentor-title">
+    <div class="container">
+      <div class="cm-section-head cm-section-head-wide">
+        <p class="cm-kicker">KAMPANYANIN ASIL FARKI · EĞİTİM + MENTÖRLÜK</p>
+        <h2 id="cm-mentor-title">Derslerden önce, dersler boyunca ve <em>derslerden sonra</em> yanınızdayız.</h2>
+        <p>Bu paket yalnızca video eğitimlerden oluşmaz. Başlangıç ve kapanış için <strong>toplam 5 saat bire bir mentörlük</strong> sunar; asenkron dersler sırasında da canlı destekle öğrenme sürecinizi destekler.</p>
+      </div>
+      <div class="cm-mentor-journey" aria-label="Mentörlük ve canlı destek akışı">
+        <article class="cm-mentor-phase cm-mentor-phase-primary">
+          <span class="cm-phase-time">01 · BAŞLAMADAN ÖNCE</span>
+          <strong class="cm-phase-large">2 <small>saat</small></strong>
+          <h3>Bire bir başlangıç mentörlüğü</h3>
+          <p>Seviyenizi, araştırma ilginizi ve hedefinizi konuşalım; yedi program içinde nereden başlayacağınızı ve hangi becerilere öncelik vereceğinizi birlikte belirleyelim.</p>
+        </article>
+        <article class="cm-mentor-phase cm-mentor-phase-live">
+          <span class="cm-phase-time">02 · EĞİTİMLER BOYUNCA</span>
+          <strong class="cm-phase-large cm-phase-live-label">CANLI</strong>
+          <h3>Derslerde canlı destek</h3>
+          <p>Asenkron programlarda ilerlerken takıldığınız kavram ve uygulamaları planlanan çevrim içi canlı soru-cevap görüşmelerinde ele alalım.</p>
+          <span class="cm-phase-extra">5 saatlik bire bir mentörlüğe ek destek</span>
+        </article>
+        <article class="cm-mentor-phase cm-mentor-phase-primary">
+          <span class="cm-phase-time">03 · DERSLERDEN SONRA</span>
+          <strong class="cm-phase-large">3 <small>saat</small></strong>
+          <h3>Bire bir kapanış mentörlüğü</h3>
+          <p>Eğitim yolculuğunu tamamladıktan sonra çıktıları değerlendirelim; algoritmalar, araçlar, yapay zekâ, GitHub ve araştırma/kariyer hedeflerinizi birlikte ele alalım.</p>
+        </article>
+      </div>
+      <p class="cm-mentor-journey-note"><strong>5 saat bire bir = 2 saat başlangıç + 3 saat kapanış.</strong> Eğitim sürecindeki canlı destek ayrıca sunulur; 7/24 veya sınırsız bire bir görüşme vaadi değildir. Tüm canlı görüşmeler yazılı iletişimle, karşılıklı takvim uygunluğuna göre planlanır.</p>
+      <div class="cm-mentor-grid">
+      <div class="cm-mentor-intro">
+        <p class="cm-kicker">MENTÖRÜNÜZLE TANIŞIN</p>
+        <h3 class="cm-mentor-subheading">Eğitimi kendi hedeflerinizle ilişkilendirin.</h3>
+        <p>Bir araç neden bu sonucu verdi? Hangi konuya önce odaklanmalısınız? Öğrendiğiniz beceriyi araştırmanızda veya kariyerinizde nasıl kullanabilirsiniz? Bu soruları programın yalnızca sonunda değil, başlangıcında ve öğrenme sürecinde de ele alıyoruz.</p>
+        <div class="cm-mentor-profile"><span class="cm-mentor-avatar" aria-hidden="true">EE</span><span><strong>Elçin Ekşi</strong><small>ERES Biyoteknoloji · Bire Bir Mentör</small></span></div>
+        <p class="cm-mentor-note"><strong>İki ayrı bire bir aşama:</strong> Eğitimlere başlamadan önce 2 saat, eğitim yolculuğunu tamamladıktan sonra 3 saat. Bunlar toplam 5 saattir. Eğitimler boyunca canlı soru-cevap desteği ayrıca sunulur.</p>
+      </div>
+      <div class="cm-mentor-panel">
+        <p class="cm-panel-title">Özellikle son 3 saatte derinleşebileceğiniz 5 başlık</p>
+        <ol class="cm-mentor-topics">
+          {{ range $i, $topic := .Params.mentor_topics }}
+          <li><span>{{ printf "%02d" (add $i 1) }}</span><div><strong>{{ $topic.title }}</strong><p>{{ $topic.description }}</p></div></li>
+          {{ end }}
+        </ol>
+        <p class="cm-scope-note">Mentörlük ve canlı destek eğitimlerin içeriği, öğrenme pratiği ve kariyer hedefleriyle sınırlıdır. Kişiye özel veri analizi hizmeti, tez/proje teslimi veya sınırsız teknik danışmanlık kapsamında değildir.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cm-mid-urgency" aria-labelledby="cm-mid-urgency-title">
+    <div class="container cm-mid-urgency-grid">
+      <div><p class="cm-mid-eyebrow">5 KİŞİYLE SINIRLI MENTÖRLÜ PAKET</p><h2 id="cm-mid-urgency-title">Beş kişilik kontenjan dolmadan yerinizi ayırın.</h2><p>1 Aralık Salı, saat 11.30'da (Türkiye saati) kayıt kapanır. Kontenjan daha önce dolarsa teklif erken sonlanır.</p></div>
+      <a class="cm-button cm-button-gold" href="{{ $checkout | safeURL }}" data-cm-checkout data-event="cyber_monday_checkout_click" data-checkout-event="cyber_monday_2026" data-payment-provider="eres-kampus">Bu özel grupta yerini al! <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="cm-section" aria-labelledby="cm-why-title">
+    <div class="container">
+      <div class="cm-section-head cm-section-head-wide">
+        <p class="cm-kicker">NEDEN BU PAKET?</p>
+        <h2 id="cm-why-title">Biyoinformatik öğrenme yolculuğu, birbirinden kopuk sekmelerden ibaret olmasın.</h2>
+        <p>Bir gün NCBI kaydına, başka bir gün R grafiğine, daha sonra genom tarayıcılarına veya filogenetik bir analize ihtiyaç duyabilirsiniz. Bu yedi program, yaşam bilimlerindeki mevcut uzmanlığınıza hesaplamalı bir çalışma katmanı eklemeniz için tasarlandı.</p>
+      </div>
+      <div class="cm-outcomes">
+        <article><span class="cm-outcome-index">01</span><h3>Doğru veriye ulaşın</h3><p>Gen, transkript, dizi ve protein kayıtlarının hangi veri kaynağında bulunduğunu anlayın.</p></article>
+        <article><span class="cm-outcome-index">02</span><h3>Analize başlayın</h3><p>R, GEO2R, genom tarayıcıları ve temel biyoinformatik araçlarını tanıyın.</p></article>
+        <article><span class="cm-outcome-index">03</span><h3>Çıktıyı yorumlayın</h3><p>Grafik, hücre kümesi, protein yapısı veya filogenetik ağacın ne söylediğini sorgulayın.</p></article>
+        <article><span class="cm-outcome-index">04</span><h3>Öğrenirken destek alın</h3><p>İki bire bir mentörlük aşaması ve dersler boyunca canlı soru-cevap desteğiyle ilerleyin.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cm-section cm-section-tinted" id="programlar" aria-labelledby="cm-programs-title">
+    <div class="container">
+      <div class="cm-section-head">
+        <p class="cm-kicker">7 ASENKRON PROGRAM</p>
+        <h2 id="cm-programs-title">Tek pakette hangi eğitimler var?</h2>
+        <p>Temel veri kaynaklarından R ve tek hücre analizine, protein modellemeden filogenetiğe uzanan yedi çalışma alanı. Her programı ayrı ayrı inceleyebilir, kendi seviyenize uygun noktadan başlayabilirsiniz.</p>
+      </div>
+      <div class="cm-course-grid">
+        {{ range .Params.programs }}
+          {{- $programUrl := "#programlar" -}}
+          {{- with site.GetPage (printf "/post/%s" .slug) -}}{{- $programUrl = .RelPermalink -}}{{- end -}}
+          <article class="cm-course">
+            <p class="cm-course-label">{{ .label }}</p>
+            <h3>{{ .title }}</h3>
+            <p class="cm-course-outcome">{{ .outcome }}</p>
+            <ul>{{ range .topics }}<li>{{ . }}</li>{{ end }}</ul>
+            <a href="{{ $programUrl }}" aria-label="{{ .title }} programının detaylarını inceleyin">Program detayları <span aria-hidden="true">↗</span></a>
+          </article>
+        {{ end }}
+      </div>
+      <p class="cm-program-footnote">Bu liste programların konu kapsamını özetler; kesin modül, video veya uygulama sayısı taahhüdü değildir. Ayrıntılar için eğitim sayfalarını inceleyebilirsiniz.</p>
+      <div class="cm-section-action">
+        <div><strong>Yedi programın tamamı bir arada.</strong><p>Önce 2 saat bire bir, derslerde canlı destek, sonrasında 3 saat bire bir mentörlük.</p></div>
+        <a class="cm-button cm-button-dark" href="{{ $checkout | safeURL }}" data-cm-checkout data-event="cyber_monday_checkout_click" data-checkout-event="cyber_monday_2026" data-payment-provider="eres-kampus">Bu özel grupta yerini al! <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cm-section cm-section-tinted" aria-labelledby="cm-fit-title">
+    <div class="container cm-fit-grid">
+      <article class="cm-fit-card cm-fit-yes">
+        <p class="cm-kicker">SİZİN İÇİN OLABİLİR</p>
+        <h2 id="cm-fit-title">Mevcut alanınıza veri becerisi eklemek istiyorsanız</h2>
+        <ul>
+          <li>Biyoloji, moleküler biyoloji ve genetik, biyoteknoloji, tıp, veterinerlik ve ilişkili yaşam bilimlerinde çalışıyor veya okuyorsanız,</li>
+          <li>Hazır veri ve araçları yalnızca kullanmak değil, nasıl çalıştıklarını anlamak istiyorsanız,</li>
+          <li>Birden fazla biyoinformatik alanını kendi hızınızda keşfetmek istiyorsanız.</li>
+        </ul>
+      </article>
+      <article class="cm-fit-card cm-fit-no">
+        <p class="cm-kicker">KAPSAMI NETLEŞTİRELİM</p>
+        <h2>Bu paket neyi vaat etmez?</h2>
+        <ul>
+          <li>Yedi programın tamamını kısa sürede bitirme veya profesyonel unvan kazanma garantisi vermez.</li>
+          <li>İleri düzey her analizi tek başınıza yapabilecek duruma gelmenizi garanti etmez.</li>
+          <li>Kişiye özel tez analizi, veri işleme hizmeti veya sınırsız teknik destek içermez.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="cm-section" aria-labelledby="cm-how-title">
+    <div class="container">
+      <div class="cm-section-head"><p class="cm-kicker">NASIL İŞLER?</p><h2 id="cm-how-title">Satın aldıktan sonra süreç nasıl ilerler?</h2></div>
+      <div class="cm-steps">
+        <article><span>01</span><h3>Kayıt ve erişim</h3><p>8.000 TL tutarındaki paketi satın alın; yedi asenkron eğitim ERES Kampüs hesabınızda erişilebilir hâle gelsin.</p></article>
+        <article><span>02</span><h3>2 saatlik başlangıç</h3><p>Derslere başlamadan önce Elçin Ekşi ile iki saatlik bire bir görüşmenizi planlayın, öğrenme rotanızı oluşturun.</p></article>
+        <article><span>03</span><h3>Canlı destekle öğrenme</h3><p>Programları kendi hızınızda takip edin; canlı soru-cevap görüşmelerinde uygulama sorularınızı konuşun.</p></article>
+        <article><span>04</span><h3>3 saatlik kapanış</h3><p>Eğitimleri tamamladıktan sonra kalan üç saatlik bire bir mentörlükle öğrendiklerinizi değerlendirin.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cm-section cm-section-faq" id="sorular" aria-labelledby="cm-faq-title">
+    <div class="container cm-faq-grid">
+      <div><p class="cm-kicker">SIK SORULAN SORULAR</p><h2 id="cm-faq-title">Karar vermeden önce bilmeniz gerekenler.</h2><p>Başka sorunuz varsa WhatsApp üzerinden yazabilirsiniz.</p><a class="cm-text-link" href="{{ $support | safeURL }}" target="_blank" rel="noopener noreferrer">Yazılı destek alın <span aria-hidden="true">↗</span></a></div>
+      <div class="cm-faq-list">
+        {{ range .Params.faqs }}<details><summary>{{ .question }}</summary><div class="cm-faq-answer">{{ .answer }}</div></details>{{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="cm-final" aria-labelledby="cm-final-title">
+    <div class="container cm-final-grid">
+      <div>
+        <p class="cm-eyebrow">CYBER MONDAY · 5 KİŞİLİK KONTENJAN</p>
+        <h2 id="cm-final-title">Bir sonraki analize, daha hazırlıklı başlayın.</h2>
+        <p>Yedi asenkron program. Öncesinde 2 saat bire bir hazırlık, öğrenirken canlı destek, bitirdikten sonra 3 saat bire bir değerlendirme. Toplam 5 saat kişisel mentörlük, tek kampanya paketinde.</p>
+      </div>
+      <div class="cm-final-action"><span>CYBER MONDAY PAKET FİYATI</span><strong>{{ .Params.price }}</strong><a class="cm-button cm-button-gold cm-button-full" href="{{ $checkout | safeURL }}" data-cm-checkout data-event="cyber_monday_checkout_click" data-checkout-event="cyber_monday_2026" data-payment-provider="eres-kampus">Bu özel grupta yerini al! <span aria-hidden="true">↗</span></a><small>Son gün: {{ .Params.campaign_end }} · Güvenli ödeme: ERES Kampüs / Payhip</small></div>
+    </div>
+  </section>
+  <div class="cm-closed-notice" data-cm-closed hidden role="status"><div class="container"><strong>Bu dönem kayıtları kapanmıştır.</strong><p>Cyber Monday mentörlü paketinin son kayıt saati 1 Aralık 2026, 11.30 (Türkiye saati) idi. Yeni dönem duyuruları için ERES Akademi’yi takip edebilirsiniz.</p><a href="/post/">Diğer eğitim programlarını incele →</a></div></div>
+  <div class="cm-mobile-cta" aria-label="Kampanya kayıt bağlantısı"><span><small>7 program + 2 saat + canlı destek + 3 saat</small><strong>{{ .Params.price }}</strong></span><a href="{{ $checkout | safeURL }}" data-cm-checkout data-event="cyber_monday_checkout_click" data-payment-provider="eres-kampus">Yerini al!</a></div>
+</div>
+<script>
+/* Time-limited front-end CTA display. Real inventory + sales deadline MUST also
+   be enforced in Payhip: a static site cannot count purchases or block a direct URL. */
+(function () {
+  var root=document.querySelector('.cm-sale[data-cm-deadline]');
+  if(!root)return;
+  var deadline=Date.parse(root.getAttribute('data-cm-deadline'));
+  var clock=root.querySelector('[data-cm-countdown]');
+  var wrap=root.querySelector('[data-cm-countdown-wrap]');
+  var closure=root.querySelector('[data-cm-closed]');
+  var finished=false;
+  function pad(n){return String(n).padStart(2,'0');}
+  function tick(){
+    var ms=deadline-Date.now();
+    if(ms<=0){
+      if(finished)return;
+      finished=true;
+      root.classList.add('cm-is-closed');
+      if(clock)clock.textContent='Kayıt süresi sona erdi';
+      if(wrap)wrap.setAttribute('aria-live','polite');
+      if(closure)closure.hidden=false;
+      root.querySelectorAll('a[data-cm-checkout]').forEach(function(a){
+        a.removeAttribute('href');a.removeAttribute('target');
+        a.setAttribute('aria-disabled','true');a.setAttribute('tabindex','-1');
+        a.classList.add('cm-cta-disabled');a.textContent='Kayıtlar kapandı';
+      });
+      return;
+    }
+    var seconds=Math.floor(ms/1000),d=Math.floor(seconds/86400),h=Math.floor(seconds%86400/3600),m=Math.floor(seconds%3600/60),s=seconds%60;
+    if(clock)clock.textContent=d+' gün · '+pad(h)+' sa · '+pad(m)+' dk · '+pad(s)+' sn';
+  }
+  tick();window.setInterval(tick,1000);
+})();
+</script>
+{{ end }}
